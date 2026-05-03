@@ -40,4 +40,23 @@ export const seedTranslations: NewTranslation[] = [
       "Use Six Sigma / Lean / TQM language when the audience lives inside a CMMI-shaped organization and the cost of unfamiliar vocabulary outweighs the cost of conceptual borrowing. The translation buys legibility with procurement officers and federal PMOs in particular.",
     tags: ["translation", "positioning", "public_sector", "quality_discipline"],
   },
+  {
+    yourTerm: "design_discipline",
+    standardTerms: [
+      "Design Thinking",
+      "Human-Centered Design",
+      "Double Diamond",
+      "Lean UX",
+      "Service Design",
+      "18F Methods",
+      "user-centered design",
+    ],
+    explanation:
+      "Same underlying moves — research the actual problem, diverge before converging, prototype cheaply, test against users, iterate — wrapped in different lineages. Picking which name to invoke is a positioning move, not a methodology choice. The discipline is what matters; the brand is a tool.",
+    whenToUseYours:
+      "Default to 'design discipline' or 'design practice' as the umbrella in skeptical rooms (engineers, executives, oversight bodies) where 'Design Thinking' has been hollowed out into post-it theater. It signals you're talking about real moves, not the consultant package. When the audience is design-fluent, just name the specific move — contextual inquiry, journey mapping, heuristic evaluation — without invoking any umbrella at all.",
+    whenToUseTheirs:
+      "'Design Thinking' for innovation workshops and startup audiences who already speak the vocabulary. 'Human-Centered Design' for public-sector and procurement audiences (it's in ISO 9241-210 and federal RFPs). 'Double Diamond' for UK and government digital service contexts. '18F Methods' for federal civic-tech rooms where the federal provenance matters. 'Service Design' when the work crosses channels and the audience needs to see front-stage and back-stage. 'Lean UX' for product orgs where build-measure-learn is the operating vocabulary. The choice is about which audience credits which lineage — not about which method you're using.",
+    tags: ["translation", "positioning", "design", "interview"],
+  },
 ];
