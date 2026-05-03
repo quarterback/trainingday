@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { SearchBar } from "@/components/SearchBar";
 import { Sidebar } from "@/components/Sidebar";
@@ -9,11 +9,27 @@ import { FrameworkCard } from "@/components/FrameworkCard";
 import { StoryCard } from "@/components/StoryCard";
 import { TranslationCard } from "@/components/TranslationCard";
 import { BookCard } from "@/components/BookCard";
-import { NewEntryButton } from "@/components/NewEntryButton";
-import type { EntryType, SearchResults } from "@/lib/types";
-import type { Book, Framework, Story, Translation } from "@/lib/schema";
+import type { Book, EntryType, Framework, Story, Translation } from "@/lib/types";
 
-export default function Home() {
+interface Props {
+  frameworks: Framework[];
+  stories: Story[];
+  translations: Translation[];
+  books: Book[];
+}
+
+function matchesQuery(haystack: Array<string | string[] | undefined | null>, q: string): boolean {
+  if (!q) return true;
+  const needle = q.toLowerCase();
+  for (const piece of haystack) {
+    if (!piece) continue;
+    const text = Array.isArray(piece) ? piece.join(" ") : piece;
+    if (text.toLowerCase().includes(needle)) return true;
+  }
+  return false;
+}
+
+export default function HomeClient({ frameworks, stories, translations, books }: Props) {
   const router = useRouter();
   const params = useSearchParams();
 
@@ -22,17 +38,7 @@ export default function Home() {
   const [type, setType] = useState<"all" | EntryType>(
     (params.get("type") as "all" | EntryType) ?? "all",
   );
-  const [categories, setCategories] = useState<string[]>([]);
-  const [results, setResults] = useState<SearchResults>({
-    frameworks: [],
-    stories: [],
-    translations: [],
-    books: [],
-  });
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  // Persist filters to URL.
   useEffect(() => {
     const sp = new URLSearchParams();
     if (q) sp.set("q", q);
@@ -42,102 +48,107 @@ export default function Home() {
     router.replace(next ? `/?${next}` : "/", { scroll: false });
   }, [q, category, type, router]);
 
-  // Load categories once.
-  useEffect(() => {
-    fetch("/api/categories")
-      .then((r) => r.json())
-      .then(setCategories)
-      .catch(() => {});
-  }, []);
+  const categories = useMemo(() => {
+    const set = new Set<string>();
+    for (const f of frameworks) set.add(f.category);
+    for (const b of books) if (b.category) set.add(b.category);
+    return Array.from(set).sort();
+  }, [frameworks, books]);
 
-  const load = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const sp = new URLSearchParams();
-      if (q) sp.set("q", q);
-      if (category) sp.set("category", category);
-      const res = await fetch(`/api/search?${sp.toString()}`);
-      if (!res.ok) throw new Error("search failed");
-      setResults((await res.json()) as SearchResults);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "search failed");
-    } finally {
-      setLoading(false);
-    }
-  }, [q, category]);
+  const filteredFrameworks = useMemo(
+    () =>
+      frameworks.filter(
+        (f) =>
+          (!category || f.category === category) &&
+          matchesQuery(
+            [
+              f.name,
+              f.oneLiner,
+              f.notes,
+              f.whenToUse,
+              f.howToDropIn,
+              f.commonPhrasing,
+              f.source,
+              f.vocabulary,
+              f.tags,
+            ],
+            q,
+          ),
+      ),
+    [frameworks, category, q],
+  );
 
-  useEffect(() => {
-    load();
-  }, [load]);
+  const filteredStories = useMemo(
+    () =>
+      stories.filter((s) =>
+        matchesQuery(
+          [
+            s.title,
+            s.twoMinuteVersion,
+            s.notes,
+            s.referenceSentence,
+            s.questionsItAnswers,
+            s.frameworksExemplified,
+            s.thinkersInDialogue,
+            s.tags,
+          ],
+          q,
+        ),
+      ),
+    [stories, q],
+  );
 
-  function refreshCategories() {
-    fetch("/api/categories")
-      .then((r) => r.json())
-      .then(setCategories)
-      .catch(() => {});
-  }
+  const filteredTranslations = useMemo(
+    () =>
+      translations.filter((t) =>
+        matchesQuery(
+          [
+            t.yourTerm,
+            t.explanation,
+            t.whenToUseYours,
+            t.whenToUseTheirs,
+            t.standardTerms,
+            t.tags,
+          ],
+          q,
+        ),
+      ),
+    [translations, q],
+  );
 
-  function onCreated(row: Framework | Story | Translation | Book, t: EntryType) {
-    setResults((r) => {
-      if (t === "framework") return { ...r, frameworks: [...r.frameworks, row as Framework] };
-      if (t === "story") return { ...r, stories: [...r.stories, row as Story] };
-      if (t === "translation") return { ...r, translations: [...r.translations, row as Translation] };
-      return { ...r, books: [...r.books, row as Book] };
-    });
-    if (t === "framework" || t === "book") refreshCategories();
-  }
-
-  function updateFramework(next: Framework) {
-    setResults((r) => ({
-      ...r,
-      frameworks: r.frameworks.map((f) => (f.id === next.id ? next : f)),
-    }));
-    refreshCategories();
-  }
-  function deleteFramework(id: number) {
-    setResults((r) => ({ ...r, frameworks: r.frameworks.filter((f) => f.id !== id) }));
-    refreshCategories();
-  }
-  function updateStory(next: Story) {
-    setResults((r) => ({ ...r, stories: r.stories.map((s) => (s.id === next.id ? next : s)) }));
-  }
-  function deleteStory(id: number) {
-    setResults((r) => ({ ...r, stories: r.stories.filter((s) => s.id !== id) }));
-  }
-  function updateTranslation(next: Translation) {
-    setResults((r) => ({
-      ...r,
-      translations: r.translations.map((t) => (t.id === next.id ? next : t)),
-    }));
-  }
-  function deleteTranslation(id: number) {
-    setResults((r) => ({ ...r, translations: r.translations.filter((t) => t.id !== id) }));
-  }
-  function updateBook(next: Book) {
-    setResults((r) => ({ ...r, books: r.books.map((b) => (b.id === next.id ? next : b)) }));
-    refreshCategories();
-  }
-  function deleteBook(id: number) {
-    setResults((r) => ({ ...r, books: r.books.filter((b) => b.id !== id) }));
-    refreshCategories();
-  }
+  const filteredBooks = useMemo(
+    () =>
+      books.filter(
+        (b) =>
+          (!category || b.category === category) &&
+          matchesQuery(
+            [
+              b.title,
+              b.author,
+              b.oneLiner,
+              b.howToReference,
+              b.whenToInvoke,
+              b.notes,
+              b.pairsWith,
+              b.tags,
+            ],
+            q,
+          ),
+      ),
+    [books, category, q],
+  );
 
   const showFrameworks = type === "all" || type === "framework";
   const showStories = type === "all" || type === "story";
   const showTranslations = type === "all" || type === "translation";
   const showBooks = type === "all" || type === "book";
-
-  // Stories and translations don't have categories. When a category filter is
-  // active, hide them to keep the browse view focused on the categorized
-  // content (frameworks and books).
   const categoryActive = !!category;
 
   const totalCount =
-    (showFrameworks ? results.frameworks.length : 0) +
-    (showStories && !categoryActive ? results.stories.length : 0) +
-    (showTranslations && !categoryActive ? results.translations.length : 0) +
-    (showBooks ? results.books.length : 0);
+    (showFrameworks ? filteredFrameworks.length : 0) +
+    (showStories && !categoryActive ? filteredStories.length : 0) +
+    (showTranslations && !categoryActive ? filteredTranslations.length : 0) +
+    (showBooks ? filteredBooks.length : 0);
 
   return (
     <div className="flex min-h-screen">
@@ -159,52 +170,33 @@ export default function Home() {
               >
                 Quiz me
               </Link>
-              <NewEntryButton onCreated={onCreated} />
             </div>
           </header>
 
           <SearchBar value={q} onChange={setQ} />
 
           <div className="text-xs text-neutral-500">
-            {loading
-              ? "Searching…"
-              : error
-              ? `Error: ${error}`
-              : `${totalCount} result${totalCount === 1 ? "" : "s"}`}
+            {totalCount} result{totalCount === 1 ? "" : "s"}
           </div>
 
           <div className="flex flex-col gap-2">
             {showFrameworks &&
-              results.frameworks.map((f) => (
-                <FrameworkCard
-                  key={`f-${f.id}`}
-                  framework={f}
-                  onChange={updateFramework}
-                  onDelete={deleteFramework}
-                />
-              ))}
+              filteredFrameworks.map((f) => <FrameworkCard key={`f-${f.name}`} framework={f} />)}
             {showBooks &&
-              results.books.map((b) => (
-                <BookCard key={`b-${b.id}`} book={b} onChange={updateBook} onDelete={deleteBook} />
+              filteredBooks.map((b) => (
+                <BookCard key={`b-${b.title}-${b.author}`} book={b} />
               ))}
             {showStories &&
               !categoryActive &&
-              results.stories.map((s) => (
-                <StoryCard key={`s-${s.id}`} story={s} onChange={updateStory} onDelete={deleteStory} />
-              ))}
+              filteredStories.map((s) => <StoryCard key={`s-${s.title}`} story={s} />)}
             {showTranslations &&
               !categoryActive &&
-              results.translations.map((t) => (
-                <TranslationCard
-                  key={`t-${t.id}`}
-                  translation={t}
-                  onChange={updateTranslation}
-                  onDelete={deleteTranslation}
-                />
+              filteredTranslations.map((t) => (
+                <TranslationCard key={`t-${t.yourTerm}`} translation={t} />
               ))}
-            {!loading && totalCount === 0 && (
+            {totalCount === 0 && (
               <div className="rounded-md border border-dashed border-neutral-300 p-6 text-center text-sm text-neutral-500">
-                No results. Try a different term, or create a new entry.
+                No results. Edit <code>data/*.ts</code> in the repo to add entries.
               </div>
             )}
           </div>

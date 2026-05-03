@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Book } from "@/lib/schema";
-import { EditForm } from "./EditForm";
+import type { Book } from "@/lib/types";
 
 function Field({ label, value }: { label: string; value: string | null | undefined }) {
   if (!value) return null;
@@ -30,39 +29,8 @@ function Pills({ label, items }: { label: string; items: string[] | null | undef
   );
 }
 
-export function BookCard({
-  book,
-  onChange,
-  onDelete,
-}: {
-  book: Book;
-  onChange: (next: Book) => void;
-  onDelete: (id: number) => void;
-}) {
+export function BookCard({ book }: { book: Book }) {
   const [open, setOpen] = useState(false);
-  const [editing, setEditing] = useState(false);
-
-  if (editing) {
-    return (
-      <div className="rounded-md border border-neutral-300 bg-white p-4">
-        <EditForm
-          mode="edit"
-          type="book"
-          initial={book}
-          onSaved={(row) => {
-            onChange(row as Book);
-            setEditing(false);
-          }}
-          onCancel={() => setEditing(false)}
-          onDelete={() => {
-            onDelete(book.id);
-            setEditing(false);
-          }}
-        />
-      </div>
-    );
-  }
-
   return (
     <div className="rounded-md border border-neutral-200 bg-white">
       <button
@@ -72,12 +40,9 @@ export function BookCard({
         <div>
           <div className="flex items-baseline gap-2">
             <span className="text-base font-semibold text-neutral-900">{book.title}</span>
-            <span className="text-xs uppercase tracking-wider text-neutral-500">
-              {book.category}
-            </span>
-            {book.source === "literal" && (
-              <span className="rounded bg-amber-50 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-amber-700">
-                literal
+            {book.category && (
+              <span className="text-xs uppercase tracking-wider text-neutral-500">
+                {book.category}
               </span>
             )}
           </div>
@@ -96,34 +61,6 @@ export function BookCard({
           <Pills label="Pairs with" items={book.pairsWith} />
           <Field label="Notes" value={book.notes} />
           <Pills label="Tags" items={book.tags} />
-          {(book.isbn13 || book.publishedDate || book.literalSlug) && (
-            <div className="text-xs text-neutral-500">
-              {book.publishedDate && <span>{book.publishedDate}</span>}
-              {book.publishedDate && book.isbn13 && <span> · </span>}
-              {book.isbn13 && <span>ISBN {book.isbn13}</span>}
-              {book.literalSlug && (
-                <>
-                  {(book.publishedDate || book.isbn13) && <span> · </span>}
-                  <a
-                    href={`https://literal.club/book/${book.literalSlug}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline hover:text-neutral-700"
-                  >
-                    Literal
-                  </a>
-                </>
-              )}
-            </div>
-          )}
-          <div className="pt-2">
-            <button
-              onClick={() => setEditing(true)}
-              className="rounded border border-neutral-300 px-3 py-1 text-xs text-neutral-700 hover:bg-neutral-100"
-            >
-              Edit
-            </button>
-          </div>
         </div>
       )}
     </div>

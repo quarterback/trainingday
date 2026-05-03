@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Story } from "@/lib/schema";
-import { EditForm } from "./EditForm";
+import type { Story } from "@/lib/types";
 
 function Field({ label, value }: { label: string; value: string | null | undefined }) {
   if (!value) return null;
@@ -30,39 +29,8 @@ function Pills({ label, items }: { label: string; items: string[] | null | undef
   );
 }
 
-export function StoryCard({
-  story,
-  onChange,
-  onDelete,
-}: {
-  story: Story;
-  onChange: (next: Story) => void;
-  onDelete: (id: number) => void;
-}) {
+export function StoryCard({ story }: { story: Story }) {
   const [open, setOpen] = useState(false);
-  const [editing, setEditing] = useState(false);
-
-  if (editing) {
-    return (
-      <div className="rounded-md border border-neutral-300 bg-white p-4">
-        <EditForm
-          mode="edit"
-          type="story"
-          initial={story}
-          onSaved={(row) => {
-            onChange(row as Story);
-            setEditing(false);
-          }}
-          onCancel={() => setEditing(false)}
-          onDelete={() => {
-            onDelete(story.id);
-            setEditing(false);
-          }}
-        />
-      </div>
-    );
-  }
-
   return (
     <div className="rounded-md border border-neutral-200 bg-white">
       <button
@@ -89,14 +57,6 @@ export function StoryCard({
           <Pills label="Questions it answers" items={story.questionsItAnswers} />
           <Field label="Notes" value={story.notes} />
           <Pills label="Tags" items={story.tags} />
-          <div className="pt-2">
-            <button
-              onClick={() => setEditing(true)}
-              className="rounded border border-neutral-300 px-3 py-1 text-xs text-neutral-700 hover:bg-neutral-100"
-            >
-              Edit
-            </button>
-          </div>
         </div>
       )}
     </div>

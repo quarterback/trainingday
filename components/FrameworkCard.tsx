@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Framework } from "@/lib/schema";
-import { EditForm } from "./EditForm";
+import type { Framework } from "@/lib/types";
 
 function Field({ label, value }: { label: string; value: string | null | undefined }) {
   if (!value) return null;
@@ -33,39 +32,8 @@ function Pills({ label, items }: { label: string; items: string[] | null | undef
   );
 }
 
-export function FrameworkCard({
-  framework,
-  onChange,
-  onDelete,
-}: {
-  framework: Framework;
-  onChange: (next: Framework) => void;
-  onDelete: (id: number) => void;
-}) {
+export function FrameworkCard({ framework }: { framework: Framework }) {
   const [open, setOpen] = useState(false);
-  const [editing, setEditing] = useState(false);
-
-  if (editing) {
-    return (
-      <div className="rounded-md border border-neutral-300 bg-white p-4">
-        <EditForm
-          mode="edit"
-          type="framework"
-          initial={framework}
-          onSaved={(row) => {
-            onChange(row as Framework);
-            setEditing(false);
-          }}
-          onCancel={() => setEditing(false)}
-          onDelete={() => {
-            onDelete(framework.id);
-            setEditing(false);
-          }}
-        />
-      </div>
-    );
-  }
-
   return (
     <div className="rounded-md border border-neutral-200 bg-white">
       <button
@@ -75,7 +43,9 @@ export function FrameworkCard({
         <div>
           <div className="flex items-baseline gap-2">
             <span className="text-base font-semibold text-neutral-900">{framework.name}</span>
-            <span className="text-xs uppercase tracking-wider text-neutral-500">{framework.category}</span>
+            <span className="text-xs uppercase tracking-wider text-neutral-500">
+              {framework.category}
+            </span>
           </div>
           <p className="mt-1 text-sm text-neutral-700">{framework.oneLiner}</p>
         </div>
@@ -90,14 +60,6 @@ export function FrameworkCard({
           <Field label="Notes" value={framework.notes} />
           <Field label="Source" value={framework.source} />
           <Pills label="Tags" items={framework.tags} />
-          <div className="pt-2">
-            <button
-              onClick={() => setEditing(true)}
-              className="rounded border border-neutral-300 px-3 py-1 text-xs text-neutral-700 hover:bg-neutral-100"
-            >
-              Edit
-            </button>
-          </div>
         </div>
       )}
     </div>

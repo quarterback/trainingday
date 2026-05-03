@@ -1,8 +1,8 @@
-import type { NewFramework } from "@/lib/schema";
+import type { Framework } from "@/lib/types";
 
-// Full entries — no thin stubs. The point of seed content is that you can
-// actually rehearse from it on day one.
-export const seedFrameworks: NewFramework[] = [
+// Full entries — no thin stubs. Edit this file in GitHub's web editor to add
+// or refine entries; Vercel rebuilds on push.
+export const frameworks: Framework[] = [
   {
     name: "STAR",
     category: "interview",
