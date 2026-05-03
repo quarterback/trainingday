@@ -1,43 +1,58 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import type { EntryType } from "@/lib/types";
-import type { Framework, Story, Translation } from "@/lib/schema";
+import type { Book, EntryType, Framework, Story, Translation } from "@/lib/types";
 
-type QuizResponse =
-  | { type: "framework"; entry: Framework | null }
-  | { type: "story"; entry: Story | null }
-  | { type: "translation"; entry: Translation | null };
+interface Props {
+  frameworks: Framework[];
+  stories: Story[];
+  translations: Translation[];
+  books: Book[];
+}
 
-export default function QuizPage() {
+type Entry =
+  | { type: "framework"; entry: Framework }
+  | { type: "story"; entry: Story }
+  | { type: "translation"; entry: Translation }
+  | { type: "book"; entry: Book };
+
+function pickRandom<T>(items: T[]): T | null {
+  if (items.length === 0) return null;
+  return items[Math.floor(Math.random() * items.length)];
+}
+
+export default function QuizClient({ frameworks, stories, translations, books }: Props) {
   const params = useSearchParams();
   const [type, setType] = useState<EntryType>((params.get("type") as EntryType) ?? "framework");
   const [category, setCategory] = useState<string | null>(params.get("category"));
-  const [categories, setCategories] = useState<string[]>([]);
-  const [data, setData] = useState<QuizResponse | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [current, setCurrent] = useState<Entry | null>(null);
 
-  useEffect(() => {
-    fetch("/api/categories")
-      .then((r) => r.json())
-      .then(setCategories)
-      .catch(() => {});
-  }, []);
+  const categories = useMemo(() => {
+    const set = new Set<string>();
+    for (const f of frameworks) set.add(f.category);
+    for (const b of books) if (b.category) set.add(b.category);
+    return Array.from(set).sort();
+  }, [frameworks, books]);
 
-  const next = useCallback(async () => {
-    setLoading(true);
-    try {
-      const sp = new URLSearchParams();
-      sp.set("type", type);
-      if (category && category !== "all") sp.set("category", category);
-      const res = await fetch(`/api/quiz?${sp.toString()}`);
-      setData((await res.json()) as QuizResponse);
-    } finally {
-      setLoading(false);
+  const next = useCallback(() => {
+    if (type === "framework") {
+      const pool = category ? frameworks.filter((f) => f.category === category) : frameworks;
+      const picked = pickRandom(pool);
+      setCurrent(picked ? { type: "framework", entry: picked } : null);
+    } else if (type === "story") {
+      const picked = pickRandom(stories);
+      setCurrent(picked ? { type: "story", entry: picked } : null);
+    } else if (type === "translation") {
+      const picked = pickRandom(translations);
+      setCurrent(picked ? { type: "translation", entry: picked } : null);
+    } else {
+      const pool = category ? books.filter((b) => b.category === category) : books;
+      const picked = pickRandom(pool);
+      setCurrent(picked ? { type: "book", entry: picked } : null);
     }
-  }, [type, category]);
+  }, [type, category, frameworks, stories, translations, books]);
 
   useEffect(() => {
     next();
@@ -57,7 +72,7 @@ export default function QuizPage() {
 
       <div className="flex flex-wrap items-center gap-2 text-sm">
         <span className="text-xs uppercase tracking-wider text-neutral-500">Type</span>
-        {(["framework", "story", "translation"] as EntryType[]).map((t) => (
+        {(["framework", "story", "translation", "book"] as EntryType[]).map((t) => (
           <button
             key={t}
             onClick={() => setType(t)}
@@ -71,7 +86,7 @@ export default function QuizPage() {
           </button>
         ))}
 
-        {type === "framework" && (
+        {(type === "framework" || type === "book") && (
           <>
             <span className="ml-4 text-xs uppercase tracking-wider text-neutral-500">Category</span>
             <button
@@ -102,19 +117,15 @@ export default function QuizPage() {
       </div>
 
       <div className="rounded-md border border-neutral-200 bg-white p-6">
-        {loading && <div className="text-sm text-neutral-500">Loading…</div>}
-        {!loading && data?.entry === null && (
+        {!current && (
           <div className="text-sm text-neutral-500">
-            No entries match. Add some from the main page.
+            No entries match. Edit <code>data/*.ts</code> in the repo to add entries.
           </div>
         )}
-        {!loading && data?.entry && data.type === "framework" && (
-          <FrameworkQuizCard f={data.entry} />
-        )}
-        {!loading && data?.entry && data.type === "story" && <StoryQuizCard s={data.entry} />}
-        {!loading && data?.entry && data.type === "translation" && (
-          <TranslationQuizCard t={data.entry} />
-        )}
+        {current?.type === "framework" && <FrameworkQuizCard f={current.entry} />}
+        {current?.type === "story" && <StoryQuizCard s={current.entry} />}
+        {current?.type === "translation" && <TranslationQuizCard t={current.entry} />}
+        {current?.type === "book" && <BookQuizCard b={current.entry} />}
       </div>
 
       <button
@@ -175,6 +186,33 @@ function TranslationQuizCard({ t }: { t: Translation }) {
       <h2 className="text-2xl font-semibold text-neutral-900">{t.yourTerm}</h2>
       <p className="text-base text-neutral-800">↔ {t.standardTerms.join(", ")}</p>
       {t.explanation && <p className="text-sm text-neutral-700">{t.explanation}</p>}
+    </div>
+  );
+}
+
+function BookQuizCard({ b }: { b: Book }) {
+  return (
+    <div className="space-y-3">
+      <div>
+        {b.category && (
+          <div className="text-xs uppercase tracking-wider text-neutral-500">{b.category}</div>
+        )}
+        <h2 className="text-2xl font-semibold text-neutral-900">{b.title}</h2>
+        <p className="text-sm text-neutral-700">{b.author}</p>
+      </div>
+      {b.oneLiner && <p className="text-base text-neutral-800">{b.oneLiner}</p>}
+      {b.howToReference && (
+        <p className="text-sm text-neutral-700">
+          <span className="font-semibold">How to reference: </span>
+          {b.howToReference}
+        </p>
+      )}
+      {b.whenToInvoke && (
+        <p className="text-sm text-neutral-700">
+          <span className="font-semibold">When to invoke: </span>
+          {b.whenToInvoke}
+        </p>
+      )}
     </div>
   );
 }

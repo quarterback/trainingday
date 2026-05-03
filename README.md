@@ -1,79 +1,48 @@
 # Training Day
 
-A personal reference app for frameworks, career stories, and vocabulary translations. Single-user, password-gated, deployable to Vercel.
+A personal reference app for frameworks, career stories, vocabulary translations, and books.
 
-The whole product spec is one line: when you need to recall something, you can find it in under ten seconds.
+When you need to recall something, you can find it in under ten seconds. That's the whole spec.
+
+## How it works
+
+Pure static site. Content lives in `data/*.ts` files in this repo. Pages render at build time. Search filters client-side. No database, no API routes, no auth, no env vars.
+
+To add or edit content:
+
+1. Open the relevant file on GitHub:
+   - `data/frameworks.ts` — frameworks (the body of work)
+   - `data/translations.ts` — vocabulary bridges
+   - `data/stories.ts` — career stories
+   - `data/books.ts` — books you'd reference
+2. Click the pencil icon to edit in GitHub's web editor.
+3. Add an entry following the existing pattern.
+4. Commit. Vercel auto-rebuilds in about a minute.
 
 ## Stack
 
-- Next.js 14 (App Router, TypeScript)
-- Drizzle ORM + `postgres` driver (works against Vercel Postgres, Supabase, Neon, or local Postgres)
+- Next.js 14 (App Router, TypeScript) — gets you a snappy SPA-like experience and Vercel auto-deploys
 - Tailwind CSS
-- Single-password gate via Edge middleware (HMAC-signed cookie). No accounts.
+- Nothing else
 
-## Quick start (local)
+## Data shapes
 
-1. Install dependencies.
-   ```
-   npm install
-   ```
-2. Create `.env.local` from the example and fill in:
-   - `DATABASE_URL` — any Postgres connection string
-   - `APP_PASSWORD` — whatever you want as the gate
-   - `AUTH_SECRET` — long random hex (`openssl rand -hex 32`)
-   ```
-   cp .env.example .env.local
-   ```
-3. Push the schema and seed initial content.
-   ```
-   npm run db:push
-   npm run db:seed
-   ```
-4. Run dev.
-   ```
-   npm run dev
-   ```
-5. Open http://localhost:3000, you'll be redirected to `/login`. Enter `APP_PASSWORD`.
-
-## Deploy to Vercel
-
-1. Push this branch to GitHub. Connect the repo to Vercel.
-2. Add a Postgres integration (Vercel Postgres, Neon, or Supabase) — copy `DATABASE_URL` into Vercel project env vars. Add `APP_PASSWORD` and `AUTH_SECRET` too.
-3. From a local checkout pointed at the production database, run `npm run db:push` once to create the tables, and `npm run db:seed` to load initial content.
-4. Vercel will auto-deploy on push to the branch.
-
-## Data model
-
-Three tables, all with `text[]` arrays for tags and pill-style fields. See `lib/schema.ts`.
-
-- **frameworks** — name, category, one-liner, when-to-use, vocabulary, how-to-drop-in, common phrasing, notes, source, tags.
-- **stories** — title, 30s/2m/5m versions, frameworks exemplified, thinkers in dialogue, questions it answers, reference sentence, notes, tags.
-- **translations** — your term ↔ standard terms, explanation, when-to-use-yours, when-to-use-theirs, tags.
-
-## What ships in the seed
-
-- Ten framework entries, fully written: STAR, SCQA, Cynefin, JTBD, Wardley Mapping, RACI, Kotter 8-Step, Mark Moore Public Value, **Delivery Forensics**, **Trajectory Management**.
-- Three translation rows: `delivery_forensics`, `trajectory_management`, and a meta-translation (`quality_movement_for_public_services`) that captures the positioning argument vis-à-vis Six Sigma / Lean / TQM.
-- Stories table is intentionally empty — write your own.
+See `lib/types.ts` for the full type definitions. Every field except the headline ones (`name`/`title`/`yourTerm`/`category`/`author`) is optional — leave anything you don't want to write yet undefined.
 
 ## UI
 
-- `/` — search across all three tables, plus a sidebar to filter by framework category and content type. Cards expand on click; Edit swaps in an inline form.
-- `/login` — password gate.
+- `/` — search across everything; sidebar filters by category and content type. Click a card to expand it.
 - `/quiz` — random entry by category and type. Pre-interview review mode.
 
-Search uses Postgres `ILIKE` substring match across name/title, one-liner, notes, vocabulary, tags, and other free-text fields. Upgrade to `tsvector` + GIN once the entry count justifies it.
+## Deploy
 
-## Adding entries
+Already on Vercel. The included `vercel.json` pins the framework preset to Next.js. After any commit to this branch, Vercel rebuilds and redeploys automatically.
 
-The "New entry" button on the main page accepts framework / story / translation. Edit-in-place on any card. The seed file is also editable — re-run `npm run db:seed` to upsert by natural key.
-
-## Schema changes
-
-After editing `lib/schema.ts`:
+## Local dev (optional)
 
 ```
-npm run db:push
+npm install
+npm run dev
 ```
 
-Drizzle Kit syncs the schema to the database. No migration files are committed initially — add them with `drizzle-kit generate` once the schema stabilizes.
+Open http://localhost:3000.

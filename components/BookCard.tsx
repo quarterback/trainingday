@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Framework } from "@/lib/types";
+import type { Book } from "@/lib/types";
 
 function Field({ label, value }: { label: string; value: string | null | undefined }) {
   if (!value) return null;
@@ -20,10 +20,7 @@ function Pills({ label, items }: { label: string; items: string[] | null | undef
       <div className="text-xs font-semibold uppercase tracking-wider text-neutral-500">{label}</div>
       <div className="mt-1 flex flex-wrap gap-1">
         {items.map((item) => (
-          <span
-            key={item}
-            className="rounded bg-neutral-100 px-2 py-0.5 text-xs text-neutral-700"
-          >
+          <span key={item} className="rounded bg-neutral-100 px-2 py-0.5 text-xs text-neutral-700">
             {item}
           </span>
         ))}
@@ -32,7 +29,7 @@ function Pills({ label, items }: { label: string; items: string[] | null | undef
   );
 }
 
-export function FrameworkCard({ framework }: { framework: Framework }) {
+export function BookCard({ book }: { book: Book }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="rounded-md border border-neutral-200 bg-white">
@@ -42,24 +39,28 @@ export function FrameworkCard({ framework }: { framework: Framework }) {
       >
         <div>
           <div className="flex items-baseline gap-2">
-            <span className="text-base font-semibold text-neutral-900">{framework.name}</span>
-            <span className="text-xs uppercase tracking-wider text-neutral-500">
-              {framework.category}
-            </span>
+            <span className="text-base font-semibold text-neutral-900">{book.title}</span>
+            {book.category && (
+              <span className="text-xs uppercase tracking-wider text-neutral-500">
+                {book.category}
+              </span>
+            )}
           </div>
-          <p className="mt-1 text-sm text-neutral-700">{framework.oneLiner}</p>
+          <p className="mt-1 text-sm text-neutral-700">
+            {book.author}
+            {book.oneLiner ? ` — ${book.oneLiner}` : ""}
+          </p>
         </div>
         <span className="text-xs text-neutral-400">{open ? "−" : "+"}</span>
       </button>
       {open && (
         <div className="space-y-3 border-t border-neutral-200 px-4 py-3">
-          <Field label="When to use" value={framework.whenToUse} />
-          <Pills label="Vocabulary" items={framework.vocabulary} />
-          <Field label="How to drop in" value={framework.howToDropIn} />
-          <Field label="Common phrasing" value={framework.commonPhrasing} />
-          <Field label="Notes" value={framework.notes} />
-          <Field label="Source" value={framework.source} />
-          <Pills label="Tags" items={framework.tags} />
+          <Field label="One-liner" value={book.oneLiner} />
+          <Field label="How to reference" value={book.howToReference} />
+          <Field label="When to invoke" value={book.whenToInvoke} />
+          <Pills label="Pairs with" items={book.pairsWith} />
+          <Field label="Notes" value={book.notes} />
+          <Pills label="Tags" items={book.tags} />
         </div>
       )}
     </div>

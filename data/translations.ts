@@ -1,6 +1,6 @@
-import type { NewTranslation } from "@/lib/schema";
+import type { Translation } from "@/lib/types";
 
-export const seedTranslations: NewTranslation[] = [
+export const translations: Translation[] = [
   {
     yourTerm: "delivery_forensics",
     standardTerms: ["FMEA", "GAO post-program review", "IG audit", "after-action review"],
