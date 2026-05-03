@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import type { EntryType } from "@/lib/types";
-import type { Framework, Story, Translation } from "@/lib/schema";
+import type { Book, Framework, Story, Translation } from "@/lib/schema";
 
 type QuizResponse =
   | { type: "framework"; entry: Framework | null }
   | { type: "story"; entry: Story | null }
-  | { type: "translation"; entry: Translation | null };
+  | { type: "translation"; entry: Translation | null }
+  | { type: "book"; entry: Book | null };
 
 export default function QuizPage() {
   const params = useSearchParams();
@@ -57,7 +58,7 @@ export default function QuizPage() {
 
       <div className="flex flex-wrap items-center gap-2 text-sm">
         <span className="text-xs uppercase tracking-wider text-neutral-500">Type</span>
-        {(["framework", "story", "translation"] as EntryType[]).map((t) => (
+        {(["framework", "story", "translation", "book"] as EntryType[]).map((t) => (
           <button
             key={t}
             onClick={() => setType(t)}
@@ -71,7 +72,7 @@ export default function QuizPage() {
           </button>
         ))}
 
-        {type === "framework" && (
+        {(type === "framework" || type === "book") && (
           <>
             <span className="ml-4 text-xs uppercase tracking-wider text-neutral-500">Category</span>
             <button
@@ -115,6 +116,7 @@ export default function QuizPage() {
         {!loading && data?.entry && data.type === "translation" && (
           <TranslationQuizCard t={data.entry} />
         )}
+        {!loading && data?.entry && data.type === "book" && <BookQuizCard b={data.entry} />}
       </div>
 
       <button
@@ -175,6 +177,37 @@ function TranslationQuizCard({ t }: { t: Translation }) {
       <h2 className="text-2xl font-semibold text-neutral-900">{t.yourTerm}</h2>
       <p className="text-base text-neutral-800">↔ {t.standardTerms.join(", ")}</p>
       {t.explanation && <p className="text-sm text-neutral-700">{t.explanation}</p>}
+    </div>
+  );
+}
+
+function BookQuizCard({ b }: { b: Book }) {
+  return (
+    <div className="space-y-3">
+      <div>
+        <div className="text-xs uppercase tracking-wider text-neutral-500">{b.category}</div>
+        <h2 className="text-2xl font-semibold text-neutral-900">{b.title}</h2>
+        <p className="text-sm text-neutral-700">{b.author}</p>
+      </div>
+      {b.oneLiner && <p className="text-base text-neutral-800">{b.oneLiner}</p>}
+      {b.howToReference && (
+        <p className="text-sm text-neutral-700">
+          <span className="font-semibold">How to reference: </span>
+          {b.howToReference}
+        </p>
+      )}
+      {b.whenToInvoke && (
+        <p className="text-sm text-neutral-700">
+          <span className="font-semibold">When to invoke: </span>
+          {b.whenToInvoke}
+        </p>
+      )}
+      {b.pairsWith && b.pairsWith.length > 0 && (
+        <p className="text-sm text-neutral-700">
+          <span className="font-semibold">Pairs with: </span>
+          {b.pairsWith.join(", ")}
+        </p>
+      )}
     </div>
   );
 }

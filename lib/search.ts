@@ -1,6 +1,6 @@
 import { sql } from "drizzle-orm";
 import { db } from "./db";
-import { frameworks, stories, translations } from "./schema";
+import { books, frameworks, stories, translations } from "./schema";
 import type { SearchResults } from "./types";
 
 const LIMIT = 50;
@@ -71,5 +71,26 @@ export async function searchAll(q: string, category?: string): Promise<SearchRes
     .orderBy(translations.yourTerm)
     .limit(LIMIT);
 
-  return { frameworks: fwRows, stories: stRows, translations: trRows };
+  const bkRows = await db
+    .select()
+    .from(books)
+    .where(
+      sql`
+        ${hasQuery ? sql`(
+          ${books.title} ILIKE ${like}
+          OR ${books.author} ILIKE ${like}
+          OR coalesce(${books.oneLiner}, '') ILIKE ${like}
+          OR coalesce(${books.howToReference}, '') ILIKE ${like}
+          OR coalesce(${books.whenToInvoke}, '') ILIKE ${like}
+          OR coalesce(${books.notes}, '') ILIKE ${like}
+          OR coalesce(array_to_string(${books.pairsWith}, ' '), '') ILIKE ${like}
+          OR coalesce(array_to_string(${books.tags}, ' '), '') ILIKE ${like}
+        )` : sql`true`}
+        ${hasCategory ? sql`AND ${books.category} = ${category}` : sql``}
+      `,
+    )
+    .orderBy(books.title)
+    .limit(LIMIT);
+
+  return { frameworks: fwRows, stories: stRows, translations: trRows, books: bkRows };
 }

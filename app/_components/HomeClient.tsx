@@ -8,9 +8,10 @@ import { Sidebar } from "@/components/Sidebar";
 import { FrameworkCard } from "@/components/FrameworkCard";
 import { StoryCard } from "@/components/StoryCard";
 import { TranslationCard } from "@/components/TranslationCard";
+import { BookCard } from "@/components/BookCard";
 import { NewEntryButton } from "@/components/NewEntryButton";
 import type { EntryType, SearchResults } from "@/lib/types";
-import type { Framework, Story, Translation } from "@/lib/schema";
+import type { Book, Framework, Story, Translation } from "@/lib/schema";
 
 export default function Home() {
   const router = useRouter();
@@ -26,6 +27,7 @@ export default function Home() {
     frameworks: [],
     stories: [],
     translations: [],
+    books: [],
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -76,13 +78,14 @@ export default function Home() {
       .catch(() => {});
   }
 
-  function onCreated(row: Framework | Story | Translation, t: EntryType) {
+  function onCreated(row: Framework | Story | Translation | Book, t: EntryType) {
     setResults((r) => {
       if (t === "framework") return { ...r, frameworks: [...r.frameworks, row as Framework] };
       if (t === "story") return { ...r, stories: [...r.stories, row as Story] };
-      return { ...r, translations: [...r.translations, row as Translation] };
+      if (t === "translation") return { ...r, translations: [...r.translations, row as Translation] };
+      return { ...r, books: [...r.books, row as Book] };
     });
-    if (t === "framework") refreshCategories();
+    if (t === "framework" || t === "book") refreshCategories();
   }
 
   function updateFramework(next: Framework) {
@@ -111,19 +114,30 @@ export default function Home() {
   function deleteTranslation(id: number) {
     setResults((r) => ({ ...r, translations: r.translations.filter((t) => t.id !== id) }));
   }
+  function updateBook(next: Book) {
+    setResults((r) => ({ ...r, books: r.books.map((b) => (b.id === next.id ? next : b)) }));
+    refreshCategories();
+  }
+  function deleteBook(id: number) {
+    setResults((r) => ({ ...r, books: r.books.filter((b) => b.id !== id) }));
+    refreshCategories();
+  }
 
   const showFrameworks = type === "all" || type === "framework";
   const showStories = type === "all" || type === "story";
   const showTranslations = type === "all" || type === "translation";
+  const showBooks = type === "all" || type === "book";
 
-  // If a framework category is active, hide stories/translations to keep the
-  // browse view focused.
-  const filterToFrameworks = !!category;
+  // Stories and translations don't have categories. When a category filter is
+  // active, hide them to keep the browse view focused on the categorized
+  // content (frameworks and books).
+  const categoryActive = !!category;
 
   const totalCount =
     (showFrameworks ? results.frameworks.length : 0) +
-    (showStories && !filterToFrameworks ? results.stories.length : 0) +
-    (showTranslations && !filterToFrameworks ? results.translations.length : 0);
+    (showStories && !categoryActive ? results.stories.length : 0) +
+    (showTranslations && !categoryActive ? results.translations.length : 0) +
+    (showBooks ? results.books.length : 0);
 
   return (
     <div className="flex min-h-screen">
@@ -169,13 +183,17 @@ export default function Home() {
                   onDelete={deleteFramework}
                 />
               ))}
+            {showBooks &&
+              results.books.map((b) => (
+                <BookCard key={`b-${b.id}`} book={b} onChange={updateBook} onDelete={deleteBook} />
+              ))}
             {showStories &&
-              !filterToFrameworks &&
+              !categoryActive &&
               results.stories.map((s) => (
                 <StoryCard key={`s-${s.id}`} story={s} onChange={updateStory} onDelete={deleteStory} />
               ))}
             {showTranslations &&
-              !filterToFrameworks &&
+              !categoryActive &&
               results.translations.map((t) => (
                 <TranslationCard
                   key={`t-${t.id}`}

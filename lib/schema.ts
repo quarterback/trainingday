@@ -1,4 +1,4 @@
-import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, serial, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
 
 export const frameworks = pgTable("frameworks", {
   id: serial("id").primaryKey(),
@@ -44,9 +44,37 @@ export const translations = pgTable("translations", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+export const books = pgTable(
+  "books",
+  {
+    id: serial("id").primaryKey(),
+    title: text("title").notNull(),
+    author: text("author").notNull(),
+    category: text("category").notNull().default("uncategorized"),
+    oneLiner: text("one_liner"),
+    howToReference: text("how_to_reference"),
+    whenToInvoke: text("when_to_invoke"),
+    pairsWith: text("pairs_with").array(),
+    notes: text("notes"),
+    tags: text("tags").array(),
+    isbn13: text("isbn13"),
+    publishedDate: text("published_date"),
+    literalSlug: text("literal_slug"),
+    literalId: text("literal_id"),
+    source: text("source").notNull().default("manual"),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().notNull(),
+  },
+  (t) => ({
+    titleAuthorIdx: uniqueIndex("books_title_author_idx").on(t.title, t.author),
+  }),
+);
+
 export type Framework = typeof frameworks.$inferSelect;
 export type NewFramework = typeof frameworks.$inferInsert;
 export type Story = typeof stories.$inferSelect;
 export type NewStory = typeof stories.$inferInsert;
 export type Translation = typeof translations.$inferSelect;
 export type NewTranslation = typeof translations.$inferInsert;
+export type Book = typeof books.$inferSelect;
+export type NewBook = typeof books.$inferInsert;

@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import type { EntryType } from "@/lib/types";
-import type { Framework, Story, Translation } from "@/lib/schema";
+import type { Book, Framework, Story, Translation } from "@/lib/schema";
 import { EditForm } from "./EditForm";
 
 export function NewEntryButton({
   onCreated,
 }: {
-  onCreated: (row: Framework | Story | Translation, type: EntryType) => void;
+  onCreated: (row: Framework | Story | Translation | Book, type: EntryType) => void;
 }) {
   const [open, setOpen] = useState(false);
   const [type, setType] = useState<EntryType>("framework");

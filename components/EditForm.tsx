@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import type { EntryType } from "@/lib/types";
-import type { Framework, Story, Translation } from "@/lib/schema";
+import type { Book, Framework, Story, Translation } from "@/lib/schema";
 
-type AnyRow = Framework | Story | Translation;
+type AnyRow = Framework | Story | Translation | Book;
 type Mode = "create" | "edit";
 
 const inputCls =
@@ -46,7 +46,7 @@ export function EditForm({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const f = (initial ?? {}) as Partial<Framework & Story & Translation>;
+  const f = (initial ?? {}) as Partial<Framework & Story & Translation & Book>;
   const [state, setState] = useState({
     name: f.name ?? "",
     category: f.category ?? "",
@@ -70,6 +70,12 @@ export function EditForm({
     explanation: f.explanation ?? "",
     whenToUseYours: f.whenToUseYours ?? "",
     whenToUseTheirs: f.whenToUseTheirs ?? "",
+    author: f.author ?? "",
+    howToReference: f.howToReference ?? "",
+    whenToInvoke: f.whenToInvoke ?? "",
+    pairsWith: arrayToCsv(f.pairsWith as string[] | null | undefined),
+    isbn13: f.isbn13 ?? "",
+    publishedDate: f.publishedDate ?? "",
     tags: arrayToCsv(f.tags as string[] | null | undefined),
   });
 
@@ -84,7 +90,13 @@ export function EditForm({
     try {
       const id = (initial as { id?: number } | undefined)?.id;
       const path =
-        type === "framework" ? "/api/frameworks" : type === "story" ? "/api/stories" : "/api/translations";
+        type === "framework"
+          ? "/api/frameworks"
+          : type === "story"
+          ? "/api/stories"
+          : type === "translation"
+          ? "/api/translations"
+          : "/api/books";
       const url = mode === "edit" && id ? `${path}/${id}` : path;
       const method = mode === "edit" ? "PATCH" : "POST";
 
@@ -115,7 +127,7 @@ export function EditForm({
           notes: state.notes.trim() || null,
           tags: csvToArray(state.tags ?? ""),
         };
-      } else {
+      } else if (type === "translation") {
         payload = {
           yourTerm: state.yourTerm.trim(),
           standardTerms: csvToArray(state.standardTerms ?? "") ?? [],
@@ -123,6 +135,20 @@ export function EditForm({
           whenToUseYours: state.whenToUseYours.trim() || null,
           whenToUseTheirs: state.whenToUseTheirs.trim() || null,
           tags: csvToArray(state.tags ?? ""),
+        };
+      } else {
+        payload = {
+          title: state.title.trim(),
+          author: state.author.trim(),
+          category: state.category.trim() || "uncategorized",
+          oneLiner: state.oneLiner.trim() || null,
+          howToReference: state.howToReference.trim() || null,
+          whenToInvoke: state.whenToInvoke.trim() || null,
+          pairsWith: csvToArray(state.pairsWith ?? ""),
+          notes: state.notes.trim() || null,
+          tags: csvToArray(state.tags ?? ""),
+          isbn13: state.isbn13.trim() || null,
+          publishedDate: state.publishedDate.trim() || null,
         };
       }
 
@@ -152,7 +178,13 @@ export function EditForm({
     setBusy(true);
     try {
       const path =
-        type === "framework" ? "/api/frameworks" : type === "story" ? "/api/stories" : "/api/translations";
+        type === "framework"
+          ? "/api/frameworks"
+          : type === "story"
+          ? "/api/stories"
+          : type === "translation"
+          ? "/api/translations"
+          : "/api/books";
       const res = await fetch(`${path}/${id}`, { method: "DELETE" });
       if (!res.ok) throw new Error("Delete failed.");
       onDelete();
@@ -169,7 +201,7 @@ export function EditForm({
         <div className={fieldWrap}>
           <span className={labelCls}>Entry type</span>
           <div className="flex gap-2">
-            {(["framework", "story", "translation"] as EntryType[]).map((t) => (
+            {(["framework", "story", "translation", "book"] as EntryType[]).map((t) => (
               <button
                 key={t}
                 type="button"
@@ -297,6 +329,58 @@ export function EditForm({
             <span className={labelCls}>When to use theirs</span>
             <textarea className={inputCls} rows={2} value={state.whenToUseTheirs} onChange={(e) => set("whenToUseTheirs", e.target.value)} />
           </label>
+        </>
+      )}
+
+      {type === "book" && (
+        <>
+          <label className={fieldWrap}>
+            <span className={labelCls}>Title *</span>
+            <input className={inputCls} value={state.title} onChange={(e) => set("title", e.target.value)} required />
+          </label>
+          <label className={fieldWrap}>
+            <span className={labelCls}>Author *</span>
+            <input className={inputCls} value={state.author} onChange={(e) => set("author", e.target.value)} required />
+          </label>
+          <label className={fieldWrap}>
+            <span className={labelCls}>Category</span>
+            <input
+              className={inputCls}
+              value={state.category}
+              onChange={(e) => set("category", e.target.value)}
+              placeholder="uncategorized / strategy / design / fiction / memoir / …"
+            />
+          </label>
+          <label className={fieldWrap}>
+            <span className={labelCls}>One-liner</span>
+            <textarea className={inputCls} rows={2} value={state.oneLiner} onChange={(e) => set("oneLiner", e.target.value)} />
+          </label>
+          <label className={fieldWrap}>
+            <span className={labelCls}>How to reference</span>
+            <textarea className={inputCls} rows={2} value={state.howToReference} onChange={(e) => set("howToReference", e.target.value)} placeholder="How you'd cite this in conversation." />
+          </label>
+          <label className={fieldWrap}>
+            <span className={labelCls}>When to invoke</span>
+            <textarea className={inputCls} rows={2} value={state.whenToInvoke} onChange={(e) => set("whenToInvoke", e.target.value)} placeholder="The kind of question this book's argument answers." />
+          </label>
+          <label className={fieldWrap}>
+            <span className={labelCls}>Pairs with (comma-separated)</span>
+            <input className={inputCls} value={state.pairsWith ?? ""} onChange={(e) => set("pairsWith", e.target.value)} placeholder="Frameworks or other books that pair with this one." />
+          </label>
+          <label className={fieldWrap}>
+            <span className={labelCls}>Notes</span>
+            <textarea className={inputCls} rows={3} value={state.notes} onChange={(e) => set("notes", e.target.value)} />
+          </label>
+          <div className="flex gap-2">
+            <label className={`${fieldWrap} flex-1`}>
+              <span className={labelCls}>ISBN-13</span>
+              <input className={inputCls} value={state.isbn13} onChange={(e) => set("isbn13", e.target.value)} />
+            </label>
+            <label className={`${fieldWrap} flex-1`}>
+              <span className={labelCls}>Published date</span>
+              <input className={inputCls} value={state.publishedDate} onChange={(e) => set("publishedDate", e.target.value)} />
+            </label>
+          </div>
         </>
       )}
 

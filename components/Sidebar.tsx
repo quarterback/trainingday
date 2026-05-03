@@ -7,6 +7,7 @@ const TYPES: Array<{ key: "all" | EntryType; label: string }> = [
   { key: "framework", label: "Frameworks" },
   { key: "story", label: "Stories" },
   { key: "translation", label: "Translations" },
+  { key: "book", label: "Books" },
 ];
 
 export function Sidebar({
@@ -49,7 +50,7 @@ export function Sidebar({
 
       <section>
         <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-          Framework category
+          Category
         </div>
         <ul className="flex flex-col gap-1">
           <li>

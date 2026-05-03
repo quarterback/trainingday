@@ -1,6 +1,6 @@
 # Training Day
 
-A personal reference app for frameworks, career stories, and vocabulary translations. Single-user, deployable to Vercel.
+A personal reference app for frameworks, career stories, vocabulary translations, and books. Single-user, deployable to Vercel.
 
 The whole product spec is one line: when you need to recall something, you can find it in under ten seconds.
 
@@ -54,17 +54,18 @@ The whole product spec is one line: when you need to recall something, you can f
 
 ## Data model
 
-Three tables, all with `text[]` arrays for tags and pill-style fields. See `lib/schema.ts`.
+Four tables, all with `text[]` arrays for tags and pill-style fields. See `lib/schema.ts`.
 
 - **frameworks** — name, category, one-liner, when-to-use, vocabulary, how-to-drop-in, common phrasing, notes, source, tags.
 - **stories** — title, 30s/2m/5m versions, frameworks exemplified, thinkers in dialogue, questions it answers, reference sentence, notes, tags.
 - **translations** — your term ↔ standard terms, explanation, when-to-use-yours, when-to-use-theirs, tags.
+- **books** — title, author, category, one-liner, how-to-reference, when-to-invoke, pairs-with, notes, tags, plus Literal metadata (ISBN, slug, id) and a `source` field. Unique on (title, author) so imports are idempotent.
 
 ## What ships in the seed
 
 - 25 framework entries spanning interview, communication, strategy, product, change-management, public-sector, design, and design-research categories — including owner-authored Delivery Forensics and Trajectory Management.
 - 4 translation rows that capture positioning moves (Delivery Forensics ↔ FMEA/GAO, Trajectory Management ↔ hoshin kanri/PDCA/SPC, the meta-translation about quality movement for public services, and the design-discipline umbrella across Design Thinking / HCD / Double Diamond / Lean UX / Service Design / 18F Methods).
-- Stories table is intentionally empty — write your own.
+- Stories and books tables are intentionally empty — populate stories by hand and books via the Literal import (below).
 
 ## UI
 
@@ -75,7 +76,19 @@ Search uses Postgres `ILIKE` substring match across name/title, one-liner, notes
 
 ## Adding entries
 
-The "New entry" button on the main page accepts framework / story / translation. Edit-in-place on any card. The seed file is also editable — re-run `npm run db:seed` to upsert by natural key.
+The "New entry" button on the main page accepts framework / story / translation / book. Edit-in-place on any card. The seed file is also editable — re-run `npm run db:seed` to upsert by natural key.
+
+## Importing books from Literal
+
+```
+LITERAL_HANDLE=ron npm run import:literal
+```
+
+(or set `LITERAL_HANDLE` in `.env.local`.)
+
+Pulls your `FINISHED` shelf from Literal's public GraphQL API and inserts each book into the `books` table with `category: "uncategorized"`, `source: "literal"`, and the Literal description as a placeholder one-liner. The (title, author) unique index makes the script idempotent — re-run any time to pick up new books, and your hand-edited fields are preserved.
+
+The recommended workflow after the import is three sweeps: (1) skim and assign categories, (2) flag the books you'd actually cite, (3) write `howToReference` / `whenToInvoke` / `pairsWith` in your own voice for that subset. Unflagged books stay searchable as a record of what you've read.
 
 ## Schema changes
 
