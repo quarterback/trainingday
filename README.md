@@ -38,9 +38,24 @@ The whole product spec is one line: when you need to recall something, you can f
 ## Deploy to Vercel
 
 1. Push this branch to GitHub. Connect the repo to Vercel.
-2. Add a Postgres integration (Vercel Postgres, Neon, or Supabase) — copy `DATABASE_URL` into Vercel project env vars. Add `APP_PASSWORD` and `AUTH_SECRET` too.
-3. From a local checkout pointed at the production database, run `npm run db:push` once to create the tables, and `npm run db:seed` to load initial content.
-4. Vercel will auto-deploy on push to the branch.
+2. **Set env vars in Vercel project settings → Environment Variables** (all three are required, for Production / Preview / Development):
+   - `DATABASE_URL` — Postgres connection string (Vercel Postgres / Neon / Supabase)
+   - `APP_PASSWORD` — the password you'll type at `/login`
+   - `AUTH_SECRET` — long random hex; generate with `openssl rand -hex 32`
+3. **Push the schema to the production database.** From a local checkout, set `DATABASE_URL` in `.env.local` to the *production* connection string, then run:
+   ```
+   npm run db:push
+   npm run db:seed
+   ```
+   (You can revert `.env.local` to your dev DB afterward.)
+4. Trigger a redeploy from Vercel (or push a commit). The site should now load.
+
+### Troubleshooting "nothing loads"
+
+- **Build fails on Vercel** — check the Build Logs tab. The most common cause used to be an eager `throw` on missing `DATABASE_URL` at module load; the DB client is now lazy-initialized so the build no longer needs env vars to succeed. If you see other build errors, share them.
+- **Build succeeds, every page is a 500** — `AUTH_SECRET` or `APP_PASSWORD` is missing in Vercel. Set them and redeploy.
+- **`/login` loads, signing in works, then `/` is a 500** — schema isn't pushed to the prod DB. Run `npm run db:push` against the production `DATABASE_URL` from your laptop.
+- **Cookie won't stick** — the auth cookie sets `secure: true` in production. Vercel always serves over HTTPS, so this should just work; if you're testing against a non-HTTPS preview URL, that's the issue.
 
 ## Data model
 
