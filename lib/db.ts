@@ -1,4 +1,4 @@
-import { drizzle } from "drizzle-orm/postgres-js";
+import { drizzle, type PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import * as schema from "./schema";
 
@@ -7,7 +7,7 @@ import * as schema from "./schema";
 // throw on missing DATABASE_URL would fail the whole build before any env vars
 // are read.
 
-type Drizzle = ReturnType<typeof drizzle<typeof schema>>;
+type Drizzle = PostgresJsDatabase<typeof schema>;
 
 const globalForDb = globalThis as unknown as {
   pgClient?: ReturnType<typeof postgres>;
