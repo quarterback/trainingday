@@ -643,4 +643,427 @@ export const frameworks: Framework[] = [
     source: "18F, De-risking Government Technology (https://derisking-guide.18f.gov).",
     tags: ["public_sector", "procurement", "delivery", "risk", "policy"],
   },
+
+  // —— Delivery ————————————————————————————————————————————————————————————
+
+  {
+    name: "Scrum",
+    category: "delivery",
+    oneLiner:
+      "An iterative delivery framework with fixed-length sprints, defined ceremonies, and three roles (Product Owner, Scrum Master, Dev Team) for delivering working software in small, reviewable increments.",
+    whenToUse:
+      "When a team needs a repeating rhythm to commit, deliver, and learn in short cycles, and when stakeholders want progress visibility without micro-managing the team.",
+    vocabulary: [
+      "sprint",
+      "backlog",
+      "sprint planning",
+      "daily standup",
+      "sprint review",
+      "retrospective",
+      "velocity",
+      "definition of done",
+      "increment",
+      "Scrum Master",
+      "Product Owner",
+    ],
+    howToDropIn:
+      "\"The sprint cadence is the heartbeat — commit to what fits in two weeks, deliver it done, then inspect and adapt. Everything else is ceremony to support that loop.\"",
+    commonPhrasing:
+      "Software delivery teams, government agile contracts, digital transformation programs, any context where 'agile' is the stated method.",
+    notes:
+      "Scrum is a framework, not a methodology; it doesn't tell you how to code, only how to organize delivery. The most violated element is the definition of done — teams that ship 'mostly done' work accumulate invisible technical and design debt. The ceremonies have distinct purposes; collapsing or skipping them destroys the feedback loop they create. Common anti-pattern: 'Scrumfall' — sprint the execution while planning like waterfall. Pair with Kanban for teams doing ops/maintenance work alongside product sprints.",
+    source: "Schwaber and Sutherland, The Scrum Guide (2020). Original: Jeff Sutherland and Ken Schwaber, 1995.",
+    tags: ["delivery", "agile", "process", "sprints"],
+  },
+  {
+    name: "Kanban",
+    category: "delivery",
+    oneLiner:
+      "A visual workflow management system using a board, WIP limits per stage, and flow metrics (cycle time, lead time, throughput) to improve delivery pace and predictability.",
+    whenToUse:
+      "When work flow is unpredictable, priorities change frequently, or a team can't commit to fixed sprint scope. Also the right fit for ops and maintenance work alongside Scrum-based product work.",
+    vocabulary: [
+      "WIP limit",
+      "cycle time",
+      "lead time",
+      "throughput",
+      "pull system",
+      "kanban board",
+      "flow efficiency",
+      "cumulative flow diagram",
+      "blocker",
+    ],
+    howToDropIn:
+      "\"The board shows three items blocked at QA and six in progress. The WIP limit exists precisely for this — we're overcommitted. We need to finish before we start. Pull, don't push.\"",
+    commonPhrasing:
+      "Product and engineering teams, support/ops workflows, service design workflows, portfolio management, any team where 'we have too much in flight' is a chronic condition.",
+    notes:
+      "Kanban's power is WIP limits — they force queues and blockers to become visible rather than just late. The most common mistake is a Kanban board without WIP limits, which is just a status tracker. Unlike Scrum, Kanban has no prescribed roles or ceremonies; you add them only if they serve the flow. David Anderson formalized the management practices; the original is Toyota's production card system. The cumulative flow diagram is underused — it shows where work piles up before a human even notices.",
+    source: "David Anderson, Kanban: Successful Evolutionary Change (2010). Toyota Production System origin.",
+    tags: ["delivery", "agile", "flow", "operations"],
+  },
+  {
+    name: "Team Topologies",
+    category: "delivery",
+    oneLiner:
+      "A model for structuring engineering organizations into four team types (Stream-aligned, Enabling, Complicated-Subsystem, Platform) and three interaction modes (Collaboration, X-as-a-Service, Facilitating) to optimize for flow.",
+    whenToUse:
+      "When cognitive load is crushing teams, when delivery is blocked by cross-team dependencies, when building a platform engineering strategy, or when re-orging a technology organization around software delivery rather than functional silos.",
+    vocabulary: [
+      "stream-aligned team",
+      "enabling team",
+      "complicated-subsystem team",
+      "platform team",
+      "collaboration",
+      "X-as-a-Service",
+      "facilitating",
+      "cognitive load",
+      "Conway's Law",
+      "inverse Conway maneuver",
+    ],
+    howToDropIn:
+      "\"The coupling problem here is organizational, not technical — we have feature teams waiting on a shared services org, which is a Collaboration pattern on something that should be X-as-a-Service. Team Topologies gives us the vocabulary to fix that.\"",
+    commonPhrasing:
+      "Engineering org design, platform strategy, DevOps transformation, re-org planning, any context where 'we're too dependent on other teams' is the bottleneck.",
+    notes:
+      "Team Topologies operationalizes Conway's Law — the org chart becomes the architecture, so design the org around the architecture you want (inverse Conway maneuver). The four team types are decision-making tools, not permanent boxes; the interaction mode for any given pair of teams should evolve over time. Enabling teams are the most underused type — they transfer capability and then dissolve, rather than becoming permanent dependencies. Pair with DORA metrics (Team Topologies predicts what will improve when you restructure right) and Domain-Driven Design for the technical side.",
+    source: "Skelton and Pais, Team Topologies (2019).",
+    tags: ["delivery", "org_design", "platform", "devops"],
+  },
+  {
+    name: "Continuous Delivery",
+    category: "delivery",
+    oneLiner:
+      "A software engineering discipline where every change is automatically built, tested, and kept deployment-ready, enabling frequent, low-risk releases by making deployment a routine operation rather than an event.",
+    whenToUse:
+      "When deployment is a source of risk, fear, or delay rather than a routine operation. The diagnostic: if the team 'saves up' changes for a release, the next release is where the risk has been accumulating.",
+    vocabulary: [
+      "deployment pipeline",
+      "continuous integration",
+      "continuous deployment",
+      "trunk-based development",
+      "feature flags",
+      "blue-green deployment",
+      "canary release",
+      "deployment risk",
+      "release train",
+    ],
+    howToDropIn:
+      "\"Deployment fear is a symptom: we've made releases rare and therefore big. The CD move is to make releases small and frequent until they're boring. Every week without a pipeline is a week risk is accumulating, not decreasing.\"",
+    commonPhrasing:
+      "Engineering transformation, platform investment, DevOps adoption, architecture reviews, contracts or RFPs that require agile delivery.",
+    notes:
+      "Continuous Delivery (kept deployment-ready at all times) vs. Continuous Deployment (auto-deployed on merge) is a meaningful distinction — most teams should develop the discipline before the automation. Trunk-based development with short-lived branches is the enabling practice for CI; long-lived feature branches defeat it. The DORA metrics measure the outcomes of a mature CD practice. Political case: every sprint that ends without a deployable increment is a sprint where the program can't respond to a policy change or oversight finding.",
+    source: "Jez Humble and David Farley, Continuous Delivery (2010).",
+    tags: ["delivery", "devops", "engineering", "deployment"],
+  },
+
+  // —— DevOps / engineering metrics ————————————————————————————————————————
+
+  {
+    name: "DORA Metrics",
+    category: "devops",
+    oneLiner:
+      "Four empirically-validated metrics measuring software delivery performance: Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Time to Restore Service.",
+    whenToUse:
+      "Benchmarking delivery performance, making the investment case for CI/CD or testing infrastructure, or cutting through debates about engineering quality with data rather than opinion.",
+    vocabulary: [
+      "deployment frequency",
+      "lead time for changes",
+      "change failure rate",
+      "time to restore service",
+      "MTTR",
+      "elite performer",
+      "throughput",
+      "stability",
+      "State of DevOps",
+    ],
+    howToDropIn:
+      "\"DORA gives us the benchmark. Our change failure rate and time to restore are in the 'medium' band — that means we invest in testing and observability before we increase deployment frequency, not after.\"",
+    commonPhrasing:
+      "Engineering leadership, platform team investment cases, DevOps maturity assessments, engineering OKRs, government digital service evaluations.",
+    notes:
+      "The four metrics split into two pairs: throughput (deployment frequency + lead time) and stability (change failure rate + time to restore). The key research finding: high performers don't trade off speed for stability — they achieve both. Throughput and stability are positively correlated in elite teams, not negatively. Teams that believe 'we have to slow down to improve quality' have it backwards; the research shows quality practice enables speed. Pair with Continuous Delivery (mechanisms) and Team Topologies (organizational pre-conditions).",
+    source: "DORA (DevOps Research and Assessment); Forsgren, Humble, Kim, Accelerate (2018); Google Cloud DORA annual State of DevOps reports.",
+    tags: ["devops", "delivery", "metrics", "engineering"],
+  },
+
+  // —— Service design ———————————————————————————————————————————————————————
+
+  {
+    name: "NN/g Journey Management",
+    category: "service_design",
+    oneLiner:
+      "The ongoing organizational discipline of treating customer journeys as managed products — with named journey owners, journey KPIs, and governance — rather than as one-time mapping artifacts.",
+    whenToUse:
+      "When an organization has produced journey maps but nothing has improved because no one owns the journey end-to-end. Distinguishes the artifact (journey map) from the capability (journey management).",
+    vocabulary: [
+      "journey owner",
+      "journey KPI",
+      "journey governance",
+      "orchestration",
+      "journey portfolio",
+      "current-state map",
+      "future-state vision",
+      "cross-functional journey team",
+    ],
+    howToDropIn:
+      "\"The maps are done; the problem is no one owns the journey and we have no KPIs for it. That's the shift from journey mapping to journey management — it's an organizational capability, not a deliverable.\"",
+    commonPhrasing:
+      "CX strategy, service design maturity assessments, digital transformation programs, government/public sector service improvement, any post-mapping situation where 'we made the map, now what?'",
+    notes:
+      "NN/g's research found that high-maturity CX organizations assign named owners to journeys (analogous to product owners), define metrics that measure the whole journey rather than channel-specific KPIs, and run regular governance to coordinate the multiple internal teams that touch a single journey. The failure mode is journey maps as documents — published, archived, consulted once at launch, never updated. The management question is: who is accountable when the journey degrades? Pair with Service Blueprint (to give the journey owner visibility below the line of visibility) and OKRs (to operationalize journey KPIs quarterly).",
+    source: "Gibbons, Sarah. 'Journey Management' (NN/g, 2018) and NN/g CX maturity research series.",
+    tags: ["service_design", "cx", "design", "governance"],
+  },
+
+  // —— Product management ——————————————————————————————————————————————————
+
+  {
+    name: "OKRs (Objectives and Key Results)",
+    category: "strategy",
+    oneLiner:
+      "A goal-setting framework pairing an ambitious qualitative objective with 2–5 measurable key results that define what success looks like, typically on a quarterly or annual cadence.",
+    whenToUse:
+      "When an org or team needs alignment between strategy and execution, and when 'we're busy' needs to be distinguished from 'we're moving the outcome we care about.'",
+    vocabulary: [
+      "objective",
+      "key result",
+      "committed OKR",
+      "aspirational OKR",
+      "stretch goal",
+      "check-in",
+      "grading",
+      "input metric",
+      "leading indicator",
+    ],
+    howToDropIn:
+      "\"Let's separate the objective from the key results. If all the KRs are tasks ('launch X feature'), they're not results — rewrite them as measurable outcomes. Otherwise we'll finish the OKR without knowing if we succeeded.\"",
+    commonPhrasing:
+      "Strategy sessions, product roadmap reviews, exec team planning, portfolio alignment conversations, any situation where team effort and organizational priority are visibly decoupled.",
+    notes:
+      "OKRs are a forcing function for the question 'how would we know we succeeded?' — a question most goal statements never actually answer. The most common failure: key results that are tasks ('ship feature X') rather than outcomes ('increase metric Y by Z%'). Key results should be leading indicators of the objective, not the objective restated as an output. Andy Grove invented them at Intel in the 1970s; Google scaled and popularized them. Pair with North Star Metric (the enduring signal OKRs build toward) and Trajectory Management (the between-review monitoring discipline).",
+    source: "Andy Grove, High Output Management (1983); John Doerr, Measure What Matters (2018).",
+    tags: ["strategy", "product", "goal_setting", "alignment"],
+  },
+  {
+    name: "RICE Scoring",
+    category: "product",
+    oneLiner:
+      "A prioritization formula — (Reach × Impact × Confidence) / Effort — that converts subjective roadmap debates into an auditable, comparable score across candidates.",
+    whenToUse:
+      "Product roadmap discussions where everyone thinks their initiative is highest priority and the team needs a shared language for trade-offs that doesn't collapse into HiPPO (Highest Paid Person's Opinion).",
+    vocabulary: [
+      "reach",
+      "impact",
+      "confidence",
+      "effort",
+      "RICE score",
+      "HiPPO",
+      "prioritization debt",
+    ],
+    howToDropIn:
+      "\"Run the RICE on each candidate and share the inputs. The conversation will shift from 'this is important' to 'show me your reach estimate and your confidence.' That's the right argument to have.\"",
+    commonPhrasing:
+      "Roadmap reviews, quarterly planning, product strategy, any prioritization session where the backlog is longer than the team and every stakeholder has a favorite.",
+    notes:
+      "The Confidence factor is the one that most productively shifts conversations — it requires people to admit how uncertain they are rather than asserting priority. The formula is a conversation tool, not an oracle; the value is in comparing inputs and exposing assumptions, not trusting the output. Common variant: weighted scoring matrices with custom dimensions for your context. MoSCoW is a lighter complement for rapid triage before RICE scoring. Pair with Opportunity Solution Tree to make sure you're scoring the right candidates in the first place.",
+    source: "Sean McBride, Intercom, 'RICE: Simple Prioritization for Product Managers' (2016).",
+    tags: ["product", "prioritization", "planning"],
+  },
+  {
+    name: "MoSCoW Prioritization",
+    category: "product",
+    oneLiner:
+      "A four-bucket scope triage: Must have (non-negotiable), Should have (important but not blocking), Could have (desirable if time allows), Won't have this time (explicitly deferred).",
+    whenToUse:
+      "Scope conversations in fixed-time or fixed-budget projects, sprint planning under delivery pressure, or any situation where you need explicit agreement on what's in and out of scope before the deadline arrives.",
+    vocabulary: [
+      "must have",
+      "should have",
+      "could have",
+      "won't have",
+      "timeboxing",
+      "scope agreement",
+      "DSDM",
+    ],
+    howToDropIn:
+      "\"Before this goes to the sponsor: which items are Must Haves? If all of them are, we don't have a prioritization — we have a honesty problem. Let's MoSCoW it and find out.\"",
+    commonPhrasing:
+      "Agile projects, government IT delivery, fixed-price contracts, product scope reviews, sprint planning when scope pressure is high.",
+    notes:
+      "The discipline is in 'Won't have this time' — explicitly deciding what's out of scope now. Teams that skip this find 'Won't have' items quietly re-entering scope mid-delivery. Rule of thumb: if more than 60% of items are Must Haves, the prioritization is dishonest and needs another pass. MoSCoW originated in DSDM (Dynamic Systems Development Method) and survived as the prioritization vocabulary in UK government digital delivery and GDS. Pair with RICE for deeper scoring once you've triaged the rough categories.",
+    source: "Dai Clegg, DSDM (Dynamic Systems Development Method), 1994.",
+    tags: ["product", "prioritization", "scope", "planning"],
+  },
+  {
+    name: "North Star Metric",
+    category: "product",
+    oneLiner:
+      "A single metric that best captures the core value a product delivers to customers, serving as the organizing signal that cuts through competing metrics and aligns team effort.",
+    whenToUse:
+      "When a product team tracks too many metrics that point in different directions, when business metrics (revenue) and user metrics (engagement) are in tension, or when 'what are we optimizing for?' produces a different answer from each person in the room.",
+    vocabulary: [
+      "north star metric",
+      "leading indicator",
+      "lagging indicator",
+      "input metric",
+      "health metric",
+      "guardrail metric",
+      "vanity metric",
+    ],
+    howToDropIn:
+      "\"We're optimizing three metrics that point in different directions. The north star question is: which single number, if it went up, would we be confident we're delivering real user value? Everything else is either a driver or a guardrail.\"",
+    commonPhrasing:
+      "Product strategy, growth team conversations, engineering alignment, exec reporting, quarterly OKR reviews.",
+    notes:
+      "The North Star Metric is useful because it forces the question of what 'user value' actually means for your product — revenue is a lagging indicator of it, engagement can be a vanity metric, usage can be inflated by friction. The best north stars are specific, measurable, and causally connected to long-term sustainable success. Input metrics (the levers teams pull) and guardrail metrics (things that can't be sacrificed) complete the picture. Pair with OKRs (the North Star is the enduring signal; OKRs are the quarterly moves toward it) and DORA (North Star measures product output; DORA measures delivery system health).",
+    source: "Amplitude, 'The North Star Playbook' (2018). Concept developed across Spotify, Airbnb, and similar product-led companies.",
+    tags: ["product", "strategy", "metrics", "alignment"],
+  },
+  {
+    name: "Opportunity Solution Tree",
+    category: "product",
+    oneLiner:
+      "A visual framework that connects a desired outcome to a mapped set of opportunities (unmet user needs), solution ideas, and experiments — keeping discovery grounded in outcomes rather than jumping to solutioning.",
+    whenToUse:
+      "Product discovery work where the team is three levels deep in solution mode before they've agreed on the opportunity they're addressing, or where user research is disconnected from delivery commitments.",
+    vocabulary: [
+      "outcome",
+      "opportunity",
+      "solution",
+      "experiment",
+      "assumption",
+      "discovery tree",
+      "opportunity space",
+      "continuous discovery",
+    ],
+    howToDropIn:
+      "\"We're already debating implementations when we haven't agreed on which opportunity we're targeting. Let's build the tree: outcome first, then the opportunity, then we can compare solutions as competing bets against the same target.\"",
+    commonPhrasing:
+      "Product discovery rituals, OKR-to-product translation, sprint goal setting, roadmap rationale conversations.",
+    notes:
+      "Teresa Torres developed this to bridge the gap between product strategy (outcomes, OKRs) and day-to-day discovery work. The structure prevents jumping from 'we learned something' to 'build the feature' — solutions must be candidates against a mapped opportunity, which is itself selected under a defined outcome. Each branch is a bet; the tree makes bets visible and comparable. The discipline is keeping it updated from real, recent evidence (weekly user touchpoints) rather than letting it calcify into assumptions. Pair with JTBD (for opportunity framing) and Lean UX (for the experiment design).",
+    source: "Teresa Torres, Continuous Discovery Habits (2021).",
+    tags: ["product", "discovery", "research", "planning"],
+  },
+
+  // —— UX engineering ——————————————————————————————————————————————————————
+
+  {
+    name: "WCAG / Web Accessibility",
+    category: "ux_engineering",
+    oneLiner:
+      "The Web Content Accessibility Guidelines, organized around four principles (Perceivable, Operable, Understandable, Robust) and three conformance levels (A, AA, AAA) — the legal and ethical floor for digital interfaces.",
+    whenToUse:
+      "Any digital interface work. WCAG 2.1 AA is the legal standard in most jurisdictions — Section 508 in the US, WCAG 2.1 AA mandated for UK public sector, referenced in EU/EAA. Not optional for government services.",
+    vocabulary: [
+      "POUR",
+      "perceivable",
+      "operable",
+      "understandable",
+      "robust",
+      "WCAG 2.1",
+      "AA",
+      "Section 508",
+      "ARIA",
+      "alt text",
+      "focus management",
+      "color contrast",
+      "keyboard navigation",
+      "screen reader",
+    ],
+    howToDropIn:
+      "\"The legal floor for this is WCAG 2.1 AA. Let's run a quick audit against the four POUR principles and surface the critical failures before this gets to legal or procurement.\"",
+    commonPhrasing:
+      "Government digital services, healthcare and benefits systems, anything with Section 508 requirements, vendor evaluations, procurement conversations.",
+    notes:
+      "Accessibility is a design and engineering constraint, not a QA checklist at the end. It affects architecture (ARIA roles and landmark structure), content (alt text, link text that makes sense out of context), visual design (4.5:1 color contrast minimum for normal text), and engineering (focus management, keyboard navigation, skip links). Automated tools (axe, Lighthouse) catch roughly 30–40% of issues; the rest require manual testing with actual assistive technologies. Building it in from the start is far cheaper than retrofitting. In public-sector contracts, WCAG compliance is often a deliverable requirement — it should be in the definition of done.",
+    source: "W3C WCAG 2.1 specification (2018). US: Section 508, ADA Title III. UK: Public Sector Bodies Accessibility Regulations.",
+    tags: ["ux_engineering", "accessibility", "design", "compliance"],
+  },
+  {
+    name: "Design Systems",
+    category: "ux_engineering",
+    oneLiner:
+      "A collection of reusable components, design tokens, patterns, and documentation built and maintained as shared infrastructure, enabling multiple teams to build consistent interfaces at scale without duplicating decisions.",
+    whenToUse:
+      "When multiple teams or products are building UI independently and producing inconsistent results; when front-end work is duplicated across teams; when onboarding new designers or engineers is slow because there's no canonical reference.",
+    vocabulary: [
+      "design token",
+      "component library",
+      "pattern library",
+      "atomic design",
+      "single source of truth",
+      "design-dev handoff",
+      "governance model",
+      "versioning",
+      "accessibility baked-in",
+    ],
+    howToDropIn:
+      "\"The inconsistency problem is a governance problem, but the design system is the structural answer — one canonical button component that everyone uses means we fix it once and the fix propagates everywhere.\"",
+    commonPhrasing:
+      "Platform/design engineering teams, product design maturity conversations, design-to-dev handoff, UI consistency, scaling a digital practice.",
+    notes:
+      "A design system is infrastructure, not a deliverable — it has to be maintained like software or it becomes a liability rather than an asset. The failure mode: a component library the team stops using because it doesn't keep pace with product needs or isn't discoverable. Governance matters as much as the components: who owns additions, how are decisions made, is it versioned with a changelog (it should be). Best-practice systems bake accessibility in at the component level so consuming teams get it for free. Reference implementations: UK GOV.UK Design System, USDS designsystem.digital.gov, Atlassian, Material Design.",
+    source: "Brad Frost, Atomic Design (2016); Nathan Curtis (EightShapes); Invision Design Systems Handbook.",
+    tags: ["ux_engineering", "design", "engineering", "platform"],
+  },
+
+  // —— Program management ——————————————————————————————————————————————————
+
+  {
+    name: "Benefits Realization Management (BRM)",
+    category: "program_management",
+    oneLiner:
+      "A discipline for ensuring programs deliver intended business value — identifying and quantifying benefits up front, assigning benefit owners, and confirming actual value materialized after deployment.",
+    whenToUse:
+      "Large programs where the business case was strong enough to get funding but nobody tracks whether the promised benefits actually arrived post-launch. Particularly common in government IT modernization and enterprise transformation.",
+    vocabulary: [
+      "benefits register",
+      "benefit owner",
+      "investment thesis",
+      "realization plan",
+      "transition benefit",
+      "end benefit",
+      "dis-benefit",
+      "post-implementation review",
+    ],
+    howToDropIn:
+      "\"The business case projected significant savings. Who owns the benefits register? If nobody is tracking against it, we'll spend three years delivering and find out afterward whether we got any value at all — or whether the dis-benefits outweighed them.\"",
+    commonPhrasing:
+      "Program governance, gate reviews, business cases, post-implementation reviews, government IT modernization, OMB budget and performance conversations.",
+    notes:
+      "The core failure BRM exists to prevent: teams build what was specified, declare victory at go-live, and no one checks whether the anticipated benefits materialized. Benefits registers and named benefit owners force accountability for value, not just delivery. In government, the 'what did we actually get?' question in any post-implementation review is the BRM question — OMB guidance implicitly requires it. Pair with OKRs as the quarterly tracking vehicle for benefits and with Delivery Forensics (pre-hoc check on whether structural conditions for benefits realization even exist).",
+    source: "Gerald Bradley, Benefit Realisation Management (2006); PMI Benefits Realization Management Framework (2019).",
+    tags: ["program_management", "governance", "public_sector", "delivery"],
+  },
+  {
+    name: "Theory of Change",
+    category: "program_management",
+    oneLiner:
+      "A logic model tracing the pathway from activities and outputs to outcomes and long-term impact, making the causal assumptions in a program's intervention theory explicit and testable.",
+    whenToUse:
+      "Program design, grant applications, evaluation planning, and any context where you need to articulate why your intervention will produce the impact you claim and surface what has to be true for that to work.",
+    vocabulary: [
+      "inputs",
+      "activities",
+      "outputs",
+      "outcomes",
+      "impact",
+      "assumptions",
+      "preconditions",
+      "causal pathway",
+      "logic model",
+      "intervention theory",
+    ],
+    howToDropIn:
+      "\"Before we finalize the design, let's map the theory of change — specifically the assumptions. If we trace from activities to impact and name the preconditions, we'll find the weakest links before we've committed the budget.\"",
+    commonPhrasing:
+      "Government programs, nonprofit and foundation work, federal grant design, program evaluation (USAID, HHS, DOE), impact investing, legislative testimony on program rationale.",
+    notes:
+      "The theory of change is only useful if the assumptions are explicit and treated as hypotheses rather than narrative background. 'People will use the portal' is an assumption; 'case workers will change their workflow' is an assumption; both should be listed and tested. Distinguishes from a plain logic model (linear inputs-outputs-outcomes) by including the causal pathways and the assumptions — why and how this intervention should work. Pair with Trajectory Management (which monitors whether the causal pathway is actually holding during delivery) and Delivery Forensics (which stress-tests the structural assumptions before launch).",
+    source: "Aspen Institute Roundtable on Community Change (1995); USAID Evaluation Learning series; CDC Program Evaluation Framework.",
+    tags: ["program_management", "public_sector", "evaluation", "policy"],
+  },
 ];
