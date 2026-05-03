@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { books, frameworks } from "@/lib/schema";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   const fwRows = await db
