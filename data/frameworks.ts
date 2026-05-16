@@ -1066,4 +1066,488 @@ export const frameworks: Framework[] = [
     source: "Aspen Institute Roundtable on Community Change (1995); USAID Evaluation Learning series; CDC Program Evaluation Framework.",
     tags: ["program_management", "public_sector", "evaluation", "policy"],
   },
+  {
+    name: "Category Management 8-Step Process",
+    category: "category_management",
+    oneLiner:
+      "The canonical retail playbook: Define → Role → Assess → Scorecard → Strategy → Tactics → Implement → Review. The end-to-end loop a category captain runs with a retailer.",
+    whenToUse:
+      "Whenever the work is 'manage a category' rather than 'launch a product'. It's the operating system the merchant calendar runs on — line reviews, planogram resets, joint business plans, and supplier negotiations all hang off these eight steps.",
+    vocabulary: [
+      "category definition",
+      "category role",
+      "category assessment",
+      "category scorecard",
+      "category strategy",
+      "category tactics",
+      "implementation",
+      "category review",
+      "line review",
+      "JBP",
+      "joint business plan",
+    ],
+    howToDropIn:
+      "\"Which step are we actually at? If we haven't agreed the category's role for this retailer, debating the planogram is premature — we're arguing tactics before strategy.\"",
+    commonPhrasing:
+      "Buyer/merchant conversations, supplier line reviews, retailer joint business planning. The eight steps are the lingua franca: every CPG account team, every retailer's merchant org, every category captain deck.",
+    notes:
+      "Originated by Brian Harris (The Partnering Group) in the late 1980s, codified by AC Nielsen and ECR Europe in the 1990s. The framework's strength is also its weakness: it became methodology cosplay in many CPG orgs — decks that march through eight steps without the underlying data discipline. The real practitioners spend 70% of the time in Assess (steps 3 and 4); amateurs jump to Tactics. The IA parallel: it's essentially a service blueprint for the buyer–supplier relationship, with the planogram as the most visible artifact and the scorecard as the durable governance object.",
+    source: "Brian Harris, The Partnering Group; ACNielsen 'Category Management: Positioning Your Organization to Win' (1992); ECR Europe Category Management Best Practices (1997).",
+    tags: ["category_management", "retail", "process", "merchandising"],
+  },
+  {
+    name: "Category Roles",
+    category: "category_management",
+    oneLiner:
+      "Every category plays one of four roles in a retailer's portfolio: Destination, Routine, Occasional/Seasonal, or Convenience. The role dictates everything downstream — space, price, promo, assortment depth.",
+    whenToUse:
+      "Step 2 of the 8-step process, and the single most leveraged decision in category management. Used to align supplier and retailer on what 'winning' looks like in this category before any tactical conversation.",
+    vocabulary: [
+      "destination",
+      "routine",
+      "preferred",
+      "occasional",
+      "seasonal",
+      "convenience",
+      "fill-in",
+      "traffic category",
+      "profit category",
+      "image category",
+    ],
+    howToDropIn:
+      "\"Costco treats wine as a Destination category — that's why the assortment is curated, the prices are sharp, and the space is disproportionate to sales. For them it's an image and traffic play, not a margin play. We can't pitch them like it's a Routine category.\"",
+    commonPhrasing:
+      "Retailer strategy reviews, supplier JBPs, planogram resets. \"What role is this category for you?\" is the opening question of any serious category-captain conversation.",
+    notes:
+      "The four roles correspond loosely to BCG-matrix logic applied at the category level: Destination = star (over-invest), Routine = cash cow (defend), Occasional = question mark (selective bets), Convenience = dog (minimum viable presence). The trap is letting the supplier's view of the category drive role assignment — the role belongs to the retailer's strategy, not the brand's ambition. A category captain who fails to grasp this gets fired.",
+    source: "ACNielsen / Brian Harris (1990s); operationalized in ECR Europe Category Management Best Practices.",
+    tags: ["category_management", "retail", "strategy", "merchandising"],
+  },
+  {
+    name: "Category Strategies (the Seven)",
+    category: "category_management",
+    oneLiner:
+      "Once a role is set, the category gets assigned one or more strategies: Traffic Building, Transaction Building, Profit Generating, Cash Generating, Excitement Creating, Image Enhancing, Turf Defending.",
+    whenToUse:
+      "Step 5 of the 8-step process. Bridges the role (what the category does for the retailer) to the tactics (assortment, pricing, promotion, placement). Without explicit strategy choices, tactical decisions become incoherent.",
+    vocabulary: [
+      "traffic building",
+      "transaction building",
+      "profit generating",
+      "cash generating",
+      "excitement creating",
+      "image enhancing",
+      "turf defending",
+      "basket size",
+      "trip frequency",
+    ],
+    howToDropIn:
+      "\"Diapers is a Traffic Building strategy for us — we run them at or below cost to drive trip frequency. The profit recovery happens in the adjacent baby-care aisle, which is Profit Generating. Treating both with the same margin discipline would destroy the model.\"",
+    commonPhrasing:
+      "Used inside merchant teams to justify margin variance across categories. Loss-leader pricing is the most famous expression of Traffic Building strategy.",
+    notes:
+      "The strategies aren't mutually exclusive — a strong category often plays two (e.g., Image Enhancing + Profit Generating for specialty cheese at Whole Foods). Turf Defending is the most under-named strategy: protecting share against a specific competitor (Aldi, Amazon, Costco) often justifies tactics that look irrational in isolation. The product-management parallel: this is the equivalent of choosing whether a feature is for acquisition, activation, retention, revenue, or referral — same logic, retail vocabulary.",
+    source: "ACNielsen Category Management framework; refined in ECR practitioner literature.",
+    tags: ["category_management", "retail", "strategy", "pricing"],
+  },
+  {
+    name: "Consumer Decision Tree (CDT)",
+    category: "category_management",
+    oneLiner:
+      "A hierarchical model of how shoppers actually choose within a category — the order of attributes they evaluate (e.g., for coffee: caffeine type → roast → size → brand → price). The IA of the shelf.",
+    whenToUse:
+      "When designing an assortment or planogram, segmenting the category, or arguing for adjacency changes. The CDT is the empirical answer to 'how should this category be organized from the shopper's perspective?'",
+    vocabulary: [
+      "consumer decision tree",
+      "shopper decision hierarchy",
+      "attribute hierarchy",
+      "need state",
+      "category segmentation",
+      "decision node",
+      "substitutability",
+    ],
+    howToDropIn:
+      "\"The CDT for pet food shows shoppers decide species first, then life stage, then format — brand is the fourth node, not the first. If we organize the aisle by brand block, we're fighting how people actually shop, and we'll lose share to the retailer who blocks by life stage.\"",
+    commonPhrasing:
+      "Category insights briefs, planogram resets, range reviews. CPG insights teams (Nielsen, IRI/Circana, Kantar) sell CDT studies as a standard deliverable.",
+    notes:
+      "This is the closest retail analog to information architecture and card-sorting research — and the discipline is genuinely the same: empirical study of how a population mentally structures a domain. The mistake is treating CDT as a one-time study; shopper decision hierarchies shift with format (online vs. store), occasion (weekly shop vs. top-up), and life stage. A defensible CDT is segment-specific. Pair with Jobs To Be Done — JTBD names the job, CDT names the substitution set the shopper considers while doing it.",
+    source: "Industry standard since the 1990s; methodologies from ACNielsen, IRI/Circana, Kantar, dunnhumby.",
+    tags: ["category_management", "retail", "shopper", "information_architecture"],
+  },
+  {
+    name: "Shopper Missions & Trip Types",
+    category: "category_management",
+    oneLiner:
+      "Shoppers don't enter a store as 'customers' — they enter on a mission: stock-up, top-up, immediate consumption, meal-for-tonight, special occasion. Mission predicts basket, route, price sensitivity, and what 'good' looks like.",
+    whenToUse:
+      "Store layout, format strategy (convenience vs. supermarket vs. hypermarket), online vs. offline assortment, and any conversation where 'who is the customer' is the wrong question and 'what trip are they on' is the right one.",
+    vocabulary: [
+      "trip mission",
+      "stock-up trip",
+      "top-up trip",
+      "fill-in trip",
+      "immediate consumption",
+      "meal solution",
+      "occasion",
+      "trip frequency",
+      "basket size",
+      "shopper segment",
+    ],
+    howToDropIn:
+      "\"The shopper isn't loyal to a store — they're loyal to a mission. The same person does a Costco stock-up on Sunday, a Whole Foods meal-for-tonight on Wednesday, and a 7-Eleven immediate-consumption trip Friday afternoon. We're competing for the mission, not the person.\"",
+    commonPhrasing:
+      "Format strategy reviews, store-of-the-future workshops, online grocery strategy. Tesco's Clubcard era and dunnhumby's segmentation work made this the dominant frame in modern grocery.",
+    notes:
+      "This is Jobs To Be Done applied to retail visits rather than products — and it's older than JTBD as a formal framework. Trip mission is what every category captain who's earned their stripes leads with, because it's the unit of analysis that resolves debates about adjacency, format, and pricing. Online has not killed mission — Instacart, Amazon Fresh, and DoorDash all map to distinct missions, and the platforms that confuse missions (one-size-fits-all UX) lose to the ones that segment.",
+    source: "Tesco / dunnhumby Clubcard analysis (1995+); IGD and Kantar shopper studies; Herb Sorensen's 'Inside the Mind of the Shopper' (2009).",
+    tags: ["category_management", "retail", "shopper", "jtbd"],
+  },
+  {
+    name: "Planogram (POG)",
+    category: "category_management",
+    oneLiner:
+      "The shelf-level diagram specifying which SKU goes where, how many facings, at what eye-level. The visible artifact of category strategy and the operational handoff to store labor.",
+    whenToUse:
+      "Reset cycles (typically 1–2x per year per category), new-item launches, range rationalizations, and store-cluster differentiation. Every category review terminates in a planogram change or it didn't change anything.",
+    vocabulary: [
+      "planogram",
+      "POG",
+      "facings",
+      "eye level",
+      "vertical block",
+      "horizontal block",
+      "brand block",
+      "segment block",
+      "shelf flow",
+      "POG software",
+      "JDA",
+      "Blue Yonder",
+      "Apollo",
+      "Spaceman",
+    ],
+    howToDropIn:
+      "\"The planogram is the spec. If the category strategy doesn't show up at the shelf — facings, eye level, adjacency — it didn't happen. Stores don't execute strategies, they execute planograms.\"",
+    commonPhrasing:
+      "Universal in merchant and supplier conversations. \"Did we get the POG?\" is shorthand for \"did our recommendations actually land?\"",
+    notes:
+      "The PM equivalent: planogram is to category strategy what a high-fidelity Figma spec is to a feature plan — the artifact that survives the handoff. The discipline of constraint is similar: facing counts are scarce inventory, eye-level real estate is contested, and every SKU added requires another deleted. Software (Blue Yonder/JDA Space Planning, Symphony GOLD, RELEX) automates the geometry; judgment lives in the segmentation logic the planogram expresses. Online has its own version (search-results ordering, browse taxonomy) but the same battle: who controls placement controls economics.",
+    source: "Origins in the 1960s; software era starting late 1980s (Apollo, Spaceman); modern stack dominated by Blue Yonder, Symphony GOLD, RELEX.",
+    tags: ["category_management", "retail", "merchandising", "operations"],
+  },
+  {
+    name: "Category Captaincy",
+    category: "category_management",
+    oneLiner:
+      "The strategic arrangement where a retailer designates one supplier as the lead advisor for an entire category — handling assortment recommendations, planograms, and insights for the whole shelf, including competitors.",
+    whenToUse:
+      "Understanding the political economy of CPG–retailer relationships, sales account strategy, antitrust exposure conversations, and any analysis of why retailers favor certain brands at shelf.",
+    vocabulary: [
+      "category captain",
+      "validator",
+      "captain",
+      "challenger",
+      "advisor",
+      "retailer–supplier collaboration",
+      "shelf set",
+      "trade desk",
+    ],
+    howToDropIn:
+      "\"The category captain writes the planogram and recommends the assortment — including which competitors live and die on the shelf. It's the closest thing in retail to writing the rulebook for the game you're playing in.\"",
+    commonPhrasing:
+      "CPG account team strategy, retailer relationship reviews. Pepsi captains beverages at many US grocers; P&G captains baby and laundry care; Mars captains pet food. Smaller brands fight for 'validator' or 'co-captain' status.",
+    notes:
+      "Antitrust risk is real — the FTC has scrutinized captaincy arrangements for self-dealing (favoring own SKUs, suppressing competitors). Best-practice captains write recommendations a regulator could defend, then let the retailer's merchant make the final call. The dynamic to grasp: captaincy is earned through superior data and insights, not negotiated through trade terms — though once held, it becomes a moat. The structural analog in software: being the default vendor whose API/data model the customer builds around.",
+    source: "Emerged in the 1990s alongside the 8-step process; FTC workshop on category management (2001).",
+    tags: ["category_management", "retail", "strategy", "competition"],
+  },
+  {
+    name: "KVI and Price Architecture",
+    category: "category_management",
+    oneLiner:
+      "Known Value Items (KVIs) are the ~50–200 SKUs shoppers use to judge a store's overall price position. Win on KVIs and you can hold margin everywhere else. Lose on KVIs and the rest doesn't matter.",
+    whenToUse:
+      "Pricing strategy, EDLP vs. Hi-Lo decisions, competitive pricing audits, private-label tiering, and any conversation where the team treats the assortment as a flat pricing surface rather than a structured architecture.",
+    vocabulary: [
+      "KVI",
+      "known value item",
+      "price image",
+      "EDLP",
+      "everyday low price",
+      "Hi-Lo",
+      "price zone",
+      "price ladder",
+      "price tiering",
+      "price elasticity",
+      "background items",
+      "price index",
+    ],
+    howToDropIn:
+      "\"Shoppers anchor on KVIs — milk, eggs, bananas, Coke 12-pack, Heinz ketchup. Get those right relative to the competitive set and the rest of the basket can carry margin. It's a Pareto problem: 5% of SKUs drive 80% of price perception.\"",
+    commonPhrasing:
+      "Pricing committees, competitive intelligence reviews, EDLP/Hi-Lo strategy debates. Walmart's entire model rests on aggressive KVI pricing funded by background-item margin.",
+    notes:
+      "The information-architecture parallel: KVIs are the navigation labels users actually read — get those right and they trust the whole system. Modern price-image work is data-driven (eye-tracking, conjoint, EPOS basket analysis); the unsophisticated version is the buyer's gut list of 'the items shoppers check'. Pair with Halo & Cannibalization (KVIs often have low intrinsic margin but generate halo); contrast with Loss Leader (KVI is structural, loss leader is tactical).",
+    source: "Practitioner concept; quantified by dunnhumby, Nielsen, and academic work on price image (Hamilton & Chernev, 2013).",
+    tags: ["category_management", "retail", "pricing", "shopper"],
+  },
+  {
+    name: "Good-Better-Best Tiering",
+    category: "category_management",
+    oneLiner:
+      "Structuring assortment within a category into three (sometimes four) quality/price tiers so shoppers can self-select and the retailer can capture across price sensitivities. The architectural backbone of private-label strategy.",
+    whenToUse:
+      "Range planning, private-label strategy, opening-price-point decisions, premiumization conversations. Any time the question is 'should we have one product or three' the answer is usually three, structured.",
+    vocabulary: [
+      "good-better-best",
+      "GBB",
+      "opening price point",
+      "OPP",
+      "mid-tier",
+      "premium tier",
+      "private label",
+      "store brand",
+      "exclusive brand",
+      "tiered architecture",
+      "value tier",
+    ],
+    howToDropIn:
+      "\"Without a Good-Better-Best ladder, we're forcing shoppers to choose between buying our product or not buying. With it, we're choosing for them which margin tier they land in. The conversion question becomes a mix question.\"",
+    commonPhrasing:
+      "Retail strategy reviews, private-label expansion plans, pricing committees. Costco's Kirkland, Target's Good & Gather/Threshold/Up&Up, Trader Joe's almost-entirely-private-label model are all expressions.",
+    notes:
+      "The mid-tier is usually the volume sweet spot; the premium tier sets the ceiling that makes the mid-tier look reasonable; the value tier defends against discounter encroachment. The trap is letting tiers compete with each other (cannibalization) rather than expand the addressable shopper base. SaaS pricing pages are the direct software analog — same psychology, same anchoring math, same temptation to over-engineer.",
+    source: "Practitioner standard; formalized in pricing literature (Rafi Mohammed 'The Art of Pricing'; HBR work on tiered offerings).",
+    tags: ["category_management", "retail", "pricing", "assortment"],
+  },
+  {
+    name: "Space-to-Sales Ratio",
+    category: "category_management",
+    oneLiner:
+      "The basic arithmetic check of merchandising fairness: a brand's share of shelf space should approximate its share of category sales. Deviations have to be defended on strategy, not inertia.",
+    whenToUse:
+      "Planogram resets, range reviews, supplier negotiation. The supplier who walks into a buyer meeting with a clean space-to-sales analysis showing under-spaced fast-movers and over-spaced dogs has done their homework.",
+    vocabulary: [
+      "space to sales",
+      "share of shelf",
+      "share of category",
+      "facings",
+      "linear feet",
+      "days of supply",
+      "DOS",
+      "shelf productivity",
+    ],
+    howToDropIn:
+      "\"Brand X is at 22% share of category but holds 14% of facings — it's structurally under-spaced and we're losing sales to out-of-stocks. Brand Y is at 8% share and 18% of facings; the math says rebalance.\"",
+    commonPhrasing:
+      "Buyer meetings, supplier line reviews, planogram software outputs. Every category review deck has a space-to-sales chart somewhere.",
+    notes:
+      "Space-to-sales is necessary but not sufficient — it ignores strategy (a destination SKU may earn more space than its share warrants), shopper decision tree (segments need minimum presence even if low share), and days-of-supply constraints (high-velocity SKUs need extra facings just to avoid stockouts between replenishments). The metric's job is to surface obvious imbalances, not to dictate the answer. The PM analog: feature usage data — necessary input, not the decision.",
+    source: "Standard category management metric since the 1990s; embedded in all major space-planning software.",
+    tags: ["category_management", "retail", "merchandising", "metrics"],
+  },
+  {
+    name: "GMROI (Gross Margin Return on Inventory)",
+    category: "category_management",
+    oneLiner:
+      "GMROI = Gross Margin $ / Average Inventory Cost. The single number that fuses margin and turn — the unit economics of retail. A category with thin margin but fast turn can beat a high-margin slow-mover.",
+    whenToUse:
+      "Range rationalization, category role debates, SKU productivity reviews, capital-allocation conversations. Any time someone argues for margin or turn in isolation, GMROI is the integrating frame.",
+    vocabulary: [
+      "GMROI",
+      "gross margin return on inventory",
+      "GMROII",
+      "inventory turn",
+      "stock turn",
+      "sell-through",
+      "weeks of supply",
+      "sales per square foot",
+      "sales per linear foot",
+    ],
+    howToDropIn:
+      "\"This SKU has 45% margin but turns twice a year. The 18%-margin SKU next to it turns twelve times. GMROI on the second one is higher — it's earning the shelf, the first one isn't.\"",
+    commonPhrasing:
+      "Buyer reviews, merchant performance scorecards, finance discussions. Apparel and specialty retail lean on GMROI especially hard because seasonality punishes slow turn.",
+    notes:
+      "GMROI is to retail what unit economics (LTV/CAC) is to SaaS — the integrating ratio that prevents single-axis optimization. The trap is using it in isolation: a high-GMROI SKU might be a destination KVI you can't afford to delete, or a basket-builder whose value lives in attach rate. The discipline is to treat GMROI as one lens, alongside strategic role and basket contribution. The unsophisticated retailer optimizes GMROI to a flat assortment of fast-turning commodities and dies of price compression.",
+    source: "Standard retail finance metric; codified in retail management textbooks (Levy & Weitz, Berman & Evans).",
+    tags: ["category_management", "retail", "metrics", "finance"],
+  },
+  {
+    name: "Range Architecture / Line Review",
+    category: "category_management",
+    oneLiner:
+      "The structured annual or bi-annual process where a retailer reviews every SKU in a category, decides what stays, what gets cut, what's added, and what's repositioned. The merchant's roadmap planning.",
+    whenToUse:
+      "The supplier-side rhythm of category management — line reviews are when category captaincy, space-to-sales analysis, CDTs, and shopper insights all get cashed in. Miss the line review and you wait a year.",
+    vocabulary: [
+      "line review",
+      "range review",
+      "range plan",
+      "assortment plan",
+      "SKU rationalization",
+      "delist",
+      "introduction",
+      "MFI",
+      "must-have",
+      "tail items",
+      "long tail",
+    ],
+    howToDropIn:
+      "\"The line review is the merchant's roadmap meeting. You don't get to relitigate it for twelve months. Everything — the CDT, the planogram, the JBP — feeds into one decision window.\"",
+    commonPhrasing:
+      "CPG sales calendars are built around major retailers' line review cycles (Walmart, Target, Kroger, Tesco, etc.). 'When's the next line review?' is the first question on any account plan.",
+    notes:
+      "The product-management parallel is direct: line review is the quarterly/annual roadmap planning meeting where bets are made and resources allocated. Same dynamics — political maneuvering, data theater, and a few decisive moments where preparation pays off. The crucial difference: physical-retail line reviews have hard space constraints (you can't ship a feature flag, you have to delete an SKU to make room). That constraint is the discipline software PMs often lack.",
+    source: "Retail standard practice; described in trade press (Progressive Grocer, Retail Dive) and CPG account-management training.",
+    tags: ["category_management", "retail", "process", "merchandising"],
+  },
+  {
+    name: "Adjacency and Aisle Flow",
+    category: "category_management",
+    oneLiner:
+      "What goes next to what. The spatial logic of the store — placing complementary categories close enough to drive cross-shop, separated enough to avoid confusion. Information architecture in three dimensions.",
+    whenToUse:
+      "Store layout, format design, planogram macro decisions, online browse taxonomy. The category-management questions 'where does the category sit in the store' and 'what's its left and right neighbor' are pure IA questions in disguise.",
+    vocabulary: [
+      "adjacency",
+      "aisle flow",
+      "macro space",
+      "micro space",
+      "destination aisle",
+      "power aisle",
+      "racetrack layout",
+      "grid layout",
+      "free-flow layout",
+      "decompression zone",
+      "cross-merchandising",
+    ],
+    howToDropIn:
+      "\"Pasta and pasta sauce next to each other is obvious; pasta sauce and parmesan is the move that earns the basket. Adjacency design is asking 'what's the next step in the shopper's mental sentence?'\"",
+    commonPhrasing:
+      "Store-format reviews, new-store design, refresh programs. IKEA's forced racetrack is the most-cited adjacency design; Trader Joe's deliberate cross-merchandising of wine and cheese is another.",
+    notes:
+      "Direct mapping to IA: adjacency is the navigation design of physical space. The same principles apply — proximity implies relationship, hierarchy implies importance, sequence implies process. The retail discipline has decades of empirical data (heatmaps, basket affinity analysis, eye-tracking) on what works that the web IA community has only recently caught up with. Pair with Consumer Decision Tree (the within-category IA) and Trip Mission (the across-category IA at the store level).",
+    source: "Underhill's 'Why We Buy' (1999); Sorensen's 'Inside the Mind of the Shopper' (2009); IGD store-layout literature.",
+    tags: ["category_management", "retail", "information_architecture", "merchandising"],
+  },
+  {
+    name: "Halo and Cannibalization",
+    category: "category_management",
+    oneLiner:
+      "Halo: a SKU drives incremental sales of adjacent SKUs. Cannibalization: a new SKU steals from existing SKUs in the same range. Every assortment decision sits between these two forces; the question is the net.",
+    whenToUse:
+      "New-item launches, range extensions, promo planning, private-label introductions. Without halo/cannibalization analysis, every launch looks like growth in its own line and a mystery hole somewhere else.",
+    vocabulary: [
+      "halo",
+      "halo effect",
+      "cannibalization",
+      "source of volume",
+      "incremental",
+      "transfer",
+      "trade-in",
+      "trade-up",
+      "trade-down",
+      "switching",
+      "category growth",
+    ],
+    howToDropIn:
+      "\"The new premium SKU added $200K in line sales but $140K of it came from our existing mid-tier — net incremental is $60K, not $200K. The source-of-volume analysis is the difference between a real launch and a vanity launch.\"",
+    commonPhrasing:
+      "Innovation reviews, post-launch analysis, JBP negotiations. Source-of-volume is the question CFOs ask innovation teams; the teams that have an answer get budget.",
+    notes:
+      "The SaaS analog is feature cannibalization — new tiers stealing from old tiers, new SKUs (in pricing) stealing from old SKUs. Same math, less measurement discipline in software because the unit economics are usually fuzzier. The category-management strength is decades of source-of-volume methodology (panel data, controlled-store tests, modeled counterfactuals). Worth borrowing wholesale into product decisions.",
+    source: "Nielsen, IRI/Circana, Kantar source-of-volume methodology; academic work on category demand and substitution.",
+    tags: ["category_management", "retail", "metrics", "innovation"],
+  },
+  {
+    name: "OTIF (On Time In Full)",
+    category: "category_management",
+    oneLiner:
+      "The supply-chain SLA between a supplier and a retailer: deliveries arrive on the agreed day (On Time) and complete (In Full). Below threshold (often 95–98%), fines and de-listing follow.",
+    whenToUse:
+      "Supplier scorecard conversations, joint business planning, supply-chain reviews, any analysis of why a supplier is losing share. OTIF is the retail equivalent of uptime — visible only when it breaks, fatal when it does.",
+    vocabulary: [
+      "OTIF",
+      "on time in full",
+      "OSA",
+      "on-shelf availability",
+      "fill rate",
+      "case fill",
+      "service level",
+      "chargebacks",
+      "fines",
+      "vendor scorecard",
+      "MABD",
+      "must-arrive-by date",
+    ],
+    howToDropIn:
+      "\"Walmart's OTIF threshold is non-negotiable — miss it and the chargebacks erase the margin on the order. OTIF isn't an ops metric, it's a commercial metric: it's the SLA we sell against.\"",
+    commonPhrasing:
+      "Supplier reviews, supply-chain meetings, JBPs. Walmart's OTIF program (rolled out 2017, tightened repeatedly) became the industry benchmark; Target's, Kroger's, Tesco's similar programs followed.",
+    notes:
+      "The product-engineering parallel is SLA/SLO discipline — quantified service-level promises with consequences. OTIF is more brutal than most software SLAs because the fines hit the same P&L line as the revenue, so a 'successful' shipment can be a money-loser. The structural insight: in retail, the supply chain and the commercial relationship aren't separable. A category captain who can't run OTIF doesn't get to keep captaincy regardless of how good the insights deck is.",
+    source: "Walmart OTIF program (2017+); industry-wide standard; Gartner and Kearney supply-chain literature.",
+    tags: ["category_management", "retail", "supply_chain", "metrics"],
+  },
+  {
+    name: "Open-to-Buy (OTB)",
+    category: "category_management",
+    oneLiner:
+      "The buyer's budget control system: at any moment, OTB = planned receipts − committed receipts. The number that says how much room is left to place new orders without breaking the inventory plan.",
+    whenToUse:
+      "Understanding how merchants make in-season decisions, why a 'great' product gets passed on (no OTB), and how seasonality, markdown cadence, and inventory carry interact. Fundamental to apparel, specialty retail, and any category with seasonal flow.",
+    vocabulary: [
+      "open-to-buy",
+      "OTB",
+      "planned receipts",
+      "committed",
+      "BOP",
+      "EOP",
+      "beginning-of-period inventory",
+      "end-of-period inventory",
+      "markdown",
+      "weeks of supply",
+      "sell-through",
+      "in-season",
+      "pre-season",
+    ],
+    howToDropIn:
+      "\"It doesn't matter how good the product is — if the buyer has no OTB for the period, it's a no. The pitch isn't about the product, it's about freeing up OTB by accelerating markdowns on slow movers.\"",
+    commonPhrasing:
+      "Merchant conversations, especially in apparel and specialty retail. Vendor sales reps live and die by understanding their buyers' OTB position.",
+    notes:
+      "OTB is the financial equivalent of headcount or budget in a product org — the gating constraint on what new bets can be made regardless of merit. Understanding OTB is the difference between a vendor who pitches features and one who pitches the buyer's job. The discipline is calendared (monthly OTB calculations) and pre-committed (buys placed 3–9 months ahead in apparel), so the leverage moves come from helping the buyer move the constraint, not from arguing past it.",
+    source: "Retail finance and buying textbooks; standard apparel and specialty-retail practice.",
+    tags: ["category_management", "retail", "finance", "merchandising"],
+  },
+  {
+    name: "SKU Rationalization",
+    category: "category_management",
+    oneLiner:
+      "The disciplined trimming of the assortment — deleting slow-moving, duplicative, or low-GMROI SKUs to free space, simplify operations, and improve shopper navigation. The retail equivalent of feature deprecation.",
+    whenToUse:
+      "Annual range reviews, post-acquisition integration, margin pressure responses, complexity-reduction programs. Trader Joe's runs a permanent SKU-rationalization discipline (every new item bumps an existing one); most retailers run it episodically and accumulate tail.",
+    vocabulary: [
+      "SKU rationalization",
+      "tail",
+      "long tail",
+      "ABC analysis",
+      "Pareto",
+      "delist",
+      "discontinue",
+      "must-have",
+      "MFI",
+      "must-be-in",
+      "complexity cost",
+    ],
+    howToDropIn:
+      "\"The bottom 30% of SKUs deliver 4% of category sales and 11% of complexity cost. Cutting them isn't a loss, it's a simplification dividend — better in-stocks on the survivors, clearer shopper navigation, fewer markdowns.\"",
+    commonPhrasing:
+      "Range reviews, supply-chain simplification initiatives, post-merger integration. 'Pruning the tail' is universal grocery-merchant vocabulary.",
+    notes:
+      "The product-management parallel is feature deprecation — same emotional resistance, same political dynamics, same compounding cost of carrying complexity. The retail discipline is older and harsher: physical shelf space forces the decision, and POS data makes the case quantitative. Worth borrowing as a mental model into software: which features are your tail SKUs, and what are they costing in support load, onboarding friction, and engineering surface area?",
+    source: "ABC analysis (Pareto/Juran); standard category-management practice; lean and ECR literature.",
+    tags: ["category_management", "retail", "assortment", "simplification"],
+  },
 ];
