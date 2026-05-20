@@ -1550,4 +1550,556 @@ export const frameworks: Framework[] = [
     source: "ABC analysis (Pareto/Juran); standard category-management practice; lean and ECR literature.",
     tags: ["category_management", "retail", "assortment", "simplification"],
   },
+
+  // —— eCommerce metrics & finance —————————————————————————————————————————
+
+  {
+    name: "Conversion Rate & the eCommerce Funnel",
+    category: "ecommerce",
+    oneLiner:
+      "Conversion rate (CVR) is the share of sessions that complete the goal — usually a purchase. The funnel breaks that single number into stages (land → browse → product view → add-to-cart → checkout → purchase) so you can see exactly where shoppers leak out.",
+    whenToUse:
+      "Any time a site-experience decision needs to be defended in terms of outcomes. CVR is the first number a merchandising leader is asked about, and the funnel is how you move from 'conversion is down' to 'add-to-cart held but checkout abandonment spiked — it's a payment/shipping problem, not a merchandising one.'",
+    vocabulary: [
+      "conversion rate",
+      "CVR",
+      "CR",
+      "purchase funnel",
+      "add-to-cart rate",
+      "ATC",
+      "cart abandonment",
+      "checkout abandonment",
+      "micro-conversion",
+      "macro-conversion",
+      "bounce rate",
+      "exit rate",
+      "session",
+      "fallout",
+    ],
+    howToDropIn:
+      "\"Site-wide CVR is the headline, but it hides the story. The funnel shows product-view-to-cart is healthy and cart-to-checkout fell off a cliff — so this is a checkout-friction problem, not a discovery or assortment problem. Let's not re-merchandise the PLP to fix a shipping-threshold issue.\"",
+    commonPhrasing:
+      "Weekly trade meetings, site performance reviews, exec dashboards. \"What's converting?\" and \"where's the funnel leaking?\" are the standing questions.",
+    notes:
+      "Benchmark CVR for most retail eComm sits roughly 1.5–3% (varies hugely by category, traffic source, and device — mobile converts well below desktop). The discipline is segmentation: a blended CVR is nearly useless because paid-social traffic, branded-search traffic, and returning customers convert at wildly different rates. Distinguish micro-conversions (add-to-cart, sign-up, wishlist) from the macro-conversion (purchase) so you can diagnose mid-funnel. The product-analytics parallel is exact — this is the AARRR/pirate-metrics funnel applied to a storefront. Pair with RPV (which fuses CVR and AOV so you don't optimize conversion at the expense of basket size).",
+    source: "Standard digital-commerce metric. Benchmarks: Baymard Institute (cart abandonment ~70%), Adobe/Contentsquare digital experience benchmarks.",
+    tags: ["ecommerce", "metrics", "conversion", "merchandising"],
+  },
+  {
+    name: "AOV, UPT & Basket Economics",
+    category: "ecommerce",
+    oneLiner:
+      "Average Order Value (AOV) is revenue divided by orders; Units Per Transaction (UPT) is items per order. Together they describe basket size — the lever that grows revenue without needing a single extra visitor.",
+    whenToUse:
+      "Promotion design, free-shipping-threshold setting, cross-sell and bundling decisions, and any conversation about growing revenue when traffic is flat. AOV is the merchandiser's most direct revenue lever because it's downstream of placement, recommendations, and thresholds you actually control.",
+    vocabulary: [
+      "average order value",
+      "AOV",
+      "units per transaction",
+      "UPT",
+      "average selling price",
+      "ASP",
+      "attach rate",
+      "cross-sell",
+      "upsell",
+      "basket building",
+      "bundling",
+      "free-shipping threshold",
+      "add-on",
+    ],
+    howToDropIn:
+      "\"Traffic is capped this quarter, so growth has to come from basket. Two levers: AOV via the free-shipping threshold and cross-sell on the PDP, and UPT via 'complete the look' and bundle merchandising. A $5 threshold move usually shifts AOV more than any banner we could run.\"",
+    commonPhrasing:
+      "Trade reviews, promo planning, merchandising QBRs. \"Traffic, conversion, AOV\" is the revenue triad every eComm leader recites.",
+    notes:
+      "Decompose carefully: AOV = ASP (average selling price) × UPT. A rising AOV driven by UPT (more items) is healthier than one driven by ASP alone (which can just mean discounting stopped). The classic intervention is the free-shipping threshold set just above current AOV — it's the single highest-ROI basket lever in eComm, well-documented to lift order value. The trap is chasing AOV with high-discount bundles that lift the top line and crush margin; always read AOV next to margin rate. The SaaS analog is expansion revenue / seat-and-add-on economics — same 'grow the existing relationship' logic.",
+    source: "Standard retail/eCommerce finance. Free-shipping-threshold effects documented by Baymard, Deloitte holiday studies, and UPS/comScore Pulse of the Online Shopper.",
+    tags: ["ecommerce", "metrics", "finance", "merchandising"],
+  },
+  {
+    name: "Revenue Per Visit (RPV)",
+    category: "ecommerce",
+    oneLiner:
+      "RPV = Conversion Rate × Average Order Value (equivalently, revenue ÷ sessions). The single metric that connects a site-experience decision to revenue, because it captures both whether people buy and how much they spend.",
+    whenToUse:
+      "Whenever you need to prove a merchandising or UX change was net-positive and not just a conversion trick. RPV is the answer to the JD line about 'connecting site experience decisions to revenue' — it's the metric that won't let you cheat one half of the funnel to inflate the other.",
+    vocabulary: [
+      "revenue per visit",
+      "RPV",
+      "revenue per visitor",
+      "RPV = CVR × AOV",
+      "revenue per session",
+      "EPC",
+      "earnings per click",
+      "topline",
+      "demand",
+    ],
+    howToDropIn:
+      "\"Don't show me conversion in isolation. The aggressive discount lifted CVR 8% but cut AOV 12% — RPV is down, so the change destroyed value even though the conversion chart looks like a win. RPV is the metric we should be A/B testing against, not raw CVR.\"",
+    commonPhrasing:
+      "A/B test readouts, merchandising experiment reviews, executive scorecards. The metric that separates a real win from a vanity win.",
+    notes:
+      "RPV is the cleanest decision metric in eCommerce because it's a product of the two things merchandisers move — conversion and basket — and it strips out the traffic-volume noise that masks whether the experience itself improved. The discipline: set RPV (not CVR) as the primary metric on most merchandising and UX experiments, with margin as a guardrail so you don't buy revenue with discount. Closely related to GMROI in the physical-retail section: both are integrating ratios that prevent single-axis optimization. The web-analytics tooling reports the same idea as 'revenue per visit' or 'per session'; in affiliate/paid contexts it shows up as EPC (earnings per click).",
+    source: "Standard conversion-optimization metric; emphasized in CRO practice (Optimizely, VWO, GoodUI experiment literature).",
+    tags: ["ecommerce", "metrics", "finance", "conversion"],
+  },
+  {
+    name: "Sell-Through Rate",
+    category: "ecommerce",
+    oneLiner:
+      "Sell-through % = units sold ÷ units received, over a period. The core read on whether you bought the right amount of the right product — and the trigger for reorder, markdown, or 'we over-bought.'",
+    whenToUse:
+      "Buy planning, in-season trading, markdown timing, and any post-launch read on a product or collection. Sell-through is how merchandising performance is judged against the inventory commitment — the link between site decisions and 'inventory outcomes.'",
+    vocabulary: [
+      "sell-through",
+      "sell-through rate",
+      "ST%",
+      "full-price sell-through",
+      "regular-price sell-through",
+      "weeks of supply",
+      "WOS",
+      "rate of sale",
+      "ROS",
+      "replenishment",
+      "reorder point",
+      "season",
+      "end-of-life",
+    ],
+    howToDropIn:
+      "\"This collection is at 65% full-price sell-through in week 3 against a 50% plan — it's running hot, so the merchandising move is to feature it harder and chase units while we can reorder, not to discount. The slow style next to it is at 20%; that's the markdown candidate, and surfacing it on the homepage is just burning prime real estate.\"",
+    commonPhrasing:
+      "Buy reviews, weekly trade, markdown committees. \"How's it selling through?\" is the universal merchant question.",
+    notes:
+      "Two flavors matter: total sell-through (includes marked-down units — tells you if you'll clear the buy) and full-price / regular-price sell-through (excludes markdowns — tells you if the product had real demand at the price you intended). A high total sell-through achieved entirely on markdown is a margin failure dressed as a success. Sell-through and weeks-of-supply are two views of the same inventory question: ST% looks backward at what's gone, WOS looks forward at how long the rest will last at current rate of sale. Site merchandising directly drives sell-through — placement, search ranking, and editorial features are how you accelerate a slow style or protect a hot one. Pair with Open-to-Buy and GMROI in the category-management section.",
+    source: "Standard retail/merchandise-planning metric (Levy & Weitz, Retail Management; standard buying & merchandising practice).",
+    tags: ["ecommerce", "metrics", "merchandising", "inventory"],
+  },
+  {
+    name: "Gross Margin, Markdown & Markup",
+    category: "ecommerce",
+    oneLiner:
+      "Gross margin is what's left of revenue after the cost of goods (in $ and as a %). Markup is the cushion you build in when you set the price; markdown is the cushion you give back to move inventory. Merchandising decisions live or die in the gap between the two.",
+    whenToUse:
+      "Pricing and promo decisions, markdown cadence, range planning, and any time a 'grow revenue' idea needs to be checked against profitability. This is the 'margin outcomes' half of the JD — the discipline of not buying topline with margin you can't afford.",
+    vocabulary: [
+      "gross margin",
+      "gross margin rate",
+      "margin dollars",
+      "GM%",
+      "cost of goods sold",
+      "COGS",
+      "markup",
+      "initial markup",
+      "IMU",
+      "maintained markup",
+      "MMU",
+      "keystone",
+      "markdown",
+      "markdown rate",
+      "promotional margin",
+      "shrink",
+      "contribution margin",
+    ],
+    howToDropIn:
+      "\"The promo lifts demand, but at 40% off we're below maintained-markup target — margin dollars per order actually shrink. Initial markup gave us room for some markdown; we've now spent it. Let's protect margin by featuring full-price newness and confining the discount to the styles that have to clear.\"",
+    commonPhrasing:
+      "Pricing committees, promo planning, finance reviews, merchant scorecards. \"Rate vs. dollars\" is the recurring tension.",
+    notes:
+      "The most common rookie error is conflating margin rate (a %) with margin dollars (the absolute money). A lower-rate product that sells far more units can deliver more margin dollars — which is why rate-only thinking starves the business. Initial Markup (IMU) is set at buy time to absorb planned markdowns, shrink, and still hit a target Maintained Markup (MMU); 'keystone' is the old shorthand for a 50% markup (double the cost). Markdown rate (markdown $ ÷ sales) is the headline health metric for whether you bought and merchandised well — high markdown rate means demand didn't show up at full price. The SaaS analog is gross margin and discounting discipline, but retail's markdown mechanics are sharper because unsold physical inventory is a hard, depreciating liability.",
+    source: "Standard retail finance (Levy & Weitz; Berman & Evans, Retail Management). Markdown and markup mechanics: merchandise-planning practice.",
+    tags: ["ecommerce", "metrics", "finance", "pricing"],
+  },
+  {
+    name: "Inventory Productivity (Turn & Weeks of Supply)",
+    category: "ecommerce",
+    oneLiner:
+      "Inventory turn is how many times you sell and replace stock in a period; weeks of supply (WOS) is how long current inventory lasts at the current rate of sale. The forward and backward views of how hard your inventory is working.",
+    whenToUse:
+      "Reorder and replenishment decisions, in-stock management, working-capital conversations, and connecting merchandising to the 'inventory outcomes' the JD names. Turn and WOS are how a site merchandiser proves that featuring a product moved real units and didn't just create a stockout.",
+    vocabulary: [
+      "inventory turn",
+      "stock turn",
+      "turnover",
+      "weeks of supply",
+      "WOS",
+      "days of supply",
+      "DOS",
+      "in-stock rate",
+      "out-of-stock",
+      "OOS",
+      "stockout",
+      "on-shelf availability",
+      "rate of sale",
+      "safety stock",
+      "replenishment",
+      "carrying cost",
+    ],
+    howToDropIn:
+      "\"We're carrying 14 weeks of supply on a style turning twice a year — that's dead capital and a markdown waiting to happen. Meanwhile the hero product is at 2 weeks of supply and we're featuring it on the homepage, which will stock us out by Friday. Merchandising and inventory have to be read together or we're driving demand we can't fulfill.\"",
+    commonPhrasing:
+      "Trade meetings, supply-chain reviews, working-capital discussions. \"What's our weeks of supply?\" gates most replenishment decisions.",
+    notes:
+      "High turn frees cash and reduces markdown risk but raises stockout risk; the art is balancing turn against in-stock (on-shelf availability). The cardinal merchandising sin is driving demand — through featuring, search boosting, email — on a product that can't be replenished, converting marketing spend into out-of-stock frustration and lost RPV. In-stock rate is the constraint that should gate every 'feature this harder' decision. Turn ties directly to GMROI (margin × turn) in the category-management section — turn is the second half of retail unit economics. The product-ops analog is capacity planning: surfacing a feature you can't support generates the same kind of demand-supply mismatch.",
+    source: "Standard retail/merchandise-planning metric (Levy & Weitz; APICS/ASCM supply-chain literature).",
+    tags: ["ecommerce", "metrics", "inventory", "merchandising"],
+  },
+
+  // —— Site merchandising craft ————————————————————————————————————————————
+
+  {
+    name: "Site Merchandising",
+    category: "site_merchandising",
+    oneLiner:
+      "The digital discipline of curating and sequencing what shoppers see — which products appear on which pages, in what order, with what story — to drive discovery, conversion, and basket. The online equivalent of the planogram, but re-rendered for every visitor in real time.",
+    whenToUse:
+      "The umbrella for the whole role: category-page (PLP) curation, product sequencing, search and browse tuning, homepage and landing-page builds, and the editorial-to-commerce bridge. Use it to frame why 'putting products on a page' is a strategic, revenue-bearing craft, not data entry.",
+    vocabulary: [
+      "site merchandising",
+      "digital merchandising",
+      "online merchandising",
+      "PLP",
+      "product listing page",
+      "category page",
+      "PDP",
+      "product detail page",
+      "product sort",
+      "sequencing",
+      "boost and bury",
+      "pinning",
+      "merchandising rules",
+      "curation",
+      "collection",
+      "hero product",
+      "endless aisle",
+    ],
+    howToDropIn:
+      "\"Site merchandising is planogram thinking for a shelf that rebuilds itself per visitor. The category page is the shelf, product sort is the facing decision, and search-and-browse is the aisle layout. The difference from physical retail is that we can re-merchandise instantly and personalize — but the discipline is the same: scarce attention, contested placement, and every position earning its revenue.\"",
+    commonPhrasing:
+      "The function name itself — 'site merchandising,' 'digital merchandising team,' 'merchandising operations.' Day-to-day: \"who's merchandising the spring landing page?\"",
+    notes:
+      "Two halves: rules-based merchandising (sort by best-seller, newness, margin, or inventory; boost/bury/pin specific SKUs) and editorial/curated merchandising (hand-built collections and stories). Mature teams blend them — algorithmic sort with human pins for strategic products. The closest physical analog is the planogram (and the category-management section's framing carries over wholesale: space-to-sales, KVI logic, good-better-best tiering all have on-site equivalents in placement and sort order). The merchandiser's leverage: prime positions (top of PLP, above-the-fold, first search results) are the eye-level shelf space, and what you put there is a margin and inventory decision, not just a taste decision. Platform tooling: Salesforce Commerce Cloud, Adobe Commerce, Shopify, Bloomreach, Algolia, Constructor, Coveo.",
+    source: "Practitioner discipline. Tooling: Salesforce/Adobe Commerce, Bloomreach, Algolia, Constructor, Coveo. UX research base: Baymard Institute, Nielsen Norman Group.",
+    tags: ["site_merchandising", "ecommerce", "merchandising", "discovery"],
+  },
+  {
+    name: "Onsite Search & Searchandising",
+    category: "site_merchandising",
+    oneLiner:
+      "Onsite search is the highest-intent surface on a storefront — shoppers who search convert at multiples of those who don't. Searchandising is the practice of tuning that surface: relevance, synonyms, ranking, zero-results recovery, and merchandising boosts inside the results.",
+    whenToUse:
+      "Product-discoverability work, conversion optimization on high-intent traffic, and any 'shoppers can't find what they want' diagnosis. Search is where discoverability and revenue intersect most directly, and it's chronically under-invested relative to its conversion power.",
+    vocabulary: [
+      "onsite search",
+      "site search",
+      "search relevance",
+      "searchandising",
+      "query understanding",
+      "synonyms",
+      "stemming",
+      "zero results",
+      "null results",
+      "no-results page",
+      "autocomplete",
+      "typeahead",
+      "autosuggest",
+      "search ranking",
+      "query rewriting",
+      "misspelling tolerance",
+      "search exit rate",
+    ],
+    howToDropIn:
+      "\"Searchers are 6% of sessions and a third of revenue — it's the highest-intent surface we have, and we're treating it as plumbing. Top of the list: kill the zero-results pages (every null result is a shopper telling us they want to buy and we said 'nothing here'), fix the synonym gaps, and add merchandising boosts so strategic and in-stock product surfaces first.\"",
+    commonPhrasing:
+      "Discoverability reviews, search-platform evaluations, conversion deep-dives. \"What's our zero-results rate?\" and \"what are the top no-results queries?\" are the diagnostic openers.",
+    notes:
+      "The headline finding across UX research: on-site searchers convert far higher than browsers because intent is explicit — yet most sites' search is poor (Baymard's reviews consistently find majority of e-commerce search experiences have damaging usability issues). The fastest wins are usually: (1) zero-results recovery — never show a dead end; show alternatives or relax the query; (2) synonym and misspelling tolerance; (3) merchandising controls inside results so you can boost in-stock, on-margin, or strategic product. 'Searchandising' is the term for applying merchandising rules to search output — it's where discoverability meets the margin/inventory levers. Pair with Faceted Navigation (the browse counterpart) and the category-management Consumer Decision Tree (the attribute hierarchy that should drive both search facets and ranking).",
+    source: "Baymard Institute e-commerce search UX research; NN/g search studies. Tooling: Algolia, Constructor, Coveo, Bloomreach, Elasticsearch.",
+    tags: ["site_merchandising", "ecommerce", "search", "discovery"],
+  },
+  {
+    name: "Faceted Navigation & Browse",
+    category: "site_merchandising",
+    oneLiner:
+      "Faceted navigation lets shoppers narrow a category by attributes (size, color, price, brand, rating) — filters that combine to drill from thousands of products to the handful that fit. It's the browse-side counterpart to search and the on-site rendering of the category's information architecture.",
+    whenToUse:
+      "Category-page (PLP) design, taxonomy and navigation work, product-discoverability initiatives, and any 'too many products, can't find the right one' problem. Facets are where IA discipline becomes revenue: the right filters convert browsers; the wrong or missing ones send them to a competitor.",
+    vocabulary: [
+      "faceted navigation",
+      "faceted search",
+      "filters",
+      "refinements",
+      "facets",
+      "guided navigation",
+      "browse",
+      "navigation taxonomy",
+      "breadcrumb",
+      "category hierarchy",
+      "findability",
+      "product attributes",
+      "attribute data",
+      "filter coverage",
+      "thematic facets",
+    ],
+    howToDropIn:
+      "\"The dress category has 800 products and three filters — shoppers can't get to 'midi, under $100, in stock' so they bounce. Facets are only as good as the attribute data behind them; this is a product-data problem masquerading as a UX problem. Fix attribution coverage first, then add thematic facets ('occasion,' 'fit') that match how people actually shop this category.\"",
+    commonPhrasing:
+      "PLP and navigation redesigns, taxonomy projects, discoverability audits. \"What's our filter coverage?\" and \"do we have the attribute data?\" are the practical gates.",
+    notes:
+      "Facets are the direct on-site expression of information architecture and the Consumer Decision Tree — the filters should mirror the attribute hierarchy shoppers actually use to choose (caffeine→roast→size, or species→life-stage→format from the CDT card). The hidden dependency is attribute data quality: a 'fit' or 'occasion' filter is impossible if products aren't tagged, so faceted nav is as much a product-data and PIM problem as a front-end one. Best practice from UX research: show applied filters clearly, allow multi-select within a facet, never let a filter combination return zero results without a graceful path, and consider thematic/use-case facets beyond raw specs. This is the browse half of discoverability; pair with Onsite Search (the query half) and Card Sorting & Tree Testing (the research method for getting the taxonomy right).",
+    source: "Baymard Institute homepage/category/filtering UX research; NN/g faceted-search guidance. Underpins PIM/attribute-data and search-platform tooling.",
+    tags: ["site_merchandising", "ecommerce", "navigation", "information_architecture"],
+  },
+  {
+    name: "Conversion Rate Optimization (CRO)",
+    category: "site_merchandising",
+    oneLiner:
+      "The disciplined practice of raising conversion (and RPV) through hypothesis-driven experimentation — A/B and multivariate tests, funnel analysis, and qualitative research — rather than opinion-driven redesigns.",
+    whenToUse:
+      "Whenever a site change is consequential enough to test and you have the traffic to detect an effect. CRO is the method that turns 'I think this PDP layout is better' into 'this layout lifts RPV 4% at 95% confidence' — the difference between the JD's 'site execution' and 'connect decisions to revenue.'",
+    vocabulary: [
+      "conversion rate optimization",
+      "CRO",
+      "A/B test",
+      "split test",
+      "multivariate test",
+      "MVT",
+      "hypothesis",
+      "primary metric",
+      "guardrail metric",
+      "statistical significance",
+      "minimum detectable effect",
+      "sample size",
+      "friction",
+      "heatmap",
+      "session replay",
+      "scroll depth",
+      "experimentation program",
+    ],
+    howToDropIn:
+      "\"Before we redesign the PDP on a hunch, let's state the hypothesis and test it: primary metric RPV, margin as a guardrail, and we need ~2 weeks at current traffic to hit the minimum detectable effect. If it's not significant, we don't ship it — and a flat result is still a learning, not a failure.\"",
+    commonPhrasing:
+      "Experiment reviews, roadmap prioritization, site-performance QBRs. \"What's the hypothesis and what's the primary metric?\" is the gate on any test.",
+    notes:
+      "CRO is the eCommerce-native sibling of Lean UX and the retail Test-and-Control tradition (see the ab_testing translation): same experimentation logic, web-tuned mechanics. The discipline that separates real programs from theater: (1) a written hypothesis ('we believe X because Y; we'll know we're right if Z'); (2) RPV as primary metric with margin as a guardrail so you don't win conversion by discounting; (3) honest stats — pre-computed sample size and MDE, no peeking-and-stopping, no celebrating noise. Qual complements quant: heatmaps, session replay, and on-site surveys tell you why a test moved. The biggest trap is the 'A/B test everything' cargo cult on low-traffic pages where you'll never reach significance — there, use best-practice and judgment, and reserve testing for high-traffic, high-stakes surfaces. Tools: Optimizely, VWO, Adobe Target, AB Tasty; analytics via Adobe Analytics / GA4.",
+    source: "CRO practice (Optimizely, VWO experiment literature; GoodUI). Roots in Lean UX (Gothelf/Seiden) and statistical experiment design.",
+    tags: ["site_merchandising", "ecommerce", "experimentation", "conversion"],
+  },
+  {
+    name: "Content-to-Commerce & Digital Storytelling",
+    category: "site_merchandising",
+    oneLiner:
+      "The craft of wrapping product in narrative — editorial, lookbooks, shoppable stories, campaign landing pages — so the site sells the brand and the assortment together, not just a grid of SKUs. The bridge between brand storytelling and the buy button.",
+    whenToUse:
+      "Homepage and campaign builds, seasonal launches, brand-led category pages, and any 'we look like a spreadsheet, not a brand' diagnosis. This is the JD's 'digital storytelling' and 'brand sensibility' made operational — and the place where merchandising judgment balances storytelling against product priorities and financial performance.",
+    vocabulary: [
+      "content-to-commerce",
+      "shoppable content",
+      "editorial merchandising",
+      "lookbook",
+      "hero banner",
+      "campaign landing page",
+      "brand storytelling",
+      "editorial calendar",
+      "content merchandising",
+      "shop-the-look",
+      "complete the look",
+      "inspiration",
+      "above the fold",
+      "hero product",
+    ],
+    howToDropIn:
+      "\"The campaign page tells a beautiful story and converts at half the rate of the plain grid — the storytelling and the shopping are fighting each other. The fix isn't to kill the story; it's to make it shoppable: every hero image is a 'shop the look,' the narrative funnels to in-stock product, and the editorial earns its place by lifting RPV, not just looking good.\"",
+    commonPhrasing:
+      "Campaign planning, homepage reviews, brand-and-commerce alignment meetings. \"Is it shoppable?\" is the question that keeps storytelling honest.",
+    notes:
+      "The core tension this names: brand/editorial wants emotion and aspiration; merchandising wants conversion and sell-through; a senior site merchandiser holds both. The discipline is making content accountable to commerce metrics (RPV, click-through to PDP, assisted conversion) without flattening it into a catalog — and making the assortment decisions inside the story (feature in-stock, on-margin, strategically prioritized product, not just the prettiest sample). 'Shop the look' / 'complete the look' is also a UPT and AOV lever, so storytelling and basket economics connect directly. Pair with the customer_journey / shopper-journey translation (storytelling maps to the inspiration and consideration stages) and Journey Mapping. The brand-sensibility-plus-financial-judgment balance is exactly the JD's closing competency.",
+    source: "Practitioner discipline (content commerce / editorial merchandising). Related: NN/g e-commerce content research; brand-and-DTC content-commerce practice.",
+    tags: ["site_merchandising", "ecommerce", "content", "brand"],
+  },
+
+  // —— Analytics & tooling —————————————————————————————————————————————————
+
+  {
+    name: "Adobe Analytics",
+    category: "ecommerce",
+    oneLiner:
+      "Adobe's enterprise digital-analytics platform — the clickstream tool many large retailers run. Its distinctive vocabulary (props, eVars, success events, segments, fallout, flow, Analysis Workspace) is what 'experience with Adobe Analytics' on a JD actually means.",
+    whenToUse:
+      "Any role that measures site behavior in an Adobe shop. You don't need to be an analyst, but a site-merchandising leader must speak it well enough to commission a fallout report, read a segment comparison, and tell a real funnel insight from a noisy one.",
+    vocabulary: [
+      "Adobe Analytics",
+      "Analysis Workspace",
+      "prop",
+      "traffic variable",
+      "eVar",
+      "conversion variable",
+      "success event",
+      "segment",
+      "fallout report",
+      "flow report",
+      "pathing",
+      "dimension",
+      "metric",
+      "calculated metric",
+      "data layer",
+      "Adobe Experience Platform",
+      "Customer Journey Analytics",
+      "CJA",
+    ],
+    howToDropIn:
+      "\"Build me a fallout in Workspace: search → PDP view → add-to-cart → checkout → order, segmented by device. If mobile fallout spikes between PDP and add-to-cart, that's where the merchandising or UX problem lives. Set the relevant success event and pull the eVar for the campaign so we can attribute it.\"",
+    commonPhrasing:
+      "Analytics requests, dashboard reviews, agency/analyst conversations. \"Can you pull that in Workspace?\" and \"what's the fallout look like?\" are the everyday phrases.",
+    notes:
+      "The Adobe-specific mental model that trips up newcomers: props (traffic variables) are for traffic/pathing and don't persist; eVars (conversion variables) persist and get credited to later success events — so attribution lives in eVars. Success events are the things you count (cart adds, orders, revenue). Segments slice everything. Analysis Workspace is the modern drag-and-drop analysis surface; fallout (funnel) and flow (pathing) are the two reports a merchandiser uses most. Adobe is moving toward Customer Journey Analytics (CJA) on the Experience Platform for cross-channel analysis. The honest framing for the JD: 'or similar analytics platforms' means the concepts transfer — GA4 has events, dimensions, explorations, and funnels that map directly; what matters is funnel literacy and segmentation discipline, not the vendor.",
+    source: "Adobe Analytics / Adobe Experience Platform documentation. Concepts transfer to GA4 (events, explorations, funnel/path).",
+    tags: ["ecommerce", "analytics", "tooling", "metrics"],
+  },
+  {
+    name: "Marketing & Conversion Attribution",
+    category: "ecommerce",
+    oneLiner:
+      "Attribution is the rule for assigning credit for a conversion across the touchpoints that preceded it. The model you choose (last-click, first-click, linear, data-driven) changes which channels and on-site experiences look like they 'work.'",
+    whenToUse:
+      "Reading channel performance, defending the value of upper-funnel and on-site experiences, and any 'which campaign drove this' argument. Attribution literacy keeps a merchandiser from being blamed for revenue last-click steals from them — or taking credit they didn't earn.",
+    vocabulary: [
+      "attribution",
+      "attribution model",
+      "last-click",
+      "last-touch",
+      "first-click",
+      "first-touch",
+      "linear attribution",
+      "time-decay",
+      "position-based",
+      "U-shaped",
+      "data-driven attribution",
+      "DDA",
+      "multi-touch attribution",
+      "MTA",
+      "assisted conversion",
+      "view-through",
+      "lookback window",
+    ],
+    howToDropIn:
+      "\"On last-click, the editorial landing page looks like a loser — but it's an upper-funnel assist; switch to a position-based or data-driven model and you can see it's initiating journeys that close later on branded search. Don't kill the page because last-click can't see what it does.\"",
+    commonPhrasing:
+      "Channel reviews, marketing-and-merchandising alignment, budget conversations. \"What attribution model is that on?\" is the question that defuses most channel arguments.",
+    notes:
+      "Every model is a simplifying lie; the discipline is knowing which lie you're telling. Last-click over-credits the bottom of the funnel (branded search, retargeting) and starves discovery and content; first-click does the reverse. Data-driven attribution (algorithmic credit) is the current best practice where you have the data, but it's a black box and needs sanity checks. For site merchandising specifically, assisted-conversion and on-site pathing matter more than channel attribution — they show how a PLP, search, or editorial page contributed to an eventual order even when it wasn't the final step. Privacy changes (cookie deprecation, iOS/ATT) are eroding deterministic multi-touch attribution and pushing the industry toward modeled and incrementality-based approaches. Pair with Adobe Analytics (eVars are the attribution mechanism) and RPV (the on-site value the attribution debate is ultimately about).",
+    source: "Digital-marketing measurement practice; Google/Adobe attribution documentation; incrementality and media-mix-modeling literature.",
+    tags: ["ecommerce", "analytics", "metrics", "marketing"],
+  },
+  {
+    name: "Digital Production Workflow (Airtable / Jira)",
+    category: "ecommerce",
+    oneLiner:
+      "The operating system of a merchandising team: intake, ticketing, content calendars, and launch tracking run in tools like Airtable, Jira, Asana, or Monday. How dozens of pages, launches, and assets get coordinated without dropping any.",
+    whenToUse:
+      "Any high-volume merchandising operation where launches, campaigns, and content updates outnumber the people doing them. The JD names Airtable and Jira because the role lives in production throughput — and the failure mode is a launch that slips because the workflow wasn't tracked.",
+    vocabulary: [
+      "Airtable",
+      "Jira",
+      "intake",
+      "intake form",
+      "ticket",
+      "epic",
+      "story",
+      "sprint",
+      "backlog",
+      "kanban board",
+      "production calendar",
+      "content calendar",
+      "launch tracker",
+      "workflow automation",
+      "status",
+      "owner",
+      "due date",
+      "DAM",
+      "digital asset management",
+    ],
+    howToDropIn:
+      "\"Launches are slipping because intake is over email and nobody owns the tracker. Stand up an Airtable base: one record per launch, owner, status, go-live date, linked assets, and a calendar view the whole cross-functional team reads off. Jira if engineering work is in the critical path; Airtable for the merchandising production side.\"",
+    commonPhrasing:
+      "Ops setup, sprint planning, status standups. \"Is there a ticket?\" and \"what's the status in the tracker?\" are the everyday governance questions.",
+    notes:
+      "The distinction worth knowing: Jira is built for software delivery (epics, stories, sprints, dev workflow — see the Scrum and Kanban cards) and is where you live when engineering is on the critical path; Airtable is a flexible relational database that merchandising teams use as a production tracker, content calendar, and lightweight CMS-of-record because non-engineers can build and change it. Asana/Monday occupy similar ground to Airtable for task and project tracking. The competency the JD is screening for isn't tool trivia — it's the operating discipline: clear intake, one owner per item, visible status, and a calendar that prevents launch collisions. Pair with Kanban (WIP limits and flow for the board), RACI (one owner per launch), and Launch Readiness (the gate the tracker feeds).",
+    source: "Practitioner tooling. Workflow discipline draws on Kanban (Anderson) and standard digital-production operations practice.",
+    tags: ["ecommerce", "tooling", "operations", "workflow"],
+  },
+
+  // —— Management & operating ——————————————————————————————————————————————
+
+  {
+    name: "Matrixed Organization & Influence Without Authority",
+    category: "leadership",
+    oneLiner:
+      "A matrixed org is one where you depend on people who don't report to you — cross-functional peers in brand, tech, planning, and supply chain. Influence without authority is the skill of getting outcomes through them by trading value and building credibility rather than giving orders.",
+    whenToUse:
+      "Any senior role in a 'fast-paced, matrixed environment with multiple stakeholders' — exactly the JD's phrasing. The competency being screened for is delivering through a web of peers and senior stakeholders you can't direct, on shared timelines, with competing priorities.",
+    vocabulary: [
+      "matrix organization",
+      "matrixed environment",
+      "dotted-line",
+      "solid-line",
+      "cross-functional",
+      "influence without authority",
+      "lateral leadership",
+      "stakeholder management",
+      "stakeholder mapping",
+      "currencies of exchange",
+      "reciprocity",
+      "alignment",
+      "escalation path",
+      "RACI",
+      "shared OKRs",
+    ],
+    howToDropIn:
+      "\"I don't own engineering or brand, so this launch runs on influence, not authority. The move is to map the stakeholders, find each one's currency — engineering wants a clean spec and no last-minute changes, brand wants storytelling room — and trade so everyone's getting something. Where alignment fails, we have a pre-agreed escalation path, not a turf fight.\"",
+    commonPhrasing:
+      "Leadership interviews, org-design conversations, cross-functional program kickoffs. \"How do you influence without authority?\" is a standard senior behavioral question — have a STAR story ready.",
+    notes:
+      "Cohen and Bradford's 'currencies of exchange' is the durable model: people grant cooperation when you offer something they value (information, recognition, support, a faster path to their own goals). The matrix's structural reality is that nobody has full authority, so credibility, reciprocity, and reputation are the operating capital — and they compound or erode over time. Pair with RACI (make accountability explicit so 'influence' isn't a euphemism for 'no one's in charge'), Stakeholder Mapping (from the design-research toolkit), and shared OKRs (the cleanest way to align peers around an outcome rather than negotiate task by task). The public-sector parallel is Mark Moore's authorizing environment — the same discipline of building and spending legitimacy with people who can say no.",
+    source: "Allan Cohen & David Bradford, Influence Without Authority (1990); matrix-management literature (Galbraith, Star Model).",
+    tags: ["leadership", "management", "stakeholders", "cross_functional"],
+  },
+  {
+    name: "Launch Readiness & Site QA",
+    category: "leadership",
+    oneLiner:
+      "The disciplined gate between 'built' and 'live': a structured check that content, functionality, data, and cross-device experience are correct before a launch goes out — plus a defined owner and rollback plan for when something breaks anyway.",
+    whenToUse:
+      "Every site launch, campaign go-live, and seasonal release. The JD's 'high attention to detail and strong standards for site execution, content quality, launch readiness, and QA' is this discipline — the difference between a clean launch and a broken homepage on the biggest traffic day.",
+    vocabulary: [
+      "launch readiness",
+      "go-live checklist",
+      "readiness gate",
+      "QA",
+      "quality assurance",
+      "content QA",
+      "functional QA",
+      "cross-browser testing",
+      "cross-device testing",
+      "responsive QA",
+      "staging environment",
+      "preview",
+      "smoke test",
+      "UAT",
+      "user acceptance testing",
+      "regression",
+      "rollback",
+      "hypercare",
+      "definition of done",
+      "broken link",
+      "404",
+    ],
+    howToDropIn:
+      "\"Nothing goes live without passing the readiness gate: content proofed, links and prices checked, imagery loaded, tested on the top three devices, and signed off in staging. We have a rollback plan and someone on hypercare for the first hour. 'Looks fine on my laptop' is not a QA process — that's how we end up with a 404 hero banner on launch morning.\"",
+    commonPhrasing:
+      "Pre-launch reviews, go/no-go meetings, post-launch retros. \"Are we ready to launch?\" and \"who signed off QA?\" are the gating questions.",
+    notes:
+      "Launch readiness is a definition-of-done applied to merchandising and content, not just code (see the Scrum and Continuous Delivery cards for the engineering lineage). The merchandiser-specific checks: content accuracy (copy, pricing, legal/promo terms), asset integrity (images load, no broken links), data correctness (products tagged, in stock, correctly categorized so facets and search work), and cross-device rendering (a majority of retail traffic is mobile, so 'looks good on desktop' is a trap). Two cultural pillars: a single accountable owner for go/no-go (RACI), and a blameless retro when something slips so the checklist improves rather than people hiding misses. 'Hypercare' is the heightened-monitoring window right after a high-stakes launch. The standards-and-attention-to-detail competency in the JD is, concretely, whether you run this gate or wing it.",
+    source: "Software release management (go-live checklists, UAT, smoke testing) applied to merchandising/content ops; QA and DoD practice.",
+    tags: ["leadership", "operations", "quality", "merchandising"],
+  },
 ];
