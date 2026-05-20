@@ -241,4 +241,136 @@ export const translations: Translation[] = [
       "Inside retailer and CPG orgs, the word is 'rationalization' or 'delisting' or 'pruning the tail.' Saying 'we should deprecate this SKU' reads as not knowing the vocabulary.",
     tags: ["translation", "category_management", "retail", "simplification"],
   },
+  {
+    yourTerm: "findability",
+    standardTerms: [
+      "product discoverability",
+      "onsite search",
+      "site search",
+      "searchandising",
+      "faceted navigation",
+      "guided navigation",
+      "browse",
+    ],
+    explanation:
+      "What UX/IA calls findability, eCommerce calls discoverability — and splits across two surfaces: search (the high-intent query box, tuned via 'searchandising' — relevance, synonyms, zero-results recovery, merchandising boosts) and browse (the category page and its faceted navigation). Same underlying discipline as findability research, but the retail version is wired directly to revenue, because a shopper who can't find the product doesn't file a usability bug — they leave and buy elsewhere.",
+    whenToUseYours:
+      "When recruiting UX/IA researchers into eComm, or explaining to a design-fluent audience why search-and-browse tuning is real information-architecture work and not just 'configuring the search box.' 'Findability' carries the empirical-research freight.",
+    whenToUseTheirs:
+      "Inside an eComm org, the function words are 'discoverability,' 'site search,' and 'faceted nav.' 'Searchandising' specifically signals you know search output is a merchandising surface, not just a relevance engine — using it reads as a practitioner. Talking about 'findability heuristics' in a trade meeting reads as cosplay; talking about zero-results rate and filter coverage reads as serious.",
+    tags: ["translation", "ecommerce", "site_merchandising", "positioning"],
+  },
+  {
+    yourTerm: "conversion_funnel",
+    standardTerms: [
+      "fallout",
+      "fallout report",
+      "purchase funnel",
+      "cart abandonment",
+      "checkout abandonment",
+      "drop-off",
+      "path analysis",
+    ],
+    explanation:
+      "The product-analytics funnel and the eCommerce funnel are the same construct (staged drop-off from arrival to conversion), but the vocabulary is platform-shaped. In an Adobe shop the funnel report is literally called 'fallout,' pathing is 'flow,' and the stages are success events. The retail-specific stages — add-to-cart, cart abandonment, checkout abandonment — are the named leak points everyone watches, and they distinguish a merchandising/discovery problem (people don't add to cart) from a checkout/payment problem (they add but don't buy).",
+    whenToUseYours:
+      "When framing the work for a product-analytics or growth audience, 'conversion funnel' and 'drop-off' are the neutral, portable terms — they travel across any analytics stack and any product.",
+    whenToUseTheirs:
+      "Inside an Adobe Analytics shop, say 'fallout' and 'flow' — that's what the reports are called and what people will pull for you. 'Cart abandonment' vs. 'checkout abandonment' is a distinction merchants care about precisely; conflating them signals you haven't sat in a trade meeting. Match the stack: GA4 shops say 'funnel exploration' and 'path exploration.'",
+    tags: ["translation", "ecommerce", "analytics", "positioning"],
+  },
+  {
+    yourTerm: "authorizing_environment",
+    standardTerms: [
+      "matrixed environment",
+      "influence without authority",
+      "stakeholder management",
+      "cross-functional alignment",
+      "dotted-line",
+      "lateral leadership",
+    ],
+    explanation:
+      "Mark Moore's 'authorizing environment' (the set of actors whose support a public manager must cultivate to act) and the corporate 'matrixed environment' name the same structural reality: you depend on people who can say no but don't report to you. The public-sector version foregrounds legitimacy and political backing; the corporate version foregrounds peer reciprocity and 'currencies of exchange.' Same discipline — building and spending credibility with people you can't direct — different lineage.",
+    whenToUseYours:
+      "In public-sector, governance, or mission-driven interviews, 'authorizing environment' signals strategic sophistication and locates you in the Moore/Kennedy School tradition. It's the sharper frame when the obstacle is legitimacy and backing rather than task coordination.",
+    whenToUseTheirs:
+      "In a retail or corporate interview, lead with 'matrixed environment' and 'influence without authority' — those are the exact words on the JD and in the behavioral-question bank. Have a STAR story where you delivered through peers you didn't manage. Saying 'authorizing environment' to a retail hiring manager risks reading as academic; saying 'I mapped the stakeholders and traded on what each one needed' reads as someone who's done it.",
+    tags: ["translation", "leadership", "public_sector", "positioning"],
+  },
+  {
+    yourTerm: "definition_of_done",
+    standardTerms: [
+      "launch readiness",
+      "go-live checklist",
+      "readiness gate",
+      "QA sign-off",
+      "go/no-go",
+      "UAT",
+    ],
+    explanation:
+      "Agile's 'definition of done' and merchandising's 'launch readiness gate' are the same move: an explicit, agreed bar that work must clear before it ships, owned by someone accountable. The eCommerce version extends DoD beyond code to content (copy, pricing, legal terms), assets (images load, no broken links), data (products tagged and in stock so search and facets work), and cross-device rendering — then adds a go/no-go decision and a rollback plan.",
+    whenToUseYours:
+      "With engineering and agile-fluent audiences, 'definition of done' is the precise term and signals you treat quality as a built-in standard, not an end-stage scramble.",
+    whenToUseTheirs:
+      "In a merchandising org, the words are 'launch readiness,' 'go-live checklist,' and 'QA sign-off,' and the ritual is the 'go/no-go.' These carry the operational specificity (who owns sign-off, what's on the checklist, who's on hypercare) that 'definition of done' leaves implicit. Demonstrating the checklist discipline is how you evidence the JD's 'attention to detail and standards for site execution.'",
+    tags: ["translation", "ecommerce", "operations", "positioning"],
+  },
+  {
+    yourTerm: "touchpoint",
+    standardTerms: [
+      "channel",
+      "omnichannel",
+      "unified commerce",
+      "online-merge-offline",
+      "OMO",
+      "BOPIS",
+      "clienteling",
+      "digital touchpoint",
+    ],
+    explanation:
+      "Service design's 'touchpoint' (any moment of contact between a person and a service) is what retail calls a 'channel,' and the service-design instinct to design across touchpoints rather than per-touchpoint is exactly what retail means by 'omnichannel' and, more recently, 'unified commerce.' BOPIS (buy-online-pickup-in-store), ship-from-store, and clienteling are specific cross-touchpoint patterns — the seams where the service-blueprint discipline earns its keep, because that's where 'the website says in-stock but the store can't find it' failures live.",
+    whenToUseYours:
+      "With a CX or service-design audience, 'touchpoint' keeps the focus on the customer's experience of contact rather than the org's internal channel silos — which is the point service design exists to make.",
+    whenToUseTheirs:
+      "Inside retail, 'channel' and 'omnichannel' are the operating words, and 'unified commerce' is the current aspiration (one inventory, one customer view, one experience across channels). Naming BOPIS, ship-from-store, or clienteling specifically signals you understand the operational seams, not just the concept. Saying 'let's map the touchpoints' is fine in a design room; in a trade meeting, say 'where do the channels break the experience?'",
+    tags: ["translation", "ecommerce", "service_design", "positioning"],
+  },
+  {
+    yourTerm: "front_stage_back_stage",
+    standardTerms: [
+      "site experience vs. fulfillment",
+      "merchandising vs. operations",
+      "on-shelf availability",
+      "OSA",
+      "order orchestration",
+      "ship-from-store",
+      "line of visibility",
+    ],
+    explanation:
+      "The service-blueprint distinction between front-stage (what the customer sees) and back-stage (the systems and people that enable it) maps cleanly onto eCommerce: the front-stage is the storefront a merchandiser controls — PLP, PDP, search, content — and the back-stage is inventory, fulfillment, and order orchestration. The 'line of visibility' is exactly where most retail failures hide: a beautifully merchandised in-stock badge means nothing if the back-stage can't ship it. Senior site-merchandising work is precisely the discipline of not designing a front-stage the back-stage can't deliver.",
+    whenToUseYours:
+      "With service-design and CX audiences, 'front-stage / back-stage' and 'line of visibility' are the precise terms and signal you think in blueprints, not just journey maps — you're tracking the enabling systems below the line, not only the visible experience.",
+    whenToUseTheirs:
+      "In retail, the working frame is 'merchandising vs. operations' or 'site experience vs. fulfillment,' and the back-stage health metric is on-shelf availability (OSA) / in-stock rate. Tying a merchandising decision to its fulfillment dependency — 'don't feature what we can't ship' — is how you demonstrate the blueprint discipline without the design jargon. It's also the cleanest way to show you connect site decisions to inventory outcomes, the JD competency.",
+    tags: ["translation", "ecommerce", "service_design", "positioning"],
+  },
+  {
+    yourTerm: "journey_management",
+    standardTerms: [
+      "lifecycle marketing",
+      "CRM",
+      "customer lifecycle",
+      "retention",
+      "single customer view",
+      "journey orchestration",
+      "CDP",
+    ],
+    explanation:
+      "NN/g 'journey management' (treating customer journeys as owned, governed, KPI'd products rather than one-off maps) lands in eCommerce as the lifecycle/CRM discipline plus the technical 'journey orchestration' that runs on a CDP (customer data platform) feeding a single customer view. Same core idea — someone owns the end-to-end journey and is accountable when it degrades — but retail splits it across merchandising (the in-session journey), CRM/lifecycle (the cross-session relationship), and martech (the orchestration plumbing).",
+    whenToUseYours:
+      "With CX-leadership and service-design audiences, 'journey management' makes the organizational-capability claim — named owners, journey KPIs, governance — that 'CRM' alone doesn't carry. Use it when the point is accountability for the whole journey, not a campaign.",
+    whenToUseTheirs:
+      "In retail, the budget lines are 'lifecycle marketing,' 'CRM,' and 'retention,' and the tech conversation is 'CDP' and 'single customer view.' Knowing that the merchandiser owns the in-session journey while CRM owns the cross-session relationship — and that a CDP is what stitches them — signals you understand where journey ownership actually sits in a retail org rather than treating it as one undifferentiated function.",
+    tags: ["translation", "ecommerce", "service_design", "cx"],
+  },
 ];
