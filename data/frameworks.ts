@@ -2102,4 +2102,512 @@ export const frameworks: Framework[] = [
     source: "Software release management (go-live checklists, UAT, smoke testing) applied to merchandising/content ops; QA and DoD practice.",
     tags: ["leadership", "operations", "quality", "merchandising"],
   },
+
+  // —— Field force strategy & deployment ——————————————————————————————————
+
+  {
+    name: "Field Force Effectiveness (FFE / SFE)",
+    category: "field_force",
+    oneLiner:
+      "The umbrella discipline for designing and running a commercial field organization — segmentation & targeting, sizing & structure, territory alignment, call planning, incentive compensation, and performance metrics — as one connected system rather than separate decisions.",
+    whenToUse:
+      "Any pharma/medtech/B2B field-strategy role. FFE is the operating-system view: it names the half-dozen levers that, set together, determine whether the field organization reaches the right customers, at the right frequency, with the right people, at a cost the P&L can bear.",
+    vocabulary: [
+      "field force effectiveness",
+      "FFE",
+      "sales force effectiveness",
+      "SFE",
+      "go-to-market",
+      "GTM",
+      "segmentation and targeting",
+      "sizing and structure",
+      "alignment",
+      "call planning",
+      "incentive compensation",
+      "IC",
+      "field force sizing",
+      "deployment",
+    ],
+    howToDropIn:
+      "\"FFE isn't one decision, it's a chain: segmentation drives targeting, targeting drives sizing, sizing drives alignment, and incentive comp has to reinforce all of it. If we redesign roles without re-cutting targeting and IC, the new model will quietly revert to the old behavior within two quarters.\"",
+    commonPhrasing:
+      "Commercial-operations and field-strategy conversations, consulting engagements (ZS Associates, IQVIA, Deloitte), QBRs. \"What does this do to FFE?\" is the integrating question.",
+    notes:
+      "The discipline is owned by Commercial Operations / Sales Operations and heavily shaped by the big analytics consultancies (ZS Associates and IQVIA in particular). The systems insight that distinguishes a strategist from a tactician: the levers interact, so optimizing one in isolation (e.g., adding headcount without re-aligning territories) degrades the whole. The software-org analog is Team Topologies — both treat org structure as a designed system optimized for flow to the customer, not an accident of headcount. Pair with Operating Model Design (the layer above) and Incentive Compensation (the reinforcement layer that makes or breaks any role redesign).",
+    source: "Sales/field force effectiveness practice; ZS Associates and IQVIA methodology; Andris Zoltners et al., 'The Complete Guide to Sales Force Incentive Compensation' and 'Building a Winning Sales Force.'",
+    tags: ["field_force", "commercial_operations", "pharma", "strategy"],
+  },
+  {
+    name: "Sales Force Sizing & Structure",
+    category: "field_force",
+    oneLiner:
+      "How many field people you need and how they're organized — generalist vs. specialist, by geography vs. by product/customer, with what span of control. The structural decision that everything downstream (territories, targeting, cost) inherits.",
+    whenToUse:
+      "Field expansion or contraction, launch planning, portfolio changes, and any role-redesign that changes who covers whom. Sizing answers 'how many,' structure answers 'organized how,' and the two are decided together against workload and economics.",
+    vocabulary: [
+      "sales force sizing",
+      "workload-based sizing",
+      "activity-based sizing",
+      "response-curve",
+      "ROI sizing",
+      "carryover",
+      "generalist",
+      "specialist",
+      "mirror structure",
+      "overlay",
+      "pod",
+      "span of control",
+      "portfolio model",
+      "right-sizing",
+    ],
+    howToDropIn:
+      "\"There are two defensible ways to size this: workload (count the targets and the calls each needs, divide by capacity) or response-curve (model incremental sales per incremental rep and find where the ROI flattens). They rarely agree — workload says we're understaffed, the response curve says the marginal rep doesn't pay. The role design has to name which logic we're committing to.\"",
+    commonPhrasing:
+      "Launch readiness, annual planning, restructuring. \"Are we sizing on workload or response?\" is the methodological fork.",
+    notes:
+      "Two canonical methods: workload/activity-based (bottom-up: targets × required frequency ÷ rep capacity) and response-curve/ROI (model the sales response to call effort and size to marginal return). Mature teams triangulate both. Structure choices — generalist (one rep, whole portfolio) vs. specialist (rep per therapeutic area), and whether to run overlay/mirror teams (e.g., a specialty overlay on top of a primary-care base) — trade coverage breadth against depth and raise coordination cost (the more overlays, the more the customer sees multiple Novartis faces and someone has to orchestrate them). Span of control connects directly to the Span & Layers card. The product analog is generalist vs. specialist teams in Team Topologies, and the response-curve logic mirrors diminishing-returns thinking in growth/marketing-mix modeling.",
+    source: "Zoltners, Sinha & Lorimer, 'Building a Winning Sales Force' and 'Sales Force Design for Strategic Advantage'; ZS Associates sizing methodology.",
+    tags: ["field_force", "commercial_operations", "pharma", "org_design"],
+  },
+  {
+    name: "Territory Alignment & Design",
+    category: "field_force",
+    oneLiner:
+      "Carving the country into field territories by assembling small geographic 'bricks' (ZIPs, postal sectors) into balanced units — equalizing workload and potential, minimizing travel, and limiting disruption to existing relationships when realigning.",
+    whenToUse:
+      "Any sizing or structure change cascades into a realignment. Territory design is where the abstract model meets the map, and where the human cost (disrupted relationships, moved accounts, unhappy reps) becomes real and has to be managed.",
+    vocabulary: [
+      "territory alignment",
+      "alignment",
+      "realignment",
+      "bricks",
+      "brick-level data",
+      "workload index",
+      "potential index",
+      "balance",
+      "equity",
+      "disruption",
+      "windshield time",
+      "carve",
+      "geographic alignment",
+    ],
+    howToDropIn:
+      "\"Realignment is never just a math problem — every line we redraw moves an account and breaks a relationship. The model can balance workload to within 5%, but if it disrupts 40% of territories, the productivity hit in the transition quarter will swamp the theoretical gain. Optimize for balance and minimal disruption together, not balance alone.\"",
+    commonPhrasing:
+      "Field-ops planning, realignment projects. Tooling: Javelin, AlignStar, IQVIA/ZS alignment platforms, MapInfo.",
+    notes:
+      "Territories are built bottom-up from bricks so they can be balanced on two axes at once — workload (how much effort the contained customers require) and potential (how much business is there) — while minimizing windshield time (travel) and, crucially, disruption (how many relationships a realignment severs). The disruption constraint is the one analysts under-weight and field leaders never forgive: a mathematically perfect realignment that resets half the relationships in the country can cost more in the transition than it earns. The discipline maps to capacity-balancing and load-distribution problems generally; the human-disruption dimension is its distinctive constraint and the reason it's a change-management exercise, not just an optimization.",
+    source: "Zoltners & Sinha territory-alignment research; ZS Associates and IQVIA alignment practice; standard sales-operations methodology.",
+    tags: ["field_force", "commercial_operations", "pharma", "operations"],
+  },
+  {
+    name: "Targeting & Segmentation (HCP)",
+    category: "field_force",
+    oneLiner:
+      "Deciding which customers to engage and how intensely — segmenting healthcare professionals by potential (often Rx-volume deciles) and behavior/attitude, then setting target lists and frequency. The 'customer archetypes and targeting strategies' the role aligns roles to.",
+    whenToUse:
+      "Foundational to field strategy: targeting drives sizing, alignment, call planning, and increasingly channel mix. Any role redesign tied to 'customer archetypes' is a segmentation question first — you can't design roles around customers you haven't defined.",
+    vocabulary: [
+      "segmentation",
+      "targeting",
+      "HCP",
+      "healthcare professional",
+      "decile",
+      "Rx deciles",
+      "potential",
+      "adoption ladder",
+      "attitudinal segmentation",
+      "behavioral segmentation",
+      "microsegmentation",
+      "customer archetype",
+      "target list",
+      "no-see / low-access",
+    ],
+    howToDropIn:
+      "\"Deciles tell us potential — who writes the most scripts — but not receptivity or channel preference. A high-decile, low-access, digitally-native specialist is a completely different archetype than a high-decile, high-access traditionalist, and they should be served by different roles and channels. Targeting on volume alone designs roles for a customer that no longer exists.\"",
+    commonPhrasing:
+      "Brand planning, field-strategy reviews, omnichannel planning. \"What's the decile cut?\" and \"what archetype is this?\" are the operative questions.",
+    notes:
+      "Classic pharma segmentation is potential-based — deciles 1–10 by prescribing volume (with adoption/'adoption ladder' overlays). Modern practice layers attitudinal/behavioral segments and channel preference to build true 'archetypes,' because volume alone no longer predicts how a customer wants to be engaged (access has fallen — many HCPs are 'no-see' or low-access, shifting weight to digital). This is the retail Consumer Decision Tree and Jobs-To-Be-Done discipline applied to HCPs: define the customer empirically before designing the experience or the role. The trap is letting the available data (Rx volume) define the segmentation instead of the strategy. Pair with Orchestrated Customer Engagement (archetypes should map to channel mix) and Call Planning.",
+    source: "Standard pharma commercial practice; IQVIA prescriber data and segmentation methodology; ZS Associates customer-engagement frameworks.",
+    tags: ["field_force", "commercial_operations", "pharma", "segmentation"],
+  },
+  {
+    name: "Call Planning: Reach, Frequency & Share of Voice",
+    category: "field_force",
+    oneLiner:
+      "How often each target gets engaged. Reach is the share of targets you touch; frequency is how many times each; share of voice (SOV) is your contacts as a fraction of all promotional contacts the customer receives. The dials that turn a target list into an executable plan.",
+    whenToUse:
+      "Setting the field workload that drives sizing, and the input the call plan operationalizes. Reach/frequency/SOV is also the bridge to omnichannel — modern planning sets these across channels, not just face-to-face details.",
+    vocabulary: [
+      "call plan",
+      "reach",
+      "frequency",
+      "share of voice",
+      "SOV",
+      "ideal call plan",
+      "optimal frequency",
+      "details",
+      "detail",
+      "coverage",
+      "signal",
+      "promotional response",
+      "next best action",
+    ],
+    howToDropIn:
+      "\"The ideal call plan says decile 8–10 targets need 12 contacts a year at 35% share of voice to move share. We physically can't field that with face-to-face alone post-access-decline — which is exactly why the role has to be reconceived as orchestrating reach across rep, email, and digital, not just maximizing details.\"",
+    commonPhrasing:
+      "Brand planning, field execution reviews, omnichannel planning. \"What's the ideal call plan?\" and \"are we hitting reach and frequency?\" are standing questions.",
+    notes:
+      "The 'ideal call plan' is the modeled prescription (which segments, how many contacts, what mix); execution always falls short of it, and the gap is a managed metric. Share of voice is the competitive lens — promotional response often depends on your contacts relative to competitors', not just your absolute frequency. The decisive modern shift, and the heart of this JD: declining face-to-face access means reach and frequency increasingly have to be delivered across channels (rep + email + web + virtual), so 'call planning' is becoming 'engagement planning' and the role's center of gravity moves from maximizing details to orchestrating a multi-channel signal. This is where Call Planning hands off to Next Best Action and Orchestrated Customer Engagement.",
+    source: "Pharma promotional-response and call-planning literature; ZS/IQVIA reach-frequency-SOV modeling; Zoltners et al.",
+    tags: ["field_force", "commercial_operations", "pharma", "engagement"],
+  },
+  {
+    name: "Key Account Management & Account Team Models",
+    category: "field_force",
+    oneLiner:
+      "Organizing around large, complex customers (health systems, IDNs, GPOs) with a cross-functional account team — rep, key account manager, market access, medical (MSL) — coordinated under one account plan, rather than treating each call point as an isolated individual.",
+    whenToUse:
+      "Wherever buying has consolidated into institutions and a single prescriber decision is gated by formularies, protocols, and committees. Account-team design is the structural answer to the JD's 'account team structures and cross-functional engagement.'",
+    vocabulary: [
+      "key account management",
+      "KAM",
+      "account team",
+      "account plan",
+      "IDN",
+      "integrated delivery network",
+      "GPO",
+      "health system",
+      "market access",
+      "MSL",
+      "medical science liaison",
+      "orchestration",
+      "pod",
+      "one face / many faces",
+      "cross-functional",
+    ],
+    howToDropIn:
+      "\"At a consolidated IDN, the prescriber isn't the decision — formulary, protocol, and the P&T committee are. A lone rep detailing physicians can't move that; it takes an orchestrated account team (KAM owns the relationship, market access owns the formulary, MSL owns the clinical dialogue) working one account plan. The role-design question is who orchestrates, and what the interfaces between these roles are.\"",
+    commonPhrasing:
+      "Account-based commercial models, market-access strategy, field-leadership design. \"Who owns the account?\" and \"is medical walled off?\" are the gating questions.",
+    notes:
+      "The shift from individual-HCP selling to account-based engagement mirrors B2B's move to account-based marketing/selling — buying consolidated, so the seller must mirror the buyer's complexity. Critical compliance constraint unique to pharma/medtech: Medical (MSLs) must stay non-promotional and is firewalled from Commercial; an account team must coordinate without crossing that line, which makes 'interfaces and accountabilities' (the JD's words) a legal requirement, not just good design. The orchestration challenge is a RACI problem at its core — exactly one accountable owner per account, clear consult/inform roles across functions. Pair with RACI, Service Blueprint (front-stage account experience vs. back-stage coordination), and the Span & Layers / role-interface cards.",
+    source: "Key/strategic account management practice (Capon, 'Key Account Management and Planning'); pharma market-access and MSL operating-model literature.",
+    tags: ["field_force", "commercial_operations", "pharma", "cross_functional"],
+  },
+
+  // —— Org & role design ———————————————————————————————————————————————————
+
+  {
+    name: "Galbraith Star Model",
+    category: "org_design",
+    oneLiner:
+      "An organization-design framework holding that five elements must align to produce performance: Strategy, Structure, Processes, Rewards, and People. Structure alone is never the answer — change one point of the star and the others must follow.",
+    whenToUse:
+      "Any role or operating-model redesign. The Star Model is the discipline that stops a redesign from being a box-shuffle: it forces you to check that incentives (Rewards), capabilities (People), and workflow (Processes) move with the new Structure, or the structure will fail.",
+    vocabulary: [
+      "Star Model",
+      "Galbraith",
+      "strategy",
+      "structure",
+      "processes",
+      "rewards",
+      "people",
+      "alignment",
+      "organization design",
+      "design choices",
+      "lateral capability",
+      "fit",
+    ],
+    howToDropIn:
+      "\"We're redrawing the boxes (Structure) but leaving incentive comp (Rewards) and the capability model (People) untouched. By Galbraith, that misalignment guarantees the new roles snap back to old behavior. If we move Structure, we have to move the other four points of the star with it or we've just rearranged the org chart.\"",
+    commonPhrasing:
+      "Org-design and operating-model work, transformation programs, role-architecture projects. The canonical 'structure follows strategy, and everything follows structure' frame.",
+    notes:
+      "Galbraith's enduring contribution is that structure is one of five design variables, not the whole game — and that the hard, neglected work is the 'lateral capability' (cross-unit processes and roles) that makes a matrix actually function. This is the senior org-designer's counterweight to executives who think reorganizing = redrawing the chart. McKinsey's 7S is the better-known cousin (adds Shared Values, Systems, Style, Skills) and says the same thing: alignment across many elements, not structural fiddling. The software-org parallel is Team Topologies + Conway's Law — structure shapes outcomes, but only when processes, rewards, and capabilities are co-designed. Pair with Job Architecture (the structural layer), Capability Models (the People point), and Operating Model Design (the integrating layer).",
+    source: "Jay Galbraith, 'Designing Organizations' and the Star Model (1970s onward); cf. McKinsey 7S (Peters & Waterman).",
+    tags: ["org_design", "strategy", "transformation", "leadership"],
+  },
+  {
+    name: "Job Architecture & Role Design",
+    category: "org_design",
+    oneLiner:
+      "The structured system of job families, levels, and role profiles that defines what every role is, how roles relate, and how someone moves between them. The backbone that turns a pile of job titles into a coherent, comparable structure.",
+    whenToUse:
+      "Designing or evolving roles at scale, defining competencies and accountabilities, building career paths, and reducing the title sprawl and overlap that the JD calls out. Job architecture is the literal subject of this 'role design' position.",
+    vocabulary: [
+      "job architecture",
+      "role architecture",
+      "job family",
+      "job level",
+      "leveling",
+      "role profile",
+      "job description",
+      "accountabilities",
+      "role interfaces",
+      "grade",
+      "career framework",
+      "title taxonomy",
+      "role clarity",
+    ],
+    howToDropIn:
+      "\"The problem isn't that we have too many roles, it's that we have no architecture — overlapping titles, no consistent leveling, and undefined interfaces, so two roles both think they own the same accountability. The fix is a job architecture: defined families, consistent levels, role profiles with explicit accountabilities and clean interfaces between adjacent roles.\"",
+    commonPhrasing:
+      "P&O / HR and org-design conversations, role-redesign projects, workforce planning. \"What level is this?\" and \"where's the interface?\" are the recurring questions.",
+    notes:
+      "Job architecture does for an organization's roles what information architecture does for content — it's a taxonomy with levels (the IA parallel is exact, and worth using to position a design background into this work). The two failure modes: too rigid (a leveling grid so detailed it can't absorb new hybrid roles — fatal in a field that's blending human/digital/AI) and too loose (title sprawl, overlap, no comparability). The discipline the JD names specifically — clear accountabilities and interfaces — is RACI applied to role boundaries: exactly one role accountable for each outcome, explicit hand-offs at the seams. Pair with the Galbraith Star (architecture is the Structure point), Capability Models (what the role must be able to do), and Career Architecture (how people move through the structure).",
+    source: "HR/org-design practice (Mercer, Korn Ferry, Willis Towers Watson job-architecture methodology); Galbraith organization design.",
+    tags: ["org_design", "pharma", "leadership", "information_architecture"],
+  },
+  {
+    name: "Operating Model Design (Target Operating Model)",
+    category: "org_design",
+    oneLiner:
+      "A holistic blueprint of how an organization delivers value — its capabilities, processes, structure, people, information, and technology, designed together. The 'current state → target operating model (TOM)' is the standard transformation artifact.",
+    whenToUse:
+      "Above the level of individual roles: when the question is how the whole field organization should work as an integrated system. Operating-model design is the container role design sits inside — roles are an output of the model, not the starting point.",
+    vocabulary: [
+      "operating model",
+      "target operating model",
+      "TOM",
+      "current state",
+      "future state",
+      "capabilities",
+      "value chain",
+      "POLISM",
+      "process / org / location / information / suppliers / management",
+      "service model",
+      "ways of working",
+      "blueprint",
+    ],
+    howToDropIn:
+      "\"Before we design roles, we need the target operating model: what capabilities the field has to deliver, what processes deliver them, and only then what structure and roles those processes imply. Designing roles before the operating model is designing the furniture before the floor plan.\"",
+    commonPhrasing:
+      "Transformation programs, commercial-model redesign, consulting engagements. \"What's the TOM?\" is shorthand for the whole future-state design.",
+    notes:
+      "An operating model answers 'how do we deliver our strategy' across several layers — commonly captured as POLISM (Process, Organization, Location, Information, Suppliers, Management) or as a capability map. The senior move the JD implies is sequencing: strategy → operating model → role architecture, not jumping to org charts. The integrated-engagement-ecosystem language in this JD is operating-model thinking — human, digital, and AI as capabilities allocated across the model, with roles as the human portion. The service-design parallel is the Service Blueprint at enterprise scale; the software parallel is platform/operating-model thinking in Team Topologies. Pair with Galbraith Star (the design discipline) and Job Architecture (the role-level output).",
+    source: "Operating-model design practice (Andrew Campbell et al., 'Operating Model Canvas'); Big-Four and strategy-consulting TOM methodology.",
+    tags: ["org_design", "strategy", "transformation", "service_design"],
+  },
+  {
+    name: "Span of Control & Layers",
+    category: "org_design",
+    oneLiner:
+      "Span = how many direct reports a manager has; layers = how many levels sit between the front line and the top. The two numbers that govern cost, decision speed, and manager load — and the first thing examined in any restructure.",
+    whenToUse:
+      "Restructuring, cost-out programs, and field-leadership design (how many reps per district manager, how many layers from rep to commercial head). Span and layers translate an abstract structure into headcount, cost, and how fast decisions move.",
+    vocabulary: [
+      "span of control",
+      "span",
+      "layers",
+      "delayering",
+      "manager-to-IC ratio",
+      "reporting lines",
+      "organizational depth",
+      "supervisory ratio",
+      "flat vs. tall",
+      "player-coach",
+      "spans and layers",
+    ],
+    howToDropIn:
+      "\"Eight layers from rep to the commercial head means a customer signal takes eight hops to reach a decision-maker, and the average district manager has a span of four — too narrow, so we're paying for supervision we don't need. Widening spans and removing a layer speeds decisions and funds the digital roles we actually want to add.\"",
+    commonPhrasing:
+      "Restructuring and cost programs, org-health diagnostics, field-leadership design. \"What's the span?\" and \"how many layers?\" are the opening diagnostics.",
+    notes:
+      "The classic tension: narrow spans (few reports per manager) enable coaching but add layers, cost, and decision latency; wide spans flatten the org and speed decisions but can leave teams under-supported — and the right answer depends on work complexity and how much coaching the role genuinely needs (a nuance crude 'delayering' programs ignore). In field organizations the rep-to-manager ratio is also a coaching-quality decision, not just a cost one. Span/layers analysis is the quantitative complement to the Galbraith Structure point and connects to sales-force Sizing & Structure (manager headcount falls out of span assumptions). The trap is treating it as a pure cost lever; spans set too wide to coach degrade the very field effectiveness the org is paying for.",
+    source: "Organization-design practice (Bain, McKinsey 'spans and layers' diagnostics); classic management theory (Graicunas, Urwick) updated for knowledge work.",
+    tags: ["org_design", "leadership", "operations", "transformation"],
+  },
+  {
+    name: "Capability & Competency Models",
+    category: "org_design",
+    oneLiner:
+      "A capability model defines what an organization must be able to do; a competency model defines what skills and behaviors a person needs to do a role. The JD's explicit boundary — role architecture (the structure) vs. capability building (growing the people) — runs right between them.",
+    whenToUse:
+      "Defining role requirements, building development and learning programs, workforce planning, and drawing the clean line between 'designing the role' and 'building the talent for it' that the JD calls out as a shared-ownership seam.",
+    vocabulary: [
+      "capability model",
+      "organizational capability",
+      "competency model",
+      "competency framework",
+      "skills taxonomy",
+      "proficiency level",
+      "behavioral competency",
+      "functional competency",
+      "capability building",
+      "skills gap",
+      "skills-based organization",
+      "role requirements",
+    ],
+    howToDropIn:
+      "\"Role architecture says what the role is and is accountable for; the capability model says what the organization must be able to do; the competency model says what a person needs to do the role well. I own the first; talent development owns building the third. The clean interface between us is the role profile — I define the required competencies, they build the programs that grow them.\"",
+    commonPhrasing:
+      "P&O / talent and org-design conversations, capability-building programs, workforce planning. \"Is that a role question or a capability question?\" is the boundary-setting move.",
+    notes:
+      "Keeping these distinct is what the JD means by 'establish clear boundaries between role architecture and capability building, enabling shared ownership.' Conflate them and you get role profiles that are really training wish-lists, or development programs untethered from real role demands. Organizational capability (a firm-level 'can we do X') is a different altitude than individual competency (a person-level 'can they do Y'); a role-designer works at the capability altitude and hands competency requirements to talent development. The contemporary direction is the 'skills-based organization' — defining work and mobility by skills rather than fixed jobs, which fits the JD's hybrid human/digital/AI roles especially well. Pair with Job Architecture (where competencies attach to role profiles) and Career Architecture (how proficiency growth maps to progression).",
+    source: "HR/org-design practice (Korn Ferry, Mercer competency frameworks; Ulrich on organizational capability; Deloitte skills-based-organization research).",
+    tags: ["org_design", "talent", "leadership", "pharma"],
+  },
+  {
+    name: "Career Architecture & Talent Pathways",
+    category: "org_design",
+    oneLiner:
+      "The designed routes people travel through an organization — promotion ladders, lateral moves, and the dual-ladder choice between management and individual-contributor tracks. The 'talent pathways, development, and mobility' the role is asked to articulate.",
+    whenToUse:
+      "Designing how people grow and move through the role architecture, building retention and succession into the structure, and ensuring new/hybrid roles have a future, not a dead end. Career architecture is what makes a job architecture livable.",
+    vocabulary: [
+      "career architecture",
+      "career path",
+      "talent pathway",
+      "dual ladder",
+      "IC track",
+      "management track",
+      "career lattice",
+      "mobility",
+      "lateral move",
+      "succession",
+      "talent marketplace",
+      "progression",
+      "career framework",
+    ],
+    howToDropIn:
+      "\"If the new digital-engagement role has no path forward — no next level, no lateral into field leadership — we'll design a role nobody ambitious will take. Career architecture has to be designed alongside the role: a dual ladder so deep specialists can advance without managing, and lattice moves between the human and digital roles, not just a single ladder up.\"",
+    commonPhrasing:
+      "P&O / talent and org-design conversations, retention and succession planning. \"What's the path out of this role?\" is the sustainability question.",
+    notes:
+      "Career architecture sits on top of job architecture — the levels define the rungs; the pathways define the routes between them. The dual ladder (parallel IC and management tracks) is the classic device for retaining deep experts who shouldn't be forced into management to advance — increasingly relevant as fields create specialist digital/analytics roles. The modern frame is the career 'lattice' (moves sideways and diagonally, not just up) and the 'talent marketplace' (internal mobility matched by skills). The JD's emphasis on 'mobility and long-term sustainability' is exactly this: a role design that doesn't account for where people go next is not sustainable. Pair with Job Architecture (the rungs) and Capability Models (the proficiency that gates progression).",
+    source: "HR/org-design practice (career-architecture and dual-ladder literature; Deloitte talent-marketplace and career-lattice research; Cathy Benko, 'The Corporate Lattice').",
+    tags: ["org_design", "talent", "leadership"],
+  },
+
+  // —— Modern engagement & AI ——————————————————————————————————————————————
+
+  {
+    name: "Orchestrated Customer Engagement (Omnichannel)",
+    category: "commercial_engagement",
+    oneLiner:
+      "Coordinating all the ways an organization engages a customer — field reps, email, web, virtual, conferences, third parties — into one intentional sequence tuned to that customer, rather than each channel acting on its own. The 'modern engagement model' this role designs around.",
+    whenToUse:
+      "Designing how field roles fit a multi-channel world where face-to-face access has fallen and customers expect to engage on their own terms. Orchestration is the engagement layer that role design must now serve — roles are channels in a larger mix.",
+    vocabulary: [
+      "omnichannel",
+      "orchestration",
+      "customer engagement",
+      "channel mix",
+      "engagement model",
+      "modular content",
+      "rep-triggered email",
+      "HCP engagement",
+      "MLR",
+      "medical-legal-regulatory",
+      "journey orchestration",
+      "multichannel",
+      "content factory",
+    ],
+    howToDropIn:
+      "\"Multichannel is 'we have a rep and an email program and a website.' Omnichannel orchestration is 'the rep's visit triggers the right follow-up email, the website adapts to what the rep discussed, and the next best channel is chosen per customer.' Role design has to reflect that — the rep is one instrument in an orchestrated sequence, not a soloist, and someone has to own the orchestration.\"",
+    commonPhrasing:
+      "Commercial-model and engagement-strategy conversations, omnichannel transformation programs. \"Multichannel or truly orchestrated?\" is the maturity question.",
+    notes:
+      "The distinction that matters: multichannel = several channels running in parallel; omnichannel = channels orchestrated into one coherent, customer-chosen experience. The pharma-specific friction is MLR (medical-legal-regulatory) review — every piece of content must clear compliance, which is why 'modular content' (pre-approved building blocks) and content factories exist. This is the customer_journey / NN/g Journey-Management discipline applied to commercial pharma, and it's the direct driver of why field roles are being redesigned: orchestration changes what a rep is for. Pair with Next Best Action (the decision engine that powers orchestration), Targeting & Segmentation (archetypes drive channel mix), and Call Planning (reach/frequency now spans channels).",
+    source: "Pharma omnichannel/customer-engagement practice (Veeva, IQVIA, ZS orchestration frameworks); broader omnichannel and journey-orchestration literature.",
+    tags: ["commercial_engagement", "pharma", "omnichannel", "engagement"],
+  },
+  {
+    name: "Next Best Action (NBA)",
+    category: "commercial_engagement",
+    oneLiner:
+      "An AI/analytics-driven recommendation system that tells a rep (or an automated channel) the single most valuable thing to do with a given customer next — which customer, which channel, which message — turning a static call plan into a dynamic, data-informed suggestion stream.",
+    whenToUse:
+      "Designing how AI augments rather than replaces field roles. NBA is the concrete form of the JD's 'AI-enabled solutions' — it reshapes the rep role from planning their own week to executing intelligently-prioritized, system-suggested actions.",
+    vocabulary: [
+      "next best action",
+      "NBA",
+      "next best engagement",
+      "suggestions",
+      "propensity model",
+      "recommendation engine",
+      "rep-facing AI",
+      "trigger",
+      "signal",
+      "machine learning",
+      "Veeva",
+      "Salesforce",
+      "human-in-the-loop",
+      "decision engine",
+    ],
+    howToDropIn:
+      "\"NBA doesn't replace the rep's judgment — it does the prioritization the rep used to do by gut, surfacing 'this account, this channel, this message, now' from signals no human could track. The role-design implication is real: if the system plans the week, the rep's value shifts to the quality of the human interaction and the judgment to override the model. We should design the role around being a good human-in-the-loop, not a good list-worker.\"",
+    commonPhrasing:
+      "Omnichannel and AI-transformation conversations, CRM strategy. Embedded in Veeva and Salesforce; \"are we running NBA / suggestions?\" is the adoption question.",
+    notes:
+      "NBA sits on top of the CRM (Veeva CRM dominates pharma; Salesforce broadly) and ingests signals — prescribing changes, web behavior, email engagement, rep notes — to rank actions per customer. The honest framing for role design: NBA is augmentation, not automation of the whole role; its failure mode is reps ignoring low-quality suggestions ('alert fatigue') or blindly following the model and losing judgment. The human-in-the-loop design choice — what the system decides vs. what the human decides vs. overrides — is exactly the role-design work this JD describes. The product analog is recommendation systems and the eCommerce Next-Best-Action / personalization engines; same ML machinery, regulated context. Pair with Orchestrated Customer Engagement (NBA is its decision engine) and the Human-Digital-AI Role Blend.",
+    source: "Pharma commercial-AI practice (Veeva Suggestions/Vault, Salesforce/Aktana NBA; ZS and IQVIA NBA frameworks); CRM and recommendation-system literature.",
+    tags: ["commercial_engagement", "pharma", "ai", "engagement"],
+  },
+  {
+    name: "Human–Digital–AI Role Blend (Augmentation vs. Automation)",
+    category: "commercial_engagement",
+    oneLiner:
+      "The discipline of decomposing a role into tasks and deciding which stay human, which become digital self-serve, and which get automated or AI-assisted — then reassembling a coherent hybrid role. The core craft behind 'reimagining field roles as part of an integrated ecosystem.'",
+    whenToUse:
+      "The defining task of this position: designing roles that 'thoughtfully blend human expertise with intelligence and automation.' Use it whenever a role is being reconceived around new digital and AI capabilities rather than just tweaked.",
+    vocabulary: [
+      "augmentation",
+      "automation",
+      "task decomposition",
+      "human-in-the-loop",
+      "hybrid role",
+      "human + machine",
+      "job redesign",
+      "task-based analysis",
+      "self-serve",
+      "deflection",
+      "complementarity",
+      "integrated ecosystem",
+    ],
+    howToDropIn:
+      "\"Don't ask 'will AI replace the rep' — decompose the role into tasks and ask of each: keep human (high-judgment relationship work), shift to digital self-serve (routine information the customer can pull), or automate/AI-assist (prioritization, admin, content assembly). Then reassemble what's left into a coherent role with a real purpose. That's role design for an integrated ecosystem, not headcount math.\"",
+    commonPhrasing:
+      "Future-of-work, role-redesign, and AI-transformation conversations. \"What's human, what's digital, what's automated?\" is the decomposition question.",
+    notes:
+      "The unit of analysis is the task, not the job — automation and augmentation hit specific tasks, and roles are reassembled from what remains plus new oversight tasks (this is the durable finding from future-of-work research: jobs are bundles of tasks, and AI redistributes tasks rather than wholesale eliminating jobs). The design principle is complementarity — pair human judgment with machine scale rather than substituting one for the other. The risk to design against is a 'hollowed-out' role where automation removes the satisfying, skill-building work and leaves only exception-handling, which kills engagement and the talent pathway. This is Jobs-To-Be-Done and service-blueprint thinking applied to role design (what job is each task doing; front-stage human vs. back-stage automated). Pair with Next Best Action (a concrete augmentation), Capability Models (the new hybrid competencies), and Career Architecture (hybrid roles need real paths).",
+    source: "Future-of-work and job-redesign research (Daugherty & Wilson, 'Human + Machine'; Autor on task-based labor analysis; Deloitte/MIT on augmentation vs. automation).",
+    tags: ["commercial_engagement", "ai", "org_design", "transformation"],
+  },
+
+  // —— Transformation ——————————————————————————————————————————————————————
+
+  {
+    name: "Operating-Model & Field Transformation",
+    category: "change_management",
+    oneLiner:
+      "The disciplined execution of a large-scale shift from a current operating model to a target one — sequencing the structural, process, capability, and behavioral changes so the organization actually lands the new model rather than reverting to the old.",
+    whenToUse:
+      "When role redesign is part of a broader change program (the JD's 'large-scale change programs' and 'transformation initiatives'). Transformation is the delivery discipline that turns a target operating model and new role architecture into adopted reality.",
+    vocabulary: [
+      "transformation",
+      "operating-model transformation",
+      "change management",
+      "current state",
+      "future state",
+      "transition state",
+      "adoption",
+      "ways of working",
+      "change impact assessment",
+      "stakeholder alignment",
+      "sustainability",
+      "reversion",
+      "transformation office",
+    ],
+    howToDropIn:
+      "\"We have a target operating model and a new role architecture; the risk now is reversion. Transformation is a sequencing problem — change impact by stakeholder group, the order in which structure, incentives, and capabilities move, and a transition state nobody falls through. A redesign that isn't sequenced and reinforced reverts to the old model within a year.\"",
+    commonPhrasing:
+      "Transformation programs, change-leadership conversations, role/operating-model rollouts. \"How do we make it stick?\" is the sustainability question.",
+    notes:
+      "Transformation is where org design meets change management — the design is necessary but not sufficient; adoption and reinforcement decide whether it sticks. Builds directly on Kotter 8-Step (urgency, coalition, short-term wins, anchoring — the sequence that prevents reversion) and on the Galbraith Star (you must move all five points together or the unmoved ones drag the org back). The most common failure is declaring victory at go-live — the operating-model and role changes are announced, but incentives, capabilities, and behaviors never follow, so the org quietly reverts (the same trap Benefits Realization Management names for programs). For this JD specifically: a beautiful role architecture that isn't transformed into adopted practice is a deck, not a change. Pair with Kotter 8-Step, Galbraith Star, Operating Model Design, and Benefits Realization Management.",
+    source: "Change-management and transformation practice (Kotter, 'Leading Change'; McKinsey/BCG transformation methodology); operating-model transition literature.",
+    tags: ["change_management", "transformation", "org_design", "leadership"],
+  },
 ];
