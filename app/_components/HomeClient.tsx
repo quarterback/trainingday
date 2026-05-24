@@ -165,6 +165,12 @@ export default function HomeClient({ frameworks, stories, translations, books }:
             <h1 className="text-lg font-semibold">Training Day</h1>
             <div className="flex items-center gap-2">
               <Link
+                href="/public-mechanics"
+                className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100"
+              >
+                Public Mechanics
+              </Link>
+              <Link
                 href="/quiz"
                 className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100"
               >
