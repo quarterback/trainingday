@@ -2610,4 +2610,353 @@ export const frameworks: Framework[] = [
     source: "Change-management and transformation practice (Kotter, 'Leading Change'; McKinsey/BCG transformation methodology); operating-model transition literature.",
     tags: ["change_management", "transformation", "org_design", "leadership"],
   },
+
+  // —— Academic register (code-switching) ——————————————————————————————————
+
+  {
+    name: "Problematizing (\"Troubling\" a Claim)",
+    category: "academic_register",
+    oneLiner:
+      "The academic opening move: instead of answering a question, you first complicate it — show that the obvious framing hides an assumption, a tension, or a flattened distinction. Complication before proposal is how the room knows you've actually thought.",
+    whenToUse:
+      "The tell: you're in a room (job talk, seminar, scholarly interview, policy-academic panel) where arriving too fast at an answer reads as naive. Deploy when a question is posed as if it's settled and the credible move is to reopen it.",
+    vocabulary: [
+      "I want to trouble that",
+      "complicate",
+      "this is more complicated than",
+      "the assumption underneath",
+      "we should be careful about",
+      "that framing presupposes",
+      "it's worth unsettling",
+      "tension",
+    ],
+    howToDropIn:
+      "\"Before I answer, I want to trouble the framing a little — the question assumes X and Y are separable, and I think the interesting work is in noticing that they're not. Once we hold them together, the problem looks different.\"",
+    commonPhrasing:
+      "Seminars, job talks, qualifying exams, scholarly Q&A, academic-adjacent policy panels.",
+    notes:
+      "Floor (minimum to be credible): name one buried assumption before you proceed — that single move signals you don't take framings at face value. Ceiling (where it tips into cosplay): problematizing *everything* and never landing. The register rewards complication followed by a position, not complication as evasion; a room full of academics can tell the difference between troubling-toward-insight and troubling-to-avoid-commitment, and the second reads as a grad student stalling. The legibility guardrail: trouble once, then say what you actually think. Pairs with Naming the Stakes (complication only earns attention if you then say why it matters) and the design-research instinct of reframing the problem before solving it (How Might We, Double Diamond's first diamond).",
+    source: "Academic rhetorical convention; cf. critical-theory and qualitative-research register; Mats Alvesson & Jörgen Sandberg, 'Generating Research Questions Through Problematization' (2011).",
+    tags: ["academic_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Positioning in the Conversation (They Say / I Say)",
+    category: "academic_register",
+    oneLiner:
+      "Academic credibility comes from locating your claim relative to an existing conversation — what others have argued, and where you build on, extend, or depart from them. You're not just right; you're right *in relation to* a body of thought.",
+    whenToUse:
+      "The tell: a room that treats knowledge as cumulative and conversational, where an unsituated opinion (however good) reads as not knowing the field. Deploy whenever you make a substantive claim and want it to land as scholarship rather than assertion.",
+    vocabulary: [
+      "building on",
+      "departing from",
+      "the literature tends to",
+      "this is undertheorized",
+      "X gives us a vocabulary for",
+      "where I part company with",
+      "a conversation between",
+      "this extends rather than rejects",
+    ],
+    howToDropIn:
+      "\"The dominant account treats this as a coordination problem, and that's been productive — but it's undertheorized on the question of power. I'd build on that work while shifting the unit of analysis, which is where I part company with it.\"",
+    commonPhrasing:
+      "Literature reviews, job talks, scholarly interviews, grant framing, discussant remarks.",
+    notes:
+      "Floor: situate your claim against *one* identifiable position ('the standard view is X; I'm arguing Y'). That alone converts an opinion into a contribution. Ceiling: name-dropping a wall of authors to perform erudition — the register rewards *one well-placed* relation over six citations, and a string of names without a clear 'and here's where I stand' reads as anxiety, not mastery. The legibility guardrail: cite to position yourself, not to prove you've read. This is Graff & Birkenstein's 'They Say / I Say' — the single most transferable academic move — and it maps directly onto your existing translation-card logic (yours vs. theirs) and onto Wardley/positioning thinking from the strategy cards.",
+    source: "Gerald Graff & Cathy Birkenstein, 'They Say / I Say' (2006); Swales' CARS model of academic introductions (1990).",
+    tags: ["academic_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Calibrated Hedging (Epistemic Humility)",
+    category: "academic_register",
+    oneLiner:
+      "In academic register, calibrated uncertainty is a competence signal, not a weakness. Marking how confident you are — and where the claim might fail — reads as intellectual honesty; over-claiming reads as not understanding the limits of your evidence.",
+    whenToUse:
+      "The tell: a room that prizes precision about what is and isn't known. Deploy when making claims that outrun your evidence, or when a confident-sounding overstatement would actually cost you credibility with people trained to look for the caveat.",
+    vocabulary: [
+      "it may be that",
+      "one reading is",
+      "tentatively",
+      "the evidence is suggestive rather than conclusive",
+      "I'd want to be careful claiming",
+      "provisionally",
+      "this holds under certain conditions",
+      "I could be wrong about",
+    ],
+    howToDropIn:
+      "\"Tentatively — and I'd want better evidence before I leaned on this — one reading is that the effect is driven by selection, not by the intervention. I hold that provisionally; it's the hypothesis I'd test first, not a conclusion.\"",
+    commonPhrasing:
+      "Research presentations, peer review, scholarly Q&A, methods discussions.",
+    notes:
+      "Floor: attach a confidence marker to your strongest claim ('provisionally,' 'the evidence is suggestive') — it signals you know the difference between a finding and a hunch. Ceiling: hedging *everything* until you've said nothing falsifiable — that reads as not having a position, which is its own failure in this room. The skill is *differential* hedging: state what you're sure of plainly, mark what you're not. This is exactly the opposite of the business register's answer-first confidence, which is why code-switching between the two matters — the same hedge that signals rigor in a seminar signals weakness in a boardroom. Pairs with Conceptual Precision and contrasts deliberately with Answer-First (BLUF).",
+    source: "Academic-writing register; hedging as a studied feature of scholarly discourse (Ken Hyland, 'Hedging in Scientific Research Articles,' 1998).",
+    tags: ["academic_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Thinking-With & Generative Tension",
+    category: "academic_register",
+    oneLiner:
+      "Treating thinkers and frameworks as interlocutors to think *with* rather than tools to apply, and treating contradictions as *productive* rather than as problems to resolve. The move that signals you read for generativity, not just for answers.",
+    whenToUse:
+      "The tell: humanities and interpretive-social-science rooms where the goal of a conversation is richer understanding, not a decision. Deploy when two ideas conflict and the credible move is to sit in the tension rather than collapse it.",
+    vocabulary: [
+      "to think with",
+      "reading X alongside Y",
+      "a productive tension",
+      "generative",
+      "this opens up",
+      "holding these together",
+      "what this lets us see",
+      "in dialogue with",
+    ],
+    howToDropIn:
+      "\"I find it generative to read Arendt alongside Scott here — not to reconcile them, but because the tension between them is exactly what the case surfaces. Holding both lets us see something neither sees alone.\"",
+    commonPhrasing:
+      "Theory seminars, humanities job talks, interdisciplinary panels, book discussions.",
+    notes:
+      "Floor: frame at least one relationship as 'thinking with' rather than 'applying' — it signals you treat ideas as live, not as a toolkit. Ceiling: 'productive tension' as a reflex that lets you avoid ever saying which view you find more persuasive — at C3, you can dwell in the tension *and* indicate your lean. This register is genuinely foreign to business rooms (where unresolved tension reads as indecision), so it's a pure code-switch: deploy it where ambiguity is valued, drop it entirely where decisions are. The honest caution: this is the most cosplay-prone academic move, because the phrasing is easy to mimic without the reading behind it — only use thinkers you can actually be questioned on.",
+    source: "Interpretive/humanities scholarly register; 'thinking with' as a recognized methodological idiom (cf. Stengers, Haraway, Despret in science-and-technology studies).",
+    tags: ["academic_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Naming the Stakes",
+    category: "academic_register",
+    oneLiner:
+      "Making explicit why an analytic distinction *matters* — what follows from it, what it changes, what's lost if we get it wrong. The move that rescues academic precision from looking like hair-splitting.",
+    whenToUse:
+      "The tell: any room where you've drawn a fine distinction and someone might reasonably think 'so what?' Deploy right after a conceptual move, to convert apparent pedantry into demonstrated relevance.",
+    vocabulary: [
+      "what's at stake here is",
+      "the stakes of this distinction",
+      "this matters because",
+      "what follows from it",
+      "if we get this wrong",
+      "the consequence is",
+      "this isn't merely terminological",
+      "the payoff is",
+    ],
+    howToDropIn:
+      "\"This might sound like a terminological quibble, but what's at stake is real: if we treat access as the same as use, we'll design for the wrong failure — and the people it fails are precisely the ones the program exists to serve.\"",
+    commonPhrasing:
+      "Job talks, seminars, policy-academic writing, dissertation defenses.",
+    notes:
+      "Floor: after any fine distinction, say one sentence on why it matters — that single move is the difference between 'rigorous' and 'pedantic' in the room's perception. Ceiling: inflating the stakes of every minor point until the genuinely high-stakes ones lose their force; reserve 'what's at stake' for distinctions that actually carry consequence. This is the academic sibling of the business register's 'so-what' — same underlying demand (earn the audience's attention by connecting to consequence), different idiom. Knowing they're the same move in two dialects is itself a code-switching skill. Pairs with Problematizing (complication only earns its keep if you then name the stakes) and Mark Moore's public-value framing.",
+    source: "Academic and policy rhetorical convention; the 'so what / who cares' test (Booth, Colomb & Williams, 'The Craft of Research').",
+    tags: ["academic_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Conceptual Precision (Distinguishing Senses)",
+    category: "academic_register",
+    oneLiner:
+      "Explicitly fixing the sense in which you're using a contested word, and separating senses others run together. The move that signals you treat language as a precision instrument, not decoration.",
+    whenToUse:
+      "The tell: rooms where a word is doing too much work and the conversation is quietly equivocating on it. Deploy when 'we're using the same word for two different things' is the actual source of a disagreement.",
+    vocabulary: [
+      "in a specific sense",
+      "I'm using X to mean",
+      "there are two senses of",
+      "we should distinguish",
+      "as opposed to the looser sense",
+      "let me be precise about",
+      "the term is doing two jobs here",
+      "on the strong reading vs. the weak reading",
+    ],
+    howToDropIn:
+      "\"Let me be precise about 'engagement,' because it's doing two jobs in this conversation — there's engagement as reach (did we make contact) and engagement as depth (did it change anything). The disagreement dissolves once we separate them.\"",
+    commonPhrasing:
+      "Theory and methods discussions, definitional debates, scholarly editing, interdisciplinary translation.",
+    notes:
+      "Floor: define one key term in the sense you mean before building on it — pre-empts the equivocation that derails academic conversations. Ceiling: defining terms nobody was confused about, which stalls momentum and reads as performance; reserve the move for words actually carrying ambiguity in *this* conversation. This is information architecture applied to language — the same taxonomy discipline as your IA/card-sorting cards, turned on concepts. It also travels surprisingly well into business and technical rooms (where 'let's define what we mean by X' is welcomed), making it one of the more portable academic moves. Pairs with Calibrated Hedging and the Job Architecture / taxonomy cards.",
+    source: "Analytic-philosophy and scholarly register; conceptual analysis and the practice of stipulative definition.",
+    tags: ["academic_register", "communication", "code_switching", "rhetoric"],
+  },
+
+  // —— Business-academic register (code-switching) ——————————————————————————
+
+  {
+    name: "Answer-First (The So-What / BLUF)",
+    category: "business_register",
+    oneLiner:
+      "Lead with the conclusion, then support it — the inverse of the academic build-up. In executive register, making the audience wait for your point reads as not having one; the recommendation comes first, the reasoning follows.",
+    whenToUse:
+      "The tell: time-pressured, decision-oriented rooms (exec reviews, consulting cases, business interviews) where 'what's the so-what?' is the implicit standing question. Deploy whenever you'd otherwise instinctively narrate your reasoning before your conclusion.",
+    vocabulary: [
+      "the so-what is",
+      "bottom line up front",
+      "BLUF",
+      "headline",
+      "my recommendation is",
+      "net-net",
+      "to cut to it",
+      "the answer is X; here's why",
+    ],
+    howToDropIn:
+      "\"Bottom line up front: I'd consolidate the two roles and reinvest the savings in a digital role — and I'll give you the three reasons. If you only take one, it's the second.\"",
+    commonPhrasing:
+      "Executive briefings, consulting case interviews, board readouts, leadership Q&A.",
+    notes:
+      "Floor: state your conclusion in the first sentence, before the reasoning. For someone trained in academic build-up this feels rude or premature — it isn't; in this room it's respect for the listener's time. Ceiling: answer-first with no genuine reasoning behind it reads as glib, and senior people probe fast — have the 'here's why' ready and be willing to update. This is the spoken form of the Pyramid Principle / SCQA already in your communication cards, and it's the *deliberate inverse* of academic Calibrated Hedging — which is the whole point: the same person should lead with the answer in a boardroom and with the complication in a seminar. Code-switching is knowing which room you're in before the first sentence.",
+    source: "Barbara Minto, 'The Pyramid Principle' (1973); military/comms 'BLUF'; consulting communication practice.",
+    tags: ["business_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "MECE & Structured Decomposition",
+    category: "business_register",
+    oneLiner:
+      "Breaking a messy problem into a small set of buckets that are Mutually Exclusive and Collectively Exhaustive — no overlaps, no gaps. The move that makes you sound structured rather than associative, which is the core competence this register screens for.",
+    whenToUse:
+      "The tell: rooms that reward structure over nuance (consulting, strategy, exec problem-solving). Deploy when a question is broad and the credible move is to impose a clean frame before diving in.",
+    vocabulary: [
+      "MECE",
+      "let me break this into",
+      "three buckets",
+      "two dimensions",
+      "two-by-two",
+      "first, second, third",
+      "let's structure this",
+      "the way I'd frame the problem",
+    ],
+    howToDropIn:
+      "\"Let me structure it. There are really three levers here — who we cover, how intensively, and through which channel — and they're largely independent. I'll take each in turn and tell you where the biggest move is.\"",
+    commonPhrasing:
+      "Case interviews, strategy workshops, exec problem-solving, whiteboard sessions.",
+    notes:
+      "Floor: announce a structure ('three things') before you enumerate, and make the buckets genuinely non-overlapping — that alone reads as 'structured thinker.' Ceiling: forcing everything into threes and two-by-twos until the structure distorts the problem; a frame that's clean but wrong is worse than honest mess, and good operators notice. The register rewards structure *that fits*, not structure for its own sake. Note the deliberate tension with the academic Problematizing move — academia rewards showing the problem resists clean decomposition; business rewards decomposing it anyway and acting. At C3 you can do both: structure for the room that wants action, complicate for the room that wants understanding. Pairs with RICE/MoSCoW (structured prioritization) and Cynefin (knowing when a problem is too complex to MECE).",
+    source: "Barbara Minto / McKinsey (MECE principle); management-consulting problem-structuring practice.",
+    tags: ["business_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Altitude Control (Zoom Out / Double-Click)",
+    category: "business_register",
+    oneLiner:
+      "Explicitly moving the conversation up to strategy or down to detail — and signaling which you're doing. Fluency in this register is partly the ability to change altitude on demand and narrate the move so the room follows.",
+    whenToUse:
+      "The tell: rooms where a senior person says 'let's zoom out' or 'can you double-click on that' and expects you to move levels cleanly. Deploy when a conversation is stuck at the wrong altitude — lost in detail, or floating in abstraction.",
+    vocabulary: [
+      "let's zoom out",
+      "at the 30,000-foot level",
+      "double-click on that",
+      "drill into",
+      "stepping back",
+      "at a higher level of abstraction",
+      "to get concrete",
+      "let me ground that in an example",
+    ],
+    howToDropIn:
+      "\"Let me zoom out for a second — strategically, this is one bet, not three. Then I'll double-click on the one that carries the most risk, because that's where the detail actually matters.\"",
+    commonPhrasing:
+      "Executive conversations, strategy reviews, consulting fieldwork, leadership interviews.",
+    notes:
+      "Floor: when you change levels, *say so* ('stepping back' / 'to get concrete') — narrating the altitude shift is what makes you easy to follow and reads as senior. Ceiling: living permanently at 30,000 feet because abstraction feels safe — executives respect the ability to drop to a real number or example on demand, and someone who can only float reads as having no operational substance. The C3 skill is the *round trip*: abstract to frame, concrete to prove, back up to recommend. This is a register where the academic instinct to stay nuanced-and-qualified can read as 'can't see the forest' — so the code-switch is being willing to make the clean high-altitude claim. Pairs with Wardley Mapping (altitude as a strategy tool) and Answer-First.",
+    source: "Executive-communication and consulting register; 'altitude' and 'double-click' as established corporate idiom.",
+    tags: ["business_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "First-Principles Framing",
+    category: "business_register",
+    oneLiner:
+      "Stripping a problem back to its irreducible fundamentals and reasoning up from there, rather than from convention or analogy. The move that signals you can think, not just benchmark — prized in strategy and tech-exec rooms.",
+    whenToUse:
+      "The tell: rooms that distrust 'because that's how it's done' and reward reasoning from the ground up (strategy, tech leadership, founder-adjacent). Deploy when the conversation is anchored on precedent and the credible move is to ask what's actually true beneath it.",
+    vocabulary: [
+      "from first principles",
+      "fundamentally",
+      "strip it back to",
+      "what's actually true here",
+      "the irreducible question",
+      "if we started from scratch",
+      "the underlying physics of this",
+      "setting aside how it's usually done",
+    ],
+    howToDropIn:
+      "\"Setting aside how field teams are usually structured — fundamentally, this is a question of who the customer needs to talk to and about what. If we reason up from that, the current role boundaries aren't obvious; they're inherited.\"",
+    commonPhrasing:
+      "Strategy sessions, tech-leadership conversations, founder and investor rooms, transformation framing.",
+    notes:
+      "Floor: name the inherited assumption and ask what's true beneath it ('this is usually done as X, but fundamentally the question is Y') — that reframe is the whole move. Ceiling: 'first principles' as a flex that dismisses hard-won domain knowledge as mere convention; the mature version respects that some conventions encode real constraints, and reasons up to *test* them, not to perform iconoclasm. Overused (especially in tech rooms) it's become slightly suspect, so deploy it for genuine reframes, not as a verbal tic. This is the same instinct as the academic Problematizing move, in a different dialect — both reopen a settled framing — which is why someone fluent in one can learn the other fast. Pairs with Cynefin and Wardley Mapping.",
+    source: "Reasoning tradition (Aristotle's 'first principles'); popularized in modern business/tech register via strategy and founder discourse.",
+    tags: ["business_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Order-of-Magnitude & Sizing",
+    category: "business_register",
+    oneLiner:
+      "Quickly attaching a rough number to a claim — sizing the prize, the cost, or the effect to the right power of ten. In business register, an approximate number beats a precise adjective; 'big' is an opinion, '~$10M' is a position.",
+    whenToUse:
+      "The tell: rooms where every qualitative claim invites 'how big?' and an inability to estimate reads as not being commercial. Deploy when you're tempted to say 'significant' or 'a lot' and could instead bound it numerically.",
+    vocabulary: [
+      "order of magnitude",
+      "directionally",
+      "back-of-the-envelope",
+      "ballpark",
+      "rough cut",
+      "size the prize",
+      "an order of magnitude bigger",
+      "call it roughly",
+      "to a first approximation",
+    ],
+    howToDropIn:
+      "\"Directionally — back-of-the-envelope — this is a low-eight-figure opportunity, not a seven-figure one. I'd want to pressure-test the assumptions, but it's an order of magnitude that justifies the investment, and that's the call we're actually making.\"",
+    commonPhrasing:
+      "Business cases, investment discussions, case interviews, exec prioritization.",
+    notes:
+      "Floor: offer a bounded estimate with an explicit confidence flag ('directionally,' 'ballpark') rather than a qualitative adjective — willingness to put a rough number down is itself the signal. Ceiling: false precision (quoting $10.4M off a napkin) reads worse than an honest range, and over-quantifying genuinely unquantifiable things (culture, trust) is its own tell. The register respects 'roughly, and here's my assumption,' not spurious decimals. This is a near-pure code-switch from academic register, where the same back-of-the-envelope confidence would read as carelessly under-evidenced — so it's a clean example of how the *same* estimate should be presented differently in two rooms. Pairs with Answer-First and the eCommerce/retail metrics cards (where sizing is the native language).",
+    source: "Consulting and finance register; Fermi-estimation / back-of-the-envelope tradition; business-case practice.",
+    tags: ["business_register", "communication", "code_switching", "rhetoric"],
+  },
+  {
+    name: "Hypothesis-Driven Framing",
+    category: "business_register",
+    oneLiner:
+      "Leading with a sharp, falsifiable claim and the test that would confirm or kill it — 'my hypothesis is X; here's how we'd know.' The move that makes you sound rigorous and action-oriented at once, which is the business register's prized combination.",
+    whenToUse:
+      "The tell: rooms that want to move fast but defensibly (consulting, product strategy, data-literate leadership). Deploy when a problem is open and the credible move is to commit to a testable position rather than gather endlessly.",
+    vocabulary: [
+      "my hypothesis is",
+      "the testable claim is",
+      "here's how we'd know",
+      "what would falsify this",
+      "let's pressure-test",
+      "if true, we'd expect to see",
+      "the data that would change my mind",
+      "leading hypothesis",
+    ],
+    howToDropIn:
+      "\"My leading hypothesis is that the access problem, not the message, is what's capping reach — and here's how we'd know: if I'm right, digital-engaged segments should convert at parity with detailed ones. If they don't, I'm wrong and we re-cut.\"",
+    commonPhrasing:
+      "Consulting workplanning, product discovery, data-driven strategy, leadership interviews.",
+    notes:
+      "Floor: state a claim and the evidence that would change your mind — committing to falsifiability is the whole signal, and it reads as confident *and* honest. Ceiling: 'hypothesis-driven' as theater, where the conclusion is foregone and the 'test' is rigged to confirm it — data-literate rooms catch this fast. The integrity of the move is the willingness to actually be wrong. This is the business-register cousin of academic Calibrated Hedging — both are honesty-about-uncertainty moves — but tuned for action: the academic marks uncertainty to be precise; the operator marks it to commit and test. Recognizing they're the same instinct in two dialects is exactly the code-switching fluency you're after. Pairs with Lean UX, CRO, Opportunity Solution Tree, and the experimentation cards.",
+    source: "Consulting (hypothesis-led problem solving, McKinsey/BCG); lean-startup and scientific-method lineage.",
+    tags: ["business_register", "communication", "code_switching", "rhetoric"],
+  },
+
+  // —— Cross-register ———————————————————————————————————————————————————————
+
+  {
+    name: "Confident Understatement (Reading the Room's Volume)",
+    category: "communication",
+    oneLiner:
+      "The cross-cutting skill behind both restrained registers: signaling confidence through calm, precise, slightly-under-stated speech rather than emphasis — and matching your 'volume' to a room that reads overstatement as insecurity.",
+    whenToUse:
+      "The tell: high-status rooms (senior academic, senior executive, boardroom, elite professional) where the people with the most authority speak the most quietly. Deploy when your instinct is to oversell, intensify, or over-explain — and the room would credit the opposite.",
+    vocabulary: [
+      "I'd gently push back",
+      "a modest claim",
+      "it's worth noting",
+      "I'd only add",
+      "one small thing",
+      "I suspect",
+      "that's probably right, though",
+      "understatement",
+      "litotes",
+    ],
+    howToDropIn:
+      "\"I'd gently push back on one thing — and it's a small point, but I think it matters. The rest I'd agree with.\" (The restraint does the work; the disagreement lands harder for being quiet.)",
+    commonPhrasing:
+      "Senior academic and executive rooms, board settings, elite professional contexts, high-trust expert dialogue.",
+    notes:
+      "This is the meta-skill your goal actually names — both the academic and business-academic registers, at their senior levels, reward *restraint*: the move is to under-state and let the substance carry, not to intensify. Floor: strip intensifiers ('very,' 'incredibly,' 'hugely') and let a plain claim stand — calm specificity reads as confidence. Ceiling: understatement so extreme it becomes evasive or falsely modest ('oh, it's nothing'), which reads as either fishing or lacking conviction; the target is quiet precision, not self-erasure. The deeper point: code-switching isn't only *which words* — it's *volume and register*. Reading how loudly a room speaks, and matching just below it, is often more legible than any vocabulary. The same content delivered at the room's volume, in the room's idiom, is what 'fluent' actually means. Pairs with every register card here, and with the whenToUseTheirs logic running through the whole translation set.",
+    source: "Rhetorical convention (litotes, understatement); status-and-language research; observed register of senior academic and executive discourse.",
+    tags: ["communication", "code_switching", "academic_register", "business_register"],
+  },
 ];
