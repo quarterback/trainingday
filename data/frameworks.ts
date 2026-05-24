@@ -34,7 +34,7 @@ export const frameworks: Framework[] = [
       "Used implicitly when execs say \"so what's the ask?\" — SCQA pre-empts that by making the ask the answer to a question you've already raised.",
     notes:
       "Comes from Barbara Minto's Pyramid Principle (McKinsey, 1970s). The Complication is where amateurs fail — they describe the situation but never name what changed. Without C, there's no Q, and the A reads as a non-sequitur.",
-    source: "Barbara Minto, The Pyramid Principle (1973).",
+    source: "Barbara Minto, The Pyramid Principle (1st ed. 1985; developed at McKinsey from the late 1960s).",
     tags: ["communication", "writing", "structure", "consulting"],
   },
   {
@@ -2795,7 +2795,7 @@ export const frameworks: Framework[] = [
       "Executive briefings, consulting case interviews, board readouts, leadership Q&A.",
     notes:
       "Floor: state your conclusion in the first sentence, before the reasoning. For someone trained in academic build-up this feels rude or premature — it isn't; in this room it's respect for the listener's time. Ceiling: answer-first with no genuine reasoning behind it reads as glib, and senior people probe fast — have the 'here's why' ready and be willing to update. This is the spoken form of the Pyramid Principle / SCQA already in your communication cards, and it's the *deliberate inverse* of academic Calibrated Hedging — which is the whole point: the same person should lead with the answer in a boardroom and with the complication in a seminar. Code-switching is knowing which room you're in before the first sentence.",
-    source: "Barbara Minto, 'The Pyramid Principle' (1973); military/comms 'BLUF'; consulting communication practice.",
+    source: "Barbara Minto, 'The Pyramid Principle' (1st ed. 1985); military 'BLUF' formalized in U.S. Army Regulation 25-50; consulting communication practice.",
     tags: ["business_register", "communication", "code_switching", "rhetoric"],
   },
   {
@@ -2821,7 +2821,7 @@ export const frameworks: Framework[] = [
       "Case interviews, strategy workshops, exec problem-solving, whiteboard sessions.",
     notes:
       "Floor: announce a structure ('three things') before you enumerate, and make the buckets genuinely non-overlapping — that alone reads as 'structured thinker.' Ceiling: forcing everything into threes and two-by-twos until the structure distorts the problem; a frame that's clean but wrong is worse than honest mess, and good operators notice. The register rewards structure *that fits*, not structure for its own sake. Note the deliberate tension with the academic Problematizing move — academia rewards showing the problem resists clean decomposition; business rewards decomposing it anyway and acting. At C3 you can do both: structure for the room that wants action, complicate for the room that wants understanding. Pairs with RICE/MoSCoW (structured prioritization) and Cynefin (knowing when a problem is too complex to MECE).",
-    source: "Barbara Minto / McKinsey (MECE principle); management-consulting problem-structuring practice.",
+    source: "Barbara Minto / McKinsey (MECE principle, coined late 1960s; Minto credits the underlying logic to Aristotle); management-consulting problem-structuring practice.",
     tags: ["business_register", "communication", "code_switching", "rhetoric"],
   },
   {
