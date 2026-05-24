@@ -2959,4 +2959,398 @@ export const frameworks: Framework[] = [
     source: "Rhetorical convention (litotes, understatement); status-and-language research; observed register of senior academic and executive discourse.",
     tags: ["communication", "code_switching", "academic_register", "business_register"],
   },
+
+  // —— Agentic delivery ————————————————————————————————————————————————————
+
+  {
+    name: "Multi-Agent SDLC Orchestration",
+    category: "agentic_delivery",
+    oneLiner:
+      "Coordinating multiple specialized AI agents — architecture, coding, QA, UX, docs — across the software lifecycle so their outputs compose into one coherent delivery instead of drifting apart.",
+    whenToUse:
+      "When AI-assisted delivery scales past a single agent doing a single task: multiple agents working in parallel or sequence on one product, where consistency across their outputs is the real risk.",
+    vocabulary: [
+      "orchestrator",
+      "worker agent",
+      "sub-agent",
+      "handoff",
+      "workflow",
+      "checkpoint",
+      "cross-agent consistency",
+      "agent role",
+      "fan-out / fan-in",
+      "pipeline",
+    ],
+    howToDropIn:
+      "\"The risk in multi-agent delivery isn't any single agent's output — it's drift between them. The orchestrator's job is to hold the shared spec and the checkpoints, so the QA agent and the coding agent are building against the same contract.\"",
+    commonPhrasing:
+      "AI-assisted delivery teams, agentic SDLC programs, consulting 'agentic delivery' offerings.",
+    notes:
+      "Anthropic's 'Building Effective Agents' draws the line between workflows (predefined paths with LLMs at specific nodes) and agents (the model directs its own steps); most production 'agentic delivery' is orchestrated workflows with agents at a few nodes, not full autonomy. The trap is over-architecting autonomy when a deterministic workflow with one agent step is cheaper and more reliable. Your Public Mechanics canon names the governance layer this needs: Agent Plumbing is the legitimacy layer between an agent's proposal and execution, and Judgment Routing decides which steps require a human. Pair with Team Topologies (agents are teams with cognitive-load boundaries) and Task Decomposition for Agents.",
+    source: "Anthropic, 'Building Effective Agents' (2024); multi-agent orchestration practice (LangGraph, AutoGen, CrewAI).",
+    tags: ["agentic_delivery", "ai", "orchestration", "sdlc"],
+  },
+  {
+    name: "Task Decomposition for Agents",
+    category: "agentic_delivery",
+    oneLiner:
+      "Breaking a business or technical requirement into structured workflows, prompts, tasks, and checkpoints sized for an agent to execute reliably — so the spec becomes the contract the agent is held to.",
+    whenToUse:
+      "The first move in any agentic delivery workstream. Agents fail on vague, oversized tasks; decomposition into checkpointed units is what makes their output verifiable at all.",
+    vocabulary: [
+      "decomposition",
+      "task graph",
+      "checkpoint",
+      "acceptance criteria",
+      "spec-as-contract",
+      "subtask",
+      "prompt",
+      "definition of done",
+      "work breakdown",
+    ],
+    howToDropIn:
+      "\"Before we hand this to agents, decompose it: each task small enough to verify, each with explicit acceptance criteria and a checkpoint. An agent given 'build the feature' fails silently; an agent given a checkpointed task graph produces output we can actually review.\"",
+    commonPhrasing:
+      "Agentic delivery planning, AI-assisted sprint planning, requirements-to-workflow translation.",
+    notes:
+      "This is User Story Mapping and Definition of Done applied to agent work — the discipline is identical, the stakes higher, because an agent won't push back on an ambiguous task the way a human teammate would. The checkpoint is where human-in-the-loop attaches. Over-decomposition burns orchestration overhead; under-decomposition produces output no one can verify. Pair with HITL Checkpoints and your Public Mechanics Responsibility to Record (each task needs an owner-of-record for its output, or the chain goes dark at the Last Documented Mile).",
+    source: "Agentic-delivery practice; builds on work-breakdown structure, User Story Mapping, and Definition of Done.",
+    tags: ["agentic_delivery", "ai", "planning", "sdlc"],
+  },
+  {
+    name: "Agent Orchestration Patterns",
+    category: "agentic_delivery",
+    oneLiner:
+      "The named structures for how multiple agents or agent calls coordinate — prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer — each trading autonomy against control.",
+    whenToUse:
+      "Designing an agentic workflow, when 'use agents' has to become a specific topology. The pattern choice determines reliability, cost, and where human review fits.",
+    vocabulary: [
+      "prompt chaining",
+      "routing",
+      "parallelization",
+      "orchestrator-workers",
+      "evaluator-optimizer",
+      "planner-executor",
+      "reflection",
+      "ReAct",
+      "supervisor",
+    ],
+    howToDropIn:
+      "\"We don't need a fully autonomous agent here — an evaluator-optimizer loop (generate, critique, revise) gets the quality with far more control. Pick the orchestration pattern for the reliability we need, not for how autonomous it sounds.\"",
+    commonPhrasing:
+      "Agent architecture reviews, agentic platform design, AI delivery design.",
+    notes:
+      "Anthropic's 'Building Effective Agents' catalogs the common ones: prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer. The senior judgment is matching pattern to problem and resisting autonomy for its own sake — the most reliable production systems are usually the least autonomous that still solve the problem. The routing pattern is the same idea as your Public Mechanics Judgment Routing, applied to agent steps rather than institutional decisions. Pair with Cynefin (genuine autonomy fits complex/novel work; deterministic workflows fit the merely complicated).",
+    source: "Anthropic, 'Building Effective Agents' (2024); orchestration frameworks (LangGraph, AutoGen, CrewAI).",
+    tags: ["agentic_delivery", "ai", "orchestration", "architecture"],
+  },
+  {
+    name: "Human-in-the-Loop (HITL) Checkpoints",
+    category: "agentic_delivery",
+    oneLiner:
+      "Designed points where a human reviews, approves, or overrides an AI or agent before it proceeds — the gate that keeps autonomy accountable and catches failures models can't catch themselves.",
+    whenToUse:
+      "Any AI-assisted workflow with consequential output. The design question is not whether to have humans in the loop but where, and what they can actually verify at each gate.",
+    vocabulary: [
+      "human-in-the-loop",
+      "human-on-the-loop",
+      "approval gate",
+      "escalation",
+      "override",
+      "autonomy level",
+      "review checkpoint",
+      "fail-safe",
+      "oversight",
+    ],
+    howToDropIn:
+      "\"Human-in-the-loop only works if the human can actually verify at the gate. A checkpoint where the reviewer rubber-stamps because they can't see what to check is theater. Put the gate where judgment is possible and the stakes warrant it — not on every step.\"",
+    commonPhrasing:
+      "Responsible-AI reviews, agentic delivery governance, release-readiness gates.",
+    notes:
+      "The failure modes are symmetric: too few gates (unaccountable autonomy) and too many low-value gates (alert fatigue, rubber-stamping). Distinguish human-in-the-loop (approves before action) from human-on-the-loop (monitors and can intervene). This is the exact territory of your Public Mechanics canon — Judgment Routing decides which actions need a human, Decision Receipts make the gate auditable, and Mirror Signaling is the principle that a reviewer must be able to see the weights to review them. Pair with Agent Output Validation.",
+    source: "Responsible-AI and human-factors practice; NIST AI RMF human-oversight controls; Public Mechanics (Judgment Routing, Decision Receipts).",
+    tags: ["agentic_delivery", "ai", "governance", "hitl"],
+  },
+  {
+    name: "Agent Output Validation (Trust but Verify)",
+    category: "agentic_delivery",
+    oneLiner:
+      "The discipline of confirming what an agent actually produced — code, tests, docs — against the spec, rather than trusting its self-report that the task is done.",
+    whenToUse:
+      "Every time an agent reports completion. Agents describe what they intended to do, which is not the same as what they did; validation is the gap-closer.",
+    vocabulary: [
+      "trust but verify",
+      "output validation",
+      "code review",
+      "diff review",
+      "eval gate",
+      "self-report gap",
+      "regression check",
+      "acceptance test",
+      "ground truth",
+    ],
+    howToDropIn:
+      "\"An agent's 'done' is a claim, not a fact. Read the diff, run the tests, check the output against the acceptance criteria — the validation is the work. The teams that get burned are the ones that trusted the summary instead of checking the change.\"",
+    commonPhrasing:
+      "AI-assisted code review, agentic QA, release readiness, technical review.",
+    notes:
+      "This is ordinary code/design/test review with one twist: the agent is a fluent, confident author whose mistakes don't look like human mistakes — plausible-but-wrong code, silent scope drift, fabricated test coverage. The reviewer's prior should be lower, not higher, because fluency masks error. Automated eval gates (see LLM Evaluation) scale this; human review catches what evals miss. Connects to your Public Mechanics Last Documented Mile — a task marked done without verified output is a record that lies. Pair with LLM Evaluation and HITL Checkpoints.",
+    source: "Code-review and QA practice applied to AI output; trust-calibration research.",
+    tags: ["agentic_delivery", "ai", "quality", "review"],
+  },
+  {
+    name: "Delivery Governance for AI-Assisted Workflows",
+    category: "agentic_delivery",
+    oneLiner:
+      "The standards, audit trail, and accountability structure that make AI-assisted delivery legible and controllable — who authorized what, how quality is enforced, and how a decision can be reconstructed after the fact.",
+    whenToUse:
+      "When AI-assisted delivery moves from experiment to production or client work, and 'the agent did it' is not an acceptable answer to an auditor, a regulator, or a client.",
+    vocabulary: [
+      "delivery governance",
+      "audit trail",
+      "accountability",
+      "decision record",
+      "standards enforcement",
+      "compliance",
+      "traceability",
+      "sign-off",
+      "provenance",
+    ],
+    howToDropIn:
+      "\"Governance in AI-assisted delivery is the answer to 'who's accountable when the agent ships a defect.' If we can't reconstruct what was authorized, on what basis, and who signed off, we don't have delivery — we have deniability.\"",
+    commonPhrasing:
+      "Consulting delivery governance, regulated-industry AI delivery, government/GPS AI programs.",
+    notes:
+      "Public-sector and regulated clients need this hardest, because the audit and accountability demands are real and contractual. Your Public Mechanics canon is the most developed vocabulary for exactly this problem: Decision Receipts (the auditable record), Authority Tokens (what authorized the action), Responsibility to Record (the obligation to log), and Delivery Forensics (reconstructing why it failed). Bringing that vocabulary into a Deloitte GPS context is a genuine differentiator — most teams have no governance language for agent work at all. Pair with RACI and DORA Metrics.",
+    source: "Delivery-governance practice; Public Mechanics (Decision Receipts, Authority Tokens, Responsibility to Record, Delivery Forensics).",
+    tags: ["agentic_delivery", "ai", "governance", "public_sector"],
+  },
+
+  // —— AI engineering craft ————————————————————————————————————————————————
+
+  {
+    name: "Prompt Engineering",
+    category: "ai_engineering",
+    oneLiner:
+      "Designing the instructions, examples, and structure given to an LLM to get reliable, correct output — treating the prompt as a spec rather than a wish.",
+    whenToUse:
+      "Any LLM-backed feature or agent step. The difference between a flaky demo and a reliable system is often prompt discipline, not model choice.",
+    vocabulary: [
+      "system prompt",
+      "few-shot",
+      "zero-shot",
+      "chain-of-thought",
+      "structured output",
+      "prompt template",
+      "instruction following",
+      "delimiters",
+      "output schema",
+    ],
+    howToDropIn:
+      "\"Before we blame the model, let's fix the prompt: explicit instructions, a couple of worked examples, a defined output schema, and the edge cases named. Most 'the model can't do this' turns out to be 'the prompt didn't ask precisely.'\"",
+    commonPhrasing:
+      "LLM feature development, agent design, AI-assisted coding, coaching junior practitioners.",
+    notes:
+      "Prompt engineering is being absorbed into the broader discipline of context engineering — what goes in the window, not just how the instruction is phrased. The durable moves: be explicit, show examples, constrain the output format, decompose hard tasks. The trap is endless prompt-tweaking when the real fix is decomposition, retrieval, or a different orchestration pattern. Pair with Context Engineering, Task Decomposition for Agents, and LLM Evaluation (you can't reliably improve a prompt you can't measure).",
+    source: "Prompt-engineering practice (Anthropic and OpenAI prompting guides); chain-of-thought (Wei et al., 2022).",
+    tags: ["ai_engineering", "ai", "prompting", "craft"],
+  },
+  {
+    name: "Context Engineering",
+    category: "ai_engineering",
+    oneLiner:
+      "Managing what an LLM sees at inference time — instructions, retrieved knowledge, tool results, history, memory — so the right information is in the window and the wrong information isn't crowding it out.",
+    whenToUse:
+      "As LLM systems grow past a single prompt: agents with tools, long conversations, RAG pipelines. Context engineering decides what to load, when, and how much.",
+    vocabulary: [
+      "context window",
+      "context rot",
+      "retrieval",
+      "memory",
+      "compaction",
+      "summarization",
+      "tool results",
+      "token budget",
+      "relevance",
+    ],
+    howToDropIn:
+      "\"This isn't a prompt problem, it's a context problem — we're stuffing the window with stale tool output and the model is losing the signal. Context engineering is deciding what earns a place in the window and what gets retrieved on demand.\"",
+    commonPhrasing:
+      "Agent and RAG architecture, long-context system design, AI platform work.",
+    notes:
+      "The newer and more accurate frame than 'prompt engineering' for production systems — performance often degrades not because the prompt is wrong but because the context is bloated or stale ('context rot'). Core moves: retrieve just-in-time, compact long histories, budget tokens deliberately, keep tool output scoped. Multi-agent orchestration is partly a context-isolation technique — each sub-agent gets a clean window. Pair with Retrieval-Augmented Generation (retrieval is one context source) and Multi-Agent SDLC Orchestration.",
+    source: "Context-engineering practice (Anthropic engineering writing, 2025); long-context and retrieval research.",
+    tags: ["ai_engineering", "ai", "context", "craft"],
+  },
+  {
+    name: "Retrieval-Augmented Generation (RAG)",
+    category: "ai_engineering",
+    oneLiner:
+      "Grounding an LLM's output in retrieved documents — fetch relevant context from a knowledge base, put it in the prompt, and answer from it — to reduce hallucination and cite sources.",
+    whenToUse:
+      "When the model needs current, proprietary, or citable knowledge it wasn't trained on. RAG is the default architecture for 'answer questions over our documents or data.'",
+    vocabulary: [
+      "retrieval",
+      "embedding",
+      "vector store",
+      "chunking",
+      "semantic search",
+      "reranking",
+      "grounding",
+      "citation",
+      "hallucination",
+      "hybrid search",
+      "top-k",
+    ],
+    howToDropIn:
+      "\"RAG is only as good as its retrieval — if the right chunk isn't fetched, the model can't ground on it and will confidently make something up. Most 'RAG is hallucinating' problems are retrieval problems: chunking, embeddings, or reranking, not the LLM.\"",
+    commonPhrasing:
+      "Knowledge-assistant builds, enterprise search, agent tool design.",
+    notes:
+      "The pipeline (chunk → embed → store → retrieve → rerank → generate) has a failure mode at every stage, and the generation step is rarely the culprit. Modern practice leans on hybrid search (keyword + semantic) and reranking, and increasingly on agentic retrieval where the model decides what to fetch. The faceted-navigation and onsite-search instincts from your eCommerce cards transfer directly — retrieval quality is findability. Pair with Context Engineering and LLM Evaluation.",
+    source: "Lewis et al., 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' (NeurIPS 2020); RAG practice.",
+    tags: ["ai_engineering", "ai", "rag", "architecture"],
+  },
+  {
+    name: "LLM Evaluation (Evals)",
+    category: "ai_engineering",
+    oneLiner:
+      "Systematically measuring whether an LLM system produces correct, safe, on-spec output — eval sets, automated scoring including LLM-as-judge, and regression checks — so quality is a number, not a vibe.",
+    whenToUse:
+      "The moment an LLM feature matters enough to ship. Without evals you can't tell whether a prompt change, model swap, or pipeline tweak helped or hurt.",
+    vocabulary: [
+      "eval set",
+      "golden dataset",
+      "LLM-as-judge",
+      "regression eval",
+      "offline eval",
+      "online eval",
+      "ground truth",
+      "rubric",
+      "pass rate",
+      "guardrail metric",
+    ],
+    howToDropIn:
+      "\"We can't improve what we can't measure. Build an eval set — real inputs, known-good outputs, a scoring rubric — and run it on every change. Otherwise we're tuning prompts by anecdote and shipping regressions we can't see.\"",
+    commonPhrasing:
+      "LLM productionization, agent quality, model-swap decisions, AI delivery governance.",
+    notes:
+      "This is the AI-native version of test rigor, and the single biggest gap between a demo and a production system. LLM-as-judge scales scoring but needs its own validation — judges have biases. Pair offline evals (regression on a fixed set) with online signals (production feedback). Evals are how Agent Output Validation scales beyond manual review, and the measurement layer under any CRO-style experimentation. Pair with Agent Output Validation and your Public Mechanics Decision Receipts (an eval result is part of the auditable record).",
+    source: "LLM evaluation practice; LLM-as-judge research (Zheng et al., 'Judging LLM-as-a-Judge', 2023).",
+    tags: ["ai_engineering", "ai", "evaluation", "quality"],
+  },
+  {
+    name: "AI-Assisted Coding Tools",
+    category: "ai_engineering",
+    oneLiner:
+      "The category of tools — Claude Code, GitHub Copilot, Cursor — that put an LLM inside the development loop, from autocomplete to full agentic task execution, changing what a software engineer's day actually is.",
+    whenToUse:
+      "Naming fluency with the tools this kind of role lists by name. Beyond using them, the senior skill is knowing where they help, where they hurt, and how to review their output.",
+    vocabulary: [
+      "Claude Code",
+      "Copilot",
+      "Cursor",
+      "autocomplete",
+      "agentic coding",
+      "inline suggestion",
+      "codebase context",
+      "agent mode",
+      "AI pair programming",
+    ],
+    howToDropIn:
+      "\"These tools move fastest on well-specified, well-tested code and slowest on ambiguous architecture decisions — so the leverage is using them for the mechanical work and keeping human judgment on the design and the review. The bottleneck shifts from writing code to reviewing it.\"",
+    commonPhrasing:
+      "Developer-productivity conversations, AI-assisted delivery, engineering interviews.",
+    notes:
+      "The honest practitioner read: these tools genuinely accelerate well-scoped work and can actively mislead on ambiguous or novel work, where they produce plausible-but-wrong code confidently. The reviewing bottleneck (see Agent Output Validation) is the new constraint — generation got cheap, verification didn't. Roles like this name Claude, Copilot, and Cursor explicitly, so concrete experience with at least one, plus an opinion on the review discipline, is what's being screened for. Pair with Agent Output Validation and Prompt Engineering.",
+    source: "Practitioner experience; vendor documentation (Anthropic Claude Code, GitHub Copilot, Cursor).",
+    tags: ["ai_engineering", "ai", "tooling", "sdlc"],
+  },
+  {
+    name: "MLOps / LLMOps",
+    category: "ai_engineering",
+    oneLiner:
+      "The operational discipline for getting ML and LLM systems into production and keeping them healthy — deployment pipelines, versioning, monitoring, experiment tracking, model governance — DevOps adapted to systems whose behavior is learned rather than coded.",
+    whenToUse:
+      "Moving any model or LLM system from notebook to production, especially against the preferred practices this role lists: pipelines, monitoring, experiment tracking, model governance, containerization.",
+    vocabulary: [
+      "MLOps",
+      "LLMOps",
+      "model registry",
+      "experiment tracking",
+      "deployment pipeline",
+      "monitoring",
+      "drift",
+      "retraining",
+      "containerization",
+      "CI/CD for models",
+      "observability",
+    ],
+    howToDropIn:
+      "\"The model is 10% of the system; MLOps is the other 90% that keeps it working after launch. Without versioning, monitoring, and a rollback path, the first time the data drifts we won't know until a client tells us.\"",
+    commonPhrasing:
+      "ML platform conversations, AI productionization, MLOps maturity reviews.",
+    notes:
+      "The foundational warning is Sculley et al.'s 'Hidden Technical Debt in Machine Learning Systems' — the ML code is a small box in a large diagram of supporting infrastructure, and skipping that infrastructure is how ML projects rot. LLMOps adds prompt/version management, eval pipelines, token-cost monitoring, and guardrails to the classic MLOps stack. Maps directly onto your existing DORA and Continuous Delivery cards — same delivery-performance logic, model-shaped. Pair with DORA Metrics, Continuous Delivery, and LLM Evaluation.",
+    source: "Sculley et al., 'Hidden Technical Debt in Machine Learning Systems' (NeurIPS 2015); Google MLOps literature; LLMOps practice.",
+    tags: ["ai_engineering", "ai", "mlops", "devops"],
+  },
+  {
+    name: "Responsible AI & AI Governance",
+    category: "ai_engineering",
+    oneLiner:
+      "The practices that keep AI systems transparent, fair, and under human control — bias assessment, transparency, oversight controls, documentation — framed so a system can be defended to a regulator, a client, or the public it affects.",
+    whenToUse:
+      "Any AI system with consequential, especially public-sector, impact. Transparency, bias, governance, and human oversight are often contractual in government work, not optional.",
+    vocabulary: [
+      "responsible AI",
+      "AI governance",
+      "transparency",
+      "bias",
+      "fairness",
+      "human oversight",
+      "model card",
+      "NIST AI RMF",
+      "explainability",
+      "accountability",
+      "audit",
+    ],
+    howToDropIn:
+      "\"Responsible AI in a government context isn't a values statement, it's a deliverable: documented bias testing, a transparency record, defined human-oversight controls, and an audit trail. NIST's AI Risk Management Framework is the spine most public-sector clients will expect us to map to.\"",
+    commonPhrasing:
+      "Public-sector AI, AI assurance, procurement and compliance, GPS delivery.",
+    notes:
+      "The NIST AI RMF (Govern, Map, Measure, Manage) is the closest thing to a public-sector lingua franca; model cards (Mitchell et al.) are the documentation artifact. Your Public Mechanics canon sharpens the generic responsible-AI vocabulary: Mirror Signaling (the computed-against party should see the weights), Substrate Degradation (the aggregate harm no single deployment owns), and Decision Receipts (contestable records) are more precise than 'transparency' in the abstract. Bringing that into a GPS responsible-AI conversation is a differentiator. Pair with WCAG (the accessibility-compliance analog) and Delivery Governance for AI-Assisted Workflows.",
+    source: "NIST AI Risk Management Framework 1.0 (2023); Mitchell et al., 'Model Cards for Model Reporting' (2019).",
+    tags: ["ai_engineering", "ai", "governance", "public_sector"],
+  },
+  {
+    name: "Guardrails & LLM Observability",
+    category: "ai_engineering",
+    oneLiner:
+      "The runtime safety and visibility layer around an LLM system — input/output filtering and policy enforcement (guardrails) plus tracing, cost, and quality monitoring (observability) — so you can both prevent bad outputs and see what's happening in production.",
+    whenToUse:
+      "Operating an LLM system at scale, where you need to block harmful or off-policy output in real time and understand behavior, cost, and drift after deployment.",
+    vocabulary: [
+      "guardrails",
+      "input/output filtering",
+      "PII redaction",
+      "jailbreak",
+      "policy enforcement",
+      "tracing",
+      "span",
+      "token cost",
+      "drift",
+      "feedback loop",
+      "observability",
+    ],
+    howToDropIn:
+      "\"Guardrails stop the bad output at the edge; observability tells us what the system is actually doing once it's live — traces, token cost, quality signals. Shipping an LLM feature without either is flying blind with no seatbelt.\"",
+    commonPhrasing:
+      "LLM productionization, AI safety engineering, platform operations.",
+    notes:
+      "Guardrails are the input/output checkpoints (PII redaction, jailbreak resistance, policy filters); observability is the tracing/cost/quality layer that makes production behavior legible. Both are the operational complement to evals — guardrails enforce at runtime, observability measures at runtime, evals measure offline. Token-cost monitoring matters more than teams expect; LLM unit economics can quietly sink a product. Connects to your Public Mechanics Mirror Signaling (observability is making the system legible) and Decision Receipts (traces are receipts). Pair with MLOps / LLMOps and Responsible AI & AI Governance.",
+    source: "LLM observability and guardrails practice (tracing tools, safety-filter frameworks).",
+    tags: ["ai_engineering", "ai", "observability", "operations"],
+  },
 ];

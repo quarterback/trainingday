@@ -373,4 +373,138 @@ export const translations: Translation[] = [
       "In retail, the budget lines are 'lifecycle marketing,' 'CRM,' and 'retention,' and the tech conversation is 'CDP' and 'single customer view.' Knowing that the merchandiser owns the in-session journey while CRM owns the cross-session relationship — and that a CDP is what stitches them — signals you understand where journey ownership actually sits in a retail org rather than treating it as one undifferentiated function.",
     tags: ["translation", "ecommerce", "service_design", "cx"],
   },
+  {
+    yourTerm: "judgment_routing",
+    standardTerms: [
+      "human-in-the-loop",
+      "HITL",
+      "human-on-the-loop",
+      "escalation policy",
+      "autonomy levels",
+      "approval gate",
+      "routing",
+    ],
+    explanation:
+      "Judgment Routing is the Public Mechanics primitive that reads four signals — uncertainty, stakes, authority, novelty — and sends a proposed agent action down the right path before it executes, so routine actions move fast and consequential ones get scrutiny. The AI-engineering register calls the same thing human-in-the-loop or escalation, but usually treats it as an ad-hoc 'add a review step' rather than a designed routing function. Judgment Routing is the sharper construction: escalation as a property of the system, not a matter of luck.",
+    whenToUseYours:
+      "When the point is that human oversight should be infrastructure — a routing rule conditioned on measurable signals — rather than a checkbox someone remembers to add. In a Deloitte GPS responsible-AI conversation, 'Judgment Routing on uncertainty, stakes, authority, and novelty' is a more rigorous answer than 'we keep a human in the loop.'",
+    whenToUseTheirs:
+      "Use 'human-in-the-loop' / 'HITL' and 'autonomy levels' for legibility with ML engineers, product teams, and anyone whose mental model comes from the MLOps or agent-framework world. 'Escalation policy' is the neutral term that lands in both governance and engineering rooms. Lead with the standard term, then introduce the routing-signals framing as the upgrade.",
+    tags: ["translation", "agentic_delivery", "public_mechanics", "positioning"],
+  },
+  {
+    yourTerm: "decision_receipts",
+    standardTerms: [
+      "audit trail",
+      "model card",
+      "experiment-tracking run",
+      "MLflow run",
+      "eval log",
+      "trace",
+      "lineage",
+      "provenance",
+    ],
+    explanation:
+      "A Decision Receipt is emitted at the moment of action and ties that action to its authority — capturing the routing outcome, the signals behind it (uncertainty, stakes, authority, novelty), the agent, the policy in force, the authority key, and the rationale — so the decision is auditable and contestable after the fact. The AI register has fragments of this — experiment-tracking runs, traces, model cards, audit logs — but they record system state, not the authorization and rationale of an individual consequential decision. Decision Receipts are the missing primitive: a per-decision, contestable record.",
+    whenToUseYours:
+      "When the requirement is contestability — a citizen, auditor, or regulator needs to challenge a specific determination and reconstruct why it went the way it did. 'Decision Receipt' carries the why and the authority, which an ordinary log line or trace does not.",
+    whenToUseTheirs:
+      "Use 'audit trail,' 'trace,' and 'experiment-tracking run' with engineering and MLOps audiences — those are the words that map to tooling they already run (MLflow, Weights & Biases, OpenTelemetry traces). 'Model card' is the right term for model-level documentation. Reach for these when the goal is to land in the existing observability stack; introduce Decision Receipts when per-decision contestability is the actual requirement and the standard tools don't reach it.",
+    tags: ["translation", "agentic_delivery", "public_mechanics", "governance"],
+  },
+  {
+    yourTerm: "authority_tokens",
+    standardTerms: [
+      "scoped credentials",
+      "OAuth scopes",
+      "IAM policy",
+      "agent authorization",
+      "capability token",
+      "tool permissions",
+      "guardrail policy",
+    ],
+    explanation:
+      "An Authority Token attaches the authorization to the action as data the system can read — carrying why an agent is acting and the constraints it's acting under, so delegated judgment is legible at the point of execution. The AI/security register has the mechanical analog in scoped credentials, OAuth scopes, and IAM policies, and the agent-framework world is converging on 'tool permissions' and capability tokens. The Public Mechanics construction adds what those usually omit: the why and the mandate, not just what's permitted.",
+    whenToUseYours:
+      "When the point is that an agent's permission should carry its rationale and limits as legible data — the basis for both Judgment Routing and Decision Receipts. 'Authority Token' frames authorization as designed infrastructure rather than configuration buried in a settings file.",
+    whenToUseTheirs:
+      "Use 'scoped credentials,' 'OAuth scopes,' and 'IAM policy' with security and platform engineers — that's the exact vocabulary of least-privilege and access control they already build to. In agent-framework discussions, 'tool permissions' and 'capability tokens' are the emerging standard terms. Borrow the access-control lineage explicitly: Authority Tokens are 'least privilege for agent decisions, carrying the why.'",
+    tags: ["translation", "agentic_delivery", "public_mechanics", "positioning"],
+  },
+  {
+    yourTerm: "agent_plumbing",
+    standardTerms: [
+      "agent runtime",
+      "orchestration framework",
+      "control plane",
+      "agent middleware",
+      "Model Context Protocol",
+      "MCP",
+      "tool-use layer",
+      "agent harness",
+    ],
+    explanation:
+      "Agent Plumbing is the Public Mechanics name for the legitimacy layer between an agent's proposal and its execution — the assembly of Authority Tokens (what's permitted, and why), Judgment Routing (evaluating the proposed action), and Decision Receipts (recording the result). The AI register names the mechanical layer — agent runtime, orchestration framework, control plane, MCP for tool wiring — but treats it as engineering plumbing, not a governance surface. The Public Mechanics framing is the claim that this layer is where legitimacy and accountability are actually enforced, or aren't.",
+    whenToUseYours:
+      "When you want to make the case that the orchestration layer is a governance decision, not just an architecture one — that the place where an agent's action gets authorized, routed, and recorded is where oversight actually lives or dies. Sharpest in responsible-AI and public-sector rooms.",
+    whenToUseTheirs:
+      "Use 'agent runtime,' 'orchestration framework,' and 'control plane' with engineers building the system; 'MCP' (Model Context Protocol) specifically when the topic is how tools and context get wired to the model. These are the build-surface words. Introduce 'Agent Plumbing' to reframe that same surface as the accountability layer — the move is to show that the engineering layer and the governance layer are the same layer.",
+    tags: ["translation", "agentic_delivery", "public_mechanics", "architecture"],
+  },
+  {
+    yourTerm: "mirror_signaling",
+    standardTerms: [
+      "AI transparency",
+      "explainability",
+      "XAI",
+      "interpretability",
+      "model card",
+      "right to explanation",
+      "observability",
+    ],
+    explanation:
+      "Mirror Signaling is the Public Mechanics principle that the party being computed against should be given something to compute with — restoring computational parity rather than piling on disclosure. The AI register's transparency / explainability / XAI vocabulary is adjacent but aims lower: it explains what the model did, not how to contest it on equal footing. Mirror Signaling is the sharper claim — transparency that closes the calculative asymmetry, not transparency that merely narrates the decision.",
+    whenToUseYours:
+      "When the responsible-AI conversation is sliding toward 'we'll add an explainability dashboard' and the real problem is power asymmetry — the affected party can't act on the explanation. 'Mirror Signaling' names the goal (parity, contestability) that 'transparency' leaves vague.",
+    whenToUseTheirs:
+      "Use 'explainability,' 'XAI,' and 'interpretability' with ML audiences, and 'AI transparency' / 'right to explanation' in policy and compliance rooms (the latter maps to GDPR-style framing public-sector clients expect). These are the legible, fundable terms. Bring in Mirror Signaling to raise the bar from 'we explained it' to 'we gave them something to act on.'",
+    tags: ["translation", "ai", "public_mechanics", "positioning"],
+  },
+  {
+    yourTerm: "substrate_degradation",
+    standardTerms: [
+      "model collapse",
+      "model drift",
+      "feedback-loop harm",
+      "negative externalities",
+      "aggregate harm",
+      "data feedback loops",
+    ],
+    explanation:
+      "Substrate Degradation is the cumulative erosion of a shared substrate — civic trust, signal quality, collective sensemaking — that happens when individually-reasonable extractions compound across cases, with the damage living in an aggregate no single action owns. The AI register has mechanical cousins: 'model collapse' (models trained on synthetic output degrading), 'feedback-loop harm,' and 'negative externalities.' The Public Mechanics term is broader and more precise about ownership — the harm that no single deployment is accountable for is the whole point, which is exactly the gap per-system responsible-AI frameworks tend to miss.",
+    whenToUseYours:
+      "When the harm being discussed is systemic and unattributable — no single model or deployment is clearly at fault, but the aggregate is corroding something shared (information ecosystems, trust in automated decisions). 'Substrate Degradation' names the ownerless-aggregate structure that per-system risk assessments can't see.",
+    whenToUseTheirs:
+      "Use 'model collapse' for the specific synthetic-data-degradation phenomenon (Shumailov et al.), 'model/data drift' for the MLOps monitoring concern, and 'negative externalities' for economics-literate and policy audiences. These are the precise, recognized terms for the pieces. Reach for Substrate Degradation when the point is the cross-system aggregate that none of those single-system terms captures.",
+    tags: ["translation", "ai", "public_mechanics", "governance"],
+  },
+  {
+    yourTerm: "usability_evaluation",
+    standardTerms: [
+      "LLM evals",
+      "red-teaming",
+      "eval set",
+      "LLM-as-judge",
+      "benchmark",
+      "model evaluation",
+      "guardrail testing",
+    ],
+    explanation:
+      "The design discipline of evaluating a system against real use — usability testing, heuristic evaluation, task-based studies — has a direct cousin in AI: LLM evals (does the system produce correct, on-spec output?) and red-teaming (where does it fail or get adversarially broken?). Same underlying move: define what good looks like, then test the artifact against it systematically rather than trusting a demo. Heuristic evaluation maps to rubric-based / LLM-as-judge scoring; task-based usability studies map to eval sets of real inputs with known-good outputs; adversarial edge-case probing maps to red-teaming.",
+    whenToUseYours:
+      "When recruiting design/research talent into AI work, or explaining to a design-fluent audience that eval design is the same rigor as usability research — define the success criteria, sample real tasks, score against a rubric, watch for failure modes. The 'evaluation' framing carries the methodological seriousness and stops evals from being treated as an afterthought.",
+    whenToUseTheirs:
+      "Inside an AI/ML org, the words are 'evals,' 'eval set,' 'LLM-as-judge,' and 'red-teaming,' with 'benchmark' for standardized public ones. Saying 'let's run a usability study on the model' reads as not knowing the register; saying 'we need an eval set with a scoring rubric and a red-team pass on the edge cases' reads as a practitioner. The disciplines are cousins, but use the AI words in the AI room.",
+    tags: ["translation", "ai", "design", "evaluation"],
+  },
 ];
