@@ -3506,4 +3506,164 @@ export const frameworks: Framework[] = [
     source: "NAFA (National Association of Fellowships Advisors); standard fellowships-advising practice.",
     tags: ["career_services", "higher_ed", "fellowships", "framework"],
   },
+
+  // —— Sports / venue / live entertainment ————————————————————————————————
+
+  {
+    name: "Ticket Yield Management & Dynamic Pricing",
+    category: "sports_venue",
+    oneLiner:
+      "Pricing live-event inventory that is perishable (a seat is worth zero after puck drop) and finite by section, using variable pricing (set ahead by opponent/date/demand tier) and dynamic pricing (adjusted continuously, airline-style), against a secondary market you don't control.",
+    whenToUse:
+      "The revenue-optimization outcome, ticketing line. Your retail pricing/markdown background is the transferable core — same perishability-and-elasticity problem, different inventory.",
+    vocabulary: [
+      "dynamic pricing",
+      "variable pricing",
+      "yield management",
+      "price elasticity",
+      "fill rate",
+      "scan rate",
+      "no-show",
+      "secondary market",
+      "season vs single-game",
+      "get-in price",
+    ],
+    howToDropIn:
+      "\"Ticket inventory is a markdown problem with a hard expiry — a seat unsold at puck drop is a total loss, like fresh produce at close. The discipline is variable pricing by demand tier up front, dynamic adjustment as the date approaches, and reading the secondary market as your real price signal.\"",
+    commonPhrasing: "Revenue / ticketing strategy, yield management.",
+    notes:
+      "Variable pricing is set in advance on predictable demand (marquee opponent, weekend, promo night); dynamic pricing moves continuously on live demand (the hotel/airline model). The secondary market (StubHub, SeatGeek, Ticketmaster resale) is uncontrolled price discovery that exposes mispricing — a get-in price far below face means you left money on the table. Your retail markdown-optimization and elasticity work is a direct analog; lead with it as transferable and name the ticketing terms so you sound native. Pair with STM Lifecycle and the markdown_optimization translation.",
+    source: "Standard sports / live-entertainment ticketing practice.",
+    tags: ["sports_venue", "pricing", "revenue", "framework"],
+  },
+  {
+    name: "Premium & Hospitality Inventory",
+    category: "sports_venue",
+    oneLiner:
+      "The high-margin seated products — suites, club seats, loge boxes, premium memberships — sold as multi-year relationships (often to corporates) rather than transactions, with F&B and experience bundled in.",
+    whenToUse:
+      "The premium/hospitality business line in revenue optimization. The economics and sales motion differ sharply from general admission — long contracts, account management, and renewal risk concentrated in a few big logos.",
+    vocabulary: [
+      "premium",
+      "suites",
+      "club seats",
+      "loge boxes",
+      "premium memberships",
+      "hospitality",
+      "F&B attach",
+      "multi-year contracts",
+      "account management",
+      "renewal",
+    ],
+    howToDropIn:
+      "\"Premium is where the margin concentrates, and it behaves like enterprise B2B, not retail — multi-year contracts, revenue concentrated in a handful of corporate accounts, renewal risk you manage account by account. The analytics question is renewal propensity and white-glove retention, not volume.\"",
+    commonPhrasing: "Premium sales, hospitality, partnerships.",
+    notes:
+      "Premium carries disproportionate margin and revenue concentration, so churn of one suite-holder outweighs thousands of GA buyers — the modeling is account-level retention and propensity, closer to enterprise account management than consumer funnels. Your B2B / commercial-engagement framing transfers well. Pair with Sponsorship Valuation.",
+    source: "Standard venue premium / hospitality practice.",
+    tags: ["sports_venue", "premium", "revenue", "framework"],
+  },
+  {
+    name: "Sponsorship / Partnership Valuation",
+    category: "sports_venue",
+    oneLiner:
+      "Pricing and proving the value of brand assets — signage, naming rights, digital/social inventory, on-site activation, audience data — sold to corporate partners, then measuring delivered value (impressions, earned media, activation outcomes) to drive renewal.",
+    whenToUse:
+      "The sponsorship line and the JD's 'evaluate campaign and partnership success' reporting. Measurement maturity is genuinely thin across the industry — an opening for your analytics rigor.",
+    vocabulary: [
+      "sponsorship",
+      "partnership",
+      "asset valuation",
+      "activation",
+      "media / impression value",
+      "earned media",
+      "naming rights",
+      "sponsorship ROI",
+      "fulfillment",
+      "renewal",
+    ],
+    howToDropIn:
+      "\"Sponsorship valuation is mostly art dressed as science — assets get bundled and priced on precedent. The differentiator is real fulfillment measurement: did the partner get the impressions and activation outcomes we sold, and can we prove it at renewal? That's an analytics gap I'd close.\"",
+    commonPhrasing: "Corporate partnerships, sponsorship sales, partnership marketing.",
+    notes:
+      "Sponsorship inventory is signage + naming + digital + experiential + increasingly first-party data / audience access; valuation traditionally leans on comparable deals and estimated media value, and fulfillment reporting is often weak — exactly where a data leader adds defensible value and protects renewals. Pair with Premium & Hospitality.",
+    source: "Standard sports sponsorship / partnership practice.",
+    tags: ["sports_venue", "sponsorship", "revenue", "framework"],
+  },
+  {
+    name: "Single Fan View / Fan Data Platform",
+    category: "sports_venue",
+    oneLiner:
+      "The unified, governed fan identity that stitches ticketing, F&B, merch, parking, app, email, and digital behavior into one profile — the data-integration foundation everything else (personalization, pricing, retention) is built on.",
+    whenToUse:
+      "The JD's headline outcome — 'a unified, governed data ecosystem.' This is the enterprise data-platform problem you already solve, just with sports data sources.",
+    vocabulary: [
+      "single fan view",
+      "customer data platform (CDP)",
+      "identity resolution",
+      "first-party data",
+      "data governance",
+      "golden record",
+      "source of truth",
+      "ticketing / F&B / merch integration",
+    ],
+    howToDropIn:
+      "\"Everything downstream — personalization, dynamic pricing, retention — depends on one governed fan identity that unifies ticketing, concessions, merch, and digital. Most venues run these as silos. Building the single fan view is the unlock, and it's a data-platform problem I've solved before; the sources are just different.\"",
+    commonPhrasing: "Data strategy, CDP, business intelligence.",
+    notes:
+      "The fan is fragmented across ticketing systems (Ticketmaster / AXS), F&B point-of-sale, retail, parking, app, and CRM — unifying them into a governed golden record is the precondition for the JD's personalization and revenue outcomes. This is squarely your enterprise data-integration strength; lead with it as the through-line connecting every other outcome in the JD. Pair with Fan Journey and the customer_data_platform translation.",
+    source: "Standard CDP / fan-data-platform practice in sports & entertainment.",
+    tags: ["sports_venue", "data", "governance", "framework"],
+  },
+  {
+    name: "Fan Journey & Remote Fandom",
+    category: "sports_venue",
+    oneLiner:
+      "The recognition that the in-arena guest (a building-full per night) is a small slice of the fanbase — most fans experience the team remotely via broadcast, social, and digital — so experience and monetization strategy has to serve both.",
+    whenToUse:
+      "The JD's 'in-venue and online... remote fandom' fan-experience outcome. The strategic insight: digital growth is mostly about the fans who never enter the building.",
+    vocabulary: [
+      "fan journey",
+      "remote fandom",
+      "in-venue experience",
+      "fan engagement",
+      "second-screen",
+      "OTT / broadcast",
+      "fan segmentation",
+      "casual vs avid",
+      "audience growth",
+    ],
+    howToDropIn:
+      "\"The building holds ~17,000; the fanbase is in the millions, most of whom never come. So digital fan experience isn't just upgrading the in-venue app — it's building a relationship with remote fans through content and personalization, and that's where audience growth and new revenue actually come from.\"",
+    commonPhrasing: "Fan experience, digital strategy, audience development.",
+    notes:
+      "The avid-but-remote fan is the growth audience; in-venue tech (mobile entry, in-seat ordering, wayfinding) matters for the live guest, but brand and audience growth come from the remote majority via content, social, and OTT. Your omnichannel and journey/personalization work maps directly. Pair with Single Fan View and the omnichannel translation.",
+    source: "Standard sports digital / fan-experience strategy.",
+    tags: ["sports_venue", "fan_experience", "digital", "framework"],
+  },
+  {
+    name: "Season Ticket Member (STM) Lifecycle & Retention",
+    category: "sports_venue",
+    oneLiner:
+      "The renewal-driven economics of season-ticket membership — the most valuable recurring ticketing revenue — where annual renewal rate, attrition, and member benefits behave like a subscription business.",
+    whenToUse:
+      "Retention modeling in the ticketing line. Your cohort / retention / subscription analytics translate almost one-to-one.",
+    vocabulary: [
+      "season-ticket member (STM)",
+      "renewal rate",
+      "attrition / churn",
+      "member benefits",
+      "scan / usage rate",
+      "secondary-market behavior",
+      "propensity to renew",
+      "tenure",
+    ],
+    howToDropIn:
+      "\"STM revenue is recurring subscription revenue — renewal rate is the metric that matters. You can model churn propensity from usage, secondary-market listing behavior, and tenure, then intervene. The wrinkle the industry underweights is that renewal correlates with team performance, which you don't control — so isolate the part you can.\"",
+    commonPhrasing: "Ticket retention, membership, CRM.",
+    notes:
+      "STM behaves like subscription/SaaS retention — scan rate, reselling on the secondary market, and tenure are leading churn indicators; the confound is on-ice performance driving renewal independent of service quality, so separate what you can influence from what you can't. Your cohort and retention analytics are directly transferable. Pair with Ticket Yield Management.",
+    source: "Standard sports ticketing / membership retention practice.",
+    tags: ["sports_venue", "retention", "revenue", "framework"],
+  },
 ];

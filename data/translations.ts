@@ -598,4 +598,74 @@ export const translations: Translation[] = [
       "In an advancement shop, 'cultivation' and 'stewardship' are terms of art with a specific sequence; 'donor meetings' and 'board presentations' are the concrete asks. Showing you understand the gift cycle — that stewardship is the step after a gift, not a synonym for it — signals you can operate inside Advancement rather than merely adjacent to it. Note this role reports to the VP for College Advancement, so the division's vocabulary is not optional. Pair with the authorizing_environment translation for the faculty-buy-in side.",
     tags: ["translation", "career_services", "advancement", "positioning"],
   },
+  {
+    yourTerm: "markdown_optimization",
+    standardTerms: [
+      "dynamic pricing",
+      "variable pricing",
+      "yield management",
+      "ticket pricing",
+      "price elasticity",
+      "get-in price",
+    ],
+    explanation:
+      "Retail markdown optimization and live-event ticket pricing are the same perishable-inventory problem: finite supply, a hard expiry (a seat is worthless after the event, like produce at close), and demand you model on elasticity. Retail discounts toward a sell-through date; ticketing sets variable prices by demand tier up front and adjusts dynamically as the date nears — but the underlying elasticity-and-perishability math is shared.",
+    whenToUseYours:
+      "When establishing credibility on revenue rigor, frame ticketing as a markdown/yield problem you've already solved at scale in retail — the perishability and elasticity modeling is the transferable expertise, and it's a strong answer to the 'advanced analytics / pricing strategies' qualification.",
+    whenToUseTheirs:
+      "In the room, it's 'dynamic pricing,' 'variable pricing,' and 'yield management,' and the secondary market (StubHub, SeatGeek) is the price signal that exposes mispricing. Saying 'markdown' for tickets reads as retail-brain; saying 'variable pricing by demand tier, dynamic adjustment, and the secondary-market get-in price as ground truth' reads as someone fluent in the category. Pair with Ticket Yield Management.",
+    tags: ["translation", "sports_venue", "pricing", "positioning"],
+  },
+  {
+    yourTerm: "customer_data_platform",
+    standardTerms: [
+      "single fan view",
+      "fan data platform",
+      "unified fan profile",
+      "identity resolution",
+      "golden record",
+      "data governance",
+    ],
+    explanation:
+      "A CDP / single-customer-view in retail or ecommerce and a 'single fan view' in sports are the same architecture: resolve identity across fragmented sources into one governed profile that downstream personalization, pricing, and retention depend on. The sports sources differ — ticketing, F&B point-of-sale, merch, parking, app, broadcast — but the integration, governance, and golden-record problem is identical to what you've built.",
+    whenToUseYours:
+      "This is the JD's headline outcome ('unified, governed data ecosystem') and your single strongest claim. Lead with the enterprise data-platform work directly — the identity-resolution and governance problem is exactly the same, and most venue candidates won't have built one.",
+    whenToUseTheirs:
+      "Call it the 'single fan view' or 'fan data platform' and name the sports sources (ticketing, concessions, merch, app) so it lands as domain-aware rather than generic data-speak. Showing you know the fan is fragmented across Ticketmaster/AXS plus F&B POS plus app signals you understand where the integration pain actually is. Pair with Single Fan View / Fan Data Platform.",
+    tags: ["translation", "sports_venue", "data", "positioning"],
+  },
+  {
+    yourTerm: "subscription_churn",
+    standardTerms: [
+      "season-ticket renewal",
+      "STM retention",
+      "attrition",
+      "renewal rate",
+      "propensity to renew",
+    ],
+    explanation:
+      "Season-ticket-member economics are subscription economics: recurring revenue, an annual renewal cycle, and churn you predict from usage and engagement. Your SaaS/subscription retention and cohort analytics transfer almost one-to-one — usage (scan rate), secondary-market listing behavior, and tenure are the leading churn indicators, just as logins and feature usage are in software.",
+    whenToUseYours:
+      "Frame STM retention as the subscription-churn modeling you've done — propensity scoring, cohort retention curves, intervention design. It's a clean, concrete answer to 'data modeling, forecasting, and performance measurement.'",
+    whenToUseTheirs:
+      "Say 'renewal rate,' 'attrition,' and 'STM' (season-ticket member), not 'MRR churn.' And acknowledge the industry-specific confound up front: renewal correlates heavily with team performance, which you don't control — showing you'd isolate the service-quality signal from the win/loss signal signals you understand the domain, not just the math. Pair with STM Lifecycle & Retention.",
+    tags: ["translation", "sports_venue", "retention", "positioning"],
+  },
+  {
+    yourTerm: "omnichannel",
+    standardTerms: [
+      "in-venue + remote fandom",
+      "online-to-offline",
+      "integrated touchpoints",
+      "fan journey",
+      "phygital",
+    ],
+    explanation:
+      "Omnichannel retail (unify the store and the digital experience around one customer) maps onto the JD's 'in-venue and online... integrate with offline touchpoints' fan experience. The twist specific to sports: the remote/digital audience vastly outnumbers the in-building one, so the integration isn't store-plus-web of equal weight — it's a small high-value live experience plus a massive remote fanbase you mostly reach digitally.",
+    whenToUseYours:
+      "Your omnichannel and online-to-offline work is the transferable spine for the fan-experience outcome — same discipline of one customer across many touchpoints, same personalization engine.",
+    whenToUseTheirs:
+      "Talk about 'in-venue versus remote fandom' and the 'fan journey,' and show you grasp the asymmetry: the building holds ~17,000 but the fanbase is millions, so digital growth is mostly about fans who never attend. That reframe — not just 'integrate the app with the website' — is what separates a retail omnichannel answer from a sports digital-strategy answer. Pair with Fan Journey & Remote Fandom.",
+    tags: ["translation", "sports_venue", "digital", "positioning"],
+  },
 ];
