@@ -3791,4 +3791,622 @@ export const frameworks: Framework[] = [
     source: "Enterprise AI deployment practice; Anthropic enterprise patterns.",
     tags: ["forward_deployed", "applied_ai", "enterprise", "framework"],
   },
+
+  // —— Journey management (CX discipline + its limits) —————————————————————
+
+  {
+    name: "Journey Management (CX Discipline)",
+    category: "service_design",
+    oneLiner:
+      "The emerging CX discipline — pushed by Forrester since ~2022 and a small software category (TheyDo, Smaply, Milkymap) — that treats customer journeys as a continuously-managed unit of operational accountability with named owners, metrics, and governance, rather than as map artifacts a designer produces and hands off.",
+    whenToUse:
+      "When an enterprise has a graveyard of journey maps and nothing has improved because no one owns the journey end-to-end. Also a procurement vocabulary: it lets you get structural cross-functional work budgeted under a label CX and service-ops buyers already understand.",
+    vocabulary: [
+      "journey management",
+      "journey-centric operating model",
+      "journey owner",
+      "journey KPI / scorecard",
+      "journey governance",
+      "journey orchestration",
+      "journey-as-a-product",
+      "continuous improvement",
+      "activate / connect / extend",
+    ],
+    howToDropIn:
+      "\"Journey maps have been a graveyard for insight for fifteen years — produced, presented, posted on a wall, then the org goes back to optimizing the funnel one screen at a time. Journey management names the real gap: who's accountable for the journey across teams, with metrics and governance, between the maps.\"",
+    commonPhrasing: "CX strategy, service operations, experience management.",
+    notes:
+      "Forrester's framing: journey maps as artifacts are dead; journeys as a unit of operational accountability are the future (their model moves six operational levers across three phases — activate, connect, extend — and they now run a journey-management certification; the Q2 2024 Forrester Wave covers journey-orchestration platforms). The diagnosis is correct and adjacent to the substrate question — who owns what's between the recorded steps. WHERE IT FALLS SHORT: journey management is CX-flavored — it assumes a customer, a product, a funnel, a commercial relationship — so it doesn't carry into public services, multilateral delivery, or the agentic layer, where the unit of analysis is wrong. A citizen navigating three agencies, two vendors, and a benefits-determination engine over four years isn't on a 'journey' in the CX sense; they're navigating a substrate, and calling it a journey makes the substrate vanish into a narrative of the user's experience — the move that lets institutions off the hook for the seams between them. Verdict: a useful conceptual move within CX, a category error applied to public infrastructure. Worth fluency; worth keeping distinct from Trajectory Management. Pair with NN/g Journey Management (the owners/KPIs/governance mechanics), Service Blueprint (below the line of visibility), and contrast with Trajectory Management and Substrate Degradation for the public-systems case. The substrate_navigation translation captures the ride-it-vs-stay-clean trade-off.",
+    source: "Forrester journey-centricity / journey management research (~2022– ); TheyDo, Smaply, Milkymap; Journey Management Institute. Critique and trajectory/substrate distinction are owner's synthesis.",
+    tags: ["service_design", "cx", "journey", "owner_framework"],
+  },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // OWNER STACK — Public Mechanics / Trust & Decision Engineering
+  // The frameworks are a stack, not a list. See "The Public Mechanics Stack"
+  // card for how the layers and audiences fit together.
+  // ════════════════════════════════════════════════════════════════════════
+
+  // —— Foundational / field layer ————————————————————————————————————————
+
+  {
+    name: "The Public Mechanics Stack (How the Frameworks Fit)",
+    category: "public_mechanics",
+    oneLiner:
+      "The frameworks are a stack, not a list: Civil Economics (accounting) → TDE (practice) → Public Mechanics (field), with Agent Plumbing as TDE's product-org translation shipping the protocol primitives, and LDM/RTR as the substrate obligations beneath the diagnostics.",
+    whenToUse:
+      "When orienting to the whole body of work, or picking the right framework for the room rather than dumping the stack.",
+    vocabulary: [
+      "stack vs list",
+      "accounting layer",
+      "practice layer",
+      "field layer",
+      "protocol primitives",
+      "substrate obligations",
+    ],
+    notes:
+      "Layers, bottom to top: Civil Economics (the accounting layer) → Trust & Decision Engineering (the practice layer) → Public Mechanics (the field layer). Agent Plumbing is the product-org translation of TDE; Judgment Routing, Authority Tokens, and Decision Receipts are the protocol primitives Agent Plumbing ships. Last Documented Mile and Responsibility to Record are the substrate-level obligations that make Delivery Forensics and Decision Receipts possible. AUDIENCES — surface the right framework for the right room: TDE → Trust & Safety leaders and AI governance; Agent Plumbing → product CTOs and infrastructure companies; Public Mechanics → academics, foundations, multilateral institutions; Civil Economics → economists, policy people, the SSRN audience. Don't dump the whole stack — lead with the layer the room buys.",
+    source: "Owner's synthesis.",
+    tags: ["public_mechanics", "meta", "owner_framework"],
+  },
+  {
+    name: "Public Mechanics",
+    category: "public_mechanics",
+    oneLiner:
+      "The field being founded: the study of how public services actually function at the substrate level, with the latency between policy intent and lived consequence as the unit of analysis.",
+    whenToUse:
+      "Positioning the whole body of work as a field — distinct from public administration (which studies institutions) and civic tech (which treats delivery as the unit).",
+    vocabulary: [
+      "substrate",
+      "latency",
+      "policy intent",
+      "lived consequence",
+      "delivery substrate",
+    ],
+    notes:
+      "Field layer of the stack, above TDE and Civil Economics. Its differentiator is the unit of analysis: the latency between policy intent and lived consequence, not the institution (public administration) and not the delivery artifact (civic tech). Audience: academics, foundations, multilateral institutions. Pairs with Civil Economics (the accounting layer beneath) and Consequence Design (the originating umbrella). Nearest canonical neighbors: Lipsky's Street-Level Bureaucracy and Pressman & Wildavsky's Implementation — differs by taking the latency between policy intent and lived consequence as the unit of analysis, not the bureaucrat or the implementation chain.",
+    source:
+      "Owner's framework / founding field. Taught as UT-360 and UT-402 at the University of Michigan (Taubman).",
+    tags: [
+      "public_mechanics",
+      "field",
+      "owner_framework",
+      "audience:academic",
+      "audience:foundations",
+      "audience:multilateral",
+    ],
+  },
+  {
+    name: "Consequence Design",
+    category: "public_mechanics",
+    oneLiner:
+      "The 2017 framework predating the rest of the lexicon: designing for the consequences that materialize past the design boundary — the umbrella under which the other frameworks operate.",
+    whenToUse:
+      "Naming the originating commitment behind the whole stack: that what matters is what happens after the design boundary, not at it.",
+    vocabulary: [
+      "design boundary",
+      "downstream consequence",
+      "materialization",
+      "second-order effects",
+    ],
+    notes:
+      "The originating umbrella (2017); everything else in the stack is a specialization of it. Pairs with Civil Economics (consequences made accountable) and Design as Repair (the practice stance). Nearest canonical neighbors: Value-Sensitive Design (Friedman), doteveryone's Consequence Scanning, and Tony Fry's defuturing / redirective practice — differs by centering what materializes past the design boundary, and predating (2017) the rest of the lexicon as its umbrella.",
+    source: "Owner's framework (2017).",
+    tags: ["public_mechanics", "umbrella", "owner_framework"],
+  },
+  {
+    name: "Civil Economics",
+    category: "public_mechanics",
+    oneLiner:
+      "The accounting layer underneath the stack: total value from an activity equals private capture plus externalized costs plus residual public obligation — Va = Vp + Ve + Vr — forcing the question of where a transaction actually ends and who controls that boundary.",
+    whenToUse:
+      "When you need to make visible the costs an activity pushes past its own boundary in time — the Vr that arrives after the actors who captured Vp are gone.",
+    vocabulary: [
+      "Va = Vp + Ve + Vr",
+      "Va(t) = Vp(t₀) + Ve(t₁…tₙ) + Vr(tₙ₊₁…)",
+      "private capture (Vp)",
+      "externalized cost (Ve)",
+      "residual public obligation (Vr)",
+      "transaction boundary",
+    ],
+    howToDropIn:
+      "\"Vp lands immediately, Ve disperses over time, and Vr arrives late — usually after whoever captured Vp has exited. The question Civil Economics forces is: where does the transaction actually end, and who controls that boundary?\"",
+    commonPhrasing: "Economics, policy analysis, SSRN.",
+    notes:
+      "Bottom of the stack — the accounting layer everything else sits on. Vp lands immediately; Ve disperses over time (t₁…tₙ); Vr arrives late (tₙ₊₁…), often after the Vp-capturing actors are gone. Audience: economists, policy people, the SSRN audience — lead with the equation. Pairs with Substrate Degradation (what unaccounted Ve/Vr erodes), Legitimacy Tax (a named Ve), and the Ambiguity Economy Loop (where externalities land). Nearest canonical neighbors: Pigou/Coase externalities and social cost, and full-cost / intergenerational accounting — differs by formalizing the temporal split (Vp now, Ve dispersing, Vr arriving after the actors exit) and making the transaction boundary itself the contested object. NB: 'Civil Economy' is already a named tradition (Genovesi; revived by Bruni & Zamagni), so distinguish your term from it explicitly.",
+    source: "Owner's framework (Consequence Design lexicon).",
+    tags: [
+      "public_mechanics",
+      "civil_economics",
+      "owner_framework",
+      "audience:economist",
+      "audience:policy",
+      "audience:ssrn",
+    ],
+  },
+
+  // —— Substrate obligations (the two missing from the repo) ——————————————
+
+  {
+    name: "Last Documented Mile (LDM)",
+    category: "public_mechanics",
+    oneLiner:
+      "The gap between the last reliable record and what actually happened to a person in a system — the documentation analogue of the supply chain's last mile, for provenance and decision rationale.",
+    whenToUse:
+      "When a consequence landed but the chain of record went quiet before it: eligibility determined but rationale uncaptured, a benefit denied but input weights untraceable, a case closed but no one can reconstruct why.",
+    vocabulary: [
+      "last documented mile",
+      "documentation chain",
+      "decision provenance",
+      "record silence",
+      "reconstructability",
+    ],
+    howToDropIn:
+      "\"The diagnostic question is simple: where does the documentation chain go silent before the consequence does? That stretch is the last documented mile, and it's where accountability evaporates.\"",
+    commonPhrasing: "Program forensics, oversight, auditability.",
+    notes:
+      "A substrate-level obligation in the stack: LDM names the specific stretch where Responsibility to Record most often fails. Forensics begins at the LDM. Pairs with Delivery Forensics (forensics begins here), Responsibility to Record (the obligation that fails along it), and Trajectory Management. Nearest canonical neighbors: chain of custody (forensic/legal), data provenance and lineage, and the logistics 'last mile' — differs by naming the specific stretch between the last reliable record and the consequence, where provenance goes silent.",
+    source: "Owner's framework. Analogue: supply-chain last mile.",
+    tags: ["public_mechanics", "forensics", "substrate", "owner_framework"],
+  },
+  {
+    name: "Responsibility to Record (RTR)",
+    category: "public_mechanics",
+    oneLiner:
+      "The structural obligation — not the permission — to document a decision, observation, or handoff in a chain of action; modeled on mandatory reporting and framed as 'who must,' not 'who gets to.'",
+    whenToUse:
+      "When chains break because no one is on the hook for recording, not because no one had permission. The corresponding obligation framework when journey ownership can't be constructed across institutional seams.",
+    vocabulary: [
+      "responsibility to record",
+      "mandatory reporting",
+      "who must vs who gets to",
+      "obligation assignment",
+      "discharge",
+    ],
+    howToDropIn:
+      "\"Reframe it from 'who gets to record' to 'who must.' Chains break because the obligation to record was never assigned, was assumed but not assigned, terminated before the consequence, or was assigned to someone without the capacity to discharge it.\"",
+    commonPhrasing: "Accountability design, governance, oversight.",
+    notes:
+      "A substrate-level obligation in the stack, and the obligation framework that takes over when journey ownership can't be constructed across institutional seams (contrast with Journey Management). Diagnostic questions: where is RTR assigned, assumed-but-not-assigned, terminating before consequence, or assigned to someone without capacity to discharge it. Pairs with Decision Receipts (the receipt is the discharge of the obligation) and Last Documented Mile (where RTR most often fails). Nearest canonical neighbors: Dennis Thompson's 'problem of many hands,' mandatory-reporting law, and archival recordkeeping (the Records Continuum) — differs by framing recording as an assignable structural obligation ('who must') that can terminate before the consequence or land on someone without capacity to discharge it.",
+    source: "Owner's framework. Modeled on mandatory reporting.",
+    tags: ["public_mechanics", "accountability", "substrate", "owner_framework"],
+  },
+
+  // —— Trust & Decision Engineering: practice + protocol primitives ————————
+
+  {
+    name: "Trust & Decision Engineering (TDE)",
+    category: "trust_decision_engineering",
+    oneLiner:
+      "The practice of designing how decisions are authorized, escalated, and audited in institutions where automation is distributing control — the structural layer underneath Trust & Safety.",
+    whenToUse:
+      "When governance has to scale beyond incident moderation — building the decision infrastructure underneath rather than handling incidents after they happen.",
+    vocabulary: [
+      "decision authorization",
+      "escalation",
+      "audit",
+      "distributed control",
+      "decision infrastructure",
+    ],
+    howToDropIn:
+      "\"Trust & Safety handles incidents after they happen. TDE builds the decision infrastructure underneath — how authority is granted, escalated, and audited — so governance scales beyond moderation.\"",
+    commonPhrasing: "Trust & Safety, AI governance, platform integrity.",
+    notes:
+      "Practice layer of the stack: above Civil Economics, below Public Mechanics; the discipline-level container for the protocol primitives (Judgment Routing, Authority Tokens, Decision Receipts). Agent Plumbing is its product-org translation. Audience: Trust & Safety leaders and AI governance. Pairs with Substrate Stewardship (its discipline-level goal) and Substrate Degradation (the failure mode it exists to prevent). Nearest canonical neighbors: organizational 'decision rights' (e.g., Bain's RAPID), Rahwan's 'society-in-the-loop,' and administrative-law due process — differs by being the structural infrastructure layer beneath Trust & Safety, not incident response or a single org's decision-rights map.",
+    source: "Owner's framework.",
+    tags: [
+      "trust_decision_engineering",
+      "governance",
+      "owner_framework",
+      "audience:trust_safety",
+      "audience:ai_governance",
+    ],
+  },
+  {
+    name: "Judgment Routing",
+    category: "trust_decision_engineering",
+    oneLiner:
+      "The protocol-level abstraction for delegated decision authority — the agent-to-router handshake carrying authority context, scope, and reasoning payload.",
+    whenToUse:
+      "When the thing being delegated is agency itself, not permissions or workflows — sitting between policy engines (binary rules) and agent orchestrators (task routing).",
+    vocabulary: [
+      "judgment routing",
+      "agent-to-router handshake",
+      "authority context",
+      "scope",
+      "reasoning payload",
+    ],
+    notes:
+      "A protocol primitive in the Agent Plumbing layer; manages agency itself rather than permissions (policy engines) or tasks (orchestrators). Operates on Authority Tokens and produces Decision Receipts. TDE is the methodology; Agent Plumbing is the team that ships it. Audience: product CTOs, infrastructure. Has a translation (judgment_routing). Pairs with Authority Tokens (the unit it operates on) and Decision Receipts (the artifact it produces). Nearest canonical neighbors: RBAC/ABAC and policy engines (e.g., OPA) and workflow/escalation engines — differs by routing judgment itself (authority context + reasoning payload) rather than permissions or tasks.",
+    source: "Owner's framework.",
+    tags: [
+      "trust_decision_engineering",
+      "agentic_delivery",
+      "protocol_primitive",
+      "owner_framework",
+      "audience:product_cto",
+      "audience:infrastructure",
+    ],
+  },
+  {
+    name: "Authority Tokens",
+    category: "trust_decision_engineering",
+    oneLiner:
+      "The atomic unit Judgment Routing operates on — carrying intent state across decision boundaries: not credentials or permissions but computable context about why an agent is operating and under what constraints.",
+    whenToUse:
+      "When you need IAM-for-decisions rather than IAM-for-access — moving the 'why' and 'under what constraint' across a boundary, not just the 'who may.'",
+    vocabulary: [
+      "authority token",
+      "intent state",
+      "decision boundary",
+      "computable context",
+      "constraint",
+      "IAM for decisions",
+    ],
+    notes:
+      "The atomic unit in the Agent Plumbing layer; Judgment Routing operates on it and Decision Receipts record what was done with it. Distinguish from credentials/permissions (access) — this carries intent and constraint (decisions). Audience: product CTOs, infrastructure. Has a translation (authority_tokens). Pairs with Judgment Routing and Decision Receipts. Nearest canonical neighbor: the object-capability model in security (capabilities convey authority, not identity — Dennis & Van Horn; Mark Miller) and claims-based tokens (OAuth/JWT) — differs by carrying intent and constraint (why, under what limits), i.e. 'IAM for decisions.'",
+    source: "Owner's framework.",
+    tags: [
+      "trust_decision_engineering",
+      "agentic_delivery",
+      "protocol_primitive",
+      "owner_framework",
+      "audience:product_cto",
+      "audience:infrastructure",
+    ],
+  },
+  {
+    name: "Decision Receipts",
+    category: "trust_decision_engineering",
+    oneLiner:
+      "The artifact an agent produces when it exercises authority — recording the context, the constraint, and the tradeoff evaluated, making delegation legible after the fact.",
+    whenToUse:
+      "When delegated authority needs to be reconstructable — the receipt is how an exercised judgment becomes auditable and contestable.",
+    vocabulary: [
+      "decision receipt",
+      "context",
+      "constraint",
+      "tradeoff",
+      "after-the-fact legibility",
+      "discharge",
+    ],
+    notes:
+      "The output artifact in the Agent Plumbing layer; pairs with Responsibility to Record — the receipt is the discharge of the obligation. Produced by Judgment Routing acting on Authority Tokens; feeds the Accountability Path. Audience: product CTOs, AI governance. Has a translation (decision_receipts). Pairs with RTR, Judgment Routing, Authority Tokens, Accountability Path. Nearest canonical neighbors: audit logs and provenance records, the Kantara consent-receipt spec, and XAI / 'right to explanation' (GDPR Art. 22) — differs by recording the context, constraint, and tradeoff an agent evaluated, as the discharge of a Responsibility to Record.",
+    source: "Owner's framework.",
+    tags: [
+      "trust_decision_engineering",
+      "agentic_delivery",
+      "protocol_primitive",
+      "owner_framework",
+      "audience:product_cto",
+      "audience:ai_governance",
+    ],
+  },
+  {
+    name: "Agent Plumbing (Agentic Plumbing)",
+    category: "trust_decision_engineering",
+    oneLiner:
+      "The not-yet-built infrastructure layer where Judgment Routing, Authority Tokens, and Decision Receipts live as shipping primitives — a horizontal capability function inside product organizations.",
+    whenToUse:
+      "When positioning the work as buildable infrastructure for product CTOs and infrastructure companies, not just methodology.",
+    vocabulary: [
+      "agent plumbing",
+      "agentic plumbing",
+      "horizontal capability function",
+      "shipping primitives",
+      "platform team",
+    ],
+    notes:
+      "The product-org translation of TDE: same org pattern as design-systems, developer-experience, and ML-platform teams — the team builds the primitives, TDE is the methodology the team executes. Houses Judgment Routing, Authority Tokens, and Decision Receipts. Audience: product CTOs, infrastructure companies. Has a translation (agent_plumbing). Pairs with TDE (the methodology) and the three primitives. Nearest canonical neighbor: platform engineering / internal developer platforms and Team Topologies' platform team (Skelton & Pais; see your Team Topologies card) — differs by shipping judgment/authority primitives rather than build/deploy paved roads.",
+    source: "Owner's framework.",
+    tags: [
+      "trust_decision_engineering",
+      "agentic_delivery",
+      "infrastructure",
+      "owner_framework",
+      "audience:product_cto",
+      "audience:infrastructure",
+    ],
+  },
+  {
+    name: "Accountability Path",
+    category: "trust_decision_engineering",
+    oneLiner:
+      "The contestability mechanism built into automated decisions: high-impact thresholds automatically route to human-led, contestable review.",
+    whenToUse:
+      "When an automated decision crosses an impact threshold and must remain challengeable by the person it affects.",
+    vocabulary: [
+      "accountability path",
+      "contestability",
+      "human-led review",
+      "impact threshold",
+      "routing",
+    ],
+    notes:
+      "An affirmative TDE primitive — the contestability counterpart to Judgment Routing's authority handling. Pairs with Judgment Routing and Decision Receipts (the receipt feeds the contest). Nearest canonical neighbors: GDPR Art. 22 (right to human review), administrative appeal / due process, and 'Contestable AI by Design' (Alfrink et al.) — differs by being a threshold-triggered automatic route into review, not an appeal the affected party must initiate.",
+    source: "Owner's framework.",
+    tags: [
+      "trust_decision_engineering",
+      "affirmative_practice",
+      "owner_framework",
+      "audience:ai_governance",
+    ],
+  },
+
+  // —— Civic-economics lexicon: conditions / failure modes ————————————————
+
+  {
+    name: "Substrate Degradation",
+    category: "public_mechanics",
+    oneLiner:
+      "The slow erosion of the trust and capacity layer that markets and institutions sit on — when extraction outpaces regeneration, the substrate thins. Burning the floor to heat the room.",
+    whenToUse:
+      "When the harm is systemic and ownerless — no single action is at fault but the shared substrate (trust, signal quality, collective sensemaking) is corroding.",
+    vocabulary: [
+      "substrate",
+      "extraction vs regeneration",
+      "thinning",
+      "ownerless aggregate",
+      "burning the floor to heat the room",
+    ],
+    notes:
+      "The failure mode TDE exists to prevent; opposed by Substrate Stewardship; ends in Trust Bankruptcy. Has a translation (substrate_degradation → model collapse / negative externalities). Audience: policy, AI governance, foundations. Pairs with Trust Bankruptcy, Civil Economics (the unaccounted Ve/Vr), and Substrate Stewardship. Nearest canonical neighbors: Hardin's tragedy of the commons, Putnam's social-capital erosion, and ecological depletion — differs by locating the harm in an ownerless aggregate where extraction outpaces regeneration, which per-system risk frameworks can't see.",
+    source: "Owner's framework.",
+    tags: [
+      "public_mechanics",
+      "failure_mode",
+      "owner_framework",
+      "audience:policy",
+      "audience:ai_governance",
+    ],
+  },
+  {
+    name: "Trust Bankruptcy",
+    category: "public_mechanics",
+    oneLiner:
+      "The condition where trust has been extracted faster than it can regenerate — the system still operates but can no longer absorb shocks or sustain new commitments.",
+    whenToUse:
+      "Naming the terminal state of substrate degradation in a specific institution or market.",
+    vocabulary: [
+      "trust bankruptcy",
+      "shock absorption",
+      "commitment capacity",
+      "regeneration deficit",
+    ],
+    notes:
+      "The end-state of Substrate Degradation. Pairs with Substrate Degradation and Legitimacy Tax. Nearest canonical neighbors: Fukuyama's low-trust society, Habermas's Legitimation Crisis, and insolvency / bank-run metaphors — differs by naming a still-operating system that can no longer absorb shocks or sustain new commitments.",
+    source: "Owner's framework.",
+    tags: ["public_mechanics", "failure_mode", "condition", "owner_framework"],
+  },
+  {
+    name: "Calculative Asymmetry",
+    category: "public_mechanics",
+    oneLiner:
+      "The condition where one party in a transaction can compute the full cost-benefit landscape and the other cannot — platform algorithms vs gig workers, vendor lifecycle models vs public procurement.",
+    whenToUse:
+      "When the unfairness is informational and computational, not just bargaining power — one side sees the whole board.",
+    vocabulary: [
+      "calculative asymmetry",
+      "cost-benefit landscape",
+      "computational asymmetry",
+      "one-sided computation",
+    ],
+    howToDropIn:
+      "\"It's not that one side has more power — it's that one side can compute the full cost-benefit landscape and the other can't. Bumble's biometric verification versus the user submitting the template.\"",
+    notes:
+      "The condition Mirror Signaling countermands. Examples: platform algorithms vs gig workers; vendor lifecycle models vs public procurement. Pairs with Mirror Signaling (the countermove). Nearest canonical neighbors: Akerlof/Spence/Stiglitz information asymmetry and Zuboff's 'asymmetries of knowledge and power' — differs by being about computational capacity to model the whole cost-benefit landscape, not merely hidden information; both sides may see the same facts.",
+    source: "Owner's framework.",
+    tags: ["public_mechanics", "condition", "owner_framework", "audience:policy"],
+  },
+  {
+    name: "Mirror Signaling",
+    category: "public_mechanics",
+    oneLiner:
+      "The design primitive that countermands Calculative Asymmetry: making visible to one party the calculations being made against them.",
+    whenToUse:
+      "When you want to restore symmetry by surfacing the decision weights or total cost to the party they're applied to.",
+    vocabulary: [
+      "mirror signaling",
+      "decision weights surfaced",
+      "total cost of ownership",
+      "user-facing computation",
+    ],
+    notes:
+      "Affirmative primitive against Calculative Asymmetry. Has a translation (mirror_signaling). Examples: transit dashboards showing total cost of ownership; user-facing surfaces showing the decision weights applied to a case. Pairs with Calculative Asymmetry and Decision Receipts. Nearest canonical neighbors: disclosure mandates and algorithmic transparency, and Spence-style signaling (which runs from the informed party — mirror signaling runs the other way) — differs by surfacing to the disadvantaged party the calculations being run against them.",
+    source: "Owner's framework.",
+    tags: ["public_mechanics", "affirmative_practice", "owner_framework"],
+  },
+  {
+    name: "Domain Firewalls",
+    category: "public_mechanics",
+    oneLiner:
+      "The design primitive that prevents financial instruments from weighting the outcome of non-financial processes — air gaps between civic and market logic.",
+    whenToUse:
+      "When market logic threatens to determine a civic outcome — election prediction markets vs election integrity, insurance markets vs medical decision-making.",
+    vocabulary: [
+      "domain firewall",
+      "air gap",
+      "civic vs market logic",
+      "non-financial process integrity",
+    ],
+    notes:
+      "Affirmative primitive protecting against Signal Pollution. Pairs with Signal Pollution (the condition it protects against) and Spatial Derivatives (the instruments it firewalls). Nearest canonical neighbors: Walzer's 'blocked exchanges' (Spheres of Justice), Sandel's moral limits of markets, and Radin's contested commodities — differs by being a design primitive (an air gap), not a normative argument about what money shouldn't buy.",
+    source: "Owner's framework.",
+    tags: [
+      "public_mechanics",
+      "affirmative_practice",
+      "owner_framework",
+      "audience:policy",
+    ],
+  },
+  {
+    name: "Signal Pollution",
+    category: "public_mechanics",
+    oneLiner:
+      "The destruction of the public's ability to engage in collective sensemaking — the atmospheric condition Domain Firewalls protect against.",
+    whenToUse:
+      "Naming the systemic erosion of shared sensemaking capacity.",
+    vocabulary: [
+      "signal pollution",
+      "collective sensemaking",
+      "atmospheric condition",
+    ],
+    notes:
+      "The condition Domain Firewalls protect against; a form of Substrate Degradation in the sensemaking layer. Pairs with Domain Firewalls and Substrate Degradation. Nearest canonical neighbors: Wardle & Derakhshan's 'information disorder,' Simon's attention scarcity, and Habermas's public-sphere degradation — differs by naming the destruction of collective-sensemaking capacity as an atmospheric condition, not a property of any single false message.",
+    source: "Owner's framework.",
+    tags: ["public_mechanics", "failure_mode", "owner_framework"],
+  },
+  {
+    name: "Legitimacy Tax",
+    category: "public_mechanics",
+    oneLiner:
+      "The trust drain caused by parasitic intermediation — the substrate cost of running activity through actors who extract without contributing.",
+    whenToUse:
+      "Naming the diffuse cost imposed when value flows through extractive middlemen.",
+    vocabulary: [
+      "legitimacy tax",
+      "trust drain",
+      "parasitic intermediation",
+      "substrate cost",
+    ],
+    notes:
+      "A named Ve in Civil Economics terms; caused by Parasitic Intermediation; contributes to Substrate Degradation. Pairs with Parasitic Intermediation and Civil Economics. Nearest canonical neighbors: Coase/Williamson transaction costs, rent-seeking deadweight loss, and Suchman's organizational legitimacy — differs by naming a trust drain (a substrate cost), not a monetary fee, levied by parasitic intermediation.",
+    source: "Owner's framework.",
+    tags: [
+      "public_mechanics",
+      "failure_mode",
+      "owner_framework",
+      "audience:economist",
+    ],
+  },
+
+  // —— Extraction mechanisms ——————————————————————————————————————————————
+
+  {
+    name: "Parasitic Intermediation",
+    category: "public_mechanics",
+    oneLiner:
+      "Actors inserting extraction layers into transaction flows without contributing to value creation — ticket scalping, payment fees on donations, vendor middlemen in public procurement.",
+    whenToUse:
+      "Naming a specific extractive intermediary in a value flow.",
+    vocabulary: [
+      "parasitic intermediation",
+      "extraction layer",
+      "rent",
+      "middleman",
+    ],
+    notes:
+      "The mechanism that imposes the Legitimacy Tax. Pairs with Legitimacy Tax and the Ambiguity Economy Loop. Nearest canonical neighbors: Tullock/Krueger rent-seeking and Mazzucato's value-extraction-vs-creation (The Value of Everything) — differs by specifying the mechanism: an intermediary inserting itself into a flow without contributing to value creation.",
+    source: "Owner's framework.",
+    tags: [
+      "public_mechanics",
+      "extraction",
+      "owner_framework",
+      "audience:policy",
+      "audience:economist",
+    ],
+  },
+  {
+    name: "Spatial Derivatives",
+    category: "public_mechanics",
+    oneLiner:
+      "Financial instruments attached to non-financial domains — election betting markets, policy futures, real estate financialization untethered from housing as shelter.",
+    whenToUse:
+      "Naming the financialization of a domain whose logic should not be financial.",
+    vocabulary: [
+      "spatial derivatives",
+      "financialization",
+      "non-financial domain",
+      "derivative instrument",
+    ],
+    notes:
+      "The instruments Domain Firewalls exist to air-gap. Pairs with Domain Firewalls and Signal Pollution. Nearest canonical neighbors: Polanyi's 'fictitious commodities' (The Great Transformation) and the financialization literature (Krippner) — differs by naming financial instruments attached to specifically non-financial civic domains (elections, policy, shelter).",
+    source: "Owner's framework.",
+    tags: [
+      "public_mechanics",
+      "extraction",
+      "owner_framework",
+      "audience:economist",
+      "audience:policy",
+    ],
+  },
+  {
+    name: "Ambiguity Economy Loop",
+    category: "public_mechanics",
+    oneLiner:
+      "The five-step pattern explaining how extraction scales: a regulated civic domain → a reframe detaches activity from the category ('not a hotel,' 'not a taxi') → intermediaries operationalize the gap → capital accelerates coordination faster than oversight → externalities land on public institutions.",
+    whenToUse:
+      "Explaining why a given extraction scaled — it works only because authority, accountability, and legitimacy stay ambiguous long enough.",
+    vocabulary: [
+      "ambiguity economy loop",
+      "category reframe",
+      "regulatory gap",
+      "oversight lag",
+      "externality landing",
+    ],
+    howToDropIn:
+      "\"The loop is five steps, and it only works because authority, accountability, and legitimacy stay ambiguous long enough for extraction to scale: regulated domain, reframe out of the category, intermediaries operationalize the gap, capital outruns oversight, externalities land on the public.\"",
+    notes:
+      "The master pattern tying the extraction mechanisms together. Pairs with Parasitic Intermediation, Spatial Derivatives, and Civil Economics (where the externalities land as Ve/Vr). Nearest canonical neighbor: Pollman & Barry's 'Regulatory Entrepreneurship' (the deliberate 'not a taxi / not a hotel' play) and regulatory-arbitrage / permissionless-innovation discourse — differs by specifying the five-step loop and locating its engine in sustained ambiguity of authority, accountability, and legitimacy.",
+    source: "Owner's framework.",
+    tags: [
+      "public_mechanics",
+      "extraction",
+      "pattern",
+      "owner_framework",
+      "audience:policy",
+      "audience:academic",
+    ],
+  },
+
+  // —— Affirmative practices ——————————————————————————————————————————————
+
+  {
+    name: "Substrate Stewardship",
+    category: "public_mechanics",
+    oneLiner:
+      "The affirmative practice opposing Substrate Degradation: legitimacy regeneration matching automation velocity — the discipline-level goal of TDE.",
+    whenToUse:
+      "Stating the positive goal — regenerating the trust/capacity layer as fast as automation consumes it.",
+    vocabulary: [
+      "substrate stewardship",
+      "legitimacy regeneration",
+      "regeneration velocity",
+    ],
+    notes:
+      "The discipline-level goal of TDE; opposes Substrate Degradation. Pairs with TDE and Substrate Degradation. Nearest canonical neighbors: Ostrom's Governing the Commons (design principles that sustain common-pool resources) and stewardship theory — differs by setting the bar as legitimacy regeneration matching automation velocity.",
+    source: "Owner's framework.",
+    tags: [
+      "public_mechanics",
+      "affirmative_practice",
+      "owner_framework",
+      "audience:foundations",
+      "audience:policy",
+    ],
+  },
+  {
+    name: "Design as Repair",
+    category: "public_mechanics",
+    oneLiner:
+      "Design oriented toward the maintenance and repair of public capability rather than novelty or disruption — drawing on Steven Jackson's repair turn in STS.",
+    whenToUse:
+      "The practice frame for the whole body of work; useful with design and STS audiences.",
+    vocabulary: [
+      "design as repair",
+      "maintenance",
+      "repair turn",
+      "public capability",
+    ],
+    notes:
+      "The practice frame from the IxDA Oslo keynote; draws on Steven Jackson's repair turn in STS. Sits under Consequence Design as a practice stance. Audience: design, STS, academics. Pairs with Consequence Design and Public Mechanics. Adjacent canon: Russell & Vinsel's The Maintainers (maintenance over innovation), extending the Jackson lineage already cited.",
+    source:
+      "Owner's framework; IxDA Oslo keynote. Lineage: Steven Jackson, 'Rethinking Repair' (STS).",
+    tags: [
+      "public_mechanics",
+      "affirmative_practice",
+      "design",
+      "owner_framework",
+      "audience:academic",
+    ],
+  },
 ];
