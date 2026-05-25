@@ -4409,4 +4409,107 @@ export const frameworks: Framework[] = [
       "audience:academic",
     ],
   },
+
+  // —— Creator economy / monetization UX (Twitch) —————————————————————————
+
+  {
+    name: "Twitch Creator Monetization Mechanics",
+    category: "creator_economy",
+    oneLiner:
+      "The concrete revenue surfaces a Monetization UX designer works on — subscriptions (Tier 1/2/3, Prime, gifted), Bits / Cheering, ads, the Hype Train, channel points, and the Affiliate/Partner program — most of which share revenue between creator and platform.",
+    whenToUse:
+      "Table-stakes fluency. Knowing the actual mechanics — and that they're not interchangeable — is the difference between sounding like a Twitch designer and a generic ecommerce one.",
+    vocabulary: [
+      "subscriptions (Tier 1/2/3, Prime, gifted)",
+      "Bits",
+      "Cheering",
+      "ads / ad revenue share",
+      "Hype Train",
+      "channel points",
+      "Affiliate / Partner",
+      "payout",
+      "revenue share",
+    ],
+    howToDropIn:
+      "\"These aren't one funnel — a recurring sub is a relationship, a Bit cheer is an impulsive in-the-moment gift, and channel points are non-monetary engagement. Designing them as if they were the same checkout is the classic mistake.\"",
+    commonPhrasing: "Creator monetization, Twitch Partner Program.",
+    notes:
+      "Subs are recurring (Tier 1 ~$4.99, higher tiers above; Prime subs are free to the viewer via Amazon Prime; gifted subs let viewers buy subs for others) and revenue-shared between creator and Twitch (commonly ~50/50, higher splits for some partners); Bits are a purchased virtual currency viewers Cheer with (creators earn per Bit); ads are share-based; the Hype Train is a time-boxed escalating group event; channel points are an earned (not purchased) loyalty currency with no direct revenue. Knowing which lever is recurring vs impulse vs non-monetary is the core design literacy. Pair with Virtual Goods & Engagement Currencies and the Multi-Sided Creator Marketplace.",
+    source: "Twitch monetization product (Partner/Affiliate program, Bits, subs, Hype Train).",
+    tags: ["creator_economy", "monetization", "twitch", "framework"],
+  },
+  {
+    name: "Virtual Goods & Engagement Currencies",
+    category: "creator_economy",
+    oneLiner:
+      "The design of in-platform currencies — purchased (Bits) vs earned (channel points) — and the psychology of why people spend or tip in a live, social context where the spend is itself a visible social signal.",
+    whenToUse:
+      "Designing cheering, tipping, gifting, and points-redemption flows, where the motivation is social and emotional (support, status, recognition) more than transactional.",
+    vocabulary: [
+      "virtual currency",
+      "Bits",
+      "channel points",
+      "tipping",
+      "gifting",
+      "virtual goods",
+      "on-screen recognition",
+      "status / visibility",
+      "sink vs faucet",
+    ],
+    howToDropIn:
+      "\"A Cheer isn't a purchase, it's a public gesture — the value to the viewer is being seen supporting the creator in front of the community. Design it as a social signal and the conversion logic is completely different from an ecommerce cart.\"",
+    commonPhrasing: "Virtual-economy design, tipping / gifting UX.",
+    notes:
+      "Purchased currencies (Bits) and earned currencies (channel points) follow different economic logic — faucets and sinks, scarcity, and the visibility/status payoff. Live context makes spending performative (a Cheer shows up on stream), the lever ecommerce checkout doesn't have. Closer to game-economy and live-gifting design (TikTok/YouTube live gifts) than to retail. Pair with Twitch Creator Monetization Mechanics and Monetization UX Ethics (the same visibility that drives spend can tip into pressure).",
+    source: "Virtual-economy and live-gifting design practice.",
+    tags: ["creator_economy", "monetization", "virtual_goods", "framework"],
+  },
+  {
+    name: "The Multi-Sided Creator Marketplace",
+    category: "creator_economy",
+    oneLiner:
+      "Monetization UX on Twitch serves three parties at once — the creator who earns, the viewer who pays, and the platform that takes a share — so every design decision is a three-way balance, not a single-user optimization.",
+    whenToUse:
+      "Any monetization design or tradeoff conversation. The JD's 'balance business goals with creator and viewer trust' is exactly this three-body problem.",
+    vocabulary: [
+      "multi-sided marketplace",
+      "two-sided / three-sided",
+      "creator / viewer / platform",
+      "revenue share",
+      "take rate",
+      "alignment",
+      "incentive design",
+    ],
+    howToDropIn:
+      "\"Every monetization surface has three users with partly-opposed interests — the creator wants to earn, the viewer wants to feel good about paying, and the platform needs its share. Optimizing for any one alone breaks the other two; the craft is the balance.\"",
+    commonPhrasing: "Marketplace design, platform economics, monetization strategy.",
+    notes:
+      "Classic multi-sided-platform economics (Rochet & Tirole) at the UX layer; the take rate (the platform's cut) is the structural tension creators feel and viewers increasingly notice. Your systems-thinking and service-blueprint background maps directly — the marketplace is a service with three front-stages. This is also where your Civil Economics / take-rate framing is a genuine differentiator: you can reason about where value lands across the three parties, not just optimize one funnel. Pair with Monetization UX Ethics and your Civil Economics card.",
+    source: "Multi-sided platform economics (Rochet & Tirole) applied to creator-monetization UX.",
+    tags: ["creator_economy", "monetization", "marketplace", "framework"],
+  },
+  {
+    name: "Monetization UX Ethics (Fair-by-Design vs Dark Patterns)",
+    category: "creator_economy",
+    oneLiner:
+      "Designing revenue experiences that 'feel natural, rewarding, and fair' (the JD's words) rather than extractive — the line between a well-designed prompt and a dark pattern, in a context where the people being monetized are a community whose trust is the platform's actual asset.",
+    whenToUse:
+      "The JD's central value tension — 'creator and viewer trust,' monetization that 'feels intuitive and fair.' This is where you can bring something most UX candidates can't.",
+    vocabulary: [
+      "dark patterns / deceptive patterns",
+      "fair-by-design",
+      "consent",
+      "pressure vs invitation",
+      "trust",
+      "transparency",
+      "sludge",
+    ],
+    howToDropIn:
+      "\"The test for a monetization surface is whether it would survive the user understanding exactly how it works — a fair prompt gets stronger when explained; a dark pattern dies. On a community platform, trust is the substrate the whole business sits on: extract it faster than it regenerates and you've burned the floor to heat the room.\"",
+    commonPhrasing: "Ethical design, responsible monetization, trust & safety.",
+    notes:
+      "The recognized canon is Harry Brignull's dark / deceptive patterns and the sludge literature (Thaler & Sunstein). But this is the cleanest bridge to YOUR framework stack: 'feels fair' is Calculative Asymmetry (does the viewer understand the cost-benefit, or only the platform?) countered by Mirror Signaling (surface the real cost to the user); 'creator/viewer trust' degrading under aggressive monetization is Substrate Degradation and the Legitimacy Tax in consumer-product clothing. Lead with the standard vocabulary in the room, but this is where your public-mechanics work becomes a hiring differentiator rather than a side interest. Pair with your Calculative Asymmetry, Mirror Signaling, Substrate Degradation, and Legitimacy Tax cards.",
+    source: "Brignull (deceptive / dark patterns); Thaler & Sunstein (sludge). Bridge to owner's framework stack.",
+    tags: ["creator_economy", "monetization", "ethics", "framework", "owner_framework_bridge"],
+  },
 ];
