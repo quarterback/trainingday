@@ -3353,4 +3353,157 @@ export const frameworks: Framework[] = [
     source: "LLM observability and guardrails practice (tracing tools, safety-filter frameworks).",
     tags: ["ai_engineering", "ai", "observability", "operations"],
   },
+
+  // —— Career services / student success ——————————————————————————————————
+
+  {
+    name: "First-Destination Outcomes (NACE)",
+    category: "career_services",
+    oneLiner:
+      "The post-graduation outcomes data — employed, in grad school, pursuing fellowships, still seeking — measured roughly six months out, which is the field's primary lagging metric and the number boards, rankings, and parents watch.",
+    whenToUse:
+      "Any conversation about whether a career center is working, or about accountability to the board. This is the lagging indicator the JD's 'leading and lagging indicators' line is really pointing at.",
+    vocabulary: [
+      "First-Destination Survey",
+      "knowledge rate",
+      "career outcomes rate",
+      "post-graduate outcomes",
+      "six-months-out",
+      "NACE standards",
+      "first-destination",
+    ],
+    howToDropIn:
+      "\"Our lagging metric is the First-Destination outcome — where students land six months out, at a defensible knowledge rate. But you can't manage a lagging metric directly; you manage the leading indicators of engagement that produce it.\"",
+    commonPhrasing:
+      "Career services leadership, institutional research, board and cabinet reporting.",
+    notes:
+      "NACE (National Association of Colleges and Employers) sets the First-Destination Survey standards; 'knowledge rate' (the share of graduates you actually have data on) is the credibility gate — a high outcomes rate on a low knowledge rate is noise. This is the lagging half of the JD's 'leading and lagging indicators'; pair it with early-engagement participation as the leading half. Your delivery-metrics instinct — don't celebrate a number you can game by moving the denominator (see the comp-sales / north-star translation) — maps exactly: knowledge rate is the denominator discipline. Pair with Career Readiness Competencies.",
+    source: "NACE First-Destination Survey Standards and Protocols; standard higher-ed career-services practice.",
+    tags: ["career_services", "higher_ed", "metrics", "outcomes"],
+  },
+  {
+    name: "NACE Career Readiness Competencies",
+    category: "career_services",
+    oneLiner:
+      "NACE's eight competencies — communication, critical thinking, teamwork, professionalism, leadership, equity & inclusion, career & self-development, technology — that reframe career services as developmental education rather than job placement.",
+    whenToUse:
+      "The single best tool for the JD's central tension: arguing CLBR's work is an expression of the liberal arts mission, not a concession to vocationalism. The competencies are the bridge.",
+    vocabulary: [
+      "career readiness",
+      "the eight competencies",
+      "competency-based",
+      "developmental",
+      "durable skills",
+      "transferable skills",
+    ],
+    howToDropIn:
+      "\"Career readiness isn't placement — NACE frames it as eight developmental competencies, most of which a liberal arts education already builds better than anyone. Our job isn't to bolt vocational training onto Reed; it's to help students name and translate what the education already gave them.\"",
+    commonPhrasing:
+      "Career-services strategy, faculty partnership conversations, the anti-vocationalism argument.",
+    notes:
+      "This is the rhetorical key to the whole role. The JD is explicitly wary of vocationalism and wants someone who can argue the work is mission-aligned; the NACE competencies are the field's own answer to exactly that anxiety. They let you tell faculty 'we develop the same capacities you do, and help students articulate them' rather than 'we get them jobs.' This is itself a translation move — naming what's already there in another register — which is your core strength. Pair with the liberal-arts-to-career translation and High-Impact Practices.",
+    source: "NACE Career Readiness Competencies (National Association of Colleges and Employers).",
+    tags: ["career_services", "higher_ed", "framework", "positioning"],
+  },
+  {
+    name: "Experiential Learning (Kolb / Internships)",
+    category: "career_services",
+    oneLiner:
+      "The learn-by-doing-plus-reflection model — internships, research, project work — where structured reflection is what converts an experience into learning; the backbone of the JD's internships and EXEL pillar.",
+    whenToUse:
+      "Designing or defending the internship and experiential-learning strategy, and explaining why funded internships and the reflection layer matter — not just placement counts.",
+    vocabulary: [
+      "experiential learning",
+      "Kolb cycle",
+      "reflection",
+      "internship",
+      "EXEL",
+      "funded internship",
+      "equity of access",
+      "academic integration",
+    ],
+    howToDropIn:
+      "\"An internship isn't experiential learning until there's reflection wrapped around it — that's Kolb. The design questions are the funding and the reflection structure, because that's what turns a summer job into something that compounds, and what keeps access from being means-tested by who can afford an unpaid role.\"",
+    commonPhrasing:
+      "Experiential learning programs, internship strategy, academic-integration conversations.",
+    notes:
+      "David Kolb's cycle (concrete experience → reflective observation → abstract conceptualization → active experimentation) is the theoretical spine; the equity angle (funded internships so access isn't means-tested) is both a JD requirement and a mission-alignment point. Reed's EXEL is the non-academic-credit experiential mechanism this Director administers. Your service-design instinct applies cleanly: the experience is front-stage, the funding and reflection scaffolding is the back-stage that makes it actually deliver. Pair with High-Impact Practices.",
+    source: "Kolb, 'Experiential Learning: Experience as the Source of Learning and Development' (1984); NACE/CAS internship standards.",
+    tags: ["career_services", "higher_ed", "experiential_learning", "framework"],
+  },
+  {
+    name: "High-Impact Practices (Kuh / AAC&U)",
+    category: "career_services",
+    oneLiner:
+      "George Kuh's set of educational practices — internships, undergraduate research, capstones, learning communities, service learning — empirically linked to deeper learning and better outcomes, especially for underserved students.",
+    whenToUse:
+      "Making the equity case and the academic-integration case at once. HIPs are the research-backed bridge between 'career readiness' and 'deeper learning,' and they disproportionately help the students the JD's equity bullet centers.",
+    vocabulary: [
+      "high-impact practices",
+      "HIPs",
+      "undergraduate research",
+      "capstone",
+      "service learning",
+      "equity gap",
+      "AAC&U",
+      "LEAP",
+    ],
+    howToDropIn:
+      "\"Internships and undergraduate research are high-impact practices in Kuh's sense — they move the needle most for first-gen and underserved students. So expanding funded access isn't equity for its own sake; it's aiming the most effective educational intervention we have at the students who benefit most.\"",
+    commonPhrasing:
+      "Equity-focused programming, academic-affairs partnerships, assessment conversations.",
+    notes:
+      "George Kuh and AAC&U (Association of American Colleges & Universities) established the HIPs framework; the equity finding — HIPs close achievement and outcome gaps — is what makes it strategically powerful in a mission-driven, equity-focused shop like this one. It also gives you common ground with faculty: HIPs live in the curriculum, so career work framed as HIPs is a partnership, not an intrusion. Pair with Experiential Learning and Career Readiness Competencies.",
+    source: "Kuh, 'High-Impact Educational Practices' (AAC&U, 2008).",
+    tags: ["career_services", "higher_ed", "equity", "framework"],
+  },
+  {
+    name: "Embedded / Connected Career Model",
+    category: "career_services",
+    oneLiner:
+      "The strategic shift from a central, opt-in career office students visit senior year to career education embedded across four years and integrated with the curriculum and faculty.",
+    whenToUse:
+      "Articulating CLBR's strategic vision. The JD wants 'early engagement... sustained across all four years' and career development 'embedded into academic and co-curricular programs.' This is the name for that.",
+    vocabulary: [
+      "connected / embedded model",
+      "four-year model",
+      "curriculum integration",
+      "faculty partnership",
+      "distributed career education",
+      "just-in-time advising",
+      "scaling beyond the one-on-one",
+    ],
+    howToDropIn:
+      "\"The opt-in senior-year office reaches the students who already know to come — and misses everyone else, which is an equity problem before it's a coverage problem. The strategic move is a connected model: career education embedded across four years and into the curriculum, so engagement isn't self-selecting.\"",
+    commonPhrasing:
+      "Career-services strategy, the modern field's direction, cabinet-level vision-setting.",
+    notes:
+      "This has been the field's dominant strategic narrative for the last decade — the 'career everywhere' / connected-communities move away from the placement-office model (e.g., the work out of Stanford's career education and similar reorganizations). It directly answers the JD's early-engagement and academic-integration requirements, and it's where your systems-design and journey-management strength is a genuine asset: designing the distributed touchpoint architecture is exactly the service-blueprint problem. The equity rationale — opt-in self-selects for the already-advantaged — is the throughline. Pair with the activation / early-engagement translation.",
+    source: "Contemporary career-services strategy (connected/embedded career-education models); NACE professional practice.",
+    tags: ["career_services", "higher_ed", "strategy", "framework"],
+  },
+  {
+    name: "National Fellowships Advising",
+    category: "career_services",
+    oneLiner:
+      "The specialized institutional apparatus for advising students toward nationally competitive fellowships — Rhodes, Marshall, Fulbright, Truman, Goldwater, Watson — where institutional endorsement, mentorship, and a months-long application cycle are the work.",
+    whenToUse:
+      "The fellowships pillar of the JD. Worth fluency even though it's a smaller slice, because it's prestige-bearing, faculty-adjacent, and culturally resonant at an intellectually intense college.",
+    vocabulary: [
+      "nationally competitive fellowships",
+      "Rhodes / Marshall / Fulbright / Truman / Watson / Goldwater",
+      "institutional endorsement",
+      "campus committee",
+      "NAFA",
+      "application cycle",
+    ],
+    howToDropIn:
+      "\"Fellowships advising is low-volume, high-touch, and faculty-entangled — the institutional endorsement and the committee process matter as much as the student's essay. It's also where an intellectually intense culture is a structural advantage, and where wins are visible to faculty and trustees.\"",
+    commonPhrasing:
+      "Fellowships advising, prestige scholarships, faculty-mentorship conversations.",
+    notes:
+      "NAFA (National Association of Fellowships Advisors) is the professional body. Reed has historically punched above its weight on fellowships, so this pillar plays to institutional pride and faculty relationships — both things the JD's culture bullets prize. For a non-traditional candidate, this is the pillar to show you respect rather than overclaim; signaling that you'd hire and partner well here reads as judgment, not bluffing. Pair with the faculty-partnership angle and the authorizing_environment translation.",
+    source: "NAFA (National Association of Fellowships Advisors); standard fellowships-advising practice.",
+    tags: ["career_services", "higher_ed", "fellowships", "framework"],
+  },
 ];

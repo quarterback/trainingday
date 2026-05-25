@@ -507,4 +507,95 @@ export const translations: Translation[] = [
       "Inside an AI/ML org, the words are 'evals,' 'eval set,' 'LLM-as-judge,' and 'red-teaming,' with 'benchmark' for standardized public ones. Saying 'let's run a usability study on the model' reads as not knowing the register; saying 'we need an eval set with a scoring rubric and a red-team pass on the edge cases' reads as a practitioner. The disciplines are cousins, but use the AI words in the AI room.",
     tags: ["translation", "ai", "design", "evaluation"],
   },
+  {
+    yourTerm: "activation",
+    standardTerms: [
+      "early engagement",
+      "first-year programming",
+      "four-year engagement model",
+      "student outreach",
+      "onboarding",
+      "first-touch",
+    ],
+    explanation:
+      "Product and growth call the first meaningful action a user takes 'activation,' and the discipline of driving it early 'onboarding.' Career services calls the same thing 'early engagement' — the JD's 'systems that reach students in the first year and sustain meaningful contact across all four years.' Same problem (value compounds the earlier and more reliably you engage; self-selection is the enemy) and same solution shape (designed, proactive touchpoints rather than waiting for the student to show up).",
+    whenToUseYours:
+      "With product, growth, and data-literate cabinet or board audiences, 'activation' and 'onboarding funnel' frame early engagement as a designed system with measurable first-touch and reach metrics — which is how to make the impact case to people who think in numbers.",
+    whenToUseTheirs:
+      "In a career-services or academic-affairs room, the words are 'early engagement,' 'first-year programming,' and 'the four-year model.' Saying 'activation funnel' to faculty reads as corporate; saying 'we reach students in year one and sustain contact across four years, and here's the participation data' reads as someone who knows the field. The systems thinking is the asset; let the vocabulary be theirs.",
+    tags: ["translation", "career_services", "higher_ed", "positioning"],
+  },
+  {
+    yourTerm: "engagement_metrics",
+    standardTerms: [
+      "student penetration",
+      "participation rate",
+      "reach",
+      "first-destination outcomes",
+      "knowledge rate",
+      "leading and lagging indicators",
+      "post-graduate outcomes",
+    ],
+    explanation:
+      "The JD literally asks for 'leading and lagging indicators.' Translated: leading = engagement, participation, and reach (who you're touching, how early, how often); lagging = first-destination outcomes (where students land six months out). The discipline is identical to any funnel-to-outcome model — you can't manage the lagging number directly, so you identify the leading engagement metrics that predict it and manage those. Your product-analytics fluency is a direct, under-supplied asset here.",
+    whenToUseYours:
+      "When making the impact case to senior leadership or the board, the leading/lagging structure plus a clean denominator discipline (don't celebrate an outcomes rate built on a low knowledge rate) is exactly the rigor the JD's data bullet is screening for. Frame it as the funnel-to-outcome logic you've run elsewhere.",
+    whenToUseTheirs:
+      "Inside the field, 'first-destination,' 'knowledge rate,' and 'penetration / participation' are the operating words (NACE sets the standards). Use them. Talking about 'DAU' or 'activation rate' for students reads as importing the wrong register; talking about participation reach by class year against first-destination outcomes reads as a practitioner who also happens to be unusually data-strong.",
+    tags: ["translation", "career_services", "higher_ed", "metrics"],
+  },
+  {
+    yourTerm: "partnerships_pipeline",
+    standardTerms: [
+      "employer relations",
+      "employer engagement",
+      "internship pipeline",
+      "recruiting partnerships",
+      "employer development",
+      "graduate-school partnerships",
+    ],
+    explanation:
+      "Business-development 'pipeline' and 'partner development' map onto career services' 'employer relations' — cultivating the organizations that hire graduates, fund internships, and offer fellowships. Same relationship-cultivation discipline (identify → cultivate → steward → measure conversion), tuned to a context where the 'product' is access for students and the relationships are reciprocal and long-horizon rather than transactional.",
+    whenToUseYours:
+      "When the audience is commercially fluent, 'pipeline' and 'partner development' frame employer relations as a managed portfolio with conversion metrics — useful for showing you'd run it with rigor rather than as ad-hoc networking.",
+    whenToUseTheirs:
+      "In the field, it's 'employer relations' and 'employer engagement,' and the relationship logic is reciprocity and student access, not a sales quota. Talking about 'closing employer deals' reads as someone who'd treat students as inventory; talking about building durable employer partnerships that expand equitable access reads as mission-aligned. Same pipeline discipline, very different framing of who it serves.",
+    tags: ["translation", "career_services", "advancement", "positioning"],
+  },
+  {
+    yourTerm: "platform_strategy",
+    standardTerms: [
+      "Handshake",
+      "career services technology",
+      "CRM for student outreach",
+      "outcomes / CSM platform",
+      "systems optimization",
+      "reporting and impact measurement",
+    ],
+    explanation:
+      "The JD's 'manage and optimize career services technology systems for reporting, outreach, and impact measurement' is platform strategy in a domain-specific stack — Handshake (the dominant recruiting and engagement platform), a CRM for outreach, and an outcomes/assessment tool. Most career-services leaders inherit these tools rather than architecting them, so a leader who actually thinks about the data model, integration, and measurement layer is rare — and this is one of your strongest transferable assets for the role.",
+    whenToUseYours:
+      "Lead with this as a genuine differentiator. Your platform and systems-strategy background turns 'we have Handshake' into 'we have an instrumented engagement-to-outcomes pipeline.' For a non-traditional candidate, the systems competency is the thing the typical applicant pool won't have.",
+    whenToUseTheirs:
+      "Name the actual tools — Handshake especially — so you sound like you know the domain rather than waving at generic 'platforms.' Knowing that Handshake is the engagement/recruiting layer and that outcomes data is a separate measurement problem signals fluency. Pitch the architecture, but in their nouns.",
+    tags: ["translation", "career_services", "higher_ed", "positioning"],
+  },
+  {
+    yourTerm: "external_representation",
+    standardTerms: [
+      "donor cultivation",
+      "stewardship",
+      "advancement",
+      "alumni engagement",
+      "trustee / board presentation",
+      "constituent relations",
+    ],
+    explanation:
+      "This role sits inside the College Advancement division, so 'representing the work' includes donor meetings, stewardship, and trustee presentations — fundraising-adjacent relationship work with its own vocabulary (the gift cycle: cultivation → solicitation → stewardship). Your experience briefing executives and representing work to external stakeholders is the transferable core; advancement adds the gift-cycle framing and the expectation that relationships are cultivated toward measurable engagement and giving.",
+    whenToUseYours:
+      "In a general-leadership frame, 'representing the work to executives and external stakeholders' is the portable claim and maps to what you've done. Pair it with a concrete instance of moving a skeptical external constituency.",
+    whenToUseTheirs:
+      "In an advancement shop, 'cultivation' and 'stewardship' are terms of art with a specific sequence; 'donor meetings' and 'board presentations' are the concrete asks. Showing you understand the gift cycle — that stewardship is the step after a gift, not a synonym for it — signals you can operate inside Advancement rather than merely adjacent to it. Note this role reports to the VP for College Advancement, so the division's vocabulary is not optional. Pair with the authorizing_environment translation for the faculty-buy-in side.",
+    tags: ["translation", "career_services", "advancement", "positioning"],
+  },
 ];
