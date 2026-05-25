@@ -3666,4 +3666,129 @@ export const frameworks: Framework[] = [
     source: "Standard sports ticketing / membership retention practice.",
     tags: ["sports_venue", "retention", "revenue", "framework"],
   },
+
+  // —— Forward-deployed / applied AI ——————————————————————————————————————
+
+  {
+    name: "Forward-Deployed Engineering (the motion)",
+    category: "forward_deployed",
+    oneLiner:
+      "The model where engineers embed inside the customer's environment and build production software in their systems — high autonomy, high ambiguity, customer-facing — rather than handing specs to a delivery team or writing recommendations.",
+    whenToUse:
+      "Understanding the role identity itself. An FDE is not a solutions architect (advises) or a support engineer (reactive) — they build, in the customer's stack, and own whether it works.",
+    vocabulary: [
+      "forward-deployed",
+      "embed",
+      "white-glove",
+      "autonomy under ambiguity",
+      "build in the customer's systems",
+      "ship to production",
+      "founding motion",
+    ],
+    howToDropIn:
+      "\"An FDE isn't a consultant who writes recommendations or an SE who runs demos — you embed and ship production code in the customer's environment, and you own whether it works. The job is high-agency building under ambiguity, then codifying what you learn so it scales past you.\"",
+    commonPhrasing: "Forward-deployed engineering, professional services, applied AI.",
+    notes:
+      "The model originated at Palantir and is now common at frontier-AI and data companies; the defining traits are (1) you write production code in the customer's systems, not slideware, (2) you operate autonomously inside a messy org, and (3) you feed patterns back to Product/Eng so bespoke work becomes reusable. As a 'founding FDE' the JD is also asking you to help define the motion, not just execute it. Pair with Codifying Repeatable Deployment Patterns and the consulting_engagement translation.",
+    source: "Forward-deployed engineering practice (Palantir-origin; now standard at applied-AI companies).",
+    tags: ["forward_deployed", "applied_ai", "role", "framework"],
+  },
+  {
+    name: "Technical Discovery & Workflow Mapping",
+    category: "forward_deployed",
+    oneLiner:
+      "The consultative front-end of an FDE engagement — sitting with customer teams to map their actual workflows, find the high-value, AI-amenable problem, and define what 'working' means before building anything.",
+    whenToUse:
+      "The JD's 'conduct discovery with customers' and 'understand customer workflows.' Discovery is what separates building the right thing from building a thing well.",
+    vocabulary: [
+      "discovery",
+      "workflow mapping",
+      "problem framing",
+      "success criteria",
+      "the high-value workflow",
+      "build-vs-buy",
+      "scoping",
+    ],
+    howToDropIn:
+      "\"Before writing a line of Claude integration, the work is discovery — mapping the customer's real workflow, finding the one task where AI changes the economics, and agreeing on how we'll know it worked. Most failed AI deployments are well-built solutions to the wrong workflow.\"",
+    commonPhrasing: "Customer discovery, solution scoping, requirements.",
+    notes:
+      "This is your design-research / contextual-inquiry muscle (you have those cards) pointed at enterprise AI workflows — the difference is you're hunting for the workflow where an LLM or agent meaningfully shifts cost, speed, or quality, and you're defining evals as the success contract. The output is a buildable technical scope plus an eval, not a research deck. Pair with LLM Evaluation (Evals).",
+    source: "FDE / solutions-engineering discovery practice.",
+    tags: ["forward_deployed", "applied_ai", "discovery", "framework"],
+  },
+  {
+    name: "Claude Production Artifacts (MCP Servers, Sub-Agents, Agent Skills)",
+    category: "forward_deployed",
+    oneLiner:
+      "The three concrete deliverables the JD names — MCP servers (standardized tool/data connections for models), sub-agents (specialized delegated agents within a larger system), and Agent Skills (packaged, progressively-disclosed capabilities) — that an FDE ships into customer production workflows.",
+    whenToUse:
+      "Knowing the actual artifacts you'd build, and being able to say when each is the right tool. These are named explicitly in the responsibilities.",
+    vocabulary: [
+      "MCP (Model Context Protocol)",
+      "MCP server",
+      "tools",
+      "sub-agent",
+      "orchestration",
+      "Agent Skills",
+      "SKILL.md",
+      "progressive disclosure",
+    ],
+    howToDropIn:
+      "\"The deliverables are concrete: an MCP server when the model needs governed access to a customer's tools and data; a sub-agent when a specialized task should be delegated with its own context; an Agent Skill when you want to package a repeatable capability the agent loads on demand. The craft is choosing the smallest artifact that solves the workflow.\"",
+    commonPhrasing: "Agent development, Claude integration, MCP.",
+    notes:
+      "MCP (Model Context Protocol) is Anthropic's open standard for connecting models to tools and data via servers; sub-agents are specialized agents an orchestrator invokes to keep context focused; Agent Skills package instructions and scripts a model loads progressively (the SKILL.md model — this very trainingday repo is built and run with Claude Code, which uses skills, so you have hands-on proof). Mapping a customer workflow to the right artifact — and not over-engineering — is the core craft. Pair with Agent Orchestration Patterns and Context Engineering (both already in your deck).",
+    source: "Anthropic MCP, sub-agents, and Agent Skills documentation; Claude Code practice.",
+    tags: ["forward_deployed", "applied_ai", "agents", "framework"],
+  },
+  {
+    name: "Codifying Repeatable Deployment Patterns",
+    category: "forward_deployed",
+    oneLiner:
+      "The discipline that separates an FDE from a one-off consultant — turning bespoke customer builds into reusable patterns, templates, and product feedback so the next deployment is faster and Product/Eng can productize the field learning.",
+    whenToUse:
+      "The JD's 'identify and codify repeatable deployment patterns and contribute insights back to Product and Engineering.' This is how the FDE motion scales and how you earn influence on the roadmap.",
+    vocabulary: [
+      "repeatable patterns",
+      "reference architecture",
+      "templates",
+      "productize",
+      "field feedback loop",
+      "deployment playbook",
+      "scale beyond bespoke",
+    ],
+    howToDropIn:
+      "\"The trap in forward-deployed work is becoming a bespoke services shop that doesn't scale. The discipline is to build the customer solution and extract the reusable pattern — a template, a reference architecture, a product gap to file — so the tenth deployment is ten times faster and the field is feeding the roadmap.\"",
+    commonPhrasing: "Solutions patterns, professional-services productization, product feedback.",
+    notes:
+      "This is the strategic core of a healthy FDE org: every engagement should leave behind a reusable artifact and a signal to Product/Eng, or the motion stays linear-cost. For a founding FDE it's doubly weighted — you're defining the playbook. Your platform / systems-thinking background (turning one-offs into platforms) is a direct asset. Pair with Forward-Deployed Engineering and the reusable_assets translation.",
+    source: "FDE / professional-services scaling practice.",
+    tags: ["forward_deployed", "applied_ai", "strategy", "framework"],
+  },
+  {
+    name: "White-Glove Enterprise AI Deployment",
+    category: "forward_deployed",
+    oneLiner:
+      "Getting an AI application from working-on-my-laptop to running safely in a regulated enterprise — the security reviews, IT/identity integration, data governance, change management, and reliability bar that enterprise production demands.",
+    whenToUse:
+      "The JD's 'white glove deployment support in enterprise environments' and 'enterprise IT systems / deployment patterns.' The hard part of enterprise AI is rarely the model; it's everything around it.",
+    vocabulary: [
+      "enterprise deployment",
+      "security review",
+      "SSO / identity",
+      "data governance",
+      "VPC / private deployment",
+      "change management",
+      "reliability / SLA",
+      "procurement",
+    ],
+    howToDropIn:
+      "\"In an enterprise, the model is the easy 20%. The white-glove work is the security review, the identity and data-governance integration, the reliability bar, and the change management to get humans to actually adopt it. Shipping into a regulated environment is a different sport than a demo.\"",
+    commonPhrasing: "Enterprise deployment, IT/security, adoption.",
+    notes:
+      "Enterprise verticals (financial services, healthcare/life sciences — both called out as a plus) add compliance, data-residency, and audit constraints; the FDE navigates the customer's IT, security, and procurement as much as their code. Your enterprise background (large-org delivery, matrixed influence — you have the Matrixed Organization card) and change-management instincts transfer here. Pair with Responsible AI & AI Governance and Guardrails & LLM Observability (both already in your deck).",
+    source: "Enterprise AI deployment practice; Anthropic enterprise patterns.",
+    tags: ["forward_deployed", "applied_ai", "enterprise", "framework"],
+  },
 ];

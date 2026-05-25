@@ -668,4 +668,55 @@ export const translations: Translation[] = [
       "Talk about 'in-venue versus remote fandom' and the 'fan journey,' and show you grasp the asymmetry: the building holds ~17,000 but the fanbase is millions, so digital growth is mostly about fans who never attend. That reframe — not just 'integrate the app with the website' — is what separates a retail omnichannel answer from a sports digital-strategy answer. Pair with Fan Journey & Remote Fandom.",
     tags: ["translation", "sports_venue", "digital", "positioning"],
   },
+  {
+    yourTerm: "consulting_engagement",
+    standardTerms: [
+      "forward-deployed engagement",
+      "white-glove deployment",
+      "embed",
+      "implementation",
+      "field engineering",
+    ],
+    explanation:
+      "A traditional consulting / SI engagement (scope -> advise -> hand off to a delivery team) versus the forward-deployed model (embed in the customer's environment and build the production software yourself). The customer-facing discovery and stakeholder navigation are shared; the difference is the FDE writes the production code and owns the outcome rather than producing recommendations or specs for someone else to implement.",
+    whenToUseYours:
+      "With a services / consulting audience, framing it as 'embedded delivery' communicates the customer-facing and ambiguity-navigation skills you've built.",
+    whenToUseTheirs:
+      "At Anthropic, lead with 'forward-deployed' and 'shipping to production in the customer's systems' — and be ready for the bright line they care about: did you write the code that went live, or did you advise a team that did? The JD and the application question ('Have you shipped agents into production?') screen hard for builders, not advisors. Pitch the building, not the deck.",
+    tags: ["translation", "forward_deployed", "applied_ai", "positioning"],
+  },
+  {
+    yourTerm: "proof_of_concept",
+    standardTerms: [
+      "production deployment",
+      "shipped to production",
+      "production workflow",
+      "GA / live",
+      "in production",
+    ],
+    explanation:
+      "Enterprise innovation work often stops at POC or pilot — a demo that proves feasibility. The FDE bar is production: the artifact runs in the customer's live workflow, with the reliability, security, and eval rigor that implies. The build skills overlap, but 'I built a POC' and 'I shipped an agent into production' are different claims, and this role explicitly screens for the latter.",
+    whenToUseYours:
+      "Only if the work genuinely stopped at POC — then be honest about it and emphasize the transferable build skills rather than overclaiming.",
+    whenToUseTheirs:
+      "If you've shipped anything into a real production workflow — even internal — lead with that framing, because there's a literal yes/no application question on it. 'Production' here means real users, real reliability expectations, real consequences; don't inflate a pilot, because the interview will probe it. If your strongest agent work is the trainingday system itself, frame it accurately: a built-and-running tool deployed via Vercel, not an enterprise production deployment.",
+    tags: ["translation", "forward_deployed", "applied_ai", "positioning"],
+  },
+  {
+    yourTerm: "reusable_assets",
+    standardTerms: [
+      "repeatable deployment patterns",
+      "reference architecture",
+      "playbook",
+      "productize field learnings",
+      "patterns back to Product/Eng",
+    ],
+    explanation:
+      "Building reusable components / platforms in a product org and 'codifying repeatable deployment patterns' as an FDE are the same instinct: refuse to let every job be bespoke, extract the template, and feed it back so the next one is faster. The FDE twist is that the feedback loop runs to Product and Engineering — your field learnings become product requirements — which is where forward-deployed work earns roadmap influence.",
+    whenToUseYours:
+      "Your platform / systems background — turning one-offs into reusable infrastructure — is a direct and somewhat differentiated asset; lead with it as the thing that keeps an FDE org from becoming a linear-cost services shop.",
+    whenToUseTheirs:
+      "Frame it as 'codifying patterns' and 'contributing insights back to Product and Engineering' (the JD's exact language). Showing you think about the productization feedback loop, not just the single customer, signals you'd help build the founding motion rather than just close engagements.",
+    tags: ["translation", "forward_deployed", "applied_ai", "positioning"],
+  },
 ];
