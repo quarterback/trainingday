@@ -719,4 +719,21 @@ export const translations: Translation[] = [
       "Frame it as 'codifying patterns' and 'contributing insights back to Product and Engineering' (the JD's exact language). Showing you think about the productization feedback loop, not just the single customer, signals you'd help build the founding motion rather than just close engagements.",
     tags: ["translation", "forward_deployed", "applied_ai", "positioning"],
   },
+  {
+    yourTerm: "substrate_navigation",
+    standardTerms: [
+      "customer journey",
+      "journey management",
+      "journey orchestration",
+      "customer experience (CX)",
+      "journey-centric operating model",
+    ],
+    explanation:
+      "What CX calls a customer 'journey' — a chosen path through a product or funnel toward a commercial relationship — the public-systems and agentic work reframes as navigating a substrate: a person pushed across agencies, vendors, and decision engines by external forces, where the seams between institutions are the real object. 'Journey management' is becoming legible to enterprise CX and service-ops buyers (Forrester's journey-centric push, tools like TheyDo / Smaply / Milkymap), which makes it a useful procurement vocabulary; but the word 'journey' quietly dissolves the substrate into a narrative of the user's experience — exactly the move that lets institutions off the hook for the seams. 'Trajectory' is a physics word (external forces, velocity, inflection points done to people); 'journey' is a consumer word (a path you choose).",
+    whenToUseYours:
+      "For public services, multilateral delivery, and the agentic layer — where there's no single customer, product, or funnel — 'trajectory' and 'substrate' keep the institutional seams and the ownerless-aggregate harm in view. The tell: when there's no customer, no product, and no funnel, it's a trajectory through a substrate, not a journey. Pair with Trajectory Management and Substrate Degradation.",
+    whenToUseTheirs:
+      "'Journey management' / 'journey orchestration' is the term that gets you in the door and gets the work budgeted in CX and service-ops orgs that wouldn't otherwise know how to procure structural cross-seam work. Ride it to capture the mandate, then execute something more structural. The trade-off is real: riding the term opens doors; adopting it as a core identifier softens the harder substrate-and-seams claim your architecture is making — so speak it fluently, but don't let it become the name on the door.",
+    tags: ["translation", "public_sector", "cx", "owner_framework"],
+  },
 ];

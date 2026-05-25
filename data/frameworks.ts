@@ -3791,4 +3791,33 @@ export const frameworks: Framework[] = [
     source: "Enterprise AI deployment practice; Anthropic enterprise patterns.",
     tags: ["forward_deployed", "applied_ai", "enterprise", "framework"],
   },
+
+  // —— Journey management (CX discipline + its limits) —————————————————————
+
+  {
+    name: "Journey Management (CX Discipline)",
+    category: "service_design",
+    oneLiner:
+      "The emerging CX discipline — pushed by Forrester since ~2022 and a small software category (TheyDo, Smaply, Milkymap) — that treats customer journeys as a continuously-managed unit of operational accountability with named owners, metrics, and governance, rather than as map artifacts a designer produces and hands off.",
+    whenToUse:
+      "When an enterprise has a graveyard of journey maps and nothing has improved because no one owns the journey end-to-end. Also a procurement vocabulary: it lets you get structural cross-functional work budgeted under a label CX and service-ops buyers already understand.",
+    vocabulary: [
+      "journey management",
+      "journey-centric operating model",
+      "journey owner",
+      "journey KPI / scorecard",
+      "journey governance",
+      "journey orchestration",
+      "journey-as-a-product",
+      "continuous improvement",
+      "activate / connect / extend",
+    ],
+    howToDropIn:
+      "\"Journey maps have been a graveyard for insight for fifteen years — produced, presented, posted on a wall, then the org goes back to optimizing the funnel one screen at a time. Journey management names the real gap: who's accountable for the journey across teams, with metrics and governance, between the maps.\"",
+    commonPhrasing: "CX strategy, service operations, experience management.",
+    notes:
+      "Forrester's framing: journey maps as artifacts are dead; journeys as a unit of operational accountability are the future (their model moves six operational levers across three phases — activate, connect, extend — and they now run a journey-management certification; the Q2 2024 Forrester Wave covers journey-orchestration platforms). The diagnosis is correct and adjacent to the substrate question — who owns what's between the recorded steps. WHERE IT FALLS SHORT: journey management is CX-flavored — it assumes a customer, a product, a funnel, a commercial relationship — so it doesn't carry into public services, multilateral delivery, or the agentic layer, where the unit of analysis is wrong. A citizen navigating three agencies, two vendors, and a benefits-determination engine over four years isn't on a 'journey' in the CX sense; they're navigating a substrate, and calling it a journey makes the substrate vanish into a narrative of the user's experience — the move that lets institutions off the hook for the seams between them. Verdict: a useful conceptual move within CX, a category error applied to public infrastructure. Worth fluency; worth keeping distinct from Trajectory Management. Pair with NN/g Journey Management (the owners/KPIs/governance mechanics), Service Blueprint (below the line of visibility), and contrast with Trajectory Management and Substrate Degradation for the public-systems case. The substrate_navigation translation captures the ride-it-vs-stay-clean trade-off.",
+    source: "Forrester journey-centricity / journey management research (~2022– ); TheyDo, Smaply, Milkymap; Journey Management Institute. Critique and trajectory/substrate distinction are owner's synthesis.",
+    tags: ["service_design", "cx", "journey", "owner_framework"],
+  },
 ];
