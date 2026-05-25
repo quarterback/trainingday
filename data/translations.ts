@@ -736,4 +736,38 @@ export const translations: Translation[] = [
       "'Journey management' / 'journey orchestration' is the term that gets you in the door and gets the work budgeted in CX and service-ops orgs that wouldn't otherwise know how to procure structural cross-seam work. Ride it to capture the mandate, then execute something more structural. The trade-off is real: riding the term opens doors; adopting it as a core identifier softens the harder substrate-and-seams claim your architecture is making — so speak it fluently, but don't let it become the name on the door.",
     tags: ["translation", "public_sector", "cx", "owner_framework"],
   },
+  {
+    yourTerm: "checkout_conversion",
+    standardTerms: [
+      "Cheering / Bits purchase",
+      "sub conversion",
+      "monetization surface",
+      "in-the-moment tipping",
+      "gifting flow",
+    ],
+    explanation:
+      "The ecommerce checkout / conversion-funnel instinct partly transfers to creator monetization, but the context flips the logic: the spend is live, often impulsive, socially performative (a Cheer is visible to the community), and frequently relational rather than transactional (a recurring sub is closer to a membership than a cart). Optimizing a Cheer flow like a checkout — friction reduction, urgency, upsell — risks reading as pressure in a community setting.",
+    whenToUseYours:
+      "With PMs and data partners, 'conversion' and 'funnel' are the shared language for instrumenting and improving a monetization surface, and your ecommerce depth here is real and transferable.",
+    whenToUseTheirs:
+      "In the design room and with creators, frame it as the gesture it is — 'Cheering,' 'supporting,' 'gifting a sub' — not 'checkout.' Naming the live/social/relational difference (and that a sub is a relationship, not a transaction) signals you understand creator monetization rather than porting a retail cart. Pair with Twitch Creator Monetization Mechanics.",
+    tags: ["translation", "creator_economy", "monetization", "positioning"],
+  },
+  {
+    yourTerm: "trust_as_substrate",
+    standardTerms: [
+      "creator & viewer trust",
+      "fair-by-design",
+      "dark patterns (what not to ship)",
+      "responsible monetization",
+      "long-term retention vs short-term revenue",
+    ],
+    explanation:
+      "Connects your Substrate Degradation / Legitimacy Tax frameworks to a product team's language of 'trust' and 'fairness.' In a monetization-UX room, 'trust' is usually treated as a soft value; your stack gives it teeth — trust is the substrate the platform's revenue actually sits on, and aggressive monetization is a Legitimacy Tax that drains it faster than it regenerates. Same point, two registers; the JD's 'feels fair' and 'creator/viewer trust' are the consumer-product surface of your public-mechanics work.",
+    whenToUseYours:
+      "In strategy and exec conversations where you want to make the long-term cost of extraction legible as more than 'users might not like it' — the substrate/Legitimacy-Tax framing turns a soft objection into a structural argument about where the business's durable value lives.",
+    whenToUseTheirs:
+      "In the design room and with PMs, the words are 'trust,' 'fair,' 'dark patterns we won't ship,' and 'long-term retention vs short-term revenue.' Don't open with 'substrate degradation' to a product team — say 'this wins us a quarter and costs us the community,' then offer the deeper model if they want it. Pair with Monetization UX Ethics and your Calculative Asymmetry / Mirror Signaling cards.",
+    tags: ["translation", "creator_economy", "monetization", "owner_framework"],
+  },
 ];
