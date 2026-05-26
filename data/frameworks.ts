@@ -4643,4 +4643,37 @@ export const frameworks: Framework[] = [
     source: "Municipal A/V and public-meeting technology practice; open-meetings-law context.",
     tags: ["municipal_it", "av", "public_meetings", "framework"],
   },
+
+  // —— Glowrm: trust infrastructure on ATProto (owner project) —————————————
+
+  {
+    name: "Glowrm",
+    category: "trust_decision_engineering",
+    oneLiner:
+      "Trust infrastructure for ATProto social apps — a shared reputation layer that pairs ATProto's portable identity with portable accountability, so a bad actor can't escape consequences by platform-hopping.",
+    whenToUse:
+      "When the problem is cross-app accountability on a decentralized social substrate — where portable identity (ATProto DIDs) lets users move between apps but consequences don't travel with them.",
+    vocabulary: [
+      "Reputation Scores (20–80 scale, 50 = average)",
+      "Trust Events (positive_interaction, report, block, ban, warn, suspend)",
+      "Strategic Profile Allocation (SPA)",
+      "Identity Registry (DID → app + verification status)",
+      "Power Protection",
+      "cross-app reputation",
+      "portable accountability",
+      "DID",
+    ],
+    howToDropIn:
+      "\"ATProto made identity portable but left accountability behind — so bad actors just hop platforms. Glowrm is the missing layer: a shared reputation substrate where trust events travel with the DID, so consequences are portable too.\"",
+    commonPhrasing: "ATProto ecosystem, decentralized social, trust & safety infrastructure.",
+    notes:
+      "A concrete implementation of the owner stack's trust-infrastructure thesis. Architecture is three layers: user (ATProto auth + personal data repositories, user-controlled), app (individual app backends handling conversations/matches), and the Glowrm layer (a centralized registry of identity, reputation scores, trust events, and unit allocations) — data separation keeps content user-controlled while shared trust signals are coordinated centrally. Connects directly to the stack: portable accountability is Responsibility to Record at network scale (the obligation travels with the DID); Trust Events are a public analogue of Decision Receipts; the platform-hopping problem is the accountability gap across seams that the journey-management critique names — escaping consequences by switching apps is exactly the seam no single platform owns, and the reputation substrate eroding under bad actors is Substrate Degradation. Power Protection (drop outlier scores, weight by rater reputation) is anti-gaming design guarding that substrate. NB: 'Strategic Profile Allocation (SPA)' here — finite contact units (jars / credits / picks / waves) per time period limiting contact frequency — is the correct expansion of the term earlier mis-noted as 'Stratified Preference Allocation.' Reputation Scores use a baseball-scouting-inspired 20–80 scale (50 = average). Pair with TDE, Decision Receipts, Responsibility to Record, and Substrate Degradation.",
+    source: "Glowrm documentation (glowrm.tech/documentation).",
+    tags: [
+      "trust_decision_engineering",
+      "atproto",
+      "trust_infrastructure",
+      "owner_framework",
+    ],
+  },
 ];
