@@ -770,4 +770,38 @@ export const translations: Translation[] = [
       "In the design room and with PMs, the words are 'trust,' 'fair,' 'dark patterns we won't ship,' and 'long-term retention vs short-term revenue.' Don't open with 'substrate degradation' to a product team — say 'this wins us a quarter and costs us the community,' then offer the deeper model if they want it. Pair with Monetization UX Ethics and your Calculative Asymmetry / Mirror Signaling cards.",
     tags: ["translation", "creator_economy", "monetization", "owner_framework"],
   },
+  {
+    yourTerm: "civil_economics",
+    standardTerms: [
+      "IT internal service fund",
+      "cost recovery / chargeback",
+      "total cost of ownership (TCO)",
+      "benefits realization",
+      "capital vs operating budget",
+    ],
+    explanation:
+      "Your Civil Economics question — where does the cost of an activity actually land, and who controls that boundary — is what the governmental internal-service-fund model tries to answer in budget form. The fund charges user departments to recover IT's cost, making the Vp/Ve split (who captures the benefit, who carries the cost) legible inside the city's accounting. TCO, lifecycle refresh, and benefits realization are the same 'account for the cost past the purchase boundary' instinct in CIO language.",
+    whenToUseYours:
+      "In strategy or council conversations where the point is that a cheap purchase today is an expensive obligation later (the Vr arriving after the buyer is gone) — your temporal value framing makes lifecycle and resilience underfunding legible as a structural cost, not just a budget ask.",
+    whenToUseTheirs:
+      "In a municipal finance room the words are 'internal service fund,' 'chargeback,' 'TCO,' and 'multi-year capital programming.' Lead with those; bring the Civil Economics framing only if someone wants the deeper model of why deferred lifecycle spend is a real liability. Pair with IT Internal Service Fund & Technology Budgeting and Benefits Realization Management.",
+    tags: ["translation", "municipal_it", "finance", "owner_framework"],
+  },
+  {
+    yourTerm: "service_modernization",
+    standardTerms: [
+      "technology as continuous improvement",
+      "digital service delivery",
+      "process / workflow simplification",
+      "self-service",
+      "operational excellence",
+    ],
+    explanation:
+      "Your service-design and delivery work maps onto the JD's repeated framing of 'technology as a continuous improvement tool' — streamlining workflows, expanding self-service, simplifying end-to-end customer experience. Same discipline (find the friction, redesign the process, measure the improvement); the CIO register frames it as operational modernization and citizen/employee service delivery rather than design.",
+    whenToUseYours:
+      "When you want to signal that you treat technology as a means to better service rather than as an end — your service-blueprint and journey instincts are a real differentiator in an IT department that may think in tickets and uptime rather than experience.",
+    whenToUseTheirs:
+      "Frame it as 'continuous improvement,' 'process modernization,' and 'service delivery' (the JD's words), with accessibility and inclusive design called out explicitly. In a government IT context, 'digital transformation' can read as vendor hype — 'we simplified the permit workflow and cut response time' lands better than abstractions. Pair with Service Blueprint and Journey Mapping.",
+    tags: ["translation", "municipal_it", "service_delivery", "positioning"],
+  },
 ];
