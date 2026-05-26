@@ -4667,7 +4667,7 @@ export const frameworks: Framework[] = [
       "\"ATProto made identity portable but left accountability behind — so bad actors just hop platforms. Glowrm is the missing layer: a shared reputation substrate where trust events travel with the DID, so consequences are portable too.\"",
     commonPhrasing: "ATProto ecosystem, decentralized social, trust & safety infrastructure.",
     notes:
-      "A concrete implementation of the owner stack's trust-infrastructure thesis. Architecture is three layers: user (ATProto auth + personal data repositories, user-controlled), app (individual app backends handling conversations/matches), and the Glowrm layer (a centralized registry of identity, reputation scores, trust events, and unit allocations) — data separation keeps content user-controlled while shared trust signals are coordinated centrally. Connects directly to the stack: portable accountability is Responsibility to Record at network scale (the obligation travels with the DID); Trust Events are a public analogue of Decision Receipts; the platform-hopping problem is the accountability gap across seams that the journey-management critique names — escaping consequences by switching apps is exactly the seam no single platform owns, and the reputation substrate eroding under bad actors is Substrate Degradation. Power Protection (drop outlier scores, weight by rater reputation) is anti-gaming design guarding that substrate. NB: 'Strategic Profile Allocation (SPA)' here — finite contact units (jars / credits / picks / waves) per time period limiting contact frequency — is the correct expansion of the term earlier mis-noted as 'Stratified Preference Allocation.' Reputation Scores use a baseball-scouting-inspired 20–80 scale (50 = average). Pair with TDE, Decision Receipts, Responsibility to Record, and Substrate Degradation.",
+      "A concrete implementation of the owner stack's trust-infrastructure thesis. Architecture is three layers: user (ATProto auth + personal data repositories, user-controlled), app (individual app backends handling conversations/matches), and the Glowrm layer (a centralized registry of identity, reputation scores, trust events, and unit allocations) — data separation keeps content user-controlled while shared trust signals are coordinated centrally. Connects directly to the stack: portable accountability is Responsibility to Record at network scale (the obligation travels with the DID); Trust Events are a public analogue of Decision Receipts; the platform-hopping problem is the accountability gap across seams that the journey-management critique names — escaping consequences by switching apps is exactly the seam no single platform owns, and the reputation substrate eroding under bad actors is Substrate Degradation. Power Protection (drop outlier scores, weight by rater reputation) is anti-gaming design guarding that substrate. NB acronym collision: Glowrm's docs expand SPA as 'Strategic Profile Allocation' (finite contact units — jars / credits / picks / waves — per period limiting contact frequency), while the standalone framework repo expands SPA as 'Stratified Preference Allocation' (constrained tiered signaling in bilateral matching markets). Related idea (constrained selection in matching), two different names across the two projects — worth reconciling. See the Stratified Preference Allocation (SPA) card. Reputation Scores use a baseball-scouting-inspired 20–80 scale (50 = average). Pair with TDE, Decision Receipts, Responsibility to Record, and Substrate Degradation.",
     source: "Glowrm documentation (glowrm.tech/documentation).",
     tags: [
       "trust_decision_engineering",
@@ -4675,5 +4675,34 @@ export const frameworks: Framework[] = [
       "trust_infrastructure",
       "owner_framework",
     ],
+  },
+
+  // —— Stratified Preference Allocation (owner framework) ——————————————————
+
+  {
+    name: "Stratified Preference Allocation (SPA)",
+    category: "market_design",
+    oneLiner:
+      "A constrained-signaling matching mechanism: instead of unlimited 'likes,' participants get k limited selection slots allocated across priority tiers, forcing truthful preference revelation and reducing attention inequality in bilateral matching markets.",
+    whenToUse:
+      "Any bilateral matching market suffering from signal inflation, choice overload, or low match quality — dating, recruiting, college admissions, housing, mentorship, freelance.",
+    vocabulary: [
+      "constrained selection (k slots)",
+      "priority tiers",
+      "quality-based capacity (k = f(quality))",
+      "preference revelation",
+      "stratified signaling",
+      "bilateral transparency (tier revelation)",
+      "signal inflation",
+      "attention inequality",
+    ],
+    howToDropIn:
+      "\"Unlimited likes are costless, so everyone signals interest in everything — that's signal inflation, and the matches are bad. SPA gives you k slots across tiers, so scarcity forces you to reveal what you actually prefer. It's costly signaling by design.\"",
+    commonPhrasing: "Market design, matching markets, mechanism design.",
+    notes:
+      "The owner's framework (Ron Bronson, 2025; repo quarterback/frameworks, CC BY 4.0). Mechanics: k slots (k << N); tiered caps (e.g., Tier 1 max 3, Tier 2 max 4, Tier 3 max 4, Tier 4 the remainder); capacity scaling with a quality score; and bilateral transparency (after matching you learn which tier your match placed you in). Simulation claims vs Gale-Shapley: ~40–50% lower Gini (attention inequality), O(15) vs O(1000) evaluations, tier-weighted quality 3.2/4.0, convergence in 15–20 cycles. Nearest canonical neighbors: Gale-Shapley deferred-acceptance / stable matching and Roth's market design (Roth & Sotomayor) — SPA differs by constraining and tiering the signaling side to force preference revelation rather than assuming a complete preference order; Spence-style costly signaling (scarcity makes the signal credible); and the choice-overload literature (Iyengar & Lepper) behind the cognitive-load claim. Connects to the owner stack: 'signal inflation' is a micro-form of Signal Pollution, and the Gini / attention-inequality reduction is a fairness lever adjacent to Calculative Asymmetry. NB acronym collision: Glowrm's docs use 'SPA' for 'Strategic Profile Allocation' (finite contact units — jars/credits/picks/waves); this framework is 'Stratified Preference Allocation.' Related idea, two different names — worth reconciling. See the Glowrm card.",
+    source:
+      "Stratified Preference Allocation (SPA) Framework, Ron Bronson (2025), github.com/quarterback/frameworks (CC BY 4.0). Benchmarked against Gale-Shapley.",
+    tags: ["market_design", "matching", "owner_framework"],
   },
 ];
