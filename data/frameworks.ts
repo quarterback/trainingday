@@ -4512,4 +4512,135 @@ export const frameworks: Framework[] = [
     source: "Brignull (deceptive / dark patterns); Thaler & Sunstein (sludge). Bridge to owner's framework stack.",
     tags: ["creator_economy", "monetization", "ethics", "framework", "owner_framework_bridge"],
   },
+
+  // —— Municipal IT leadership (local-government CIO) ——————————————————————
+
+  {
+    name: "IT Service Management (ITSM / ITIL)",
+    category: "municipal_it",
+    oneLiner:
+      "The operational discipline a CIO role leans on hardest — running IT as a set of services with defined practices for incident, request, problem, change, and configuration management, measured by service levels and a service desk.",
+    whenToUse:
+      "The JD's 'mature ITSM practices' requirement, and any conversation about how the IT department actually runs day to day.",
+    vocabulary: [
+      "ITSM",
+      "ITIL",
+      "incident / request / problem / change / configuration management",
+      "service desk",
+      "SLA / OLA",
+      "service catalog",
+      "CMDB",
+      "escalation",
+    ],
+    howToDropIn:
+      "\"Mature ITSM is the difference between firefighting and running a service: incidents get triaged against SLAs, recurring incidents become problem records, and changes go through change management instead of breaking things on a Friday. ITIL is the common vocabulary for that.\"",
+    commonPhrasing: "IT operations, service management, ITIL.",
+    notes:
+      "ITIL 4 is the dominant framework/certification (the JD lists ITIL as a preferred cert). The five practices the JD names map to ITIL: incident (restore service fast), request (fulfill standard asks), problem (root-cause the recurring), change (control modifications), configuration (track assets in a CMDB). Dashboards, SLAs, and CX measures are how a CIO reports the department is healthy. Your Delivery Forensics instinct connects directly — problem management is forensics applied to recurring incidents. Pair with Enterprise IT Architecture & Lifecycle and DORA Metrics (you have the latter).",
+    source: "ITIL 4 / ITSM practice.",
+    tags: ["municipal_it", "it_operations", "itsm", "framework"],
+  },
+  {
+    name: "Enterprise IT Architecture & Lifecycle Management",
+    category: "municipal_it",
+    oneLiner:
+      "Setting technical direction for the whole estate — networks, fiber, data centers, cloud, endpoints, identity, collaboration — and managing the full lifecycle (asset inventory, patching, refresh cycles, decommissioning), including ERP and SaaS.",
+    whenToUse:
+      "The JD's 'enterprise architecture direction' and 'lifecycle management' functions — the strategic-technical core of the CIO role.",
+    vocabulary: [
+      "enterprise architecture",
+      "TOGAF",
+      "identity (IAM / SSO / MFA)",
+      "endpoint / MDM",
+      "zero trust",
+      "refresh cycle",
+      "asset lifecycle",
+      "ERP",
+      "SaaS",
+      "technical debt",
+    ],
+    howToDropIn:
+      "\"Architecture is the set of standards that keep the estate coherent — one identity layer, defined endpoint baselines, a cloud strategy — and lifecycle management is the unglamorous discipline of refresh cycles and patching that keeps today's working system from becoming next year's breach.\"",
+    commonPhrasing: "Enterprise architecture, infrastructure, IT strategy.",
+    notes:
+      "TOGAF is the standard EA framework; identity is increasingly the security perimeter (zero trust, MFA, SSO); lifecycle/refresh cycles are both an operational-risk and a capital-budget question (unpatched, end-of-life gear is the classic municipal breach vector). ERP (the city's finance / HR / permitting backbone) is the highest-stakes application-lifecycle item. Pair with IT Service Management and the IT Internal Service Fund (refresh cycles are a capital-planning line).",
+    source: "Enterprise-architecture and IT-lifecycle practice (TOGAF; standard enterprise IT).",
+    tags: ["municipal_it", "it_operations", "architecture", "framework"],
+  },
+  {
+    name: "IT Internal Service Fund & Technology Budgeting",
+    category: "municipal_it",
+    oneLiner:
+      "The governmental finance model where central IT is funded as an internal service fund — recovering its costs by charging other departments — plus the operating/capital split and multi-year capital programming for lifecycle replacement and resilience.",
+    whenToUse:
+      "The JD's financial-management functions. Distinctively governmental, and where your value-accounting instinct is a genuine asset.",
+    vocabulary: [
+      "internal service fund",
+      "cost recovery / chargeback",
+      "operating vs capital budget",
+      "multi-year capital programming",
+      "TCO",
+      "benefits realization",
+      "GASB fund accounting",
+    ],
+    howToDropIn:
+      "\"An internal service fund makes IT a cost-recovery utility — departments pay for what they consume, which forces honest conversations about demand and total cost of ownership instead of treating IT as free overhead.\"",
+    commonPhrasing: "Government finance, IT budgeting, capital planning.",
+    notes:
+      "Internal service funds (GASB governmental fund accounting) charge user departments to recover the cost of centralized services; the discipline is forecasting service costs and tracking investments to measurable outcomes (the JD's exact phrase — that's Benefits Realization, which you have a card for). This is the cleanest bridge to your Civil Economics work: the fund model is an explicit attempt to locate where the cost of a technology decision lands and who pays it — Vp/Ve made legible inside a budget. Pair with Benefits Realization Management and your Civil Economics card.",
+    source: "Governmental internal-service-fund accounting (GASB); municipal IT budgeting practice.",
+    tags: ["municipal_it", "finance", "governance", "framework"],
+  },
+  {
+    name: "Municipal Cybersecurity & Resilience",
+    category: "municipal_it",
+    oneLiner:
+      "Protecting a local government — a high-value, under-resourced ransomware target — through threat detection, incident response, compliance, security-awareness training, and tested business continuity / disaster recovery.",
+    whenToUse:
+      "The JD's cybersecurity functions. Cities are now primary ransomware targets, so this is board-level risk, not a back-office concern.",
+    vocabulary: [
+      "threat detection",
+      "incident response (IR)",
+      "NIST CSF",
+      "CIS Controls",
+      "ransomware",
+      "security awareness",
+      "business continuity / disaster recovery (BC/DR)",
+      "RTO / RPO",
+      "StateRAMP",
+      "CISA",
+    ],
+    howToDropIn:
+      "\"Local governments are now prime ransomware targets — high-value data, essential services, lean security teams. The program is layered: NIST CSF or CIS Controls as the framework, MFA and identity as the highest-ROI controls, security-awareness training because people are the entry point, and tested BC/DR so a hit is a bad week, not an existential one.\"",
+    commonPhrasing: "Cybersecurity, resilience, risk management.",
+    notes:
+      "The NIST Cybersecurity Framework and the CIS Controls are the standard frameworks; CISA publishes municipal-focused guidance; ransomware against cities (Atlanta, Baltimore, New Orleans) is the defining threat. BC/DR is measured in RTO (how fast you recover) and RPO (how much data you can lose); untested backups are the classic failure. Your Substrate Degradation / resilience framing connects — security-awareness training is regenerating the human substrate faster than phishing erodes it. Pair with Enterprise IT Architecture (identity is the perimeter).",
+    source: "NIST CSF, CIS Controls, CISA municipal guidance; standard public-sector cyber practice.",
+    tags: ["municipal_it", "cybersecurity", "resilience", "framework"],
+  },
+  {
+    name: "Public-Meeting & Council-Chamber A/V",
+    category: "municipal_it",
+    oneLiner:
+      "The distinctively municipal CIO duty — running reliable audiovisual and hybrid-participation technology for City Council and public meetings, where a live failure is a public, legally-sensitive event under open-meetings law.",
+    whenToUse:
+      "The JD devotes real space to A/V and 'critical public meetings.' Easy to underestimate; it's where the CIO is most visible to elected officials.",
+    vocabulary: [
+      "council chambers",
+      "hybrid / remote participation",
+      "streaming / recording",
+      "open-meetings law (Sunshine Law)",
+      "Granicus / Legistar",
+      "A/V standards",
+      "room design",
+      "live-session support",
+    ],
+    howToDropIn:
+      "\"Council-chamber A/V is the one IT service the mayor experiences directly and in public — a hybrid meeting that drops the remote callers isn't a help-desk ticket, it's a potential open-meetings-law problem. It deserves standards, preventative maintenance, and a human in the room during live sessions.\"",
+    commonPhrasing: "Public-meeting technology, A/V, civic engagement tech.",
+    notes:
+      "Colorado (like most states) has open-meetings / Sunshine Law requirements for public access; hybrid participation and reliable recording/streaming are now part of compliance, not just convenience. Granicus and Legistar are common municipal meeting / agenda / streaming platforms. This duty is reputationally outsized — it's where elected officials form their opinion of the whole IT department. Your service-blueprint and live-event-reliability instincts apply. Pair with IT Service Management (live-session support is a defined service with its own SLA).",
+    source: "Municipal A/V and public-meeting technology practice; open-meetings-law context.",
+    tags: ["municipal_it", "av", "public_meetings", "framework"],
+  },
 ];
