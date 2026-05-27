@@ -804,4 +804,38 @@ export const translations: Translation[] = [
       "Frame it as 'continuous improvement,' 'process modernization,' and 'service delivery' (the JD's words), with accessibility and inclusive design called out explicitly. In a government IT context, 'digital transformation' can read as vendor hype — 'we simplified the permit workflow and cut response time' lands better than abstractions. Pair with Service Blueprint and Journey Mapping.",
     tags: ["translation", "municipal_it", "service_delivery", "positioning"],
   },
+  {
+    yourTerm: "responsibility_to_record",
+    standardTerms: [
+      "defensible findings",
+      "the investigative record",
+      "evidentiary standard",
+      "findings that survive arbitration",
+      "chain of reasoning",
+    ],
+    explanation:
+      "Your Responsibility to Record and Last Documented Mile frameworks land directly in police oversight: a sustained misconduct finding is only as good as the record behind it, and the place discipline gets overturned — at arbitration, on appeal — is precisely the Last Documented Mile, where the chain of reasoning from evidence to finding goes silent. RTR names who must document each step of the investigation so the finding is reconstructable and defensible.",
+    whenToUseYours:
+      "In conversations about why oversight bodies lose at arbitration, your LDM/RTR framing diagnoses it more precisely than 'weak investigation' — it locates the failure at the specific undocumented step, which is both a management fix and a training program.",
+    whenToUseTheirs:
+      "In the room the words are 'defensible findings,' 'evidentiary standard,' 'the record,' and 'will it survive arbitration.' Lead with those; bring RTR/LDM when you want to show you have a systematic theory of where findings fail, not just diligence. Pair with The Misconduct Investigation & Discipline Process and Officer Due-Process & Legal Constraints.",
+    tags: ["translation", "police_oversight", "owner_framework"],
+  },
+  {
+    yourTerm: "accountability_path",
+    standardTerms: [
+      "independent oversight",
+      "contestable review",
+      "the complaint process",
+      "community decision authority",
+      "due process",
+    ],
+    explanation:
+      "Your Accountability Path primitive — high-impact decisions automatically route to contestable, human-led review — is, at institutional scale, what a police-oversight system is: a route by which the most consequential decisions (use of force, misconduct) become independently reviewable and contestable by the affected community. OCPA is, in effect, an Accountability Path instantiated as a public institution, with the CBPA as the human-led review.",
+    whenToUseYours:
+      "When framing the design of the complaint and review system, your Accountability Path / Decision Receipts vocabulary gives a systems language for what most candidates can only describe procedurally — useful for the 'design scalable accountability systems' part of the JD.",
+    whenToUseTheirs:
+      "In the oversight world the words are 'independent investigation,' 'the complaint process,' 'community decision authority,' and 'due process.' Use those; the systems framing is your differentiator under the hood, not the opening line. Pair with Civilian Oversight Models and your Decision Receipts card.",
+    tags: ["translation", "police_oversight", "owner_framework"],
+  },
 ];
