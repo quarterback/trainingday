@@ -4705,4 +4705,128 @@ export const frameworks: Framework[] = [
       "Stratified Preference Allocation (SPA) Framework, Ron Bronson (2025), github.com/quarterback/frameworks (CC BY 4.0). Benchmarked against Gale-Shapley.",
     tags: ["market_design", "matching", "owner_framework"],
   },
+
+  // —— Police accountability / civilian oversight —————————————————————————
+
+  {
+    name: "Civilian / Community Police Oversight Models (NACOLE)",
+    category: "police_oversight",
+    oneLiner:
+      "The three established models of civilian oversight — review-focused (review completed IA investigations), investigation-focused (conduct independent investigations), and auditor/monitor-focused (audit patterns and systems) — codified by NACOLE. OCPA is an investigation-focused model paired with a community board holding decision authority.",
+    whenToUse:
+      "Table-stakes fluency for the role and the interview. Knowing where OCPA sits in the taxonomy — and its tradeoffs — is the difference between a credible oversight leader and an outsider.",
+    vocabulary: [
+      "civilian / community oversight",
+      "NACOLE",
+      "review-focused",
+      "investigation-focused",
+      "auditor / monitor",
+      "independent investigation",
+      "community board",
+      "subpoena power",
+    ],
+    howToDropIn:
+      "\"OCPA is an investigation-focused model — it conducts its own administrative investigations rather than only reviewing IAD's — paired with a community board that holds the discipline-decision authority. That's at the more independent end of NACOLE's spectrum, which is exactly where the credibility and the friction both come from.\"",
+    commonPhrasing: "Civilian oversight, police accountability, NACOLE.",
+    notes:
+      "NACOLE (National Association for Civilian Oversight of Law Enforcement) is the professional association and source of the standard three-model taxonomy; investigation-focused agencies with independent authority are the most powerful and the most contested (unions resist; sustainability depends on legal defensibility). OCPA's pairing with the CBPA (a volunteer board holding decision authority on findings/discipline) is a distinctive structure. Pair with The Misconduct Investigation & Discipline Process and Portland's Accountability Landscape.",
+    source: "NACOLE oversight models; civilian-oversight practice.",
+    tags: ["police_oversight", "public_sector", "oversight", "framework"],
+  },
+  {
+    name: "The Police Misconduct Investigation & Discipline Process",
+    category: "police_oversight",
+    oneLiner:
+      "The administrative pipeline OCPA runs — complaint intake → investigation → findings against a preponderance-of-evidence standard → recommendation → discipline — distinct from any criminal process and bounded by timelines, due process, and the collective bargaining agreement.",
+    whenToUse:
+      "The investigations/oversight core of the role. You need to speak the process fluently — dispositions, standards, the IAD relationship.",
+    vocabulary: [
+      "complaint intake",
+      "administrative vs criminal investigation",
+      "preponderance of the evidence",
+      "findings (sustained / not sustained / exonerated / unfounded)",
+      "Internal Affairs Division (IAD)",
+      "disciplinary matrix",
+      "investigative timelines (e.g., 180-day rules)",
+    ],
+    howToDropIn:
+      "\"Administrative misconduct findings are decided on a preponderance standard — more likely than not — not the criminal 'beyond a reasonable doubt,' and the dispositions are sustained, not sustained, exonerated, or unfounded. Getting that framework and the timelines right is what makes a finding stick.\"",
+    commonPhrasing: "Internal affairs, administrative investigation, discipline.",
+    notes:
+      "Administrative investigations determine policy violations and discipline, separate from and to a lower standard than any criminal case; standard dispositions are sustained / not sustained / exonerated / unfounded. Investigative timelines (many jurisdictions use ~180-day windows from notice to discipline) are a frequent reason discipline is overturned if missed — verify Portland/Oregon specifics. The JD has OCPA both conducting investigations and monitoring IAD. This is the cleanest home for your Responsibility to Record / Last Documented Mile work: a sustained finding only survives appeal or arbitration if the investigative record is complete and the chain of reasoning is reconstructable — the LDM is exactly where discipline gets reversed. Pair with Officer Due-Process & Legal Constraints and your RTR/LDM cards.",
+    source: "Civilian-oversight and internal-affairs investigation practice.",
+    tags: ["police_oversight", "investigations", "framework"],
+  },
+  {
+    name: "Officer Due-Process & Legal Constraints",
+    category: "police_oversight",
+    oneLiner:
+      "The dense legal frame that constrains police discipline — Garrity (compelled statements can't be used criminally), Brady/Giglio (disclosure and credibility lists), officer bill-of-rights protections, and above all the collective bargaining agreement and arbitration, which routinely determine whether discipline survives.",
+    whenToUse:
+      "The JD's explicit, repeated emphasis on 'disciplinary outcomes within union / collective bargaining environments' and findings that 'withstand external scrutiny and challenge.' This is the make-or-break knowledge area.",
+    vocabulary: [
+      "Garrity rights",
+      "Brady / Giglio",
+      "Law Enforcement Officers' Bill of Rights (LEOBOR)",
+      "collective bargaining agreement (CBA)",
+      "grievance / arbitration",
+      "just cause",
+      "due process",
+      "last-chance agreement",
+    ],
+    howToDropIn:
+      "\"The hard constraint isn't whether misconduct happened — it's whether the discipline survives arbitration. Garrity, the CBA's just-cause and timeline provisions, and the arbitrator all sit between a sustained finding and an actual consequence. Building findings that hold up under that pressure is the whole game.\"",
+    commonPhrasing: "Labor relations, police discipline, employment law.",
+    notes:
+      "Garrity v. New Jersey (1967): officers can be compelled to answer in administrative investigations, but those statements are immunized from criminal use. Brady/Giglio obligate disclosure of exculpatory and credibility evidence (the 'Brady list'). Statutory officer protections vary by state (Maryland-style LEOBOR statutes; in Oregon many protections run through the CBA and state law rather than a single bill-of-rights statute — verify the Oregon/Portland specifics). Arbitration overturning discipline is the central, well-documented frustration of police accountability, which is why the JD stresses defensibility. This is where your Decision Receipts / Responsibility to Record framing is not academic: the record IS the defense. Pair with The Misconduct Investigation & Discipline Process.",
+    source: "Garrity; Brady/Giglio; labor-relations and police-discipline practice. Verify Oregon-specific statutes / CBA terms.",
+    tags: ["police_oversight", "legal", "labor_relations", "framework"],
+  },
+  {
+    name: "Portland's Accountability Landscape",
+    category: "police_oversight",
+    oneLiner:
+      "The specific institutional context — the 2020 voter-approved charter amendment (~82%) creating a new independent oversight body to replace the prior IPR model, the Community Board for Police Accountability (CBPA) that holds decision authority, and the long-running US DOJ settlement over PPB use of force.",
+    whenToUse:
+      "Demonstrating you've done the homework. An inaugural director who doesn't know the measure, the CBPA structure, the union friction that delayed implementation, and the DOJ settlement is not credible.",
+    vocabulary: [
+      "Measure 26-217 (2020)",
+      "city charter amendment",
+      "Independent Police Review (IPR)",
+      "Community Board for Police Accountability (CBPA)",
+      "Portland Police Association (PPA)",
+      "US DOJ settlement agreement",
+      "complaint navigators",
+    ],
+    howToDropIn:
+      "\"OCPA exists because Portland voters amended the charter in 2020 to create an independent body with real investigative and disciplinary authority, replacing the prior IPR model. Standing it up has meant negotiating the structure with the union and operating alongside the DOJ settlement — so the job is institution-building inside an already-contested space.\"",
+    commonPhrasing: "Portland police accountability, charter reform.",
+    notes:
+      "Measure 26-217 passed with ~82% in November 2020, amending the charter to create a new police oversight board empowered to investigate and impose discipline; implementation was slowed by code development and bargaining with the Portland Police Association. The CBPA (volunteer community board) holds decision authority on findings and discipline while OCPA (this office) does the investigative and operational work — a deliberate separation the director must navigate. PPB has also operated under a 2014 US DOJ settlement re: use of force against people with mental illness. These specifics evolve and my knowledge predates the posting — verify current details before an interview. Pair with Civilian Oversight Models and your authorizing_environment translation.",
+    source: "City of Portland charter/code (Measure 26-217, 2020); US DOJ settlement (2014). Verify current specifics.",
+    tags: ["police_oversight", "portland", "context", "framework"],
+  },
+  {
+    name: "Procedural Justice & Police Legitimacy (Tyler)",
+    category: "police_oversight",
+    oneLiner:
+      "Tom Tyler's finding that people's willingness to trust and defer to authority depends more on the fairness of the process (voice, neutrality, respect, trustworthy motives) than on the outcome — the theoretical backbone of community-centered, trauma-informed oversight.",
+    whenToUse:
+      "Articulating WHY community-based oversight matters and how to design the complaint process. The JD's 'trauma-informed,' 'community voice,' and 'accessible' language is procedural justice in practice.",
+    vocabulary: [
+      "procedural justice",
+      "legitimacy",
+      "four pillars (voice, neutrality, respect, trustworthiness)",
+      "trauma-informed",
+      "community trust",
+      "accessibility",
+    ],
+    howToDropIn:
+      "\"Procedural justice — Tyler's work — shows trust in the system comes from how people are treated in the process, not just whether they 'win.' For oversight that means a complainant who feels heard, informed, and respected trusts the outcome even when their complaint isn't sustained. That's what the complaint-navigator role and trauma-informed design are really for.\"",
+    commonPhrasing: "Procedural justice, legitimacy, community trust.",
+    notes:
+      "Tom Tyler ('Why People Obey the Law') established procedural justice; the four elements (voice, neutrality, respectful treatment, trustworthy motives) are widely used in policing-legitimacy work. This connects to your substrate/trust framing directly: legitimacy is the substrate the whole accountability system sits on — a process experienced as fair regenerates it while an opaque one degrades it (Substrate Degradation / Legitimacy Tax in the oversight setting). Trauma-informed practice and complaint navigators are the operational expression. Pair with your Substrate Degradation and Mirror Signaling cards (making the process legible to the complainant is mirror signaling).",
+    source: "Tyler, 'Why People Obey the Law'; procedural-justice and trauma-informed practice.",
+    tags: ["police_oversight", "legitimacy", "procedural_justice", "framework", "owner_framework_bridge"],
+  },
 ];
