@@ -4829,4 +4829,263 @@ export const frameworks: Framework[] = [
     source: "Tyler, 'Why People Obey the Law'; procedural-justice and trauma-informed practice.",
     tags: ["police_oversight", "legitimacy", "procedural_justice", "framework", "owner_framework_bridge"],
   },
+
+  // —— Medical-device usability / human factors engineering ————————————————
+
+  {
+    name: "IEC 62366-1 (Usability Engineering for Medical Devices)",
+    category: "human_factors",
+    oneLiner:
+      "The international standard governing usability engineering for medical devices — the process-and-documentation backbone that turns 'good UX research' into 'approvable usability evidence' for notified bodies and the FDA.",
+    whenToUse:
+      "The role's regulatory submission and audit work. This is the standard the Usability Lead actually runs against.",
+    vocabulary: [
+      "IEC 62366-1",
+      "FDA HFE Guidance (2016)",
+      "EU MDR 2017/745",
+      "usability engineering process",
+      "use specification",
+      "user interface specification",
+      "intended users / use / environment",
+      "primary operating functions",
+    ],
+    howToDropIn:
+      "\"62366 is the spine — it defines the process from use specification through validation, and the file you build under it is what an auditor or notified body reviews. Good research is necessary; conforming research is what gets the device on the market.\"",
+    commonPhrasing: "Medical-device regulatory, usability engineering, human factors.",
+    notes:
+      "IEC 62366-1:2015 (+A1:2020) is the international usability standard for medical devices; FDA aligned via 'Applying Human Factors and Usability Engineering to Medical Devices' (2016 guidance). Together they define: use specification, characterization of intended users/use/environment, identification of hazard-related use scenarios, use-related risk analysis, design of the user interface, formative evaluations, summative evaluation, and the usability engineering file. EU MDR (2017/745) requires conformity for CE marking; FDA HFE submission for US clearance. The role is literally Usability Lead in audits — meaning you defend the file. Pair with Use-Related Risk Analysis & Critical Tasks and The Usability Engineering File.",
+    source: "IEC 62366-1:2015 (+A1:2020); FDA Guidance 'Applying Human Factors and Usability Engineering to Medical Devices' (2016); EU MDR 2017/745.",
+    tags: ["human_factors", "medical_device", "regulated", "framework"],
+  },
+  {
+    name: "Use-Related Risk Analysis & Critical Tasks",
+    category: "human_factors",
+    oneLiner:
+      "The risk-driven core of medical-device usability — identifying use errors that could cause harm (critical tasks), tracing them through hazard-related use scenarios, and prioritizing design and testing against patient-safety risk rather than just 'what's hard to use.'",
+    whenToUse:
+      "The thing that distinguishes medical-device usability from consumer UX: the design priority is set by harm, not by friction. Any conversation about scope, sampling, and test design starts here.",
+    vocabulary: [
+      "use-related risk analysis (URRA)",
+      "use error",
+      "critical task",
+      "hazard-related use scenario",
+      "harm / severity",
+      "ISO 14971 (risk management)",
+      "task analysis",
+    ],
+    howToDropIn:
+      "\"Medical-device usability is risk-driven — we don't optimize all tasks equally. We identify the use errors that could harm a patient via the URRA tied to the 14971 risk file, and we design and test against those first. Most of the summative protocol is built to exercise the critical tasks.\"",
+    commonPhrasing: "Risk management, hazard analysis, critical tasks.",
+    notes:
+      "62366 explicitly ties usability to ISO 14971 (medical-device risk management): the URRA identifies hazard-related use scenarios and 'critical tasks' — those whose incorrect performance could cause harm. Critical tasks drive what gets formatively iterated and summatively validated. This is also where your Delivery Forensics framing connects: URRA is preemptive forensics on use error, mapping failure paths from interface to harm before they occur. Pair with IEC 62366-1 and Formative vs Summative Evaluation.",
+    source: "IEC 62366-1; ISO 14971 (medical-device risk management); FDA HFE guidance.",
+    tags: ["human_factors", "medical_device", "risk", "framework"],
+  },
+  {
+    name: "Formative vs Summative Usability Evaluation",
+    category: "human_factors",
+    oneLiner:
+      "The two distinct phases of regulated usability testing — formative (iterative, small-n, design-improvement focused, used throughout development) and summative (final validation, conventionally ~15 representative users per distinct user group, simulated use, exercising the critical tasks).",
+    whenToUse:
+      "Planning the testing program. The structure is dictated by the standards, not negotiable — knowing the n=15 convention and the simulated-use protocol is table-stakes.",
+    vocabulary: [
+      "formative evaluation",
+      "summative evaluation",
+      "simulated use",
+      "representative users",
+      "root-cause analysis of use errors",
+      "n=15 per distinct user group",
+      "validation testing",
+      "residual risk",
+    ],
+    howToDropIn:
+      "\"Formative is the iterative work — small samples, design improvement; summative is the validation gate — typically 15 representative users per distinct user group, simulated use, exercising the critical tasks, with root-cause analysis on every observed use error. Auditors read the summative report and the URRA traceability matrix first.\"",
+    commonPhrasing: "Usability validation, HF testing, summative.",
+    notes:
+      "FDA guidance establishes the convention of ~15 participants per distinct user group for summative (statistical rationale: probability of detecting common use errors at that frequency); EU under 62366 follows the same general structure. Each observed use error must be analyzed for root cause and residual-risk acceptability. Summative happens under simulated-use conditions — realistic environment, no coaching. The summative report is the headline submission artifact. Pair with Use-Related Risk Analysis and The Usability Engineering File.",
+    source: "IEC 62366-1; FDA HFE guidance (n=15 convention).",
+    tags: ["human_factors", "medical_device", "testing", "framework"],
+  },
+  {
+    name: "The Usability Engineering File (Documentation as Regulatory Artifact)",
+    category: "human_factors",
+    oneLiner:
+      "The compiled body of usability evidence — use spec, URRA, design rationale, formative reports, summative report, residual-risk justification, known-use-problems analysis — that constitutes the device's defense to a notified body or FDA reviewer, and the artifact a Usability Lead defends in audits.",
+    whenToUse:
+      "The role's documentation function and the audit work. This is where the work either survives or doesn't.",
+    vocabulary: [
+      "usability engineering file (UEF)",
+      "usability engineering plan (UEP)",
+      "HFE/UE summary report (FDA)",
+      "design history file (DHF)",
+      "residual-risk analysis",
+      "known use problems",
+      "post-market surveillance",
+      "audit defense",
+    ],
+    howToDropIn:
+      "\"The file is the deliverable — research is upstream evidence. What ships to the notified body or FDA is a coherent narrative tying use specification through URRA, formative iteration, and summative validation, with a residual-risk argument that closes the loop back to 14971. The Usability Lead's job in audit is to walk an auditor through that chain without breaking it.\"",
+    commonPhrasing: "Usability file, HFE report, audit, regulatory submission.",
+    notes:
+      "This is the cleanest medical-device home for your Responsibility to Record and Last Documented Mile work: the file IS RTR institutionalized as a regulatory obligation — every use-related decision, formative finding, and design change must be recorded so the chain from 'intended use' to 'residual risk acceptable' is reconstructable. An auditor finds the failure exactly where the documentation chain goes silent — the Last Documented Mile, in regulatory clothing. Pair with IEC 62366-1 and your RTR/LDM cards.",
+    source: "IEC 62366-1 (Usability Engineering File); FDA HFE Summary Report convention.",
+    tags: ["human_factors", "medical_device", "documentation", "framework", "owner_framework_bridge"],
+  },
+  {
+    name: "Radiation Oncology Domain Context (Elekta)",
+    category: "human_factors",
+    oneLiner:
+      "The Elekta product context — linear accelerators (Versa HD, Elekta Unity MR-linac), Leksell Gamma Knife (radiosurgery), and the oncology software stack (Monaco treatment planning, MOSAIQ OIS) — and the radiation-therapy clinical workflow they sit inside: imaging → contouring → planning → QA → delivery.",
+    whenToUse:
+      "Showing you've done the homework. A Lead UX Researcher in this space who can't name the product line and the clinical workflow doesn't land.",
+    vocabulary: [
+      "linear accelerator (linac)",
+      "MR-linac",
+      "Gamma Knife",
+      "radiosurgery (SRS / SBRT)",
+      "treatment planning system (TPS)",
+      "oncology information system (OIS)",
+      "contouring",
+      "plan QA",
+      "ARIA / MOSAIQ",
+    ],
+    howToDropIn:
+      "\"Elekta's product line spans hardware — Versa HD, the Unity MR-linac, Gamma Knife — and the software stack that drives it: Monaco for planning, MOSAIQ as the OIS. Usability scope crosses the clinical workflow from imaging through delivery, and the users are a mix — radiation oncologists, medical physicists, dosimetrists, RTTs — each with their own risk profile.\"",
+    commonPhrasing: "Radiation oncology, radiation therapy.",
+    notes:
+      "Elekta's main competitor is Varian (now Siemens Healthineers, with ARIA as its OIS analogue). The clinical user roles are distinct — physicians (oncologists), medical physicists (QA / planning), dosimetrists (planning), radiation therapists / RTTs (delivery) — and each has its own critical tasks and risk exposure, which directly drives URRA segmentation and summative user-group definition (you typically need ~15 per group, per group). Verify current product names and modules before interview. Pair with Use-Related Risk Analysis (user-group segmentation drives the URRA).",
+    source: "Elekta product portfolio and radiation-oncology clinical workflow practice.",
+    tags: ["human_factors", "medical_device", "radiation_oncology", "context", "framework"],
+  },
+
+  // —— Scaled Agile (SAFe / PI-Planning) ————————————————————————————————
+
+  {
+    name: "SAFe & PI-Planning (Scaled Agile)",
+    category: "delivery",
+    oneLiner:
+      "The Scaled Agile Framework — Scrum/Kanban scaled to large programs via Agile Release Trains, Program Increments (8–12 weeks), and quarterly PI-planning events where multiple teams align on objectives, dependencies, and risks for the next increment.",
+    whenToUse:
+      "Any large enterprise — including regulated industries like medical devices — running multi-team agile. PI-planning vocabulary is the table-stakes signal in a SAFe shop.",
+    vocabulary: [
+      "SAFe (Scaled Agile Framework)",
+      "Agile Release Train (ART)",
+      "Program Increment (PI)",
+      "PI-planning",
+      "PI objectives",
+      "dependencies",
+      "ROAM (Resolved / Owned / Accepted / Mitigated)",
+      "team of teams",
+      "system demo",
+    ],
+    howToDropIn:
+      "\"PI-planning is where the value gets shaped in a SAFe shop — multiple teams in a room for a couple of days, committing to PI objectives, surfacing cross-team dependencies, ROAMing risks. The skill is articulating what your function can commit to, naming the dependencies, and not over-promising.\"",
+    commonPhrasing: "SAFe, agile at scale, PI-planning, ART.",
+    notes:
+      "SAFe (Scaled Agile Framework) is the dominant scaled-agile framework in regulated and enterprise environments — it adds a layer above team-level Scrum/Kanban (an Agile Release Train groups ~5–12 teams; Program Increments are typically 8–12 weeks; PI-planning is the quarterly all-hands ceremony). For a UX Lead, the PI-planning skill is committing capacity, surfacing dependencies on engineering and product, and naming risks honestly. Your 18F delivery experience and existing Scrum / Kanban / Continuous Delivery / DORA cards transfer directly; SAFe is the scaled wrapper. Both Elekta postings flag SAFe and PI-planning as preferred but not essential. Pair with Scrum, Kanban, Team Topologies, Continuous Delivery, and the delivery_practice translation.",
+    source: "Scaled Agile Framework (SAFe) — scaledagileframework.com.",
+    tags: ["delivery", "agile", "safe", "framework"],
+  },
+
+  // —— AI product management (Staff PM, AI) ———————————————————————————————
+
+  {
+    name: "AI Product Management (Staff-level Discipline)",
+    category: "ai_product",
+    oneLiner:
+      "Product management for AI-powered features as a distinct discipline — eval-driven rather than ship-and-iterate, decisions made under a fast-moving substrate (models change month to month), and capability assembled from foundation-model APIs rather than built in-house.",
+    whenToUse:
+      "Positioning the role itself, and any conversation about how AI PM differs from regular SaaS PM.",
+    vocabulary: [
+      "AI-native product",
+      "eval-driven",
+      "foundation models",
+      "model tradeoffs (cost / latency / context / quality)",
+      "build-vs-buy",
+      "capability assembly",
+      "AI product strategy",
+    ],
+    howToDropIn:
+      "\"AI PM isn't regular PM with LLMs added — it's a different shape. The substrate moves under you (the right model in March is wrong by September), the unit of progress is eval scores not feature flags, and most capability is assembled from APIs rather than built. The Staff role is making strategy under those constraints stick.\"",
+    commonPhrasing: "AI PM, AI product strategy, AI-native product leader.",
+    notes:
+      "The 'AI PM' role has emerged as distinct in the last ~2 years; the JD's emphasis on eval discipline, model tradeoffs, and build-vs-buy is the canonical description. Your existing AI and agent work (agentic delivery, agent-plumbing primitives, evals, RAG, the forward-deployed frame, governance) is substantive AI product material — surface it as strategy and eval discipline in PM rooms, not just building in engineering rooms. Pair with Build-vs-Buy for AI Products, AI Product Cost / Quality / Latency Triangle, and LLM Evaluation (Evals).",
+    source: "AI product management practice (the emerging discipline ~2023–); applied-AI product literature.",
+    tags: ["ai_product", "product_management", "ai", "framework"],
+  },
+  {
+    name: "Build-vs-Buy for AI Products",
+    category: "ai_product",
+    oneLiner:
+      "The make-buy-partner decision specifically for AI capability — when to use foundation-model APIs (Anthropic, OpenAI, etc.), when to use vertical AI SaaS, when to fine-tune, when to build proprietary — under a substrate where the right answer changes as fast as the model landscape.",
+    whenToUse:
+      "A JD-named responsibility ('Assess build vs. buy decisions across LLMs, APIs, AI tools, and third-party solutions'). One of the highest-leverage Staff PM decisions.",
+    vocabulary: [
+      "build-vs-buy",
+      "foundation-model API",
+      "fine-tuning",
+      "vertical AI SaaS",
+      "model-agnostic architecture",
+      "vendor lock-in",
+      "capability vs commodity",
+      "fast-follower",
+    ],
+    howToDropIn:
+      "\"Build-vs-buy for AI looks like classic make/buy, but the substrate is unstable — the model that justified building yesterday gets matched by a $0.50-per-million-tokens API tomorrow. The discipline is keeping the integration layer model-agnostic so you can move, and reserving 'build' for the spots where your data or workflow is the differentiator.\"",
+    commonPhrasing: "Build-vs-buy, AI strategy, capability vs commodity.",
+    notes:
+      "The recurring counsel from applied-AI product orgs: don't build what the foundation models will commoditize next quarter; do build the data, workflow, and integration glue specific to your domain. Vertical AI SaaS (AI customer-support, AI sales-ops, AI ops tools) is the fast-follower category eating bespoke build. Your forward-deployed engineering and Codifying Repeatable Deployment Patterns cards apply directly: the build/buy decision becomes a pattern across customers and features, not a one-off. Pair with AI Product Management and Codifying Repeatable Deployment Patterns.",
+    source: "Contemporary AI product strategy practice.",
+    tags: ["ai_product", "strategy", "ai", "framework"],
+  },
+  {
+    name: "AI Product Cost / Quality / Latency Triangle",
+    category: "ai_product",
+    oneLiner:
+      "The operational tradeoff specific to LLM-powered products — token cost, p50 / p99 latency, and eval-measured quality form a constrained triangle PMs trade off explicitly on every feature.",
+    whenToUse:
+      "Any conversation about whether a feature ships, what model to use, or whether to cache/route — the JD's 'model tradeoffs, latency, cost, context limits, and quality risks.'",
+    vocabulary: [
+      "token cost",
+      "input / output tokens",
+      "p50 / p99 latency",
+      "eval score",
+      "prompt caching",
+      "model routing",
+      "quality vs cost frontier",
+      "context limits",
+    ],
+    howToDropIn:
+      "\"Every AI feature has a cost / latency / quality triangle — a larger model is smarter but slower and more expensive; a smaller model with prompt caching and a good eval suite can deliver 80% of the quality at a tenth of the cost. The PM call is which point on the frontier each feature actually sits at, and instrumenting all three so you can see the tradeoff move.\"",
+    commonPhrasing: "AI economics, LLM ops, model selection.",
+    notes:
+      "The triangle is intuitive but enforced — sub-second latency caps your model and context; cost per call caps deployment scale. Standard moves: prompt caching (Anthropic and others now offer this as a primitive — large cost win for repeated context), model routing (cheap model for easy queries, expensive for hard), smaller fine-tuned models for narrow tasks. Your existing Guardrails & LLM Observability card covers the measurement layer. Pair with LLM Evaluation (Evals) and AI Product Management.",
+    source: "Applied-AI product operations practice.",
+    tags: ["ai_product", "operations", "ai", "framework"],
+  },
+  {
+    name: "Short-Term Rental / Vacation Rental PMS Domain (Hostaway)",
+    category: "ai_product",
+    oneLiner:
+      "The vacation-rental property management category — software that lets professional STR operators manage listings, pricing, channels (Airbnb / VRBO / Booking.com), guest comms, ops, and accounting from one system — with AI applied across comms, pricing, ops, and decision support.",
+    whenToUse:
+      "Showing you've done the homework. A Staff PM in this space needs to name the workflow, the OTA landscape, the competitor PMSes, and where AI is actually moving the needle.",
+    vocabulary: [
+      "property management system (PMS)",
+      "channel manager",
+      "OTA (online travel agency — Airbnb / VRBO / Booking.com)",
+      "dynamic pricing",
+      "guest comms",
+      "turnover / cleaning ops",
+      "smart-lock integration",
+      "owner statements",
+    ],
+    howToDropIn:
+      "\"An STR PMS is the operator's command center — listings, calendar, pricing, channels, comms, cleaning ops, accounting — all glued to Airbnb / VRBO / Booking. The AI question is which of those steps a professional manager actually wants automated versus assisted: guest comms is the easy yes; pricing is contested (PriceLabs, Wheelhouse dominate); ops dispatch and review writing are emerging.\"",
+    commonPhrasing: "Vacation rental, short-term rental (STR), property management.",
+    notes:
+      "Hostaway is one of the major PMSes in the professional STR segment (others: Guesty, Streamline, OwnerRez, Lodgify). The OTAs (Airbnb, VRBO / Expedia, Booking.com) are both the demand source and the rule-makers — channel-manager reliability is the product's central technical pain. Dynamic pricing (PriceLabs, Wheelhouse, Beyond) is a distinct sub-category often integrated rather than built — a canonical 'buy' decision. Hostaway's stated strategy is platform-wide AI automation across these workflows. Pair with Build-vs-Buy for AI Products and AI Product Management.",
+    source: "Vacation-rental / STR PMS category (Hostaway, Guesty, OwnerRez, Lodgify); OTAs (Airbnb, VRBO, Booking.com); pricing tools (PriceLabs, Wheelhouse, Beyond).",
+    tags: ["ai_product", "str", "vacation_rental", "context", "framework"],
+  },
 ];
