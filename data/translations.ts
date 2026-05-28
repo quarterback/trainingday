@@ -872,4 +872,21 @@ export const translations: Translation[] = [
       "In a Scrum or SAFe shop, the words are 'Scrum,' 'Kanban,' 'PI-planning,' 'sprint commitment,' 'continuous delivery,' and 'cross-functional team' — name them. The point isn't to claim certification; it's to make legible that this is part of your toolkit, not a gap. Pair with your Scrum, Kanban, Continuous Delivery, DORA Metrics, 18F Methods cards and the new SAFe & PI-Planning card.",
     tags: ["translation", "delivery", "agile", "positioning"],
   },
+  {
+    yourTerm: "ai_native_product_work",
+    standardTerms: [
+      "AI product management",
+      "AI-native product strategy",
+      "LLM-powered product",
+      "agentic product",
+      "AI/ML product leader",
+    ],
+    explanation:
+      "Your existing AI and agent work (agentic delivery, agent-plumbing primitives, evals, prompt and context engineering, RAG, the forward-deployed framing, governance) is substantive AI product material — but the building-side vocabulary reads as engineer or consultant. In a Staff PM, AI role, the same body of work IS the strategy: AI product leadership, eval discipline, build-vs-buy judgment, agentic-product tradeoffs. Frame it as product strategy, not infrastructure.",
+    whenToUseYours:
+      "With engineering-leaning audiences, the building-side vocabulary (agent plumbing, MCP, sub-agents, evals) signals you actually know how the stuff works — which most PMs can't, and which is the JD's 'you don't need to build AI models yourself, but you must understand how LLM-based products work in practice.'",
+    whenToUseTheirs:
+      "In a PM-leaning room (CPO, CEO, GTM), reframe the same work as 'AI product strategy,' 'build-vs-buy across the model landscape,' 'eval discipline,' and 'agentic product patterns.' Don't open with 'MCP server' — open with 'how I'd decide what to build, buy, and orchestrate.' Pair with AI Product Management (Staff-level Discipline) and Build-vs-Buy for AI Products.",
+    tags: ["translation", "ai_product", "positioning"],
+  },
 ];

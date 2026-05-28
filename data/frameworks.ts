@@ -4986,4 +4986,106 @@ export const frameworks: Framework[] = [
     source: "Scaled Agile Framework (SAFe) — scaledagileframework.com.",
     tags: ["delivery", "agile", "safe", "framework"],
   },
+
+  // —— AI product management (Staff PM, AI) ———————————————————————————————
+
+  {
+    name: "AI Product Management (Staff-level Discipline)",
+    category: "ai_product",
+    oneLiner:
+      "Product management for AI-powered features as a distinct discipline — eval-driven rather than ship-and-iterate, decisions made under a fast-moving substrate (models change month to month), and capability assembled from foundation-model APIs rather than built in-house.",
+    whenToUse:
+      "Positioning the role itself, and any conversation about how AI PM differs from regular SaaS PM.",
+    vocabulary: [
+      "AI-native product",
+      "eval-driven",
+      "foundation models",
+      "model tradeoffs (cost / latency / context / quality)",
+      "build-vs-buy",
+      "capability assembly",
+      "AI product strategy",
+    ],
+    howToDropIn:
+      "\"AI PM isn't regular PM with LLMs added — it's a different shape. The substrate moves under you (the right model in March is wrong by September), the unit of progress is eval scores not feature flags, and most capability is assembled from APIs rather than built. The Staff role is making strategy under those constraints stick.\"",
+    commonPhrasing: "AI PM, AI product strategy, AI-native product leader.",
+    notes:
+      "The 'AI PM' role has emerged as distinct in the last ~2 years; the JD's emphasis on eval discipline, model tradeoffs, and build-vs-buy is the canonical description. Your existing AI and agent work (agentic delivery, agent-plumbing primitives, evals, RAG, the forward-deployed frame, governance) is substantive AI product material — surface it as strategy and eval discipline in PM rooms, not just building in engineering rooms. Pair with Build-vs-Buy for AI Products, AI Product Cost / Quality / Latency Triangle, and LLM Evaluation (Evals).",
+    source: "AI product management practice (the emerging discipline ~2023–); applied-AI product literature.",
+    tags: ["ai_product", "product_management", "ai", "framework"],
+  },
+  {
+    name: "Build-vs-Buy for AI Products",
+    category: "ai_product",
+    oneLiner:
+      "The make-buy-partner decision specifically for AI capability — when to use foundation-model APIs (Anthropic, OpenAI, etc.), when to use vertical AI SaaS, when to fine-tune, when to build proprietary — under a substrate where the right answer changes as fast as the model landscape.",
+    whenToUse:
+      "A JD-named responsibility ('Assess build vs. buy decisions across LLMs, APIs, AI tools, and third-party solutions'). One of the highest-leverage Staff PM decisions.",
+    vocabulary: [
+      "build-vs-buy",
+      "foundation-model API",
+      "fine-tuning",
+      "vertical AI SaaS",
+      "model-agnostic architecture",
+      "vendor lock-in",
+      "capability vs commodity",
+      "fast-follower",
+    ],
+    howToDropIn:
+      "\"Build-vs-buy for AI looks like classic make/buy, but the substrate is unstable — the model that justified building yesterday gets matched by a $0.50-per-million-tokens API tomorrow. The discipline is keeping the integration layer model-agnostic so you can move, and reserving 'build' for the spots where your data or workflow is the differentiator.\"",
+    commonPhrasing: "Build-vs-buy, AI strategy, capability vs commodity.",
+    notes:
+      "The recurring counsel from applied-AI product orgs: don't build what the foundation models will commoditize next quarter; do build the data, workflow, and integration glue specific to your domain. Vertical AI SaaS (AI customer-support, AI sales-ops, AI ops tools) is the fast-follower category eating bespoke build. Your forward-deployed engineering and Codifying Repeatable Deployment Patterns cards apply directly: the build/buy decision becomes a pattern across customers and features, not a one-off. Pair with AI Product Management and Codifying Repeatable Deployment Patterns.",
+    source: "Contemporary AI product strategy practice.",
+    tags: ["ai_product", "strategy", "ai", "framework"],
+  },
+  {
+    name: "AI Product Cost / Quality / Latency Triangle",
+    category: "ai_product",
+    oneLiner:
+      "The operational tradeoff specific to LLM-powered products — token cost, p50 / p99 latency, and eval-measured quality form a constrained triangle PMs trade off explicitly on every feature.",
+    whenToUse:
+      "Any conversation about whether a feature ships, what model to use, or whether to cache/route — the JD's 'model tradeoffs, latency, cost, context limits, and quality risks.'",
+    vocabulary: [
+      "token cost",
+      "input / output tokens",
+      "p50 / p99 latency",
+      "eval score",
+      "prompt caching",
+      "model routing",
+      "quality vs cost frontier",
+      "context limits",
+    ],
+    howToDropIn:
+      "\"Every AI feature has a cost / latency / quality triangle — a larger model is smarter but slower and more expensive; a smaller model with prompt caching and a good eval suite can deliver 80% of the quality at a tenth of the cost. The PM call is which point on the frontier each feature actually sits at, and instrumenting all three so you can see the tradeoff move.\"",
+    commonPhrasing: "AI economics, LLM ops, model selection.",
+    notes:
+      "The triangle is intuitive but enforced — sub-second latency caps your model and context; cost per call caps deployment scale. Standard moves: prompt caching (Anthropic and others now offer this as a primitive — large cost win for repeated context), model routing (cheap model for easy queries, expensive for hard), smaller fine-tuned models for narrow tasks. Your existing Guardrails & LLM Observability card covers the measurement layer. Pair with LLM Evaluation (Evals) and AI Product Management.",
+    source: "Applied-AI product operations practice.",
+    tags: ["ai_product", "operations", "ai", "framework"],
+  },
+  {
+    name: "Short-Term Rental / Vacation Rental PMS Domain (Hostaway)",
+    category: "ai_product",
+    oneLiner:
+      "The vacation-rental property management category — software that lets professional STR operators manage listings, pricing, channels (Airbnb / VRBO / Booking.com), guest comms, ops, and accounting from one system — with AI applied across comms, pricing, ops, and decision support.",
+    whenToUse:
+      "Showing you've done the homework. A Staff PM in this space needs to name the workflow, the OTA landscape, the competitor PMSes, and where AI is actually moving the needle.",
+    vocabulary: [
+      "property management system (PMS)",
+      "channel manager",
+      "OTA (online travel agency — Airbnb / VRBO / Booking.com)",
+      "dynamic pricing",
+      "guest comms",
+      "turnover / cleaning ops",
+      "smart-lock integration",
+      "owner statements",
+    ],
+    howToDropIn:
+      "\"An STR PMS is the operator's command center — listings, calendar, pricing, channels, comms, cleaning ops, accounting — all glued to Airbnb / VRBO / Booking. The AI question is which of those steps a professional manager actually wants automated versus assisted: guest comms is the easy yes; pricing is contested (PriceLabs, Wheelhouse dominate); ops dispatch and review writing are emerging.\"",
+    commonPhrasing: "Vacation rental, short-term rental (STR), property management.",
+    notes:
+      "Hostaway is one of the major PMSes in the professional STR segment (others: Guesty, Streamline, OwnerRez, Lodgify). The OTAs (Airbnb, VRBO / Expedia, Booking.com) are both the demand source and the rule-makers — channel-manager reliability is the product's central technical pain. Dynamic pricing (PriceLabs, Wheelhouse, Beyond) is a distinct sub-category often integrated rather than built — a canonical 'buy' decision. Hostaway's stated strategy is platform-wide AI automation across these workflows. Pair with Build-vs-Buy for AI Products and AI Product Management.",
+    source: "Vacation-rental / STR PMS category (Hostaway, Guesty, OwnerRez, Lodgify); OTAs (Airbnb, VRBO, Booking.com); pricing tools (PriceLabs, Wheelhouse, Beyond).",
+    tags: ["ai_product", "str", "vacation_rental", "context", "framework"],
+  },
 ];
