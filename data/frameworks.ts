@@ -5088,4 +5088,80 @@ export const frameworks: Framework[] = [
     source: "Vacation-rental / STR PMS category (Hostaway, Guesty, OwnerRez, Lodgify); OTAs (Airbnb, VRBO, Booking.com); pricing tools (PriceLabs, Wheelhouse, Beyond).",
     tags: ["ai_product", "str", "vacation_rental", "context", "framework"],
   },
+
+  // —— Canonical UX / product discovery & delivery vocabulary ——————————————
+
+  {
+    name: "Continuous Discovery (Torres)",
+    category: "product",
+    oneLiner:
+      "Teresa Torres's practice (Continuous Discovery Habits, 2021): at minimum weekly customer touchpoints conducted by the product trio (PM, designer, engineer), where small research activities continuously inform decisions in pursuit of a desired product outcome — research as a team operating system, not a phase.",
+    whenToUse:
+      "Describing research-driven product work where studies feed the roadmap on a regular cadence and the whole team participates, vs. periodic research delivered as reports.",
+    vocabulary: [
+      "continuous discovery",
+      "product trio (PM / designer / engineer)",
+      "weekly touchpoints",
+      "opportunity solution tree",
+      "outcome (not output)",
+      "assumption testing",
+      "interview together",
+    ],
+    howToDropIn:
+      "\"We ran continuous discovery in Torres's sense — weekly-ish touchpoints with users, the whole trio observing live and at debriefs, findings turning into prioritized tickets rather than reports filed in a drawer.\"",
+    commonPhrasing: "Continuous discovery, product trio, weekly customer interviews.",
+    notes:
+      "Torres's book has a foreword by Marty Cagan; the two are closely linked. The keystone habit is the weekly customer touchpoint by the trio, not a researcher handing off insights. The 'opportunity solution tree' (which you already have a card for) is the specific decision tool within the practice; Continuous Discovery is the broader habit/operating model. Pair with Opportunity Solution Tree, Dual-Track Agile, and HCD.",
+    source: "Teresa Torres, 'Continuous Discovery Habits' (2021). producttalk.org.",
+    tags: ["product", "discovery", "research", "framework"],
+  },
+  {
+    name: "Dual-Track Agile",
+    category: "product",
+    oneLiner:
+      "The Jeff Patton / Marty Cagan framing of product work as two concurrent tracks — a Discovery track continuously generating validated backlog items, and a Delivery track continuously shipping releasable software — run by the same cross-functional team rather than as sequential phases.",
+    whenToUse:
+      "Describing how a team runs discovery and delivery in parallel: PM/design/engineering doing research, prototyping, and assumption testing on one side while engineering ships against a continuously validated backlog on the other.",
+    vocabulary: [
+      "dual-track agile",
+      "discovery track",
+      "delivery track",
+      "validated backlog items",
+      "assumption testing",
+      "continuous discovery",
+      "continuous delivery",
+      "product trio",
+    ],
+    howToDropIn:
+      "\"It was dual-track in Patton's sense — discovery and delivery running in parallel, not waterfall research-then-build. Studies fed the backlog every few weeks; the engineering team kept shipping while the next round was in flight.\"",
+    commonPhrasing: "Dual-track agile, discovery / delivery, dual-track Scrum.",
+    notes:
+      "Jeff Patton coined 'Dual-Track Scrum'; Marty Cagan popularized 'Dual-Track Agile' and later moved toward calling it 'continuous discovery + continuous delivery' because the original phrase made people focus on process over principle. Same idea: one team, two concurrent tracks, fed by the same product trio. Pair with Continuous Discovery (Torres), Continuous Delivery, and Scrum.",
+    source: "Jeff Patton (Dual-Track Scrum) and Marty Cagan / SVPG (Dual-Track Agile). svpg.com.",
+    tags: ["product", "agile", "delivery", "framework"],
+  },
+  {
+    name: "Progressive Disclosure",
+    category: "design",
+    oneLiner:
+      "The information-architecture and interaction-design principle of revealing only the controls and content relevant to the user's current step, with deeper detail available on demand — used to manage cognitive load in complex forms and workflows.",
+    whenToUse:
+      "Long forms, complex regulated workflows, expert tools, and any product where surfacing everything at once would overwhelm. The standard counter to 'just put it all on one screen.'",
+    vocabulary: [
+      "progressive disclosure",
+      "just-in-time information",
+      "help drawer",
+      "expandable section",
+      "section / subsection",
+      "persistent navigation / progress",
+      "cognitive load",
+    ],
+    howToDropIn:
+      "\"We used progressive disclosure deliberately — a fixed section nav so users always know where they are, the form broken into sections and subsections, and regulation surfaced on demand via help drawers rather than dumped on the page. Cognitive load is a budget; spend it where it matters.\"",
+    commonPhrasing: "Progressive disclosure, just-in-time content, long-form UX.",
+    notes:
+      "Long-standing IA principle (Jakob Nielsen / NN/g formalized it as a usability heuristic of sorts; it's also Tognazzini's). Pairs especially well with non-blocking inline validation for long, non-linear forms — the user enters data as it arrives in real life, the system saves continuously, and the required-fields check fires at a discrete action (e.g., Export) rather than per-field. Pair with Nielsen's 10 Usability Heuristics and Service Blueprint.",
+    source: "Jakob Nielsen / NN/g; long-form UX and complex-workflow practice.",
+    tags: ["design", "ux", "ia", "framework"],
+  },
 ];
