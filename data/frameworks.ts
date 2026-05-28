@@ -4829,4 +4829,161 @@ export const frameworks: Framework[] = [
     source: "Tyler, 'Why People Obey the Law'; procedural-justice and trauma-informed practice.",
     tags: ["police_oversight", "legitimacy", "procedural_justice", "framework", "owner_framework_bridge"],
   },
+
+  // —— Medical-device usability / human factors engineering ————————————————
+
+  {
+    name: "IEC 62366-1 (Usability Engineering for Medical Devices)",
+    category: "human_factors",
+    oneLiner:
+      "The international standard governing usability engineering for medical devices — the process-and-documentation backbone that turns 'good UX research' into 'approvable usability evidence' for notified bodies and the FDA.",
+    whenToUse:
+      "The role's regulatory submission and audit work. This is the standard the Usability Lead actually runs against.",
+    vocabulary: [
+      "IEC 62366-1",
+      "FDA HFE Guidance (2016)",
+      "EU MDR 2017/745",
+      "usability engineering process",
+      "use specification",
+      "user interface specification",
+      "intended users / use / environment",
+      "primary operating functions",
+    ],
+    howToDropIn:
+      "\"62366 is the spine — it defines the process from use specification through validation, and the file you build under it is what an auditor or notified body reviews. Good research is necessary; conforming research is what gets the device on the market.\"",
+    commonPhrasing: "Medical-device regulatory, usability engineering, human factors.",
+    notes:
+      "IEC 62366-1:2015 (+A1:2020) is the international usability standard for medical devices; FDA aligned via 'Applying Human Factors and Usability Engineering to Medical Devices' (2016 guidance). Together they define: use specification, characterization of intended users/use/environment, identification of hazard-related use scenarios, use-related risk analysis, design of the user interface, formative evaluations, summative evaluation, and the usability engineering file. EU MDR (2017/745) requires conformity for CE marking; FDA HFE submission for US clearance. The role is literally Usability Lead in audits — meaning you defend the file. Pair with Use-Related Risk Analysis & Critical Tasks and The Usability Engineering File.",
+    source: "IEC 62366-1:2015 (+A1:2020); FDA Guidance 'Applying Human Factors and Usability Engineering to Medical Devices' (2016); EU MDR 2017/745.",
+    tags: ["human_factors", "medical_device", "regulated", "framework"],
+  },
+  {
+    name: "Use-Related Risk Analysis & Critical Tasks",
+    category: "human_factors",
+    oneLiner:
+      "The risk-driven core of medical-device usability — identifying use errors that could cause harm (critical tasks), tracing them through hazard-related use scenarios, and prioritizing design and testing against patient-safety risk rather than just 'what's hard to use.'",
+    whenToUse:
+      "The thing that distinguishes medical-device usability from consumer UX: the design priority is set by harm, not by friction. Any conversation about scope, sampling, and test design starts here.",
+    vocabulary: [
+      "use-related risk analysis (URRA)",
+      "use error",
+      "critical task",
+      "hazard-related use scenario",
+      "harm / severity",
+      "ISO 14971 (risk management)",
+      "task analysis",
+    ],
+    howToDropIn:
+      "\"Medical-device usability is risk-driven — we don't optimize all tasks equally. We identify the use errors that could harm a patient via the URRA tied to the 14971 risk file, and we design and test against those first. Most of the summative protocol is built to exercise the critical tasks.\"",
+    commonPhrasing: "Risk management, hazard analysis, critical tasks.",
+    notes:
+      "62366 explicitly ties usability to ISO 14971 (medical-device risk management): the URRA identifies hazard-related use scenarios and 'critical tasks' — those whose incorrect performance could cause harm. Critical tasks drive what gets formatively iterated and summatively validated. This is also where your Delivery Forensics framing connects: URRA is preemptive forensics on use error, mapping failure paths from interface to harm before they occur. Pair with IEC 62366-1 and Formative vs Summative Evaluation.",
+    source: "IEC 62366-1; ISO 14971 (medical-device risk management); FDA HFE guidance.",
+    tags: ["human_factors", "medical_device", "risk", "framework"],
+  },
+  {
+    name: "Formative vs Summative Usability Evaluation",
+    category: "human_factors",
+    oneLiner:
+      "The two distinct phases of regulated usability testing — formative (iterative, small-n, design-improvement focused, used throughout development) and summative (final validation, conventionally ~15 representative users per distinct user group, simulated use, exercising the critical tasks).",
+    whenToUse:
+      "Planning the testing program. The structure is dictated by the standards, not negotiable — knowing the n=15 convention and the simulated-use protocol is table-stakes.",
+    vocabulary: [
+      "formative evaluation",
+      "summative evaluation",
+      "simulated use",
+      "representative users",
+      "root-cause analysis of use errors",
+      "n=15 per distinct user group",
+      "validation testing",
+      "residual risk",
+    ],
+    howToDropIn:
+      "\"Formative is the iterative work — small samples, design improvement; summative is the validation gate — typically 15 representative users per distinct user group, simulated use, exercising the critical tasks, with root-cause analysis on every observed use error. Auditors read the summative report and the URRA traceability matrix first.\"",
+    commonPhrasing: "Usability validation, HF testing, summative.",
+    notes:
+      "FDA guidance establishes the convention of ~15 participants per distinct user group for summative (statistical rationale: probability of detecting common use errors at that frequency); EU under 62366 follows the same general structure. Each observed use error must be analyzed for root cause and residual-risk acceptability. Summative happens under simulated-use conditions — realistic environment, no coaching. The summative report is the headline submission artifact. Pair with Use-Related Risk Analysis and The Usability Engineering File.",
+    source: "IEC 62366-1; FDA HFE guidance (n=15 convention).",
+    tags: ["human_factors", "medical_device", "testing", "framework"],
+  },
+  {
+    name: "The Usability Engineering File (Documentation as Regulatory Artifact)",
+    category: "human_factors",
+    oneLiner:
+      "The compiled body of usability evidence — use spec, URRA, design rationale, formative reports, summative report, residual-risk justification, known-use-problems analysis — that constitutes the device's defense to a notified body or FDA reviewer, and the artifact a Usability Lead defends in audits.",
+    whenToUse:
+      "The role's documentation function and the audit work. This is where the work either survives or doesn't.",
+    vocabulary: [
+      "usability engineering file (UEF)",
+      "usability engineering plan (UEP)",
+      "HFE/UE summary report (FDA)",
+      "design history file (DHF)",
+      "residual-risk analysis",
+      "known use problems",
+      "post-market surveillance",
+      "audit defense",
+    ],
+    howToDropIn:
+      "\"The file is the deliverable — research is upstream evidence. What ships to the notified body or FDA is a coherent narrative tying use specification through URRA, formative iteration, and summative validation, with a residual-risk argument that closes the loop back to 14971. The Usability Lead's job in audit is to walk an auditor through that chain without breaking it.\"",
+    commonPhrasing: "Usability file, HFE report, audit, regulatory submission.",
+    notes:
+      "This is the cleanest medical-device home for your Responsibility to Record and Last Documented Mile work: the file IS RTR institutionalized as a regulatory obligation — every use-related decision, formative finding, and design change must be recorded so the chain from 'intended use' to 'residual risk acceptable' is reconstructable. An auditor finds the failure exactly where the documentation chain goes silent — the Last Documented Mile, in regulatory clothing. Pair with IEC 62366-1 and your RTR/LDM cards.",
+    source: "IEC 62366-1 (Usability Engineering File); FDA HFE Summary Report convention.",
+    tags: ["human_factors", "medical_device", "documentation", "framework", "owner_framework_bridge"],
+  },
+  {
+    name: "Radiation Oncology Domain Context (Elekta)",
+    category: "human_factors",
+    oneLiner:
+      "The Elekta product context — linear accelerators (Versa HD, Elekta Unity MR-linac), Leksell Gamma Knife (radiosurgery), and the oncology software stack (Monaco treatment planning, MOSAIQ OIS) — and the radiation-therapy clinical workflow they sit inside: imaging → contouring → planning → QA → delivery.",
+    whenToUse:
+      "Showing you've done the homework. A Lead UX Researcher in this space who can't name the product line and the clinical workflow doesn't land.",
+    vocabulary: [
+      "linear accelerator (linac)",
+      "MR-linac",
+      "Gamma Knife",
+      "radiosurgery (SRS / SBRT)",
+      "treatment planning system (TPS)",
+      "oncology information system (OIS)",
+      "contouring",
+      "plan QA",
+      "ARIA / MOSAIQ",
+    ],
+    howToDropIn:
+      "\"Elekta's product line spans hardware — Versa HD, the Unity MR-linac, Gamma Knife — and the software stack that drives it: Monaco for planning, MOSAIQ as the OIS. Usability scope crosses the clinical workflow from imaging through delivery, and the users are a mix — radiation oncologists, medical physicists, dosimetrists, RTTs — each with their own risk profile.\"",
+    commonPhrasing: "Radiation oncology, radiation therapy.",
+    notes:
+      "Elekta's main competitor is Varian (now Siemens Healthineers, with ARIA as its OIS analogue). The clinical user roles are distinct — physicians (oncologists), medical physicists (QA / planning), dosimetrists (planning), radiation therapists / RTTs (delivery) — and each has its own critical tasks and risk exposure, which directly drives URRA segmentation and summative user-group definition (you typically need ~15 per group, per group). Verify current product names and modules before interview. Pair with Use-Related Risk Analysis (user-group segmentation drives the URRA).",
+    source: "Elekta product portfolio and radiation-oncology clinical workflow practice.",
+    tags: ["human_factors", "medical_device", "radiation_oncology", "context", "framework"],
+  },
+
+  // —— Scaled Agile (SAFe / PI-Planning) ————————————————————————————————
+
+  {
+    name: "SAFe & PI-Planning (Scaled Agile)",
+    category: "delivery",
+    oneLiner:
+      "The Scaled Agile Framework — Scrum/Kanban scaled to large programs via Agile Release Trains, Program Increments (8–12 weeks), and quarterly PI-planning events where multiple teams align on objectives, dependencies, and risks for the next increment.",
+    whenToUse:
+      "Any large enterprise — including regulated industries like medical devices — running multi-team agile. PI-planning vocabulary is the table-stakes signal in a SAFe shop.",
+    vocabulary: [
+      "SAFe (Scaled Agile Framework)",
+      "Agile Release Train (ART)",
+      "Program Increment (PI)",
+      "PI-planning",
+      "PI objectives",
+      "dependencies",
+      "ROAM (Resolved / Owned / Accepted / Mitigated)",
+      "team of teams",
+      "system demo",
+    ],
+    howToDropIn:
+      "\"PI-planning is where the value gets shaped in a SAFe shop — multiple teams in a room for a couple of days, committing to PI objectives, surfacing cross-team dependencies, ROAMing risks. The skill is articulating what your function can commit to, naming the dependencies, and not over-promising.\"",
+    commonPhrasing: "SAFe, agile at scale, PI-planning, ART.",
+    notes:
+      "SAFe (Scaled Agile Framework) is the dominant scaled-agile framework in regulated and enterprise environments — it adds a layer above team-level Scrum/Kanban (an Agile Release Train groups ~5–12 teams; Program Increments are typically 8–12 weeks; PI-planning is the quarterly all-hands ceremony). For a UX Lead, the PI-planning skill is committing capacity, surfacing dependencies on engineering and product, and naming risks honestly. Your 18F delivery experience and existing Scrum / Kanban / Continuous Delivery / DORA cards transfer directly; SAFe is the scaled wrapper. Both Elekta postings flag SAFe and PI-planning as preferred but not essential. Pair with Scrum, Kanban, Team Topologies, Continuous Delivery, and the delivery_practice translation.",
+    source: "Scaled Agile Framework (SAFe) — scaledagileframework.com.",
+    tags: ["delivery", "agile", "safe", "framework"],
+  },
 ];

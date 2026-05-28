@@ -838,4 +838,38 @@ export const translations: Translation[] = [
       "In the oversight world the words are 'independent investigation,' 'the complaint process,' 'community decision authority,' and 'due process.' Use those; the systems framing is your differentiator under the hood, not the opening line. Pair with Civilian Oversight Models and your Decision Receipts card.",
     tags: ["translation", "police_oversight", "owner_framework"],
   },
+  {
+    yourTerm: "last_documented_mile",
+    standardTerms: [
+      "gap in the usability engineering file",
+      "design history file (DHF) gap",
+      "audit finding",
+      "broken traceability",
+      "missing design rationale",
+    ],
+    explanation:
+      "Your Last Documented Mile lands precisely in medical-device usability: an auditor's typical finding isn't a bad device — it's a gap in the file between an evidenced design decision and the residual-risk claim. That gap IS the LDM — the stretch where the documentation chain falls silent before the safety conclusion. RTR names the obligation to document each link in that chain.",
+    whenToUseYours:
+      "In design and product conversations about what to document and why, your LDM framing makes the failure mode concrete ('this is where the auditor will land') rather than abstract diligence. Also a clean way to argue for usability documentation budget against PMs who treat it as overhead.",
+    whenToUseTheirs:
+      "In regulatory and audit contexts the words are 'gap in the usability engineering file,' 'design history file (DHF),' 'traceability,' and 'design rationale.' Use those; LDM is the deeper diagnostic. Pair with The Usability Engineering File and your RTR card.",
+    tags: ["translation", "human_factors", "medical_device", "owner_framework"],
+  },
+  {
+    yourTerm: "delivery_practice",
+    standardTerms: [
+      "agile delivery (Scrum / Kanban)",
+      "continuous delivery",
+      "PI-planning / SAFe",
+      "cross-functional team",
+      "embedded with engineering",
+    ],
+    explanation:
+      "18F is and always has been an agile-native delivery shop — Scrum, Kanban, continuous delivery, embedded cross-functional teams shipping user-centered software in iterative cycles. That is a substantive agile track record you tend to underplay; in interviews for agile-leaning roles (medical-device UX, SAFe shops, any enterprise product team), foreground it rather than treating it as an implicit by-product of 'I worked in govtech.' The skill is real — surface it.",
+    whenToUseYours:
+      "When you want to talk about delivery as a craft rather than a methodology, your 18F frame is about user-centered delivery to outcomes — which is the spirit agile keeps trying to recover under the ceremonies. Useful when a SAFe shop's ceremonies feel like the point and you want to redirect to value.",
+    whenToUseTheirs:
+      "In a Scrum or SAFe shop, the words are 'Scrum,' 'Kanban,' 'PI-planning,' 'sprint commitment,' 'continuous delivery,' and 'cross-functional team' — name them. The point isn't to claim certification; it's to make legible that this is part of your toolkit, not a gap. Pair with your Scrum, Kanban, Continuous Delivery, DORA Metrics, 18F Methods cards and the new SAFe & PI-Planning card.",
+    tags: ["translation", "delivery", "agile", "positioning"],
+  },
 ];
