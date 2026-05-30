@@ -5164,4 +5164,174 @@ export const frameworks: Framework[] = [
     source: "Jakob Nielsen / NN/g; long-form UX and complex-workflow practice.",
     tags: ["design", "ux", "ia", "framework"],
   },
+
+  // —— Organizational Change Management (OCM) / AI transformation ————————
+
+  {
+    name: "Senior OCM Consultant (AI / Digital Transformation)",
+    category: "ocm",
+    oneLiner:
+      "The senior-consultant archetype that owns the people-and-organization side of a client's AI, GenAI, digital, or IT transformation — selecting fit-for-purpose change approaches, advising executive sponsors, planning and resourcing OCM activities, and leading consultant teams inside the engagement.",
+    whenToUse:
+      "Senior Consultant / Manager / Senior Manager postings in OCM practices at CGI, Accenture, Deloitte, EY, IBM Consulting, Capgemini, KPMG, PwC. Often paired with a sector or technology angle (AI adoption, ERP rollout, target-operating-model design).",
+    vocabulary: [
+      "organizational change management (OCM)",
+      "change strategy",
+      "change impact assessment",
+      "stakeholder analysis",
+      "sponsor coalition",
+      "change network",
+      "adoption",
+      "people, process, technology",
+      "operating model",
+      "transformation roadmap",
+      "fit-for-purpose approach",
+    ],
+    howToDropIn:
+      "\"As an OCM senior consultant, the seat is the people-and-organization side of the transformation: choosing the right change approach for the client's maturity, advising the executive sponsor, sequencing OCM activities against the technology rollout, and standing up the change network that actually moves behavior. The technology team ships the system; my team ships the adoption.\"",
+    commonPhrasing: "Organizational change management, change adoption, OCM consulting.",
+    notes:
+      "OCM consulting is a registered specialty inside the big firms with its own credential stack (ADKAR / Prosci, ACMP / CCMP). The role grades by scope: Consultant runs workstreams; Senior Consultant leads the OCM workstream end-to-end and advises senior client leadership; Manager / Senior Manager runs multiple engagements and contributes to sales. The AI/GenAI flavor is the current hot segment — the JD bias is candidates who can connect employee adoption mechanics to AI deployment realities (capability building, role redesign, governance, fear of obsolescence). Substance-wise, capability-building programs (federal staff training, internal enablement) and operating-model redesigns translate directly; the gap is usually vocabulary and credential. Pair with ADKAR (Prosci), ACMP CCMP / Standard for Change Management, Trusted Advisor Stance, and AI Adoption & Capability Building.",
+    source:
+      "OCM consulting practice (Big 4 / IT-services firms); CGI Senior Consultant OCM JD (Finland, 2025) as a representative posting.",
+    tags: ["ocm", "consulting", "transformation", "role", "framework"],
+  },
+  {
+    name: "AI Adoption & Capability Building",
+    category: "ocm",
+    oneLiner:
+      "The OCM specialty that turns an AI or GenAI deployment into actual employee usage and capability — covering AI-fluency curricula, role redesign, prompt and workflow training, governance literacy, and the fear/identity work that AI specifically surfaces.",
+    whenToUse:
+      "AI/GenAI rollout engagements where the technology is the easy part and adoption is the actual delivery risk. JDs that name 'AI adoption,' 'AI-enabled ways of working,' 'employee engagement in AI transformations,' 'capability development.'",
+    vocabulary: [
+      "AI adoption",
+      "AI fluency",
+      "capability building",
+      "AI-enabled ways of working",
+      "human-AI collaboration",
+      "role redesign",
+      "augmentation vs. automation",
+      "AI governance literacy",
+      "champions / change agents",
+      "use-case discovery",
+    ],
+    howToDropIn:
+      "\"AI transformations fail at adoption far more often than at deployment. The OCM work is concrete: an AI-fluency curriculum the workforce can actually take, role-by-role redesign so people see what their job becomes (not just that 'AI helps'), governance literacy so policy is something they can apply rather than a deck they were shown, and an honest treatment of the obsolescence anxiety the technology specifically creates. The change network is the delivery mechanism.\"",
+    commonPhrasing: "AI adoption, AI enablement, AI change management.",
+    notes:
+      "AI OCM has a distinct profile vs. classic OCM: the change touches identity and skill obsolescence in ways an ERP rollout doesn't, the technology evolves faster than the training, and the 'right answer' for how to use it is genuinely unknown when rollout starts — so capability building has to teach experimentation, not just procedures. Your federal-training experience (SOMD card), curriculum stewardship of opinionated material, and train-the-trainer / peer-cascade scaling translate directly to the capability-building piece. Pair with Senior OCM Consultant (AI / Digital Transformation), ADKAR (Prosci) for the adoption mechanics, and the AI-delivery glossary cards for the technical register.",
+    source:
+      "AI transformation practice (consulting firms, 2024–2026); CGI OCM JD (2025); practitioner reports on adoption gaps in GenAI rollouts.",
+    tags: ["ocm", "ai", "adoption", "capability_building", "framework"],
+  },
+  {
+    name: "Trusted Advisor Stance (Senior Consultant)",
+    category: "ocm",
+    oneLiner:
+      "The consulting posture of operating as the executive sponsor's go-to thinking partner — earning the right to disagree, ask harder questions, and shape the agenda — rather than as a vendor delivering scope.",
+    whenToUse:
+      "Senior-consultant-and-above postings that explicitly name 'trusted advisor,' 'advise senior leadership,' 'C-level presence,' or describe relationships rather than deliverables. Often the bar that distinguishes Senior Consultant from Consultant.",
+    vocabulary: [
+      "trusted advisor",
+      "executive sponsor",
+      "advise senior leadership",
+      "C-suite",
+      "earned right to challenge",
+      "shape the agenda",
+      "thinking partner",
+      "consultative selling",
+    ],
+    howToDropIn:
+      "\"The trusted-advisor seat isn't a status — it's an earned position you keep by being right when it matters and willing to disagree when it costs you. With executive sponsors that means coming to the room with the harder question, not just the deck; making the trade-off they're avoiding explicit; and being the person they call before the steering committee, not after.\"",
+    commonPhrasing: "Trusted advisor, executive sponsor management, senior stakeholder engagement.",
+    notes:
+      "Trusted Advisor is the title of Maister, Green, and Galford's standard text on the posture; the model is T = (Credibility + Reliability + Intimacy) / Self-Orientation — with self-orientation as the denominator that capsizes most consultants. The senior-consultant move is shifting from 'I deliver what you scoped' to 'I tell you what I think you should be scoping,' and earning that shift through demonstrated judgment, not assertion. Pair with Senior OCM Consultant (AI / Digital Transformation) and Sales & Networking in Consulting.",
+    source:
+      "Maister, Green, & Galford, *The Trusted Advisor* (2000); standard consulting-firm career framework for Senior Consultant and above.",
+    tags: ["ocm", "consulting", "executive_communication", "framework"],
+  },
+  {
+    name: "Sales & Networking in Consulting",
+    category: "ocm",
+    oneLiner:
+      "The non-billable rainmaking activity senior consultants are expected to do — staying connected to past clients, generating new leads through network maintenance and thought leadership, and participating in pursuit teams — even when their official job is delivery.",
+    whenToUse:
+      "Senior-consultant-and-above OCM, strategy, or transformation JDs that name 'sales activities,' 'networking,' 'client meetings,' or 'existing networks and clients are considered an advantage.' Often underweighted by IC-track candidates who read the JD as delivery-only.",
+    vocabulary: [
+      "business development",
+      "pursuit",
+      "lead generation",
+      "account growth",
+      "network maintenance",
+      "thought leadership",
+      "warm introduction",
+      "land and expand",
+      "follow-on work",
+    ],
+    howToDropIn:
+      "\"Senior-consultant economics work because the seat is part delivery, part sales. Past clients become future engagements when you stay in touch on something other than 'are you hiring my firm.' Network maintenance is the actual job — coffees, intros, sharing a piece of writing that's useful to them — and it's how the next pursuit warms up before there's an RFP.\"",
+    commonPhrasing: "Business development, account growth, BD activities.",
+    notes:
+      "Consulting-firm grading explicitly weights sales contribution starting at Senior Consultant or Manager level. Candidates from operating roles (in-house, government, agency) often have strong networks but don't frame them as a sales asset — naming it on the way in helps. The 'existing networks and clients are considered an advantage' line in OCM JDs is a soft signal the firm will value a candidate who can bring even small follow-on work in. Pair with Trusted Advisor Stance (Senior Consultant) and Senior OCM Consultant (AI / Digital Transformation).",
+    source:
+      "Consulting-firm career framework (Big 4 / IT-services); CGI OCM JD (2025) as representative.",
+    tags: ["ocm", "consulting", "business_development", "framework"],
+  },
+  {
+    name: "ADKAR (Prosci)",
+    category: "ocm",
+    oneLiner:
+      "Prosci's individual-change model — Awareness, Desire, Knowledge, Ability, Reinforcement — used as both a diagnostic for where a change initiative is stuck and a sequencing tool for OCM interventions; the dominant credential reference in North American OCM consulting.",
+    whenToUse:
+      "Any OCM engagement where you need a shared model with the client and team. JDs that name ADKAR or Prosci certification explicitly; OCM proposals; sponsor briefings; resistance diagnosis.",
+    vocabulary: [
+      "ADKAR",
+      "Prosci",
+      "Awareness",
+      "Desire",
+      "Knowledge",
+      "Ability",
+      "Reinforcement",
+      "individual change",
+      "barrier point",
+      "sponsor coalition",
+      "PCT (Project Change Triangle)",
+    ],
+    howToDropIn:
+      "\"ADKAR is the model I diagnose with: every individual moving through a change has to clear Awareness, Desire, Knowledge, Ability, and Reinforcement in order, and most failed changes are stuck at one specific stage. Diagnose the barrier point, then sequence the interventions — communication and sponsor visibility for Awareness and Desire, training for Knowledge and Ability, recognition and metrics for Reinforcement. Skipping a stage doesn't make it faster; it makes it fail later.\"",
+    commonPhrasing: "ADKAR, Prosci, change adoption model.",
+    notes:
+      "ADKAR was developed by Jeff Hiatt at Prosci; Prosci's certification (Prosci Change Practitioner / Advanced Practitioner) is the de facto OCM credential in North American consulting. The model's strength is that it makes change adoption diagnostic rather than directive — you can ask where any individual or group is and act on the answer. Pair it with Kotter's 8 Steps (organizational scope) for executive briefings and the ACMP Standard (vendor-neutral process backbone) for engagements where the client doesn't want a single proprietary model. If you don't hold the certification yet, the JD move is fluent use of the model plus a named path to certification — not an overclaim. Pair with Senior OCM Consultant (AI / Digital Transformation) and AI Adoption & Capability Building.",
+    source:
+      "Jeff Hiatt, *ADKAR: A Model for Change in Business, Government, and Our Community* (Prosci, 2006); Prosci Research; prosci.com.",
+    tags: ["ocm", "change_model", "certification", "framework"],
+  },
+  {
+    name: "ACMP CCMP / Standard for Change Management",
+    category: "ocm",
+    oneLiner:
+      "The Association of Change Management Professionals' vendor-neutral body of knowledge and credential — five process groups (Evaluate Change Impact and Organizational Readiness, Formulate Strategy, Develop the Plan, Execute the Plan, Complete the Change Effort) — used as the discipline's standard reference when a client doesn't want a single proprietary model.",
+    whenToUse:
+      "Vendor-neutral OCM engagements; clients with mixed change models in play; JDs that name ACMP or 'equivalent' alongside ADKAR; international consulting where Prosci's North American dominance doesn't apply as strongly.",
+    vocabulary: [
+      "ACMP",
+      "CCMP (Certified Change Management Professional)",
+      "Standard for Change Management",
+      "CMBoK",
+      "evaluate change impact",
+      "organizational readiness",
+      "change management strategy",
+      "change management plan",
+      "change agent",
+      "process groups",
+    ],
+    howToDropIn:
+      "\"The ACMP Standard is what I lean on when a client doesn't want to commit to a single proprietary model. It organizes the discipline around five process groups — evaluate impact and readiness, formulate strategy, develop the plan, execute, complete — which lets me sequence work and define deliverables without dictating which underlying change model the client uses internally. ADKAR or Kotter still live inside it; the Standard is the operating system, not the application.\"",
+    commonPhrasing: "ACMP, CCMP, change management body of knowledge.",
+    notes:
+      "ACMP is the professional association; CCMP (Certified Change Management Professional) is the individual credential; the Standard for Change Management is the underlying body of knowledge (sometimes called CMBoK). Vendor-neutrality is the key difference from Prosci: ACMP doesn't sell a proprietary model, so consulting firms and clients who want to avoid lock-in often prefer it as the reference. The JD's 'ADKAR, ACMP and equivalent' phrasing means they're comfortable with either credential family. Pair with ADKAR (Prosci) and Senior OCM Consultant (AI / Digital Transformation).",
+    source:
+      "Association of Change Management Professionals (ACMP), *Standard for Change Management* (current edition); CCMP credential framework; acmpglobal.org.",
+    tags: ["ocm", "change_model", "certification", "framework"],
+  },
 ];
