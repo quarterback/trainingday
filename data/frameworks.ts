@@ -5690,4 +5690,88 @@ export const frameworks: Framework[] = [
       "Ron Bronson, Occupant Indices (occupant.ee). Built on the $CPI basket; FAR price-reasonableness practice.",
     tags: ["ai_measurement", "procurement", "federal", "tool", "framework"],
   },
+
+  // —— Service design (consumer marketplace / AI-augmented) ——————————————
+
+  {
+    name: "Principal Service Designer (Consumer Marketplace, AI-Augmented)",
+    category: "service_design",
+    oneLiner:
+      "The senior individual-contributor service-designer archetype at consumer marketplaces (real estate, lending, mobility, hospitality) — owning multi-year experience vision for an integrated customer journey, working across product / engineering / ops / marketing / sales enablement, with explicit ask to build AI-augmented service-design practice including agentic capabilities for operating standards.",
+    whenToUse:
+      "Principal / Staff / Senior Service Designer postings at consumer marketplaces with multi-channel transactions — Zillow / Compass / Redfin / Rocket Mortgage / Better.com (real estate and lending); Airbnb / Vrbo (hospitality); Uber / Lyft (mobility); Carvana / CarMax (auto); Robinhood / Square / Stripe (consumer fintech). High-stakes, complex-transaction businesses where the customer journey crosses many channels and lines of business.",
+    vocabulary: [
+      "service design",
+      "experience strategy",
+      "service blueprint",
+      "journey map",
+      "multi-channel orchestration",
+      "operating standards",
+      "agentic AI capabilities",
+      "AI-augmented service design",
+      "experience vision",
+      "lines of business",
+      "frontline operations",
+      "high-stakes transaction",
+    ],
+    howToDropIn:
+      "\"At consumer-marketplace scale the work isn't designing a screen — it's orchestrating the experience across product, ops, sales enablement, marketing, and engineering, with operating standards the frontline can actually hold itself to. The AI-augmented layer is the new part: agents that codify operating standards into runtime behavior, AI tools that compress the service-design loop. Principal IC is where the craft lives; the leadership read is influence without direct authority across silos.\"",
+    commonPhrasing: "Principal Service Designer, Staff Service Designer, Senior Experience Strategist.",
+    notes:
+      "Sits at the intersection of service-design craft and AI / agent fluency — most candidates carry one of those, not both. Principal IC role; influence-without-direct-authority leadership model. Private-sector consumer marketplace, monetization context. Pair with AI-Augmented Service Design, Multi-Channel Service Orchestration, Service Blueprint, Journey Mapping, and Multi-Audience Digital Governance.",
+    source:
+      "Validated against active 2026 postings: Zillow 'Principal Service Designer, Home Loans'; analogous roles at Airbnb (Staff Service Designer), Rocket Mortgage, Carvana, Compass. Pattern emergent across consumer marketplaces with multi-channel high-stakes transactions.",
+    tags: ["service_design", "consumer_marketplace", "ai_augmented", "role", "framework"],
+  },
+  {
+    name: "AI-Augmented Service Design (Emerging Discipline)",
+    category: "service_design",
+    oneLiner:
+      "The emerging practice of using AI and agentic capabilities inside service-design work — turning operating standards into runtime agents, compressing the service-design discovery loop, using AI to generate and stress-test journey-map variants, and designing services that include AI agents as service actors alongside humans.",
+    whenToUse:
+      "JDs that ask for AI-augmented service design, agentic AI capabilities for operating standards, or AI-enabled tools and workflows in a service-design context. New enough that most service designers haven't built this muscle yet — a positioning advantage for designers who have.",
+    vocabulary: [
+      "AI-augmented service design",
+      "agentic capabilities",
+      "operating standards as agents",
+      "service actors (human and AI)",
+      "AI-in-the-loop journey design",
+      "service-design tooling",
+      "agentic operating standards",
+    ],
+    howToDropIn:
+      "\"AI-augmented service design isn't 'use AI to write your journey map.' It's two harder things: agents that codify operating standards into runtime behavior so the frontline ships consistent experience without scripts, and AI service actors that share the service blueprint with human ones. The discipline is young — most service designers haven't built this muscle yet — but it's where consumer marketplaces are going because the experience can't be standardized otherwise.\"",
+    commonPhrasing: "AI-augmented service design, agentic service design, AI service blueprint.",
+    notes:
+      "Genuinely emerging intersection — most service designers can't speak to it yet, and most AI builders don't think in service-blueprint terms. Small population carries both muscles. Zillow's Principal Service Designer JD is one of the cleaner public examples of this discipline being requested explicitly. Pair with Principal Service Designer (Consumer Marketplace, AI-Augmented), Service Blueprint, and the agentic-delivery and forward-deployed framework cards.",
+    source:
+      "Emerging practice (consumer marketplace and service-design teams, 2025–2026); Zillow Principal Service Designer JD as a representative public example.",
+    tags: ["service_design", "ai_augmented", "emerging_discipline", "framework"],
+  },
+  {
+    name: "Multi-Channel Service Orchestration (High-Stakes Consumer Transaction)",
+    category: "service_design",
+    oneLiner:
+      "The service-design specialty inside consumer marketplaces where the customer journey crosses many channels and lines of business — digital product, frontline ops, sales enablement, marketing, back-office operations — for a single high-stakes transaction (home buying, lending, leasing, financial onboarding).",
+    whenToUse:
+      "Consumer-marketplace service-design JDs where the role explicitly names cross-channel orchestration, working through organizational silos, or coordinating efforts across product / engineering / ops / sales enablement / marketing. Common at real estate, lending, hospitality, and high-trust fintech.",
+    vocabulary: [
+      "multi-channel orchestration",
+      "cross-line-of-business coordination",
+      "frontline operations",
+      "high-stakes transaction",
+      "service operating standards",
+      "channel handoff",
+      "experience consistency",
+      "silo navigation",
+    ],
+    howToDropIn:
+      "\"High-stakes consumer transactions like home buying or financing aren't single-channel experiences — they cross digital product, frontline operators (loan officers, agents), marketing, sales enablement, and back-office ops. The service-design job is keeping the customer's mental model of one experience intact while five organizations each ship their own piece of it. The artifact is a service blueprint with operating standards each line of business can hold itself to, not a feature spec.\"",
+    commonPhrasing: "Multi-channel service design, end-to-end journey orchestration, cross-LOB service design.",
+    notes:
+      "The vocabulary in this card is private-sector-flavored; substitute the right idioms for client context — the underlying muscle is the same and maps to multi-sided service design in government, regulated industries, and consumer marketplaces alike. Pair with Service Blueprint, Multi-Audience Digital Governance, and the Principal Service Designer (Consumer Marketplace, AI-Augmented) card.",
+    source:
+      "Consumer-marketplace service-design practice (real estate, lending, fintech, 2025–2026); Zillow Principal Service Designer JD as a representative example.",
+    tags: ["service_design", "consumer_marketplace", "orchestration", "framework"],
+  },
 ];
