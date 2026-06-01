@@ -5456,4 +5456,132 @@ export const frameworks: Framework[] = [
       "Christian & Timbers, 'Top AI Leadership Roles Expected in 2026'; ODSC, 'From Context Engineers to Chief AI Officers'; EU AI Act enforcement timeline; rising posting volume per Axial Search market analysis.",
     tags: ["ai_transformation", "ai_governance", "responsible_ai", "framework"],
   },
+
+  // —— Digital experience (regulated healthcare / insurance) ——————————————
+
+  {
+    name: "Manager / Director, Website & Digital Experience (Regulated Healthcare & Insurance)",
+    category: "digital_experience",
+    oneLiner:
+      "The web / digital experience leadership archetype at health plans, insurance carriers, and adjacent regulated-industry employers — owning website strategy, analytics, governance, IA, and the cross-functional partnership with IT that turns business needs into scalable digital solutions for member, provider, broker, and employer audiences.",
+    whenToUse:
+      "Manager / Director / Senior Director-level digital experience postings at health plans (Premera, Regence, Kaiser, Cigna, Aetna, Humana, BCBS family, UnitedHealth, Point32Health), insurance carriers, and dental / vision plans (Delta Dental). The title taxonomy varies — 'Manager, Website Experience'; 'Director, Digital Product & Experience Management'; 'Senior Director, Digital Product / Member Experience'; 'Director, Digital Customer Experience' — but the role shape is consistent.",
+    vocabulary: [
+      "digital experience",
+      "website experience",
+      "member experience",
+      "provider experience",
+      "broker portal",
+      "employer portal",
+      "multi-audience IA",
+      "digital governance",
+      "GA4 / analytics ownership",
+      "A/B testing",
+      "personalization",
+      "WCAG accessibility",
+      "HIPAA-aware",
+      "cross-tenant",
+      "CMS platform (Sitecore / AEM / Drupal Enterprise)",
+    ],
+    howToDropIn:
+      "\"At a health plan, the website is a multi-tenant service: members have one job, providers have another, brokers and employers have theirs, and they all touch the same brand and the same data spine. The role isn't 'run the marketing site' — it's running a governed experience across audiences with very different mental models, working with IT on platform and integrations, holding the analytics layer that tells you what's actually moving, and meeting HIPAA's bar on the way through.\"",
+    commonPhrasing: "Manager / Director, Website Experience; Digital Experience Manager; Director, Digital Product & Experience Management.",
+    notes:
+      "The title taxonomy is genuinely unsettled across carriers: Delta Dental of Washington (Manager, Website Experience); Point32Health, parent of Tufts and Harvard Pilgrim (Director, Digital Product & Experience Management); UnitedHealth Group (Senior Director, Digital Product / Member Experience); Anthem / Aetna / Humana variants exist. Read scope and seniority, not the literal title. The 7+ year requirement is industry-standard; experience in healthcare / insurance / financial-services / regulated industry is consistently named as a plus. The cross-functional spine is the same everywhere: web team + IT (platform / integration) + marketing + compliance + legal + member-facing teams. Direct profile match for content design + service design + multi-audience IA + agency / vendor management; the muscles to be honest about are GA4-as-SME and current CMS-platform fluency. Pair with Multi-Audience Digital Governance, Web Analytics Leadership (GA4 + A/B), Enterprise CMS Stewardship, and the CMS-migration Story card (forthcoming).",
+    source:
+      "Validated against active 2026 postings: Delta Dental of Washington 'Manager, Website Experience' (April 2026); Point32Health 'Director, Digital Product & Experience Management'; UnitedHealth Group 'Senior Director, Digital Product — Unified AI Search'; J.D. Power 2026 U.S. Healthcare Digital Experience Study (industry investment); Corporate Insight Health Plan Monitor (digital experience rankings).",
+    tags: ["digital_experience", "healthcare", "insurance", "role", "framework"],
+  },
+  {
+    name: "Multi-Audience Digital Governance (Member / Provider / Broker / Employer)",
+    category: "digital_experience",
+    oneLiner:
+      "The IA-and-governance specialty inside a health-plan or insurance-carrier digital experience seat — designing and maintaining the standards, content models, and platform conventions that let four (or more) distinct audiences share one website, one brand, and one data spine without their jobs-to-be-done colliding.",
+    whenToUse:
+      "Health-plan and carrier digital experience JDs that name multiple audiences ('public member, provider, broker, employer'), portal ecosystems, or cross-tenant governance. Common at the BCBS family, Cigna, Aetna, Humana, UnitedHealth, Kaiser, regional plans, and dental / vision carriers.",
+    vocabulary: [
+      "multi-audience IA",
+      "audience-based navigation",
+      "portal ecosystem",
+      "content governance",
+      "content model",
+      "design-system governance",
+      "brand consistency",
+      "cross-tenant standards",
+      "role-based experience",
+      "audience pivot",
+      "single-spine multi-surface",
+    ],
+    howToDropIn:
+      "\"The multi-audience site is its own design problem. A member checking a claim, a provider looking up eligibility, a broker comparing plans, and an employer managing a group are four different jobs touching the same brand and often the same back-end. The governance work is keeping the conventions tight enough that the site is coherent and loose enough that each audience can have what it needs — and being explicit about what's shared (brand, accessibility, data definitions) versus what's localized (navigation, voice, depth).\"",
+    commonPhrasing: "Multi-audience governance, audience IA, portal governance.",
+    notes:
+      "Direct match for eAPD's two-sided service design (state authors vs. federal reviewers — same instinct scaled to four-plus audiences). The 'establish governance frameworks across all audiences while ensuring it works seamlessly with digital platform portals' line in the Delta Dental JD is the canonical version of this requirement. Pair with Manager / Director, Website & Digital Experience and the eAPD / SOMD Story cards as substance evidence; the Service Blueprint and Dual-Track Agile frameworks already in the deck cover the underlying design moves.",
+    source:
+      "Health-plan and insurance-carrier digital experience practice (Delta Dental, Point32Health, BCBS family); service-design literature on multi-sided platforms.",
+    tags: ["digital_experience", "ia", "governance", "healthcare", "framework"],
+  },
+  {
+    name: "Web Analytics Leadership (GA4 + A/B)",
+    category: "digital_experience",
+    oneLiner:
+      "The analytics-ownership specialty inside a website experience seat — owning Google Analytics 4 event design, conversion tracking, data governance, dashboards, and A/B testing programs so the website team can make decisions on real behavior rather than opinion.",
+    whenToUse:
+      "Digital experience JDs that name the role as 'in-house SME for GA4,' 'lead website performance strategy, analytics, testing, and optimization,' or otherwise put the analytics ownership inside the digital experience seat rather than in a separate data team. Common in mid-sized regulated employers where one team owns the loop.",
+    vocabulary: [
+      "GA4 (Google Analytics 4)",
+      "event design",
+      "conversion tracking",
+      "data layer",
+      "data governance",
+      "tag management (GTM)",
+      "A/B testing",
+      "multivariate testing",
+      "experimentation program",
+      "lift",
+      "statistical significance",
+      "personalization platform",
+      "dashboarding",
+      "self-serve reporting",
+    ],
+    howToDropIn:
+      "\"GA4-as-SME inside a digital experience seat means owning the loop: event taxonomy and the data layer that feeds it, conversion design tied to the audiences the business actually cares about, a testing program with enough cadence to learn rather than just instrument, and the discipline to translate the dashboard into a roadmap recommendation. The trap is becoming a reporting service desk; the value is being the team that knows which experiment is worth running next.\"",
+    commonPhrasing: "Website analytics, GA4 SME, A/B testing program, conversion optimization.",
+    notes:
+      "Honest framing in interviews: A/B testing and outcomes-driven decision-making are in your wheelhouse (eAPD's continuous-discovery cadence; OKRs designed as outcomes, not output). GA4-as-in-house-SME is a specific operator role to be honest about — if you've owned analytics implementation end-to-end, name the depth; if you've consumed analytics and partnered with a specialist, name that too. Both are legitimate; misrepresenting in either direction costs trust in week one. Pair with Manager / Director, Website & Digital Experience and Dual-Track Agile (continuous-discovery cadence).",
+    source:
+      "Web analytics practice; Google Analytics 4 documentation; CRO and experimentation discipline (Optimizely, VWO, Statsig).",
+    tags: ["digital_experience", "analytics", "experimentation", "framework"],
+  },
+  {
+    name: "Enterprise CMS Stewardship",
+    category: "digital_experience",
+    oneLiner:
+      "The platform-management muscle for running a website on an enterprise content management system (Sitecore, Adobe Experience Manager, Drupal Enterprise, Contentful, Optimizely / Episerver) — content models, templates, publishing governance, integrations, releases, and the working partnership with IT that keeps the platform delivering.",
+    whenToUse:
+      "Digital experience JDs that name CMS platform fluency — Sitecore explicitly, or 'similar enterprise CMS' as a permissive equivalent. The healthcare / insurance market leans heavily on Sitecore and AEM; smaller orgs and modern stacks lean on Contentful, Sanity, or headless setups.",
+    vocabulary: [
+      "Sitecore",
+      "Adobe Experience Manager (AEM)",
+      "Drupal Enterprise",
+      "Contentful",
+      "Optimizely / Episerver",
+      "headless CMS",
+      "content model",
+      "templates / page types",
+      "publishing governance",
+      "personalization rules",
+      "release cadence",
+      "platform integration",
+      "headless vs. coupled",
+    ],
+    howToDropIn:
+      "\"Enterprise CMS work is less about authoring and more about stewardship — the content model the templates rest on, the publishing process that lets the business move without breaking, the personalization layer if there is one, the integration spine into identity / search / forms / data, and the working partnership with IT on releases. The CMS is the substrate for the entire experience; treat it as a platform, not a tool.\"",
+    commonPhrasing: "CMS platform ownership, content platform, Sitecore / AEM administration.",
+    notes:
+      "Direct substance match — the CMS-migration Story card (forthcoming) is the evidence layer. The healthcare / insurance vertical leans Sitecore and AEM; CMS migrations between major platforms are common career-defining engagements. Worth being honest in interviews about which platforms you have current versus dated fluency in, since major versions and headless conversions have changed the surface considerably. Pair with Manager / Director, Website & Digital Experience and the CMS-migration Story card.",
+    source:
+      "Enterprise CMS practice (Sitecore, AEM, Drupal Enterprise, Contentful); healthcare / insurance vertical platform conventions.",
+    tags: ["digital_experience", "cms", "platform", "framework"],
+  },
 ];
