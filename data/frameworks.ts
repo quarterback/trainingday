@@ -5334,4 +5334,360 @@ export const frameworks: Framework[] = [
       "Association of Change Management Professionals (ACMP), *Standard for Change Management* (current edition); CCMP credential framework; acmpglobal.org.",
     tags: ["ocm", "change_model", "certification", "framework"],
   },
+
+  // —— AI Transformation & Enablement (non-engineering AI leadership) ————
+
+  {
+    name: "Director / Head of AI Transformation & Enablement",
+    category: "ai_transformation",
+    oneLiner:
+      "The non-engineering AI leadership archetype that owns workforce AI adoption, enablement programs, and the people-and-process side of AI transformation — partnered with but distinct from the Principal AI Engineer track that owns the technical platform.",
+    whenToUse:
+      "Senior leadership AI roles where the brief is org-wide adoption, fluency, enablement, transformation, or strategy — not deep technical IC engineering. Real exemplars (2026): Schwab 'Director, AI Fluency & Enablement Programs'; Writer 'Strategic AI Transformation Lead'; Thrive Learning 'Head of AI Transformation'; Citi 'Head of AI Strategy'; Accenture 'Strategy Principal Director, Data & AI Strategy.'",
+    vocabulary: [
+      "AI transformation",
+      "AI enablement",
+      "AI fluency",
+      "AI adoption at scale",
+      "AI-first operating model",
+      "AI strategy",
+      "capability building",
+      "enablement programs",
+      "executive advisory",
+      "change network",
+      "translate platform power to P&L",
+      "AI readiness",
+    ],
+    howToDropIn:
+      "\"The Principal AI Engineer owns the platform; this seat owns whether the workforce can use it. The work is enablement programs the org can actually take, role-by-role redesign so people see what their job becomes, an honest read on AI readiness by function, and the translation work that turns model capability into operating-model decisions for the executive team. The technical org ships the platform; this org ships the adoption.\"",
+    commonPhrasing: "Director / Head of AI Transformation, Enablement, Fluency, or Adoption; Strategic AI Transformation Lead.",
+    notes:
+      "The market title is unsettled — Schwab calls it 'AI Fluency & Enablement Programs,' Writer calls it 'Strategic AI Transformation Lead,' Thrive calls it 'Head of AI Transformation,' Citi has both 'Head of AI Strategy' and a 'Group Head of AI' above it. Read the seniority and scope, not the literal title. The seat reports into a CIO/CTO/CDO/CAIO or directly to the CEO depending on org maturity. Common profile of successful hires: product, strategy, design, learning, change-management, or transformation background rather than ML engineering — which is exactly the candidate this role intentionally selects for, because the failure mode is technical-leader-as-adoption-leader (the engineer who can't run a workforce program). Pair with AI Fluency Programs (Enterprise Workforce), Strategic AI Transformation (Translating AI to P&L), AI Governance & Responsible AI Leadership, AI Adoption & Capability Building (OCM section), and the SOMD Story card as substance evidence.",
+    source:
+      "Validated against active 2026 postings: Schwab 'Director, AI Fluency & Enablement Programs'; Writer 'Strategic AI Transformation Lead (West)'; Thrive Learning 'Head of AI Transformation'; Citi 'Head of AI Strategy'; Accenture 'Strategy Principal Director, Data & AI Strategy'; Google 'AI Strategist, Principal Lead, Global Partnerships.' Axial Search market analyses (1,859 AI strategy postings; 3,159 AI implementation postings).",
+    tags: ["ai_transformation", "ai_leadership", "role", "framework"],
+  },
+  {
+    name: "AI Fluency Programs (Enterprise Workforce)",
+    category: "ai_transformation",
+    oneLiner:
+      "The enablement specialty inside an AI transformation seat — building, running, and measuring AI literacy and capability programs across thousands of employees, with curricula, role-based learning paths, certification, and adoption metrics tied to actual workflow change.",
+    whenToUse:
+      "JDs that name 'AI fluency,' 'AI enablement programs,' 'capability building,' 'driving adoption at scale.' Schwab's posting is the cleanest exemplar. Often paired with workforce-planning, talent, or L&D partnerships.",
+    vocabulary: [
+      "AI fluency",
+      "enablement programs",
+      "learning paths",
+      "role-based curriculum",
+      "certification track",
+      "champions network",
+      "adoption metrics",
+      "learning operations",
+      "train-the-trainer",
+      "cohort programs",
+      "office hours",
+      "workflow integration",
+    ],
+    howToDropIn:
+      "\"AI fluency at workforce scale isn't an LMS course — it's a portfolio: a baseline curriculum everyone takes, role-based deepens for the functions where AI changes the actual job, a champions network that runs office hours and unblocks people in flow, and a measurement model that ties adoption to workflow change rather than completion rates. The unit of success isn't 'employees trained,' it's 'workflows where AI is now load-bearing.'\"",
+    commonPhrasing: "AI fluency programs, enterprise enablement, capability building.",
+    notes:
+      "Direct substance match for the SOMD Story card (federal cohort-based, peer-cascade capability building inside a hard time window), the eAPD content-as-interface work (curriculum-as-system instinct), and the train-the-trainer pattern. Schwab's title is the canonical reference because they've named the function explicitly; less mature orgs roll this work into 'AI transformation' broadly. Pair with AI Adoption & Capability Building (OCM section), Director / Head of AI Transformation & Enablement, and the train-the-trainer references.",
+    source:
+      "Schwab 'Director, AI Fluency & Enablement Programs' (San Francisco / Austin / Southlake, January 2026 posting); enterprise AI enablement practice.",
+    tags: ["ai_transformation", "enablement", "capability_building", "framework"],
+  },
+  {
+    name: "Strategic AI Transformation (Translating AI to P&L)",
+    category: "ai_transformation",
+    oneLiner:
+      "The strategy-and-translation specialty inside an AI transformation seat — helping executives navigate the shift to an AI-first operating model, translating platform capability into measurable P&L impact, and shaping the operating-model and investment decisions that follow.",
+    whenToUse:
+      "JDs that frame the role as 'business strategy and cutting-edge technology,' 'translating platform power into measurable P&L impact,' 'AI-first operating model,' 'helping executives navigate the shift.' Writer's 'Strategic AI Transformation Lead' is the canonical exemplar; Accenture and BCG variants exist.",
+    vocabulary: [
+      "AI-first operating model",
+      "P&L impact",
+      "value realization",
+      "AI investment thesis",
+      "use-case portfolio",
+      "executive advisory",
+      "transformation roadmap",
+      "AI maturity model",
+      "operating-model redesign",
+      "make-or-buy",
+      "platform economics",
+    ],
+    howToDropIn:
+      "\"The translation work is the leverage point. Executives don't need another model demo; they need to understand which functions get reshaped, what the operating-model implications are, where the P&L moves, and what the AI investment thesis actually buys them over three years. The seat is part strategist, part advisor, part translator — fluent enough in the technology to be credible with the platform team, fluent enough in the business to be useful to the CFO.\"",
+    commonPhrasing: "Strategic AI transformation, AI strategy, AI-first operating model.",
+    notes:
+      "The consulting-flavored variant of the AI transformation seat — closer to Accenture / Deloitte / BCG / McKinsey hire patterns than to in-house enablement roles. The vocabulary is heavier on P&L, investment thesis, operating model, and executive advisory than on enablement mechanics. The OCM target-role cards (Senior OCM Consultant AI / Digital Transformation; Trusted Advisor Stance; Sales & Networking in Consulting) directly support this archetype; design-leadership scope (Head of Design at 18F) reads as 'has run an org' which is what these seats need. Pair with Director / Head of AI Transformation & Enablement, the OCM cards, and the AI-delivery glossary cards for the technical register.",
+    source:
+      "Writer 'Strategic AI Transformation Lead (West)' (February 2026); Accenture Strategy & Consulting AI practice; Citi 'Head of AI Strategy' (firmwide); BCG / McKinsey / Deloitte AI strategy practices.",
+    tags: ["ai_transformation", "ai_strategy", "executive_advisory", "framework"],
+  },
+  {
+    name: "AI Governance & Responsible AI Leadership",
+    category: "ai_transformation",
+    oneLiner:
+      "The rising non-technical AI executive specialty owning enterprise AI governance, responsible-AI standards, risk and compliance, and audit readiness — particularly important as the EU AI Act moves into enforcement and US sectoral regulation tightens.",
+    whenToUse:
+      "JDs that name 'AI governance,' 'responsible AI,' 'AI risk,' 'AI compliance,' 'auditability,' or are inside regulated sectors (financial services, healthcare, federal, EU operations). Often a separate seat from AI transformation, sometimes merged at smaller orgs.",
+    vocabulary: [
+      "AI governance",
+      "responsible AI",
+      "AI risk management",
+      "model risk",
+      "auditability",
+      "AI compliance",
+      "EU AI Act",
+      "NIST AI Risk Management Framework",
+      "AI policy",
+      "model cards",
+      "evaluation standards",
+      "third-party AI risk",
+    ],
+    howToDropIn:
+      "\"AI governance at enterprise scale isn't a policy document — it's an operating function: an inventory of where AI is in use and at what risk tier, evaluation and audit standards that travel with each deployment, a model-risk process the second-line can actually run, and the cross-functional spine (legal, security, compliance, data, product) that lets the org move fast without owing a regulator an explanation later. The EU AI Act enforcement timeline made this a board-level concern, not a center-of-excellence one.\"",
+    commonPhrasing: "AI governance, responsible AI, AI risk and compliance.",
+    notes:
+      "Adjacent — not core — to your profile, but worth knowing because (a) federal / regulated-sector experience (eAPD, CMS, 42 CFR 495) is unusually relevant and could be a back-door into this lane; (b) AI governance leaders increasingly need partners in transformation and enablement, so understanding the function is useful even from an adjacent seat; (c) at smaller orgs the seats merge. Common titles: Head of AI Governance, Head of Responsible AI, AI Risk Director, Chief AI Ethics Officer. The credential stack here is different — NIST AI RMF, ISO 42001, IAPP AIGP. Pair with Director / Head of AI Transformation & Enablement and the OCM cards if the org runs them together.",
+    source:
+      "Christian & Timbers, 'Top AI Leadership Roles Expected in 2026'; ODSC, 'From Context Engineers to Chief AI Officers'; EU AI Act enforcement timeline; rising posting volume per Axial Search market analysis.",
+    tags: ["ai_transformation", "ai_governance", "responsible_ai", "framework"],
+  },
+
+  // —— Digital experience (regulated healthcare / insurance) ——————————————
+
+  {
+    name: "Manager / Director, Website & Digital Experience (Regulated Healthcare & Insurance)",
+    category: "digital_experience",
+    oneLiner:
+      "The web / digital experience leadership archetype at health plans, insurance carriers, and adjacent regulated-industry employers — owning website strategy, analytics, governance, IA, and the cross-functional partnership with IT that turns business needs into scalable digital solutions for member, provider, broker, and employer audiences.",
+    whenToUse:
+      "Manager / Director / Senior Director-level digital experience postings at health plans (Premera, Regence, Kaiser, Cigna, Aetna, Humana, BCBS family, UnitedHealth, Point32Health), insurance carriers, and dental / vision plans (Delta Dental). The title taxonomy varies — 'Manager, Website Experience'; 'Director, Digital Product & Experience Management'; 'Senior Director, Digital Product / Member Experience'; 'Director, Digital Customer Experience' — but the role shape is consistent.",
+    vocabulary: [
+      "digital experience",
+      "website experience",
+      "member experience",
+      "provider experience",
+      "broker portal",
+      "employer portal",
+      "multi-audience IA",
+      "digital governance",
+      "GA4 / analytics ownership",
+      "A/B testing",
+      "personalization",
+      "WCAG accessibility",
+      "HIPAA-aware",
+      "cross-tenant",
+      "CMS platform (Sitecore / AEM / Drupal Enterprise)",
+    ],
+    howToDropIn:
+      "\"At a health plan, the website is a multi-tenant service: members have one job, providers have another, brokers and employers have theirs, and they all touch the same brand and the same data spine. The role isn't 'run the marketing site' — it's running a governed experience across audiences with very different mental models, working with IT on platform and integrations, holding the analytics layer that tells you what's actually moving, and meeting HIPAA's bar on the way through.\"",
+    commonPhrasing: "Manager / Director, Website Experience; Digital Experience Manager; Director, Digital Product & Experience Management.",
+    notes:
+      "The title taxonomy is genuinely unsettled across carriers: Delta Dental of Washington (Manager, Website Experience); Point32Health, parent of Tufts and Harvard Pilgrim (Director, Digital Product & Experience Management); UnitedHealth Group (Senior Director, Digital Product / Member Experience); Anthem / Aetna / Humana variants exist. Read scope and seniority, not the literal title. The 7+ year requirement is industry-standard; experience in healthcare / insurance / financial-services / regulated industry is consistently named as a plus. The cross-functional spine is the same everywhere: web team + IT (platform / integration) + marketing + compliance + legal + member-facing teams. Direct profile match for content design + service design + multi-audience IA + agency / vendor management; the muscles to be honest about are GA4-as-SME and current CMS-platform fluency. Pair with Multi-Audience Digital Governance, Web Analytics Leadership (GA4 + A/B), Enterprise CMS Stewardship, and the CMS-migration Story card (forthcoming).",
+    source:
+      "Validated against active 2026 postings: Delta Dental of Washington 'Manager, Website Experience' (April 2026); Point32Health 'Director, Digital Product & Experience Management'; UnitedHealth Group 'Senior Director, Digital Product — Unified AI Search'; J.D. Power 2026 U.S. Healthcare Digital Experience Study (industry investment); Corporate Insight Health Plan Monitor (digital experience rankings).",
+    tags: ["digital_experience", "healthcare", "insurance", "role", "framework"],
+  },
+  {
+    name: "Multi-Audience Digital Governance (Member / Provider / Broker / Employer)",
+    category: "digital_experience",
+    oneLiner:
+      "The IA-and-governance specialty inside a health-plan or insurance-carrier digital experience seat — designing and maintaining the standards, content models, and platform conventions that let four (or more) distinct audiences share one website, one brand, and one data spine without their jobs-to-be-done colliding.",
+    whenToUse:
+      "Health-plan and carrier digital experience JDs that name multiple audiences ('public member, provider, broker, employer'), portal ecosystems, or cross-tenant governance. Common at the BCBS family, Cigna, Aetna, Humana, UnitedHealth, Kaiser, regional plans, and dental / vision carriers.",
+    vocabulary: [
+      "multi-audience IA",
+      "audience-based navigation",
+      "portal ecosystem",
+      "content governance",
+      "content model",
+      "design-system governance",
+      "brand consistency",
+      "cross-tenant standards",
+      "role-based experience",
+      "audience pivot",
+      "single-spine multi-surface",
+    ],
+    howToDropIn:
+      "\"The multi-audience site is its own design problem. A member checking a claim, a provider looking up eligibility, a broker comparing plans, and an employer managing a group are four different jobs touching the same brand and often the same back-end. The governance work is keeping the conventions tight enough that the site is coherent and loose enough that each audience can have what it needs — and being explicit about what's shared (brand, accessibility, data definitions) versus what's localized (navigation, voice, depth).\"",
+    commonPhrasing: "Multi-audience governance, audience IA, portal governance.",
+    notes:
+      "Direct match for eAPD's two-sided service design (state authors vs. federal reviewers — same instinct scaled to four-plus audiences). The 'establish governance frameworks across all audiences while ensuring it works seamlessly with digital platform portals' line in the Delta Dental JD is the canonical version of this requirement. Pair with Manager / Director, Website & Digital Experience and the eAPD / SOMD Story cards as substance evidence; the Service Blueprint and Dual-Track Agile frameworks already in the deck cover the underlying design moves.",
+    source:
+      "Health-plan and insurance-carrier digital experience practice (Delta Dental, Point32Health, BCBS family); service-design literature on multi-sided platforms.",
+    tags: ["digital_experience", "ia", "governance", "healthcare", "framework"],
+  },
+  {
+    name: "Web Analytics Leadership (GA4 + A/B)",
+    category: "digital_experience",
+    oneLiner:
+      "The analytics-ownership specialty inside a website experience seat — owning Google Analytics 4 event design, conversion tracking, data governance, dashboards, and A/B testing programs so the website team can make decisions on real behavior rather than opinion.",
+    whenToUse:
+      "Digital experience JDs that name the role as 'in-house SME for GA4,' 'lead website performance strategy, analytics, testing, and optimization,' or otherwise put the analytics ownership inside the digital experience seat rather than in a separate data team. Common in mid-sized regulated employers where one team owns the loop.",
+    vocabulary: [
+      "GA4 (Google Analytics 4)",
+      "event design",
+      "conversion tracking",
+      "data layer",
+      "data governance",
+      "tag management (GTM)",
+      "A/B testing",
+      "multivariate testing",
+      "experimentation program",
+      "lift",
+      "statistical significance",
+      "personalization platform",
+      "dashboarding",
+      "self-serve reporting",
+    ],
+    howToDropIn:
+      "\"GA4-as-SME inside a digital experience seat means owning the loop: event taxonomy and the data layer that feeds it, conversion design tied to the audiences the business actually cares about, a testing program with enough cadence to learn rather than just instrument, and the discipline to translate the dashboard into a roadmap recommendation. The trap is becoming a reporting service desk; the value is being the team that knows which experiment is worth running next.\"",
+    commonPhrasing: "Website analytics, GA4 SME, A/B testing program, conversion optimization.",
+    notes:
+      "Honest framing in interviews: A/B testing and outcomes-driven decision-making are in your wheelhouse (eAPD's continuous-discovery cadence; OKRs designed as outcomes, not output). GA4-as-in-house-SME is a specific operator role to be honest about — if you've owned analytics implementation end-to-end, name the depth; if you've consumed analytics and partnered with a specialist, name that too. Both are legitimate; misrepresenting in either direction costs trust in week one. Pair with Manager / Director, Website & Digital Experience and Dual-Track Agile (continuous-discovery cadence).",
+    source:
+      "Web analytics practice; Google Analytics 4 documentation; CRO and experimentation discipline (Optimizely, VWO, Statsig).",
+    tags: ["digital_experience", "analytics", "experimentation", "framework"],
+  },
+  {
+    name: "Enterprise CMS Stewardship",
+    category: "digital_experience",
+    oneLiner:
+      "The platform-management muscle for running a website on an enterprise content management system (Sitecore, Adobe Experience Manager, Drupal Enterprise, Contentful, Optimizely / Episerver) — content models, templates, publishing governance, integrations, releases, and the working partnership with IT that keeps the platform delivering.",
+    whenToUse:
+      "Digital experience JDs that name CMS platform fluency — Sitecore explicitly, or 'similar enterprise CMS' as a permissive equivalent. The healthcare / insurance market leans heavily on Sitecore and AEM; smaller orgs and modern stacks lean on Contentful, Sanity, or headless setups.",
+    vocabulary: [
+      "Sitecore",
+      "Adobe Experience Manager (AEM)",
+      "Drupal Enterprise",
+      "Contentful",
+      "Optimizely / Episerver",
+      "headless CMS",
+      "content model",
+      "templates / page types",
+      "publishing governance",
+      "personalization rules",
+      "release cadence",
+      "platform integration",
+      "headless vs. coupled",
+    ],
+    howToDropIn:
+      "\"Enterprise CMS work is less about authoring and more about stewardship — the content model the templates rest on, the publishing process that lets the business move without breaking, the personalization layer if there is one, the integration spine into identity / search / forms / data, and the working partnership with IT on releases. The CMS is the substrate for the entire experience; treat it as a platform, not a tool.\"",
+    commonPhrasing: "CMS platform ownership, content platform, Sitecore / AEM administration.",
+    notes:
+      "Direct substance match — the CMS-migration Story card (forthcoming) is the evidence layer. The healthcare / insurance vertical leans Sitecore and AEM; CMS migrations between major platforms are common career-defining engagements. Worth being honest in interviews about which platforms you have current versus dated fluency in, since major versions and headless conversions have changed the surface considerably. Pair with Manager / Director, Website & Digital Experience and the CMS-migration Story card.",
+    source:
+      "Enterprise CMS practice (Sitecore, AEM, Drupal Enterprise, Contentful); healthcare / insurance vertical platform conventions.",
+    tags: ["digital_experience", "cms", "platform", "framework"],
+  },
+
+  // —— Occupant Indices (AI measurement instruments) ————————————————————
+
+  {
+    name: "$CPI — Compute Price Index",
+    category: "ai_measurement",
+    oneLiner:
+      "A Consumer-Price-Index-style measurement of what it actually costs to run AI tasks, volume-weighted across four workload tiers (commodity / frontier / reasoning / long-context) and 2,000+ models, with January 2025 = 100 as the baseline.",
+    whenToUse:
+      "AI procurement, budget projections, model-selection economics, AI cost trajectory analysis. For federal procurement officers, foundation finance teams, and anyone tracking whether 'AI is getting cheaper' is real or hype.",
+    vocabulary: [
+      "Compute Price Index",
+      "$CPI",
+      "AI inference cost",
+      "token economics",
+      "workload tier",
+      "commodity / frontier / reasoning / long-context",
+      "volume-weighted",
+      "yield curve",
+      "tier premium",
+    ],
+    howToDropIn:
+      "\"$CPI is a Consumer Price Index for AI compute. We weight it across four workload tiers — commodity, frontier, reasoning, long-context — using volume from over two thousand models. Currently 62 against a January 2025 baseline of 100, meaning AI compute is about 38% cheaper than at the start of 2025, but the trajectory varies sharply by workload.\"",
+    commonPhrasing: "AI Compute Price Index, $CPI, AI cost index.",
+    notes:
+      "One of three Occupant Indices. Distinct from Stanford AI Index and Epoch AI compute-trends work in that it's a procurement-grade methodology with a defined basket and weights, updated weekly. The tool layer is the AI Services Price Reasonableness Worksheet (the federal-procurement application) and the LLM Cost Calculator. Variants exist: $CPI-L (since launch), $CPI-Y (year-over-year), $CPI-Q (quarter-to-date), $CPI-GEN (general purpose), $CPI-FRO (frontier heavy), $CPI-BUD (budget optimized), $CPI-REA (reasoning focus), $CPI-ENT (enterprise mix). Pair with $AIU, $LDI, AI Services Price Reasonableness Worksheet, and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee/indices). Data: OpenRouter rankings, LiteLLM, llm-prices.com, pricepertoken.com.",
+    tags: ["ai_measurement", "procurement", "instrument", "framework"],
+  },
+  {
+    name: "$AIU — AI Economic Activity Index",
+    category: "ai_measurement",
+    oneLiner:
+      "A composite index of AI economic activity modeled on the IMF's Special Drawing Rights — token throughput (60%), inferred spend (30%), and energy use (10%) — read as a single number against a January 2025 baseline of 100.",
+    whenToUse:
+      "Macro analysis of AI as an economic sector. For policy researchers, journalists, foundation strategy teams, and anyone trying to distinguish actual AI activity growth from market hype.",
+    vocabulary: [
+      "AI Economic Activity Index",
+      "$AIU",
+      "AI macro index",
+      "token throughput",
+      "inferred spend",
+      "energy proxy",
+      "Special Drawing Rights",
+      "composite index",
+    ],
+    howToDropIn:
+      "\"$AIU is a stock-market-style index for AI as an economic sector. It's a weighted composite — 60% token throughput, 30% inferred spend, 10% energy footprint — modeled on the IMF's Special Drawing Rights. Currently 504 against a January 2025 baseline of 100; AI economic activity is up about 5x in 16 months. Nobody else publishes a single number for this; that's the gap it fills.\"",
+    commonPhrasing: "AI Activity Index, $AIU, AI macro indicator.",
+    notes:
+      "One of three Occupant Indices. The IMF SDR modeling is the deliberate methodological signal — single composite read against a baseline, weights tuned to underlying activity drivers. Energy component blends a token-derived proxy (70%, from tier efficiency factors) and a grid-investment growth index (30%, from BloombergNEF annual global grid investment data). Coverage scope: OpenRouter public rankings — a significant but incomplete view; direct API usage, enterprise deployments, and closed-loop systems are not captured. Pair with $CPI, $LDI, and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee/indices). Data: OpenRouter rankings, LiteLLM, BloombergNEF grid investment data.",
+    tags: ["ai_measurement", "macro", "instrument", "framework"],
+  },
+  {
+    name: "$LDI — Labor Displacement Index",
+    category: "ai_measurement",
+    oneLiner:
+      "An original substitution-rate methodology measuring how often AI is actually replacing federal workers when it becomes cheaper than them — combining BLS wage data, AI inference cost from $CPI, and federal procurement records.",
+    whenToUse:
+      "Any conversation about AI's labor impact in the public sector — federal workforce planning, AI procurement decisions, foundation programs funding workforce-AI work, journalism on AI and labor displacement.",
+    vocabulary: [
+      "Labor Displacement Index",
+      "$LDI",
+      "substitution rate",
+      "cost-rational substitution",
+      "BLS wage data",
+      "federal procurement records",
+      "workload substitution",
+      "cognitive arbitrage",
+    ],
+    howToDropIn:
+      "\"$LDI is the only running measurement of how often AI is actually replacing federal workers when it gets cheaper than them. We combine BLS wage data with AI cost from $CPI to find where AI is already cheaper than a person, then use federal procurement records to see where substitution is actually happening. The current 3.9% rate isn't the story — the gap between cost-rational substitution and actual substitution is.\"",
+    commonPhrasing: "Labor Displacement Index, AI substitution rate, AI labor measurement.",
+    notes:
+      "The most original IP in the Occupant Indices set and the most defensible originality claim. $CPI applies a price-index pattern to a new commodity; $AIU adapts the IMF SDR composite-index pattern; $LDI is a substitution-rate methodology that doesn't exist elsewhere. SNAP Eligibility has a worked end-to-end deep dive. The deliverable client form is the LDI Workload Calculator. Pair with $CPI, $AIU, AI Services Price Reasonableness Worksheet, and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee/indices). Methodology: BLS wage data + $CPI inference cost + federal procurement records.",
+    tags: ["ai_measurement", "labor", "federal", "original_methodology", "instrument", "framework"],
+  },
+  {
+    name: "AI Services Price Reasonableness Worksheet",
+    category: "ai_measurement",
+    oneLiner:
+      "A fill-in procurement determination tool for federal AI buyers, built on the $CPI basket — the working bridge between AI cost measurement and federal acquisition practice.",
+    whenToUse:
+      "Federal AI procurement determinations; state and local AI buy decisions where price-reasonableness analysis is required; foundation grant due diligence on AI services pricing; benchmark-rate questions in any AI procurement context.",
+    vocabulary: [
+      "price reasonableness",
+      "procurement determination",
+      "AI services worksheet",
+      "benchmark rate",
+      "FAR price analysis",
+      "fair and reasonable",
+    ],
+    howToDropIn:
+      "\"The Price Reasonableness Worksheet is the bridge between the measurement work and federal procurement. It's a fill-in tool that uses the $CPI basket as the benchmark for an AI-services price-reasonableness determination — what FAR requires, but with a defensible methodology behind the benchmark rate instead of a guess. Federal AI buyers use it as a starting point; the rates are anchored to the same basket as $CPI.\"",
+    commonPhrasing: "Price reasonableness worksheet, AI procurement worksheet.",
+    notes:
+      "The procurement-grade tool layer on top of $CPI — the artifact that translates measurement into operational practice, the specific 'bridge between policy and deployment' the Public Mechanics framing is built on. Disclaimer noted on the live tool: benchmark rates predate the current data; treat as a starting point, not a current quote. Pair with $CPI and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee). Built on the $CPI basket; FAR price-reasonableness practice.",
+    tags: ["ai_measurement", "procurement", "federal", "tool", "framework"],
+  },
 ];
