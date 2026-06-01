@@ -5774,4 +5774,99 @@ export const frameworks: Framework[] = [
       "Consumer-marketplace service-design practice (real estate, lending, fintech, 2025–2026); Zillow Principal Service Designer JD as a representative example.",
     tags: ["service_design", "consumer_marketplace", "orchestration", "framework"],
   },
+
+  // —— AI Ethics & Responsible AI ————————————————————————————————————————
+
+  {
+    name: "AI Ethicist / Responsible AI Specialist (Embedded IC)",
+    category: "ai_ethics",
+    oneLiner:
+      "The senior individual-contributor responsible-AI archetype embedded in a tech org's AI/ML function — primary authority on responsible AI inside the company, embedded with ML Engineering and Product on model design and feature work, internal trainer and culture-builder, and external representative to AI partners and policymakers. Typically reports to CTO or CDO; not usually a people-manager.",
+    whenToUse:
+      "AI Ethicist, Responsible AI Specialist, Responsible AI Lead, AI Ethics Lead postings at private-sector tech companies with meaningful internal AI/ML capability. Common at EdTech (Macmillan Learning, Pearson, McGraw-Hill, Coursera), enterprise SaaS, healthcare tech, fintech, large media, and sectors with regulatory exposure on AI.",
+    vocabulary: [
+      "AI Ethicist",
+      "Responsible AI",
+      "AI Review Committee",
+      "embedded ethics",
+      "model design review",
+      "MLOps governance",
+      "algorithmic impact assessment",
+      "bias audit",
+      "model cards",
+      "data provenance",
+      "audit trail",
+      "fairness / explainability / privacy",
+    ],
+    howToDropIn:
+      "\"The AI Ethicist seat is embedded — not a separate ethics function lobbing memos at ML Engineering, but inside the room when models get designed and features get conceived. The output is governance checkpoints in the MLOps pipeline, AI Review Committee processes, algorithmic impact assessments and bias audits on the actual models, and the documentation standards (model cards, data provenance, audit trails) that make the work auditable later. Plus the external-rep job: partner working groups with Google, Anthropic, Microsoft, OpenAI; regulatory bodies; institutional customers.\"",
+    commonPhrasing: "AI Ethicist, Responsible AI Specialist, AI Ethics Lead.",
+    notes:
+      "Distinct from the AI Governance & Responsible AI Leadership card in that this is a senior IC role embedded with ML/Engineering, not an executive policy leader. Typically reports to CTO or CDO. Tech-fluency floor: Python, reading ML code, understanding model architecture sufficient to engage credibly with data scientists and ML engineers. The role is a hybrid technical-ethics seat, not a pure policy/compliance role. Pair with Algorithmic Impact Assessment & Bias Audit Practice, AI Regulatory Landscape, and AI Governance & Responsible AI Leadership.",
+    source:
+      "Validated against 2026 postings: Macmillan Learning 'AI Ethicist / Responsible AI Specialist' (Austin, TX); similar roles at Salesforce, Microsoft Office of Responsible AI, Google Responsible AI team, Pearson, IBM, Anthropic Safety.",
+    tags: ["ai_ethics", "responsible_ai", "embedded", "role", "framework"],
+  },
+  {
+    name: "Algorithmic Impact Assessment & Bias Audit Practice",
+    category: "ai_ethics",
+    oneLiner:
+      "The technical-audit specialty inside responsible AI work — running algorithmic impact assessments (AIAs) and bias audits on machine learning models prior to deployment, establishing governance checkpoints in the MLOps pipeline, and producing the documentation standards (model cards, data provenance, audit trails) that make the work auditable later.",
+    whenToUse:
+      "Responsible AI / AI Ethicist roles that explicitly name AIAs, bias audits, MLOps governance, or model cards. Increasingly common as EU AI Act enforcement begins to mandate AIAs for high-risk systems and US sectoral regulators (HHS, FTC, state AGs) follow.",
+    vocabulary: [
+      "algorithmic impact assessment (AIA)",
+      "bias audit",
+      "fairness metrics",
+      "demographic parity",
+      "equalized odds",
+      "model card",
+      "data provenance",
+      "datasheet for datasets",
+      "audit trail",
+      "MLOps governance checkpoint",
+      "explainability (XAI)",
+      "uncertainty quantification",
+    ],
+    howToDropIn:
+      "\"AIAs and bias audits aren't a one-time compliance check — they're a practice. The audit is the artifact; the governance checkpoint in the MLOps pipeline is the operating instrument; the model card and data-provenance documentation are the auditable record. Done well, they catch problems before deployment instead of after; done poorly, they're security theater. The discipline is matching fairness metrics to the actual harm and stakeholder being protected, not just running the same metric across every model.\"",
+    commonPhrasing: "Algorithmic impact assessment, bias audit, AI fairness audit, AIA.",
+    notes:
+      "Adjacent to but distinct from MLOps engineering (which owns the pipeline plumbing) and from policy/compliance (which owns the regulatory mapping). The AIA / audit practitioner is the technical-ethics specialist who knows which fairness metric applies to which deployment context. NIST AI RMF Map and Measure functions are the canonical reference; EU AI Act Article 9 mandates risk management systems for high-risk AI. Pair with AI Ethicist (Embedded IC), AI Regulatory Landscape, and AI Governance & Responsible AI Leadership.",
+    source:
+      "NIST AI Risk Management Framework (2023, current revisions); EU AI Act high-risk system requirements; algorithmic-accountability academic and practitioner literature; Macmillan Learning AI Ethicist JD (2026) as a representative example.",
+    tags: ["ai_ethics", "audit", "mlops", "framework"],
+  },
+  {
+    name: "AI Regulatory Landscape (EU AI Act, NIST AI RMF, US Sectoral)",
+    category: "ai_ethics",
+    oneLiner:
+      "The regulatory knowledge base required for AI ethics, governance, and responsible-AI roles — EU AI Act (enforcement underway), NIST AI Risk Management Framework (the de facto US voluntary standard), FTC AI guidance, US state-level AI legislation (Colorado, California, New York, Texas), and sectoral regulations (HHS, FERPA, COPPA, GDPR Article 22 in AI contexts).",
+    whenToUse:
+      "Any AI ethics / responsible AI / AI policy role; AI procurement decisions; vendor diligence; institutional customer conversations on AI compliance. JDs that list 'EU AI Act, NIST AI RMF, FTC AI guidance, and emerging state-level legislation' as required knowledge.",
+    vocabulary: [
+      "EU AI Act",
+      "high-risk AI system",
+      "AI Act Article 9 (risk management)",
+      "NIST AI Risk Management Framework",
+      "NIST AI RMF Govern / Map / Measure / Manage",
+      "FTC AI guidance",
+      "Colorado AI Act (SB24-205)",
+      "California AB 2013 / SB 942",
+      "NYC Local Law 144",
+      "Texas TRAIGA",
+      "ISO/IEC 42001",
+      "FERPA (student data)",
+      "COPPA (children's data)",
+      "GDPR Article 22 (automated decisions)",
+    ],
+    howToDropIn:
+      "\"The regulatory stack is moving fast. EU AI Act enforcement timelines for high-risk systems started in 2025 and broaden through 2027. NIST AI RMF is the voluntary US framework that federal procurement, financial regulators, and federal agencies are de-facto requiring. State-level AI legislation is fragmenting — Colorado AI Act, California's package, NYC's hiring-decisions law, Texas TRAIGA. For sectoral work it's HHS for healthcare, FERPA / COPPA for education, GDPR Article 22 for EU automated decisions. The job isn't reading every word — it's knowing what bites and where, and operationalizing the obligations into the AI development lifecycle.\"",
+    commonPhrasing: "AI regulatory landscape, EU AI Act compliance, NIST AI RMF, AI governance compliance.",
+    notes:
+      "Foundational knowledge for AI Ethicist, Responsible AI, and AI Governance roles, and increasingly for AI Product, AI Procurement, and AI Strategy roles. Pair with AI Ethicist (Embedded IC), AI Governance & Responsible AI Leadership, Algorithmic Impact Assessment & Bias Audit Practice, and the AI Services Price Reasonableness Worksheet (which sits inside the federal AI procurement regulatory context).",
+    source:
+      "EU AI Act (Regulation 2024/1689); NIST AI Risk Management Framework (NIST AI 100-1, 2023); FTC AI guidance materials; ISO/IEC 42001 (2023) AI management systems standard; state-level AI legislation 2024–2026.",
+    tags: ["ai_ethics", "regulatory", "compliance", "framework"],
+  },
 ];
