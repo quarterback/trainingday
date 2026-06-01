@@ -5334,4 +5334,126 @@ export const frameworks: Framework[] = [
       "Association of Change Management Professionals (ACMP), *Standard for Change Management* (current edition); CCMP credential framework; acmpglobal.org.",
     tags: ["ocm", "change_model", "certification", "framework"],
   },
+
+  // —— AI Transformation & Enablement (non-engineering AI leadership) ————
+
+  {
+    name: "Director / Head of AI Transformation & Enablement",
+    category: "ai_transformation",
+    oneLiner:
+      "The non-engineering AI leadership archetype that owns workforce AI adoption, enablement programs, and the people-and-process side of AI transformation — partnered with but distinct from the Principal AI Engineer track that owns the technical platform.",
+    whenToUse:
+      "Senior leadership AI roles where the brief is org-wide adoption, fluency, enablement, transformation, or strategy — not deep technical IC engineering. Real exemplars (2026): Schwab 'Director, AI Fluency & Enablement Programs'; Writer 'Strategic AI Transformation Lead'; Thrive Learning 'Head of AI Transformation'; Citi 'Head of AI Strategy'; Accenture 'Strategy Principal Director, Data & AI Strategy.'",
+    vocabulary: [
+      "AI transformation",
+      "AI enablement",
+      "AI fluency",
+      "AI adoption at scale",
+      "AI-first operating model",
+      "AI strategy",
+      "capability building",
+      "enablement programs",
+      "executive advisory",
+      "change network",
+      "translate platform power to P&L",
+      "AI readiness",
+    ],
+    howToDropIn:
+      "\"The Principal AI Engineer owns the platform; this seat owns whether the workforce can use it. The work is enablement programs the org can actually take, role-by-role redesign so people see what their job becomes, an honest read on AI readiness by function, and the translation work that turns model capability into operating-model decisions for the executive team. The technical org ships the platform; this org ships the adoption.\"",
+    commonPhrasing: "Director / Head of AI Transformation, Enablement, Fluency, or Adoption; Strategic AI Transformation Lead.",
+    notes:
+      "The market title is unsettled — Schwab calls it 'AI Fluency & Enablement Programs,' Writer calls it 'Strategic AI Transformation Lead,' Thrive calls it 'Head of AI Transformation,' Citi has both 'Head of AI Strategy' and a 'Group Head of AI' above it. Read the seniority and scope, not the literal title. The seat reports into a CIO/CTO/CDO/CAIO or directly to the CEO depending on org maturity. Common profile of successful hires: product, strategy, design, learning, change-management, or transformation background rather than ML engineering — which is exactly the candidate this role intentionally selects for, because the failure mode is technical-leader-as-adoption-leader (the engineer who can't run a workforce program). Pair with AI Fluency Programs (Enterprise Workforce), Strategic AI Transformation (Translating AI to P&L), AI Governance & Responsible AI Leadership, AI Adoption & Capability Building (OCM section), and the SOMD Story card as substance evidence.",
+    source:
+      "Validated against active 2026 postings: Schwab 'Director, AI Fluency & Enablement Programs'; Writer 'Strategic AI Transformation Lead (West)'; Thrive Learning 'Head of AI Transformation'; Citi 'Head of AI Strategy'; Accenture 'Strategy Principal Director, Data & AI Strategy'; Google 'AI Strategist, Principal Lead, Global Partnerships.' Axial Search market analyses (1,859 AI strategy postings; 3,159 AI implementation postings).",
+    tags: ["ai_transformation", "ai_leadership", "role", "framework"],
+  },
+  {
+    name: "AI Fluency Programs (Enterprise Workforce)",
+    category: "ai_transformation",
+    oneLiner:
+      "The enablement specialty inside an AI transformation seat — building, running, and measuring AI literacy and capability programs across thousands of employees, with curricula, role-based learning paths, certification, and adoption metrics tied to actual workflow change.",
+    whenToUse:
+      "JDs that name 'AI fluency,' 'AI enablement programs,' 'capability building,' 'driving adoption at scale.' Schwab's posting is the cleanest exemplar. Often paired with workforce-planning, talent, or L&D partnerships.",
+    vocabulary: [
+      "AI fluency",
+      "enablement programs",
+      "learning paths",
+      "role-based curriculum",
+      "certification track",
+      "champions network",
+      "adoption metrics",
+      "learning operations",
+      "train-the-trainer",
+      "cohort programs",
+      "office hours",
+      "workflow integration",
+    ],
+    howToDropIn:
+      "\"AI fluency at workforce scale isn't an LMS course — it's a portfolio: a baseline curriculum everyone takes, role-based deepens for the functions where AI changes the actual job, a champions network that runs office hours and unblocks people in flow, and a measurement model that ties adoption to workflow change rather than completion rates. The unit of success isn't 'employees trained,' it's 'workflows where AI is now load-bearing.'\"",
+    commonPhrasing: "AI fluency programs, enterprise enablement, capability building.",
+    notes:
+      "Direct substance match for the SOMD Story card (federal cohort-based, peer-cascade capability building inside a hard time window), the eAPD content-as-interface work (curriculum-as-system instinct), and the train-the-trainer pattern. Schwab's title is the canonical reference because they've named the function explicitly; less mature orgs roll this work into 'AI transformation' broadly. Pair with AI Adoption & Capability Building (OCM section), Director / Head of AI Transformation & Enablement, and the train-the-trainer references.",
+    source:
+      "Schwab 'Director, AI Fluency & Enablement Programs' (San Francisco / Austin / Southlake, January 2026 posting); enterprise AI enablement practice.",
+    tags: ["ai_transformation", "enablement", "capability_building", "framework"],
+  },
+  {
+    name: "Strategic AI Transformation (Translating AI to P&L)",
+    category: "ai_transformation",
+    oneLiner:
+      "The strategy-and-translation specialty inside an AI transformation seat — helping executives navigate the shift to an AI-first operating model, translating platform capability into measurable P&L impact, and shaping the operating-model and investment decisions that follow.",
+    whenToUse:
+      "JDs that frame the role as 'business strategy and cutting-edge technology,' 'translating platform power into measurable P&L impact,' 'AI-first operating model,' 'helping executives navigate the shift.' Writer's 'Strategic AI Transformation Lead' is the canonical exemplar; Accenture and BCG variants exist.",
+    vocabulary: [
+      "AI-first operating model",
+      "P&L impact",
+      "value realization",
+      "AI investment thesis",
+      "use-case portfolio",
+      "executive advisory",
+      "transformation roadmap",
+      "AI maturity model",
+      "operating-model redesign",
+      "make-or-buy",
+      "platform economics",
+    ],
+    howToDropIn:
+      "\"The translation work is the leverage point. Executives don't need another model demo; they need to understand which functions get reshaped, what the operating-model implications are, where the P&L moves, and what the AI investment thesis actually buys them over three years. The seat is part strategist, part advisor, part translator — fluent enough in the technology to be credible with the platform team, fluent enough in the business to be useful to the CFO.\"",
+    commonPhrasing: "Strategic AI transformation, AI strategy, AI-first operating model.",
+    notes:
+      "The consulting-flavored variant of the AI transformation seat — closer to Accenture / Deloitte / BCG / McKinsey hire patterns than to in-house enablement roles. The vocabulary is heavier on P&L, investment thesis, operating model, and executive advisory than on enablement mechanics. The OCM target-role cards (Senior OCM Consultant AI / Digital Transformation; Trusted Advisor Stance; Sales & Networking in Consulting) directly support this archetype; design-leadership scope (Head of Design at 18F) reads as 'has run an org' which is what these seats need. Pair with Director / Head of AI Transformation & Enablement, the OCM cards, and the AI-delivery glossary cards for the technical register.",
+    source:
+      "Writer 'Strategic AI Transformation Lead (West)' (February 2026); Accenture Strategy & Consulting AI practice; Citi 'Head of AI Strategy' (firmwide); BCG / McKinsey / Deloitte AI strategy practices.",
+    tags: ["ai_transformation", "ai_strategy", "executive_advisory", "framework"],
+  },
+  {
+    name: "AI Governance & Responsible AI Leadership",
+    category: "ai_transformation",
+    oneLiner:
+      "The rising non-technical AI executive specialty owning enterprise AI governance, responsible-AI standards, risk and compliance, and audit readiness — particularly important as the EU AI Act moves into enforcement and US sectoral regulation tightens.",
+    whenToUse:
+      "JDs that name 'AI governance,' 'responsible AI,' 'AI risk,' 'AI compliance,' 'auditability,' or are inside regulated sectors (financial services, healthcare, federal, EU operations). Often a separate seat from AI transformation, sometimes merged at smaller orgs.",
+    vocabulary: [
+      "AI governance",
+      "responsible AI",
+      "AI risk management",
+      "model risk",
+      "auditability",
+      "AI compliance",
+      "EU AI Act",
+      "NIST AI Risk Management Framework",
+      "AI policy",
+      "model cards",
+      "evaluation standards",
+      "third-party AI risk",
+    ],
+    howToDropIn:
+      "\"AI governance at enterprise scale isn't a policy document — it's an operating function: an inventory of where AI is in use and at what risk tier, evaluation and audit standards that travel with each deployment, a model-risk process the second-line can actually run, and the cross-functional spine (legal, security, compliance, data, product) that lets the org move fast without owing a regulator an explanation later. The EU AI Act enforcement timeline made this a board-level concern, not a center-of-excellence one.\"",
+    commonPhrasing: "AI governance, responsible AI, AI risk and compliance.",
+    notes:
+      "Adjacent — not core — to your profile, but worth knowing because (a) federal / regulated-sector experience (eAPD, CMS, 42 CFR 495) is unusually relevant and could be a back-door into this lane; (b) AI governance leaders increasingly need partners in transformation and enablement, so understanding the function is useful even from an adjacent seat; (c) at smaller orgs the seats merge. Common titles: Head of AI Governance, Head of Responsible AI, AI Risk Director, Chief AI Ethics Officer. The credential stack here is different — NIST AI RMF, ISO 42001, IAPP AIGP. Pair with Director / Head of AI Transformation & Enablement and the OCM cards if the org runs them together.",
+    source:
+      "Christian & Timbers, 'Top AI Leadership Roles Expected in 2026'; ODSC, 'From Context Engineers to Chief AI Officers'; EU AI Act enforcement timeline; rising posting volume per Axial Search market analysis.",
+    tags: ["ai_transformation", "ai_governance", "responsible_ai", "framework"],
+  },
 ];
