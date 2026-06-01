@@ -5869,4 +5869,59 @@ export const frameworks: Framework[] = [
       "EU AI Act (Regulation 2024/1689); NIST AI Risk Management Framework (NIST AI 100-1, 2023); FTC AI guidance materials; ISO/IEC 42001 (2023) AI management systems standard; state-level AI legislation 2024–2026.",
     tags: ["ai_ethics", "regulatory", "compliance", "framework"],
   },
+
+  // —— Product Management (regulated consumer / AI-augmented) ————————————
+
+  {
+    name: "Product Manager, Digital Experience (Regulated Consumer Industries)",
+    category: "product_management",
+    oneLiner:
+      "The digital-experience product-manager archetype at consumer companies in highly regulated industries — cannabis, alcohol, firearms, gambling, prescription/pharmacy, age-restricted retail — where the ecommerce surface has to handle state-by-state regulatory variance, age verification, restricted advertising, payment-processor constraints, and multi-channel commerce (web + mobile + kiosk + retail-store integration) at the same time.",
+    whenToUse:
+      "Product Manager / Senior PM / Principal PM postings at cannabis MSOs (Green Thumb, Curaleaf, Trulieve, Verano, Cresco), alcohol ecommerce (Drizly, ReserveBar, Total Wine digital), firearms ecommerce, gambling and iGaming (DraftKings, FanDuel digital), and age-restricted retail. The 6–8 year PM experience floor is standard.",
+    vocabulary: [
+      "regulated ecommerce",
+      "age verification",
+      "state-by-state compliance",
+      "payment processor constraints",
+      "restricted advertising",
+      "MSO (multi-state operator)",
+      "kiosk + mobile + web",
+      "click-and-collect",
+      "in-store fulfillment integration",
+    ],
+    howToDropIn:
+      "\"Regulated-consumer ecommerce is product management with two extra dimensions: every state has its own compliance regime (and operating-license terms), and the entire payment-and-advertising stack is constrained. The PM job is the standard ecommerce loop — discovery, spec, ship, measure, iterate — but the constraints turn many ordinary product decisions into compliance decisions. Good roles ship from inside that constraint; bad ones treat compliance as a separate team's problem.\"",
+    commonPhrasing: "Regulated ecommerce PM, cannabis PM, age-restricted retail product management.",
+    notes:
+      "Cannabis specifically is unusual because of the state-level Schedule I patchwork — different licenses, products, ad rules, banking and payment realities per state. MSOs operate across that variance. Adjacent industries with similar shape: alcohol (state-by-state DTC ship laws), firearms (FFL / 4473 constraints), gambling (state licensing), prescription / pharmacy (HIPAA + DEA + state pharmacy boards). The product-management muscle for any one of these transfers to the others reasonably well; the regulatory specifics don't. Pair with AI Spec-Driven Development, Multi-Channel Service Orchestration, and Multi-Audience Digital Governance.",
+    source:
+      "Validated against 2026 postings: Green Thumb Industries 'Product Manager, Digital Experience' (Chicago / remote CST, May 2026); analogous roles across cannabis MSOs and adjacent regulated-consumer verticals.",
+    tags: ["product_management", "regulated_industry", "ecommerce", "role", "framework"],
+  },
+  {
+    name: "AI Spec-Driven Development (Spec + Working Prototype as Source of Truth)",
+    category: "product_management",
+    oneLiner:
+      "The emerging product-management practice where the artifact handed to engineering before dev kickoff is not a written spec or a static Figma file but a working AI-generated prototype plus a detailed specification — together serving as the source of truth for engineering, QA, and cross-functional partners.",
+    whenToUse:
+      "Modern product-management JDs that explicitly name 'spec-driven development,' 'AI spec-driven development,' or 'detailed product specifications with working prototypes that serve as the source of truth.' Increasingly common in 2025–2026 as Claude Code, v0, Cursor, and similar tools make working prototypes cheap to produce.",
+    vocabulary: [
+      "spec-driven development",
+      "AI spec-driven development",
+      "working prototype",
+      "source of truth",
+      "executable spec",
+      "dev-ready spec",
+      "PRD + prototype",
+    ],
+    howToDropIn:
+      "\"Spec-driven development with a working prototype is the new dev-ready artifact. Instead of a PRD that engineering interprets and a separate Figma file that designers maintain, the spec ships with an AI-generated prototype that demonstrates the feature, gives QA something to test against, and lets cross-functional partners see what will be built before it's built. The PM authors both. The skill is writing specs and prompts that hold up under engineering scrutiny.\"",
+    commonPhrasing: "Spec-driven development, AI-assisted PRD, prototype-as-spec.",
+    notes:
+      "Emerging fast. Tools commonly named: Claude Code, v0 by Vercel, Cursor, Bolt, Replit Agent. The PM-facing pattern is converging on: PM authors a spec, prompts a prototype, iterates the prototype with the team before development resources commit. Reduces engineering rework but raises the PM's bar on technical fluency and prompt engineering. Pair with Product Manager, Digital Experience (Regulated Consumer Industries), and the agentic-delivery framework cards.",
+    source:
+      "Emerging 2025–2026 practice; Green Thumb Industries PM JD as a representative public mention of the practice; tooling: Claude Code, v0, Cursor, Bolt, Replit Agent.",
+    tags: ["product_management", "ai_augmented", "spec_driven", "framework"],
+  },
 ];
