@@ -5924,4 +5924,63 @@ export const frameworks: Framework[] = [
       "Emerging 2025–2026 practice; Green Thumb Industries PM JD as a representative public mention of the practice; tooling: Claude Code, v0, Cursor, Bolt, Replit Agent.",
     tags: ["product_management", "ai_augmented", "spec_driven", "framework"],
   },
+
+  // —— AI Enablement (higher ed / institutional) ————————————————————————
+
+  {
+    name: "Director of AI Enablement (Higher Ed / Academic Institutions)",
+    category: "ai_enablement",
+    oneLiner:
+      "The director-level AI enablement archetype at universities and academic institutions — frequently a research-faculty or open-rank-faculty appointment leading a centralized team that partners with faculty and staff to prototype AI-enabled tools for teaching, research, and productivity while serving as connective tissue across schools and units.",
+    whenToUse:
+      "AI enablement, AI innovation, or AI strategy director / associate director / chief AI officer postings at universities, business schools, medical schools, and research institutions. Often structured as Research Faculty, Open Rank Faculty, or staff-director positions. Examples: Kellogg School AI Enablement (Northwestern), MIT AI Sloan Initiative, Wharton AI & Analytics, Stanford GSB AI for Business, Harvard Business School AI Initiative, plus university-wide variants (Princeton, Penn, Columbia, NYU).",
+    vocabulary: [
+      "AI enablement",
+      "faculty partnership",
+      "academic AI strategy",
+      "AI for teaching",
+      "AI for research",
+      "centralized innovation team",
+      "connective tissue",
+      "translator / experimenter / navigator",
+      "voluntary adoption",
+      "research faculty appointment",
+      "open rank",
+    ],
+    howToDropIn:
+      "\"AI enablement in a university is a different shape than in a corporate. Faculty have academic freedom and don't take direction; staff and administration have hierarchies. The seat is part product manager, part academic translator, part vendor wrangler, part trusted advisor. The work is voluntary adoption — you prototype things faculty want to use and earn the right to do the next thing. It's also organizational diplomacy: streamlining coordination across schools, units, and central IT without owning any of them.\"",
+    commonPhrasing: "Director of AI Enablement, AI Innovation Director, Director of AI Strategy (Higher Ed).",
+    notes:
+      "Distinct from the corporate AI Transformation & Enablement archetype because of academic governance structure — voluntary adoption rather than top-down rollout, faculty rather than employees as primary stakeholders, research-faculty appointment instead of staff status in many cases. The Kellogg posting names the position as Open Rank Research faculty at $220–250k base for a 12-month appointment. Common reporting line is Dean or Vice Provost / Provost for Academic Innovation. Tenure-track variants exist at some institutions but are rarer. Pair with Centralized AI Enablement Team (Innovation Catalyst Model), Director / Head of AI Transformation & Enablement, and AI Adoption & Capability Building.",
+    source:
+      "Validated against 2026 postings: Kellogg School of Management 'Director of AI Enablement' (Open Rank Research, $220–250k, May 2026, Evanston / Northwestern); analogous positions at MIT, Wharton, Stanford GSB, Harvard, Princeton, Penn, Columbia, NYU.",
+    tags: ["ai_enablement", "higher_ed", "academic", "role", "framework"],
+  },
+  {
+    name: "Centralized AI Enablement Team (Innovation Catalyst Model)",
+    category: "ai_enablement",
+    oneLiner:
+      "The team-structure pattern where a small central group serves as innovation catalyst — rapidly prototyping and iterating AI-enabled tools, acting as translator and navigator between stakeholders and vendors, and managing internal and vendor complexity on behalf of the rest of the org — distinct from a standing engineering team or an outsourced consulting engagement.",
+    whenToUse:
+      "JDs that describe a centralized small team for AI innovation, an innovation-catalyst function, or a 'connective tissue' role across an organization. Common at universities, large nonprofits, foundations, federal agencies (USDS, 18F, CoE), state IT shops, and large enterprises spinning up AI offices.",
+    vocabulary: [
+      "innovation catalyst",
+      "centralized AI team",
+      "connective tissue",
+      "translator / experimenter / navigator",
+      "prototype-test-iterate loop",
+      "vendor complexity management",
+      "voluntary adoption",
+      "internal point of entry",
+      "general AI capabilities",
+    ],
+    howToDropIn:
+      "\"A centralized innovation-catalyst team is a specific operating pattern: small, fast, focused on prototyping; not a standing platform team and not a consulting engagement. The work is rapidly building things that demonstrate a possibility, then handing them off or scaling them with whoever owns the long-term surface. The trap is becoming a permanent skunkworks that ships demos nobody adopts; the discipline is voluntary-adoption metrics — does the org actually want what you built, and does anyone use it after the first month.\"",
+    commonPhrasing: "Innovation catalyst team, centralized AI enablement, AI experimentation team.",
+    notes:
+      "Federal-government analog: the USDS / 18F / Centers of Excellence pattern — small central teams that prototype, embed, and hand off. University analog: the Kellogg AI Enablement Team posting. Corporate analog: an internal innovation lab or AI center of excellence (e.g., the Schwab AI Fluency & Enablement Programs team or similar). Common failure mode: the team becomes a feature factory disconnected from operational priorities; success mode is being measured on voluntary adoption and downstream operational uptake, not output volume. Pair with Director of AI Enablement (Higher Ed), AI Adoption & Capability Building, and AI Fluency Programs (Enterprise Workforce).",
+    source:
+      "Innovation-catalyst team pattern. Federal: USDS, 18F, GSA Centers of Excellence. University: Kellogg AI Enablement Team (Northwestern, 2026), Stanford d.school. Corporate: enterprise AI centers of excellence 2024–2026.",
+    tags: ["ai_enablement", "team_structure", "innovation", "framework"],
+  },
 ];
