@@ -5584,4 +5584,110 @@ export const frameworks: Framework[] = [
       "Enterprise CMS practice (Sitecore, AEM, Drupal Enterprise, Contentful); healthcare / insurance vertical platform conventions.",
     tags: ["digital_experience", "cms", "platform", "framework"],
   },
+
+  // —— Occupant Indices (AI measurement instruments) ————————————————————
+
+  {
+    name: "$CPI — Compute Price Index",
+    category: "ai_measurement",
+    oneLiner:
+      "A Consumer-Price-Index-style measurement of what it actually costs to run AI tasks, volume-weighted across four workload tiers (commodity / frontier / reasoning / long-context) and 2,000+ models, with January 2025 = 100 as the baseline.",
+    whenToUse:
+      "AI procurement, budget projections, model-selection economics, AI cost trajectory analysis. For federal procurement officers, foundation finance teams, and anyone tracking whether 'AI is getting cheaper' is real or hype.",
+    vocabulary: [
+      "Compute Price Index",
+      "$CPI",
+      "AI inference cost",
+      "token economics",
+      "workload tier",
+      "commodity / frontier / reasoning / long-context",
+      "volume-weighted",
+      "yield curve",
+      "tier premium",
+    ],
+    howToDropIn:
+      "\"$CPI is a Consumer Price Index for AI compute. We weight it across four workload tiers — commodity, frontier, reasoning, long-context — using volume from over two thousand models. Currently 62 against a January 2025 baseline of 100, meaning AI compute is about 38% cheaper than at the start of 2025, but the trajectory varies sharply by workload.\"",
+    commonPhrasing: "AI Compute Price Index, $CPI, AI cost index.",
+    notes:
+      "One of three Occupant Indices. Distinct from Stanford AI Index and Epoch AI compute-trends work in that it's a procurement-grade methodology with a defined basket and weights, updated weekly. The tool layer is the AI Services Price Reasonableness Worksheet (the federal-procurement application) and the LLM Cost Calculator. Variants exist: $CPI-L (since launch), $CPI-Y (year-over-year), $CPI-Q (quarter-to-date), $CPI-GEN (general purpose), $CPI-FRO (frontier heavy), $CPI-BUD (budget optimized), $CPI-REA (reasoning focus), $CPI-ENT (enterprise mix). Pair with $AIU, $LDI, AI Services Price Reasonableness Worksheet, and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee/indices). Data: OpenRouter rankings, LiteLLM, llm-prices.com, pricepertoken.com.",
+    tags: ["ai_measurement", "procurement", "instrument", "framework"],
+  },
+  {
+    name: "$AIU — AI Economic Activity Index",
+    category: "ai_measurement",
+    oneLiner:
+      "A composite index of AI economic activity modeled on the IMF's Special Drawing Rights — token throughput (60%), inferred spend (30%), and energy use (10%) — read as a single number against a January 2025 baseline of 100.",
+    whenToUse:
+      "Macro analysis of AI as an economic sector. For policy researchers, journalists, foundation strategy teams, and anyone trying to distinguish actual AI activity growth from market hype.",
+    vocabulary: [
+      "AI Economic Activity Index",
+      "$AIU",
+      "AI macro index",
+      "token throughput",
+      "inferred spend",
+      "energy proxy",
+      "Special Drawing Rights",
+      "composite index",
+    ],
+    howToDropIn:
+      "\"$AIU is a stock-market-style index for AI as an economic sector. It's a weighted composite — 60% token throughput, 30% inferred spend, 10% energy footprint — modeled on the IMF's Special Drawing Rights. Currently 504 against a January 2025 baseline of 100; AI economic activity is up about 5x in 16 months. Nobody else publishes a single number for this; that's the gap it fills.\"",
+    commonPhrasing: "AI Activity Index, $AIU, AI macro indicator.",
+    notes:
+      "One of three Occupant Indices. The IMF SDR modeling is the deliberate methodological signal — single composite read against a baseline, weights tuned to underlying activity drivers. Energy component blends a token-derived proxy (70%, from tier efficiency factors) and a grid-investment growth index (30%, from BloombergNEF annual global grid investment data). Coverage scope: OpenRouter public rankings — a significant but incomplete view; direct API usage, enterprise deployments, and closed-loop systems are not captured. Pair with $CPI, $LDI, and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee/indices). Data: OpenRouter rankings, LiteLLM, BloombergNEF grid investment data.",
+    tags: ["ai_measurement", "macro", "instrument", "framework"],
+  },
+  {
+    name: "$LDI — Labor Displacement Index",
+    category: "ai_measurement",
+    oneLiner:
+      "An original substitution-rate methodology measuring how often AI is actually replacing federal workers when it becomes cheaper than them — combining BLS wage data, AI inference cost from $CPI, and federal procurement records.",
+    whenToUse:
+      "Any conversation about AI's labor impact in the public sector — federal workforce planning, AI procurement decisions, foundation programs funding workforce-AI work, journalism on AI and labor displacement.",
+    vocabulary: [
+      "Labor Displacement Index",
+      "$LDI",
+      "substitution rate",
+      "cost-rational substitution",
+      "BLS wage data",
+      "federal procurement records",
+      "workload substitution",
+      "cognitive arbitrage",
+    ],
+    howToDropIn:
+      "\"$LDI is the only running measurement of how often AI is actually replacing federal workers when it gets cheaper than them. We combine BLS wage data with AI cost from $CPI to find where AI is already cheaper than a person, then use federal procurement records to see where substitution is actually happening. The current 3.9% rate isn't the story — the gap between cost-rational substitution and actual substitution is.\"",
+    commonPhrasing: "Labor Displacement Index, AI substitution rate, AI labor measurement.",
+    notes:
+      "The most original IP in the Occupant Indices set and the most defensible originality claim. $CPI applies a price-index pattern to a new commodity; $AIU adapts the IMF SDR composite-index pattern; $LDI is a substitution-rate methodology that doesn't exist elsewhere. SNAP Eligibility has a worked end-to-end deep dive. The deliverable client form is the LDI Workload Calculator. Pair with $CPI, $AIU, AI Services Price Reasonableness Worksheet, and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee/indices). Methodology: BLS wage data + $CPI inference cost + federal procurement records.",
+    tags: ["ai_measurement", "labor", "federal", "original_methodology", "instrument", "framework"],
+  },
+  {
+    name: "AI Services Price Reasonableness Worksheet",
+    category: "ai_measurement",
+    oneLiner:
+      "A fill-in procurement determination tool for federal AI buyers, built on the $CPI basket — the working bridge between AI cost measurement and federal acquisition practice.",
+    whenToUse:
+      "Federal AI procurement determinations; state and local AI buy decisions where price-reasonableness analysis is required; foundation grant due diligence on AI services pricing; benchmark-rate questions in any AI procurement context.",
+    vocabulary: [
+      "price reasonableness",
+      "procurement determination",
+      "AI services worksheet",
+      "benchmark rate",
+      "FAR price analysis",
+      "fair and reasonable",
+    ],
+    howToDropIn:
+      "\"The Price Reasonableness Worksheet is the bridge between the measurement work and federal procurement. It's a fill-in tool that uses the $CPI basket as the benchmark for an AI-services price-reasonableness determination — what FAR requires, but with a defensible methodology behind the benchmark rate instead of a guess. Federal AI buyers use it as a starting point; the rates are anchored to the same basket as $CPI.\"",
+    commonPhrasing: "Price reasonableness worksheet, AI procurement worksheet.",
+    notes:
+      "The procurement-grade tool layer on top of $CPI — the artifact that translates measurement into operational practice, the specific 'bridge between policy and deployment' the Public Mechanics framing is built on. Disclaimer noted on the live tool: benchmark rates predate the current data; treat as a starting point, not a current quote. Pair with $CPI and the State Capacity AI Story card.",
+    source:
+      "Ron Bronson, Occupant Indices (occupant.ee). Built on the $CPI basket; FAR price-reasonableness practice.",
+    tags: ["ai_measurement", "procurement", "federal", "tool", "framework"],
+  },
 ];
