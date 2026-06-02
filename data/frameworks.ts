@@ -5983,4 +5983,116 @@ export const frameworks: Framework[] = [
       "Innovation-catalyst team pattern. Federal: USDS, 18F, GSA Centers of Excellence. University: Kellogg AI Enablement Team (Northwestern, 2026), Stanford d.school. Corporate: enterprise AI centers of excellence 2024–2026.",
     tags: ["ai_enablement", "team_structure", "innovation", "framework"],
   },
+
+  // —— Government IT delivery (pod-and-guild model) ——————————————————————
+
+  {
+    name: "Enterprise Practice Lead / Guild Lead (State Government IT)",
+    category: "govt_delivery",
+    oneLiner:
+      "The discipline-leadership role inside state and city government IT shops organized in pods + guilds — owns the standards, playbooks, training, and craft community for a specific discipline (delivery management, product, design, engineering, security) across all pods, without owning the pod practitioners directly. Distinct from people-management roles (IT Directors run the pods).",
+    whenToUse:
+      "Enterprise Practice Lead, Guild Lead, Practice Lead, or Discipline Lead postings at state and city government IT shops with pod-and-guild structures. Colorado OIT, NY State Office of IT Services, NJ Office of Innovation, California Department of Technology, and similar. Federal analogs: USDS leadership roles, 18F Practice Areas, GSA Centers of Excellence.",
+    vocabulary: [
+      "enterprise practice lead",
+      "guild lead",
+      "pod-and-guild model",
+      "federated practitioner community",
+      "discipline standards",
+      "craft community",
+      "practice infrastructure",
+      "playbooks",
+      "modular procurement",
+      "statements of objectives (SOO)",
+      "modern delivery management",
+    ],
+    howToDropIn:
+      "\"The Enterprise Practice Lead seat is the discipline-leadership role inside a pod-and-guild government IT shop. The pods deliver; the guilds keep the craft current. The Practice Lead doesn't run pods or manage practitioners — that's the IT Director's job. The Practice Lead owns standards, playbooks, training, retros across pods, and the career-pathway work that lets a delivery manager grow without becoming a manager of managers.\"",
+    commonPhrasing: "Enterprise Practice Lead, Guild Lead, Discipline Lead, Practice Area Lead.",
+    notes:
+      "The pod-and-guild model is a deliberate alternative to functional-matrix or pure team-topology structures. Pods are full-stack cross-functional delivery teams aligned to a customer agency or service area. Guilds are cross-pod craft communities — people in the same discipline across pods who share standards, peer-critique sprint governance, and keep the practice current. Most state IT shops moving toward modern delivery (Colorado OIT, NY OITS, NJ Innovation, California DoT) have some version of this. The Practice Lead role is the most senior craft seat short of CTO or deputy CIO. Pair with Pod + Guild Operating Model, 18F De-Risking Framework for Government Software, and GDS DDaT Framework.",
+    source:
+      "Validated against 2026 postings: Colorado OIT 'Enterprise Practice Lead, Delivery Management' ($115–145k, remote in CO, May 2026); similar role structures at NY OITS, NJ Office of Innovation, California Department of Technology.",
+    tags: ["govt_delivery", "state_government", "guild_lead", "role", "framework"],
+  },
+  {
+    name: "Pod + Guild Operating Model (State Government IT)",
+    category: "govt_delivery",
+    oneLiner:
+      "The federated team-structure pattern used by state and city government IT shops modernizing delivery: pods are full-stack cross-functional teams aligned to agencies or services; guilds are cross-pod craft communities that hold discipline standards. People-management goes through IT Directors; craft and standards go through Guild / Practice Leads.",
+    whenToUse:
+      "Government IT modernization contexts; JDs that describe pods, guilds, federated practitioner communities, or distinguish people-management (ITD) from craft-leadership (Practice Lead). Common at state OITs and city CIO shops following USDS / 18F / Code for America patterns.",
+    vocabulary: [
+      "pod",
+      "guild",
+      "federated team structure",
+      "cross-functional delivery team",
+      "craft community",
+      "IT Director (ITD)",
+      "embedded delivery manager",
+      "agency-aligned pod",
+      "discipline standards",
+    ],
+    howToDropIn:
+      "\"Pods plus guilds is the operating model: pods are full-stack delivery teams aligned to customer agencies; guilds are cross-pod craft communities that keep the practice current. ITDs manage pod people; Practice Leads steward the discipline. The model is deliberately federated — keeps pods agile and customer-aligned while preventing the craft from fragmenting across teams.\"",
+    commonPhrasing: "Pods and guilds, federated team structure, agency pods.",
+    notes:
+      "Borrowed from the Spotify model (pods / squads + tribes / guilds) and adapted for government delivery context with agency-aligned pods and discipline-aligned guilds. The structure is intentional about separating people-management (ITDs) from craft-leadership (Guild / Practice Leads) — common in functional-matrix orgs, rare in government. Colorado OIT, NY OITS, NJ Office of Innovation are using variants. Pair with Enterprise Practice Lead / Guild Lead, Team Topologies, and Forward-Deployed Engineering (the embedded-team analog).",
+    source:
+      "Spotify model (pods / squads + tribes / guilds, 2012) adapted for government delivery 2018–2026 (USDS, 18F, Colorado OIT, NY OITS, NJ Office of Innovation, Code for America).",
+    tags: ["govt_delivery", "operating_model", "team_structure", "framework"],
+  },
+  {
+    name: "18F De-Risking Framework for Government Software",
+    category: "govt_delivery",
+    oneLiner:
+      "The 18F evidence-based framework for de-risking custom software acquisition in government — modular procurement, Statements of Objectives (SOO), time-and-materials with caps, performance-based contracting, empowered product ownership — built around the finding that only 13% of large government software projects succeed under traditional waterfall approaches.",
+    whenToUse:
+      "Any government IT modernization context that names 18F, de-risking, modular procurement, SOO contracts, T&M contracting, or the 13% success-rate evidence. Common in state and federal IT shops adopting modern delivery practice; cited in many state CIO and CTO modernization strategies.",
+    vocabulary: [
+      "18F de-risking",
+      "13% success rate",
+      "modular procurement",
+      "Statement of Objectives (SOO)",
+      "Statement of Work (SOW) distinction",
+      "time-and-materials with caps",
+      "performance-based services contracting",
+      "empowered product ownership",
+      "outcome-based contracting",
+      "agile procurement",
+    ],
+    howToDropIn:
+      "\"The 18F de-risking framework starts from a hard finding: only 13% of large government software projects succeed under traditional waterfall procurement. The framework substitutes specific moves: modular procurement (small repeatable buys), Statements of Objectives (what we want, not how to build it), time-and-materials with caps (commercial discipline without fixed-scope rigidity), empowered product ownership (agency owns priorities, vendor delivers continuously). The case is measurable, not stylistic.\"",
+    commonPhrasing: "18F de-risking, agile procurement, modular procurement, SOO contracting.",
+    notes:
+      "Canonical reference is the 18F De-Risking Guide (derisking-guide.18f.gov) and the State Software Budgeting Handbook. The Federal Field Guide and State Field Guide both extend the framework into agency-side practice. State governments adopting these include Colorado OIT (explicitly cited in the Enterprise Practice Lead JD), California DoT, NY OITS, NJ Office of Innovation. Pair with Pod + Guild Operating Model, Enterprise Practice Lead / Guild Lead, Dual-Track Agile, and the eAPD Story card (a citable case of the practice in execution).",
+    source:
+      "18F De-Risking Guide (derisking-guide.18f.gov); State Software Budgeting Handbook; State Field Guide; Federal Field Guide. Originated at 18F (GSA) 2015–2020 and expanded across state CIO communities 2020–2026.",
+    tags: ["govt_delivery", "18f", "procurement", "framework"],
+  },
+  {
+    name: "GDS DDaT Framework (Digital, Data and Technology Profession)",
+    category: "govt_delivery",
+    oneLiner:
+      "The UK Government Digital Service's Digital, Data and Technology Profession framework — the canonical reference for civil-service technology-discipline career progression, with detailed role definitions, skill levels, and progression paths across delivery management, product, design, engineering, data, and operations. Widely adopted as a reference by US state IT shops modernizing their career frameworks.",
+    whenToUse:
+      "Government IT career-pathway design; delivery manager progression frameworks; competency mapping for technology disciplines in public sector. JDs that name GDS DDaT, GDS Delivery Manager progression, or 'a career pathway that distinguishes modern delivery competency from classical project management' generally reference this framework.",
+    vocabulary: [
+      "GDS DDaT",
+      "Digital, Data and Technology Profession",
+      "delivery manager (associate / mid / senior / lead / head)",
+      "skill level definitions",
+      "civil service progression",
+      "head of delivery management",
+      "GDS Service Manual",
+    ],
+    howToDropIn:
+      "\"GDS DDaT is the canonical career-progression reference for technology disciplines in government — the UK created it for the civil service and US state IT shops use it as a model because almost nobody else has published comparable role definitions. For delivery managers it defines progression from associate to mid to senior to lead to head of delivery management, with explicit skill definitions at each level. Most state modernization efforts cite it as a reference even if they're not adopting it verbatim.\"",
+    commonPhrasing: "GDS DDaT, DDaT framework, Digital and Technology Profession Capability Framework.",
+    notes:
+      "Originated at the UK Government Digital Service (GDS) and is now maintained by the Central Digital and Data Office (CDDO) within the UK Cabinet Office. The current iteration is the Digital and Technology Profession Capability Framework. Widely referenced by US state IT shops including Colorado OIT (cited explicitly in the Enterprise Practice Lead JD), USDS, 18F, NJ Office of Innovation, NY OITS. Pair with Enterprise Practice Lead / Guild Lead, Pod + Guild Operating Model, and the 18F De-Risking Framework.",
+    source:
+      "UK Government Digital Service (GDS); Central Digital and Data Office (CDDO), UK Cabinet Office; Digital and Technology Profession Capability Framework. Originated 2014–2016 and continuously updated.",
+    tags: ["govt_delivery", "career_framework", "gds", "framework"],
+  },
 ];
