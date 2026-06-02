@@ -5983,4 +5983,316 @@ export const frameworks: Framework[] = [
       "Innovation-catalyst team pattern. Federal: USDS, 18F, GSA Centers of Excellence. University: Kellogg AI Enablement Team (Northwestern, 2026), Stanford d.school. Corporate: enterprise AI centers of excellence 2024–2026.",
     tags: ["ai_enablement", "team_structure", "innovation", "framework"],
   },
+
+  // —— Government IT delivery (pod-and-guild model) ——————————————————————
+
+  {
+    name: "Enterprise Practice Lead / Guild Lead (State Government IT)",
+    category: "govt_delivery",
+    oneLiner:
+      "The discipline-leadership role inside state and city government IT shops organized in pods + guilds — owns the standards, playbooks, training, and craft community for a specific discipline (delivery management, product, design, engineering, security) across all pods, without owning the pod practitioners directly. Distinct from people-management roles (IT Directors run the pods).",
+    whenToUse:
+      "Enterprise Practice Lead, Guild Lead, Practice Lead, or Discipline Lead postings at state and city government IT shops with pod-and-guild structures. Colorado OIT, NY State Office of IT Services, NJ Office of Innovation, California Department of Technology, and similar. Federal analogs: USDS leadership roles, 18F Practice Areas, GSA Centers of Excellence.",
+    vocabulary: [
+      "enterprise practice lead",
+      "guild lead",
+      "pod-and-guild model",
+      "federated practitioner community",
+      "discipline standards",
+      "craft community",
+      "practice infrastructure",
+      "playbooks",
+      "modular procurement",
+      "statements of objectives (SOO)",
+      "modern delivery management",
+    ],
+    howToDropIn:
+      "\"The Enterprise Practice Lead seat is the discipline-leadership role inside a pod-and-guild government IT shop. The pods deliver; the guilds keep the craft current. The Practice Lead doesn't run pods or manage practitioners — that's the IT Director's job. The Practice Lead owns standards, playbooks, training, retros across pods, and the career-pathway work that lets a delivery manager grow without becoming a manager of managers.\"",
+    commonPhrasing: "Enterprise Practice Lead, Guild Lead, Discipline Lead, Practice Area Lead.",
+    notes:
+      "The pod-and-guild model is a deliberate alternative to functional-matrix or pure team-topology structures. Pods are full-stack cross-functional delivery teams aligned to a customer agency or service area. Guilds are cross-pod craft communities — people in the same discipline across pods who share standards, peer-critique sprint governance, and keep the practice current. Most state IT shops moving toward modern delivery (Colorado OIT, NY OITS, NJ Innovation, California DoT) have some version of this. The Practice Lead role is the most senior craft seat short of CTO or deputy CIO. Pair with Pod + Guild Operating Model, 18F De-Risking Framework for Government Software, and GDS DDaT Framework.",
+    source:
+      "Validated against 2026 postings: Colorado OIT 'Enterprise Practice Lead, Delivery Management' ($115–145k, remote in CO, May 2026); similar role structures at NY OITS, NJ Office of Innovation, California Department of Technology.",
+    tags: ["govt_delivery", "state_government", "guild_lead", "role", "framework"],
+  },
+  {
+    name: "Pod + Guild Operating Model (State Government IT)",
+    category: "govt_delivery",
+    oneLiner:
+      "The federated team-structure pattern used by state and city government IT shops modernizing delivery: pods are full-stack cross-functional teams aligned to agencies or services; guilds are cross-pod craft communities that hold discipline standards. People-management goes through IT Directors; craft and standards go through Guild / Practice Leads.",
+    whenToUse:
+      "Government IT modernization contexts; JDs that describe pods, guilds, federated practitioner communities, or distinguish people-management (ITD) from craft-leadership (Practice Lead). Common at state OITs and city CIO shops following USDS / 18F / Code for America patterns.",
+    vocabulary: [
+      "pod",
+      "guild",
+      "federated team structure",
+      "cross-functional delivery team",
+      "craft community",
+      "IT Director (ITD)",
+      "embedded delivery manager",
+      "agency-aligned pod",
+      "discipline standards",
+    ],
+    howToDropIn:
+      "\"Pods plus guilds is the operating model: pods are full-stack delivery teams aligned to customer agencies; guilds are cross-pod craft communities that keep the practice current. ITDs manage pod people; Practice Leads steward the discipline. The model is deliberately federated — keeps pods agile and customer-aligned while preventing the craft from fragmenting across teams.\"",
+    commonPhrasing: "Pods and guilds, federated team structure, agency pods.",
+    notes:
+      "Borrowed from the Spotify model (pods / squads + tribes / guilds) and adapted for government delivery context with agency-aligned pods and discipline-aligned guilds. The structure is intentional about separating people-management (ITDs) from craft-leadership (Guild / Practice Leads) — common in functional-matrix orgs, rare in government. Colorado OIT, NY OITS, NJ Office of Innovation are using variants. Pair with Enterprise Practice Lead / Guild Lead, Team Topologies, and Forward-Deployed Engineering (the embedded-team analog).",
+    source:
+      "Spotify model (pods / squads + tribes / guilds, 2012) adapted for government delivery 2018–2026 (USDS, 18F, Colorado OIT, NY OITS, NJ Office of Innovation, Code for America).",
+    tags: ["govt_delivery", "operating_model", "team_structure", "framework"],
+  },
+  {
+    name: "18F De-Risking Framework for Government Software",
+    category: "govt_delivery",
+    oneLiner:
+      "The 18F evidence-based framework for de-risking custom software acquisition in government — modular procurement, Statements of Objectives (SOO), time-and-materials with caps, performance-based contracting, empowered product ownership — built around the finding that only 13% of large government software projects succeed under traditional waterfall approaches.",
+    whenToUse:
+      "Any government IT modernization context that names 18F, de-risking, modular procurement, SOO contracts, T&M contracting, or the 13% success-rate evidence. Common in state and federal IT shops adopting modern delivery practice; cited in many state CIO and CTO modernization strategies.",
+    vocabulary: [
+      "18F de-risking",
+      "13% success rate",
+      "modular procurement",
+      "Statement of Objectives (SOO)",
+      "Statement of Work (SOW) distinction",
+      "time-and-materials with caps",
+      "performance-based services contracting",
+      "empowered product ownership",
+      "outcome-based contracting",
+      "agile procurement",
+    ],
+    howToDropIn:
+      "\"The 18F de-risking framework starts from a hard finding: only 13% of large government software projects succeed under traditional waterfall procurement. The framework substitutes specific moves: modular procurement (small repeatable buys), Statements of Objectives (what we want, not how to build it), time-and-materials with caps (commercial discipline without fixed-scope rigidity), empowered product ownership (agency owns priorities, vendor delivers continuously). The case is measurable, not stylistic.\"",
+    commonPhrasing: "18F de-risking, agile procurement, modular procurement, SOO contracting.",
+    notes:
+      "Canonical reference is the 18F De-Risking Guide (derisking-guide.18f.gov) and the State Software Budgeting Handbook. The Federal Field Guide and State Field Guide both extend the framework into agency-side practice. State governments adopting these include Colorado OIT (explicitly cited in the Enterprise Practice Lead JD), California DoT, NY OITS, NJ Office of Innovation. Pair with Pod + Guild Operating Model, Enterprise Practice Lead / Guild Lead, Dual-Track Agile, and the eAPD Story card (a citable case of the practice in execution).",
+    source:
+      "18F De-Risking Guide (derisking-guide.18f.gov); State Software Budgeting Handbook; State Field Guide; Federal Field Guide. Originated at 18F (GSA) 2015–2020 and expanded across state CIO communities 2020–2026.",
+    tags: ["govt_delivery", "18f", "procurement", "framework"],
+  },
+  {
+    name: "GDS DDaT Framework (Digital, Data and Technology Profession)",
+    category: "govt_delivery",
+    oneLiner:
+      "The UK Government Digital Service's Digital, Data and Technology Profession framework — the canonical reference for civil-service technology-discipline career progression, with detailed role definitions, skill levels, and progression paths across delivery management, product, design, engineering, data, and operations. Widely adopted as a reference by US state IT shops modernizing their career frameworks.",
+    whenToUse:
+      "Government IT career-pathway design; delivery manager progression frameworks; competency mapping for technology disciplines in public sector. JDs that name GDS DDaT, GDS Delivery Manager progression, or 'a career pathway that distinguishes modern delivery competency from classical project management' generally reference this framework.",
+    vocabulary: [
+      "GDS DDaT",
+      "Digital, Data and Technology Profession",
+      "delivery manager (associate / mid / senior / lead / head)",
+      "skill level definitions",
+      "civil service progression",
+      "head of delivery management",
+      "GDS Service Manual",
+    ],
+    howToDropIn:
+      "\"GDS DDaT is the canonical career-progression reference for technology disciplines in government — the UK created it for the civil service and US state IT shops use it as a model because almost nobody else has published comparable role definitions. For delivery managers it defines progression from associate to mid to senior to lead to head of delivery management, with explicit skill definitions at each level. Most state modernization efforts cite it as a reference even if they're not adopting it verbatim.\"",
+    commonPhrasing: "GDS DDaT, DDaT framework, Digital and Technology Profession Capability Framework.",
+    notes:
+      "Originated at the UK Government Digital Service (GDS) and is now maintained by the Central Digital and Data Office (CDDO) within the UK Cabinet Office. The current iteration is the Digital and Technology Profession Capability Framework. Widely referenced by US state IT shops including Colorado OIT (cited explicitly in the Enterprise Practice Lead JD), USDS, 18F, NJ Office of Innovation, NY OITS. Pair with Enterprise Practice Lead / Guild Lead, Pod + Guild Operating Model, and the 18F De-Risking Framework.",
+    source:
+      "UK Government Digital Service (GDS); Central Digital and Data Office (CDDO), UK Cabinet Office; Digital and Technology Profession Capability Framework. Originated 2014–2016 and continuously updated.",
+    tags: ["govt_delivery", "career_framework", "gds", "framework"],
+  },
+
+  // —— Acquisition / procurement (federal + state government) ————————————
+
+  {
+    name: "Federal & State Acquisition Register (Vocabulary Stack for Non-Contracting-Officers)",
+    category: "acquisition",
+    oneLiner:
+      "The working vocabulary of federal and state government acquisition — contract types, procurement vehicles, source-selection methods, performance management, key statutes — pitched at the level needed to talk fluently with contracting officers, program leadership, and modernization-team practitioners without having held a CO warrant.",
+    whenToUse:
+      "Government IT modernization roles where the person needs to be conversant with acquisition (Practice Leads, Delivery Managers, Product Leads, Chief Digital Officers) without being a contracting officer. Particularly relevant for state-government IT modernization seats that work alongside acquisition staff but don't sit in the acquisition org.",
+    vocabulary: [
+      "FAR (Federal Acquisition Regulation)",
+      "DFARS (Defense FAR Supplement)",
+      "agency supplements (DOI AR, HHSAR, etc.)",
+      "state acquisition code (e.g., Colorado CRS Title 24)",
+      "Procurement Integrity Act",
+      "FFP (Firm Fixed Price)",
+      "T&M (Time and Materials)",
+      "T&M with cap / NTE (Not to Exceed)",
+      "CPFF (Cost Plus Fixed Fee)",
+      "IDIQ (Indefinite Delivery, Indefinite Quantity)",
+      "GSA Multiple Award Schedule (MAS)",
+      "GWAC (Government-Wide Acquisition Contract)",
+      "BPA (Blanket Purchase Agreement)",
+      "NASPO ValuePoint (state cooperative)",
+      "Statement of Objectives (SOO)",
+      "Statement of Work (SOW)",
+      "Performance Work Statement (PWS)",
+      "RFP / RFQ / RFI",
+      "J&A (Justification and Approval)",
+      "Sources Sought Notice",
+      "Best Value Trade-Off (BVT)",
+      "Lowest Price Technically Acceptable (LPTA)",
+      "CPARS (Contractor Performance Assessment Reporting System)",
+      "QASP (Quality Assurance Surveillance Plan)",
+      "Contract modification (mod)",
+      "Modular procurement",
+      "Performance-based services contracting",
+      "Empowered product ownership",
+      "Bid protest (GAO, COFC, agency-level)",
+      "OFPP (Office of Federal Procurement Policy)",
+    ],
+    howToDropIn:
+      "\"Talking the register means using the actual instruments instead of colloquial equivalents. 'We need a fixed-price contract' becomes 'FFP'; 'hourly contractors with a budget cap' becomes 'T&M with a cap'; 'pre-vetted vendor list' becomes 'BPA' or 'GWAC task order' or 'GSA Schedule'; 'change order' becomes 'contract modification' or 'mod'; 'protest' becomes 'GAO protest' for federal or the state-specific protest mechanism. The point isn't vocabulary for its own sake; it's that contracting officers can't take 'colloquial-equivalent' instructions and translate them — they need the actual instrument named.\"",
+    commonPhrasing: "Acquisition vocabulary, contracting register, procurement language.",
+    notes:
+      "Intentionally a vocabulary stack rather than a how-to. Contract law and acquisition strategy is a separate competency; this is the speak-the-language layer for non-COs who work alongside acquisition staff. Pair with Contract Type Selection (FFP / T&M / CPFF / IDIQ), Modern Delivery Procurement (18F-Style), 18F De-Risking Framework for Government Software, AI Services Price Reasonableness Worksheet, and the acquisition translation rows.",
+    source:
+      "FAR (Federal Acquisition Regulation); state acquisition codes; OFPP guidance; 18F De-Risking Guide; CO Department of Personnel & Administration procurement publications; practitioner experience.",
+    tags: ["acquisition", "procurement", "register", "vocabulary", "framework"],
+  },
+  {
+    name: "Contract Type Selection (FFP / T&M / CPFF / IDIQ)",
+    category: "acquisition",
+    oneLiner:
+      "Quick-reference taxonomy of government contract types with when-to-use guidance — Firm Fixed Price for known scope at known price; Time and Materials (with cap) for scope-flexible work paid for hours within a ceiling; Cost-Plus variants for high-uncertainty R&D; IDIQ for repeat-purchase patterns where individual order specifics are unknown at award.",
+    whenToUse:
+      "Any procurement conversation where contract type matters — modernization planning, vendor selection, source-selection prep, advising agencies on procurement strategy. Foundational for talking modern delivery in an acquisition-fluent way.",
+    vocabulary: [
+      "FFP (Firm Fixed Price)",
+      "FFP-EPA (Economic Price Adjustment)",
+      "T&M (Time and Materials)",
+      "T&M with cap / NTE (Not to Exceed)",
+      "LH (Labor Hour)",
+      "CPFF (Cost Plus Fixed Fee)",
+      "CPIF (Cost Plus Incentive Fee)",
+      "CPAF (Cost Plus Award Fee)",
+      "IDIQ (Indefinite Delivery, Indefinite Quantity)",
+      "DO (Delivery Order)",
+      "TO (Task Order)",
+      "BPA (Blanket Purchase Agreement)",
+      "Hybrid contract",
+    ],
+    howToDropIn:
+      "\"Contract type maps to risk allocation. FFP puts cost risk on the vendor — they bid a price, they own it. T&M puts the risk on the government, which is why caps exist. Cost-plus puts the risk on the government with a fee structure tuned for high-uncertainty work. For modern software, FFP is the wrong default — scope is rarely stable enough — and pure T&M is too risky for the government, so T&M with cap or modular FFP buys are the de-risking choices.\"",
+    commonPhrasing: "Contract type, FFP versus T&M, IDIQ structure.",
+    notes:
+      "FAR Part 16 covers contract types. The modern-delivery argument is that FFP for custom software is high-risk because scope is unstable; T&M with cap or modular FFP work better. Cost-plus is rarely used outside true R&D or major weapons systems. IDIQ is the catch-all for repeat-purchase patterns (GSA Schedules are essentially IDIQs). Pair with Federal & State Acquisition Register, Modern Delivery Procurement (18F-Style), and the 18F De-Risking Framework.",
+    source:
+      "FAR Part 16 (Types of Contracts); 18F De-Risking Guide on contract-type selection; practitioner experience in federal and state IT procurement.",
+    tags: ["acquisition", "contract_types", "framework"],
+  },
+  {
+    name: "Modern Delivery Procurement Moves (18F-Style)",
+    category: "acquisition",
+    oneLiner:
+      "The specific procurement choices that operationalize modern delivery practice in government acquisition — Statement of Objectives (SOO) instead of prescriptive Statement of Work, modular procurement instead of monolithic mega-contracts, time-and-materials with caps instead of fixed-price-fixed-scope, performance-based services contracting, empowered product ownership written into the contract.",
+    whenToUse:
+      "Government IT modernization conversations; advising agencies on how to procure custom software development; designing RFPs and SOWs that don't force vendors into waterfall delivery; talking to acquisition staff about why standard FFP-with-detailed-SOW isn't appropriate for agile software work.",
+    vocabulary: [
+      "Statement of Objectives (SOO)",
+      "Statement of Work (SOW)",
+      "Performance Work Statement (PWS)",
+      "modular procurement",
+      "time-and-materials with cap",
+      "performance-based services contracting",
+      "empowered product ownership",
+      "outcome-based contracting",
+      "agile-friendly contracting",
+      "User-Centered Design clauses",
+      "open-source delivery clause",
+      "code-in-the-customer's-repo clause",
+    ],
+    howToDropIn:
+      "\"Modern delivery procurement moves are concrete: write a SOO (what we want at outcome level) instead of a prescriptive SOW; buy in small modular increments instead of one monolithic mega-contract; use T&M with cap so vendors aren't forced to bid fixed price on uncertain scope; require performance against working software, not document deliverables; bake empowered product ownership into the contract so the government — not the vendor — sets priorities. None of these are unusual in commercial software; all of them are unusual in government, which is why the practice is hard.\"",
+    commonPhrasing: "Modern delivery procurement, agile procurement, 18F-style contracting, modular procurement.",
+    notes:
+      "The 18F De-Risking Guide is the canonical written source. The State Software Budgeting Handbook applies the same logic to state agencies. Colorado OIT specifically references this framework in their Enterprise Practice Lead JD. Notable contract templates exist publicly: 18F's Modular Contracting RFP templates, GSA's Centers of Excellence (CoE) sample contracts. Pair with 18F De-Risking Framework for Government Software, Federal & State Acquisition Register, Contract Type Selection.",
+    source:
+      "18F De-Risking Guide (derisking-guide.18f.gov); 18F Modular Contracting templates; State Software Budgeting Handbook; OFPP guidance on performance-based services contracting.",
+    tags: ["acquisition", "modern_delivery", "18f", "framework"],
+  },
+
+  // —— Product strategy (transformation / legacy regulated industries) ——
+
+  {
+    name: "Product Strategist (Internal Transformation, Legacy Regulated Industries)",
+    category: "product_strategy",
+    oneLiner:
+      "The senior-to-principal product strategist archetype at legacy regulated companies (mortgage servicing, banking, insurance, healthcare administration, accounting / financial systems) — not a standard PM with a backlog, but an internal-transformation strategist running discovery, KPI development, build-vs-buy analysis, and adoption work across business units to modernize processes, tools, and product teams.",
+    whenToUse:
+      "Senior / Principal Product Strategist or Transformation Strategist postings at legacy financial services, mortgage servicing, insurance carriers, healthcare administration, ERP-heavy organizations, established consumer finance. The 7+ year PM / strategy / UXR experience floor is standard.",
+    vocabulary: [
+      "product strategist",
+      "internal transformation",
+      "product discovery (not delivery)",
+      "build-vs-buy analysis",
+      "process modernization",
+      "tools and products for employees",
+      "KPI development",
+      "baseline metrics",
+      "adoption strategy",
+      "business-unit partnership",
+      "stand up new product teams",
+    ],
+    howToDropIn:
+      "\"Product Strategist in this context is internal-transformation work, not external-product work. The job is discovering how business units actually operate, finding modernization opportunities, doing build-vs-buy analysis, standing up new product teams or partnering with existing ones, and owning adoption end-to-end. The KPI work is foundational because most legacy regulated orgs are running on opinions, not measurements. The hard part is the change management — long-tenure workforces in regulated industries don't get told to adopt new tools.\"",
+    commonPhrasing: "Product strategist, transformation strategist, internal product strategy.",
+    notes:
+      "Differs from standard PM roles in that there's no fixed backlog and no fixed product; the strategist hunts for the right thing to build or buy and then partners with execution teams to deliver. Closer in shape to early-stage product discovery, McKinsey-style operations consulting with a product lens, or an internal version of an 18F engagement. The 'established organizations with long tenure employees' preference is a specific signal — they're hiring for someone who can navigate tradition-bound cultures, not just deliver software. Pair with Discovery-Driven Product Strategy (vs. Backlog-Driven PM), Modernizing Established Organizations With Long-Tenure Workforces, and AI Adoption & Capability Building.",
+    source:
+      "Validated against 2026 postings: Dovenmuehle Mortgage 'Senior or Principal Product Strategist' (remote US); similar internal-transformation strategist roles at large insurance carriers, regional banks, healthcare administrators, and ERP-heavy operations.",
+    tags: ["product_strategy", "transformation", "legacy_industry", "role", "framework"],
+  },
+  {
+    name: "Discovery-Driven Product Strategy (vs. Backlog-Driven PM)",
+    category: "product_strategy",
+    oneLiner:
+      "The product-management mode where the deliverable is a prioritized investment thesis built from discovery research, not feature shipping against an existing backlog — used for early-stage products, internal transformation, modernization initiatives, and any context where 'what should we be doing' isn't already settled.",
+    whenToUse:
+      "Roles that explicitly disclaim 'standard PM with a backlog,' transformation strategist roles, principal-level product strategy roles where the deliverable is roadmap and recommendation rather than feature ship. Common at consulting-flavored internal product orgs, transformation programs, and 0-to-1 product work.",
+    vocabulary: [
+      "product discovery",
+      "investment thesis",
+      "build-vs-buy",
+      "modernization roadmap",
+      "baseline metrics",
+      "KPI development",
+      "ethnographic research",
+      "unarticulated pain points",
+      "service blueprint (for internal services)",
+      "high-level vision down to implementation",
+    ],
+    howToDropIn:
+      "\"Discovery-driven product strategy is what you do when the question isn't 'what should we ship next sprint' but 'what should this department even be using to do its job.' The deliverable is a roadmap and investment thesis grounded in research, not a backlog. KPI development comes first because most internal transformation is happening in places that don't measure what good looks like. The skill is moving from observed pain to defensible recommendation without skipping the measurement step.\"",
+    commonPhrasing: "Product discovery, product strategy, transformation strategy.",
+    notes:
+      "Distinct from the Cagan / Torres dual-track model in that there isn't always a delivery track running in parallel — sometimes discovery is the whole job for months at a time. Closer to design research + product strategy + management consulting, with the product strategist owning the recommendation and the adoption. Pair with Continuous Discovery (Torres), Dual-Track Agile, Product Strategist (Internal Transformation, Legacy Regulated Industries), and Service Blueprint.",
+    source:
+      "Discovery-driven product practice (early-stage and transformation contexts); Marty Cagan / SVPG product-discovery writing; Teresa Torres continuous-discovery framing; practitioner experience at consulting and in-house transformation teams.",
+    tags: ["product_strategy", "discovery", "framework"],
+  },
+  {
+    name: "Modernizing Established Organizations With Long-Tenure Workforces",
+    category: "product_strategy",
+    oneLiner:
+      "The specific change-management challenge of bringing modern tools, processes, and product practice into organizations where long-tenure employees carry deep institutional knowledge, established work patterns, and reasonable skepticism about transformation programs that have come and gone before — distinct from greenfield modernization or high-turnover orgs.",
+    whenToUse:
+      "JDs that explicitly name 'established organizations with long tenure employees,' 'tradition-bound culture,' or signal a regulated-industry / legacy-business context where transformation can't be top-down mandate-driven. Common in mortgage servicing, insurance, accounting firms, manufacturing, healthcare administration, public utilities.",
+    vocabulary: [
+      "long-tenure workforce",
+      "institutional knowledge",
+      "process tradition",
+      "change-management posture",
+      "credibility-building",
+      "voluntary adoption",
+      "transformation fatigue",
+      "this-too-shall-pass",
+      "subject matter expert (SME) partnership",
+      "champions network",
+    ],
+    howToDropIn:
+      "\"Modernizing a long-tenure workforce is a different problem than modernizing a startup or a high-churn org. The people in front of you have been there twenty years, know exactly why the process is the way it is, have seen three previous transformation initiatives come and go, and own the institutional knowledge nobody documented. Credibility is earned by working WITH the SMEs to surface the why behind the current state — not by showing up with a vision deck. Adoption happens because someone respected on the team endorses the change, not because leadership mandated it.\"",
+    commonPhrasing: "Long-tenure workforce, established-org modernization, tradition-bound transformation.",
+    notes:
+      "Transformation patterns differ from greenfield modernization in important ways: institutional knowledge is an asset to preserve, not an obstacle to remove; SME partnerships are mandatory; the change-network model (champions inside the team) works better than top-down rollout; metrics need to be jointly developed with the workforce rather than imposed; and 'this too shall pass' is the default skepticism the work runs against. Common failure mode is dismissing existing process as outdated when it actually encodes regulatory or operational constraints. Pair with Product Strategist (Internal Transformation, Legacy Regulated Industries), AI Adoption & Capability Building, ADKAR (Prosci), and Trusted Advisor Stance.",
+    source:
+      "Change-management practice for legacy regulated industries; mortgage servicing, insurance, healthcare administration contexts; practitioner experience in established-org modernization.",
+    tags: ["product_strategy", "change_management", "legacy_industry", "framework"],
+  },
 ];
