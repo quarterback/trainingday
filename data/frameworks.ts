@@ -6095,4 +6095,116 @@ export const frameworks: Framework[] = [
       "UK Government Digital Service (GDS); Central Digital and Data Office (CDDO), UK Cabinet Office; Digital and Technology Profession Capability Framework. Originated 2014–2016 and continuously updated.",
     tags: ["govt_delivery", "career_framework", "gds", "framework"],
   },
+
+  // —— Acquisition / procurement (federal + state government) ————————————
+
+  {
+    name: "Federal & State Acquisition Register (Vocabulary Stack for Non-Contracting-Officers)",
+    category: "acquisition",
+    oneLiner:
+      "The working vocabulary of federal and state government acquisition — contract types, procurement vehicles, source-selection methods, performance management, key statutes — pitched at the level needed to talk fluently with contracting officers, program leadership, and modernization-team practitioners without having held a CO warrant.",
+    whenToUse:
+      "Government IT modernization roles where the person needs to be conversant with acquisition (Practice Leads, Delivery Managers, Product Leads, Chief Digital Officers) without being a contracting officer. Particularly relevant for state-government IT modernization seats that work alongside acquisition staff but don't sit in the acquisition org.",
+    vocabulary: [
+      "FAR (Federal Acquisition Regulation)",
+      "DFARS (Defense FAR Supplement)",
+      "agency supplements (DOI AR, HHSAR, etc.)",
+      "state acquisition code (e.g., Colorado CRS Title 24)",
+      "Procurement Integrity Act",
+      "FFP (Firm Fixed Price)",
+      "T&M (Time and Materials)",
+      "T&M with cap / NTE (Not to Exceed)",
+      "CPFF (Cost Plus Fixed Fee)",
+      "IDIQ (Indefinite Delivery, Indefinite Quantity)",
+      "GSA Multiple Award Schedule (MAS)",
+      "GWAC (Government-Wide Acquisition Contract)",
+      "BPA (Blanket Purchase Agreement)",
+      "NASPO ValuePoint (state cooperative)",
+      "Statement of Objectives (SOO)",
+      "Statement of Work (SOW)",
+      "Performance Work Statement (PWS)",
+      "RFP / RFQ / RFI",
+      "J&A (Justification and Approval)",
+      "Sources Sought Notice",
+      "Best Value Trade-Off (BVT)",
+      "Lowest Price Technically Acceptable (LPTA)",
+      "CPARS (Contractor Performance Assessment Reporting System)",
+      "QASP (Quality Assurance Surveillance Plan)",
+      "Contract modification (mod)",
+      "Modular procurement",
+      "Performance-based services contracting",
+      "Empowered product ownership",
+      "Bid protest (GAO, COFC, agency-level)",
+      "OFPP (Office of Federal Procurement Policy)",
+    ],
+    howToDropIn:
+      "\"Talking the register means using the actual instruments instead of colloquial equivalents. 'We need a fixed-price contract' becomes 'FFP'; 'hourly contractors with a budget cap' becomes 'T&M with a cap'; 'pre-vetted vendor list' becomes 'BPA' or 'GWAC task order' or 'GSA Schedule'; 'change order' becomes 'contract modification' or 'mod'; 'protest' becomes 'GAO protest' for federal or the state-specific protest mechanism. The point isn't vocabulary for its own sake; it's that contracting officers can't take 'colloquial-equivalent' instructions and translate them — they need the actual instrument named.\"",
+    commonPhrasing: "Acquisition vocabulary, contracting register, procurement language.",
+    notes:
+      "Intentionally a vocabulary stack rather than a how-to. Contract law and acquisition strategy is a separate competency; this is the speak-the-language layer for non-COs who work alongside acquisition staff. Pair with Contract Type Selection (FFP / T&M / CPFF / IDIQ), Modern Delivery Procurement (18F-Style), 18F De-Risking Framework for Government Software, AI Services Price Reasonableness Worksheet, and the acquisition translation rows.",
+    source:
+      "FAR (Federal Acquisition Regulation); state acquisition codes; OFPP guidance; 18F De-Risking Guide; CO Department of Personnel & Administration procurement publications; practitioner experience.",
+    tags: ["acquisition", "procurement", "register", "vocabulary", "framework"],
+  },
+  {
+    name: "Contract Type Selection (FFP / T&M / CPFF / IDIQ)",
+    category: "acquisition",
+    oneLiner:
+      "Quick-reference taxonomy of government contract types with when-to-use guidance — Firm Fixed Price for known scope at known price; Time and Materials (with cap) for scope-flexible work paid for hours within a ceiling; Cost-Plus variants for high-uncertainty R&D; IDIQ for repeat-purchase patterns where individual order specifics are unknown at award.",
+    whenToUse:
+      "Any procurement conversation where contract type matters — modernization planning, vendor selection, source-selection prep, advising agencies on procurement strategy. Foundational for talking modern delivery in an acquisition-fluent way.",
+    vocabulary: [
+      "FFP (Firm Fixed Price)",
+      "FFP-EPA (Economic Price Adjustment)",
+      "T&M (Time and Materials)",
+      "T&M with cap / NTE (Not to Exceed)",
+      "LH (Labor Hour)",
+      "CPFF (Cost Plus Fixed Fee)",
+      "CPIF (Cost Plus Incentive Fee)",
+      "CPAF (Cost Plus Award Fee)",
+      "IDIQ (Indefinite Delivery, Indefinite Quantity)",
+      "DO (Delivery Order)",
+      "TO (Task Order)",
+      "BPA (Blanket Purchase Agreement)",
+      "Hybrid contract",
+    ],
+    howToDropIn:
+      "\"Contract type maps to risk allocation. FFP puts cost risk on the vendor — they bid a price, they own it. T&M puts the risk on the government, which is why caps exist. Cost-plus puts the risk on the government with a fee structure tuned for high-uncertainty work. For modern software, FFP is the wrong default — scope is rarely stable enough — and pure T&M is too risky for the government, so T&M with cap or modular FFP buys are the de-risking choices.\"",
+    commonPhrasing: "Contract type, FFP versus T&M, IDIQ structure.",
+    notes:
+      "FAR Part 16 covers contract types. The modern-delivery argument is that FFP for custom software is high-risk because scope is unstable; T&M with cap or modular FFP work better. Cost-plus is rarely used outside true R&D or major weapons systems. IDIQ is the catch-all for repeat-purchase patterns (GSA Schedules are essentially IDIQs). Pair with Federal & State Acquisition Register, Modern Delivery Procurement (18F-Style), and the 18F De-Risking Framework.",
+    source:
+      "FAR Part 16 (Types of Contracts); 18F De-Risking Guide on contract-type selection; practitioner experience in federal and state IT procurement.",
+    tags: ["acquisition", "contract_types", "framework"],
+  },
+  {
+    name: "Modern Delivery Procurement Moves (18F-Style)",
+    category: "acquisition",
+    oneLiner:
+      "The specific procurement choices that operationalize modern delivery practice in government acquisition — Statement of Objectives (SOO) instead of prescriptive Statement of Work, modular procurement instead of monolithic mega-contracts, time-and-materials with caps instead of fixed-price-fixed-scope, performance-based services contracting, empowered product ownership written into the contract.",
+    whenToUse:
+      "Government IT modernization conversations; advising agencies on how to procure custom software development; designing RFPs and SOWs that don't force vendors into waterfall delivery; talking to acquisition staff about why standard FFP-with-detailed-SOW isn't appropriate for agile software work.",
+    vocabulary: [
+      "Statement of Objectives (SOO)",
+      "Statement of Work (SOW)",
+      "Performance Work Statement (PWS)",
+      "modular procurement",
+      "time-and-materials with cap",
+      "performance-based services contracting",
+      "empowered product ownership",
+      "outcome-based contracting",
+      "agile-friendly contracting",
+      "User-Centered Design clauses",
+      "open-source delivery clause",
+      "code-in-the-customer's-repo clause",
+    ],
+    howToDropIn:
+      "\"Modern delivery procurement moves are concrete: write a SOO (what we want at outcome level) instead of a prescriptive SOW; buy in small modular increments instead of one monolithic mega-contract; use T&M with cap so vendors aren't forced to bid fixed price on uncertain scope; require performance against working software, not document deliverables; bake empowered product ownership into the contract so the government — not the vendor — sets priorities. None of these are unusual in commercial software; all of them are unusual in government, which is why the practice is hard.\"",
+    commonPhrasing: "Modern delivery procurement, agile procurement, 18F-style contracting, modular procurement.",
+    notes:
+      "The 18F De-Risking Guide is the canonical written source. The State Software Budgeting Handbook applies the same logic to state agencies. Colorado OIT specifically references this framework in their Enterprise Practice Lead JD. Notable contract templates exist publicly: 18F's Modular Contracting RFP templates, GSA's Centers of Excellence (CoE) sample contracts. Pair with 18F De-Risking Framework for Government Software, Federal & State Acquisition Register, Contract Type Selection.",
+    source:
+      "18F De-Risking Guide (derisking-guide.18f.gov); 18F Modular Contracting templates; State Software Budgeting Handbook; OFPP guidance on performance-based services contracting.",
+    tags: ["acquisition", "modern_delivery", "18f", "framework"],
+  },
 ];

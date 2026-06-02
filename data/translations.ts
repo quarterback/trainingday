@@ -889,4 +889,115 @@ export const translations: Translation[] = [
       "In a PM-leaning room (CPO, CEO, GTM), reframe the same work as 'AI product strategy,' 'build-vs-buy across the model landscape,' 'eval discipline,' and 'agentic product patterns.' Don't open with 'MCP server' — open with 'how I'd decide what to build, buy, and orchestrate.' Pair with AI Product Management (Staff-level Discipline) and Build-vs-Buy for AI Products.",
     tags: ["translation", "ai_product", "positioning"],
   },
+
+  // —— Acquisition / contracting register translations ——
+
+  {
+    yourTerm: "Writing a spec for vendor work",
+    standardTerms: [
+      "Statement of Objectives (SOO)",
+      "Statement of Work (SOW)",
+      "Performance Work Statement (PWS)",
+    ],
+    explanation:
+      "Three different acquisition documents, distinct in level of prescriptiveness. SOO names the outcome you want and leaves the 'how' to the vendor — most aligned with modern delivery. SOW prescribes deliverables and how to produce them — waterfall-friendly, modern-delivery-unfriendly. PWS sits in between, describing performance standards the work has to meet. The 18F de-risking argument is for SOOs.",
+    whenToUseYours:
+      "Informal product / engineering / design conversations where the audience is internal modernization staff and the distinction doesn't matter.",
+    whenToUseTheirs:
+      "Any conversation with contracting officers, acquisition staff, or anyone procuring — they need the actual instrument named. SOO if you want modern delivery; SOW if the org defaults to one and you have to argue for a change.",
+    tags: ["translation", "acquisition", "modern_delivery"],
+  },
+  {
+    yourTerm: "Hourly contractors with a budget cap",
+    standardTerms: [
+      "Time and Materials (T&M) with cap",
+      "T&M Not-to-Exceed (NTE)",
+      "Labor-Hour contract with ceiling",
+    ],
+    explanation:
+      "T&M with a cap is the precise term — government pays for hours actually worked, capped at a not-to-exceed dollar amount. The most common modern-delivery contract type because it preserves scope flexibility without giving the vendor an open checkbook.",
+    whenToUseYours: "Casual conversation only.",
+    whenToUseTheirs:
+      "Any conversation with acquisition, finance, or program leadership. The cap detail matters — bare 'T&M' carries different risk allocation than T&M with cap.",
+    tags: ["translation", "acquisition", "contract_types"],
+  },
+  {
+    yourTerm: "Pre-vetted vendor list",
+    standardTerms: [
+      "GSA Schedule",
+      "GSA Multiple Award Schedule (MAS)",
+      "GWAC (Government-Wide Acquisition Contract)",
+      "BPA (Blanket Purchase Agreement)",
+      "NASPO ValuePoint (state cooperative)",
+    ],
+    explanation:
+      "Government doesn't use 'vendor list' — it uses specific vehicles. GSA Schedules are the federal pre-negotiated catalogue for commercial items and services. GWACs are agency-specific (NIH, NASA, GSA Alliant). BPAs are pre-negotiated terms with one or more vendors for repeat purchases. NASPO ValuePoint is the cooperative for state and local governments. Naming the vehicle correctly is table stakes.",
+    whenToUseYours: "Never with acquisition staff.",
+    whenToUseTheirs:
+      "Always with acquisition staff. The specific vehicle determines what process applies; getting it wrong signals you don't know the difference.",
+    tags: ["translation", "acquisition", "vehicles"],
+  },
+  {
+    yourTerm: "Sole-source contract",
+    standardTerms: [
+      "Sole source justification",
+      "Justification and Approval (J&A)",
+      "Limited source justification",
+      "Other than full and open competition",
+    ],
+    explanation:
+      "Sole-source procurement requires written justification under FAR Part 6 (and state equivalents) — typically called a J&A at the federal level. The J&A names the legal authority being used (one of the exceptions to full and open competition under CICA) and is reviewable.",
+    whenToUseYours: "Conversationally.",
+    whenToUseTheirs:
+      "When discussing the actual procurement action — naming J&A signals you understand it's not a preference, it's a written instrument with required content and review.",
+    tags: ["translation", "acquisition", "competition"],
+  },
+  {
+    yourTerm: "Change order",
+    standardTerms: [
+      "Contract modification (mod)",
+      "Bilateral modification (SF-30)",
+      "Unilateral modification (Changes clause)",
+      "Engineering Change Proposal (ECP)",
+    ],
+    explanation:
+      "Government contracts get modified, not change-ordered. Bilateral mods require vendor and government signature; unilateral mods are issued under the Changes clause within scope. Mods are numbered and tracked. Scope changes beyond the Changes clause require a new procurement action, not a mod.",
+    whenToUseYours: "Casual conversation.",
+    whenToUseTheirs:
+      "Any contracting conversation. The bilateral / unilateral distinction matters; so does scope-versus-out-of-scope.",
+    tags: ["translation", "acquisition", "contract_administration"],
+  },
+  {
+    yourTerm: "Complaint about a procurement decision",
+    standardTerms: [
+      "Bid protest",
+      "GAO protest",
+      "Court of Federal Claims (COFC) protest",
+      "Agency-level protest",
+      "State-level protest (varies)",
+    ],
+    explanation:
+      "Bid protests have specific venues and standards. Agency-level first (cheapest, fastest, agency rules); GAO is the most-used federal forum (tight deadlines, decisions advisory but usually followed); COFC is the federal court venue (slowest, binding). State-level varies — Colorado has the State Procurement Code with specific protest provisions. Knowing the protest landscape is part of acquisition fluency.",
+    whenToUseYours: "Conversationally.",
+    whenToUseTheirs:
+      "When discussing risk in source selection — 'protestability' shapes how a procurement is structured. Naming the forum (GAO vs COFC vs agency) signals you understand the option set.",
+    tags: ["translation", "acquisition", "protest"],
+  },
+  {
+    yourTerm: "Vendor evaluation criteria",
+    standardTerms: [
+      "Source Selection Plan (SSP)",
+      "Evaluation factors and subfactors",
+      "Best Value Trade-Off (BVT)",
+      "Lowest Price Technically Acceptable (LPTA)",
+      "Past Performance evaluation",
+    ],
+    explanation:
+      "Source selection has a documented plan with named evaluation factors. BVT (best value trade-off) lets the agency weigh price against technical and past performance; LPTA awards to the lowest price that meets technical minimums. The choice between BVT and LPTA shapes who wins; modern delivery work usually wants BVT so technical and past-performance considerations can outweigh lowest price.",
+    whenToUseYours:
+      "Internally with non-acquisition colleagues.",
+    whenToUseTheirs:
+      "In source-selection discussions and acquisition strategy meetings. The BVT-vs-LPTA distinction is a tell for whether you've been in the room before.",
+    tags: ["translation", "acquisition", "source_selection"],
+  },
 ];
