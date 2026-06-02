@@ -6207,4 +6207,92 @@ export const frameworks: Framework[] = [
       "18F De-Risking Guide (derisking-guide.18f.gov); 18F Modular Contracting templates; State Software Budgeting Handbook; OFPP guidance on performance-based services contracting.",
     tags: ["acquisition", "modern_delivery", "18f", "framework"],
   },
+
+  // —— Product strategy (transformation / legacy regulated industries) ——
+
+  {
+    name: "Product Strategist (Internal Transformation, Legacy Regulated Industries)",
+    category: "product_strategy",
+    oneLiner:
+      "The senior-to-principal product strategist archetype at legacy regulated companies (mortgage servicing, banking, insurance, healthcare administration, accounting / financial systems) — not a standard PM with a backlog, but an internal-transformation strategist running discovery, KPI development, build-vs-buy analysis, and adoption work across business units to modernize processes, tools, and product teams.",
+    whenToUse:
+      "Senior / Principal Product Strategist or Transformation Strategist postings at legacy financial services, mortgage servicing, insurance carriers, healthcare administration, ERP-heavy organizations, established consumer finance. The 7+ year PM / strategy / UXR experience floor is standard.",
+    vocabulary: [
+      "product strategist",
+      "internal transformation",
+      "product discovery (not delivery)",
+      "build-vs-buy analysis",
+      "process modernization",
+      "tools and products for employees",
+      "KPI development",
+      "baseline metrics",
+      "adoption strategy",
+      "business-unit partnership",
+      "stand up new product teams",
+    ],
+    howToDropIn:
+      "\"Product Strategist in this context is internal-transformation work, not external-product work. The job is discovering how business units actually operate, finding modernization opportunities, doing build-vs-buy analysis, standing up new product teams or partnering with existing ones, and owning adoption end-to-end. The KPI work is foundational because most legacy regulated orgs are running on opinions, not measurements. The hard part is the change management — long-tenure workforces in regulated industries don't get told to adopt new tools.\"",
+    commonPhrasing: "Product strategist, transformation strategist, internal product strategy.",
+    notes:
+      "Differs from standard PM roles in that there's no fixed backlog and no fixed product; the strategist hunts for the right thing to build or buy and then partners with execution teams to deliver. Closer in shape to early-stage product discovery, McKinsey-style operations consulting with a product lens, or an internal version of an 18F engagement. The 'established organizations with long tenure employees' preference is a specific signal — they're hiring for someone who can navigate tradition-bound cultures, not just deliver software. Pair with Discovery-Driven Product Strategy (vs. Backlog-Driven PM), Modernizing Established Organizations With Long-Tenure Workforces, and AI Adoption & Capability Building.",
+    source:
+      "Validated against 2026 postings: Dovenmuehle Mortgage 'Senior or Principal Product Strategist' (remote US); similar internal-transformation strategist roles at large insurance carriers, regional banks, healthcare administrators, and ERP-heavy operations.",
+    tags: ["product_strategy", "transformation", "legacy_industry", "role", "framework"],
+  },
+  {
+    name: "Discovery-Driven Product Strategy (vs. Backlog-Driven PM)",
+    category: "product_strategy",
+    oneLiner:
+      "The product-management mode where the deliverable is a prioritized investment thesis built from discovery research, not feature shipping against an existing backlog — used for early-stage products, internal transformation, modernization initiatives, and any context where 'what should we be doing' isn't already settled.",
+    whenToUse:
+      "Roles that explicitly disclaim 'standard PM with a backlog,' transformation strategist roles, principal-level product strategy roles where the deliverable is roadmap and recommendation rather than feature ship. Common at consulting-flavored internal product orgs, transformation programs, and 0-to-1 product work.",
+    vocabulary: [
+      "product discovery",
+      "investment thesis",
+      "build-vs-buy",
+      "modernization roadmap",
+      "baseline metrics",
+      "KPI development",
+      "ethnographic research",
+      "unarticulated pain points",
+      "service blueprint (for internal services)",
+      "high-level vision down to implementation",
+    ],
+    howToDropIn:
+      "\"Discovery-driven product strategy is what you do when the question isn't 'what should we ship next sprint' but 'what should this department even be using to do its job.' The deliverable is a roadmap and investment thesis grounded in research, not a backlog. KPI development comes first because most internal transformation is happening in places that don't measure what good looks like. The skill is moving from observed pain to defensible recommendation without skipping the measurement step.\"",
+    commonPhrasing: "Product discovery, product strategy, transformation strategy.",
+    notes:
+      "Distinct from the Cagan / Torres dual-track model in that there isn't always a delivery track running in parallel — sometimes discovery is the whole job for months at a time. Closer to design research + product strategy + management consulting, with the product strategist owning the recommendation and the adoption. Pair with Continuous Discovery (Torres), Dual-Track Agile, Product Strategist (Internal Transformation, Legacy Regulated Industries), and Service Blueprint.",
+    source:
+      "Discovery-driven product practice (early-stage and transformation contexts); Marty Cagan / SVPG product-discovery writing; Teresa Torres continuous-discovery framing; practitioner experience at consulting and in-house transformation teams.",
+    tags: ["product_strategy", "discovery", "framework"],
+  },
+  {
+    name: "Modernizing Established Organizations With Long-Tenure Workforces",
+    category: "product_strategy",
+    oneLiner:
+      "The specific change-management challenge of bringing modern tools, processes, and product practice into organizations where long-tenure employees carry deep institutional knowledge, established work patterns, and reasonable skepticism about transformation programs that have come and gone before — distinct from greenfield modernization or high-turnover orgs.",
+    whenToUse:
+      "JDs that explicitly name 'established organizations with long tenure employees,' 'tradition-bound culture,' or signal a regulated-industry / legacy-business context where transformation can't be top-down mandate-driven. Common in mortgage servicing, insurance, accounting firms, manufacturing, healthcare administration, public utilities.",
+    vocabulary: [
+      "long-tenure workforce",
+      "institutional knowledge",
+      "process tradition",
+      "change-management posture",
+      "credibility-building",
+      "voluntary adoption",
+      "transformation fatigue",
+      "this-too-shall-pass",
+      "subject matter expert (SME) partnership",
+      "champions network",
+    ],
+    howToDropIn:
+      "\"Modernizing a long-tenure workforce is a different problem than modernizing a startup or a high-churn org. The people in front of you have been there twenty years, know exactly why the process is the way it is, have seen three previous transformation initiatives come and go, and own the institutional knowledge nobody documented. Credibility is earned by working WITH the SMEs to surface the why behind the current state — not by showing up with a vision deck. Adoption happens because someone respected on the team endorses the change, not because leadership mandated it.\"",
+    commonPhrasing: "Long-tenure workforce, established-org modernization, tradition-bound transformation.",
+    notes:
+      "Transformation patterns differ from greenfield modernization in important ways: institutional knowledge is an asset to preserve, not an obstacle to remove; SME partnerships are mandatory; the change-network model (champions inside the team) works better than top-down rollout; metrics need to be jointly developed with the workforce rather than imposed; and 'this too shall pass' is the default skepticism the work runs against. Common failure mode is dismissing existing process as outdated when it actually encodes regulatory or operational constraints. Pair with Product Strategist (Internal Transformation, Legacy Regulated Industries), AI Adoption & Capability Building, ADKAR (Prosci), and Trusted Advisor Stance.",
+    source:
+      "Change-management practice for legacy regulated industries; mortgage servicing, insurance, healthcare administration contexts; practitioner experience in established-org modernization.",
+    tags: ["product_strategy", "change_management", "legacy_industry", "framework"],
+  },
 ];
