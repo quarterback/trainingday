@@ -374,4 +374,242 @@ export const stories: Story[] = [
       "Lead with this story for any AI policy, federal AI, foundation, public-interest-tech, academic, or research-institution context. The Occupant Indices are the credential and the public face; the practice is the revenue mechanism; Public Mechanics at Michigan is the academic frame; 18F is the depth-of-experience that earns the practice authority — in that order. Integrated elevator pitch: 'I built three measurement instruments for AI that didn't exist. $CPI is a Consumer Price Index for AI compute. $AIU is a stock-market index for AI as an economic sector. $LDI is the only running measurement of how often AI is actually replacing federal workers when it gets cheaper than them. They're free, public, and used by procurement teams in public institutions because nobody else is measuring this. State Capacity AI is the practice; Occupant Indices is the instrument set.' Pair with $CPI, $AIU, $LDI, and AI Services Price Reasonableness Worksheet framework cards. Buyers are program officers, peer senior leaders, board chairs — not CIO procurement.",
     tags: ["state_capacity_ai", "ai_measurement", "public_interest", "owner_story", "founder", "current_practice"],
   },
+  {
+    title:
+      "Portland Digital Corps: Founding and Running an All-Volunteer Civic Tech Cohort Post-18F",
+    referenceSentence:
+      "I founded Portland Digital Corps in March 2025 after 18F closed — an all-volunteer civic tech initiative that ran through July 2025, engaged 50+ active volunteers (from 100+ signups), and delivered six nonprofit websites in partnership with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, and Cape Perpetua Collaborative, with groups from other cities asking to replicate the model.",
+    thirtySecondVersion:
+      "After 18F closed in 2025 I founded Portland Digital Corps as an all-volunteer civic tech initiative running March through July 2025. The structure was intentionally zero-funded and time-bounded. We assembled designers, developers, data viz specialists, strategists, and PMs from 100+ signups into 50+ active volunteers and delivered six nonprofit websites in partnership with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, and Cape Perpetua Collaborative. The model attracted interest from other cities asking to replicate; I committed to publishing a 'building a digital service' guide by end of 2025 so others could run the playbook locally.",
+    twoMinuteVersion:
+      "Portland Digital Corps was the all-volunteer civic tech initiative I founded in March 2025 in the immediate wake of 18F closing. The premise was simple: thousands of skilled civic technologists had just lost their jobs and needed somewhere to keep the practice alive; Portland-area nonprofits needed digital help and couldn't afford the consultant market. The structure was intentionally zero-funded and time-bounded — March through July 2025 — and the explicit goal was both the deliverable work (websites) and sustained community.\n\nI expected modest interest and got 100+ signups. We engaged 50+ active volunteers across designers, developers, data visualization specialists, strategists, and product managers, plus in-person events with strong attendance. The operating model worked because the participation bar was clear (commit to a project, ship it), the cohort had real social infrastructure (in-person events, working group rhythms), and the partner nonprofits had been pre-qualified for fit.\n\nThe cohort delivered six nonprofit websites in partnership with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, and Cape Perpetua Collaborative. Volunteers consistently reported valuing the professional connections as much as the work. Post-cohort interest stayed high; participants requested future iterations; additional groups from around the country contacted us asking to replicate the model in their regions.\n\nThe leadership shape was founder-organizer rather than project-delivery: assembling the volunteer pool, pairing volunteers to nonprofits, holding the cohort rhythm, running in-person convening, communicating the model externally. I committed to publishing a 'building a digital service' guide by end of 2025 so the model could spread without me running each instance.",
+    starAnswers: [
+      {
+        competency: "Building community / institution from scratch in a crisis moment",
+        prompt: "Tell me about building something institutional from scratch.",
+        situation:
+          "18F closed in 2025. Thousands of skilled civic technologists had just lost their jobs and needed somewhere to keep the practice alive; Portland-area nonprofits needed digital help and couldn't afford the consultant market.",
+        task:
+          "Build a temporary civic tech institution that served both populations at once — a zero-funded, time-bounded initiative that delivered real work and sustained the community.",
+        action:
+          "Founded Portland Digital Corps in March 2025 with a five-month time-bound (March through July) and zero-funded structure. Designed the participation model: commit to a project, ship it, with cohort rhythm and in-person events as the connective tissue. Pre-qualified partner nonprofits for fit. Paired volunteers to nonprofit projects. Held the cohort cadence and ran external communications about the model.",
+        result:
+          "100+ signups, 50+ active volunteers across designers, developers, data viz, strategists, PMs. Six nonprofit websites delivered with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, Cape Perpetua Collaborative. Volunteers reported valuing professional connections as much as the work. Additional groups from other cities reached out asking to replicate.",
+        learnings:
+          "Time-boxing the institution explicitly is what made the cohort sustainable — nobody was committing to indefinite volunteer work. The institutional-shape choice (community + delivery, not just one) is what made volunteers stay engaged after delivering their own project. Committing to publish a replication guide is how the work spreads without me running each instance.",
+      },
+      {
+        competency: "Operating in a crisis moment / founder under uncertainty",
+        prompt: "Tell me about leading through institutional disruption.",
+        situation:
+          "I left 18F in 2025 — partly in the wake of broader institutional disruption at the Technology Transformation Services. The federal civic tech community was scattered; nobody was sure what came next.",
+        task:
+          "Find a way to keep the practice alive and useful that didn't depend on the federal infrastructure that had just collapsed.",
+        action:
+          "Started Portland Digital Corps within weeks. Used my AIGA Portland board role as the convening platform. Made the structure intentionally short (March through July) and intentionally zero-funded so it could exist without grants, contracts, or institutional approvals. Communicated the model openly so others could replicate.",
+        result:
+          "The Corps ran successfully; community got rebuilt around a concrete delivery model; six nonprofit websites shipped; the model got picked up by groups in other cities. Concurrent founding of State Capacity AI gave the federal-AI-procurement work a different vehicle.",
+        learnings:
+          "In a crisis moment the structural choices (time-bound, zero-funded, replicable) matter more than the strategic ones. The community wanted somewhere to do real work together; the Corps was the simplest possible scaffold for that. Designing for replication from day one means the institution isn't dependent on me running it.",
+      },
+    ],
+    frameworksExemplified: [
+      "Centralized AI Enablement Team (Innovation Catalyst Model)",
+      "Train-the-Trainer (peer-cascade model)",
+      "Service Blueprint",
+      "Cohort-Based Learning",
+    ],
+    thinkersInDialogue: [
+      "Code for America (model influence)",
+      "AIGA Portland (convening platform)",
+    ],
+    questionsItAnswers: [
+      "Tell me about building something institutional from scratch.",
+      "Tell me about leading through institutional disruption.",
+      "How do you organize volunteer or community work?",
+      "Tell me about a time you saw a gap and created an institution to fill it.",
+      "What's your relationship to civic technology as a discipline?",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: founder / institution-building muscle; volunteer-cohort organizing at scale; civic technology leadership; operating in crisis or transition; community + delivery hybrid models. Numbers to land: founded March 2025, ran through July 2025; 100+ signups, 50+ active volunteers; six nonprofit websites delivered; specific partner nonprofits (Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, Cape Perpetua Collaborative); other cities reached out for replication. Pair with State Capacity AI (concurrent founder narrative) and Centralized AI Enablement Team (Innovation Catalyst Model — similar operating pattern). The 'guide for replication by end of 2025' commitment is the institution-design move worth naming.",
+    tags: ["portland_digital_corps", "civic_tech", "founder", "community", "owner_story"],
+  },
+  {
+    title:
+      "Benefits Determination & Appeals System: A Full-Stack Prototype for Auditable Government Eligibility Decisions",
+    referenceSentence:
+      "In late 2025 I designed and built a full-stack prototype modeling the complete lifecycle of government benefits applications — intake through eligibility determination, caseworker review, and a three-tier appeals process — with policies, decisions, and audit logs stored using IPFS-style content addressing so every record is referenced by a unique identifier tied to a specific policy version.",
+    thirtySecondVersion:
+      "A full-stack prototype I designed and built in late 2025 modeling the complete lifecycle of government benefits decisions — intake, automated eligibility checking, human caseworker review, and a three-tier appeals process. The core architectural move is IPFS-style content addressing for policies, decisions, and audit logs — every record references a unique identifier tied to a specific policy version, so any decision is auditable back to the rules in force when it was made. The interface explicitly distinguishes automated actions from human interventions, records overrides and appeal outcomes, and surfaces decision reasoning without exposing model mechanics. React, TypeScript, Tailwind, AI-assisted eligibility logic.",
+    twoMinuteVersion:
+      "The Benefits Determination & Appeals System is a full-stack prototype I designed and built in late 2025 to model the complete lifecycle of government benefits applications: intake, automated eligibility determination, human caseworker review, and a three-tier appeals process — with separate caseworker and appeals dashboards.\n\nThe motivating problem is that government benefits decisions lack transparency and auditability. Applicants and reviewers need visibility into how eligibility was determined, what factors influenced the outcome, and how appeals were evaluated across review stages. The core architectural move is IPFS-style content addressing: policies, decisions, and audit logs are stored with unique identifiers tied to specific policy versions, so every decision is auditable back to the rules in force when it was made. Policy can change without losing the history of what decisions were made under prior versions.\n\nThe UX explicitly distinguishes automated actions from human interventions, records overrides and appeal outcomes, and surfaces decision reasoning without exposing model internals — a deliberate balance between transparency and complexity. Three-tier appeals modeled the actual administrative-law structure: caseworker reconsideration, supervisor review, administrative law judge.\n\nTech stack: React, TypeScript, Tailwind CSS, AI-assisted eligibility logic, IPFS-based content addressing, separate caseworker and appeals dashboards. This is portfolio work — a prototype that demonstrates the architecture and interaction patterns for the next generation of government benefits work, informing the State Capacity AI advisory practice.",
+    starAnswers: [
+      {
+        competency: "Active builder / shipping prototypes that demonstrate AI-augmented service design",
+        prompt: "Tell me about a recent prototype you built end-to-end.",
+        situation:
+          "In late 2025, after leaving 18F and founding State Capacity AI, I wanted to make concrete what AI-assisted government benefits work could look like without the institutional constraints of building inside an agency.",
+        task:
+          "Design and build a full-stack prototype modeling the complete lifecycle of benefits applications, with explicit attention to auditability of automated decisions.",
+        action:
+          "Built the system in React, TypeScript, and Tailwind, with AI-assisted eligibility logic and IPFS-style content addressing for policies, decisions, and audit logs. Modeled three-tier appeals matching actual administrative-law structure. Designed the UX to distinguish automated from human actions, record overrides and appeal outcomes, and surface decision reasoning without exposing model internals. Built separate caseworker and appeals dashboards reflecting the actual workflow split.",
+        result:
+          "Working prototype demonstrating both the architecture (content-addressed audit trail) and the interaction patterns (transparent automated decisions paired with human review). Portfolio work informing State Capacity AI's advisory practice.",
+        learnings:
+          "Building the prototype taught me which architectural decisions are easy to talk about and which are easy to skip. Content addressing for audit trails is one of those — it sounds simple in a deck and is harder in practice because policy versions, decision references, and immutability constraints have to actually compose. Building it forced the design to be honest.",
+      },
+      {
+        competency: "Designing for auditability in regulated decisions",
+        prompt: "Tell me about designing for transparency in automated decisions.",
+        situation:
+          "Government benefits decisions involve significant administrative law (due process for denied applicants, appeals rights, policy-version provenance). Modern AI-assisted decision systems usually skip the auditability problem.",
+        task:
+          "Design a system that makes automated decisions auditable end-to-end without forcing reviewers to understand model internals.",
+        action:
+          "Used IPFS-style content addressing so each decision references a unique identifier tied to a specific policy version. Policies can change without losing history. The interface surfaces decision inputs, confidence levels, reasoning steps, system limits, and user actions in separate expandable sections. Distinguished automated actions from human interventions visually and in the audit log.",
+        result:
+          "Working prototype demonstrating an auditable-by-default architecture for benefits decisions. The pattern (content-addressed audit + explicit AI/human distinction + reasoning-without-internals UX) is reusable.",
+        learnings:
+          "Auditability is an architectural property, not a UX one — designing it in from the data model is easier than retrofitting it into a system that wasn't built with it. The temptation in AI-assisted systems is to surface model outputs as if they were authoritative; the discipline is building the seams between automated and human action explicitly.",
+      },
+    ],
+    frameworksExemplified: [
+      "Service Blueprint",
+      "Multi-Audience Digital Governance",
+      "AI-Augmented Service Design (Emerging Discipline)",
+      "Algorithmic Impact Assessment & Bias Audit Practice",
+    ],
+    thinkersInDialogue: [
+      "Federal benefits administrative law tradition",
+      "IPFS / content-addressing community",
+    ],
+    questionsItAnswers: [
+      "Tell me about a recent prototype you built end-to-end.",
+      "Tell me about designing for transparency in automated decisions.",
+      "How do you think about AI-augmented service design?",
+      "Show me an example of your active building work.",
+      "Tell me about content addressing or audit-by-design.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: active builder muscle (shipped a full-stack prototype, not just a deck); designing for auditability in regulated decisions; AI-augmented service design in practice; content-addressed architectures. Pair with State Capacity AI Story card, the AI Decision Transparency Dashboard, AI-Augmented Service Design framework card, and the Algorithmic Impact Assessment & Bias Audit Practice card. This is portfolio work — a prototype, not a deployed system. Frame it as a demonstration of architecture and interaction patterns, not as production code.",
+    tags: ["benefits_determination", "prototype", "ai_service_design", "active_builder", "owner_story"],
+  },
+  {
+    title:
+      "AI Decision Transparency Dashboard: A Prototype for How Automated Benefits Decisions Could Be Reviewed",
+    referenceSentence:
+      "A frontend prototype I designed and built in late 2025 examining how automated benefits determinations could be presented clearly to end users — organizing decision inputs, confidence levels, reasoning steps, system limits, and user actions into separate expandable sections, with WCAG AA accessibility patterns and modular component architecture; designed to show automated determinations and human judgment together without exposing model internals.",
+    thirtySecondVersion:
+      "A frontend prototype I designed and built examining how automated benefits decisions could be reviewed by end users. The interface organizes decision inputs, confidence levels, reasoning steps, system limits, and user actions into separate expandable sections — surfacing realistic benefits data alongside explicit uncertainty signals. The design problem: how to show automated determinations and human judgment together without exposing model internals. React, TypeScript, Tailwind CSS, modular component architecture, mock AI decision data, WCAG AA accessibility patterns. Design exploration informing the larger Benefits Determination & Appeals System work and the State Capacity AI advisory practice.",
+    twoMinuteVersion:
+      "The AI Decision Transparency Dashboard is a frontend prototype I designed and built in late 2025 to explore a specific design problem: how to present automated benefits decisions clearly to end users while showing how automated determinations and human judgment could be combined without exposing model internals.\n\nThe interface organizes decision inputs, confidence levels, reasoning steps, system limits, and user actions into separate expandable sections. The structure makes uncertainty visible by default — confidence and system limits aren't buried, they're surfaced as first-class interface elements. Realistic benefits data is presented alongside explicit uncertainty signals so users can see what the system thinks AND what the system can't tell them.\n\nTech stack: React, TypeScript, Tailwind CSS, modular component architecture, mock AI decision data, WCAG AA accessibility patterns. The accessibility commitment was deliberate — automated benefits systems are likely to be used by people with disabilities and people in difficult life circumstances; the interface had to be navigable under those conditions, not optimized for ideal users.\n\nThis was design exploration rather than a deployed system — a prototype demonstrating interface patterns for AI-assisted decision review and contestation. The patterns informed the larger Benefits Determination & Appeals System prototype that followed and inform State Capacity AI's advisory practice on AI in public institutions.",
+    starAnswers: [
+      {
+        competency: "Designing AI interfaces for high-stakes decisions",
+        prompt: "Tell me about designing an interface that surfaces AI uncertainty.",
+        situation:
+          "Automated benefits determinations are high-stakes decisions — they affect whether people get healthcare, food assistance, housing support. Most AI interfaces either hide uncertainty (presenting outputs as authoritative) or expose model internals (which most users can't interpret).",
+        task:
+          "Design an interface that shows automated determinations and human judgment together — with uncertainty surfaced, reasoning visible at the right level, and contestability built in — without exposing model internals.",
+        action:
+          "Organized the interface into separate expandable sections for decision inputs, confidence levels, reasoning steps, system limits, and user actions. Surfaced confidence and system limits as first-class elements, not buried. Presented realistic benefits data alongside explicit uncertainty signals. Used modular component architecture so the patterns could be reused across decision types. Built to WCAG AA accessibility patterns from the start because the users would include people with disabilities and people in difficult life circumstances.",
+        result:
+          "Working prototype demonstrating interface patterns for AI-assisted decision review with built-in contestability. The patterns informed the subsequent Benefits Determination & Appeals System prototype and inform State Capacity AI advisory practice.",
+        learnings:
+          "The hardest part wasn't the interface design — it was deciding what to expose and what to abstract. Model internals would be opaque to most users; pure outputs would be misleading. The middle is reasoning-without-internals: the system tells you what factors it weighed, but not how the weights were computed. That's the design call worth making explicit.",
+      },
+      {
+        competency: "Building accessible AI interfaces by default",
+        prompt: "Tell me about designing for accessibility in an AI context.",
+        situation:
+          "Automated benefits systems are disproportionately used by people with disabilities and people navigating difficult life circumstances. Most AI interface design optimizes for ideal users.",
+        task:
+          "Build the AI Decision Transparency Dashboard to WCAG AA accessibility patterns from the start, not retrofitted.",
+        action:
+          "Used semantic HTML and ARIA patterns appropriate to expandable sections from the first build. Tested keyboard navigation. Designed text and contrast for screen-reader and low-vision use. Made uncertainty signals available in text form, not just visual indicators. Treated accessibility as part of the architectural choice, not as a polish phase.",
+        result:
+          "Prototype built to WCAG AA from the start, with patterns reusable across the larger benefits work.",
+        learnings:
+          "Accessibility built in from the start is cheaper than retrofitted and produces better interfaces for everyone. The discipline at the prototype phase — when the temptation is to skip it because 'it's just a demo' — is what makes the prototype useful as a pattern reference later.",
+      },
+    ],
+    frameworksExemplified: [
+      "AI-Augmented Service Design (Emerging Discipline)",
+      "Algorithmic Impact Assessment & Bias Audit Practice",
+      "Progressive Disclosure",
+    ],
+    thinkersInDialogue: [
+      "WCAG / accessibility standards community",
+      "AI interpretability research",
+    ],
+    questionsItAnswers: [
+      "Tell me about designing an interface that surfaces AI uncertainty.",
+      "Tell me about designing for accessibility in an AI context.",
+      "How do you think about explainability in AI interfaces?",
+      "Show me a prototype you've shipped that demonstrates your AI-design work.",
+      "Tell me about designing for high-stakes decisions.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: AI-interface design at depth; accessibility as architecture, not retrofit; designing for high-stakes regulated decisions; prototype-as-design-exploration. Tech stack details: React, TypeScript, Tailwind CSS, mock AI decision data, WCAG AA. The prototype is portfolio work that informed the larger Benefits Determination & Appeals System and the State Capacity AI advisory practice. Pair with AI-Augmented Service Design and the Algorithmic Impact Assessment & Bias Audit Practice card.",
+    tags: ["ai_decision_transparency", "prototype", "accessibility", "ai_service_design", "owner_story"],
+  },
+  {
+    title:
+      "TACLOG: A Mobile, Offline-First Field Logistics Prototype for the U.S. Military",
+    referenceSentence:
+      "During a U.S. military partner engagement at 18F I designed and prototyped TACLOG, a mobile-first supply requisition app intended to replace slower radio- and paper-based processes in field logistics — with offline-first architecture, queued synchronization, and design decisions driven by forward-deployed field research with service members on tablets and laptops used in actual deployment conditions.",
+    thirtySecondVersion:
+      "TACLOG is a mobile-first logistics requisition prototype I designed for U.S. military field deployment during an 18F engagement. Field logistics still ran on radio and paper; the prototype showed an offline-capable workflow with queued synchronization so requisitions could be made from anywhere connectivity was unreliable. Built in React Native with Expo Router, TypeScript, PostgreSQL with Row Level Security. I conducted forward-deployed field research with service members, stakeholder interviews across command and logistics roles, observation of live requisition practices, task and workflow mapping, and iterative prototyping informed by operational feedback. The key design decisions — request templates, unit-size quantity presets, an explicit offline queue with visible sync state — came directly from observed patterns.",
+    twoMinuteVersion:
+      "TACLOG is a mobile-first supply requisition prototype I designed and built for U.S. military field deployment during an 18F engagement. The problem: field logistics still ran on radio- and paper-based processes that created delays and clarity issues in environments where connectivity is unreliable and deployment conditions are demanding. The goal was a digital workflow that could accelerate requisitions while staying robust to real deployment realities.\n\nAs a designer with a military veteran background, I conducted forward-deployed field research with service members, stakeholder interviews across command and logistics roles, observation of live requisition practices, and task and workflow mapping. The design decisions all came directly from observed patterns: request templates for common resupply scenarios, unit-size quantity presets, and an explicit offline queue that makes synchronization state visible and actionable rather than hidden.\n\nTech stack: React Native with Expo Router, TypeScript, PostgreSQL with Row Level Security, offline-capable workflows with queued synchronization. The prototype was built for tablets and laptops used in the field. Offline-first wasn't an afterthought — it was the architecture, because deployment connectivity is rarely reliable and the system needed to be useful in that condition.\n\nThis was design research + prototype delivery in a constrained operational environment. The veteran background mattered for credibility with service members during research, and the forward-deployed observation work was what made the design decisions defensible rather than imagined.",
+    starAnswers: [
+      {
+        competency: "Forward-deployed research and design in operational environments",
+        prompt: "Tell me about doing research in a constrained operational environment.",
+        situation:
+          "During an 18F engagement with a U.S. military partner, field logistics ran on radio- and paper-based processes that created delays in environments with unreliable connectivity and demanding deployment conditions.",
+        task:
+          "Conduct research with service members in the actual environment they'd use a digital tool in, and design a prototype that would work under those conditions — not under prototype-friendly office conditions.",
+        action:
+          "Conducted forward-deployed field research with service members. Ran stakeholder interviews across command and logistics roles. Observed live requisition practices on the ground. Mapped tasks and workflows from actual operational use. Iterated the prototype on patterns surfaced from operational feedback — request templates for common resupply scenarios, unit-size quantity presets, an explicit offline queue with visible sync state. Veteran background helped on credibility with service members during research.",
+        result:
+          "Mobile-first prototype with offline-first architecture (React Native, Expo Router, TypeScript, PostgreSQL with Row Level Security, queued synchronization) that mapped to actual field practice rather than to imagined practice.",
+        learnings:
+          "Research in operational environments is fundamentally about being there in the conditions the system will be used in. The offline-queue design choice would have been invisible from office prototyping; it was obvious after observing requisition flow in the field. Veteran background was an asset for credibility, but the work was still about being present in the actual conditions.",
+      },
+      {
+        competency: "Designing for environmental constraints (offline-first, deployment-realistic)",
+        prompt: "Tell me about designing within hard technical or operational constraints.",
+        situation:
+          "TACLOG's operational reality: deployment connectivity is unreliable; service members are using tablets and laptops in field conditions; the existing radio-and-paper process worked because it was always available.",
+        task:
+          "Design a digital workflow that was at least as reliable as the paper process in unreliable conditions — not just faster when conditions are good.",
+        action:
+          "Made offline-first the architecture, not the fallback. Built an explicit offline queue with visible sync state so service members could see what was pending and act on it, rather than hidden background sync. Used React Native for tablet / phone targeting, with PostgreSQL + Row Level Security for the backend. Templates and presets reduced the number of decisions service members had to make under load. Designed for unreliable, not for ideal.",
+        result:
+          "Prototype demonstrating an offline-capable requisition workflow with sync state surfaced to users — a pattern reusable beyond TACLOG in other deployed-environment contexts.",
+        learnings:
+          "Offline-first is a design discipline, not a feature flag. The visible queue with explicit sync state was the move that made offline behavior trustable — hidden background sync would have eroded service member trust quickly because they'd never know whether requests were actually in transit.",
+      },
+    ],
+    frameworksExemplified: [
+      "Forward-Deployed Engineering (the motion)",
+      "Service Blueprint",
+      "Technical Discovery & Workflow Mapping",
+    ],
+    thinkersInDialogue: [
+      "Military logistics tradition (radio + paper baseline)",
+      "Forward-deployed engineering practice",
+    ],
+    questionsItAnswers: [
+      "Tell me about doing research in a constrained operational environment.",
+      "Tell me about designing within hard technical or operational constraints.",
+      "How do you approach offline-first design?",
+      "Show me an example of design research at depth.",
+      "Tell me about working with military or other regulated / operational partners.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: design research in operational environments; offline-first / unreliable-connectivity design; forward-deployed work; veteran credibility for military or operational engagements; mobile-first prototype delivery. The Air Force veteran background (1998–2002, 375th Aeromedical Evacuation Squadron, Scott AFB) is the credibility beat that made the forward-deployed research land — surface it. Tech stack details: React Native, Expo Router, TypeScript, PostgreSQL with Row Level Security. Pair with Forward-Deployed Engineering and Service Blueprint.",
+    tags: ["taclog", "military", "design_research", "prototype", "offline_first", "owner_story"],
+  },
 ];
