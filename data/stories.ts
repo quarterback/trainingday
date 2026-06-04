@@ -103,6 +103,48 @@ export const stories: Story[] = [
         learnings:
           "What travels in a handoff is the operating model the team practices, not the documentation. If you can't show the next team how the work actually happens, the artifacts won't keep the practice alive.",
       },
+      {
+        competency: "Principal-level content design (content as interface architecture)",
+        prompt: "Walk me through how you think about content design at the architectural level.",
+        situation:
+          "As Principal Content Strategist on eAPD I led the content-system layer for a federally-regulated submission product — content that had to encode regulatory requirements without being a wall of text and had to be governable by non-engineers across multiple product cycles.",
+        task:
+          "Design content as interface architecture, not as copy added to existing IA — including defining who could edit which content layer and why.",
+        action:
+          "Built a four-level content taxonomy (heading / short instruction / detail / help text) with explicit rules for what lived in each layer and which user context each addressed. Established a YAML content layer where routine copy could live and be governed by non-engineers, while structural content stayed in the rendering layer. Set voice, casing, acronym, and numeric-format conventions as system policy across the product. The content model drove decisions about progressive disclosure, help-drawer design, and validation behavior — content architecture made the IA work, not the other way around.",
+        result:
+          "Non-engineers could maintain and extend the content surface without code changes. The taxonomy survived the 18F → successor team handoff intact. Content as system became part of the operating model the successor team carried forward.",
+        learnings:
+          "At principal level, content design isn't writing — it's architecting the system the writing lives in and the governance that lets it evolve. The discipline gets flattened outside SF / SV; the move is naming the architectural work explicitly when the interview probes 'content design.'",
+      },
+      {
+        competency: "Multi-sided service design",
+        prompt: "Tell me about designing a service for multiple distinct user populations.",
+        situation:
+          "eAPD served two structurally distinct user populations: state authors who needed a fileable, distributable artifact they could circulate internally for input, and federal reviewers who needed a markup-able decision document.",
+        task:
+          "Design the service so both populations got what they needed from a single product surface, without compromising the experience of either or forcing one to accommodate the other.",
+        action:
+          "Modeled the full Request → Review and Decision → Response loop as a service, not just the interface screens. Designed for the seam between parties: the administrative-completeness check plus the author attestation served as a workflow gate that shifted introductory review left — off the State Officer and into the system. Each population got purpose-built affordances: state authors got progressive disclosure, autosave, non-blocking validation, executive-summary auto-generation; federal reviewers got the markup-able exported document. The two-sided modeling was made explicit in the service blueprint, including the data spine they shared and the workflows they didn't.",
+        result:
+          "Both populations served from one product. Delaware and Idaho asked for early access; reviewer cycle times targeted for 30% reduction in 2023 OKRs.",
+        learnings:
+          "Two-sided service design needs an explicit blueprint with the seam between parties named and designed. The temptation is to optimize the dominant audience and treat the other as a constraint; the discipline is treating both as primary and making the seam a designed object.",
+      },
+      {
+        competency: "Service operating-model design (principal-level service architecture)",
+        prompt: "Tell me about designing operating standards for a service, not just the service itself.",
+        situation:
+          "As Principal Content Strategist on eAPD I was part of the team designing the product, but in 2020 the work transitioned from 18F to a successor team. The risk was losing not the product but the operating model the product depended on.",
+        task:
+          "Contribute to making the operating model itself the deliverable — the practices, cadences, and roles that produced the product, not just the artifacts.",
+        action:
+          "Named and demonstrated the operating model explicitly: the four-to-six-week research cadence, the product-trio embedded observation pattern, the two team-specific research questions running across every study, the content-as-system taxonomy and YAML governance model, the way administrative-completeness gating shifted review off the State Officer. Each was documented as a working pattern with the why captured, not just the what. Worked with the successor team during overlap to demonstrate the practices in use.",
+        result:
+          "The HCD culture and continuous-discovery cadence carried through the handoff intact. The successor team launched the product to all states for HITECH funding in 2021. The product is being extended to the Medicaid Management Information System.",
+        learnings:
+          "Operating-model design is its own discipline at principal level — designing not just the service but the way the service gets produced and evolved. The thing that travels in a handoff is the operating model, not the documentation.",
+      },
     ],
     notes:
       "Use this story when the room needs evidence of: continuous discovery / dual-track agile in practice; long-form / complex-workflow UX; content design as system, not just copy; two-sided service design; outcome-based OKRs; research inside institutional constraints. Numbers to land: 100+ pages → structured app; 82 → 19 pages (77% reduction); 4 years / ~20+ research rounds; 4–6 week study cadence; pre-launch demand from Delaware and Idaho; 2023 OKRs (75% first-cycle approval, 30% review-time reduction, 50% second-submission rate). Lead with the role — Principal Content Strategist at 18F, content as interface in a regulated context — and the operating-model claim (clean 18F → successor-team handoff in 2020 with HCD culture intact) is the leadership-narrative beat. Standard vocabulary throughout; the owner's framework stack is deliberately not surfaced here, per the owner's direction to keep this articulable in plain product / UX / agile language.",
@@ -204,6 +246,20 @@ export const stories: Story[] = [
         learnings:
           "Holding multiple scopes is a question of leverage architecture, not energy. Choosing where my time multiplies — coaching, curation, continuity — let me hold both without either suffering.",
       },
+      {
+        competency: "Service design at the program level (principal-level SD)",
+        prompt: "Tell me about designing a service that isn't a digital product.",
+        situation:
+          "State Officer, M.D. as a doctrine pilot was a service before it was a curriculum — a training program designed to develop a federal capability, not just transfer knowledge. The cohort-1 → cohort-2 cascade was a service-design choice as much as a teaching choice.",
+        task:
+          "Run cohort 2 as a service with multiple actors (learners, peer trainers, guest speakers, host institution) and a defined operating model — not as a course I was delivering.",
+        action:
+          "The service blueprint had multiple front-stage and back-stage actors: nine learners as primary front-stage; two cohort-1 graduates as peer trainers (also front-stage to the learners but back-stage to me); guest speakers as occasional front-stage; me as orchestrator, back-stage to learners but front-stage to trainers. The weekly trainer-coaching session was a back-stage service touchpoint with its own design (preparation, debrief, what to do differently next week). The synchronous-time constraint — an hour twice a week over two months — was a designed limit; the asynchronous load was deliberately substantial because the learning had to live between sessions.",
+        result:
+          "Nine SOs through the cohort; two trainers developed in flight; doctrine pilot continued past the founders' cohort. The program ran as a service with each actor's role explicitly designed.",
+        learnings:
+          "At principal level, the distinction between 'running a program' and 'designing a program as service' is the architectural one — service-design instincts apply to capability building as much as to digital products.",
+      },
     ],
     notes:
       "Use this story when the room needs evidence of: train-the-trainer and scaling-through-others; coaching versus performing; doctrine-pilot stewardship of inherited material; cohort-based facilitation inside tight time windows; federal-government training delivery; holding additional scope across a role transition. CV-precise framing: SOMD is the doctrine pilot for shifting CMS oversight of state Medicaid IT toward outcomes-oriented assessment; the cascade mechanism (cohort-1 grads → cohort-2 co-instructors) is how the doctrine continued without the original facilitators. Numbers to land: cohort 2 (the first run of the peer-cascade after the founders' cohort); 9 SOs in the cohort; 2 peer trainers (cohort-1 graduates); May through end of June 2021; 2×/week × 1hr sessions; the trainers ran most sessions, I coached weekly and taught select segments directly; ran this in the early weeks of stepping into Director and Head of Design at 18F (had been staffed onto the program as a Principal Manager and promoted just before kickoff). Pair with eAPD — same CMS / 18F world, opposite seat (oversight versus artifact). The leadership beat to land is 'producing rather than performing': coaching the trainers, securing the guests, holding the arc, taking the floor selectively — not delivering the curriculum myself. If the room asks about the curriculum's substance, the citable framing moves include the doctor metaphor (preventive checkups vs. heart surgery), the bullshit-detection learning objective, the breadth-first priority-row bundling, the confidence ladder (Reports → Videos → Controlled demos → User access), and the bottom-up story-map inversion — all Matt and Princess's design; my role was running them in front of learners, not authoring them.",
@@ -298,6 +354,20 @@ export const stories: Story[] = [
           "The practice exists with a public methodology, an academic appointment, ongoing community leadership, and active advisory work — built in parallel rather than sequenced.",
         learnings:
           "An independent practice needs more than a service offering — it needs an institutional address (Michigan), public infrastructure (the indices), and a frame other people can recognize without me explaining it. Building those in parallel was harder than doing them one at a time, but the combination is what makes the practice legible.",
+      },
+      {
+        competency: "Content design for technical infrastructure (principal-level CD)",
+        prompt: "Tell me about content design for a technical product.",
+        situation:
+          "Occupant Indices is published as public-facing infrastructure with methodology documentation, working tools (the Price Reasonableness Worksheet, the LLM Cost Calculator, the LDI Workload Calculator), and a worked example (SNAP Eligibility deep dive applying $LDI end-to-end). The audience spans federal procurement officers, foundation program officers, academic researchers, journalists, and senior policy peers — radically different vocabularies and threshold standards.",
+        task:
+          "Design content for the indices and tools that would survive that audience range without diluting the methodology for any of them.",
+        action:
+          "Built a layered content approach. The indices pages stay technically rigorous — formal methodology, weighted composites, source data, defined baselines, audited data quality. The tools layer translates the technical work into operational practice (the Price Reasonableness Worksheet uses procurement-officer register; the calculators use plain-language inputs). Methodology pages link the two and explain the reasoning behind weighting choices and source selection. Worked examples (SNAP Eligibility) demonstrate the methodology in use rather than as abstract description.",
+        result:
+          "Procurement teams use the worksheet. Policy audiences cite the indices. The same content surface supports multiple register-switching audiences.",
+        learnings:
+          "Content design for public infrastructure is a translation problem at architectural level — the underlying claim has to be defensible at the technical core, and the translation has to be honest about which audience it's speaking to and what it's not promising them. Content design at principal level here is about the layered system, not the individual page.",
       },
     ],
     notes:

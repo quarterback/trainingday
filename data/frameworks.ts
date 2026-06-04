@@ -6471,4 +6471,65 @@ export const frameworks: Framework[] = [
       "Strategic foresight practice; Wendy Schultz on insight-to-action translation; corporate foresight literature 2015–2026.",
     tags: ["foresight", "strategy", "translation", "framework"],
   },
+
+  // —— Principal-level discipline framing (content design, service design) —
+
+  {
+    name: "Principal-Level Content Design & IA (Beyond Copywriting)",
+    category: "content_design",
+    oneLiner:
+      "The discipline of content design and information architecture at principal-IC / staff level — content as interface architecture, governance models for who-edits-what, multi-audience content systems, taxonomies and content models that drive product structure, and the cross-functional architectural calls content discipline can earn the right to make. Distinct from mid-level content design, which writes copy against existing IA.",
+    whenToUse:
+      "Principal / Staff / Lead Content Designer or Content Strategist roles, particularly outside SF / SV where the discipline is more frequently flattened. Useful for surfacing the system-level work content design at depth does, beyond 'write the microcopy.'",
+    vocabulary: [
+      "content as interface",
+      "content architecture",
+      "content model",
+      "content taxonomy (heading / short / detail / help)",
+      "content governance",
+      "YAML / structured content layer",
+      "voice, casing, acronym, numeric-format conventions as policy",
+      "multi-audience content system",
+      "content-driven architectural decision",
+      "content operations",
+      "performance management for content discipline",
+    ],
+    howToDropIn:
+      "\"Principal-level content design is content as interface architecture, not copy added after design. The work is the taxonomy that determines what kind of guidance lives where, the governance model for who can edit which content layer, the case for technical architectural decisions (non-blocking validation, autosave, error prevention) the content research surfaces, and the operating model for content across a product. Mid-level content design writes copy against an existing IA; principal-level content design designs the IA the copy lives in.\"",
+    commonPhrasing: "Principal content designer, content architect, staff content strategist.",
+    notes:
+      "The discipline gets flattened outside SF / SV — most postings ask for 'writes great microcopy' when they need content architecture. Recognizable principal-level signals in a JD: 'set content strategy,' 'define content governance,' 'partner with engineering on content infrastructure,' 'lead taxonomy development.' eAPD is the citable case for content as interface in a regulated submission context: the heading / short / detail / help-text taxonomy with explicit rules for what lives where, the YAML governance layer, non-blocking validation defended on research grounds, voice and convention policies. Pair with Service Blueprint, Multi-Audience Digital Governance, and the eAPD Story card.",
+    source:
+      "Content design discipline (Sarah Winters / Content Design London; Erika Hall on content strategy; Kristina Halvorson at Brain Traffic); 18F content design practice; principal-level content design hiring patterns at FAANG and large product orgs.",
+    tags: ["content_design", "ia", "principal_level", "framework"],
+  },
+  {
+    name: "Principal-Level Service Design (Beyond Journey Maps)",
+    category: "service_design",
+    oneLiner:
+      "The discipline of service design at principal-IC / staff level — service blueprint as platform architecture, multi-sided service modeling, operating-model design alongside service design, service measurement and KPI design, service maturity assessment, and cross-channel policy-level orchestration. Distinct from mid-level service design, which produces journey maps and blueprints as deliverables.",
+    whenToUse:
+      "Principal / Staff / Lead Service Designer roles, particularly in regulated industries (healthcare, financial services, government) and at established consumer companies where the discipline is recognized as architecture rather than artifact production. Useful for surfacing the system-level work service design at depth does, beyond 'maps the customer journey.'",
+    vocabulary: [
+      "service blueprint as architecture",
+      "multi-sided service design",
+      "two-sided / two-population service",
+      "operating-model design",
+      "service line orchestration",
+      "service maturity model",
+      "service KPI design",
+      "policy-level service standards",
+      "service infrastructure",
+      "channel handoff design",
+      "service actors (human and AI)",
+    ],
+    howToDropIn:
+      "\"Principal-level service design treats the service blueprint as platform architecture — the artifact is one output, but the work is the operating model the service runs on. Multi-sided service modeling, governance across audiences, the workflow gates that shift work between channels and lines of business, the measurement model for service quality — all of it sits inside the service designer's scope at depth. Mid-level service design produces journey maps and blueprints; principal-level service design designs the operating model the blueprints describe.\"",
+    commonPhrasing: "Principal service designer, staff service designer, service architecture.",
+    notes:
+      "The discipline gets flattened outside SF / SV — most postings ask for 'creates journey maps' when they need service-architecture work. Recognizable principal-level signals in a JD: 'set service strategy,' 'design operating standards,' 'orchestrate across lines of business,' 'design KPIs for service quality.' eAPD is the citable case for multi-sided service design in a regulated context: state authors + federal reviewers + State Officers + 18F + CMS as multiple coordinated parties; administrative-completeness check + author attestation as workflow-gate design; operating model carried through the handoff to the successor team. State Officer M.D. is the citable case for service-as-program design (the cohort as a service). Pair with Multi-Channel Service Orchestration, Multi-Audience Digital Governance, and the eAPD / SOMD Story cards.",
+    source:
+      "Service design discipline (Marc Stickdorn and Jakob Schneider, *This Is Service Design Doing*; Lou Downe on design and government services; Polaine, Løvlie, and Reason on service design); 18F practice; principal-level service design hiring patterns.",
+    tags: ["service_design", "principal_level", "framework"],
+  },
 ];
