@@ -15,11 +15,22 @@ export interface Framework {
   tags?: string[];
 }
 
+export interface StarAnswer {
+  competency: string;
+  prompt: string;
+  situation: string;
+  task: string;
+  action: string;
+  result: string;
+  learnings?: string;
+}
+
 export interface Story {
   title: string;
   twoMinuteVersion: string;
   thirtySecondVersion?: string;
   fiveMinuteVersion?: string;
+  starAnswers?: StarAnswer[];
   frameworksExemplified?: string[];
   thinkersInDialogue?: string[];
   questionsItAnswers?: string[];

@@ -46,6 +46,64 @@ export const stories: Story[] = [
       "How do you balance discovery and delivery?",
       "How have you handled a leadership transition or handoff?",
     ],
+    starAnswers: [
+      {
+        competency: "Customer impact at scale",
+        prompt: "Tell me about a time you measurably improved an experience for users.",
+        situation:
+          "At 18F I was Principal Content Strategist on eAPD, the CMS application replacing a 100+ page paper Medicaid funding submission whose quality depended entirely on the state author's experience and whose review cycle states described as a black box.",
+        task:
+          "Lead the content system that would let states produce approvable submissions consistently, working alongside another design lead during prototype and early build phases.",
+        action:
+          "Built error prevention into the architecture — turned regulation into plain-language instructional copy with an explicit content taxonomy; put routine copy in a YAML layer non-engineers could govern; used progressive disclosure with persistent navigation; paired non-blocking inline validation with autosave because research showed states author asynchronously, not in document order; auto-calculated all budget totals from raw inputs; auto-generated a structurally constrained executive summary.",
+        result:
+          "A representative APD shrank from 82 pages to 19 — 77% reduction in the document a reviewer has to process. Delaware and Idaho asked to use the product before general release. The 2023 OKRs were set as outcomes: 75% first-cycle approval, 30% review-time reduction, 50% second-submission rate as a retention proxy.",
+        learnings:
+          "The team identified but never instrumented its central trust question — whether state users would stop double-checking math against their own spreadsheets. Known leading indicator, not closed out. Next time I'd build that measurement in from the first usable build.",
+      },
+      {
+        competency: "Designing for ambiguity and constraint",
+        prompt: "Tell me about working in an ambiguous or constrained environment.",
+        situation:
+          "eAPD ran four years at 18F under federal clearance, FAR procurement constraints, and HIPAA-adjacent data sensitivity — with the additional ambiguity of serving two distinct user populations (state authors and federal reviewers) whose jobs-to-be-done were structurally different.",
+        task:
+          "Run continuous discovery and continuous delivery in parallel inside those constraints, with the product trio (PM, designer, engineer) embedded in research.",
+        action:
+          "Ran twenty-plus research rounds across four years on a four-to-six-week cadence. Two team-specific research questions ran across every study beyond standard usability — will this change help the state produce an approvable APD, and do states understand what CMS wants to make it approvable — so the research operationalized outcome, not feature validation. The trio observed live sessions and attended debriefs; findings reached the team before reports were written. Service design moved beyond the interface: an administrative-completeness check plus author attestation served as a workflow gate that shifted introductory review off the State Officer and into the system.",
+        result:
+          "Discovery cadence sustained over four years; product transitioned from 18F to a successor team in 2020 with the HCD culture intact — a proof point about durable practice, not just artifacts.",
+        learnings:
+          "Treating regulatory ambiguity as a design constraint to solve rather than a blocker to defer is what made it work. Research as the team's working rhythm — not a separate discipline — was the load-bearing decision.",
+      },
+      {
+        competency: "Influence without authority",
+        prompt: "Tell me about a time you drove a change without owning the decision.",
+        situation:
+          "As Principal Content Strategist on eAPD I led content strategy and research alongside another design lead, with no formal authority over engineering or product priorities.",
+        task:
+          "Push the team to treat content as interface architecture, not as copy added after design — and get specific architectural calls made that crossed engineer and PM territory.",
+        action:
+          "The biggest push was non-blocking validation: research showed states authored asynchronously, never in document order, so blocking per-field validation was the wrong mode. Engineering had defaulted toward blocking validation because it was easier; I built the research case around the actual user behavior we'd observed in twenty-plus rounds, surfaced it in joint working sessions with PM and engineering, and proposed the alternative — non-blocking inline validation paired with autosave, with the required-fields check firing at Export rather than per-field. The decision was made jointly in a working session, not by directive.",
+        result:
+          "Non-blocking validation went into the product and let states author the way they actually work, not the way the form would have forced them to. The same pattern shaped subsequent decisions about auto-calculation and the auto-generated executive summary.",
+        learnings:
+          "Working alongside another design lead taught me the difference between owning the call and shaping the conditions in which the right call gets made. Content design has more architectural leverage than the title suggests when the research is honest.",
+      },
+      {
+        competency: "Leadership transition / operating model handoff",
+        prompt: "Tell me about a leadership handoff or transition you navigated.",
+        situation:
+          "In 2020 18F transitioned eAPD to a successor team — Fearless, A1M Solutions, Health Management Associates, and Theta. The risk was losing the HCD culture and continuous-discovery cadence in the handoff, which is how government-software transitions usually go wrong.",
+        task:
+          "As Principal Content Strategist, contribute to the handoff so the practices survived the change of operating org — not just the artifacts.",
+        action:
+          "Treated the operating model as the deliverable, not just the documentation. The product trio embedding pattern, the four-to-six-week study cadence, the two team-specific research questions, the content-as-system taxonomy and YAML governance — all of it was named, documented, and demonstrated to the successor team during overlap.",
+        result:
+          "The HCD culture and continuous-discovery cadence carried through the handoff intact — a meaningful proof point about durable practice, not just artifacts. The product launched to all states for HITECH funding in 2021 and is being extended to the Medicaid Management Information System.",
+        learnings:
+          "What travels in a handoff is the operating model the team practices, not the documentation. If you can't show the next team how the work actually happens, the artifacts won't keep the practice alive.",
+      },
+    ],
     notes:
       "Use this story when the room needs evidence of: continuous discovery / dual-track agile in practice; long-form / complex-workflow UX; content design as system, not just copy; two-sided service design; outcome-based OKRs; research inside institutional constraints. Numbers to land: 100+ pages → structured app; 82 → 19 pages (77% reduction); 4 years / ~20+ research rounds; 4–6 week study cadence; pre-launch demand from Delaware and Idaho; 2023 OKRs (75% first-cycle approval, 30% review-time reduction, 50% second-submission rate). Lead with the role — Principal Content Strategist at 18F, content as interface in a regulated context — and the operating-model claim (clean 18F → successor-team handoff in 2020 with HCD culture intact) is the leadership-narrative beat. Standard vocabulary throughout; the owner's framework stack is deliberately not surfaced here, per the owner's direction to keep this articulable in plain product / UX / agile language.",
     tags: ["18f", "govtech", "ux", "content_design", "agile", "owner_story"],
@@ -89,6 +147,64 @@ export const stories: Story[] = [
       "How do you work with an opinionated curriculum that wasn't yours?",
       "Tell me about holding additional scope while stepping into a new leadership role.",
     ],
+    starAnswers: [
+      {
+        competency: "Scaling through others",
+        prompt: "Tell me about a time you scaled work through other people rather than yourself.",
+        situation:
+          "I taught the second cohort of State Officer, M.D. — the CMS doctrine pilot for shifting CMS oversight of state Medicaid IT toward outcomes-oriented assessment. Matt Jadud and Princess Ojiaku designed and ran cohort 1; I inherited it for the next round.",
+        task:
+          "Run cohort 2 in a way that built the cascade mechanism through which the doctrine pilot could continue without the original facilitators — not just teach nine more SOs myself.",
+        action:
+          "I developed two Medicaid officers from cohort 1 into co-instructors who taught most of the sessions to nine new SOs. I met with them weekly to coach — preparation, debrief, what to do differently next week — took the front of the room directly on selected segments where the material needed me to model a move the trainers would carry next time, secured the guest speakers, and held the program's narrative through-line so it landed as one arc rather than ten lessons taught by trainers who had been students a year earlier.",
+        result:
+          "Nine SOs through the cohort. Two trainers developed in flight, ready to continue the program. The cascade worked: the SOs who had just learned the material became, with weekly coaching, fluent enough to teach it to their peers — the mechanism through which the doctrine pilot continued without the original facilitators.",
+        learnings:
+          "Producing the program through coaching, curation, and continuity is different from performing it. The leverage was making the peer model work, not delivering the curriculum myself.",
+      },
+      {
+        competency: "Stewarding inherited work",
+        prompt: "Tell me about a time you took over work someone else had started.",
+        situation:
+          "State Officer, M.D. was a dense and opinionated CMS doctrine pilot Matt Jadud and Princess Ojiaku had designed and run as cohort 1. I inherited the program for cohort 2.",
+        task:
+          "Become fluent enough in someone else's authored curriculum — including its specific framing moves like the doctor metaphor, breadth-first priority-row bundling, and the confidence ladder (Reports → Videos → Controlled demos → User access) — to coach others through it inside a two-month window.",
+        action:
+          "Treated the curriculum as authored material whose author was not me, and was explicit about that with the trainers and learners. The substantive framing moves stayed Matt and Princess's; my role was running them in front of learners and helping the cohort-1 graduates teach them next. Held the program's through-line — opening framing, closing reframing, transitions between sessions — so the arc landed as one program rather than ten lessons.",
+        result:
+          "The doctrine pilot continued without the original facilitators. Two trainers developed in flight. Nine SOs through the program.",
+        learnings:
+          "Stewardship is a discipline distinct from authorship. Being honest about whose work you're carrying earns more credibility than rebranding it as yours.",
+      },
+      {
+        competency: "Operating under tight time constraint",
+        prompt: "Tell me about delivering under a tight time constraint.",
+        situation:
+          "Cohort 2 ran May through end of June 2021 — about two months. Synchronous time was an hour twice a week. Most of the actual learning had to happen between sessions.",
+        task:
+          "Make the model work for nine mid-career federal employees with day jobs — and for two trainers learning to teach the material in the same run.",
+        action:
+          "The curriculum was designed with deliberately spare facilitation moves baked in: timers per activity (5 / 20 / 20 / 10), study-buddy pairings, 'work with what you got' authenticity (no demanding new materials from the SO's state to fill a learning exercise), and an action attached to every lesson. I leaned on those moves rather than re-engineering them. Weekly trainer coaching kept the cohort-1 grads calibrated. Guest segments were scheduled tight enough to land cleanly inside the twice-a-week cohort rhythm.",
+        result:
+          "Nine SOs through the cohort. Two trainers developed. Doctrine pilot continued past the founders' cohort.",
+        learnings:
+          "Running an existing model's facilitation moves in real cohort conditions taught me which moves carry the weight — the timer-and-buddy structure was load-bearing in a way I wouldn't have predicted from reading the curriculum cold.",
+      },
+      {
+        competency: "Holding multiple scopes across a role transition",
+        prompt: "Tell me about holding additional scope while stepping into a new role.",
+        situation:
+          "I'd been staffed onto cohort 2 of State Officer, M.D. as a Principal Manager and was promoted into Director and Head of Design at 18F in the weeks before kickoff. The doctrine pilot ran across the early weeks of stepping into that seat.",
+        task:
+          "Run the program well and step into Head of Design without dropping either — the program wasn't the day job, it was held alongside it.",
+        action:
+          "Producing rather than performing made it possible. The cohort-1 trainers ran most of the sessions. My time on the program concentrated on weekly coaching with the trainers, taking the floor on selected segments, securing the guests, and the connective tissue between sessions. None of that required being the front-of-room teacher twice a week — which would have been incompatible with the new role. Holding both meant being deliberate about leverage, not throughput.",
+        result:
+          "Doctrine pilot ran successfully — nine SOs through, two trainers developed. Head of Design transition started cleanly enough that I could expand into the Head of Communications concurrent role and eventually into Acting Chief of Staff for TTS.",
+        learnings:
+          "Holding multiple scopes is a question of leverage architecture, not energy. Choosing where my time multiplies — coaching, curation, continuity — let me hold both without either suffering.",
+      },
+    ],
     notes:
       "Use this story when the room needs evidence of: train-the-trainer and scaling-through-others; coaching versus performing; doctrine-pilot stewardship of inherited material; cohort-based facilitation inside tight time windows; federal-government training delivery; holding additional scope across a role transition. CV-precise framing: SOMD is the doctrine pilot for shifting CMS oversight of state Medicaid IT toward outcomes-oriented assessment; the cascade mechanism (cohort-1 grads → cohort-2 co-instructors) is how the doctrine continued without the original facilitators. Numbers to land: cohort 2 (the first run of the peer-cascade after the founders' cohort); 9 SOs in the cohort; 2 peer trainers (cohort-1 graduates); May through end of June 2021; 2×/week × 1hr sessions; the trainers ran most sessions, I coached weekly and taught select segments directly; ran this in the early weeks of stepping into Director and Head of Design at 18F (had been staffed onto the program as a Principal Manager and promoted just before kickoff). Pair with eAPD — same CMS / 18F world, opposite seat (oversight versus artifact). The leadership beat to land is 'producing rather than performing': coaching the trainers, securing the guests, holding the arc, taking the floor selectively — not delivering the curriculum myself. If the room asks about the curriculum's substance, the citable framing moves include the doctor metaphor (preventive checkups vs. heart surgery), the bullshit-detection learning objective, the breadth-first priority-row bundling, the confidence ladder (Reports → Videos → Controlled demos → User access), and the bottom-up story-map inversion — all Matt and Princess's design; my role was running them in front of learners, not authoring them.",
     tags: ["18f", "govtech", "training", "train_the_trainer", "facilitation", "owner_story"],
@@ -125,6 +241,64 @@ export const stories: Story[] = [
       "Tell me about novel measurement or methodology work you've done.",
       "How do you bridge policy and deployment?",
       "Tell me about how 18F's mission carries forward in your current work.",
+    ],
+    starAnswers: [
+      {
+        competency: "0-to-1 / building original IP",
+        prompt: "Tell me about building something from scratch that didn't exist before.",
+        situation:
+          "After eight years at 18F, I founded State Capacity AI in 2025 as an independent advisory practice on AI deployment in public institutions. The flagship is Occupant Indices — three original measurement instruments for the AI market that didn't exist before I built them.",
+        task:
+          "Build measurement infrastructure for federal AI procurement that nobody else was building, with formal methodology that could stand procurement-grade scrutiny.",
+        action:
+          "Built $CPI: Consumer Price Index for AI compute, volume-weighted across 2,000+ models and four workload tiers, January 2025 baseline. $AIU: composite index modeled on the IMF's Special Drawing Rights — token throughput (60%), inferred spend (30%), energy use (10%). $LDI, the most original of the three: substitution-rate methodology combining BLS wage data with $CPI inference cost and federal procurement records to measure where AI is already cheaper than a person and where substitution is actually happening. Built a tool layer on top — the AI Services Price Reasonableness Worksheet (federal procurement determination), an LLM Cost Calculator, an LDI Workload Calculator, a SNAP Eligibility worked example.",
+        result:
+          "The instruments are free and public. Procurement teams in public institutions use them because nobody else is measuring this.",
+        learnings:
+          "Originality alone doesn't drive adoption. What made the indices something procurement teams could use was pairing methodological rigor with operational tools — the worksheet specifically translated measurement into procurement practice.",
+      },
+      {
+        competency: "Identifying and filling a market gap",
+        prompt: "Tell me about a time you saw a problem nobody else was solving.",
+        situation:
+          "Across eight years at 18F — including Principal Content Strategist, Head of Design, Head of Communications, and Acting Chief of Staff for the Technology Transformation Services — the recurring problem became clear: agencies were being asked to make AI procurement and deployment decisions without the measurement infrastructure to do it well, and the consulting market wasn't building that infrastructure either.",
+        task:
+          "Decide whether to wait for someone else to do it or build it myself.",
+        action:
+          "Built Occupant Indices as a public good. $CPI, $AIU, $LDI — each addresses a specific question agencies were being asked but couldn't answer from existing sources. The AI Services Price Reasonableness Worksheet sits on top of $CPI as the procurement-grade application. The State Capacity AI practice provides the advisory wrapper for institutions that need help interpreting and applying the measurements. The indices are free and public so the field of view broadens beyond my client base.",
+        result:
+          "Procurement teams in public institutions use them. The work positions itself as infrastructure rather than as proprietary methodology.",
+        learnings:
+          "Filling an infrastructure gap is harder to monetize than filling a service gap, but it's better leverage. The indices being free and public is what makes the practice's advisory work credible — I'm not selling access to the methodology, I'm selling the experience of applying it.",
+      },
+      {
+        competency: "Cross-sector translation",
+        prompt: "Tell me about translating work across very different audiences.",
+        situation:
+          "State Capacity AI's work spans federal AI procurement (where the audience is contracting officers and program leadership), academic research (Michigan, where I teach Public Mechanics), foundation program officers, journalists writing about AI economics, and senior policy peers — each with very different vocabularies, threshold standards, and success measures.",
+        task:
+          "Build a body of work that is legible to each audience without diluting the methodology for any of them.",
+        action:
+          "The indices themselves stay technically rigorous — formal methodology, weighted composites, public source data, defined baselines. The tool layer (Price Reasonableness Worksheet, LLM Cost Calculator) translates the technical work into procurement-officer register. The Michigan course (UT-402 Public Mechanics) translates it into an academic discipline frame. The Substack and keynote work translates it into general policy register. Each audience gets a version that uses their vocabulary without losing the underlying claim.",
+        result:
+          "Procurement officers use the worksheet; the Michigan course teaches the discipline; the indices are referenced by the broader policy audience.",
+        learnings:
+          "Cross-sector translation works when the technical core is rigorous enough to survive the translation. If the underlying methodology weren't defensible, no amount of register-switching would make it land in policy without losing credibility in procurement.",
+      },
+      {
+        competency: "Building an independent practice / founder beat",
+        prompt: "Tell me about starting something independent.",
+        situation:
+          "I left 18F in 2025 — partly in the wake of broader institutional disruption at TTS — and after a brief stint as Director of Design Operations at Nava, founded State Capacity AI as my own practice.",
+        task:
+          "Build a practice with enough institutional credibility and operational substance to be credible without an employer's brand backing me — at a moment when the federal AI procurement work I'd been part of was structurally unstable.",
+        action:
+          "Anchored the practice in three things. First, the Occupant Indices as public infrastructure — instruments procurement officers could use, built and shipped before asking anyone to engage with the practice. Second, the Michigan academic appointment — Assistant Professor of Practice teaching UT-402 Public Mechanics — gave me an institutional address. Third, the AIGA Portland board presidency, the keynote circuit, and the Public Mechanics frame as a discipline I was actively developing rather than retroactively branding.",
+        result:
+          "The practice exists with a public methodology, an academic appointment, ongoing community leadership, and active advisory work — built in parallel rather than sequenced.",
+        learnings:
+          "An independent practice needs more than a service offering — it needs an institutional address (Michigan), public infrastructure (the indices), and a frame other people can recognize without me explaining it. Building those in parallel was harder than doing them one at a time, but the combination is what makes the practice legible.",
+      },
     ],
     notes:
       "Lead with this story for any AI policy, federal AI, foundation, public-interest-tech, academic, or research-institution context. The Occupant Indices are the credential and the public face; the practice is the revenue mechanism; Public Mechanics at Michigan is the academic frame; 18F is the depth-of-experience that earns the practice authority — in that order. Integrated elevator pitch: 'I built three measurement instruments for AI that didn't exist. $CPI is a Consumer Price Index for AI compute. $AIU is a stock-market index for AI as an economic sector. $LDI is the only running measurement of how often AI is actually replacing federal workers when it gets cheaper than them. They're free, public, and used by procurement teams in public institutions because nobody else is measuring this. State Capacity AI is the practice; Occupant Indices is the instrument set.' Pair with $CPI, $AIU, $LDI, and AI Services Price Reasonableness Worksheet framework cards. Buyers are program officers, peer senior leaders, board chairs — not CIO procurement.",
