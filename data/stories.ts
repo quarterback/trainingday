@@ -612,4 +612,226 @@ export const stories: Story[] = [
       "Use this story when the room needs evidence of: design research in operational environments; offline-first / unreliable-connectivity design; forward-deployed work; veteran credibility for military or operational engagements; mobile-first prototype delivery. The Air Force veteran background (1998–2002, 375th Aeromedical Evacuation Squadron, Scott AFB) is the credibility beat that made the forward-deployed research land — surface it. Tech stack details: React Native, Expo Router, TypeScript, PostgreSQL with Row Level Security. Pair with Forward-Deployed Engineering and Service Blueprint.",
     tags: ["taclog", "military", "design_research", "prototype", "offline_first", "owner_story"],
   },
+  {
+    title:
+      "Nautilus Staffing Prototype: Consolidating Fragmented Crew Management Data",
+    referenceSentence:
+      "A staffing decision interface I designed and built in September 2025 to consolidate fragmented team assignment data — skills, availability, role requirements, and active assignments — into a single unified system with roster views, timeline visualizations, and comparison tools, built in React, TypeScript, and Supabase using AI-assisted development.",
+    thirtySecondVersion:
+      "Nautilus is a staffing decision prototype I designed and built in September 2025 to study how delivery teams assign personnel when staffing data is fragmented across spreadsheets, tickets, and messages. The interface consolidates skills, availability, role requirements, and active assignments into one place with roster views, timeline visualizations, and comparison tools — informed by crew management software patterns. Built in React, TypeScript, Supabase, using AI-assisted development. A working demo is publicly available.",
+    twoMinuteVersion:
+      "Nautilus Staffing Prototype is a staffing decision interface I designed and built in September 2025 to study a specific problem in delivery-team management: staffing data lives across spreadsheets, tickets, and messages, making comparison and availability tracking hard. The prototype models skills, availability, role requirements, and active assignments in one consolidated place.\n\nThe interface includes multiple complementary views: a roster view for the team-at-a-glance, timeline visualizations for understanding allocation over time, and comparison tools for skill-matching and availability-matching against candidate assignments. The visual language was informed by crew management software patterns (the kind of interfaces used in maritime, aviation, and shift-based industries), which solve the same problem at higher stakes.\n\nTech stack: React, TypeScript, Supabase, with AI-assisted development as part of the prototype-building workflow. The choice to use AI-assisted development in the build itself was deliberate — it's the same loop I'd recommend to teams adopting AI-augmented practice. A working demo is publicly available as portfolio work informing the broader patterns of delivery-team operations design.",
+    starAnswers: [
+      {
+        competency: "End-to-end prototype delivery at principal IC level",
+        prompt: "Tell me about a recent prototype you designed and built end-to-end.",
+        situation:
+          "Delivery teams I'd worked with consistently struggled with staffing decisions because the data lived across spreadsheets, tickets, and messages. The comparison and availability problem looked solved in other industries (crew management, shift-based work) but not in delivery-team contexts.",
+        task:
+          "Design and build a prototype that consolidates the fragmented data into a single decision surface — research, design, and build, end to end, by myself.",
+        action:
+          "Designed the data model first — skills, availability, role requirements, active assignments — to make the consolidation possible. Built complementary interface views (roster, timeline, comparison) because no single view solved the full problem. Borrowed visual patterns from crew management software where the same problem is solved at higher stakes. Implemented in React, TypeScript, Supabase. Used AI-assisted development in the build loop both for speed and as direct experience of the workflow I'd advise teams to adopt.",
+        result:
+          "Working prototype publicly available. The consolidated approach demonstrably reduces the cognitive load on staffing decisions; the patterns are portable to other delivery-team contexts.",
+        learnings:
+          "The most useful design call was treating staffing as a data-model problem first — without the model right, no interface fixes the comparison problem. Using AI-assisted development on the build gave me direct experience of the practice I advise on; it's a different thing to recommend a workflow than to have run it.",
+      },
+      {
+        competency: "Borrowing patterns from adjacent domains",
+        prompt: "Tell me about a time you solved a problem by borrowing from another domain.",
+        situation:
+          "Delivery-team staffing has a comparison-and-availability problem that's been considered solved in maritime, aviation, and shift-based industries for decades through crew management software. Most software-team staffing UIs hadn't borrowed from that lineage.",
+        task:
+          "Bring crew-management software patterns into a delivery-team-staffing interface without losing the domain specifics.",
+        action:
+          "Studied existing crew management patterns — roster views, timeline visualizations, comparison tooling — and identified which translate (the visual language, the data structure) and which don't (the regulatory constraints, the shift-pattern logic). Built the prototype around the translatable patterns while keeping the data model specific to delivery-team realities (skills mix, project-based assignment vs. shift-based, ad-hoc availability).",
+        result:
+          "Interface that resolves the comparison problem in a familiar visual language but with domain-appropriate data underneath.",
+        learnings:
+          "Domain-borrowing works when you're explicit about what translates and what doesn't. The temptation is to either copy the surface (and miss the domain mismatch) or refuse to look at adjacent domains (and re-solve a solved problem). Both fail.",
+      },
+    ],
+    frameworksExemplified: [
+      "AI Spec-Driven Development (Spec + Working Prototype as Source of Truth)",
+      "Service Blueprint",
+    ],
+    thinkersInDialogue: [
+      "Crew management software design lineage (maritime, aviation, shift-based industries)",
+      "Delivery-team operations design",
+    ],
+    questionsItAnswers: [
+      "Tell me about a recent prototype you designed and built end-to-end.",
+      "Tell me about a time you solved a problem by borrowing from another domain.",
+      "Show me an example of your active building work.",
+      "How do you use AI in your build loop?",
+      "Tell me about a data-model decision that drove an interface design.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: end-to-end prototype delivery at principal IC level; active building with AI-assisted development; cross-domain pattern borrowing; data-model-first design thinking. Smaller in scope than the eAPD or Benefits Determination prototypes — better for principal IC craft demonstration than for big architectural-strategy questions. Pair with AI Spec-Driven Development and the Benefits Determination Story card.",
+    tags: ["nautilus", "prototype", "active_builder", "principal_ic", "owner_story"],
+  },
+  {
+    title:
+      "Design For The Public 24: A Two-Day Unconference at the Intersection of Design and Civic Technology",
+    referenceSentence:
+      "I organized and opened Design For The Public 24, a two-day unconference held October 16–17, 2024 in Portland — 80+ attendees traveling from across the country, two venues, in partnership with Technologists for Public Good, coinciding with the first-ever Portland Design Month, which I helped launch as then-Board President of AIGA Portland.",
+    thirtySecondVersion:
+      "Design For The Public 24 was a two-day unconference I organized and opened October 16–17, 2024 in Portland — 80+ attendees from across the country, two venues, in partnership with Technologists for Public Good. The conference brought together civic technologists and the broader design community for conversations about what we build and what the future looks like. It coincided with the first-ever Portland Design Month, which I helped launch as then-Board President of AIGA Portland. The convening established a model for future events in other cities.",
+    twoMinuteVersion:
+      "Design For The Public 24 was a two-day unconference I organized and opened October 16–17, 2024 in Portland, Oregon — 80+ attendees traveling from across the country, two venues, in partnership with Technologists for Public Good.\n\nThe conference brought together civic technologists and the broader design community for substantive dialogue about what we build and what the future looks like. The unconference format was deliberate — participants set the agenda within structured time slots, which lets the conversation go where the practitioners need it rather than where a programmed conference dictates. Pre-event work involved coordinating speakers, selecting venues, programming the schedule, and leading overall event direction.\n\nThe event coincided with the first-ever Portland Design Month, which I helped launch as then-Board President of AIGA Portland. Pairing the unconference with the broader Design Month gave both efforts more reach than either would have had alone — and demonstrated that civic technology and the broader design community could share a calendar without losing their distinct practices.\n\nOutcome was a model for future convenings in other cities and substantive practitioner dialogue across the civic tech / design boundary. The work was organizing and curation, not delivery — a different competency from the prototype work elsewhere in the portfolio.",
+    starAnswers: [
+      {
+        competency: "Designing and running a convening for substantive dialogue",
+        prompt: "Tell me about organizing a convening or event for practitioners.",
+        situation:
+          "Civic technology and the broader design community sit adjacent but rarely share space for substantive dialogue. After several years of overlapping work in both worlds, the conversation needed a deliberate convening.",
+        task:
+          "Design and run a two-day unconference that would bring 80+ practitioners together for the kind of conversation that doesn't happen at typical conferences.",
+        action:
+          "Chose the unconference format deliberately — participants set the agenda within structured time slots, which lets the conversation go where practitioners need it rather than where a programmed conference dictates. Coordinated speakers, selected two venues, programmed the schedule, opened with the keynote. Partnered with Technologists for Public Good. Timed the event to coincide with the first-ever Portland Design Month (which I helped launch as AIGA Portland Board President), so both efforts amplified each other.",
+        result:
+          "80+ attendees traveled from across the country. Substantive practitioner dialogue across the civic tech / design boundary. Established a model for future convenings in other cities.",
+        learnings:
+          "Unconference format is harder than programmed conference because it requires more trust in the practitioner audience — and that's exactly what makes it useful when the audience is senior practitioners who know what they want to talk about. Timing the event with Portland Design Month was the most leveraged single choice; both efforts reached audiences the other would have missed.",
+      },
+    ],
+    frameworksExemplified: [
+      "Cohort-Based Learning",
+      "Centralized AI Enablement Team (Innovation Catalyst Model)",
+    ],
+    thinkersInDialogue: [
+      "Technologists for Public Good (partner organization)",
+      "AIGA Portland community",
+      "Unconference / Open Space tradition",
+    ],
+    questionsItAnswers: [
+      "Tell me about organizing a convening or event for practitioners.",
+      "Tell me about your community-building work.",
+      "How do you create space for substantive dialogue in a field?",
+      "What's your relationship to the design community outside your day job?",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: community organizing at scale; convening design (unconference format choice); practitioner-network-building; cross-community connection (civic tech + broader design). Smaller story than the prototypes or 18F-scale work; supports a specific competency around organizing and curation rather than craft delivery. Pair with Portland Digital Corps (parallel community-building work) and the AIGA Portland board role as context.",
+    tags: ["design_for_the_public", "community", "convening", "civic_tech", "owner_story"],
+  },
+  {
+    title:
+      "18F Website Redesign: Content-First, Incremental Refresh in a Tight Constraint",
+    referenceSentence:
+      "In September 2023 I led a content-first refresh of 18f.gsa.gov as concurrent Head of Design and Head of Strategic Communications, with no dedicated team budget — sequencing the work as small, discrete pieces that could be completed alongside the agency's ongoing federal-engagement delivery, in three months, with content clarity first, structural updates second, visual and platform changes last.",
+    thirtySecondVersion:
+      "I led a content-first refresh of 18f.gsa.gov in three months in 2023, as concurrent Head of Design and Head of Communications, with no dedicated team budget. The sequencing — content clarity first, structure second, visual and platform third — let the design team work in short cycles alongside ongoing client delivery, never stopping to ship the refresh. The repositioning surfaced 18F as a capacity-building organization (not a consultancy), made product and service offerings legible, and reset the publishing model to encourage staff transparency about their work. Results: increased traffic, higher output, renewed external interest. Much of the public record of 18F's work after the office closed traces back to this effort.",
+    twoMinuteVersion:
+      "The 18F Website Redesign in September 2023 was a content-first refresh of 18f.gsa.gov delivered in three months while I was holding concurrent Head of Design and Head of Strategic Communications roles. The fundamental constraint: the website had become misaligned with the organization's actual work and identity, the design team was fully allocated to federal-agency delivery, and there was no dedicated budget for a refresh project.\n\nThe approach was disciplined and phased. Content clarity came first — repositioning 18F as a capacity-building organization rather than a consultancy, surfacing product and service offerings with legible practices, resetting the publishing model to encourage staff transparency about their work. Structural updates followed once the content model was in place. Visual and platform changes came last, after content and structure decisions had locked.\n\nThe team allocation problem got solved by sequencing the work as small, discrete pieces that could be completed alongside ongoing client delivery — never asking the design team to stop their primary work, always shipping incrementally. We worked in short cycles, reviewing progress frequently and adjusting scope as needed.\n\nOutcomes were measurable: increased traffic, higher output of staff publications, renewed external interest. Critically, much of the public record of 18F's work after the office closed in 2025 traces back to this 2023 refresh — the publishing-model reset is what made the work survivable as a public record.",
+    starAnswers: [
+      {
+        competency: "Principal IC craft applied under team-allocation constraint",
+        prompt: "Tell me about delivering significant design work when you couldn't dedicate a team to it.",
+        situation:
+          "18F's website was misaligned with the organization's actual work and identity by 2023. The design team was fully allocated to federal-agency delivery; there was no budget for a refresh project; communications constraints had prevented clear public explanation of the agency's mission.",
+        task:
+          "Refresh the site in three months without stopping client delivery and without asking for resources I wasn't going to get.",
+        action:
+          "Sequenced the work content-first, then structural, then visual and platform — so each phase could ship value without waiting for the next. Assigned small, discrete pieces of work designers could complete alongside their ongoing client delivery. Worked in short cycles with frequent review and scope adjustment. The content repositioning came first because it was the highest-leverage move: 18F as capacity-building, not consultancy; product and service offerings with legible practices; staff publishing reset to encourage transparency.",
+        result:
+          "Site refreshed in three months. Increased traffic, higher output, renewed external interest. Publishing-model reset proved durable — much of the public record of 18F's work after the office closed in 2025 traces back to this 2023 effort.",
+        learnings:
+          "Content-first sequencing was the move. If we'd started with visual or platform changes, the content misalignment would have shipped along with them. The constraint of no dedicated team forced incremental delivery, which produced better work than a big-bang refresh would have — content decisions had time to settle before structure and visual choices locked.",
+      },
+      {
+        competency: "Designing the publishing model, not just the site",
+        prompt: "Tell me about a redesign where the operating model was the deliverable.",
+        situation:
+          "The 18F site was a refresh target, but the harder problem was the publishing model — the constraints that had prevented staff from writing publicly about their work were producing a thinner public record than the work deserved.",
+        task:
+          "Refresh the site in a way that fixed the publishing model, not just the layout.",
+        action:
+          "Made the publishing reset part of the refresh scope. Created structural changes enabling ongoing iteration post-launch — not just a finished site. Repositioned 18F's identity in the content (capacity-building organization, not consultancy) so the publishing baseline was set by the new framing rather than the old one. Surfaced products and services with legible practices so staff writing had clearer hooks to attach their work to.",
+        result:
+          "Renewed staff publishing output after launch. The publishing-model change is what made much of 18F's late-tenure public record survivable — when the office closed in 2025, the public archive was richer than it would have been without the 2023 reset.",
+        learnings:
+          "The redesign that makes the publishing model better is more valuable than the redesign that makes the layout prettier. Treating the operating model (who publishes what, how, with what framing) as the deliverable instead of treating it as a separate problem solved the harder problem first.",
+      },
+    ],
+    frameworksExemplified: [
+      "Principal-Level Content Design & IA (Beyond Copywriting)",
+      "Dual-Track Agile",
+      "Multi-Audience Digital Governance",
+    ],
+    thinkersInDialogue: [
+      "18F practice culture",
+      "Government Digital Service (GDS) content-first redesign tradition",
+    ],
+    questionsItAnswers: [
+      "Tell me about delivering significant design work when you couldn't dedicate a team to it.",
+      "Tell me about a redesign where the operating model was the deliverable.",
+      "How do you sequence a refresh project?",
+      "Tell me about content-first design.",
+      "Show me an example of incremental delivery on a project that could have been a big-bang.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: principal IC craft applied to a leadership constraint (concurrent Head of Design + Head of Communications, no dedicated team); content-first sequencing on a refresh; incremental delivery under resource constraint; designing the operating model alongside the artifact. The 'public record of 18F after the office closed traces back to this refresh' line is the durability proof point. Pair with Principal-Level Content Design & IA and Dual-Track Agile.",
+    tags: ["18f_redesign", "content_first", "incremental_delivery", "principal_ic", "owner_story"],
+  },
+  {
+    title:
+      "City of Bloomington Website Redesign: Principal Designer on a Municipal Platform Migration (2018 Best of Indiana Award)",
+    referenceSentence:
+      "As Principal Designer leading a three-person core team (developer, project manager, designer), I led the full-site redesign and platform migration of the City of Bloomington's website — research with residents and staff, paper prototypes tested in a supermarket where residents voted on navigation and language comprehension, IA reorganized around resident tasks rather than departmental silos — earning the 2018 Best of Indiana Award for Best Application Serving the Public and featured at DrupalCon 2018 in Nashville.",
+    thirtySecondVersion:
+      "I led the City of Bloomington's full website redesign and platform migration in 2018 as Principal Designer on a three-person core team. The city's aging in-house CMS had been around a decade; departments were duplicating content to maintain visibility; each office had a single person managing all departmental content as a fragile dependency. I owned design and service outcomes end-to-end — research, IA, interface design, content migration. The IA reorganized around resident tasks rather than departmental silos. Public engagement included paper prototypes tested in a supermarket where residents voted on navigation and language comprehension. Outcomes: 11% decrease in exit rates, 93% decrease in bounce rate, 50%+ mobile traffic, 2018 Best of Indiana Award for Best Application Serving the Public, featured at DrupalCon 2018.",
+    twoMinuteVersion:
+      "The City of Bloomington Website Redesign in 2018 was a full-site redesign and platform migration where I served as Principal Designer leading a three-person core team (developer, project manager, designer). The city operated an aging in-house CMS that had existed for a decade; departments were creating duplicate content to maintain visibility; each office relied on a single person managing all departmental content — a fragile dependency. The infrastructure needed modernization to integrate the city's open-source tools and improve resilience.\n\nI owned design and service outcomes end-to-end, including research, information architecture, interface design, and content migration strategy. The research worked with residents and staff: direct interviews and stakeholder mapping across departments. Public engagement included paper prototypes tested in a supermarket where residents voted on navigation and language comprehension — research literally meeting users where they were, not asking them to come to us. I also integrated research contributions from a UX graduate student from Indiana University as part of the work.\n\nThe IA was the load-bearing decision: reorganized around resident tasks and questions rather than departmental silos. That choice solved both the duplicate-content problem (departments were duplicating because the structure forced them to maintain visibility) and the fragile-content-owner problem (task-oriented governance distributes ownership differently than departmental governance).\n\nOutcomes were measurable: 11% decrease in exit rates, 93% decrease in bounce rate, more than 50% of traffic from mobile devices. The project earned the 2018 Best of Indiana Award for Best Application Serving the Public and was featured at DrupalCon 2018 in Nashville.",
+    starAnswers: [
+      {
+        competency: "Principal designer end-to-end on a complex municipal redesign",
+        prompt: "Tell me about a redesign you led end-to-end as the principal designer.",
+        situation:
+          "The City of Bloomington was running an aging in-house CMS that had existed for a decade. Departments were duplicating content because the structure forced them to maintain visibility; each office had a single content owner as a fragile dependency.",
+        task:
+          "Lead a full-site redesign and platform migration end-to-end — research, IA, interface design, content migration — on a three-person core team.",
+        action:
+          "Owned design and service outcomes end-to-end. Research worked with residents and staff: direct interviews, stakeholder mapping across departments. Public engagement included paper prototypes tested in a supermarket where residents voted on navigation and language comprehension. The IA was reorganized around resident tasks and questions rather than departmental silos — that decision solved the duplicate-content problem and the fragile-content-owner problem at the same time. Integrated research contributions from a UX graduate student from Indiana University as part of the work.",
+        result:
+          "11% decrease in exit rates. 93% decrease in bounce rate. More than 50% of traffic from mobile devices. 2018 Best of Indiana Award for Best Application Serving the Public. Featured at DrupalCon 2018 in Nashville.",
+        learnings:
+          "Task-oriented IA was the load-bearing decision. It solved two problems (duplicate content + fragile owners) with one change because both problems came from departmental-silo IA. Generally: the IA decision compounds — get it right and downstream content governance gets easier; get it wrong and you spend years working around it.",
+      },
+      {
+        competency: "Meeting users where they are (research methodology)",
+        prompt: "Tell me about a research method that worked unusually well.",
+        situation:
+          "Municipal residents — the actual users — aren't easy to recruit for usability sessions. They have jobs, families, and limited reason to come to City Hall to do research with a designer.",
+        task:
+          "Get meaningful research feedback from residents about navigation and language without forcing them to come to us.",
+        action:
+          "Took paper prototypes to a supermarket. Asked residents to vote on navigation choices and language comprehension. The setting did most of the work — residents were already there, the research felt incidental rather than imposed, and the language-comprehension testing surfaced gaps that interview-room research would have missed because residents in a supermarket are reading signage in the same casual mode they read government websites.",
+        result:
+          "Concrete research input that drove navigation and language decisions in the redesign. The 11% / 93% / 50%+ outcomes were partly enabled by these research choices because the IA and language were tested against actual resident reading behavior, not aspirational behavior.",
+        learnings:
+          "The research method has to match the user's actual mode of using the product. Government websites get used in the same casual, scanning mode residents use to read supermarket signage; the research method should mirror that. Most usability research overshoots in the other direction — too formal, too high-engagement, missing what casual users actually do.",
+      },
+    ],
+    frameworksExemplified: [
+      "Principal-Level Content Design & IA (Beyond Copywriting)",
+      "Service Blueprint",
+      "Continuous Discovery (Torres)",
+      "Multi-Audience Digital Governance",
+    ],
+    thinkersInDialogue: [
+      "Government Digital Service (GDS) task-oriented IA tradition",
+      "Civic UX practice (Code for America, Nava)",
+      "Drupal community",
+    ],
+    questionsItAnswers: [
+      "Tell me about a redesign you led end-to-end as the principal designer.",
+      "Tell me about a research method that worked unusually well.",
+      "How do you design an IA that solves multiple problems at once?",
+      "Show me an example of award-winning civic design work.",
+      "Tell me about meeting users where they are.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: principal designer end-to-end ownership on a complex project; task-oriented IA as a load-bearing decision; novel research methods (supermarket prototype voting); award-winning civic design; small-team delivery. Numbers to land: 11% decrease in exit rates, 93% decrease in bounce rate, 50%+ mobile traffic, 2018 Best of Indiana Award. Pair with Principal-Level Content Design & IA and Multi-Audience Digital Governance. This is the cleanest principal-IC-craft story in the portfolio — small team, end-to-end ownership, measurable outcomes, novel methods.",
+    tags: ["bloomington_redesign", "principal_ic", "municipal", "award_winning", "owner_story"],
+  },
 ];
