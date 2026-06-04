@@ -6295,4 +6295,329 @@ export const frameworks: Framework[] = [
       "Change-management practice for legacy regulated industries; mortgage servicing, insurance, healthcare administration contexts; practitioner experience in established-org modernization.",
     tags: ["product_strategy", "change_management", "legacy_industry", "framework"],
   },
+
+  // —— Interview frameworks ——————————————————————————————————————————————
+
+  {
+    name: "STAR Method and Variants (CAR / PAR / SOAR / STAR-L)",
+    category: "interview_frameworks",
+    oneLiner:
+      "The standard behavioral-interview answer structure — Situation, Task, Action, Result — with common variants: CAR (drops Task), PAR (Problem instead of Situation/Task), SOAR (adds Obstacles), and STAR-L (adds Learnings, expected for senior roles). All compress a multi-month or multi-year work episode into 60–180 seconds of structured answer.",
+    whenToUse:
+      "Behavioral interview prep at any level. STAR is the dominant ask at FAANG, MBB consulting, big-tech IC roles, and most product / design / engineering leadership interviews. STAR-L is increasingly expected at senior and principal levels. PAR is more common in management consulting case-flavored conversations.",
+    vocabulary: [
+      "STAR (Situation / Task / Action / Result)",
+      "CAR (Context / Action / Result)",
+      "PAR (Problem / Action / Result)",
+      "SOAR (Situation / Obstacles / Actions / Results)",
+      "STAR-L (STAR + Learnings)",
+      "behavioral interview",
+      "competency interview",
+      "Tell me about a time when...",
+      "What's a project where you...",
+    ],
+    howToDropIn:
+      "\"STAR is compression. The interviewer asks for a project where you did X; you need to take a 9-month project and answer in 90 seconds. Situation (1 sentence — context and stakes). Task (1 sentence — what you specifically had to do). Action (3–4 sentences — what you actually did, with verbs and decisions). Result (1–2 sentences — what changed because of it, with numbers if you have them). Senior roles want STAR-L: one more sentence on what you'd do differently next time. The trap is going long on Situation and short on Action; flip the ratio.\"",
+    commonPhrasing: "STAR method, behavioral interview, competency-based interview.",
+    notes:
+      "The most common STAR mistake is making Situation 60% of the answer because the project context feels important; interviewers want Action because that's what reveals how you work. Time-allocation rule of thumb: 10% Situation, 10% Task, 60% Action, 20% Result (with Learnings folded in if STAR-L). Stories from the eAPD / SOMD / State Capacity AI / Acting Chief of Staff / Head of Design portfolio each support multiple STAR answers; the same story compresses differently depending on which competency the interviewer is probing (leadership, conflict, judgment, impact, ambiguity-tolerance, customer obsession). Pair with Senior IC / Executive Interview Patterns and the existing Story-card 30s versions as the substrate to compress from.",
+    source:
+      "Behavioral-interviewing practice (1970s industrial-organizational psychology, formalized for hiring at Procter & Gamble and Anheuser-Busch); current standard at FAANG and MBB; Amazon's Leadership Principles + STAR combination is the most-documented variant.",
+    tags: ["interview", "communication", "behavioral", "framework"],
+  },
+  {
+    name: "Senior IC / Executive Interview Patterns (Transitions, Leadership Beats, Why-You)",
+    category: "interview_frameworks",
+    oneLiner:
+      "Interview patterns specific to Senior IC, Principal, Director, and Executive roles — beyond STAR — covering role-transition narratives (why you left, why this), leadership scope demonstration (numbers attached to people and budgets), strategic judgment under ambiguity, and the 'Why You / Why Now / Why This' close.",
+    whenToUse:
+      "Director / VP / Principal / Staff / C-suite interviews. Different shape from IC behavioral interviews because the questions probe judgment, leadership scope, organizational navigation, and strategic narrative rather than execution detail.",
+    vocabulary: [
+      "leadership scope (people, budget, P&L)",
+      "Why You / Why Now / Why This",
+      "executive presence",
+      "strategic judgment",
+      "organizational navigation",
+      "transition narrative",
+      "what would you do differently",
+      "what did you inherit / what did you build",
+      "the case for change",
+      "the 30 / 60 / 90",
+    ],
+    howToDropIn:
+      "\"Senior interviews probe four things STAR doesn't address well: judgment under ambiguity, leadership scope (what was the people and budget reality, not just the project), strategic narrative (why these choices in this sequence), and transition logic (why this role now). The 'Why You / Why Now / Why This' close is increasingly standard — a 90-second articulation of why you specifically are right for this seat at this moment in your career and the company's trajectory. The 30 / 60 / 90 (what you'd do in your first 30, 60, 90 days) is the operational equivalent.\"",
+    commonPhrasing: "Executive interview, leadership interview, principal interview.",
+    notes:
+      "Common senior interview question patterns: 'Tell me about a hard organizational call you made'; 'What did you inherit and how did you handle it'; 'What would you do in your first 90 days'; 'Why this role, why now'; 'What's a strategic call you got wrong and what did you learn'; 'How do you decide what to delegate'. Each maps to a STAR-format answer but with leadership-scope numbers (people, budget, time horizon) attached and judgment narrative emphasized. Pair with STAR Method and Variants, Trusted Advisor Stance, and the Story cards that document senior leadership scope (Head of Design, Acting Chief of Staff, State Capacity AI).",
+    source:
+      "Senior-hire interview practice (executive search firms, late-stage growth companies, regulated industries); McKinsey / Spencer Stuart / Heidrick & Struggles competency frameworks for senior hires.",
+    tags: ["interview", "senior_ic", "leadership", "framework"],
+  },
+  {
+    name: "Product & Design Interview-Specific Frameworks (CIRCLES, Portfolio Walkthrough, Design Challenge)",
+    category: "interview_frameworks",
+    oneLiner:
+      "Domain-specific interview frameworks for product manager and designer interviews — CIRCLES for PM product-sense questions (Comprehend, Identify, Report, Cut, List, Evaluate, Summarize), portfolio walkthrough patterns for designers, and design-challenge structures that simulate real working sessions.",
+    whenToUse:
+      "Product manager interviews at FAANG and late-stage growth (product-sense rounds, execution rounds, strategy rounds); designer interviews (portfolio reviews, app critiques, design challenges); cross-functional roles that probe product or design judgment.",
+    vocabulary: [
+      "CIRCLES (Comprehend / Identify / Report / Cut / List / Evaluate / Summarize)",
+      "product sense round",
+      "execution round",
+      "strategy round",
+      "portfolio walkthrough",
+      "app critique",
+      "design challenge",
+      "whiteboard round",
+      "RICE prioritization",
+      "ICE prioritization",
+    ],
+    howToDropIn:
+      "\"Product and design interviews use STAR for behavioral rounds and domain-specific frameworks for craft rounds. CIRCLES is the standard for PM product-sense questions — given an ambiguous prompt ('design a better X'), walk through user comprehension, user identification, reporting, cutting scope, listing solutions, evaluating, summarizing. For designers, the portfolio walkthrough is the dominant artifact — structured around the project's stakes, decisions, trade-offs, and what you'd do differently. Design challenges are working sessions, not presentations — interviewers want to see how you think, not what you've polished.\"",
+    commonPhrasing: "PM interview, designer interview, product sense, portfolio review.",
+    notes:
+      "CIRCLES was coined by Lewis Lin for Microsoft PM interviews and is now the standard framework named in PM interview prep books. RICE and ICE are prioritization frameworks more commonly used in execution rounds. For senior PM and Director PM roles, strategy rounds replace product-sense rounds and use 'enter this market' or 'launch this product' prompts. Designer interview structures vary by company — Meta, Google, Apple, and consulting design firms each have signature patterns. Pair with STAR Method and Variants and Senior IC / Executive Interview Patterns.",
+    source:
+      "Lewis Lin, *Decode and Conquer* (CIRCLES framework, 2013); Reforge, Lenny's Newsletter, and Designer Hangout interview-prep communities; FAANG-specific interview guides.",
+    tags: ["interview", "product_management", "design", "framework"],
+  },
+
+  // —— Strategic foresight / futures practice ————————————————————————————
+
+  {
+    name: "Strategic Foresight & Insight Analyst (Corporate / Brand)",
+    category: "foresight",
+    oneLiner:
+      "The analyst-to-senior-analyst role at corporate foresight functions — scanning emerging trends across technology, culture, consumer behavior, sustainability, and business models; synthesizing weak signals into structured insights; supporting scenario development and opportunity-space mapping; translating signals into strategic implications for exploration and investment.",
+    whenToUse:
+      "Strategic Foresight Analyst, Insight Analyst, Futures Researcher, Trend Analyst postings at consumer brands (H&M, IKEA, Nike, P&G, Unilever), automotive (Ford, GM, Toyota), tech (Google ATAP, Microsoft Strategy), large media (Disney, BBC), and adjacent industries. Usually inside Innovation / Futures / Strategy departments rather than core product.",
+    vocabulary: [
+      "strategic foresight",
+      "signal sensing / weak signal detection",
+      "trend analysis",
+      "scenario planning",
+      "opportunity space mapping",
+      "futures research",
+      "STEEP / PESTLE analysis",
+      "Three Horizons framework",
+      "futures wheel",
+      "Delphi method",
+      "horizon scanning",
+      "exploration vs. exploitation",
+    ],
+    howToDropIn:
+      "\"Strategic foresight is the discipline of building structured, defensible perspectives on the future that organizations can act on — not predictions, but well-framed alternatives that inform where the business places its bets. The analyst job is the bottom of the funnel: scanning, signal-sensing, synthesizing into insights, contributing to scenarios. The senior version contributes to framework design and connects foresight outputs to strategic decision-making.\"",
+    commonPhrasing: "Strategic foresight, trend analysis, futures research, insight analyst.",
+    notes:
+      "Distinct from market research (which describes the present) and strategic planning (which decides on the present). Foresight is the discipline of building structured perspectives on plausible futures so the organization can prepare or position. The 2024–2026 corporate foresight market is growing as AI disruption, climate, and geopolitical instability make planning horizons harder. Pair with Foresight Methodology Stack and Translating Foresight to Strategy.",
+    source:
+      "Validated against 2026 postings: H&M Group 'Strategic Foresight & Insight Analyst' (Stockholm, hybrid); analogous roles at IKEA, Nike, P&G, Unilever, Ford, Toyota, Microsoft, Google ATAP.",
+    tags: ["foresight", "strategy", "corporate", "role", "framework"],
+  },
+  {
+    name: "Foresight Methodology Stack (Scenarios, Three Horizons, STEEP, Futures Wheel)",
+    category: "foresight",
+    oneLiner:
+      "The canonical methodology stack of strategic foresight work — STEEP / PESTLE for environmental scanning; horizon scanning and signal sensing for trend identification; Three Horizons framework for thinking across time periods; scenario planning (Shell-style and morphological); Futures Wheel for second- and third-order consequence mapping; Delphi for structured expert input.",
+    whenToUse:
+      "Any foresight role, futures practice, or strategic-planning context that benefits from formal methodology. Particularly important for foresight analysts who need to demonstrate methodological fluency in interviews and proposals.",
+    vocabulary: [
+      "STEEP (Social / Technological / Economic / Environmental / Political)",
+      "PESTLE (Political / Economic / Social / Technological / Legal / Environmental)",
+      "Three Horizons (Sharpe / Curry)",
+      "Scenario planning (Shell / Kahn)",
+      "Morphological scenario analysis",
+      "Futures Wheel (Glenn)",
+      "Delphi method",
+      "Cross-impact analysis",
+      "Wild cards (low-probability, high-impact events)",
+      "Black swans",
+      "Backcasting",
+      "Causal Layered Analysis (CLA)",
+    ],
+    howToDropIn:
+      "\"Foresight methodology is a stack, not a single tool. STEEP / PESTLE is the scanning frame — you organize signals by Social, Technological, Economic, Environmental, Political. Three Horizons gives you the time-period structure. Scenario planning (in the Shell tradition) generates plausible alternative futures. The Futures Wheel maps second- and third-order consequences of a single signal. Delphi brings structured expert input when you don't have data. The skill is matching the method to the question — scenarios when there's deep uncertainty about multiple drivers; Three Horizons when you need to communicate across time periods; CLA when the question is about underlying worldviews and mythology.\"",
+    commonPhrasing: "Foresight methods, futures frameworks, scenario planning, horizon scanning.",
+    notes:
+      "Canonical references: Pierre Wack and Peter Schwartz at Shell on scenario planning; Bill Sharpe and Andrew Curry on Three Horizons; Jerome Glenn on Futures Wheel and the Millennium Project; Sohail Inayatullah on Causal Layered Analysis (CLA). The Institute for the Future (IFTF), Long Now Foundation, RAND, and Singapore's Centre for Strategic Futures are the institutional bellwethers. Pair with Strategic Foresight & Insight Analyst (Corporate / Brand) and Translating Foresight to Strategy.",
+    source:
+      "Strategic foresight discipline. Canonical references: Peter Schwartz, *The Art of the Long View* (1991); Bill Sharpe & Andrew Curry on Three Horizons (2015); Jerome Glenn at the Millennium Project; Sohail Inayatullah on Causal Layered Analysis.",
+    tags: ["foresight", "methodology", "framework"],
+  },
+  {
+    name: "Translating Foresight to Strategy (Signal → Insight → Implication → Bet)",
+    category: "foresight",
+    oneLiner:
+      "The discipline of moving structured foresight outputs through the chain that makes them actionable — signals (observed events or data points), insights (what the signals mean), implications (what they mean for the organization specifically), and bets (the strategic moves the organization makes in response). Most foresight work fails at the implications-to-bets step.",
+    whenToUse:
+      "Senior foresight analyst, strategy-and-insights, or futures-to-strategy translation roles where the deliverable has to be actionable, not just interesting. The JD phrase 'pragmatic — focused on impact, not just interesting observations' is the canonical signal.",
+    vocabulary: [
+      "signal → insight → implication → bet",
+      "actionable insight",
+      "strategic implication",
+      "bet placement / portfolio choice",
+      "the so-what test",
+      "decision-grade insight",
+      "from foresight to roadmap",
+      "futures to strategy bridge",
+      "exploration priorities",
+    ],
+    howToDropIn:
+      "\"The hardest part of foresight isn't generating insights; it's making them actionable. The chain is signal → insight → implication → bet. Signals are observed (a regulatory change, a consumer behavior shift, a technology release). Insights are what the signals MEAN (what they tell us about underlying dynamics). Implications are organization-specific (what they mean for our business, our portfolio, our capability set). Bets are the strategic moves we make in response (where to invest, what to build, what to stop). Most foresight teams get great at the first two and fail at the second two. The senior version of the role is mostly about closing that gap.\"",
+    commonPhrasing: "From foresight to strategy, actionable insights, signal to bet.",
+    notes:
+      "The discipline's failure mode is the 'futures report nobody reads' pattern — beautifully produced scenarios that don't connect to any specific decision the organization is making. Counter is to embed foresight analysts in active strategy or investment discussions where the implications-to-bets translation is forced by the conversation. Pair with Strategic Foresight & Insight Analyst (Corporate / Brand), Foresight Methodology Stack, and Trusted Advisor Stance.",
+    source:
+      "Strategic foresight practice; Wendy Schultz on insight-to-action translation; corporate foresight literature 2015–2026.",
+    tags: ["foresight", "strategy", "translation", "framework"],
+  },
+
+  // —— Principal-level discipline framing (content design, service design) —
+
+  {
+    name: "Principal-Level Content Design & IA (Beyond Copywriting)",
+    category: "content_design",
+    oneLiner:
+      "The discipline of content design and information architecture at principal-IC / staff level — content as interface architecture, governance models for who-edits-what, multi-audience content systems, taxonomies and content models that drive product structure, and the cross-functional architectural calls content discipline can earn the right to make. Distinct from mid-level content design, which writes copy against existing IA.",
+    whenToUse:
+      "Principal / Staff / Lead Content Designer or Content Strategist roles, particularly outside SF / SV where the discipline is more frequently flattened. Useful for surfacing the system-level work content design at depth does, beyond 'write the microcopy.'",
+    vocabulary: [
+      "content as interface",
+      "content architecture",
+      "content model",
+      "content taxonomy (heading / short / detail / help)",
+      "content governance",
+      "YAML / structured content layer",
+      "voice, casing, acronym, numeric-format conventions as policy",
+      "multi-audience content system",
+      "content-driven architectural decision",
+      "content operations",
+      "performance management for content discipline",
+    ],
+    howToDropIn:
+      "\"Principal-level content design is content as interface architecture, not copy added after design. The work is the taxonomy that determines what kind of guidance lives where, the governance model for who can edit which content layer, the case for technical architectural decisions (non-blocking validation, autosave, error prevention) the content research surfaces, and the operating model for content across a product. Mid-level content design writes copy against an existing IA; principal-level content design designs the IA the copy lives in.\"",
+    commonPhrasing: "Principal content designer, content architect, staff content strategist.",
+    notes:
+      "The discipline gets flattened outside SF / SV — most postings ask for 'writes great microcopy' when they need content architecture. Recognizable principal-level signals in a JD: 'set content strategy,' 'define content governance,' 'partner with engineering on content infrastructure,' 'lead taxonomy development.' eAPD is the citable case for content as interface in a regulated submission context: the heading / short / detail / help-text taxonomy with explicit rules for what lives where, the YAML governance layer, non-blocking validation defended on research grounds, voice and convention policies. Pair with Service Blueprint, Multi-Audience Digital Governance, and the eAPD Story card.",
+    source:
+      "Content design discipline (Sarah Winters / Content Design London; Erika Hall on content strategy; Kristina Halvorson at Brain Traffic); 18F content design practice; principal-level content design hiring patterns at FAANG and large product orgs.",
+    tags: ["content_design", "ia", "principal_level", "framework"],
+  },
+  {
+    name: "Principal-Level Service Design (Beyond Journey Maps)",
+    category: "service_design",
+    oneLiner:
+      "The discipline of service design at principal-IC / staff level — service blueprint as platform architecture, multi-sided service modeling, operating-model design alongside service design, service measurement and KPI design, service maturity assessment, and cross-channel policy-level orchestration. Distinct from mid-level service design, which produces journey maps and blueprints as deliverables.",
+    whenToUse:
+      "Principal / Staff / Lead Service Designer roles, particularly in regulated industries (healthcare, financial services, government) and at established consumer companies where the discipline is recognized as architecture rather than artifact production. Useful for surfacing the system-level work service design at depth does, beyond 'maps the customer journey.'",
+    vocabulary: [
+      "service blueprint as architecture",
+      "multi-sided service design",
+      "two-sided / two-population service",
+      "operating-model design",
+      "service line orchestration",
+      "service maturity model",
+      "service KPI design",
+      "policy-level service standards",
+      "service infrastructure",
+      "channel handoff design",
+      "service actors (human and AI)",
+    ],
+    howToDropIn:
+      "\"Principal-level service design treats the service blueprint as platform architecture — the artifact is one output, but the work is the operating model the service runs on. Multi-sided service modeling, governance across audiences, the workflow gates that shift work between channels and lines of business, the measurement model for service quality — all of it sits inside the service designer's scope at depth. Mid-level service design produces journey maps and blueprints; principal-level service design designs the operating model the blueprints describe.\"",
+    commonPhrasing: "Principal service designer, staff service designer, service architecture.",
+    notes:
+      "The discipline gets flattened outside SF / SV — most postings ask for 'creates journey maps' when they need service-architecture work. Recognizable principal-level signals in a JD: 'set service strategy,' 'design operating standards,' 'orchestrate across lines of business,' 'design KPIs for service quality.' eAPD is the citable case for multi-sided service design in a regulated context: state authors + federal reviewers + State Officers + 18F + CMS as multiple coordinated parties; administrative-completeness check + author attestation as workflow-gate design; operating model carried through the handoff to the successor team. State Officer M.D. is the citable case for service-as-program design (the cohort as a service). Pair with Multi-Channel Service Orchestration, Multi-Audience Digital Governance, and the eAPD / SOMD Story cards.",
+    source:
+      "Service design discipline (Marc Stickdorn and Jakob Schneider, *This Is Service Design Doing*; Lou Downe on design and government services; Polaine, Løvlie, and Reason on service design); 18F practice; principal-level service design hiring patterns.",
+    tags: ["service_design", "principal_level", "framework"],
+  },
+
+  // —— Design leadership (Center of Excellence / regulated financial services) —
+
+  {
+    name: "Head of Design CoE (Financial Services / Regulated, Newly-Established)",
+    category: "design_leadership",
+    oneLiner:
+      "The Head-level design leadership archetype at financial services and regulated-industry employers establishing a Center of Excellence — leading 30–60-person UX / UI / digital design organizations, owning digital experience vision, defining operating model for design development across Tribes and commercial teams, with 3–5 direct reports and multi-country team composition. Distinct from VP-level design org leadership at product companies because the seat is typically inside a CoE structure rather than embedded in product, and the org has stronger compliance / commercial / regulatory constraints.",
+    whenToUse:
+      "Head of Design / Head of Customer Experience / Head of Human-Centered Design CoE postings at Nordic and European banks (Danske, Nordea, DNB, Handelsbanken, SEB), US large banks (JPMorgan Chase, Wells Fargo, Bank of America design CoEs), insurance carriers, and adjacent regulated financial-services employers. Common at orgs running a Tribes / Squads operating model with a separate design CoE for craft governance.",
+    vocabulary: [
+      "Design CoE (Center of Excellence)",
+      "Head of Human-Centered Design",
+      "digital experience vision",
+      "operating model for design development",
+      "Tribes / Squads / Chapters / Guilds (Spotify model)",
+      "embedded vs. centralized design",
+      "design standards and practices",
+      "design quality benchmarks",
+      "capacity planning",
+      "customer satisfaction outcomes",
+      "design discipline (UX / UI / digital)",
+    ],
+    howToDropIn:
+      "\"Head of Design at a Nordic bank's newly-established CoE is a different shape than Head of Design at a product company. The CoE doesn't own products — it owns the discipline, the standards, the operating model, and the talent. Tribes own the products. The Head's job is making the CoE legibly useful to Tribes and Commercial teams while building the long-arc capabilities (career frameworks, hiring bar, AI-augmented design practice, cross-country talent mobility) the org needs. The constraints are stronger than at a product company: financial-services compliance, multi-country employment law, regulator-driven feature requirements, longer release cycles.\"",
+    commonPhrasing: "Head of Design CoE, Head of Customer Experience, Head of Human-Centered Design.",
+    notes:
+      "Multi-country composition (Denmark, Lithuania, India in the Danske case) is typical of Nordic banks and changes the leadership shape significantly — different employment law, different compensation bands, different communication norms, different timezone overlap. The Tribes + CoE model is borrowed from Spotify's organizational pattern but adapted for regulated financial services where Tribes can't be as autonomous as Spotify Squads. Common reporting line is Chief Customer Officer, Chief Digital Officer, or sometimes COO. Pair with Multi-Country / Distributed Design Leadership and Building a Newly Established Design CoE.",
+    source:
+      "Validated against 2026 postings: Danske Bank 'Head of Human-Centered Design Center of Excellence' (Copenhagen, with team in Lithuania and India); analogous roles at Nordea, DNB, JPMorgan Chase, Wells Fargo, BBVA, ING.",
+    tags: ["design_leadership", "financial_services", "coe", "regulated", "role", "framework"],
+  },
+  {
+    name: "Building a Newly Established Design CoE",
+    category: "design_leadership",
+    oneLiner:
+      "The specific greenfield leadership challenge of standing up a newly established Design Center of Excellence — defining the operating model from scratch, establishing standards and practices the rest of the organization will adopt voluntarily, building the talent strategy and career framework, choosing what's centralized vs. embedded, and building credibility with Tribes / product teams who haven't worked with a Design CoE before.",
+    whenToUse:
+      "Head / Director postings at orgs explicitly describing a 'newly established' or 'forming' Design CoE. Particularly common in financial services, healthcare, and large enterprise orgs that historically had embedded designers in product teams without centralized discipline governance and are now centralizing.",
+    vocabulary: [
+      "newly established CoE",
+      "greenfield design org",
+      "centralized vs. embedded design",
+      "voluntary adoption (of CoE standards)",
+      "Tribes / Squads stakeholder management",
+      "design discipline maturity",
+      "design ops / DesignOps",
+      "career framework design",
+      "hiring bar establishment",
+      "operating-model decisions",
+    ],
+    howToDropIn:
+      "\"Standing up a newly established Design CoE is greenfield leadership — the operating model is open, the standards are TBD, the talent strategy needs to be built, and credibility with Tribes who haven't worked with a Design CoE before needs to be earned, not assumed. The decisions in year one set the operating model for years: what's centralized (standards, hiring, career framework, tooling) versus what's embedded (designers actually in Tribes); how the CoE earns voluntary adoption rather than mandate compliance; what the design-quality benchmark actually is. The trap is treating it as a re-org rather than a multi-year capability build.\"",
+    commonPhrasing: "Stand up a Design CoE, build a Design Center of Excellence, design org centralization.",
+    notes:
+      "The voluntary-adoption discipline matters a lot here — the CoE has authority over the discipline but not over the Tribes / product teams. The Head's job is making CoE standards and practices genuinely useful (not just compliance-required) so they get adopted by Tribes that have alternatives. Common failure mode is the CoE that publishes standards nobody follows; common success mode is the CoE that ships tools, templates, and people so Tribes actively want CoE engagement. Pair with Head of Design CoE (Financial Services / Regulated, Newly-Established) and Centralized AI Enablement Team (Innovation Catalyst Model — similar voluntary-adoption operating pattern).",
+    source:
+      "Design CoE establishment practice; financial services and large enterprise centralization patterns 2018–2026; consulting firm (Deloitte, EY, BCG) design-CoE-building engagements.",
+    tags: ["design_leadership", "coe", "greenfield", "framework"],
+  },
+  {
+    name: "Multi-Country / Distributed Design Leadership",
+    category: "design_leadership",
+    oneLiner:
+      "The leadership shape of running a design organization with team composition split across multiple countries — typical at Nordic banks (Denmark + Lithuania + India), European tech (Germany + Poland + India), US tech with offshore design (US + Eastern Europe + India). Multi-country leadership involves different employment law, compensation bands, communication norms, timezone overlap windows, cultural expectations around hierarchy and feedback, and the cost-vs-quality model of nearshore / offshore design.",
+    whenToUse:
+      "Design leadership roles where the team is explicitly multi-country. Common at European banks, large enterprise software (SAP, Siemens, Bosch), and US tech with offshore design centers. The 'team in Lithuania and India' phrasing in the Danske JD is the canonical signal.",
+    vocabulary: [
+      "multi-country team",
+      "nearshore design (Eastern Europe)",
+      "offshore design (India)",
+      "timezone overlap window",
+      "design center / design hub",
+      "country-specific hiring band",
+      "Vilnius, Riga, Tallinn (Baltic design centers)",
+      "Bengaluru, Pune, Gurugram (India design centers)",
+      "cross-country mobility",
+      "global design ops",
+    ],
+    howToDropIn:
+      "\"Running a multi-country design organization has a different shape than running a single-location team. The Nordic + Baltic + India composition is common at European banks: Denmark / Sweden as the strategic center, Lithuania / Latvia for nearshore execution at lower cost band, India for additional capacity at further cost band. The leadership work is making the cross-country team operate as one organization rather than three — including timezone-overlap windows, cultural calibration on feedback and hierarchy, communication norms across countries, hiring band fairness, career mobility between centers, and the politically delicate question of what work goes where.\"",
+    commonPhrasing: "Multi-country design team, distributed design leadership, nearshore / offshore design.",
+    notes:
+      "The specific country combination (Denmark + Lithuania + India in the Danske case) carries embedded cost and operating-model assumptions. Lithuania is a major nearshore design center for Nordic and German employers; Bengaluru and Pune are major offshore design centers for both US and European employers. The work-allocation politics are real — Denmark designers feel strategic, Lithuania feels production, India feels capacity, and undoing those defaults is part of the Head's job. Pair with Head of Design CoE (Financial Services / Regulated, Newly-Established) and Building a Newly Established Design CoE.",
+    source:
+      "Distributed design leadership practice at European banks and US tech with offshore design centers 2015–2026; design-ops literature on multi-country team operating models.",
+    tags: ["design_leadership", "multi_country", "global", "framework"],
+  },
 ];

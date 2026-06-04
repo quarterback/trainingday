@@ -46,6 +46,106 @@ export const stories: Story[] = [
       "How do you balance discovery and delivery?",
       "How have you handled a leadership transition or handoff?",
     ],
+    starAnswers: [
+      {
+        competency: "Customer impact at scale",
+        prompt: "Tell me about a time you measurably improved an experience for users.",
+        situation:
+          "At 18F I was Principal Content Strategist on eAPD, the CMS application replacing a 100+ page paper Medicaid funding submission whose quality depended entirely on the state author's experience and whose review cycle states described as a black box.",
+        task:
+          "Lead the content system that would let states produce approvable submissions consistently, working alongside another design lead during prototype and early build phases.",
+        action:
+          "Built error prevention into the architecture — turned regulation into plain-language instructional copy with an explicit content taxonomy; put routine copy in a YAML layer non-engineers could govern; used progressive disclosure with persistent navigation; paired non-blocking inline validation with autosave because research showed states author asynchronously, not in document order; auto-calculated all budget totals from raw inputs; auto-generated a structurally constrained executive summary.",
+        result:
+          "A representative APD shrank from 82 pages to 19 — 77% reduction in the document a reviewer has to process. Delaware and Idaho asked to use the product before general release. The 2023 OKRs were set as outcomes: 75% first-cycle approval, 30% review-time reduction, 50% second-submission rate as a retention proxy.",
+        learnings:
+          "The team identified but never instrumented its central trust question — whether state users would stop double-checking math against their own spreadsheets. Known leading indicator, not closed out. Next time I'd build that measurement in from the first usable build.",
+      },
+      {
+        competency: "Designing for ambiguity and constraint",
+        prompt: "Tell me about working in an ambiguous or constrained environment.",
+        situation:
+          "eAPD ran four years at 18F under federal clearance, FAR procurement constraints, and HIPAA-adjacent data sensitivity — with the additional ambiguity of serving two distinct user populations (state authors and federal reviewers) whose jobs-to-be-done were structurally different.",
+        task:
+          "Run continuous discovery and continuous delivery in parallel inside those constraints, with the product trio (PM, designer, engineer) embedded in research.",
+        action:
+          "Ran twenty-plus research rounds across four years on a four-to-six-week cadence. Two team-specific research questions ran across every study beyond standard usability — will this change help the state produce an approvable APD, and do states understand what CMS wants to make it approvable — so the research operationalized outcome, not feature validation. The trio observed live sessions and attended debriefs; findings reached the team before reports were written. Service design moved beyond the interface: an administrative-completeness check plus author attestation served as a workflow gate that shifted introductory review off the State Officer and into the system.",
+        result:
+          "Discovery cadence sustained over four years; product transitioned from 18F to a successor team in 2020 with the HCD culture intact — a proof point about durable practice, not just artifacts.",
+        learnings:
+          "Treating regulatory ambiguity as a design constraint to solve rather than a blocker to defer is what made it work. Research as the team's working rhythm — not a separate discipline — was the load-bearing decision.",
+      },
+      {
+        competency: "Influence without authority",
+        prompt: "Tell me about a time you drove a change without owning the decision.",
+        situation:
+          "As Principal Content Strategist on eAPD I led content strategy and research alongside another design lead, with no formal authority over engineering or product priorities.",
+        task:
+          "Push the team to treat content as interface architecture, not as copy added after design — and get specific architectural calls made that crossed engineer and PM territory.",
+        action:
+          "The biggest push was non-blocking validation: research showed states authored asynchronously, never in document order, so blocking per-field validation was the wrong mode. Engineering had defaulted toward blocking validation because it was easier; I built the research case around the actual user behavior we'd observed in twenty-plus rounds, surfaced it in joint working sessions with PM and engineering, and proposed the alternative — non-blocking inline validation paired with autosave, with the required-fields check firing at Export rather than per-field. The decision was made jointly in a working session, not by directive.",
+        result:
+          "Non-blocking validation went into the product and let states author the way they actually work, not the way the form would have forced them to. The same pattern shaped subsequent decisions about auto-calculation and the auto-generated executive summary.",
+        learnings:
+          "Working alongside another design lead taught me the difference between owning the call and shaping the conditions in which the right call gets made. Content design has more architectural leverage than the title suggests when the research is honest.",
+      },
+      {
+        competency: "Leadership transition / operating model handoff",
+        prompt: "Tell me about a leadership handoff or transition you navigated.",
+        situation:
+          "In 2020 18F transitioned eAPD to a successor team — Fearless, A1M Solutions, Health Management Associates, and Theta. The risk was losing the HCD culture and continuous-discovery cadence in the handoff, which is how government-software transitions usually go wrong.",
+        task:
+          "As Principal Content Strategist, contribute to the handoff so the practices survived the change of operating org — not just the artifacts.",
+        action:
+          "Treated the operating model as the deliverable, not just the documentation. The product trio embedding pattern, the four-to-six-week study cadence, the two team-specific research questions, the content-as-system taxonomy and YAML governance — all of it was named, documented, and demonstrated to the successor team during overlap.",
+        result:
+          "The HCD culture and continuous-discovery cadence carried through the handoff intact — a meaningful proof point about durable practice, not just artifacts. The product launched to all states for HITECH funding in 2021 and is being extended to the Medicaid Management Information System.",
+        learnings:
+          "What travels in a handoff is the operating model the team practices, not the documentation. If you can't show the next team how the work actually happens, the artifacts won't keep the practice alive.",
+      },
+      {
+        competency: "Principal-level content design (content as interface architecture)",
+        prompt: "Walk me through how you think about content design at the architectural level.",
+        situation:
+          "As Principal Content Strategist on eAPD I led the content-system layer for a federally-regulated submission product — content that had to encode regulatory requirements without being a wall of text and had to be governable by non-engineers across multiple product cycles.",
+        task:
+          "Design content as interface architecture, not as copy added to existing IA — including defining who could edit which content layer and why.",
+        action:
+          "Built a four-level content taxonomy (heading / short instruction / detail / help text) with explicit rules for what lived in each layer and which user context each addressed. Established a YAML content layer where routine copy could live and be governed by non-engineers, while structural content stayed in the rendering layer. Set voice, casing, acronym, and numeric-format conventions as system policy across the product. The content model drove decisions about progressive disclosure, help-drawer design, and validation behavior — content architecture made the IA work, not the other way around.",
+        result:
+          "Non-engineers could maintain and extend the content surface without code changes. The taxonomy survived the 18F → successor team handoff intact. Content as system became part of the operating model the successor team carried forward.",
+        learnings:
+          "At principal level, content design isn't writing — it's architecting the system the writing lives in and the governance that lets it evolve. The discipline gets flattened outside SF / SV; the move is naming the architectural work explicitly when the interview probes 'content design.'",
+      },
+      {
+        competency: "Multi-sided service design",
+        prompt: "Tell me about designing a service for multiple distinct user populations.",
+        situation:
+          "eAPD served two structurally distinct user populations: state authors who needed a fileable, distributable artifact they could circulate internally for input, and federal reviewers who needed a markup-able decision document.",
+        task:
+          "Design the service so both populations got what they needed from a single product surface, without compromising the experience of either or forcing one to accommodate the other.",
+        action:
+          "Modeled the full Request → Review and Decision → Response loop as a service, not just the interface screens. Designed for the seam between parties: the administrative-completeness check plus the author attestation served as a workflow gate that shifted introductory review left — off the State Officer and into the system. Each population got purpose-built affordances: state authors got progressive disclosure, autosave, non-blocking validation, executive-summary auto-generation; federal reviewers got the markup-able exported document. The two-sided modeling was made explicit in the service blueprint, including the data spine they shared and the workflows they didn't.",
+        result:
+          "Both populations served from one product. Delaware and Idaho asked for early access; reviewer cycle times targeted for 30% reduction in 2023 OKRs.",
+        learnings:
+          "Two-sided service design needs an explicit blueprint with the seam between parties named and designed. The temptation is to optimize the dominant audience and treat the other as a constraint; the discipline is treating both as primary and making the seam a designed object.",
+      },
+      {
+        competency: "Service operating-model design (principal-level service architecture)",
+        prompt: "Tell me about designing operating standards for a service, not just the service itself.",
+        situation:
+          "As Principal Content Strategist on eAPD I was part of the team designing the product, but in 2020 the work transitioned from 18F to a successor team. The risk was losing not the product but the operating model the product depended on.",
+        task:
+          "Contribute to making the operating model itself the deliverable — the practices, cadences, and roles that produced the product, not just the artifacts.",
+        action:
+          "Named and demonstrated the operating model explicitly: the four-to-six-week research cadence, the product-trio embedded observation pattern, the two team-specific research questions running across every study, the content-as-system taxonomy and YAML governance model, the way administrative-completeness gating shifted review off the State Officer. Each was documented as a working pattern with the why captured, not just the what. Worked with the successor team during overlap to demonstrate the practices in use.",
+        result:
+          "The HCD culture and continuous-discovery cadence carried through the handoff intact. The successor team launched the product to all states for HITECH funding in 2021. The product is being extended to the Medicaid Management Information System.",
+        learnings:
+          "Operating-model design is its own discipline at principal level — designing not just the service but the way the service gets produced and evolved. The thing that travels in a handoff is the operating model, not the documentation.",
+      },
+    ],
     notes:
       "Use this story when the room needs evidence of: continuous discovery / dual-track agile in practice; long-form / complex-workflow UX; content design as system, not just copy; two-sided service design; outcome-based OKRs; research inside institutional constraints. Numbers to land: 100+ pages → structured app; 82 → 19 pages (77% reduction); 4 years / ~20+ research rounds; 4–6 week study cadence; pre-launch demand from Delaware and Idaho; 2023 OKRs (75% first-cycle approval, 30% review-time reduction, 50% second-submission rate). Lead with the role — Principal Content Strategist at 18F, content as interface in a regulated context — and the operating-model claim (clean 18F → successor-team handoff in 2020 with HCD culture intact) is the leadership-narrative beat. Standard vocabulary throughout; the owner's framework stack is deliberately not surfaced here, per the owner's direction to keep this articulable in plain product / UX / agile language.",
     tags: ["18f", "govtech", "ux", "content_design", "agile", "owner_story"],
@@ -89,6 +189,78 @@ export const stories: Story[] = [
       "How do you work with an opinionated curriculum that wasn't yours?",
       "Tell me about holding additional scope while stepping into a new leadership role.",
     ],
+    starAnswers: [
+      {
+        competency: "Scaling through others",
+        prompt: "Tell me about a time you scaled work through other people rather than yourself.",
+        situation:
+          "I taught the second cohort of State Officer, M.D. — the CMS doctrine pilot for shifting CMS oversight of state Medicaid IT toward outcomes-oriented assessment. Matt Jadud and Princess Ojiaku designed and ran cohort 1; I inherited it for the next round.",
+        task:
+          "Run cohort 2 in a way that built the cascade mechanism through which the doctrine pilot could continue without the original facilitators — not just teach nine more SOs myself.",
+        action:
+          "I developed two Medicaid officers from cohort 1 into co-instructors who taught most of the sessions to nine new SOs. I met with them weekly to coach — preparation, debrief, what to do differently next week — took the front of the room directly on selected segments where the material needed me to model a move the trainers would carry next time, secured the guest speakers, and held the program's narrative through-line so it landed as one arc rather than ten lessons taught by trainers who had been students a year earlier.",
+        result:
+          "Nine SOs through the cohort. Two trainers developed in flight, ready to continue the program. The cascade worked: the SOs who had just learned the material became, with weekly coaching, fluent enough to teach it to their peers — the mechanism through which the doctrine pilot continued without the original facilitators.",
+        learnings:
+          "Producing the program through coaching, curation, and continuity is different from performing it. The leverage was making the peer model work, not delivering the curriculum myself.",
+      },
+      {
+        competency: "Stewarding inherited work",
+        prompt: "Tell me about a time you took over work someone else had started.",
+        situation:
+          "State Officer, M.D. was a dense and opinionated CMS doctrine pilot Matt Jadud and Princess Ojiaku had designed and run as cohort 1. I inherited the program for cohort 2.",
+        task:
+          "Become fluent enough in someone else's authored curriculum — including its specific framing moves like the doctor metaphor, breadth-first priority-row bundling, and the confidence ladder (Reports → Videos → Controlled demos → User access) — to coach others through it inside a two-month window.",
+        action:
+          "Treated the curriculum as authored material whose author was not me, and was explicit about that with the trainers and learners. The substantive framing moves stayed Matt and Princess's; my role was running them in front of learners and helping the cohort-1 graduates teach them next. Held the program's through-line — opening framing, closing reframing, transitions between sessions — so the arc landed as one program rather than ten lessons.",
+        result:
+          "The doctrine pilot continued without the original facilitators. Two trainers developed in flight. Nine SOs through the program.",
+        learnings:
+          "Stewardship is a discipline distinct from authorship. Being honest about whose work you're carrying earns more credibility than rebranding it as yours.",
+      },
+      {
+        competency: "Operating under tight time constraint",
+        prompt: "Tell me about delivering under a tight time constraint.",
+        situation:
+          "Cohort 2 ran May through end of June 2021 — about two months. Synchronous time was an hour twice a week. Most of the actual learning had to happen between sessions.",
+        task:
+          "Make the model work for nine mid-career federal employees with day jobs — and for two trainers learning to teach the material in the same run.",
+        action:
+          "The curriculum was designed with deliberately spare facilitation moves baked in: timers per activity (5 / 20 / 20 / 10), study-buddy pairings, 'work with what you got' authenticity (no demanding new materials from the SO's state to fill a learning exercise), and an action attached to every lesson. I leaned on those moves rather than re-engineering them. Weekly trainer coaching kept the cohort-1 grads calibrated. Guest segments were scheduled tight enough to land cleanly inside the twice-a-week cohort rhythm.",
+        result:
+          "Nine SOs through the cohort. Two trainers developed. Doctrine pilot continued past the founders' cohort.",
+        learnings:
+          "Running an existing model's facilitation moves in real cohort conditions taught me which moves carry the weight — the timer-and-buddy structure was load-bearing in a way I wouldn't have predicted from reading the curriculum cold.",
+      },
+      {
+        competency: "Holding multiple scopes across a role transition",
+        prompt: "Tell me about holding additional scope while stepping into a new role.",
+        situation:
+          "I'd been staffed onto cohort 2 of State Officer, M.D. as a Principal Manager and was promoted into Director and Head of Design at 18F in the weeks before kickoff. The doctrine pilot ran across the early weeks of stepping into that seat.",
+        task:
+          "Run the program well and step into Head of Design without dropping either — the program wasn't the day job, it was held alongside it.",
+        action:
+          "Producing rather than performing made it possible. The cohort-1 trainers ran most of the sessions. My time on the program concentrated on weekly coaching with the trainers, taking the floor on selected segments, securing the guests, and the connective tissue between sessions. None of that required being the front-of-room teacher twice a week — which would have been incompatible with the new role. Holding both meant being deliberate about leverage, not throughput.",
+        result:
+          "Doctrine pilot ran successfully — nine SOs through, two trainers developed. Head of Design transition started cleanly enough that I could expand into the Head of Communications concurrent role and eventually into Acting Chief of Staff for TTS.",
+        learnings:
+          "Holding multiple scopes is a question of leverage architecture, not energy. Choosing where my time multiplies — coaching, curation, continuity — let me hold both without either suffering.",
+      },
+      {
+        competency: "Service design at the program level (principal-level SD)",
+        prompt: "Tell me about designing a service that isn't a digital product.",
+        situation:
+          "State Officer, M.D. as a doctrine pilot was a service before it was a curriculum — a training program designed to develop a federal capability, not just transfer knowledge. The cohort-1 → cohort-2 cascade was a service-design choice as much as a teaching choice.",
+        task:
+          "Run cohort 2 as a service with multiple actors (learners, peer trainers, guest speakers, host institution) and a defined operating model — not as a course I was delivering.",
+        action:
+          "The service blueprint had multiple front-stage and back-stage actors: nine learners as primary front-stage; two cohort-1 graduates as peer trainers (also front-stage to the learners but back-stage to me); guest speakers as occasional front-stage; me as orchestrator, back-stage to learners but front-stage to trainers. The weekly trainer-coaching session was a back-stage service touchpoint with its own design (preparation, debrief, what to do differently next week). The synchronous-time constraint — an hour twice a week over two months — was a designed limit; the asynchronous load was deliberately substantial because the learning had to live between sessions.",
+        result:
+          "Nine SOs through the cohort; two trainers developed in flight; doctrine pilot continued past the founders' cohort. The program ran as a service with each actor's role explicitly designed.",
+        learnings:
+          "At principal level, the distinction between 'running a program' and 'designing a program as service' is the architectural one — service-design instincts apply to capability building as much as to digital products.",
+      },
+    ],
     notes:
       "Use this story when the room needs evidence of: train-the-trainer and scaling-through-others; coaching versus performing; doctrine-pilot stewardship of inherited material; cohort-based facilitation inside tight time windows; federal-government training delivery; holding additional scope across a role transition. CV-precise framing: SOMD is the doctrine pilot for shifting CMS oversight of state Medicaid IT toward outcomes-oriented assessment; the cascade mechanism (cohort-1 grads → cohort-2 co-instructors) is how the doctrine continued without the original facilitators. Numbers to land: cohort 2 (the first run of the peer-cascade after the founders' cohort); 9 SOs in the cohort; 2 peer trainers (cohort-1 graduates); May through end of June 2021; 2×/week × 1hr sessions; the trainers ran most sessions, I coached weekly and taught select segments directly; ran this in the early weeks of stepping into Director and Head of Design at 18F (had been staffed onto the program as a Principal Manager and promoted just before kickoff). Pair with eAPD — same CMS / 18F world, opposite seat (oversight versus artifact). The leadership beat to land is 'producing rather than performing': coaching the trainers, securing the guests, holding the arc, taking the floor selectively — not delivering the curriculum myself. If the room asks about the curriculum's substance, the citable framing moves include the doctor metaphor (preventive checkups vs. heart surgery), the bullshit-detection learning objective, the breadth-first priority-row bundling, the confidence ladder (Reports → Videos → Controlled demos → User access), and the bottom-up story-map inversion — all Matt and Princess's design; my role was running them in front of learners, not authoring them.",
     tags: ["18f", "govtech", "training", "train_the_trainer", "facilitation", "owner_story"],
@@ -126,8 +298,540 @@ export const stories: Story[] = [
       "How do you bridge policy and deployment?",
       "Tell me about how 18F's mission carries forward in your current work.",
     ],
+    starAnswers: [
+      {
+        competency: "0-to-1 / building original IP",
+        prompt: "Tell me about building something from scratch that didn't exist before.",
+        situation:
+          "After eight years at 18F, I founded State Capacity AI in 2025 as an independent advisory practice on AI deployment in public institutions. The flagship is Occupant Indices — three original measurement instruments for the AI market that didn't exist before I built them.",
+        task:
+          "Build measurement infrastructure for federal AI procurement that nobody else was building, with formal methodology that could stand procurement-grade scrutiny.",
+        action:
+          "Built $CPI: Consumer Price Index for AI compute, volume-weighted across 2,000+ models and four workload tiers, January 2025 baseline. $AIU: composite index modeled on the IMF's Special Drawing Rights — token throughput (60%), inferred spend (30%), energy use (10%). $LDI, the most original of the three: substitution-rate methodology combining BLS wage data with $CPI inference cost and federal procurement records to measure where AI is already cheaper than a person and where substitution is actually happening. Built a tool layer on top — the AI Services Price Reasonableness Worksheet (federal procurement determination), an LLM Cost Calculator, an LDI Workload Calculator, a SNAP Eligibility worked example.",
+        result:
+          "The instruments are free and public. Procurement teams in public institutions use them because nobody else is measuring this.",
+        learnings:
+          "Originality alone doesn't drive adoption. What made the indices something procurement teams could use was pairing methodological rigor with operational tools — the worksheet specifically translated measurement into procurement practice.",
+      },
+      {
+        competency: "Identifying and filling a market gap",
+        prompt: "Tell me about a time you saw a problem nobody else was solving.",
+        situation:
+          "Across eight years at 18F — including Principal Content Strategist, Head of Design, Head of Communications, and Acting Chief of Staff for the Technology Transformation Services — the recurring problem became clear: agencies were being asked to make AI procurement and deployment decisions without the measurement infrastructure to do it well, and the consulting market wasn't building that infrastructure either.",
+        task:
+          "Decide whether to wait for someone else to do it or build it myself.",
+        action:
+          "Built Occupant Indices as a public good. $CPI, $AIU, $LDI — each addresses a specific question agencies were being asked but couldn't answer from existing sources. The AI Services Price Reasonableness Worksheet sits on top of $CPI as the procurement-grade application. The State Capacity AI practice provides the advisory wrapper for institutions that need help interpreting and applying the measurements. The indices are free and public so the field of view broadens beyond my client base.",
+        result:
+          "Procurement teams in public institutions use them. The work positions itself as infrastructure rather than as proprietary methodology.",
+        learnings:
+          "Filling an infrastructure gap is harder to monetize than filling a service gap, but it's better leverage. The indices being free and public is what makes the practice's advisory work credible — I'm not selling access to the methodology, I'm selling the experience of applying it.",
+      },
+      {
+        competency: "Cross-sector translation",
+        prompt: "Tell me about translating work across very different audiences.",
+        situation:
+          "State Capacity AI's work spans federal AI procurement (where the audience is contracting officers and program leadership), academic research (Michigan, where I teach Public Mechanics), foundation program officers, journalists writing about AI economics, and senior policy peers — each with very different vocabularies, threshold standards, and success measures.",
+        task:
+          "Build a body of work that is legible to each audience without diluting the methodology for any of them.",
+        action:
+          "The indices themselves stay technically rigorous — formal methodology, weighted composites, public source data, defined baselines. The tool layer (Price Reasonableness Worksheet, LLM Cost Calculator) translates the technical work into procurement-officer register. The Michigan course (UT-402 Public Mechanics) translates it into an academic discipline frame. The Substack and keynote work translates it into general policy register. Each audience gets a version that uses their vocabulary without losing the underlying claim.",
+        result:
+          "Procurement officers use the worksheet; the Michigan course teaches the discipline; the indices are referenced by the broader policy audience.",
+        learnings:
+          "Cross-sector translation works when the technical core is rigorous enough to survive the translation. If the underlying methodology weren't defensible, no amount of register-switching would make it land in policy without losing credibility in procurement.",
+      },
+      {
+        competency: "Building an independent practice / founder beat",
+        prompt: "Tell me about starting something independent.",
+        situation:
+          "I left 18F in 2025 — partly in the wake of broader institutional disruption at TTS — and after a brief stint as Director of Design Operations at Nava, founded State Capacity AI as my own practice.",
+        task:
+          "Build a practice with enough institutional credibility and operational substance to be credible without an employer's brand backing me — at a moment when the federal AI procurement work I'd been part of was structurally unstable.",
+        action:
+          "Anchored the practice in three things. First, the Occupant Indices as public infrastructure — instruments procurement officers could use, built and shipped before asking anyone to engage with the practice. Second, the Michigan academic appointment — Assistant Professor of Practice teaching UT-402 Public Mechanics — gave me an institutional address. Third, the AIGA Portland board presidency, the keynote circuit, and the Public Mechanics frame as a discipline I was actively developing rather than retroactively branding.",
+        result:
+          "The practice exists with a public methodology, an academic appointment, ongoing community leadership, and active advisory work — built in parallel rather than sequenced.",
+        learnings:
+          "An independent practice needs more than a service offering — it needs an institutional address (Michigan), public infrastructure (the indices), and a frame other people can recognize without me explaining it. Building those in parallel was harder than doing them one at a time, but the combination is what makes the practice legible.",
+      },
+      {
+        competency: "Content design for technical infrastructure (principal-level CD)",
+        prompt: "Tell me about content design for a technical product.",
+        situation:
+          "Occupant Indices is published as public-facing infrastructure with methodology documentation, working tools (the Price Reasonableness Worksheet, the LLM Cost Calculator, the LDI Workload Calculator), and a worked example (SNAP Eligibility deep dive applying $LDI end-to-end). The audience spans federal procurement officers, foundation program officers, academic researchers, journalists, and senior policy peers — radically different vocabularies and threshold standards.",
+        task:
+          "Design content for the indices and tools that would survive that audience range without diluting the methodology for any of them.",
+        action:
+          "Built a layered content approach. The indices pages stay technically rigorous — formal methodology, weighted composites, source data, defined baselines, audited data quality. The tools layer translates the technical work into operational practice (the Price Reasonableness Worksheet uses procurement-officer register; the calculators use plain-language inputs). Methodology pages link the two and explain the reasoning behind weighting choices and source selection. Worked examples (SNAP Eligibility) demonstrate the methodology in use rather than as abstract description.",
+        result:
+          "Procurement teams use the worksheet. Policy audiences cite the indices. The same content surface supports multiple register-switching audiences.",
+        learnings:
+          "Content design for public infrastructure is a translation problem at architectural level — the underlying claim has to be defensible at the technical core, and the translation has to be honest about which audience it's speaking to and what it's not promising them. Content design at principal level here is about the layered system, not the individual page.",
+      },
+    ],
     notes:
       "Lead with this story for any AI policy, federal AI, foundation, public-interest-tech, academic, or research-institution context. The Occupant Indices are the credential and the public face; the practice is the revenue mechanism; Public Mechanics at Michigan is the academic frame; 18F is the depth-of-experience that earns the practice authority — in that order. Integrated elevator pitch: 'I built three measurement instruments for AI that didn't exist. $CPI is a Consumer Price Index for AI compute. $AIU is a stock-market index for AI as an economic sector. $LDI is the only running measurement of how often AI is actually replacing federal workers when it gets cheaper than them. They're free, public, and used by procurement teams in public institutions because nobody else is measuring this. State Capacity AI is the practice; Occupant Indices is the instrument set.' Pair with $CPI, $AIU, $LDI, and AI Services Price Reasonableness Worksheet framework cards. Buyers are program officers, peer senior leaders, board chairs — not CIO procurement.",
     tags: ["state_capacity_ai", "ai_measurement", "public_interest", "owner_story", "founder", "current_practice"],
+  },
+  {
+    title:
+      "Portland Digital Corps: Founding and Running an All-Volunteer Civic Tech Cohort Post-18F",
+    referenceSentence:
+      "I founded Portland Digital Corps in March 2025 after 18F closed — an all-volunteer civic tech initiative that ran through July 2025, engaged 50+ active volunteers (from 100+ signups), and delivered six nonprofit websites in partnership with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, and Cape Perpetua Collaborative, with groups from other cities asking to replicate the model.",
+    thirtySecondVersion:
+      "After 18F closed in 2025 I founded Portland Digital Corps as an all-volunteer civic tech initiative running March through July 2025. The structure was intentionally zero-funded and time-bounded. We assembled designers, developers, data viz specialists, strategists, and PMs from 100+ signups into 50+ active volunteers and delivered six nonprofit websites in partnership with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, and Cape Perpetua Collaborative. The model attracted interest from other cities asking to replicate; I committed to publishing a 'building a digital service' guide by end of 2025 so others could run the playbook locally.",
+    twoMinuteVersion:
+      "Portland Digital Corps was the all-volunteer civic tech initiative I founded in March 2025 in the immediate wake of 18F closing. The premise was simple: thousands of skilled civic technologists had just lost their jobs and needed somewhere to keep the practice alive; Portland-area nonprofits needed digital help and couldn't afford the consultant market. The structure was intentionally zero-funded and time-bounded — March through July 2025 — and the explicit goal was both the deliverable work (websites) and sustained community.\n\nI expected modest interest and got 100+ signups. We engaged 50+ active volunteers across designers, developers, data visualization specialists, strategists, and product managers, plus in-person events with strong attendance. The operating model worked because the participation bar was clear (commit to a project, ship it), the cohort had real social infrastructure (in-person events, working group rhythms), and the partner nonprofits had been pre-qualified for fit.\n\nThe cohort delivered six nonprofit websites in partnership with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, and Cape Perpetua Collaborative. Volunteers consistently reported valuing the professional connections as much as the work. Post-cohort interest stayed high; participants requested future iterations; additional groups from around the country contacted us asking to replicate the model in their regions.\n\nThe leadership shape was founder-organizer rather than project-delivery: assembling the volunteer pool, pairing volunteers to nonprofits, holding the cohort rhythm, running in-person convening, communicating the model externally. I committed to publishing a 'building a digital service' guide by end of 2025 so the model could spread without me running each instance.",
+    starAnswers: [
+      {
+        competency: "Building community / institution from scratch in a crisis moment",
+        prompt: "Tell me about building something institutional from scratch.",
+        situation:
+          "18F closed in 2025. Thousands of skilled civic technologists had just lost their jobs and needed somewhere to keep the practice alive; Portland-area nonprofits needed digital help and couldn't afford the consultant market.",
+        task:
+          "Build a temporary civic tech institution that served both populations at once — a zero-funded, time-bounded initiative that delivered real work and sustained the community.",
+        action:
+          "Founded Portland Digital Corps in March 2025 with a five-month time-bound (March through July) and zero-funded structure. Designed the participation model: commit to a project, ship it, with cohort rhythm and in-person events as the connective tissue. Pre-qualified partner nonprofits for fit. Paired volunteers to nonprofit projects. Held the cohort cadence and ran external communications about the model.",
+        result:
+          "100+ signups, 50+ active volunteers across designers, developers, data viz, strategists, PMs. Six nonprofit websites delivered with Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, Cape Perpetua Collaborative. Volunteers reported valuing professional connections as much as the work. Additional groups from other cities reached out asking to replicate.",
+        learnings:
+          "Time-boxing the institution explicitly is what made the cohort sustainable — nobody was committing to indefinite volunteer work. The institutional-shape choice (community + delivery, not just one) is what made volunteers stay engaged after delivering their own project. Committing to publish a replication guide is how the work spreads without me running each instance.",
+      },
+      {
+        competency: "Operating in a crisis moment / founder under uncertainty",
+        prompt: "Tell me about leading through institutional disruption.",
+        situation:
+          "I left 18F in 2025 — partly in the wake of broader institutional disruption at the Technology Transformation Services. The federal civic tech community was scattered; nobody was sure what came next.",
+        task:
+          "Find a way to keep the practice alive and useful that didn't depend on the federal infrastructure that had just collapsed.",
+        action:
+          "Started Portland Digital Corps within weeks. Used my AIGA Portland board role as the convening platform. Made the structure intentionally short (March through July) and intentionally zero-funded so it could exist without grants, contracts, or institutional approvals. Communicated the model openly so others could replicate.",
+        result:
+          "The Corps ran successfully; community got rebuilt around a concrete delivery model; six nonprofit websites shipped; the model got picked up by groups in other cities. Concurrent founding of State Capacity AI gave the federal-AI-procurement work a different vehicle.",
+        learnings:
+          "In a crisis moment the structural choices (time-bound, zero-funded, replicable) matter more than the strategic ones. The community wanted somewhere to do real work together; the Corps was the simplest possible scaffold for that. Designing for replication from day one means the institution isn't dependent on me running it.",
+      },
+    ],
+    frameworksExemplified: [
+      "Centralized AI Enablement Team (Innovation Catalyst Model)",
+      "Train-the-Trainer (peer-cascade model)",
+      "Service Blueprint",
+      "Cohort-Based Learning",
+    ],
+    thinkersInDialogue: [
+      "Code for America (model influence)",
+      "AIGA Portland (convening platform)",
+    ],
+    questionsItAnswers: [
+      "Tell me about building something institutional from scratch.",
+      "Tell me about leading through institutional disruption.",
+      "How do you organize volunteer or community work?",
+      "Tell me about a time you saw a gap and created an institution to fill it.",
+      "What's your relationship to civic technology as a discipline?",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: founder / institution-building muscle; volunteer-cohort organizing at scale; civic technology leadership; operating in crisis or transition; community + delivery hybrid models. Numbers to land: founded March 2025, ran through July 2025; 100+ signups, 50+ active volunteers; six nonprofit websites delivered; specific partner nonprofits (Built Oregon, OSU Uplift Lab, Families for Safe Streets Oregon, Cape Perpetua Collaborative); other cities reached out for replication. Pair with State Capacity AI (concurrent founder narrative) and Centralized AI Enablement Team (Innovation Catalyst Model — similar operating pattern). The 'guide for replication by end of 2025' commitment is the institution-design move worth naming.",
+    tags: ["portland_digital_corps", "civic_tech", "founder", "community", "owner_story"],
+  },
+  {
+    title:
+      "Benefits Determination & Appeals System: A Full-Stack Prototype for Auditable Government Eligibility Decisions",
+    referenceSentence:
+      "In late 2025 I designed and built a full-stack prototype modeling the complete lifecycle of government benefits applications — intake through eligibility determination, caseworker review, and a three-tier appeals process — with policies, decisions, and audit logs stored using IPFS-style content addressing so every record is referenced by a unique identifier tied to a specific policy version.",
+    thirtySecondVersion:
+      "A full-stack prototype I designed and built in late 2025 modeling the complete lifecycle of government benefits decisions — intake, automated eligibility checking, human caseworker review, and a three-tier appeals process. The core architectural move is IPFS-style content addressing for policies, decisions, and audit logs — every record references a unique identifier tied to a specific policy version, so any decision is auditable back to the rules in force when it was made. The interface explicitly distinguishes automated actions from human interventions, records overrides and appeal outcomes, and surfaces decision reasoning without exposing model mechanics. React, TypeScript, Tailwind, AI-assisted eligibility logic.",
+    twoMinuteVersion:
+      "The Benefits Determination & Appeals System is a full-stack prototype I designed and built in late 2025 to model the complete lifecycle of government benefits applications: intake, automated eligibility determination, human caseworker review, and a three-tier appeals process — with separate caseworker and appeals dashboards.\n\nThe motivating problem is that government benefits decisions lack transparency and auditability. Applicants and reviewers need visibility into how eligibility was determined, what factors influenced the outcome, and how appeals were evaluated across review stages. The core architectural move is IPFS-style content addressing: policies, decisions, and audit logs are stored with unique identifiers tied to specific policy versions, so every decision is auditable back to the rules in force when it was made. Policy can change without losing the history of what decisions were made under prior versions.\n\nThe UX explicitly distinguishes automated actions from human interventions, records overrides and appeal outcomes, and surfaces decision reasoning without exposing model internals — a deliberate balance between transparency and complexity. Three-tier appeals modeled the actual administrative-law structure: caseworker reconsideration, supervisor review, administrative law judge.\n\nTech stack: React, TypeScript, Tailwind CSS, AI-assisted eligibility logic, IPFS-based content addressing, separate caseworker and appeals dashboards. This is portfolio work — a prototype that demonstrates the architecture and interaction patterns for the next generation of government benefits work, informing the State Capacity AI advisory practice.",
+    starAnswers: [
+      {
+        competency: "Active builder / shipping prototypes that demonstrate AI-augmented service design",
+        prompt: "Tell me about a recent prototype you built end-to-end.",
+        situation:
+          "In late 2025, after leaving 18F and founding State Capacity AI, I wanted to make concrete what AI-assisted government benefits work could look like without the institutional constraints of building inside an agency.",
+        task:
+          "Design and build a full-stack prototype modeling the complete lifecycle of benefits applications, with explicit attention to auditability of automated decisions.",
+        action:
+          "Built the system in React, TypeScript, and Tailwind, with AI-assisted eligibility logic and IPFS-style content addressing for policies, decisions, and audit logs. Modeled three-tier appeals matching actual administrative-law structure. Designed the UX to distinguish automated from human actions, record overrides and appeal outcomes, and surface decision reasoning without exposing model internals. Built separate caseworker and appeals dashboards reflecting the actual workflow split.",
+        result:
+          "Working prototype demonstrating both the architecture (content-addressed audit trail) and the interaction patterns (transparent automated decisions paired with human review). Portfolio work informing State Capacity AI's advisory practice.",
+        learnings:
+          "Building the prototype taught me which architectural decisions are easy to talk about and which are easy to skip. Content addressing for audit trails is one of those — it sounds simple in a deck and is harder in practice because policy versions, decision references, and immutability constraints have to actually compose. Building it forced the design to be honest.",
+      },
+      {
+        competency: "Designing for auditability in regulated decisions",
+        prompt: "Tell me about designing for transparency in automated decisions.",
+        situation:
+          "Government benefits decisions involve significant administrative law (due process for denied applicants, appeals rights, policy-version provenance). Modern AI-assisted decision systems usually skip the auditability problem.",
+        task:
+          "Design a system that makes automated decisions auditable end-to-end without forcing reviewers to understand model internals.",
+        action:
+          "Used IPFS-style content addressing so each decision references a unique identifier tied to a specific policy version. Policies can change without losing history. The interface surfaces decision inputs, confidence levels, reasoning steps, system limits, and user actions in separate expandable sections. Distinguished automated actions from human interventions visually and in the audit log.",
+        result:
+          "Working prototype demonstrating an auditable-by-default architecture for benefits decisions. The pattern (content-addressed audit + explicit AI/human distinction + reasoning-without-internals UX) is reusable.",
+        learnings:
+          "Auditability is an architectural property, not a UX one — designing it in from the data model is easier than retrofitting it into a system that wasn't built with it. The temptation in AI-assisted systems is to surface model outputs as if they were authoritative; the discipline is building the seams between automated and human action explicitly.",
+      },
+    ],
+    frameworksExemplified: [
+      "Service Blueprint",
+      "Multi-Audience Digital Governance",
+      "AI-Augmented Service Design (Emerging Discipline)",
+      "Algorithmic Impact Assessment & Bias Audit Practice",
+    ],
+    thinkersInDialogue: [
+      "Federal benefits administrative law tradition",
+      "IPFS / content-addressing community",
+    ],
+    questionsItAnswers: [
+      "Tell me about a recent prototype you built end-to-end.",
+      "Tell me about designing for transparency in automated decisions.",
+      "How do you think about AI-augmented service design?",
+      "Show me an example of your active building work.",
+      "Tell me about content addressing or audit-by-design.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: active builder muscle (shipped a full-stack prototype, not just a deck); designing for auditability in regulated decisions; AI-augmented service design in practice; content-addressed architectures. Pair with State Capacity AI Story card, the AI Decision Transparency Dashboard, AI-Augmented Service Design framework card, and the Algorithmic Impact Assessment & Bias Audit Practice card. This is portfolio work — a prototype, not a deployed system. Frame it as a demonstration of architecture and interaction patterns, not as production code.",
+    tags: ["benefits_determination", "prototype", "ai_service_design", "active_builder", "owner_story"],
+  },
+  {
+    title:
+      "AI Decision Transparency Dashboard: A Prototype for How Automated Benefits Decisions Could Be Reviewed",
+    referenceSentence:
+      "A frontend prototype I designed and built in late 2025 examining how automated benefits determinations could be presented clearly to end users — organizing decision inputs, confidence levels, reasoning steps, system limits, and user actions into separate expandable sections, with WCAG AA accessibility patterns and modular component architecture; designed to show automated determinations and human judgment together without exposing model internals.",
+    thirtySecondVersion:
+      "A frontend prototype I designed and built examining how automated benefits decisions could be reviewed by end users. The interface organizes decision inputs, confidence levels, reasoning steps, system limits, and user actions into separate expandable sections — surfacing realistic benefits data alongside explicit uncertainty signals. The design problem: how to show automated determinations and human judgment together without exposing model internals. React, TypeScript, Tailwind CSS, modular component architecture, mock AI decision data, WCAG AA accessibility patterns. Design exploration informing the larger Benefits Determination & Appeals System work and the State Capacity AI advisory practice.",
+    twoMinuteVersion:
+      "The AI Decision Transparency Dashboard is a frontend prototype I designed and built in late 2025 to explore a specific design problem: how to present automated benefits decisions clearly to end users while showing how automated determinations and human judgment could be combined without exposing model internals.\n\nThe interface organizes decision inputs, confidence levels, reasoning steps, system limits, and user actions into separate expandable sections. The structure makes uncertainty visible by default — confidence and system limits aren't buried, they're surfaced as first-class interface elements. Realistic benefits data is presented alongside explicit uncertainty signals so users can see what the system thinks AND what the system can't tell them.\n\nTech stack: React, TypeScript, Tailwind CSS, modular component architecture, mock AI decision data, WCAG AA accessibility patterns. The accessibility commitment was deliberate — automated benefits systems are likely to be used by people with disabilities and people in difficult life circumstances; the interface had to be navigable under those conditions, not optimized for ideal users.\n\nThis was design exploration rather than a deployed system — a prototype demonstrating interface patterns for AI-assisted decision review and contestation. The patterns informed the larger Benefits Determination & Appeals System prototype that followed and inform State Capacity AI's advisory practice on AI in public institutions.",
+    starAnswers: [
+      {
+        competency: "Designing AI interfaces for high-stakes decisions",
+        prompt: "Tell me about designing an interface that surfaces AI uncertainty.",
+        situation:
+          "Automated benefits determinations are high-stakes decisions — they affect whether people get healthcare, food assistance, housing support. Most AI interfaces either hide uncertainty (presenting outputs as authoritative) or expose model internals (which most users can't interpret).",
+        task:
+          "Design an interface that shows automated determinations and human judgment together — with uncertainty surfaced, reasoning visible at the right level, and contestability built in — without exposing model internals.",
+        action:
+          "Organized the interface into separate expandable sections for decision inputs, confidence levels, reasoning steps, system limits, and user actions. Surfaced confidence and system limits as first-class elements, not buried. Presented realistic benefits data alongside explicit uncertainty signals. Used modular component architecture so the patterns could be reused across decision types. Built to WCAG AA accessibility patterns from the start because the users would include people with disabilities and people in difficult life circumstances.",
+        result:
+          "Working prototype demonstrating interface patterns for AI-assisted decision review with built-in contestability. The patterns informed the subsequent Benefits Determination & Appeals System prototype and inform State Capacity AI advisory practice.",
+        learnings:
+          "The hardest part wasn't the interface design — it was deciding what to expose and what to abstract. Model internals would be opaque to most users; pure outputs would be misleading. The middle is reasoning-without-internals: the system tells you what factors it weighed, but not how the weights were computed. That's the design call worth making explicit.",
+      },
+      {
+        competency: "Building accessible AI interfaces by default",
+        prompt: "Tell me about designing for accessibility in an AI context.",
+        situation:
+          "Automated benefits systems are disproportionately used by people with disabilities and people navigating difficult life circumstances. Most AI interface design optimizes for ideal users.",
+        task:
+          "Build the AI Decision Transparency Dashboard to WCAG AA accessibility patterns from the start, not retrofitted.",
+        action:
+          "Used semantic HTML and ARIA patterns appropriate to expandable sections from the first build. Tested keyboard navigation. Designed text and contrast for screen-reader and low-vision use. Made uncertainty signals available in text form, not just visual indicators. Treated accessibility as part of the architectural choice, not as a polish phase.",
+        result:
+          "Prototype built to WCAG AA from the start, with patterns reusable across the larger benefits work.",
+        learnings:
+          "Accessibility built in from the start is cheaper than retrofitted and produces better interfaces for everyone. The discipline at the prototype phase — when the temptation is to skip it because 'it's just a demo' — is what makes the prototype useful as a pattern reference later.",
+      },
+    ],
+    frameworksExemplified: [
+      "AI-Augmented Service Design (Emerging Discipline)",
+      "Algorithmic Impact Assessment & Bias Audit Practice",
+      "Progressive Disclosure",
+    ],
+    thinkersInDialogue: [
+      "WCAG / accessibility standards community",
+      "AI interpretability research",
+    ],
+    questionsItAnswers: [
+      "Tell me about designing an interface that surfaces AI uncertainty.",
+      "Tell me about designing for accessibility in an AI context.",
+      "How do you think about explainability in AI interfaces?",
+      "Show me a prototype you've shipped that demonstrates your AI-design work.",
+      "Tell me about designing for high-stakes decisions.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: AI-interface design at depth; accessibility as architecture, not retrofit; designing for high-stakes regulated decisions; prototype-as-design-exploration. Tech stack details: React, TypeScript, Tailwind CSS, mock AI decision data, WCAG AA. The prototype is portfolio work that informed the larger Benefits Determination & Appeals System and the State Capacity AI advisory practice. Pair with AI-Augmented Service Design and the Algorithmic Impact Assessment & Bias Audit Practice card.",
+    tags: ["ai_decision_transparency", "prototype", "accessibility", "ai_service_design", "owner_story"],
+  },
+  {
+    title:
+      "TACLOG: A Mobile, Offline-First Field Logistics Prototype for the U.S. Military",
+    referenceSentence:
+      "During a U.S. military partner engagement at 18F I designed and prototyped TACLOG, a mobile-first supply requisition app intended to replace slower radio- and paper-based processes in field logistics — with offline-first architecture, queued synchronization, and design decisions driven by forward-deployed field research with service members on tablets and laptops used in actual deployment conditions.",
+    thirtySecondVersion:
+      "TACLOG is a mobile-first logistics requisition prototype I designed for U.S. military field deployment during an 18F engagement. Field logistics still ran on radio and paper; the prototype showed an offline-capable workflow with queued synchronization so requisitions could be made from anywhere connectivity was unreliable. Built in React Native with Expo Router, TypeScript, PostgreSQL with Row Level Security. I conducted forward-deployed field research with service members, stakeholder interviews across command and logistics roles, observation of live requisition practices, task and workflow mapping, and iterative prototyping informed by operational feedback. The key design decisions — request templates, unit-size quantity presets, an explicit offline queue with visible sync state — came directly from observed patterns.",
+    twoMinuteVersion:
+      "TACLOG is a mobile-first supply requisition prototype I designed and built for U.S. military field deployment during an 18F engagement. The problem: field logistics still ran on radio- and paper-based processes that created delays and clarity issues in environments where connectivity is unreliable and deployment conditions are demanding. The goal was a digital workflow that could accelerate requisitions while staying robust to real deployment realities.\n\nAs a designer with a military veteran background, I conducted forward-deployed field research with service members, stakeholder interviews across command and logistics roles, observation of live requisition practices, and task and workflow mapping. The design decisions all came directly from observed patterns: request templates for common resupply scenarios, unit-size quantity presets, and an explicit offline queue that makes synchronization state visible and actionable rather than hidden.\n\nTech stack: React Native with Expo Router, TypeScript, PostgreSQL with Row Level Security, offline-capable workflows with queued synchronization. The prototype was built for tablets and laptops used in the field. Offline-first wasn't an afterthought — it was the architecture, because deployment connectivity is rarely reliable and the system needed to be useful in that condition.\n\nThis was design research + prototype delivery in a constrained operational environment. The veteran background mattered for credibility with service members during research, and the forward-deployed observation work was what made the design decisions defensible rather than imagined.",
+    starAnswers: [
+      {
+        competency: "Forward-deployed research and design in operational environments",
+        prompt: "Tell me about doing research in a constrained operational environment.",
+        situation:
+          "During an 18F engagement with a U.S. military partner, field logistics ran on radio- and paper-based processes that created delays in environments with unreliable connectivity and demanding deployment conditions.",
+        task:
+          "Conduct research with service members in the actual environment they'd use a digital tool in, and design a prototype that would work under those conditions — not under prototype-friendly office conditions.",
+        action:
+          "Conducted forward-deployed field research with service members. Ran stakeholder interviews across command and logistics roles. Observed live requisition practices on the ground. Mapped tasks and workflows from actual operational use. Iterated the prototype on patterns surfaced from operational feedback — request templates for common resupply scenarios, unit-size quantity presets, an explicit offline queue with visible sync state. Veteran background helped on credibility with service members during research.",
+        result:
+          "Mobile-first prototype with offline-first architecture (React Native, Expo Router, TypeScript, PostgreSQL with Row Level Security, queued synchronization) that mapped to actual field practice rather than to imagined practice.",
+        learnings:
+          "Research in operational environments is fundamentally about being there in the conditions the system will be used in. The offline-queue design choice would have been invisible from office prototyping; it was obvious after observing requisition flow in the field. Veteran background was an asset for credibility, but the work was still about being present in the actual conditions.",
+      },
+      {
+        competency: "Designing for environmental constraints (offline-first, deployment-realistic)",
+        prompt: "Tell me about designing within hard technical or operational constraints.",
+        situation:
+          "TACLOG's operational reality: deployment connectivity is unreliable; service members are using tablets and laptops in field conditions; the existing radio-and-paper process worked because it was always available.",
+        task:
+          "Design a digital workflow that was at least as reliable as the paper process in unreliable conditions — not just faster when conditions are good.",
+        action:
+          "Made offline-first the architecture, not the fallback. Built an explicit offline queue with visible sync state so service members could see what was pending and act on it, rather than hidden background sync. Used React Native for tablet / phone targeting, with PostgreSQL + Row Level Security for the backend. Templates and presets reduced the number of decisions service members had to make under load. Designed for unreliable, not for ideal.",
+        result:
+          "Prototype demonstrating an offline-capable requisition workflow with sync state surfaced to users — a pattern reusable beyond TACLOG in other deployed-environment contexts.",
+        learnings:
+          "Offline-first is a design discipline, not a feature flag. The visible queue with explicit sync state was the move that made offline behavior trustable — hidden background sync would have eroded service member trust quickly because they'd never know whether requests were actually in transit.",
+      },
+    ],
+    frameworksExemplified: [
+      "Forward-Deployed Engineering (the motion)",
+      "Service Blueprint",
+      "Technical Discovery & Workflow Mapping",
+    ],
+    thinkersInDialogue: [
+      "Military logistics tradition (radio + paper baseline)",
+      "Forward-deployed engineering practice",
+    ],
+    questionsItAnswers: [
+      "Tell me about doing research in a constrained operational environment.",
+      "Tell me about designing within hard technical or operational constraints.",
+      "How do you approach offline-first design?",
+      "Show me an example of design research at depth.",
+      "Tell me about working with military or other regulated / operational partners.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: design research in operational environments; offline-first / unreliable-connectivity design; forward-deployed work; veteran credibility for military or operational engagements; mobile-first prototype delivery. The Air Force veteran background (1998–2002, 375th Aeromedical Evacuation Squadron, Scott AFB) is the credibility beat that made the forward-deployed research land — surface it. Tech stack details: React Native, Expo Router, TypeScript, PostgreSQL with Row Level Security. Pair with Forward-Deployed Engineering and Service Blueprint.",
+    tags: ["taclog", "military", "design_research", "prototype", "offline_first", "owner_story"],
+  },
+  {
+    title:
+      "Nautilus Staffing Prototype: Consolidating Fragmented Crew Management Data",
+    referenceSentence:
+      "A staffing decision interface I designed and built in September 2025 to consolidate fragmented team assignment data — skills, availability, role requirements, and active assignments — into a single unified system with roster views, timeline visualizations, and comparison tools, built in React, TypeScript, and Supabase using AI-assisted development.",
+    thirtySecondVersion:
+      "Nautilus is a staffing decision prototype I designed and built in September 2025 to study how delivery teams assign personnel when staffing data is fragmented across spreadsheets, tickets, and messages. The interface consolidates skills, availability, role requirements, and active assignments into one place with roster views, timeline visualizations, and comparison tools — informed by crew management software patterns. Built in React, TypeScript, Supabase, using AI-assisted development. A working demo is publicly available.",
+    twoMinuteVersion:
+      "Nautilus Staffing Prototype is a staffing decision interface I designed and built in September 2025 to study a specific problem in delivery-team management: staffing data lives across spreadsheets, tickets, and messages, making comparison and availability tracking hard. The prototype models skills, availability, role requirements, and active assignments in one consolidated place.\n\nThe interface includes multiple complementary views: a roster view for the team-at-a-glance, timeline visualizations for understanding allocation over time, and comparison tools for skill-matching and availability-matching against candidate assignments. The visual language was informed by crew management software patterns (the kind of interfaces used in maritime, aviation, and shift-based industries), which solve the same problem at higher stakes.\n\nTech stack: React, TypeScript, Supabase, with AI-assisted development as part of the prototype-building workflow. The choice to use AI-assisted development in the build itself was deliberate — it's the same loop I'd recommend to teams adopting AI-augmented practice. A working demo is publicly available as portfolio work informing the broader patterns of delivery-team operations design.",
+    starAnswers: [
+      {
+        competency: "End-to-end prototype delivery at principal IC level",
+        prompt: "Tell me about a recent prototype you designed and built end-to-end.",
+        situation:
+          "Delivery teams I'd worked with consistently struggled with staffing decisions because the data lived across spreadsheets, tickets, and messages. The comparison and availability problem looked solved in other industries (crew management, shift-based work) but not in delivery-team contexts.",
+        task:
+          "Design and build a prototype that consolidates the fragmented data into a single decision surface — research, design, and build, end to end, by myself.",
+        action:
+          "Designed the data model first — skills, availability, role requirements, active assignments — to make the consolidation possible. Built complementary interface views (roster, timeline, comparison) because no single view solved the full problem. Borrowed visual patterns from crew management software where the same problem is solved at higher stakes. Implemented in React, TypeScript, Supabase. Used AI-assisted development in the build loop both for speed and as direct experience of the workflow I'd advise teams to adopt.",
+        result:
+          "Working prototype publicly available. The consolidated approach demonstrably reduces the cognitive load on staffing decisions; the patterns are portable to other delivery-team contexts.",
+        learnings:
+          "The most useful design call was treating staffing as a data-model problem first — without the model right, no interface fixes the comparison problem. Using AI-assisted development on the build gave me direct experience of the practice I advise on; it's a different thing to recommend a workflow than to have run it.",
+      },
+      {
+        competency: "Borrowing patterns from adjacent domains",
+        prompt: "Tell me about a time you solved a problem by borrowing from another domain.",
+        situation:
+          "Delivery-team staffing has a comparison-and-availability problem that's been considered solved in maritime, aviation, and shift-based industries for decades through crew management software. Most software-team staffing UIs hadn't borrowed from that lineage.",
+        task:
+          "Bring crew-management software patterns into a delivery-team-staffing interface without losing the domain specifics.",
+        action:
+          "Studied existing crew management patterns — roster views, timeline visualizations, comparison tooling — and identified which translate (the visual language, the data structure) and which don't (the regulatory constraints, the shift-pattern logic). Built the prototype around the translatable patterns while keeping the data model specific to delivery-team realities (skills mix, project-based assignment vs. shift-based, ad-hoc availability).",
+        result:
+          "Interface that resolves the comparison problem in a familiar visual language but with domain-appropriate data underneath.",
+        learnings:
+          "Domain-borrowing works when you're explicit about what translates and what doesn't. The temptation is to either copy the surface (and miss the domain mismatch) or refuse to look at adjacent domains (and re-solve a solved problem). Both fail.",
+      },
+    ],
+    frameworksExemplified: [
+      "AI Spec-Driven Development (Spec + Working Prototype as Source of Truth)",
+      "Service Blueprint",
+    ],
+    thinkersInDialogue: [
+      "Crew management software design lineage (maritime, aviation, shift-based industries)",
+      "Delivery-team operations design",
+    ],
+    questionsItAnswers: [
+      "Tell me about a recent prototype you designed and built end-to-end.",
+      "Tell me about a time you solved a problem by borrowing from another domain.",
+      "Show me an example of your active building work.",
+      "How do you use AI in your build loop?",
+      "Tell me about a data-model decision that drove an interface design.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: end-to-end prototype delivery at principal IC level; active building with AI-assisted development; cross-domain pattern borrowing; data-model-first design thinking. Smaller in scope than the eAPD or Benefits Determination prototypes — better for principal IC craft demonstration than for big architectural-strategy questions. Pair with AI Spec-Driven Development and the Benefits Determination Story card.",
+    tags: ["nautilus", "prototype", "active_builder", "principal_ic", "owner_story"],
+  },
+  {
+    title:
+      "Design For The Public 24: A Two-Day Unconference at the Intersection of Design and Civic Technology",
+    referenceSentence:
+      "I organized and opened Design For The Public 24, a two-day unconference held October 16–17, 2024 in Portland — 80+ attendees traveling from across the country, two venues, in partnership with Technologists for Public Good, coinciding with the first-ever Portland Design Month, which I helped launch as then-Board President of AIGA Portland.",
+    thirtySecondVersion:
+      "Design For The Public 24 was a two-day unconference I organized and opened October 16–17, 2024 in Portland — 80+ attendees from across the country, two venues, in partnership with Technologists for Public Good. The conference brought together civic technologists and the broader design community for conversations about what we build and what the future looks like. It coincided with the first-ever Portland Design Month, which I helped launch as then-Board President of AIGA Portland. The convening established a model for future events in other cities.",
+    twoMinuteVersion:
+      "Design For The Public 24 was a two-day unconference I organized and opened October 16–17, 2024 in Portland, Oregon — 80+ attendees traveling from across the country, two venues, in partnership with Technologists for Public Good.\n\nThe conference brought together civic technologists and the broader design community for substantive dialogue about what we build and what the future looks like. The unconference format was deliberate — participants set the agenda within structured time slots, which lets the conversation go where the practitioners need it rather than where a programmed conference dictates. Pre-event work involved coordinating speakers, selecting venues, programming the schedule, and leading overall event direction.\n\nThe event coincided with the first-ever Portland Design Month, which I helped launch as then-Board President of AIGA Portland. Pairing the unconference with the broader Design Month gave both efforts more reach than either would have had alone — and demonstrated that civic technology and the broader design community could share a calendar without losing their distinct practices.\n\nOutcome was a model for future convenings in other cities and substantive practitioner dialogue across the civic tech / design boundary. The work was organizing and curation, not delivery — a different competency from the prototype work elsewhere in the portfolio.",
+    starAnswers: [
+      {
+        competency: "Designing and running a convening for substantive dialogue",
+        prompt: "Tell me about organizing a convening or event for practitioners.",
+        situation:
+          "Civic technology and the broader design community sit adjacent but rarely share space for substantive dialogue. After several years of overlapping work in both worlds, the conversation needed a deliberate convening.",
+        task:
+          "Design and run a two-day unconference that would bring 80+ practitioners together for the kind of conversation that doesn't happen at typical conferences.",
+        action:
+          "Chose the unconference format deliberately — participants set the agenda within structured time slots, which lets the conversation go where practitioners need it rather than where a programmed conference dictates. Coordinated speakers, selected two venues, programmed the schedule, opened with the keynote. Partnered with Technologists for Public Good. Timed the event to coincide with the first-ever Portland Design Month (which I helped launch as AIGA Portland Board President), so both efforts amplified each other.",
+        result:
+          "80+ attendees traveled from across the country. Substantive practitioner dialogue across the civic tech / design boundary. Established a model for future convenings in other cities.",
+        learnings:
+          "Unconference format is harder than programmed conference because it requires more trust in the practitioner audience — and that's exactly what makes it useful when the audience is senior practitioners who know what they want to talk about. Timing the event with Portland Design Month was the most leveraged single choice; both efforts reached audiences the other would have missed.",
+      },
+    ],
+    frameworksExemplified: [
+      "Cohort-Based Learning",
+      "Centralized AI Enablement Team (Innovation Catalyst Model)",
+    ],
+    thinkersInDialogue: [
+      "Technologists for Public Good (partner organization)",
+      "AIGA Portland community",
+      "Unconference / Open Space tradition",
+    ],
+    questionsItAnswers: [
+      "Tell me about organizing a convening or event for practitioners.",
+      "Tell me about your community-building work.",
+      "How do you create space for substantive dialogue in a field?",
+      "What's your relationship to the design community outside your day job?",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: community organizing at scale; convening design (unconference format choice); practitioner-network-building; cross-community connection (civic tech + broader design). Smaller story than the prototypes or 18F-scale work; supports a specific competency around organizing and curation rather than craft delivery. Pair with Portland Digital Corps (parallel community-building work) and the AIGA Portland board role as context.",
+    tags: ["design_for_the_public", "community", "convening", "civic_tech", "owner_story"],
+  },
+  {
+    title:
+      "18F Website Redesign: Content-First, Incremental Refresh in a Tight Constraint",
+    referenceSentence:
+      "In September 2023 I led a content-first refresh of 18f.gsa.gov as concurrent Head of Design and Head of Strategic Communications, with no dedicated team budget — sequencing the work as small, discrete pieces that could be completed alongside the agency's ongoing federal-engagement delivery, in three months, with content clarity first, structural updates second, visual and platform changes last.",
+    thirtySecondVersion:
+      "I led a content-first refresh of 18f.gsa.gov in three months in 2023, as concurrent Head of Design and Head of Communications, with no dedicated team budget. The sequencing — content clarity first, structure second, visual and platform third — let the design team work in short cycles alongside ongoing client delivery, never stopping to ship the refresh. The repositioning surfaced 18F as a capacity-building organization (not a consultancy), made product and service offerings legible, and reset the publishing model to encourage staff transparency about their work. Results: increased traffic, higher output, renewed external interest. Much of the public record of 18F's work after the office closed traces back to this effort.",
+    twoMinuteVersion:
+      "The 18F Website Redesign in September 2023 was a content-first refresh of 18f.gsa.gov delivered in three months while I was holding concurrent Head of Design and Head of Strategic Communications roles. The fundamental constraint: the website had become misaligned with the organization's actual work and identity, the design team was fully allocated to federal-agency delivery, and there was no dedicated budget for a refresh project.\n\nThe approach was disciplined and phased. Content clarity came first — repositioning 18F as a capacity-building organization rather than a consultancy, surfacing product and service offerings with legible practices, resetting the publishing model to encourage staff transparency about their work. Structural updates followed once the content model was in place. Visual and platform changes came last, after content and structure decisions had locked.\n\nThe team allocation problem got solved by sequencing the work as small, discrete pieces that could be completed alongside ongoing client delivery — never asking the design team to stop their primary work, always shipping incrementally. We worked in short cycles, reviewing progress frequently and adjusting scope as needed.\n\nOutcomes were measurable: increased traffic, higher output of staff publications, renewed external interest. Critically, much of the public record of 18F's work after the office closed in 2025 traces back to this 2023 refresh — the publishing-model reset is what made the work survivable as a public record.",
+    starAnswers: [
+      {
+        competency: "Principal IC craft applied under team-allocation constraint",
+        prompt: "Tell me about delivering significant design work when you couldn't dedicate a team to it.",
+        situation:
+          "18F's website was misaligned with the organization's actual work and identity by 2023. The design team was fully allocated to federal-agency delivery; there was no budget for a refresh project; communications constraints had prevented clear public explanation of the agency's mission.",
+        task:
+          "Refresh the site in three months without stopping client delivery and without asking for resources I wasn't going to get.",
+        action:
+          "Sequenced the work content-first, then structural, then visual and platform — so each phase could ship value without waiting for the next. Assigned small, discrete pieces of work designers could complete alongside their ongoing client delivery. Worked in short cycles with frequent review and scope adjustment. The content repositioning came first because it was the highest-leverage move: 18F as capacity-building, not consultancy; product and service offerings with legible practices; staff publishing reset to encourage transparency.",
+        result:
+          "Site refreshed in three months. Increased traffic, higher output, renewed external interest. Publishing-model reset proved durable — much of the public record of 18F's work after the office closed in 2025 traces back to this 2023 effort.",
+        learnings:
+          "Content-first sequencing was the move. If we'd started with visual or platform changes, the content misalignment would have shipped along with them. The constraint of no dedicated team forced incremental delivery, which produced better work than a big-bang refresh would have — content decisions had time to settle before structure and visual choices locked.",
+      },
+      {
+        competency: "Designing the publishing model, not just the site",
+        prompt: "Tell me about a redesign where the operating model was the deliverable.",
+        situation:
+          "The 18F site was a refresh target, but the harder problem was the publishing model — the constraints that had prevented staff from writing publicly about their work were producing a thinner public record than the work deserved.",
+        task:
+          "Refresh the site in a way that fixed the publishing model, not just the layout.",
+        action:
+          "Made the publishing reset part of the refresh scope. Created structural changes enabling ongoing iteration post-launch — not just a finished site. Repositioned 18F's identity in the content (capacity-building organization, not consultancy) so the publishing baseline was set by the new framing rather than the old one. Surfaced products and services with legible practices so staff writing had clearer hooks to attach their work to.",
+        result:
+          "Renewed staff publishing output after launch. The publishing-model change is what made much of 18F's late-tenure public record survivable — when the office closed in 2025, the public archive was richer than it would have been without the 2023 reset.",
+        learnings:
+          "The redesign that makes the publishing model better is more valuable than the redesign that makes the layout prettier. Treating the operating model (who publishes what, how, with what framing) as the deliverable instead of treating it as a separate problem solved the harder problem first.",
+      },
+    ],
+    frameworksExemplified: [
+      "Principal-Level Content Design & IA (Beyond Copywriting)",
+      "Dual-Track Agile",
+      "Multi-Audience Digital Governance",
+    ],
+    thinkersInDialogue: [
+      "18F practice culture",
+      "Government Digital Service (GDS) content-first redesign tradition",
+    ],
+    questionsItAnswers: [
+      "Tell me about delivering significant design work when you couldn't dedicate a team to it.",
+      "Tell me about a redesign where the operating model was the deliverable.",
+      "How do you sequence a refresh project?",
+      "Tell me about content-first design.",
+      "Show me an example of incremental delivery on a project that could have been a big-bang.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: principal IC craft applied to a leadership constraint (concurrent Head of Design + Head of Communications, no dedicated team); content-first sequencing on a refresh; incremental delivery under resource constraint; designing the operating model alongside the artifact. The 'public record of 18F after the office closed traces back to this refresh' line is the durability proof point. Pair with Principal-Level Content Design & IA and Dual-Track Agile.",
+    tags: ["18f_redesign", "content_first", "incremental_delivery", "principal_ic", "owner_story"],
+  },
+  {
+    title:
+      "City of Bloomington Website Redesign: Principal Designer on a Municipal Platform Migration (2018 Best of Indiana Award)",
+    referenceSentence:
+      "As Principal Designer leading a three-person core team (developer, project manager, designer), I led the full-site redesign and platform migration of the City of Bloomington's website — research with residents and staff, paper prototypes tested in a supermarket where residents voted on navigation and language comprehension, IA reorganized around resident tasks rather than departmental silos — earning the 2018 Best of Indiana Award for Best Application Serving the Public and featured at DrupalCon 2018 in Nashville.",
+    thirtySecondVersion:
+      "I led the City of Bloomington's full website redesign and platform migration in 2018 as Principal Designer on a three-person core team. The city's aging in-house CMS had been around a decade; departments were duplicating content to maintain visibility; each office had a single person managing all departmental content as a fragile dependency. I owned design and service outcomes end-to-end — research, IA, interface design, content migration. The IA reorganized around resident tasks rather than departmental silos. Public engagement included paper prototypes tested in a supermarket where residents voted on navigation and language comprehension. Outcomes: 11% decrease in exit rates, 93% decrease in bounce rate, 50%+ mobile traffic, 2018 Best of Indiana Award for Best Application Serving the Public, featured at DrupalCon 2018.",
+    twoMinuteVersion:
+      "The City of Bloomington Website Redesign in 2018 was a full-site redesign and platform migration where I served as Principal Designer leading a three-person core team (developer, project manager, designer). The city operated an aging in-house CMS that had existed for a decade; departments were creating duplicate content to maintain visibility; each office relied on a single person managing all departmental content — a fragile dependency. The infrastructure needed modernization to integrate the city's open-source tools and improve resilience.\n\nI owned design and service outcomes end-to-end, including research, information architecture, interface design, and content migration strategy. The research worked with residents and staff: direct interviews and stakeholder mapping across departments. Public engagement included paper prototypes tested in a supermarket where residents voted on navigation and language comprehension — research literally meeting users where they were, not asking them to come to us. I also integrated research contributions from a UX graduate student from Indiana University as part of the work.\n\nThe IA was the load-bearing decision: reorganized around resident tasks and questions rather than departmental silos. That choice solved both the duplicate-content problem (departments were duplicating because the structure forced them to maintain visibility) and the fragile-content-owner problem (task-oriented governance distributes ownership differently than departmental governance).\n\nOutcomes were measurable: 11% decrease in exit rates, 93% decrease in bounce rate, more than 50% of traffic from mobile devices. The project earned the 2018 Best of Indiana Award for Best Application Serving the Public and was featured at DrupalCon 2018 in Nashville.",
+    starAnswers: [
+      {
+        competency: "Principal designer end-to-end on a complex municipal redesign",
+        prompt: "Tell me about a redesign you led end-to-end as the principal designer.",
+        situation:
+          "The City of Bloomington was running an aging in-house CMS that had existed for a decade. Departments were duplicating content because the structure forced them to maintain visibility; each office had a single content owner as a fragile dependency.",
+        task:
+          "Lead a full-site redesign and platform migration end-to-end — research, IA, interface design, content migration — on a three-person core team.",
+        action:
+          "Owned design and service outcomes end-to-end. Research worked with residents and staff: direct interviews, stakeholder mapping across departments. Public engagement included paper prototypes tested in a supermarket where residents voted on navigation and language comprehension. The IA was reorganized around resident tasks and questions rather than departmental silos — that decision solved the duplicate-content problem and the fragile-content-owner problem at the same time. Integrated research contributions from a UX graduate student from Indiana University as part of the work.",
+        result:
+          "11% decrease in exit rates. 93% decrease in bounce rate. More than 50% of traffic from mobile devices. 2018 Best of Indiana Award for Best Application Serving the Public. Featured at DrupalCon 2018 in Nashville.",
+        learnings:
+          "Task-oriented IA was the load-bearing decision. It solved two problems (duplicate content + fragile owners) with one change because both problems came from departmental-silo IA. Generally: the IA decision compounds — get it right and downstream content governance gets easier; get it wrong and you spend years working around it.",
+      },
+      {
+        competency: "Meeting users where they are (research methodology)",
+        prompt: "Tell me about a research method that worked unusually well.",
+        situation:
+          "Municipal residents — the actual users — aren't easy to recruit for usability sessions. They have jobs, families, and limited reason to come to City Hall to do research with a designer.",
+        task:
+          "Get meaningful research feedback from residents about navigation and language without forcing them to come to us.",
+        action:
+          "Took paper prototypes to a supermarket. Asked residents to vote on navigation choices and language comprehension. The setting did most of the work — residents were already there, the research felt incidental rather than imposed, and the language-comprehension testing surfaced gaps that interview-room research would have missed because residents in a supermarket are reading signage in the same casual mode they read government websites.",
+        result:
+          "Concrete research input that drove navigation and language decisions in the redesign. The 11% / 93% / 50%+ outcomes were partly enabled by these research choices because the IA and language were tested against actual resident reading behavior, not aspirational behavior.",
+        learnings:
+          "The research method has to match the user's actual mode of using the product. Government websites get used in the same casual, scanning mode residents use to read supermarket signage; the research method should mirror that. Most usability research overshoots in the other direction — too formal, too high-engagement, missing what casual users actually do.",
+      },
+    ],
+    frameworksExemplified: [
+      "Principal-Level Content Design & IA (Beyond Copywriting)",
+      "Service Blueprint",
+      "Continuous Discovery (Torres)",
+      "Multi-Audience Digital Governance",
+    ],
+    thinkersInDialogue: [
+      "Government Digital Service (GDS) task-oriented IA tradition",
+      "Civic UX practice (Code for America, Nava)",
+      "Drupal community",
+    ],
+    questionsItAnswers: [
+      "Tell me about a redesign you led end-to-end as the principal designer.",
+      "Tell me about a research method that worked unusually well.",
+      "How do you design an IA that solves multiple problems at once?",
+      "Show me an example of award-winning civic design work.",
+      "Tell me about meeting users where they are.",
+    ],
+    notes:
+      "Use this story when the room needs evidence of: principal designer end-to-end ownership on a complex project; task-oriented IA as a load-bearing decision; novel research methods (supermarket prototype voting); award-winning civic design; small-team delivery. Numbers to land: 11% decrease in exit rates, 93% decrease in bounce rate, 50%+ mobile traffic, 2018 Best of Indiana Award. Pair with Principal-Level Content Design & IA and Multi-Audience Digital Governance. This is the cleanest principal-IC-craft story in the portfolio — small team, end-to-end ownership, measurable outcomes, novel methods.",
+    tags: ["bloomington_redesign", "principal_ic", "municipal", "award_winning", "owner_story"],
   },
 ];
