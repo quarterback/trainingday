@@ -6620,4 +6620,265 @@ export const frameworks: Framework[] = [
       "Distributed design leadership practice at European banks and US tech with offshore design centers 2015–2026; design-ops literature on multi-country team operating models.",
     tags: ["design_leadership", "multi_country", "global", "framework"],
   },
+
+  // —— Critical-technologist / urbanist practice (self-positioning lineages) —
+
+  {
+    name: "Critical-Technologist Self-Statement Construction (Templates, Verbs, Openers)",
+    category: "self_positioning",
+    oneLiner:
+      "The structural patterns and verb stack used by critical technologists, urbanists, and artist-practitioners to write self-statements that confer artist-style latitude on critical-systems practice — invent a noun rather than accept a title, list methods as material, name an object of attention at the level of conditions, declare a stance without hedging.",
+    whenToUse:
+      "Writing bio / about / artist statement / practice description in the register of Mattern, Easterling, Ọnụọha, Lavigne, Brain, Crawford, Paglen — instead of corporate design-leader register. For art-adjacent, academic, civic-tech, public-interest, or foundation audiences where corporate register undersells the work.",
+    vocabulary: [
+      "spanning / intersection opener",
+      "tripartite identity",
+      "whose work… construction",
+      "methodology-led opener",
+      "political / ethical commitment opener",
+      "biographical-into-practice opener",
+      "first-person manifesto",
+      "minimalist (\"X is the work of X\")",
+      "invent-a-noun pattern",
+      "methods-as-material",
+      "object-of-attention at level of conditions",
+      "declare a stance without hedging",
+    ],
+    howToDropIn:
+      "\"Construction patterns: 'X is a [noun] whose work [verbs] [topic] through [methodology].' (Ọnụọha, Brain, Crawford). 'X operates in the spaces between [discipline], [discipline], and [discipline].' (Young). Tripartite identity: 'X is a [noun], [noun], and [noun].' (Bridle, Jain, Schwulst). Verbs grouped by register — analytic (examines, interrogates, makes legible), mapping (charts, traces, inventories), sensory (tends, holds, weaves), refusal (refuses, reclaims, restores), convening (stages, hosts, choreographs), speculative (probes, conjures, fictions), making (crafts, assembles). The four cross-cutting moves: invent a noun ('experimental geographer,' 'speculative architect,' 'eccentric engineer'), list methods as material ('rankings, simulations, indices, convenings'), name an object of attention at the level of conditions ('material conditions,' 'infrastructural labor,' 'missing datasets,' 'dark matter'), and declare a stance without hedging ('we are the institution,' 'a city is not a computer,' 'art is a state of encounter').\"",
+    commonPhrasing: "Self-statement, about page, artist bio, practice description.",
+    notes:
+      "Borrowable openers for the user's stated lineage: '[Name] is a critical technologist and urbanist whose practice spans measurement systems, mechanism design, civic infrastructure, and convening — treating the city, the institution, and the algorithm as shared material.' Or: 'Through ranking systems, economic indices, simulations, and convenings, [Name] investigates how technology and cities are built, and who they are hollowed out for.' Or biographical: '[Name] is a critical technologist and urbanist who was once Head of Design at 18F, and now…' Or minimalist after Mattern: '[Name] is the work of [Name].' Pair with Critical-Technologist Phrase Bank, the lineage cards, and the existing Story cards as evidence the practice has the receipts.",
+    source:
+      "Bio and about-page survey: Mattern (Words in Space), Easterling, Ọnụọha, Lavigne, Brain, Crawford, Paglen, Young, Bridle, Jain, Schwulst, Burrington, Mina, Seu, Coldicutt; pedagogues Gilda Williams and Triple Canopy's 'International Art English.'",
+    tags: ["self_positioning", "self_statement", "critical_technologist", "framework"],
+  },
+  {
+    name: "Critical-Technologist Phrase Bank (Reading Systems, Medium of Practice, Stance)",
+    category: "self_positioning",
+    oneLiner:
+      "A consolidated phrase bank pulled from the critical-technologist / urbanist / artist-practitioner register — direct quotes and recurrent constructions usable in self-statements, talk titles, project framings, and proposals. Organized by what the phrase does rather than who said it.",
+    whenToUse:
+      "Drafting self-statements, talk titles, project descriptions, foundation proposals, or any writing that needs to land in the artist-practitioner register rather than corporate-design register. As a reference when stuck on phrasing.",
+    vocabulary: [
+      "make legible / making legible (Hill, Mattern)",
+      "expose moments of imbalance and deception (Critical Engineering)",
+      "peer inside the black box (Oliver)",
+      "the stories infrastructure tells itself (Easterling)",
+      "surface the frequently opaque political and economic conditions (Lavigne)",
+      "draw attention to invisible infrastructural labor (Mattern)",
+      "exploring and visualizing the invisible (Joler)",
+      "blank spots on the map (Paglen)",
+      "missing datasets (Ọnụọha)",
+      "art is a state of encounter (Bourriaud)",
+      "form can be defined as a lasting encounter (Bourriaud)",
+      "convening as medium / generosity as a medium (Obrist)",
+      "tools for thinking (Tharp)",
+      "diegetic prototypes / things that tell stories (Sterling, Bleecker)",
+      "tentative probes (McLuhan)",
+      "legibility / imageability / paths, edges, districts, nodes, landmarks (Lynch)",
+      "infrastructure for the soul / contemplative ritual in public life (Chang)",
+      "placekeeping / placeknowing / the poesis, policy, and politic of place (Bedoya)",
+      "third place (Oldenburg)",
+      "infrastructure space / active form / disposition / extrastatecraft (Easterling)",
+      "change the chemistry of the soil (Easterling)",
+      "dark matter / Trojan Horses / matter to meta (Hill)",
+      "stewardship (Boyer / Cook at HDL)",
+      "infrastructuring (Ehn)",
+      "people as infrastructure / architectures of endurance (Simone)",
+      "a city is not a computer / urban intelligence / code and clay, data and dirt / maintenance and care (Mattern)",
+      "I name necessity art (Ukeles)",
+      "I don't explain — I explore (McLuhan)",
+      "we are the institution (Fraser)",
+      "good ancestors (Long Now)",
+      "criticism in practice (Wagner)",
+      "all organizing is science fiction (Imarisha)",
+      "knowing how to work on the world (Easterling)",
+    ],
+    howToDropIn:
+      "\"Use these as primary-source quotation when the writing needs to land at the right register — not as ornament but as the actual claim. The strongest move is using one phrase as a frame that the surrounding sentence delivers on: 'My practice makes legible the dark matter of public-sector technology decisions — the procurement standards, organizational habits, and unwritten conventions that determine whether the visible design work survives or doesn't.' Avoid stacking too many phrases into one paragraph; one or two per page is the right density.\"",
+    commonPhrasing: "Phrase bank, critical-technologist register, artist-practitioner vocabulary.",
+    notes:
+      "The phrase bank is for use, not display. Quotation marks signal the source; the writing earns the right to use the phrase by doing the work the phrase names. Pair with Critical-Technologist Self-Statement Construction and the lineage cards.",
+    source:
+      "Vocabulary excavation across critical-technologist, urbanist, social-practice, speculative-design, and architectural-criticism registers. Phrases attributed inline.",
+    tags: ["self_positioning", "phrase_bank", "critical_technologist", "framework"],
+  },
+  {
+    name: "Probes / Infrastructure Space / Maintenance / Dark Matter (Critical-Systems Lineage)",
+    category: "critical_systems",
+    oneLiner:
+      "The four-figure lineage furnishing the core vocabulary for a critical-technologist and urbanist practice that reads institutional, infrastructural, and computational systems as material — Marshall McLuhan's 'probes' as method, Keller Easterling's 'infrastructure space' and 'disposition' as objects of attention, Shannon Mattern's 'a city is not a computer' and 'maintenance and care' as posture, Dan Hill's 'dark matter' and 'Trojan Horses' as tactics.",
+    whenToUse:
+      "Self-positioning, talk framing, and project descriptions where the practice needs to read systems and material conditions rather than ship discrete products. The richest single triangulation for a critical-technologist-urbanist practice that ranks, measures, convenes, and writes about institutions.",
+    vocabulary: [
+      "probes (not theories) — McLuhan",
+      "the medium is the message",
+      "figure / ground, percept vs. concept",
+      "pattern recognition",
+      "infrastructure space — Easterling",
+      "active form vs. object form",
+      "disposition (latent tendencies)",
+      "extrastatecraft",
+      "spatial products / the Zone / matrix space",
+      "knowing how to work on the world",
+      "a city is not a computer — Mattern",
+      "urban intelligence",
+      "code and clay, data and dirt",
+      "maintenance and care",
+      "curated decay",
+      "dark matter — Hill",
+      "Trojan Horses / MacGuffins",
+      "from matter to meta",
+    ],
+    howToDropIn:
+      "\"McLuhan's probes give the method: 'tentative probes, as means of insight, of pattern recognition, rather than to use them in the traditional and sterile sense of classified data, categories, containers.' Easterling gives the object: infrastructure space, active form, disposition — 'the stories infrastructure tells itself.' Mattern gives the posture: a city is not a computer; what we really need to study is how the world gets put back together. Hill gives the tactics: dark matter (organizational culture, policy, finance models, governance, habits) and Trojan Horses (projects that move dark matter under cover of doing something else).\"",
+    commonPhrasing: "Critical-systems lineage, infrastructure-as-medium, maintenance and repair as practice.",
+    notes:
+      "The five concepts together — probes, infrastructure space, disposition, dark matter, maintenance — furnish a complete vocabulary for a practice that ranks, measures, convenes, and writes about institutions. For the State Capacity AI / Occupant Indices / Public Mechanics work specifically: the indices are probes; the federal AI procurement landscape is infrastructure space; the Public Mechanics frame is the dark matter the indices make legible; the worksheet is a Trojan Horse that moves dark matter under cover of solving a price-reasonableness determination. Pair with Critical-Technologist Self-Statement Construction, Critical-Technologist Phrase Bank, and the State Capacity AI Story card.",
+    source:
+      "Marshall McLuhan, *The Medium Is the Massage* (1967), *Understanding Media* (1964); Keller Easterling, *Extrastatecraft* (2014), *Medium Design* (2021); Shannon Mattern, *A City Is Not a Computer* (2021), 'Maintenance and Care' (Places Journal, 2018); Dan Hill, *Dark Matter and Trojan Horses* (Strelka Press, 2012).",
+    tags: ["critical_systems", "lineage", "urbanism", "framework"],
+  },
+  {
+    name: "Social Sculpture / Relational Aesthetics / Arte Útil / Convening as Medium",
+    category: "social_practice",
+    oneLiner:
+      "The lineage that frames convening, salon-running, capacity-building, and institutional-shaping as artistic medium — Joseph Beuys's 'social sculpture' and the expanded concept of art; Nicolas Bourriaud's relational aesthetics and 'art is a state of encounter'; Tania Bruguera's Arte Útil and the eight criteria including 'operate on a 1:1 scale' and 'replace authors with initiators and spectators with users'; Hans Ulrich Obrist's 'generosity as a medium.'",
+    whenToUse:
+      "Self-positioning when the practice includes salons, gatherings, cohorts, capacity building, train-the-trainer programs, community organizing, or any work where the convening itself is the medium. For framing Portland Digital Corps, Design For The Public 24, the SOMD doctrine pilot, the Years Ahead 2026 conference, and similar work in artist-practitioner register.",
+    vocabulary: [
+      "social sculpture / Soziale Plastik (Beuys)",
+      "expanded concept of art",
+      "every human being is an artist",
+      "thinking forms",
+      "social interstice (Bourriaud)",
+      "art is a state of encounter",
+      "form as lasting encounter",
+      "microtopias / arenas of exchange / conviviality",
+      "a tenant of culture",
+      "Arte Útil (Bruguera)",
+      "feasible utopia",
+      "replace authors with initiators",
+      "operate on a 1:1 scale",
+      "respond to current urgencies",
+      "generosity as a medium (Obrist)",
+      "curating is a way of working on memory",
+      "social practice / socially engaged art",
+      "new genre public art (Lacy)",
+      "dialogical aesthetics (Kester)",
+      "the social turn (Bishop)",
+    ],
+    howToDropIn:
+      "\"Beuys's social sculpture gives the frame: 'every human being is an artist' applied to institution-shaping. Bourriaud gives the relational language: art is a state of encounter; the work as social interstice; microtopias as the scale of the work. Bruguera's Arte Útil gives the operational criteria — 1:1 scale, replace authors with initiators, respond to current urgencies, feasible utopia. Obrist gives the salon and convening tradition: the kitchen show, brutally early breakfasts, generosity as a medium, curating as protest against forgetting. The lineage names convening and capacity-building as artistic practice with their own criteria — not as side activities supporting other work.\"",
+    commonPhrasing: "Social sculpture, relational aesthetics, Arte Útil, convening as medium.",
+    notes:
+      "For framing Portland Digital Corps (Arte Útil-shaped — 1:1 scale, respond to current urgencies, replace authors with initiators), Design For The Public 24 (Obrist's convening / salon tradition), the SOMD doctrine pilot (Beuysian social sculpture in federal training), and any future small-firm or institute work as a continuation of this lineage. Claire Bishop's critique (The Social Turn) is the necessary corrective against hand-wringing 'doing good in a community' versions of the practice. Pair with Critical-Technologist Self-Statement Construction and Critical-Technologist Phrase Bank.",
+    source:
+      "Joseph Beuys lectures and writings 1970s–80s; Nicolas Bourriaud, *Relational Aesthetics* (1998 / 2002); Tania Bruguera, Arte Útil writings and Asociación de Arte Útil archive; Hans Ulrich Obrist interviews and *Ways of Curating*; Suzanne Lacy, *Mapping the Terrain*; Pablo Helguera, *Education for Socially Engaged Art*; Claire Bishop, *Artificial Hells*; Grant Kester, *Conversation Pieces*.",
+    tags: ["social_practice", "relational_aesthetics", "convening", "lineage", "framework"],
+  },
+  {
+    name: "Speculative / Critical / Adversarial Design Lineage",
+    category: "speculative_design",
+    oneLiner:
+      "The lineage of design as inquiry rather than problem-solving — Anthony Dunne and Fiona Raby's critical design and the A/B manifesto; Bruce Sterling's design fiction and 'diegetic prototypes'; Stuart Candy's experiential futures and the experiential-futures ladder; Jim Dator's alternative futures and 'Dator's Law'; Carl DiSalvo's adversarial design and political agonism; the necessary decolonial corrective from Luiza Prado and Pedro Oliveira.",
+    whenToUse:
+      "Self-positioning and project framing when the work is design as inquiry / probe / provocation rather than as solution-shipping. For framing Occupant Indices ($CPI / $AIU / $LDI as probes that explore questions rather than solve problems), the AI Decision Transparency Dashboard (Dunne & Raby-shaped critical prototype), the Benefits Determination & Appeals System (diegetic prototype demonstrating a possible future of government benefits), and the Public Mechanics frame as adversarial design applied to public-sector technology.",
+    vocabulary: [
+      "critical design (Dunne & Raby)",
+      "speculative design",
+      "design fiction (Sterling)",
+      "diegetic prototypes",
+      "tells worlds rather than stories",
+      "experiential futures (Candy)",
+      "the experiential futures ladder: setting → scenario → situation → stuff",
+      "The Thing From the Future",
+      "alternative futures (Dator)",
+      "Dator's Law (any useful idea about the future should appear ridiculous)",
+      "Manoa four futures: continued growth, collapse, discipline, transformation",
+      "adversarial design (DiSalvo)",
+      "agonism (Mouffe)",
+      "perceptual bridge (Auger)",
+      "discursive design (Tharp)",
+      "decolonising design (Prado & Oliveira)",
+      "questioning the 'critical' in speculative & critical design",
+    ],
+    howToDropIn:
+      "\"Dunne & Raby give the A/B opposition: design as problem solving / design as problem finding; design as solution / design as medium; design for production / design for debate. Sterling and Bleecker give the diegetic prototype — a thing that tells a world rather than a story. Candy gives the experiential-futures ladder for building scenarios into tangible artifacts and immersive encounters. Dator's Law gives license to propose the ridiculous when the ridiculous is what the future actually calls for. DiSalvo's adversarial design gives the political register: design that challenges beliefs, values, and what is taken to be fact. Prado and Oliveira give the corrective against undiscerning privilege in the speculative-design canon.\"",
+    commonPhrasing: "Critical design, speculative design, design fiction, experiential futures, adversarial design.",
+    notes:
+      "For framing Occupant Indices as probes (in the McLuhan + Dunne & Raby sense) rather than as products; the AI Decision Transparency Dashboard as a critical-design prototype that asks 'what if AI decision interfaces had to surface uncertainty by default'; the Benefits Determination & Appeals System as a diegetic prototype demonstrating a possible architectural future. The decolonial corrective from Prado and Oliveira matters when the practice spans federal / academic / public-interest audiences. Pair with Strategic Foresight & Insight Analyst (Corporate / Brand) and Foresight Methodology Stack.",
+    source:
+      "Anthony Dunne & Fiona Raby, *Speculative Everything* (2013), Critical Design FAQ; Bruce Sterling on design fiction; Julian Bleecker / Near Future Laboratory; Stuart Candy, dissertation and *The Thing From the Future*; Jim Dator and the Manoa School; Carl DiSalvo, *Adversarial Design* (2012); Bruce & Stephanie Tharp on discursive design; Luiza Prado & Pedro Oliveira, 'Questioning the Critical in Speculative & Critical Design.'",
+    tags: ["speculative_design", "critical_design", "design_fiction", "lineage", "framework"],
+  },
+  {
+    name: "Placekeeping / Critical Placemaking (Bedoya, Haraway, Decolonial Edge)",
+    category: "placemaking",
+    oneLiner:
+      "The critical edge of placemaking that distinguishes it from creative-class economic development — Roberto Bedoya's 'placekeeping' and 'placeknowing'; Mindy Fullilove's 'root shock' and 'urban alchemy'; Donna Haraway's 'situated knowledges' as critique of 'the god-trick of seeing everything from nowhere'; and the necessary checks on placemaking-as-property-rights-movement vs. placemaking-as-human-rights-movement.",
+    whenToUse:
+      "Any work touching cities, neighborhoods, communities, or public space — particularly when the corporate / planning register treats placemaking as primarily aesthetic or economic-development. For framing AIGA Portland board work, Indianapolis Design Week founding, Portland Historic Landmarks Commission service, Public Mechanics teaching, and any future urban / civic projects.",
+    vocabulary: [
+      "placekeeping (Bedoya)",
+      "placeknowing",
+      "the poesis, policy, and politic of place",
+      "the trap of creative placemaking is whether it's a property-rights movement or a human-rights movement",
+      "rasquachification (Ybarra-Frausto)",
+      "the white spatial imaginary (Lipsitz)",
+      "root shock (Fullilove)",
+      "urban alchemy",
+      "situated knowledges (Haraway)",
+      "view from somewhere",
+      "the god-trick of seeing everything from nowhere",
+      "answerable for what we learn how to see",
+      "Project for Public Spaces (PPS) tradition",
+      "the community is the expert",
+      "Lighter, Quicker, Cheaper",
+    ],
+    howToDropIn:
+      "\"Bedoya's placekeeping is the move: 'not just preserving the facade of the building but also keeping the cultural memories associated with a locale alive, keeping the tree once planted in the memory of a loved one lost in a war and keeping the tenants who have raised their family in an apartment.' His triplet — creative placemaking, placekeeping, placeknowing — names 'the poesis, policy, and politic that shape places.' Haraway gives the epistemological frame: only partial perspective promises objective vision; situated knowledge is about limited location and being answerable for what we learn how to see. Together they prevent placemaking from sliding into placeless creative-class economic development.\"",
+    commonPhrasing: "Placekeeping, critical placemaking, situated knowledges.",
+    notes:
+      "Bedoya's framing is the necessary corrective when 'creative placemaking' gets used as cover for displacement-driving development. The Mindy Fullilove vocabulary (root shock, urban alchemy) names the harm and the repair work specifically. Useful for any practice that touches Portland, Indianapolis, or Bloomington — cities the user has actively worked in — and for the Public Mechanics teaching frame at Michigan. Pair with Critical-Technologist Self-Statement Construction and the McLuhan-Easterling-Mattern-Hill lineage card.",
+    source:
+      "Roberto Bedoya, 'Placemaking and the Politics of Belonging and Dis-Belonging' and related essays; Mindy Fullilove, *Root Shock* (2004); Donna Haraway, 'Situated Knowledges' (1988); Tomás Ybarra-Frausto on rasquachismo; George Lipsitz on the white spatial imaginary; Project for Public Spaces and Jan Gehl traditions.",
+    tags: ["placemaking", "placekeeping", "critical", "urbanism", "lineage", "framework"],
+  },
+  {
+    name: "Critical Engineer / Critical Technologist Lineage",
+    category: "critical_technology",
+    oneLiner:
+      "The lineage explicitly named in the Critical Engineering Manifesto and extended by Kate Crawford, Shannon Mattern, Mimi Ọnụọha, Sam Lavigne, Vladan Joler (SHARE Lab), Wendy Hui Kyong Chun, Safiya Noble, Ruha Benjamin, and Virginia Eubanks — practitioners who treat technology as material to be read, exposed, and worked on rather than as neutral tooling.",
+    whenToUse:
+      "Self-positioning toward critical-technology audiences (research institutes, public-interest AI orgs, academic appointments, foundation program officers funding tech-and-society work, journalism). For framing State Capacity AI, Occupant Indices, the AI Decision Transparency Dashboard, and Public Mechanics teaching in a register already established and respected by these audiences.",
+    vocabulary: [
+      "critical engineering (Oliver / Savičić / Vasiliev)",
+      "the exploit as the most desirable form of exposure",
+      "peer inside the black box",
+      "each work of engineering engineers its user",
+      "tactical media (Lovink / Garcia)",
+      "never perfect, always in becoming",
+      "planetary-scale computation (Bratton)",
+      "The Stack",
+      "anatomy of an AI system (Crawford / Joler)",
+      "new form of extractivism",
+      "missing datasets (Ọnụọha)",
+      "the New Jim Code (Benjamin)",
+      "algorithmic oppression (Noble)",
+      "the digital poorhouse (Eubanks)",
+      "our media matter most when they seem not to matter at all (Chun)",
+      "entreprecariat (Lorusso)",
+      "a city is not a computer (Mattern)",
+    ],
+    howToDropIn:
+      "\"The Critical Engineering Manifesto is the canonical text: critical engineering treats engineering as the most transformative language of our time and studies and exploits it to expose influence. The work is exposing what the technology does to its users, surfacing what black boxes hide, peering inside the implementation past the awe. Crawford's *Anatomy of an AI System* extends this into AI specifically: a large-scale map of the human labor, data, and planetary resources required to build and operate even a smart speaker — a new form of extractivism. Ọnụọha's missing datasets, Benjamin's New Jim Code, Noble's algorithmic oppression, Eubanks's digital poorhouse — each names a specific shape the practice takes. The lineage gives institutional cover when 'AI ethics' or 'responsible AI' is the audience-flattened version of what you're doing.\"",
+    commonPhrasing: "Critical engineering, critical technology, critical AI.",
+    notes:
+      "Useful for positioning toward research-institute fellowship roles (Beeck, GovEx, MIT GovLab, Stanford HAI, Berkeley CLTC), foundation program officer audiences, and journalism / policy venues. The lineage is institutional, respected, and already in the gatekeeper class's reading habits. Pair with Critical-Technologist Self-Statement Construction, Critical-Technologist Phrase Bank, the McLuhan-Easterling-Mattern-Hill card, and AI Governance & Responsible AI Leadership / AI Ethicist (Embedded IC) from the existing AI ethics section.",
+    source:
+      "Critical Engineering Manifesto (Oliver / Savičić / Vasiliev, 2011); Geert Lovink & David Garcia, 'The ABC of Tactical Media' (1997); Benjamin Bratton, *The Stack*; Kate Crawford and Vladan Joler, *Anatomy of an AI System*; Mimi Ọnụọha on missing datasets; Ruha Benjamin, *Race After Technology*; Safiya Umoja Noble, *Algorithms of Oppression*; Virginia Eubanks, *Automating Inequality*; Wendy Hui Kyong Chun, *Updating to Remain the Same*; Shannon Mattern, *A City Is Not a Computer*.",
+    tags: ["critical_technology", "critical_engineering", "lineage", "framework"],
+  },
 ];
