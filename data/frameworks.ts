@@ -6295,4 +6295,90 @@ export const frameworks: Framework[] = [
       "Change-management practice for legacy regulated industries; mortgage servicing, insurance, healthcare administration contexts; practitioner experience in established-org modernization.",
     tags: ["product_strategy", "change_management", "legacy_industry", "framework"],
   },
+
+  // —— Interview frameworks ——————————————————————————————————————————————
+
+  {
+    name: "STAR Method and Variants (CAR / PAR / SOAR / STAR-L)",
+    category: "interview_frameworks",
+    oneLiner:
+      "The standard behavioral-interview answer structure — Situation, Task, Action, Result — with common variants: CAR (drops Task), PAR (Problem instead of Situation/Task), SOAR (adds Obstacles), and STAR-L (adds Learnings, expected for senior roles). All compress a multi-month or multi-year work episode into 60–180 seconds of structured answer.",
+    whenToUse:
+      "Behavioral interview prep at any level. STAR is the dominant ask at FAANG, MBB consulting, big-tech IC roles, and most product / design / engineering leadership interviews. STAR-L is increasingly expected at senior and principal levels. PAR is more common in management consulting case-flavored conversations.",
+    vocabulary: [
+      "STAR (Situation / Task / Action / Result)",
+      "CAR (Context / Action / Result)",
+      "PAR (Problem / Action / Result)",
+      "SOAR (Situation / Obstacles / Actions / Results)",
+      "STAR-L (STAR + Learnings)",
+      "behavioral interview",
+      "competency interview",
+      "Tell me about a time when...",
+      "What's a project where you...",
+    ],
+    howToDropIn:
+      "\"STAR is compression. The interviewer asks for a project where you did X; you need to take a 9-month project and answer in 90 seconds. Situation (1 sentence — context and stakes). Task (1 sentence — what you specifically had to do). Action (3–4 sentences — what you actually did, with verbs and decisions). Result (1–2 sentences — what changed because of it, with numbers if you have them). Senior roles want STAR-L: one more sentence on what you'd do differently next time. The trap is going long on Situation and short on Action; flip the ratio.\"",
+    commonPhrasing: "STAR method, behavioral interview, competency-based interview.",
+    notes:
+      "The most common STAR mistake is making Situation 60% of the answer because the project context feels important; interviewers want Action because that's what reveals how you work. Time-allocation rule of thumb: 10% Situation, 10% Task, 60% Action, 20% Result (with Learnings folded in if STAR-L). Stories from the eAPD / SOMD / State Capacity AI / Acting Chief of Staff / Head of Design portfolio each support multiple STAR answers; the same story compresses differently depending on which competency the interviewer is probing (leadership, conflict, judgment, impact, ambiguity-tolerance, customer obsession). Pair with Senior IC / Executive Interview Patterns and the existing Story-card 30s versions as the substrate to compress from.",
+    source:
+      "Behavioral-interviewing practice (1970s industrial-organizational psychology, formalized for hiring at Procter & Gamble and Anheuser-Busch); current standard at FAANG and MBB; Amazon's Leadership Principles + STAR combination is the most-documented variant.",
+    tags: ["interview", "communication", "behavioral", "framework"],
+  },
+  {
+    name: "Senior IC / Executive Interview Patterns (Transitions, Leadership Beats, Why-You)",
+    category: "interview_frameworks",
+    oneLiner:
+      "Interview patterns specific to Senior IC, Principal, Director, and Executive roles — beyond STAR — covering role-transition narratives (why you left, why this), leadership scope demonstration (numbers attached to people and budgets), strategic judgment under ambiguity, and the 'Why You / Why Now / Why This' close.",
+    whenToUse:
+      "Director / VP / Principal / Staff / C-suite interviews. Different shape from IC behavioral interviews because the questions probe judgment, leadership scope, organizational navigation, and strategic narrative rather than execution detail.",
+    vocabulary: [
+      "leadership scope (people, budget, P&L)",
+      "Why You / Why Now / Why This",
+      "executive presence",
+      "strategic judgment",
+      "organizational navigation",
+      "transition narrative",
+      "what would you do differently",
+      "what did you inherit / what did you build",
+      "the case for change",
+      "the 30 / 60 / 90",
+    ],
+    howToDropIn:
+      "\"Senior interviews probe four things STAR doesn't address well: judgment under ambiguity, leadership scope (what was the people and budget reality, not just the project), strategic narrative (why these choices in this sequence), and transition logic (why this role now). The 'Why You / Why Now / Why This' close is increasingly standard — a 90-second articulation of why you specifically are right for this seat at this moment in your career and the company's trajectory. The 30 / 60 / 90 (what you'd do in your first 30, 60, 90 days) is the operational equivalent.\"",
+    commonPhrasing: "Executive interview, leadership interview, principal interview.",
+    notes:
+      "Common senior interview question patterns: 'Tell me about a hard organizational call you made'; 'What did you inherit and how did you handle it'; 'What would you do in your first 90 days'; 'Why this role, why now'; 'What's a strategic call you got wrong and what did you learn'; 'How do you decide what to delegate'. Each maps to a STAR-format answer but with leadership-scope numbers (people, budget, time horizon) attached and judgment narrative emphasized. Pair with STAR Method and Variants, Trusted Advisor Stance, and the Story cards that document senior leadership scope (Head of Design, Acting Chief of Staff, State Capacity AI).",
+    source:
+      "Senior-hire interview practice (executive search firms, late-stage growth companies, regulated industries); McKinsey / Spencer Stuart / Heidrick & Struggles competency frameworks for senior hires.",
+    tags: ["interview", "senior_ic", "leadership", "framework"],
+  },
+  {
+    name: "Product & Design Interview-Specific Frameworks (CIRCLES, Portfolio Walkthrough, Design Challenge)",
+    category: "interview_frameworks",
+    oneLiner:
+      "Domain-specific interview frameworks for product manager and designer interviews — CIRCLES for PM product-sense questions (Comprehend, Identify, Report, Cut, List, Evaluate, Summarize), portfolio walkthrough patterns for designers, and design-challenge structures that simulate real working sessions.",
+    whenToUse:
+      "Product manager interviews at FAANG and late-stage growth (product-sense rounds, execution rounds, strategy rounds); designer interviews (portfolio reviews, app critiques, design challenges); cross-functional roles that probe product or design judgment.",
+    vocabulary: [
+      "CIRCLES (Comprehend / Identify / Report / Cut / List / Evaluate / Summarize)",
+      "product sense round",
+      "execution round",
+      "strategy round",
+      "portfolio walkthrough",
+      "app critique",
+      "design challenge",
+      "whiteboard round",
+      "RICE prioritization",
+      "ICE prioritization",
+    ],
+    howToDropIn:
+      "\"Product and design interviews use STAR for behavioral rounds and domain-specific frameworks for craft rounds. CIRCLES is the standard for PM product-sense questions — given an ambiguous prompt ('design a better X'), walk through user comprehension, user identification, reporting, cutting scope, listing solutions, evaluating, summarizing. For designers, the portfolio walkthrough is the dominant artifact — structured around the project's stakes, decisions, trade-offs, and what you'd do differently. Design challenges are working sessions, not presentations — interviewers want to see how you think, not what you've polished.\"",
+    commonPhrasing: "PM interview, designer interview, product sense, portfolio review.",
+    notes:
+      "CIRCLES was coined by Lewis Lin for Microsoft PM interviews and is now the standard framework named in PM interview prep books. RICE and ICE are prioritization frameworks more commonly used in execution rounds. For senior PM and Director PM roles, strategy rounds replace product-sense rounds and use 'enter this market' or 'launch this product' prompts. Designer interview structures vary by company — Meta, Google, Apple, and consulting design firms each have signature patterns. Pair with STAR Method and Variants and Senior IC / Executive Interview Patterns.",
+    source:
+      "Lewis Lin, *Decode and Conquer* (CIRCLES framework, 2013); Reforge, Lenny's Newsletter, and Designer Hangout interview-prep communities; FAANG-specific interview guides.",
+    tags: ["interview", "product_management", "design", "framework"],
+  },
 ];
