@@ -6381,4 +6381,94 @@ export const frameworks: Framework[] = [
       "Lewis Lin, *Decode and Conquer* (CIRCLES framework, 2013); Reforge, Lenny's Newsletter, and Designer Hangout interview-prep communities; FAANG-specific interview guides.",
     tags: ["interview", "product_management", "design", "framework"],
   },
+
+  // —— Strategic foresight / futures practice ————————————————————————————
+
+  {
+    name: "Strategic Foresight & Insight Analyst (Corporate / Brand)",
+    category: "foresight",
+    oneLiner:
+      "The analyst-to-senior-analyst role at corporate foresight functions — scanning emerging trends across technology, culture, consumer behavior, sustainability, and business models; synthesizing weak signals into structured insights; supporting scenario development and opportunity-space mapping; translating signals into strategic implications for exploration and investment.",
+    whenToUse:
+      "Strategic Foresight Analyst, Insight Analyst, Futures Researcher, Trend Analyst postings at consumer brands (H&M, IKEA, Nike, P&G, Unilever), automotive (Ford, GM, Toyota), tech (Google ATAP, Microsoft Strategy), large media (Disney, BBC), and adjacent industries. Usually inside Innovation / Futures / Strategy departments rather than core product.",
+    vocabulary: [
+      "strategic foresight",
+      "signal sensing / weak signal detection",
+      "trend analysis",
+      "scenario planning",
+      "opportunity space mapping",
+      "futures research",
+      "STEEP / PESTLE analysis",
+      "Three Horizons framework",
+      "futures wheel",
+      "Delphi method",
+      "horizon scanning",
+      "exploration vs. exploitation",
+    ],
+    howToDropIn:
+      "\"Strategic foresight is the discipline of building structured, defensible perspectives on the future that organizations can act on — not predictions, but well-framed alternatives that inform where the business places its bets. The analyst job is the bottom of the funnel: scanning, signal-sensing, synthesizing into insights, contributing to scenarios. The senior version contributes to framework design and connects foresight outputs to strategic decision-making.\"",
+    commonPhrasing: "Strategic foresight, trend analysis, futures research, insight analyst.",
+    notes:
+      "Distinct from market research (which describes the present) and strategic planning (which decides on the present). Foresight is the discipline of building structured perspectives on plausible futures so the organization can prepare or position. The 2024–2026 corporate foresight market is growing as AI disruption, climate, and geopolitical instability make planning horizons harder. Pair with Foresight Methodology Stack and Translating Foresight to Strategy.",
+    source:
+      "Validated against 2026 postings: H&M Group 'Strategic Foresight & Insight Analyst' (Stockholm, hybrid); analogous roles at IKEA, Nike, P&G, Unilever, Ford, Toyota, Microsoft, Google ATAP.",
+    tags: ["foresight", "strategy", "corporate", "role", "framework"],
+  },
+  {
+    name: "Foresight Methodology Stack (Scenarios, Three Horizons, STEEP, Futures Wheel)",
+    category: "foresight",
+    oneLiner:
+      "The canonical methodology stack of strategic foresight work — STEEP / PESTLE for environmental scanning; horizon scanning and signal sensing for trend identification; Three Horizons framework for thinking across time periods; scenario planning (Shell-style and morphological); Futures Wheel for second- and third-order consequence mapping; Delphi for structured expert input.",
+    whenToUse:
+      "Any foresight role, futures practice, or strategic-planning context that benefits from formal methodology. Particularly important for foresight analysts who need to demonstrate methodological fluency in interviews and proposals.",
+    vocabulary: [
+      "STEEP (Social / Technological / Economic / Environmental / Political)",
+      "PESTLE (Political / Economic / Social / Technological / Legal / Environmental)",
+      "Three Horizons (Sharpe / Curry)",
+      "Scenario planning (Shell / Kahn)",
+      "Morphological scenario analysis",
+      "Futures Wheel (Glenn)",
+      "Delphi method",
+      "Cross-impact analysis",
+      "Wild cards (low-probability, high-impact events)",
+      "Black swans",
+      "Backcasting",
+      "Causal Layered Analysis (CLA)",
+    ],
+    howToDropIn:
+      "\"Foresight methodology is a stack, not a single tool. STEEP / PESTLE is the scanning frame — you organize signals by Social, Technological, Economic, Environmental, Political. Three Horizons gives you the time-period structure. Scenario planning (in the Shell tradition) generates plausible alternative futures. The Futures Wheel maps second- and third-order consequences of a single signal. Delphi brings structured expert input when you don't have data. The skill is matching the method to the question — scenarios when there's deep uncertainty about multiple drivers; Three Horizons when you need to communicate across time periods; CLA when the question is about underlying worldviews and mythology.\"",
+    commonPhrasing: "Foresight methods, futures frameworks, scenario planning, horizon scanning.",
+    notes:
+      "Canonical references: Pierre Wack and Peter Schwartz at Shell on scenario planning; Bill Sharpe and Andrew Curry on Three Horizons; Jerome Glenn on Futures Wheel and the Millennium Project; Sohail Inayatullah on Causal Layered Analysis (CLA). The Institute for the Future (IFTF), Long Now Foundation, RAND, and Singapore's Centre for Strategic Futures are the institutional bellwethers. Pair with Strategic Foresight & Insight Analyst (Corporate / Brand) and Translating Foresight to Strategy.",
+    source:
+      "Strategic foresight discipline. Canonical references: Peter Schwartz, *The Art of the Long View* (1991); Bill Sharpe & Andrew Curry on Three Horizons (2015); Jerome Glenn at the Millennium Project; Sohail Inayatullah on Causal Layered Analysis.",
+    tags: ["foresight", "methodology", "framework"],
+  },
+  {
+    name: "Translating Foresight to Strategy (Signal → Insight → Implication → Bet)",
+    category: "foresight",
+    oneLiner:
+      "The discipline of moving structured foresight outputs through the chain that makes them actionable — signals (observed events or data points), insights (what the signals mean), implications (what they mean for the organization specifically), and bets (the strategic moves the organization makes in response). Most foresight work fails at the implications-to-bets step.",
+    whenToUse:
+      "Senior foresight analyst, strategy-and-insights, or futures-to-strategy translation roles where the deliverable has to be actionable, not just interesting. The JD phrase 'pragmatic — focused on impact, not just interesting observations' is the canonical signal.",
+    vocabulary: [
+      "signal → insight → implication → bet",
+      "actionable insight",
+      "strategic implication",
+      "bet placement / portfolio choice",
+      "the so-what test",
+      "decision-grade insight",
+      "from foresight to roadmap",
+      "futures to strategy bridge",
+      "exploration priorities",
+    ],
+    howToDropIn:
+      "\"The hardest part of foresight isn't generating insights; it's making them actionable. The chain is signal → insight → implication → bet. Signals are observed (a regulatory change, a consumer behavior shift, a technology release). Insights are what the signals MEAN (what they tell us about underlying dynamics). Implications are organization-specific (what they mean for our business, our portfolio, our capability set). Bets are the strategic moves we make in response (where to invest, what to build, what to stop). Most foresight teams get great at the first two and fail at the second two. The senior version of the role is mostly about closing that gap.\"",
+    commonPhrasing: "From foresight to strategy, actionable insights, signal to bet.",
+    notes:
+      "The discipline's failure mode is the 'futures report nobody reads' pattern — beautifully produced scenarios that don't connect to any specific decision the organization is making. Counter is to embed foresight analysts in active strategy or investment discussions where the implications-to-bets translation is forced by the conversation. Pair with Strategic Foresight & Insight Analyst (Corporate / Brand), Foresight Methodology Stack, and Trusted Advisor Stance.",
+    source:
+      "Strategic foresight practice; Wendy Schultz on insight-to-action translation; corporate foresight literature 2015–2026.",
+    tags: ["foresight", "strategy", "translation", "framework"],
+  },
 ];
