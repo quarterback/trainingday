@@ -6532,4 +6532,92 @@ export const frameworks: Framework[] = [
       "Service design discipline (Marc Stickdorn and Jakob Schneider, *This Is Service Design Doing*; Lou Downe on design and government services; Polaine, Løvlie, and Reason on service design); 18F practice; principal-level service design hiring patterns.",
     tags: ["service_design", "principal_level", "framework"],
   },
+
+  // —— Design leadership (Center of Excellence / regulated financial services) —
+
+  {
+    name: "Head of Design CoE (Financial Services / Regulated, Newly-Established)",
+    category: "design_leadership",
+    oneLiner:
+      "The Head-level design leadership archetype at financial services and regulated-industry employers establishing a Center of Excellence — leading 30–60-person UX / UI / digital design organizations, owning digital experience vision, defining operating model for design development across Tribes and commercial teams, with 3–5 direct reports and multi-country team composition. Distinct from VP-level design org leadership at product companies because the seat is typically inside a CoE structure rather than embedded in product, and the org has stronger compliance / commercial / regulatory constraints.",
+    whenToUse:
+      "Head of Design / Head of Customer Experience / Head of Human-Centered Design CoE postings at Nordic and European banks (Danske, Nordea, DNB, Handelsbanken, SEB), US large banks (JPMorgan Chase, Wells Fargo, Bank of America design CoEs), insurance carriers, and adjacent regulated financial-services employers. Common at orgs running a Tribes / Squads operating model with a separate design CoE for craft governance.",
+    vocabulary: [
+      "Design CoE (Center of Excellence)",
+      "Head of Human-Centered Design",
+      "digital experience vision",
+      "operating model for design development",
+      "Tribes / Squads / Chapters / Guilds (Spotify model)",
+      "embedded vs. centralized design",
+      "design standards and practices",
+      "design quality benchmarks",
+      "capacity planning",
+      "customer satisfaction outcomes",
+      "design discipline (UX / UI / digital)",
+    ],
+    howToDropIn:
+      "\"Head of Design at a Nordic bank's newly-established CoE is a different shape than Head of Design at a product company. The CoE doesn't own products — it owns the discipline, the standards, the operating model, and the talent. Tribes own the products. The Head's job is making the CoE legibly useful to Tribes and Commercial teams while building the long-arc capabilities (career frameworks, hiring bar, AI-augmented design practice, cross-country talent mobility) the org needs. The constraints are stronger than at a product company: financial-services compliance, multi-country employment law, regulator-driven feature requirements, longer release cycles.\"",
+    commonPhrasing: "Head of Design CoE, Head of Customer Experience, Head of Human-Centered Design.",
+    notes:
+      "Multi-country composition (Denmark, Lithuania, India in the Danske case) is typical of Nordic banks and changes the leadership shape significantly — different employment law, different compensation bands, different communication norms, different timezone overlap. The Tribes + CoE model is borrowed from Spotify's organizational pattern but adapted for regulated financial services where Tribes can't be as autonomous as Spotify Squads. Common reporting line is Chief Customer Officer, Chief Digital Officer, or sometimes COO. Pair with Multi-Country / Distributed Design Leadership and Building a Newly Established Design CoE.",
+    source:
+      "Validated against 2026 postings: Danske Bank 'Head of Human-Centered Design Center of Excellence' (Copenhagen, with team in Lithuania and India); analogous roles at Nordea, DNB, JPMorgan Chase, Wells Fargo, BBVA, ING.",
+    tags: ["design_leadership", "financial_services", "coe", "regulated", "role", "framework"],
+  },
+  {
+    name: "Building a Newly Established Design CoE",
+    category: "design_leadership",
+    oneLiner:
+      "The specific greenfield leadership challenge of standing up a newly established Design Center of Excellence — defining the operating model from scratch, establishing standards and practices the rest of the organization will adopt voluntarily, building the talent strategy and career framework, choosing what's centralized vs. embedded, and building credibility with Tribes / product teams who haven't worked with a Design CoE before.",
+    whenToUse:
+      "Head / Director postings at orgs explicitly describing a 'newly established' or 'forming' Design CoE. Particularly common in financial services, healthcare, and large enterprise orgs that historically had embedded designers in product teams without centralized discipline governance and are now centralizing.",
+    vocabulary: [
+      "newly established CoE",
+      "greenfield design org",
+      "centralized vs. embedded design",
+      "voluntary adoption (of CoE standards)",
+      "Tribes / Squads stakeholder management",
+      "design discipline maturity",
+      "design ops / DesignOps",
+      "career framework design",
+      "hiring bar establishment",
+      "operating-model decisions",
+    ],
+    howToDropIn:
+      "\"Standing up a newly established Design CoE is greenfield leadership — the operating model is open, the standards are TBD, the talent strategy needs to be built, and credibility with Tribes who haven't worked with a Design CoE before needs to be earned, not assumed. The decisions in year one set the operating model for years: what's centralized (standards, hiring, career framework, tooling) versus what's embedded (designers actually in Tribes); how the CoE earns voluntary adoption rather than mandate compliance; what the design-quality benchmark actually is. The trap is treating it as a re-org rather than a multi-year capability build.\"",
+    commonPhrasing: "Stand up a Design CoE, build a Design Center of Excellence, design org centralization.",
+    notes:
+      "The voluntary-adoption discipline matters a lot here — the CoE has authority over the discipline but not over the Tribes / product teams. The Head's job is making CoE standards and practices genuinely useful (not just compliance-required) so they get adopted by Tribes that have alternatives. Common failure mode is the CoE that publishes standards nobody follows; common success mode is the CoE that ships tools, templates, and people so Tribes actively want CoE engagement. Pair with Head of Design CoE (Financial Services / Regulated, Newly-Established) and Centralized AI Enablement Team (Innovation Catalyst Model — similar voluntary-adoption operating pattern).",
+    source:
+      "Design CoE establishment practice; financial services and large enterprise centralization patterns 2018–2026; consulting firm (Deloitte, EY, BCG) design-CoE-building engagements.",
+    tags: ["design_leadership", "coe", "greenfield", "framework"],
+  },
+  {
+    name: "Multi-Country / Distributed Design Leadership",
+    category: "design_leadership",
+    oneLiner:
+      "The leadership shape of running a design organization with team composition split across multiple countries — typical at Nordic banks (Denmark + Lithuania + India), European tech (Germany + Poland + India), US tech with offshore design (US + Eastern Europe + India). Multi-country leadership involves different employment law, compensation bands, communication norms, timezone overlap windows, cultural expectations around hierarchy and feedback, and the cost-vs-quality model of nearshore / offshore design.",
+    whenToUse:
+      "Design leadership roles where the team is explicitly multi-country. Common at European banks, large enterprise software (SAP, Siemens, Bosch), and US tech with offshore design centers. The 'team in Lithuania and India' phrasing in the Danske JD is the canonical signal.",
+    vocabulary: [
+      "multi-country team",
+      "nearshore design (Eastern Europe)",
+      "offshore design (India)",
+      "timezone overlap window",
+      "design center / design hub",
+      "country-specific hiring band",
+      "Vilnius, Riga, Tallinn (Baltic design centers)",
+      "Bengaluru, Pune, Gurugram (India design centers)",
+      "cross-country mobility",
+      "global design ops",
+    ],
+    howToDropIn:
+      "\"Running a multi-country design organization has a different shape than running a single-location team. The Nordic + Baltic + India composition is common at European banks: Denmark / Sweden as the strategic center, Lithuania / Latvia for nearshore execution at lower cost band, India for additional capacity at further cost band. The leadership work is making the cross-country team operate as one organization rather than three — including timezone-overlap windows, cultural calibration on feedback and hierarchy, communication norms across countries, hiring band fairness, career mobility between centers, and the politically delicate question of what work goes where.\"",
+    commonPhrasing: "Multi-country design team, distributed design leadership, nearshore / offshore design.",
+    notes:
+      "The specific country combination (Denmark + Lithuania + India in the Danske case) carries embedded cost and operating-model assumptions. Lithuania is a major nearshore design center for Nordic and German employers; Bengaluru and Pune are major offshore design centers for both US and European employers. The work-allocation politics are real — Denmark designers feel strategic, Lithuania feels production, India feels capacity, and undoing those defaults is part of the Head's job. Pair with Head of Design CoE (Financial Services / Regulated, Newly-Established) and Building a Newly Established Design CoE.",
+    source:
+      "Distributed design leadership practice at European banks and US tech with offshore design centers 2015–2026; design-ops literature on multi-country team operating models.",
+    tags: ["design_leadership", "multi_country", "global", "framework"],
+  },
 ];
