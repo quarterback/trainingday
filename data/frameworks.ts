@@ -6881,4 +6881,90 @@ export const frameworks: Framework[] = [
       "Critical Engineering Manifesto (Oliver / Savičić / Vasiliev, 2011); Geert Lovink & David Garcia, 'The ABC of Tactical Media' (1997); Benjamin Bratton, *The Stack*; Kate Crawford and Vladan Joler, *Anatomy of an AI System*; Mimi Ọnụọha on missing datasets; Ruha Benjamin, *Race After Technology*; Safiya Umoja Noble, *Algorithms of Oppression*; Virginia Eubanks, *Automating Inequality*; Wendy Hui Kyong Chun, *Updating to Remain the Same*; Shannon Mattern, *A City Is Not a Computer*.",
     tags: ["critical_technology", "critical_engineering", "lineage", "framework"],
   },
+
+  // —— Executive communication / decision-first storytelling ——————————————
+
+  {
+    name: "Executive Communication Discipline (Decision-First, Tailored, Concise)",
+    category: "communication",
+    oneLiner:
+      "The discipline of communicating with executives and senior leadership — leading with the decision and rationale rather than the chronological journey, tailoring the message to the audience's actual decision-making needs, and ruthlessly pruning detail that doesn't change the call. Often the named gap between senior IC and staff / principal / leadership levels.",
+    whenToUse:
+      "Senior IC roles where moving up requires the communication shift; presentations and briefings to executives; written updates to senior leadership; emails to C-suite; any context where the audience is context-switching rapidly across topics and has limited attention budget for any one update.",
+    vocabulary: [
+      "decision-first communication",
+      "executive presence",
+      "exec summary / TL;DR",
+      "the bottom line up front (BLUF)",
+      "lead with the recommendation",
+      "trade-offs and judgment as the artifact",
+      "context-as-Q&A (not preamble)",
+      "audience-tailored framing",
+      "the ONE thing I want them to remember",
+      "the ONE action I want them to take",
+    ],
+    howToDropIn:
+      "\"Executive communication is a different discipline than peer communication or interview communication. Executives context-switch every 30 minutes across wildly different topics; their attention is spent before you start. The discipline is leading with the decision, the recommendation, or the trade-off — not with the discovery journey that led you there. Context lives in Q&A, not in the opener. Tailor for what THIS audience needs to decide, not for what's interesting to you. Two questions before any senior update: what's the ONE thing I need them to remember, and what's the ONE action I want them to take. Everything else is in service of those two.\"",
+    commonPhrasing: "Executive communication, executive presence, exec briefing, senior-leadership communication.",
+    notes:
+      "Distinct from interview communication (which the STAR Method card covers) — executive communication is ongoing professional context, not high-stakes hiring. The named gap between senior and staff / principal / leadership levels in product, design, and engineering tracks is often this communication shift rather than craft depth. Wes Kao runs the most cited tech-industry course on this (Maven, 'Executive Communication & Influence'); her newsletter is a working reference. Pair with Executive Briefing Frameworks, Designing for Executive Cognitive Load, Trusted Advisor Stance (Senior Consultant), and the existing Minto Pyramid Principle card.",
+    source:
+      "Wes Kao executive communication course and newsletter (newsletter.weskao.com, Maven); Barbara Minto, *The Pyramid Principle*; McKinsey communication tradition; senior-leadership coaching consensus; r/ProductManagement community discussion (2026).",
+    tags: ["communication", "executive_presence", "leadership", "framework"],
+  },
+  {
+    name: "Executive Briefing Frameworks (SCR / What-So What-Now What / Minto Pyramid)",
+    category: "communication",
+    oneLiner:
+      "The structural frameworks for opening any executive briefing — McKinsey's SCR (Situation, Complication, Resolution) for written and verbal openings; 'What, So What, Now What' as a reflective update structure; the Minto Pyramid (governing thought → key supporting points → details) as the top-down communication backbone all of consulting trains on.",
+    whenToUse:
+      "Drafting briefing decks, executive emails, update notes, board materials, meeting openings, or any communication that needs to land structurally on first read. Particularly useful for senior IC and leadership roles where written executive communication is part of the standing job.",
+    vocabulary: [
+      "SCR (Situation, Complication, Resolution) — McKinsey",
+      "What, So What, Now What",
+      "Minto Pyramid (governing thought, key points, details)",
+      "top-down communication",
+      "governing thought",
+      "MECE (Mutually Exclusive, Collectively Exhaustive)",
+      "the rule of three",
+      "headline-driven slides",
+      "answer-first writing",
+    ],
+    howToDropIn:
+      "\"For executive briefings, the structural choice is the work. SCR opens with the current state (Situation), names what changed or what's at stake (Complication), and proposes the call (Resolution). 'What, So What, Now What' is the reflective triple — what happened, why it matters, what's next. Minto's Pyramid is the governing structure — start with the answer (the governing thought), then the three supporting points, then the details for the people who want them. All three frameworks share the same instinct: lead with the answer, support with structure, leave the chronology and the back-story for Q&A.\"",
+    commonPhrasing: "SCR framework, What So What Now What, Minto Pyramid, top-down communication.",
+    notes:
+      "These are all consulting-tradition frameworks (McKinsey, BCG, Bain communication training). The 'What, So What, Now What' reflective frame is often attributed to Gary Rolfe (nursing reflective practice, 2001) and is now widely used across consulting and education. Pair with Executive Communication Discipline, the existing Minto Pyramid Principle card, and Designing for Executive Cognitive Load.",
+    source:
+      "McKinsey SCR framework (managementconsulted.com); Gary Rolfe, 'What, So What, Now What' reflective model (2001); Barbara Minto, *The Pyramid Principle*.",
+    tags: ["communication", "frameworks", "consulting", "framework"],
+  },
+  {
+    name: "Designing for Executive Cognitive Load (Sophisticated Toddlers, ONE Thing)",
+    category: "communication",
+    oneLiner:
+      "The audience-design discipline behind executive communication — treating executives as 'sophisticated toddlers' (brilliant but context-switching every 30 minutes), planning around the ONE thing you want them to retain and the ONE decision you want them to make, and accepting that boringly clear beats fancy footwork.",
+    whenToUse:
+      "Preparing for any executive presentation, board meeting, all-hands, or senior-leadership update. As a check before publishing executive-facing written communication. As a coaching frame for ICs starting to communicate at exec level.",
+    vocabulary: [
+      "sophisticated toddlers",
+      "context-switching audience",
+      "the ONE thing to remember",
+      "the ONE action to take",
+      "boringly clear beats fancy footwork",
+      "razzle and dazzle (anti-pattern)",
+      "from nowhere (anti-pattern: starting without an anchor)",
+      "the bouncing ball (anti-pattern: nonlinear narrative)",
+      "attention budget",
+      "decision-grade information",
+    ],
+    howToDropIn:
+      "\"Executives aren't your audience the way your peers are. They're context-switching every 30 minutes across wildly different topics. They're brilliant but their attention is fragmented across the whole org chart. The reframe that works: prepare for them like sophisticated toddlers — brilliant, opinionated, easily distracted by a weird detail, and likely to remember exactly one thing you said. Plan around that one thing. Boringly clear beats fancy footwork; clear linear train of thought beats brilliant ideas with nonlinear delivery; small manageable asks beat blowing things out of proportion.\"",
+    commonPhrasing: "Executive cognitive load, attention budget, the ONE thing.",
+    notes:
+      "The 'sophisticated toddlers' frame is widely shared in tech management circles (most cited in r/ProductManagement community discussions); the 'ONE thing / ONE action' discipline is consistent across executive communication coaching (Wes Kao, McKinsey, BCG). The anti-patterns named here — coming from nowhere, the bouncing ball, blowing things out of proportion, razzle and dazzle — are the specific failures executives notice. Pair with Executive Communication Discipline, Executive Briefing Frameworks, and Trusted Advisor Stance (Senior Consultant).",
+    source:
+      "Executive coaching practice; tech-industry communication consensus; r/ProductManagement community discussion (2026); Wes Kao's executive communication material.",
+    tags: ["communication", "executive_presence", "audience_design", "framework"],
+  },
 ];
