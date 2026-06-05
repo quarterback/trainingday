@@ -24,7 +24,7 @@ export function Sidebar({
   onSelectType: (t: "all" | EntryType) => void;
 }) {
   return (
-    <aside className="flex w-56 shrink-0 flex-col gap-6 border-r border-neutral-200 bg-neutral-50 p-4 text-sm">
+    <aside className="flex w-full shrink-0 flex-col gap-6 border-b border-neutral-200 bg-neutral-50 p-4 text-sm md:w-56 md:border-b-0 md:border-r">
       <section>
         <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
           Type
