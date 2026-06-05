@@ -150,20 +150,38 @@ export default function HomeClient({ frameworks, stories, translations, books }:
     (showTranslations && !categoryActive ? filteredTranslations.length : 0) +
     (showBooks ? filteredBooks.length : 0);
 
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen">
-      <Sidebar
-        categories={categories}
-        selectedCategory={category}
-        onSelectCategory={setCategory}
-        selectedType={type}
-        onSelectType={setType}
-      />
-      <main className="flex-1 px-6 py-6">
+    <div className="flex min-h-screen flex-col md:flex-row">
+      <div className={`${isFiltersOpen ? "block" : "hidden"} md:block`}>
+        <Sidebar
+          categories={categories}
+          selectedCategory={category}
+          onSelectCategory={(c) => {
+            setCategory(c);
+            setIsFiltersOpen(false);
+          }}
+          selectedType={type}
+          onSelectType={(t) => {
+            setType(t);
+            setIsFiltersOpen(false);
+          }}
+        />
+      </div>
+      <main className="flex-1 px-4 py-4 md:px-6 md:py-6">
         <div className="mx-auto flex max-w-3xl flex-col gap-4">
-          <header className="flex items-center justify-between gap-4">
+          <header className="flex flex-wrap items-center justify-between gap-3">
             <h1 className="text-lg font-semibold">Training Day</h1>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setIsFiltersOpen((o) => !o)}
+                className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100 md:hidden"
+                aria-expanded={isFiltersOpen}
+              >
+                {isFiltersOpen ? "Hide filters" : "Filters"}
+              </button>
               <Link
                 href="/public-mechanics"
                 className="rounded border border-neutral-300 px-3 py-1.5 text-sm text-neutral-700 hover:bg-neutral-100"
