@@ -1,3 +1,7 @@
+> **→ Live app: https://trainingday-five.vercel.app/**
+>
+> This page is the GitHub repository. The actual searchable card app lives on Vercel at the link above.
+
 # Training Day
 
 A personal reference app for frameworks, career stories, vocabulary translations, and books.
