@@ -7094,4 +7094,68 @@ export const frameworks: Framework[] = [
       "Consulting-firm AI-embedded design practice 2025–2026 (Accenture Song, IDEO, Deloitte Digital, McKinsey Design); Accenture Song XS Manager JD as a representative public example of the discipline being named as a hire criterion.",
     tags: ["consulting", "ai_augmented", "design_practice", "framework"],
   },
+
+  // —— Professional Services / Implementation (B2B SaaS) ————————————————————
+
+  {
+    name: "Head of Implementation & Onboarding (B2B SaaS, AI-Native Transformation)",
+    category: "professional_services",
+    oneLiner:
+      "The senior leadership archetype at B2B SaaS companies transforming Professional Services delivery from manual, consultant-driven onboarding into scalable AI-assisted implementation — leading global delivery teams across regions, standardizing workflows, embedding AI into discovery and solution design, and enforcing new delivery standards against the gravity of legacy manual processes.",
+    whenToUse:
+      "Head of Implementation, Head of Professional Services, Head of Onboarding, VP Implementation, or Director of Customer Onboarding postings at growth-stage and enterprise B2B SaaS. Common at marketing tech (Supermetrics, HubSpot, Hightouch, Segment), data platforms (Snowflake, Databricks, dbt Labs), CRM (Salesforce ecosystem), and other implementation-heavy SaaS. Distinct shape from Customer Success leadership.",
+    vocabulary: [
+      "Professional Services (PS) leadership",
+      "Implementation Services",
+      "Onboarding at scale",
+      "AI-native delivery",
+      "human-in-the-loop delivery",
+      "scalable delivery engine",
+      "standardized implementation workflows",
+      "validation and oversight (vs. manual execution)",
+      "delivery quality checkpoints",
+      "customer activation",
+      "regional pod / region-by-region operations",
+      "EMEA / NA / JAPAC team composition",
+      "Customer Success handoff",
+    ],
+    howToDropIn:
+      "\"Head of Implementation at a SaaS company transforming PS is a specific shape — not Customer Success, not Sales Engineering, not Product. The seat owns implementation delivery across regions, with accountability for moving the team from manual consultant-driven projects to AI-assisted standardized workflows. The hardest part isn't building the new model — it's enforcing it against the gravity of how the team has always worked. Implementation specialists tend to revert to manual execution because that's what they're skilled at; the leadership move is reshaping the role so 'validation and oversight in an AI-assisted environment' becomes the skill the org rewards.\"",
+    commonPhrasing: "Head of Implementation, Head of Professional Services, VP Implementation, Director of Onboarding.",
+    notes:
+      "Distinct from Customer Success leadership (which owns post-onboarding relationship and renewal) and from Sales Engineering (which owns pre-sale technical fit). Implementation is the bridge — getting the customer from contract to value. The AI-native transformation specifically: most SaaS PS orgs were built around senior implementation consultants doing high-touch projects; the transformation reframes the seat as quality oversight on AI-generated discovery, solution design, and configuration. The role often reports to a Chief Customer Officer or VP of Professional Services. Pair with AI-Native Professional Services Transformation, AI Adoption & Capability Building (OCM), and the Centralized AI Enablement Team (Innovation Catalyst Model) card for adjacent operating models.",
+    source:
+      "Validated against 2026 postings: Supermetrics 'Head of Implementation & Onboarding' (Helsinki / Dublin / Amsterdam / UK); analogous roles across marketing tech, data platforms, and Salesforce-ecosystem SaaS.",
+    tags: ["professional_services", "saas", "ai_transformation", "leadership", "role", "framework"],
+  },
+  {
+    name: "AI-Native Professional Services Transformation",
+    category: "professional_services",
+    oneLiner:
+      "The specific transformation playbook for moving a SaaS Professional Services organization from manual, consultant-driven implementation to AI-assisted standardized delivery — embedding AI in discovery and solution design, standardizing workflows for reusability, shifting the implementation specialist's role from execution to validation and oversight, and preventing fallback to legacy manual processes.",
+    whenToUse:
+      "Any PS / Implementation / Customer Onboarding org explicitly transforming toward AI-native delivery. Common at growth-stage SaaS companies under margin pressure as professional-services revenue commoditizes; also at large enterprise SaaS modernizing legacy PS practices.",
+    vocabulary: [
+      "AI-native delivery model",
+      "human-in-the-loop validation",
+      "discovery automation",
+      "solution-design AI assistance",
+      "configuration generation",
+      "delivery workflow standardization",
+      "reusability across projects and regions",
+      "validation checkpoints",
+      "fallback prevention",
+      "legacy manual processes (anti-pattern)",
+      "consultant-to-validator role shift",
+      "PS margin transformation",
+    ],
+    howToDropIn:
+      "\"AI-native Professional Services transformation is concrete: embed AI in discovery (interview synthesis, requirements extraction), solution design (configuration drafts, integration mapping), and implementation prep (artifact generation, dependency tracing) so the implementation specialist's role shifts from manual execution to validation and oversight. Standardize the workflows so they're reusable across projects and regions. Establish validation checkpoints by customer segment so quality stays consistent. The harder operating problem is the fallback: implementation consultants are skilled at manual delivery and will revert without active enforcement of the new model.\"",
+    commonPhrasing: "AI-native PS, AI-assisted implementation, scalable onboarding, PS transformation.",
+    notes:
+      "The fallback-prevention problem is the most consistent failure mode. Specialists trained on manual delivery don't easily shift to oversight roles because the new role feels less skilled and less differentiated — even though it's actually more leveraged. Leadership move: rewrite role definitions, performance criteria, and incentives around validation-and-oversight rather than around individual project execution. Adjacent transformations include Customer Success org transformation (toward AI-assisted health-score interpretation) and Sales Engineering transformation (toward AI-assisted technical-fit assessment). Pair with Head of Implementation & Onboarding (B2B SaaS), AI Adoption & Capability Building, and ADKAR (Prosci) for the workforce-change discipline.",
+    source:
+      "B2B SaaS Professional Services transformation practice 2024–2026; Supermetrics Head of Implementation JD (2026) as a representative public example.",
+    tags: ["professional_services", "saas", "transformation", "ai_native", "framework"],
+  },
 ];
