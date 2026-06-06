@@ -7033,4 +7033,65 @@ export const frameworks: Framework[] = [
       "Adobe Experience Cloud platform documentation; AEM Cloud Service practice; enterprise ecommerce PM job market 2024–2026.",
     tags: ["product_management", "ecommerce", "adobe", "aem", "platform", "framework"],
   },
+
+  // —— Consulting design practice (Big Four / Accenture Song / boutiques) —
+
+  {
+    name: "Experience Strategy Manager / Service Design Manager (Big Consulting Firm Design Practice)",
+    category: "consulting",
+    oneLiner:
+      "The senior-IC-with-some-people-leadership archetype at the design practices inside big consulting firms — Accenture Song, IDEO, Method, Frog (Capgemini), BCG Digital Ventures, McKinsey Design, Deloitte Digital, EY Doberman, KPMG Innovation Factory — leading client engagements end-to-end with accountability split across client delivery, business development, and practice / people development.",
+    whenToUse:
+      "Experience Strategy Manager / Service Design Manager / Senior Manager postings at big consulting design practices. 6+ years experience floor, 4+ years leading end-to-end engagements, 3+ years coaching designers. Salary range typically $90k–$260k depending on US location.",
+    vocabulary: [
+      "Experience Strategy (XS)",
+      "Service Design (SD)",
+      "client engagement leadership",
+      "scoping and project planning",
+      "discovery, synthesis, concepting, transition",
+      "capabilities, technologies, organizational change mapping",
+      "operating model design",
+      "experience-led business strategy",
+      "thought leadership / case studies",
+      "practice contribution",
+      "three-way accountability: delivery + BD + practice",
+      "consulting-firm grading",
+    ],
+    howToDropIn:
+      "\"Experience Strategy Manager at a big consulting firm has a three-way accountability structure distinct from in-house design leadership. Client delivery — leading engagements end-to-end with quality and timeline accountability across disciplines. Business development — contributing to proposals, creating case studies, surfacing unmet client needs to account leaders. Practice and people development — mentoring designers in the craft community, contributing methods and ways-of-working. The seat assumes you can do all three; failure to grow in any one limits advancement.\"",
+    commonPhrasing: "Experience Strategy Manager, Service Design Manager, Senior Manager (Design Practice).",
+    notes:
+      "Distinct from in-house product / design leadership (different incentives, different accountability structure) and from boutique consultancy (smaller team, fewer specializations). Big consulting design practices typically grade against three career dimensions: delivery excellence, business development contribution, practice contribution. Promotions require all three; just being great at client work doesn't move you up. Pair with AI-Embedded Design Practice and Senior OCM Consultant (AI / Digital Transformation) for the broader Big Four consulting career-grading context.",
+    source:
+      "Validated against 2026 postings: Accenture Song 'Experience Strategy Manager / Service Design Manager' (Senior Level, multiple US locations, $87k–$266k); analogous roles at IDEO, Method, Frog Capgemini, BCG Digital Ventures, McKinsey Design, Deloitte Digital, EY Doberman.",
+    tags: ["consulting", "experience_strategy", "service_design", "role", "framework"],
+  },
+  {
+    name: "AI-Embedded Design Practice (Embedding AI Into Design Workflows)",
+    category: "consulting",
+    oneLiner:
+      "The emerging discipline of embedding AI tools and workflows into experience strategy, service design, and product design practice — not as a topic the team studies, but as the working substrate of how the team produces research synthesis, concepting, narratives, prototypes, and case studies day to day.",
+    whenToUse:
+      "Consulting design roles that explicitly name 'embedding AI tools and workflows into product strategy and design practices,' 'modeling AI-enabled ways of working,' or similar. Increasingly common in 2025–2026 as consulting firms compete on AI-augmented delivery economics.",
+    vocabulary: [
+      "AI-embedded design practice",
+      "AI-augmented research synthesis",
+      "AI-accelerated concepting",
+      "prompt-driven prototyping",
+      "AI-enabled ways of working",
+      "delivery economics with AI",
+      "AI workflow documentation",
+      "quantified AI impact (delivery / quality / team performance)",
+      "thought leadership from practice",
+      "tooling: Claude, ChatGPT, v0, Cursor, Figma AI, Notion AI",
+    ],
+    howToDropIn:
+      "\"AI-embedded design practice isn't 'using AI for a task here and there.' It's restructuring the team's working substrate so AI is in the loop on research synthesis, concepting, narrative drafting, prototype generation, and case-study production. The consulting-firm version of this role asks the lead to document the workflow impact and quantify it — delivery velocity, quality, team performance — and feed that back as thought leadership. Modeling the working pattern for the team is part of the job; the team learns from watching the lead use the tools in flow.\"",
+    commonPhrasing: "AI-embedded design, AI-augmented workflows, AI in design practice.",
+    notes:
+      "Closely related to AI-Augmented Service Design (the emerging-discipline framework card) but framed for the consulting-firm context where AI workflow documentation and quantified impact are practice-level deliverables, not just project outcomes. Pair with Experience Strategy Manager / Service Design Manager (Big Consulting Firm Design Practice), AI-Augmented Service Design, AI Spec-Driven Development, and the existing forward-deployed framework cards.",
+    source:
+      "Consulting-firm AI-embedded design practice 2025–2026 (Accenture Song, IDEO, Deloitte Digital, McKinsey Design); Accenture Song XS Manager JD as a representative public example of the discipline being named as a hire criterion.",
+    tags: ["consulting", "ai_augmented", "design_practice", "framework"],
+  },
 ];
