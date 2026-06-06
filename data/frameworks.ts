@@ -6967,4 +6967,70 @@ export const frameworks: Framework[] = [
       "Executive coaching practice; tech-industry communication consensus; r/ProductManagement community discussion (2026); Wes Kao's executive communication material.",
     tags: ["communication", "executive_presence", "audience_design", "framework"],
   },
+
+  // —— Ecommerce product management (Adobe stack / luxury subsidiary) ——————
+
+  {
+    name: "Digital Product Manager (Luxury / Premium Subsidiary at Enterprise Parent)",
+    category: "product_management",
+    oneLiner:
+      "The mid-to-senior PM archetype at a luxury or premium subsidiary brand owned by a much larger parent company — Ann Sacks (Kohler), Williams-Sonoma brands at WSI, Maison Margiela at OTB, multiple at LVMH and Kering — where the PM owns the brand's ecommerce roadmap and platform-level decisions but operates inside the parent's enterprise IT, data, and procurement systems.",
+    whenToUse:
+      "Digital PM / Senior PM postings at premium subsidiary brands within larger holding companies, particularly home goods (Kohler family: Ann Sacks, Robern, Sterling), apparel and luxury (LVMH brands, Kering brands, OTB brands), home furnishings (Williams-Sonoma family, RH portfolio), beauty and personal care (Estée Lauder Companies brands, L'Oréal brands). 5+ year experience floor is standard.",
+    vocabulary: [
+      "subsidiary brand within enterprise parent",
+      "trade + DTC blend",
+      "luxury / premium ecommerce",
+      "enterprise IT partnership",
+      "platform-as-service model",
+      "brand-side PM (not platform PM)",
+      "12-month rolling roadmap",
+      "PDP optimization",
+      "product configurator",
+      "samples ordering",
+      "trade account experience",
+      "showroom appointment tooling",
+      "merchandising tools",
+    ],
+    howToDropIn:
+      "\"Digital PM at a luxury subsidiary inside an enterprise parent has a specific operating shape. The PM owns the brand's ecommerce roadmap and platform-level decisions, but the platform itself (CMS, DAM, PIM, analytics) is enterprise infrastructure shared with sister brands — so the PM partners closely with parent-IT on releases, integration, and capability building rather than owning the stack outright. The audience blend is usually trade (designers, contractors, B2B pros) plus DTC (homeowners, end customers), which is service-design's two-sided problem inside an ecommerce surface.\"",
+    commonPhrasing: "Digital Product Manager, Brand Digital PM, Ecommerce PM (luxury / premium).",
+    notes:
+      "Distinct from PM at a pure-play DTC ecommerce brand (where the PM owns the full stack) and from PM at the enterprise parent (who owns the platform infrastructure across brands). The subsidiary-PM seat is a translator role: enterprise IT speaks platform; brand marketing speaks story; trade and DTC customers speak different languages too. The Adobe ecosystem (AEM + DAM + PIM + Analytics) is the most common stack in this segment; Salesforce Commerce Cloud and SAP Hybris are alternatives at adjacent companies. Pair with Adobe Ecommerce Stack Ownership, Multi-Audience Digital Governance, and Product Manager, Digital Experience (Regulated Consumer Industries) for the regulated-consumer cousin.",
+    source:
+      "Validated against 2026 postings: Kohler 'Digital Product Manager, Ann Sacks' (Portland OR, onsite 4-day, $107k–$166k); analogous roles across Kohler family (Robern, Sterling), Williams-Sonoma Inc. portfolio, LVMH brand-level digital teams, Kering brands, Estée Lauder Companies brand portfolio.",
+    tags: ["product_management", "ecommerce", "luxury", "subsidiary", "role", "framework"],
+  },
+  {
+    name: "Adobe Ecommerce Stack Ownership (AEM + DAM + PIM + Analytics)",
+    category: "product_management",
+    oneLiner:
+      "The platform-specific PM specialty for enterprise digital product management running on the Adobe Experience Cloud stack — Adobe Experience Manager (AEM) for CMS, AEM Assets for DAM, Adobe Commerce (Magento) for commerce, Adobe Analytics for measurement, plus PIM integration (frequently Salsify, inriver, or Adobe's own PIM).",
+    whenToUse:
+      "Digital PM, ecommerce PM, or platform PM JDs that explicitly name AEM or Adobe Experience Cloud. Common at large consumer brands and enterprise B2B that standardized on Adobe (Kohler, Marriott, Walmart, Best Buy, Lufthansa, BMW, T-Mobile, US Bank).",
+    vocabulary: [
+      "Adobe Experience Manager (AEM)",
+      "AEM Sites / AEM Assets / AEM Forms",
+      "Adobe Experience Cloud",
+      "Adobe Commerce (Magento)",
+      "Adobe Analytics",
+      "Adobe Target (personalization)",
+      "AEM Cloud Service / AMS",
+      "content fragments",
+      "experience fragments",
+      "headless / hybrid AEM",
+      "PIM (Salsify, inriver, Adobe PIM)",
+      "DAM governance",
+      "asset metadata and taxonomy",
+      "syndication readiness",
+    ],
+    howToDropIn:
+      "\"The Adobe stack is its own platform context with its own operating norms. AEM is the CMS but is also the asset substrate (Sites and Assets share the same JCR backbone), which makes content / asset workflows highly intertwined. PIM integration is rarely native — Salsify or inriver are the common third-party plays, with Adobe pushing its own PIM more recently. Analytics is a separate Adobe product (Adobe Analytics, not Google Analytics) with its own event taxonomy. The PM's job is partly product roadmap and partly orchestrating these Adobe products against each other plus the parent company's IT release cadence.\"",
+    commonPhrasing: "AEM, Adobe stack, Adobe Experience Cloud, Adobe Commerce, AEM Sites, AEM Assets.",
+    notes:
+      "Adobe is the dominant enterprise-CMS / digital-experience platform at large consumer brands. Knowing AEM specifically (not just 'a CMS') is the credential bar for many of these PM roles. Worth being honest in interviews about AEM-specific vs. general-CMS experience — the version differences (AEM 6.5 vs. AEM as a Cloud Service) carry distinct operating implications. Pair with Digital Product Manager (Luxury / Premium Subsidiary at Enterprise Parent), Enterprise CMS Stewardship, and Multi-Audience Digital Governance.",
+    source:
+      "Adobe Experience Cloud platform documentation; AEM Cloud Service practice; enterprise ecommerce PM job market 2024–2026.",
+    tags: ["product_management", "ecommerce", "adobe", "aem", "platform", "framework"],
+  },
 ];
