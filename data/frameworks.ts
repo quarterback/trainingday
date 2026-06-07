@@ -7440,4 +7440,34 @@ export const frameworks: Framework[] = [
       "Stephen Casper interview, Center for AI Policy podcast episode #10 (August 2024); broader sociotechnical AI safety field 2022–2026 (Anthropic policy team, GovAI, FLI, Stanford HAI).",
     tags: ["ai_safety", "sociotechnical", "bridge_field", "framework"],
   },
+  {
+    name: "Civil AI Safety (Discipline and Positioning Move)",
+    category: "ai_safety",
+    oneLiner:
+      "A deliberately-narrowed AI safety lane focused on the impact of AI on civil life — civic infrastructure, public-facing institutions, democratic processes, public services, urban systems, and the everyday operations of state and city government. Distinct from 'AI Safety writ large' (which tilts toward technical alignment, AGI risk, and EA-adjacent framing) by centering civic and institutional consequence rather than capability frontiers.",
+    whenToUse:
+      "Self-positioning for AI work that connects to civic, urban, public-sector, or institutional contexts; foundation grant proposals for AI-in-public-life work; talks and writing that need to land in a register adjacent to civil society, civic technology, urban policy, and public-interest tech rather than in the AGI-alignment register; conversations with practitioners who've worked in 18F / USDS / Code for America / civic-tech / urban policy and who need an AI-safety frame that doesn't require adopting the broader AI-safety community's reference set.",
+    vocabulary: [
+      "Civil AI Safety",
+      "AI in civil life",
+      "civic AI",
+      "public-life AI",
+      "AI in public institutions",
+      "civic infrastructure under AI",
+      "AI and democratic processes",
+      "AI in public service delivery",
+      "AI in urban systems",
+      "civil defense for AI (Societal Defense Researcher overlap)",
+      "Public Mechanics applied to AI",
+      "the public-life-AI seat",
+    ],
+    howToDropIn:
+      "\"Civil AI Safety is a deliberately narrower lane than AI Safety writ large. The 'AI Safety' canon tilts toward technical alignment, AGI risk, capability evaluations, and EA-adjacent framing. That's a real and growing field, but it's not where my work has been. Civil AI Safety centers a different question: what happens to civil life — civic infrastructure, public institutions, democratic processes, public services, urban systems — when AI is deployed into them? It connects to the AI Safety field at the Societal Defense Researcher / civil defense edge, but it draws from civic tech, urbanism, public-sector design, and critical-tech traditions as much as from the AI Safety canon. The lane is small enough to own a position in and broad enough to cover a body of work.\"",
+    commonPhrasing: "Civil AI Safety, AI in civil life, public-life AI, civic AI safety.",
+    notes:
+      "Owner-coined lane positioning — useful when the broader 'AI Safety' identity is crowded, technically-dominated, or culturally non-native. Maps the existing body of work cleanly: State Capacity AI (the practice), Occupant Indices ($CPI / $AIU / $LDI as civil-life AI measurement infrastructure), Public Mechanics (the academic discipline at Michigan UT-402), eAPD (federal benefits AI-adjacent), Portland Digital Corps (civic-tech community institution-building), the SOMD doctrine pilot (capability-building for federal AI oversight). The positioning move lets the practitioner stay in a register adjacent to civic technology, urban policy, and public-interest tech without adopting the AI Safety community's reference set (capability assessments, AGI risk literature, alignment-adjacent frameworks) wholesale. Pair with Societal Defense Researcher / AI Civil Defense Policy, AI Safety Policy Research Landscape, STS-to-AI-Safety Translation, the State Capacity AI Story card, and the Critical Engineer / Critical Technologist Lineage card.",
+    source:
+      "Owner-coined positioning lane (2026). Adjacent established usage in 'civil defense for AI' (CARMA Public Security Policy), 'civic AI' (Code for America, Beeck Center), 'AI in public institutions' (Public Mechanics academic frame); not yet established as a named field but actively forming at the intersection of AI safety, civic technology, and urban / public-policy practice.",
+    tags: ["ai_safety", "civil_ai_safety", "positioning", "owner_coined", "framework"],
+  },
 ];
