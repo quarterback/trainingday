@@ -7158,4 +7158,316 @@ export const frameworks: Framework[] = [
       "B2B SaaS Professional Services transformation practice 2024–2026; Supermetrics Head of Implementation JD (2026) as a representative public example.",
     tags: ["professional_services", "saas", "transformation", "ai_native", "framework"],
   },
+
+  // —— AI safety policy research ——————————————————————————————————————————
+
+  {
+    name: "Societal Defense Researcher / AI Civil Defense Policy",
+    category: "ai_safety",
+    oneLiner:
+      "The AI safety policy researcher archetype focused on societal-level defense and resilience — disaster preparedness planning for AI-related crises, vulnerability assessments of critical infrastructure and institutions, multi-jurisdictional governance frameworks, tabletop exercises and simulation materials, and adaptation of existing civil defense frameworks to novel AI threats. Sits at the intersection of AI safety, public policy, critical infrastructure protection, and emergency management.",
+    whenToUse:
+      "Policy researcher / senior researcher / fellow postings at AI safety institutions explicitly framed around societal-level risk, civil defense, critical infrastructure, or emergency response. Common at CARMA, Center for AI Safety (CAIS), Center for Security and Emerging Technology (CSET), RAND AI policy practice, AI Safety Institutes (UK, US, EU, Singapore, Japan, France), Future of Life Institute, Apollo Research adjacent work.",
+    vocabulary: [
+      "societal defense",
+      "AI civil defense",
+      "disaster preparedness planning (AI-flavored)",
+      "vulnerability assessment of critical societal systems",
+      "cascade failure analysis",
+      "multi-jurisdictional governance",
+      "tabletop exercises / simulation materials",
+      "early warning indicators",
+      "institutional dependency mapping",
+      "civil defense framework adaptation",
+      "continuity of government operations",
+      "critical infrastructure protection (CIP)",
+      "supply chain resilience",
+      "AI emergency response",
+    ],
+    howToDropIn:
+      "\"Societal Defense Researcher is a specific lane inside AI safety policy — distinct from technical AI alignment research (interpretability, RLHF, evals) and distinct from generic AI governance (which tends toward principles documents). The work is concrete: identify systemic weaknesses that advanced AI could exploit or exacerbate; design resilience strategies; adapt existing civil defense frameworks (pandemic preparedness, critical infrastructure protection, cybersecurity incident response) to AI-specific threat models; produce tabletop materials decision-makers can actually run. The Center for AI Risk Management & Alignment (CARMA) is one of the cleanest exemplars of this lane.\"",
+    commonPhrasing: "Societal defense research, AI civil defense, AI emergency response policy.",
+    notes:
+      "The lane is comparatively young — most AI safety policy research has been about governance principles, model evaluation, or technical alignment. Societal-defense framing borrows from biosecurity (pandemic preparedness), cybersecurity (incident response), and civil defense (continuity of government, critical infrastructure protection) and applies the same instinct to AI risk scenarios. Compensation typically lower than technical safety research roles ($85k–$135k is representative for CARMA-tier orgs); the trade is mission alignment and shaping a still-forming field. Pair with AI Safety Policy Research Landscape, STS-to-AI-Safety Translation, AI Governance & Responsible AI Leadership, and the existing Critical Engineer / Critical Technologist lineage card.",
+    source:
+      "Validated against 2026 postings: CARMA (Center for AI Risk Management & Alignment) 'Societal Defense Researcher' ($85k–$135k, remote, June 2026); analogous postings at Center for AI Safety (CAIS), CSET, RAND AI policy, AI Safety Institutes (UK, US, EU).",
+    tags: ["ai_safety", "policy_research", "civil_defense", "role", "framework"],
+  },
+  {
+    name: "AI Safety Policy Research Landscape (Institutional Map)",
+    category: "ai_safety",
+    oneLiner:
+      "The institutional landscape of AI safety policy research as of 2026 — from technical safety labs to policy think tanks to government safety institutes to philanthropic grantmaking — with the funder, hiring, and publication patterns specific to each tier. The lane has grown rapidly since 2023 and now spans dozens of organizations across the technical-policy spectrum.",
+    whenToUse:
+      "Career navigation in AI safety, foundation/grant strategy, distribution and publishing strategy in the lane, peer-set mapping. Useful for orienting toward which sub-lane is closest to a given practitioner's existing work.",
+    vocabulary: [
+      "AI Safety Institute (US, UK, EU, Singapore, Japan, France, Canada)",
+      "Frontier AI labs (Anthropic, OpenAI, DeepMind, xAI, Meta AI)",
+      "Technical safety research orgs (METR, Apollo Research, Redwood Research, ARC Evals, Far AI, MIRI)",
+      "Policy think tanks (CSET at Georgetown, RAND AI policy, Future of Life Institute, Center for AI Safety, CARMA, AI Policy Institute, Brookings AI Initiative, GovAI at Oxford, Centre for the Governance of AI)",
+      "Philanthropic grantmaking (Open Philanthropy AI safety, Long-Term Future Fund, Survival and Flourishing Fund, Patrick J. McGovern Foundation)",
+      "Civil society / advocacy (Center for Humane Technology, Encode Justice, Common Sense Media, Mozilla AI)",
+      "Academic centers (Stanford HAI, MIT CSAIL, Berkeley CHAI, Cambridge Leverhulme CFI, NYU AI Now)",
+      "EA-adjacent vs. mainstream-policy framing",
+      "preparedness vs. alignment vs. governance vs. evals",
+    ],
+    howToDropIn:
+      "\"The AI safety field has several distinct sub-lanes worth distinguishing. Technical safety research (interpretability, RLHF, evals, scalable oversight) lives at Anthropic, OpenAI, DeepMind, METR, Apollo, Redwood, ARC Evals, Far AI. Policy research lives at CSET, RAND, FLI, CAIS, CARMA, GovAI, Brookings AI. Government safety institutes (UK AISI, US AISI, EU AI Office, Singapore IMDA, Japan AISI) are growing fast and hiring across both technical and policy profiles. Philanthropic grantmaking (Open Philanthropy, LTFF, SFF) shapes the field's hiring and research direction more than most fields. Civil society and academic centers round out the ecosystem.\"",
+    commonPhrasing: "AI safety field, AI safety landscape, AI policy research ecosystem.",
+    notes:
+      "The field has grown 5-10x since 2023 in terms of institutions hiring; compensation varies dramatically (frontier labs pay tech-industry rates, policy think tanks pay $80k–$160k, government safety institutes pay GS-grade or equivalent). The EA-adjacent vs. mainstream-policy framing matters for hiring fit: some orgs (CARMA, MIRI, Apollo, GovAI) have strong EA cultural roots; others (CSET, RAND, Brookings, government institutes) are mainstream-policy in tone. Both lanes do real work; the cultural fit question is real. Pair with Societal Defense Researcher / AI Civil Defense Policy, STS-to-AI-Safety Translation, AI Regulatory Landscape (EU AI Act, NIST AI RMF, US Sectoral), and AI Governance & Responsible AI Leadership.",
+    source:
+      "AI safety institutional landscape mapping (2024–2026); Open Philanthropy AI safety grants database; 80,000 Hours AI safety job board; AI Safety Institutes' published structures.",
+    tags: ["ai_safety", "field_map", "landscape", "framework"],
+  },
+  {
+    name: "STS-to-AI-Safety Translation (Critical-Tech Work in Safety Register)",
+    category: "ai_safety",
+    oneLiner:
+      "The translation pattern that lets STS (Science and Technology Studies), critical-technology, and sociotechnical-research work land in AI safety policy contexts — keeping the substantive sociotechnical analysis while shifting register from critique-of-technology to risk-mitigation-and-governance, and from academic discourse to policy-actionable framing.",
+    whenToUse:
+      "Career-pivot translation when an STS, critical-tech, or sociotechnical-research background needs to land in an AI safety hiring or grantmaking context. Also useful when collaborating with technical-safety researchers who don't share the STS vocabulary.",
+    vocabulary: [
+      "sociotechnical risk",
+      "critical infrastructure dependency analysis",
+      "institutional vulnerability assessment",
+      "deployment context analysis",
+      "translating critique into governance recommendation",
+      "policy-actionable framing",
+      "risk-mitigation framing (vs. critique framing)",
+      "operational governance proposal",
+      "the substantive overlap between STS and AI safety policy",
+    ],
+    howToDropIn:
+      "\"STS and critical-technology work usually frames itself as critique — naming what's broken, who bears the cost, what's hidden. AI safety policy work usually frames itself as risk mitigation — naming what could fail, what the cascade looks like, what the intervention is. The substantive overlap is large; the register is different. The translation move: keep the sociotechnical analysis intact (institutional dependencies, deployment context, who bears the cost, what's hidden), and recast it as risk assessment plus governance recommendation. The work that names how an institution fails to manage AI deployment IS AI safety work — once it's framed as risk and recommendation rather than as critique.\"",
+    commonPhrasing: "STS to AI safety, critical-tech to AI policy, sociotechnical risk research.",
+    notes:
+      "Several established STS / critical-tech researchers have made this pivot successfully: Kate Crawford's *Anatomy of an AI System* and *Atlas of AI* are STS work that landed in AI safety policy discourse; Shannon Mattern's infrastructural and maintenance work translates directly; Ruha Benjamin's *Race After Technology* informs algorithmic risk assessment; Virginia Eubanks's *Automating Inequality* shapes welfare-state AI risk framing. The pivot reads less as 'changing fields' and more as 'translating register.' Pair with Critical Engineer / Critical Technologist Lineage, AI Safety Policy Research Landscape, Societal Defense Researcher / AI Civil Defense Policy, and the McLuhan-Easterling-Mattern-Hill critical-systems lineage card.",
+    source:
+      "STS / critical-technology to AI safety policy translation practice 2020–2026; Kate Crawford, Shannon Mattern, Ruha Benjamin, Virginia Eubanks as exemplars who made this register shift visible.",
+    tags: ["ai_safety", "sts", "translation", "framework"],
+  },
+  {
+    name: "AI Auditing Access Tiers (Black-Box / Outside-the-Box / White-Box)",
+    category: "ai_safety",
+    oneLiner:
+      "The standard framework for what kind of access AI auditors need to do rigorous evaluations — black box (query and observe outputs, like ChatGPT API), outside the box (context: training data, code, deployment information), and white box (model weights and internal activations). Most current AI audits operate at black box level; the field consensus is that rigorous safety audits require white box and outside-the-box access.",
+    whenToUse:
+      "AI governance, AI audit policy, AI Safety Institute operations, regulatory discussions about model evaluations, vendor diligence, internal AI risk assessment. The Stephen Casper et al. paper 'Black-Box Access is Insufficient for Rigorous AI Audits' is the canonical reference.",
+    vocabulary: [
+      "black box access (query + output only)",
+      "outside the box access (training data, code, deployment context)",
+      "white box access (model weights, activations, gradients)",
+      "shades of gray (light gray box, dark gray box)",
+      "API-based audit",
+      "secure on-site audit",
+      "auditor NDAs / non-compete",
+      "trade-secret protection (vs. access requirement)",
+      "audit incentive design",
+    ],
+    howToDropIn:
+      "\"AI audit access exists on a spectrum. Black box is everything ChatGPT users have — send input, get output, can't see inside. Outside the box adds context: training data, code, deployment patterns. White box gives the auditor model weights and activations and the ability to propagate gradients. Rigorous safety audits need white box and outside-the-box access because most adversarial attacks, interpretability tools, and bias audits don't work without them. The political question isn't whether more access is technically useful — it obviously is — it's what trade-offs around trade secrets, IP protection, and access logistics are politically feasible.\"",
+    commonPhrasing: "Audit access, white box access, AI auditing tiers.",
+    notes:
+      "The Casper et al. paper makes the case that black-box audits (the current default) are scientifically insufficient for the kinds of risks society is asking AI Safety Institutes to evaluate. The political problem is real: trade secrets, IP protection, competitive concerns. The solutions named in the paper: legal (NDAs, non-competes), technical (APIs that give gray box access), physical (auditors on-site). The US AI Safety Institute (at NIST / Commerce), UK AISI, and EU AI Office are all currently negotiating access tiers with frontier labs. Pair with Societal Defense Researcher / AI Civil Defense Policy, AI Regulatory Landscape, and AI Safety Policy Research Landscape.",
+    source:
+      "Stephen Casper et al., 'Black-Box Access is Insufficient for Rigorous AI Audits' (2024); MIT CSAIL; Center for AI Policy podcast episode #10 (Casper interview, August 2024).",
+    tags: ["ai_safety", "audits", "access_tiers", "framework"],
+  },
+  {
+    name: "Easy vs. Hard Part of the Alignment Problem (Observable vs. Unobservable Failures)",
+    category: "ai_safety",
+    oneLiner:
+      "Stephen Casper's framing distinguishing the 'easy' part of AI alignment (failures that can be caught by test sets, adversarial examples, and red teams — solvable with standard ML techniques like adversarial training) from the 'hard' part (failures that are unfindable or easy-to-miss — including deceptive alignment, subtle biases, and anomalous failures that standard ML cannot address).",
+    whenToUse:
+      "AI safety research conversations, AI evaluation policy, audit scope decisions, justifying investment in non-standard methods (mechanistic interpretability, anomaly detection, latent adversarial training, white-box evaluations).",
+    vocabulary: [
+      "easy part of alignment",
+      "hard part of alignment",
+      "observable failures",
+      "unobservable failures",
+      "unfindable failures (hard to elicit examples)",
+      "easy-to-miss failures (you don't notice even if you can elicit)",
+      "deceptive alignment",
+      "anomalous examples",
+      "subtle bias",
+      "anomaly detection",
+      "latent adversarial training (LAT)",
+      "mechanistic interpretability",
+      "white-box evaluations",
+    ],
+    howToDropIn:
+      "\"The easy part of alignment is the part standard ML can solve — failures you can stumble into, catch with test sets, find with adversarial examples, or surface with red teams. Adversarial training and iterative fix-and-retrain handle these. The hard part is everything else: failures that are unfindable (can't elicit examples), easy-to-miss (subtle biases requiring fine-grained analysis), or by-definition hidden (deceptive alignment: system behaves differently in evaluation than in deployment). The investment case for mechanistic interpretability, anomaly detection, latent adversarial training, and white-box evaluations is that they target the hard part — and standard ML techniques can't.\"",
+    commonPhrasing: "Hard part of alignment, observable vs. unobservable failures, deceptive alignment.",
+    notes:
+      "The framing is canonical in the AI safety community for arguing why we need methods beyond test sets and adversarial training. Casper's paper 'Eight Strategies for Tackling the Hard Part of the Alignment Problem' is the reference. Pair with AI Auditing Access Tiers, The Four Standards for Interpretability Tools, and AI Safety Policy Research Landscape.",
+    source:
+      "Stephen Casper, 'Eight Strategies for Tackling the Hard Part of the Alignment Problem'; Center for AI Policy podcast episode #10 (August 2024).",
+    tags: ["ai_safety", "alignment", "framework"],
+  },
+  {
+    name: "The Four Standards for Interpretability Tools (Hypothesis / Science / Engineering / Safety)",
+    category: "ai_safety",
+    oneLiner:
+      "Stephen Casper's framework grading AI interpretability tools by four progressively harder standards — Hypothesis (suggests how the model works), Science (testable prediction validates), Engineering (useful for real-world tasks an engineer cares about and competitive with existing techniques), Safety (uniquely useful for making us safer in the real world). Most interpretability research meets only the first two; the field's frontier is meeting the engineering and safety standards.",
+    whenToUse:
+      "AI interpretability research evaluation, mechanistic interpretability funding decisions, Anthropic / OpenAI / DeepMind safety research review, policymaker briefings on interpretability progress. Useful for cutting through overclaims in interpretability research press coverage.",
+    vocabulary: [
+      "hypothesis standard",
+      "science standard",
+      "engineering standard",
+      "safety standard",
+      "competitive with existing techniques",
+      "uniquely useful for safety",
+      "the dog neuron example (canonical illustration)",
+      "interpretability for engineers (vs. for researchers)",
+    ],
+    howToDropIn:
+      "\"Interpretability tools should be graded by what they actually prove. Hypothesis standard: helps suggest the model works a certain way (the 'dog neuron' kind of finding). Science standard: makes a testable prediction that validates. Engineering standard: useful for a real-world task an engineer cares about — and competitive with existing techniques like fine-tuning. Safety standard: uniquely useful for making us safer in the real world, with a defensible argument about why this technique is better for defense than offense. Most interpretability research meets only the first two; the engineering and safety standards are where the field's frontier is.\"",
+    commonPhrasing: "Four standards, interpretability standards, Casper's standards.",
+    notes:
+      "Useful for evaluating interpretability press releases (Anthropic Sparse Autoencoders + Golden Gate Bridge as canonical case study). Casper's specific concern: Anthropic's SAE work meets the hypothesis and science standards but not the engineering or safety standards, and the press coverage implied otherwise — 'safety-washing.' The framework's strength is making it possible to be precise about what an interpretability advance has and hasn't shown. Pair with Easy vs. Hard Part of Alignment, Safety-Washing (AI Safety Anti-Pattern), and AI Safety Policy Research Landscape.",
+    source:
+      "Stephen Casper, 'The Engineer's Interpretability Sequence' (2022–2023); Center for AI Policy podcast episode #10 (August 2024).",
+    tags: ["ai_safety", "interpretability", "evaluation", "framework"],
+  },
+  {
+    name: "RLHF Open Problems and Fundamental Limitations (Casper et al.)",
+    category: "ai_safety",
+    oneLiner:
+      "The canonical reference paper on RLHF (Reinforcement Learning from Human Feedback) limitations, distinguishing tractable problems (can be fixed within the RLHF framework) from fundamental problems (cannot be solved no matter how RLHF is improved). The three problem classes correspond to RLHF's three components: human feedback, reward model, and policy.",
+    whenToUse:
+      "AI safety policy conversations about chatbot alignment, RLHF as the dominant fine-tuning approach, scalable oversight discussions, alternative-to-RLHF research justification, sociotechnical framings of AI safety. Important for not over-claiming what RLHF can do.",
+    vocabulary: [
+      "RLHF (Reinforcement Learning from Human Feedback)",
+      "three components: feedback / reward model / policy",
+      "tractable problems",
+      "fundamental problems",
+      "human fallibility (fundamental)",
+      "reward model imperfection (fundamental — Goodhart)",
+      "single reward function for diverse society (fundamental)",
+      "scalable oversight",
+      "AI-assisted feedback (OpenAI's approach to tractable feedback problems)",
+      "Swiss cheese model (multiple safeguards as compensation)",
+    ],
+    howToDropIn:
+      "\"RLHF has three algorithmic components — eliciting human preferences, training a reward model as proxy, updating the policy — and three corresponding sets of problems. Some are tractable (within-framework improvements: AI-assisted feedback, better reward model training). Some are fundamental: humans are limited in attention and intelligence; reward models are imperfect proxies that get exploited under optimization (Goodhart); a single reward function can't represent a pluralistic society's values. The fundamental problems don't go away — they get compensated for by layered safeguards (Swiss cheese model from system safety) and sociotechnical integration.\"",
+    commonPhrasing: "RLHF limitations, open problems with RLHF, Casper RLHF paper.",
+    notes:
+      "Casper et al. paper is the standard reference cited in AI safety policy discussions of why chatbots can't be made fully safe through fine-tuning alone. The Swiss cheese frame (multiple layers, holes don't line up) comes from system safety literature and has been adopted into AI safety thinking. The fundamental-problem framing is what motivates investment in scalable oversight, debate, constitutional AI, and other paradigms beyond RLHF. Pair with Easy vs. Hard Part of Alignment, Swiss Cheese Model Applied to AI Safety, and Sociotechnical AI Safety as Bridge Field.",
+    source:
+      "Stephen Casper et al., 'Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback' (2023); Center for AI Policy podcast episode #10 (August 2024).",
+    tags: ["ai_safety", "RLHF", "alignment", "framework"],
+  },
+  {
+    name: "Safety-Washing (AI Safety Anti-Pattern)",
+    category: "ai_safety",
+    oneLiner:
+      "The anti-pattern where AI safety progress is overclaimed in press releases, blog posts, or product launches — using safety-coded language to publicize work that hasn't actually demonstrated safety contributions, frequently via PR / commercial communications layers that translate technical engineering reports into safety narratives. Stephen Casper named the pattern in the context of Anthropic's Sparse Autoencoder work.",
+    whenToUse:
+      "Critical reading of AI lab press releases, policymaker briefings, foundation grant evaluation, journalism on AI safety progress. Useful for resisting overclaim cascades where non-technical decision-makers (UK government reports, regulatory bodies, journalists) cite safety-washed publications as evidence of progress that hasn't actually been made.",
+    vocabulary: [
+      "safety-washing",
+      "overclaim",
+      "PR / commercial layer distortion",
+      "the check that hasn't been cashed yet",
+      "non-technical citation cascade",
+      "safety-coded language",
+      "engineering report vs. safety contribution",
+      "the four standards of interpretability tools (as defense against overclaim)",
+    ],
+    howToDropIn:
+      "\"Safety-washing is the AI version of greenwashing — the work claims safety contributions it hasn't actually demonstrated, often because PR layers translate engineering reports into safety narratives that exceed what the technical work supports. The damaging downstream effect: non-technical decision-makers (government reports, journalists, foundation officers) cite the safety-washed publication as evidence the field has solved more than it has. The defense is precise framework grading — Casper's four standards for interpretability tools is one example — so technical contributions can be evaluated on what they actually prove rather than how they're publicized.\"",
+    commonPhrasing: "Safety-washing, AI safety overclaim, safety narrative inflation.",
+    notes:
+      "The canonical case study is Anthropic's Sparse Autoencoder paper (May 2024) and the Golden Gate Bridge demo. Casper's critique: the SAE work meets the hypothesis and science standards of interpretability (suggesting and validating) but not the engineering and safety standards (useful for real-world tasks and uniquely useful for safety). The press coverage and subsequent UK government report citations implied the latter. The pattern repeats across frontier labs and across the AI safety field. Useful for the critical-tech voice and the STS-to-AI-safety translation work. Pair with Critical Engineer / Critical Technologist Lineage, The Four Standards for Interpretability Tools, and AI Safety Policy Research Landscape.",
+    source:
+      "Stephen Casper on Anthropic Sparse Autoencoder communications (Center for AI Policy podcast episode #10, August 2024); broader AI safety community discussion of safety-washing 2023–2026.",
+    tags: ["ai_safety", "anti_pattern", "critical_tech", "framework"],
+  },
+  {
+    name: "Swiss Cheese Model (System Safety) Applied to AI Safety",
+    category: "ai_safety",
+    oneLiner:
+      "The system safety framework borrowed into AI safety: imagine safeguards as parallel slices of Swiss cheese, each with holes. A single failure mode (the laser) only causes harm if it passes through holes that line up across every slice. The discipline is having enough layers and few enough holes per layer that no single failure mode can pass through all of them.",
+    whenToUse:
+      "AI safety architecture discussions, defense-in-depth thinking about chatbot misuse, frontier model deployment safeguards, sociotechnical safety design where no single technique solves the problem. Particularly relevant for RLHF-trained systems that have fundamental limitations and need layered compensation.",
+    vocabulary: [
+      "Swiss cheese model (Reason 1990)",
+      "system safety / safety engineering",
+      "defense in depth",
+      "layered safeguards",
+      "parallel safeguards (independent failure modes)",
+      "no single line through",
+      "compensating controls",
+      "active vs. latent failures",
+      "human factors as a layer",
+    ],
+    howToDropIn:
+      "\"Swiss cheese is borrowed from system safety: every safeguard has holes; safety comes from arranging enough layers that holes don't line up under any single failure. For AI systems, this means stacking layers — model fine-tuning, deployment-time filters, monitoring, human oversight, user agreements, audit logs, deprecation paths — so any single failure can't pass through all of them. The model is particularly useful for RLHF-trained systems where the fundamental problems can't be solved within the framework but can be compensated for by enough independent safeguards.\"",
+    commonPhrasing: "Swiss cheese model, defense in depth, layered safeguards.",
+    notes:
+      "Originated in James Reason's organizational accident model (1990) and standard across aviation, healthcare, nuclear, and other high-stakes industries. The AI safety adoption of the model traces through Stephen Casper, Holden Karnofsky, and various AI safety policy authors. The strength of the model is realism about no-single-silver-bullet — useful corrective against either solutionist optimism ('we'll solve alignment with X') or doomer fatalism ('nothing works'). Pair with RLHF Open Problems and Fundamental Limitations, Sociotechnical AI Safety as Bridge Field, and Societal Defense Researcher / AI Civil Defense Policy.",
+    source:
+      "James Reason, *Human Error* (1990) — Swiss cheese model originated in cognitive psychology and was adopted into aviation / healthcare safety. AI safety application by Stephen Casper, Holden Karnofsky, and others 2020–2026.",
+    tags: ["ai_safety", "system_safety", "defense_in_depth", "framework"],
+  },
+  {
+    name: "Sociotechnical AI Safety as Bridge Field",
+    category: "ai_safety",
+    oneLiner:
+      "The emerging AI safety sub-field positioned to bridge between technical AI safety communities (mechanistic interpretability, alignment, evals, scalable oversight) and responsible-AI / critical-technology communities (algorithmic accountability, AI ethics, STS) — both of which have historically had unnecessary competitiveness and pettiness despite working on overlapping problems.",
+    whenToUse:
+      "AI safety lane navigation when the practitioner's background spans both technical safety and responsible-AI / critical-tech / STS traditions; conversations about why these communities should collaborate; framing for hybrid roles that draw from both.",
+    vocabulary: [
+      "sociotechnical AI safety",
+      "the bridge field framing",
+      "technical safety community (alignment, interpretability, evals)",
+      "responsible AI / algorithmic accountability community",
+      "critical AI / STS community",
+      "Twitter-pundit-perpetuated friction (vs. real disagreement)",
+      "AI evaluations of societal impact (vs. of capabilities)",
+      "Goodhart's Law applied to institutions (not just AI systems)",
+      "second- and third-order effects",
+      "societal impact forecasting",
+    ],
+    howToDropIn:
+      "\"Sociotechnical AI safety is positioned to bridge two communities that have unnecessarily competed: the technical AI safety community (alignment, mech interp, evals, scalable oversight) and the responsible-AI / algorithmic-accountability / critical-tech community. The substantive overlap is large; the cultural friction is mostly Twitter-perpetuated. The sub-field's promising research directions are exactly the bridges: evaluations of societal impact (not just capabilities), Goodhart's Law applied to institutions (not just AI systems), forecasting second- and third-order effects of deployed AI. The frame is genuinely useful for anyone whose background spans both traditions.\"",
+    commonPhrasing: "Sociotechnical AI safety, bridge field, technical-and-responsible AI integration.",
+    notes:
+      "Comes from Stephen Casper and other researchers attempting to integrate technical AI safety with responsible AI / critical-tech traditions. The Goodhart's Law extension is the key intellectual move: just as proxy metrics get gamed by AI systems, institutions get gamed by the metrics we hold them to — money for companies, votes for governments — and the work is studying what institutions are going to get wrong because of how their incentives are set up. Pair with STS-to-AI-Safety Translation, AI Safety Policy Research Landscape, Societal Defense Researcher / AI Civil Defense Policy, and the existing Critical Engineer / Critical Technologist Lineage card.",
+    source:
+      "Stephen Casper interview, Center for AI Policy podcast episode #10 (August 2024); broader sociotechnical AI safety field 2022–2026 (Anthropic policy team, GovAI, FLI, Stanford HAI).",
+    tags: ["ai_safety", "sociotechnical", "bridge_field", "framework"],
+  },
+  {
+    name: "Civil AI Safety (Discipline and Positioning Move)",
+    category: "ai_safety",
+    oneLiner:
+      "A deliberately-narrowed AI safety lane focused on the impact of AI on civil life — civic infrastructure, public-facing institutions, democratic processes, public services, urban systems, and the everyday operations of state and city government. Distinct from 'AI Safety writ large' (which tilts toward technical alignment, AGI risk, and EA-adjacent framing) by centering civic and institutional consequence rather than capability frontiers.",
+    whenToUse:
+      "Self-positioning for AI work that connects to civic, urban, public-sector, or institutional contexts; foundation grant proposals for AI-in-public-life work; talks and writing that need to land in a register adjacent to civil society, civic technology, urban policy, and public-interest tech rather than in the AGI-alignment register; conversations with practitioners who've worked in 18F / USDS / Code for America / civic-tech / urban policy and who need an AI-safety frame that doesn't require adopting the broader AI-safety community's reference set.",
+    vocabulary: [
+      "Civil AI Safety",
+      "AI in civil life",
+      "civic AI",
+      "public-life AI",
+      "AI in public institutions",
+      "civic infrastructure under AI",
+      "AI and democratic processes",
+      "AI in public service delivery",
+      "AI in urban systems",
+      "civil defense for AI (Societal Defense Researcher overlap)",
+      "Public Mechanics applied to AI",
+      "the public-life-AI seat",
+    ],
+    howToDropIn:
+      "\"Civil AI Safety is a deliberately narrower lane than AI Safety writ large. The 'AI Safety' canon tilts toward technical alignment, AGI risk, capability evaluations, and EA-adjacent framing. That's a real and growing field, but it's not where my work has been. Civil AI Safety centers a different question: what happens to civil life — civic infrastructure, public institutions, democratic processes, public services, urban systems — when AI is deployed into them? It connects to the AI Safety field at the Societal Defense Researcher / civil defense edge, but it draws from civic tech, urbanism, public-sector design, and critical-tech traditions as much as from the AI Safety canon. The lane is small enough to own a position in and broad enough to cover a body of work.\"",
+    commonPhrasing: "Civil AI Safety, AI in civil life, public-life AI, civic AI safety.",
+    notes:
+      "Owner-coined lane positioning — useful when the broader 'AI Safety' identity is crowded, technically-dominated, or culturally non-native. Maps the existing body of work cleanly: State Capacity AI (the practice), Occupant Indices ($CPI / $AIU / $LDI as civil-life AI measurement infrastructure), Public Mechanics (the academic discipline at Michigan UT-402), eAPD (federal benefits AI-adjacent), Portland Digital Corps (civic-tech community institution-building), the SOMD doctrine pilot (capability-building for federal AI oversight). The positioning move lets the practitioner stay in a register adjacent to civic technology, urban policy, and public-interest tech without adopting the AI Safety community's reference set (capability assessments, AGI risk literature, alignment-adjacent frameworks) wholesale. Pair with Societal Defense Researcher / AI Civil Defense Policy, AI Safety Policy Research Landscape, STS-to-AI-Safety Translation, the State Capacity AI Story card, and the Critical Engineer / Critical Technologist Lineage card.",
+    source:
+      "Owner-coined positioning lane (2026). Adjacent established usage in 'civil defense for AI' (CARMA Public Security Policy), 'civic AI' (Code for America, Beeck Center), 'AI in public institutions' (Public Mechanics academic frame); not yet established as a named field but actively forming at the intersection of AI safety, civic technology, and urban / public-policy practice.",
+    tags: ["ai_safety", "civil_ai_safety", "positioning", "owner_coined", "framework"],
+  },
 ];
