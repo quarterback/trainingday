@@ -7158,4 +7158,93 @@ export const frameworks: Framework[] = [
       "B2B SaaS Professional Services transformation practice 2024–2026; Supermetrics Head of Implementation JD (2026) as a representative public example.",
     tags: ["professional_services", "saas", "transformation", "ai_native", "framework"],
   },
+
+  // —— AI safety policy research ——————————————————————————————————————————
+
+  {
+    name: "Societal Defense Researcher / AI Civil Defense Policy",
+    category: "ai_safety",
+    oneLiner:
+      "The AI safety policy researcher archetype focused on societal-level defense and resilience — disaster preparedness planning for AI-related crises, vulnerability assessments of critical infrastructure and institutions, multi-jurisdictional governance frameworks, tabletop exercises and simulation materials, and adaptation of existing civil defense frameworks to novel AI threats. Sits at the intersection of AI safety, public policy, critical infrastructure protection, and emergency management.",
+    whenToUse:
+      "Policy researcher / senior researcher / fellow postings at AI safety institutions explicitly framed around societal-level risk, civil defense, critical infrastructure, or emergency response. Common at CARMA, Center for AI Safety (CAIS), Center for Security and Emerging Technology (CSET), RAND AI policy practice, AI Safety Institutes (UK, US, EU, Singapore, Japan, France), Future of Life Institute, Apollo Research adjacent work.",
+    vocabulary: [
+      "societal defense",
+      "AI civil defense",
+      "disaster preparedness planning (AI-flavored)",
+      "vulnerability assessment of critical societal systems",
+      "cascade failure analysis",
+      "multi-jurisdictional governance",
+      "tabletop exercises / simulation materials",
+      "early warning indicators",
+      "institutional dependency mapping",
+      "civil defense framework adaptation",
+      "continuity of government operations",
+      "critical infrastructure protection (CIP)",
+      "supply chain resilience",
+      "AI emergency response",
+    ],
+    howToDropIn:
+      "\"Societal Defense Researcher is a specific lane inside AI safety policy — distinct from technical AI alignment research (interpretability, RLHF, evals) and distinct from generic AI governance (which tends toward principles documents). The work is concrete: identify systemic weaknesses that advanced AI could exploit or exacerbate; design resilience strategies; adapt existing civil defense frameworks (pandemic preparedness, critical infrastructure protection, cybersecurity incident response) to AI-specific threat models; produce tabletop materials decision-makers can actually run. The Center for AI Risk Management & Alignment (CARMA) is one of the cleanest exemplars of this lane.\"",
+    commonPhrasing: "Societal defense research, AI civil defense, AI emergency response policy.",
+    notes:
+      "The lane is comparatively young — most AI safety policy research has been about governance principles, model evaluation, or technical alignment. Societal-defense framing borrows from biosecurity (pandemic preparedness), cybersecurity (incident response), and civil defense (continuity of government, critical infrastructure protection) and applies the same instinct to AI risk scenarios. Compensation typically lower than technical safety research roles ($85k–$135k is representative for CARMA-tier orgs); the trade is mission alignment and shaping a still-forming field. Pair with AI Safety Policy Research Landscape, STS-to-AI-Safety Translation, AI Governance & Responsible AI Leadership, and the existing Critical Engineer / Critical Technologist lineage card.",
+    source:
+      "Validated against 2026 postings: CARMA (Center for AI Risk Management & Alignment) 'Societal Defense Researcher' ($85k–$135k, remote, June 2026); analogous postings at Center for AI Safety (CAIS), CSET, RAND AI policy, AI Safety Institutes (UK, US, EU).",
+    tags: ["ai_safety", "policy_research", "civil_defense", "role", "framework"],
+  },
+  {
+    name: "AI Safety Policy Research Landscape (Institutional Map)",
+    category: "ai_safety",
+    oneLiner:
+      "The institutional landscape of AI safety policy research as of 2026 — from technical safety labs to policy think tanks to government safety institutes to philanthropic grantmaking — with the funder, hiring, and publication patterns specific to each tier. The lane has grown rapidly since 2023 and now spans dozens of organizations across the technical-policy spectrum.",
+    whenToUse:
+      "Career navigation in AI safety, foundation/grant strategy, distribution and publishing strategy in the lane, peer-set mapping. Useful for orienting toward which sub-lane is closest to a given practitioner's existing work.",
+    vocabulary: [
+      "AI Safety Institute (US, UK, EU, Singapore, Japan, France, Canada)",
+      "Frontier AI labs (Anthropic, OpenAI, DeepMind, xAI, Meta AI)",
+      "Technical safety research orgs (METR, Apollo Research, Redwood Research, ARC Evals, Far AI, MIRI)",
+      "Policy think tanks (CSET at Georgetown, RAND AI policy, Future of Life Institute, Center for AI Safety, CARMA, AI Policy Institute, Brookings AI Initiative, GovAI at Oxford, Centre for the Governance of AI)",
+      "Philanthropic grantmaking (Open Philanthropy AI safety, Long-Term Future Fund, Survival and Flourishing Fund, Patrick J. McGovern Foundation)",
+      "Civil society / advocacy (Center for Humane Technology, Encode Justice, Common Sense Media, Mozilla AI)",
+      "Academic centers (Stanford HAI, MIT CSAIL, Berkeley CHAI, Cambridge Leverhulme CFI, NYU AI Now)",
+      "EA-adjacent vs. mainstream-policy framing",
+      "preparedness vs. alignment vs. governance vs. evals",
+    ],
+    howToDropIn:
+      "\"The AI safety field has several distinct sub-lanes worth distinguishing. Technical safety research (interpretability, RLHF, evals, scalable oversight) lives at Anthropic, OpenAI, DeepMind, METR, Apollo, Redwood, ARC Evals, Far AI. Policy research lives at CSET, RAND, FLI, CAIS, CARMA, GovAI, Brookings AI. Government safety institutes (UK AISI, US AISI, EU AI Office, Singapore IMDA, Japan AISI) are growing fast and hiring across both technical and policy profiles. Philanthropic grantmaking (Open Philanthropy, LTFF, SFF) shapes the field's hiring and research direction more than most fields. Civil society and academic centers round out the ecosystem.\"",
+    commonPhrasing: "AI safety field, AI safety landscape, AI policy research ecosystem.",
+    notes:
+      "The field has grown 5-10x since 2023 in terms of institutions hiring; compensation varies dramatically (frontier labs pay tech-industry rates, policy think tanks pay $80k–$160k, government safety institutes pay GS-grade or equivalent). The EA-adjacent vs. mainstream-policy framing matters for hiring fit: some orgs (CARMA, MIRI, Apollo, GovAI) have strong EA cultural roots; others (CSET, RAND, Brookings, government institutes) are mainstream-policy in tone. Both lanes do real work; the cultural fit question is real. Pair with Societal Defense Researcher / AI Civil Defense Policy, STS-to-AI-Safety Translation, AI Regulatory Landscape (EU AI Act, NIST AI RMF, US Sectoral), and AI Governance & Responsible AI Leadership.",
+    source:
+      "AI safety institutional landscape mapping (2024–2026); Open Philanthropy AI safety grants database; 80,000 Hours AI safety job board; AI Safety Institutes' published structures.",
+    tags: ["ai_safety", "field_map", "landscape", "framework"],
+  },
+  {
+    name: "STS-to-AI-Safety Translation (Critical-Tech Work in Safety Register)",
+    category: "ai_safety",
+    oneLiner:
+      "The translation pattern that lets STS (Science and Technology Studies), critical-technology, and sociotechnical-research work land in AI safety policy contexts — keeping the substantive sociotechnical analysis while shifting register from critique-of-technology to risk-mitigation-and-governance, and from academic discourse to policy-actionable framing.",
+    whenToUse:
+      "Career-pivot translation when an STS, critical-tech, or sociotechnical-research background needs to land in an AI safety hiring or grantmaking context. Also useful when collaborating with technical-safety researchers who don't share the STS vocabulary.",
+    vocabulary: [
+      "sociotechnical risk",
+      "critical infrastructure dependency analysis",
+      "institutional vulnerability assessment",
+      "deployment context analysis",
+      "translating critique into governance recommendation",
+      "policy-actionable framing",
+      "risk-mitigation framing (vs. critique framing)",
+      "operational governance proposal",
+      "the substantive overlap between STS and AI safety policy",
+    ],
+    howToDropIn:
+      "\"STS and critical-technology work usually frames itself as critique — naming what's broken, who bears the cost, what's hidden. AI safety policy work usually frames itself as risk mitigation — naming what could fail, what the cascade looks like, what the intervention is. The substantive overlap is large; the register is different. The translation move: keep the sociotechnical analysis intact (institutional dependencies, deployment context, who bears the cost, what's hidden), and recast it as risk assessment plus governance recommendation. The work that names how an institution fails to manage AI deployment IS AI safety work — once it's framed as risk and recommendation rather than as critique.\"",
+    commonPhrasing: "STS to AI safety, critical-tech to AI policy, sociotechnical risk research.",
+    notes:
+      "Several established STS / critical-tech researchers have made this pivot successfully: Kate Crawford's *Anatomy of an AI System* and *Atlas of AI* are STS work that landed in AI safety policy discourse; Shannon Mattern's infrastructural and maintenance work translates directly; Ruha Benjamin's *Race After Technology* informs algorithmic risk assessment; Virginia Eubanks's *Automating Inequality* shapes welfare-state AI risk framing. The pivot reads less as 'changing fields' and more as 'translating register.' Pair with Critical Engineer / Critical Technologist Lineage, AI Safety Policy Research Landscape, Societal Defense Researcher / AI Civil Defense Policy, and the McLuhan-Easterling-Mattern-Hill critical-systems lineage card.",
+    source:
+      "STS / critical-technology to AI safety policy translation practice 2020–2026; Kate Crawford, Shannon Mattern, Ruha Benjamin, Virginia Eubanks as exemplars who made this register shift visible.",
+    tags: ["ai_safety", "sts", "translation", "framework"],
+  },
 ];
