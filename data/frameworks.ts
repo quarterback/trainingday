@@ -7538,4 +7538,113 @@ export const frameworks: Framework[] = [
       "Enterprise IAM practice 2024–2026; non-human identity as a named product category at major IAM vendors (SailPoint, CyberArk, Microsoft Entra, Okta, Astrix Security, Token Security); Anthropic Model Context Protocol agent identity considerations; UMich IAM Director JD as a representative public mention of the scope expansion.",
     tags: ["security_infrastructure", "IAM", "agentic_AI", "non_human_identity", "framework"],
   },
+  {
+    name: "Non-Human Identity: Why It Exploded and What It Means",
+    category: "security_infrastructure",
+    oneLiner:
+      "The historical drivers that turned non-human identity (NHI) from a small managed sub-population into the fastest-growing identity category at most enterprises — cloud-native architecture (microservices each authenticating separately), API-first software (every integration is an NHI), and AI agents (a new identity population acting on behalf of users). NHIs now outnumber human identities by 10–20x at most large organizations.",
+    whenToUse:
+      "Conversations about IAM modernization, AI agent governance, enterprise security risk assessment, civic infrastructure thinking about who and what authenticates in a public-sector deployment. Useful as the foundational frame before discussing specific agent identity problems.",
+    vocabulary: [
+      "non-human identity (NHI)",
+      "machine identity",
+      "service account",
+      "API consumer",
+      "workload identity",
+      "agent identity (AI agents)",
+      "cloud-native architecture",
+      "API-first software",
+      "10–20x growth ratio (NHI vs. human)",
+      "identity population (human vs. service vs. agent)",
+    ],
+    howToDropIn:
+      "\"Until recently, 'identity' in IAM meant a human — faculty, employees, students. Service accounts existed but were treated as a small, well-managed sub-population. Three things changed that. Cloud-native architecture broke monolithic apps into many small services that each authenticate separately, multiplying service-account counts. API-first software means every SaaS tool calls other SaaS tools constantly — each integration is a non-human identity. And AI agents add a new population that acts on behalf of users, calls tools, and increasingly does work autonomously. Net effect: NHIs now outnumber human identities at most enterprises by 10–20x and growing.\"",
+    commonPhrasing: "Non-human identity, NHI, machine identity, agent identity.",
+    notes:
+      "Foundational framing for any IAM-meets-AI-agents conversation. The historical-driver framing helps explain why this is suddenly urgent (it's been growing for years but agents are the inflection point that makes it visible). Pair with The Three Hard Problems of Agent Identity, Model Context Protocol (MCP) as Identity Surface, Non-Human Identity & Agent Access Governance (the IAM-Director scope card).",
+    source:
+      "Enterprise IAM industry analysis 2024–2026 (SailPoint, Microsoft, CyberArk, Okta research reports); Cloud Security Alliance working groups on non-human identity (2025–2026).",
+    tags: ["security_infrastructure", "IAM", "agentic_AI", "non_human_identity", "framework"],
+  },
+  {
+    name: "The Three Hard Problems of Agent Identity (Attribution, Credential Lifecycle, Least Privilege)",
+    category: "security_infrastructure",
+    oneLiner:
+      "Three problems that make agent identity meaningfully different from prior non-human identity work and genuinely unsolved in current practice — attribution (whose action is it when an agent acts on a user's behalf?), credential lifecycle (issuing, using, and destroying credentials at ephemeral-agent cadence), and least privilege (giving agents only what they need without breaking their utility, when the job space is open-ended).",
+    whenToUse:
+      "Agent identity governance discussions, AI agent deployment risk assessment, civic infrastructure thinking about public-sector AI agents, audit and accountability conversations about agentic systems. Each problem has different stakeholders and different open questions.",
+    vocabulary: [
+      "attribution (agent action → human responsibility)",
+      "credential lifecycle for ephemeral agents",
+      "secrets management (HashiCorp Vault, AWS Secrets Manager, CyberArk Conjur)",
+      "least privilege at agent scope",
+      "permission boundary",
+      "dynamic permission",
+      "audit log attribution",
+      "appeal record (when a citizen contests an automated decision)",
+    ],
+    howToDropIn:
+      "\"Agent identity is different from service-account identity in three ways that matter. Attribution: when a human clicks something, the action attributes to the human; when an agent acts on a user's behalf, whose action is it? The user who set up the agent? The agent's operator? Current systems mostly punt. Credential lifecycle: service accounts had long-lived credentials rotated quarterly; modern agents are ephemeral — spun up for a task, gone an hour later — so credentials have to be issued, used, and destroyed at that cadence. Least privilege: giving an agent only the permissions it needs, without breaking it, when the job space is open-ended ('research this topic,' 'draft this email'). Most agent deployments today give agents far more privilege than they need because least-privilege at agent scope is genuinely unsolved.\"",
+    commonPhrasing: "Agent attribution, ephemeral credentials, least privilege for agents.",
+    notes:
+      "Each problem has direct Civil AI Safety implications. Attribution is the substrate for audit logs and appeal records when public agencies deploy agents in service delivery — when a citizen contests an automated decision, the agent identity layer is part of what's auditable. Credential lifecycle determines how blast radius is contained when an agent is compromised. Least privilege is the difference between a contained agent failure and a cascading one. Pair with Non-Human Identity: Why It Exploded and What It Means, Model Context Protocol (MCP) as Identity Surface, and Civil AI Safety (Discipline and Positioning Move).",
+    source:
+      "Agent identity practice 2024–2026; Cloud Security Alliance NHI working groups; major IAM vendor research; Anthropic and OpenAI agent deployment patterns.",
+    tags: ["security_infrastructure", "agent_identity", "agentic_AI", "framework"],
+  },
+  {
+    name: "Model Context Protocol (MCP) as Identity Surface",
+    category: "security_infrastructure",
+    oneLiner:
+      "The Model Context Protocol (Anthropic's open standard for connecting AI agents to tools and data) creates a new identity intermediary — every MCP server authenticates to agents, agents authenticate to servers, and servers authenticate to underlying tools and data. Whoever runs the MCP server is operating an identity intermediary with wide-open governance questions.",
+    whenToUse:
+      "Agent deployment architecture discussions, enterprise MCP adoption planning, AI safety conversations about how agents access tools, Civil AI Safety thinking about who controls the identity layer between public-sector agents and the systems they touch.",
+    vocabulary: [
+      "Model Context Protocol (MCP)",
+      "MCP server",
+      "MCP client",
+      "identity intermediary",
+      "tool authentication",
+      "agent-to-server authentication",
+      "server-to-tool authentication",
+      "MCP governance",
+      "MCP revocation",
+      "audit trail through MCP",
+    ],
+    howToDropIn:
+      "\"MCP is Anthropic's open standard for connecting agents to tools and data. Every MCP server is a new identity surface: the server authenticates to the agent, the agent authenticates to the server, the server authenticates to the underlying tools and data. Whoever runs the MCP server is operating an identity intermediary. The governance questions are wide open — who can run an MCP server inside an organization, what's the trust model, how do you revoke an MCP server, how do you audit what passed through it. IAM teams are figuring this out in real time as MCP adoption scales.\"",
+    commonPhrasing: "MCP, Model Context Protocol, MCP server, MCP identity.",
+    notes:
+      "MCP is the most concrete current example of agent identity in production. The protocol itself is open (Anthropic-led but adopted by other labs and enterprise SaaS); the governance practices for running MCP servers are nascent. For Civil AI Safety: when a state or city agency deploys agents that use MCP to access its systems, the MCP server inventory IS part of the agency's identity infrastructure and needs civic-infrastructure-grade governance. Pair with Non-Human Identity: Why It Exploded and What It Means, The Three Hard Problems of Agent Identity, Non-Human Identity & Agent Access Governance, and the existing Claude Production Artifacts (MCP Servers, Sub-Agents, Agent Skills) card from the forward-deployed section (which covers MCP from the build-side).",
+    source:
+      "Anthropic Model Context Protocol documentation; enterprise MCP adoption patterns 2024–2026; Internet Identity Workshop (IIW) sessions on agent identity; Phil Windley and the IDPro community writing on agent identity.",
+    tags: ["security_infrastructure", "agent_identity", "MCP", "anthropic", "framework"],
+  },
+  {
+    name: "Non-Human Identity Vendor Landscape & Frontier Questions",
+    category: "security_infrastructure",
+    oneLiner:
+      "The current vendor landscape for non-human identity (three categories: established IAM vendors expanding in, privileged-access vendors expanding out, and pure-play NHI startups) plus the open frontier questions the field hasn't yet settled — MCP governance, agent-to-agent authentication, cross-organization agent identity, public-sector-specific patterns, and attribution-for-policy.",
+    whenToUse:
+      "Vendor evaluation for NHI / agent identity initiatives, market intelligence for IAM modernization, foundation grant strategy in this lane, conference and conversation prep where the field state matters. Useful as the orientation card for someone new to the field.",
+    vocabulary: [
+      "established IAM (SailPoint, Microsoft Entra, Okta, Ping Identity, ForgeRock)",
+      "privileged access management (CyberArk, BeyondTrust, Delinea)",
+      "pure-play NHI (Astrix Security, Token Security, Aembit, Permiso, Britive)",
+      "Cloud Security Alliance NHI working groups",
+      "Internet Identity Workshop (IIW)",
+      "IDPro (IAM professional community)",
+      "agent-to-agent authentication",
+      "cross-organization agent identity",
+      "attribution-for-policy",
+    ],
+    howToDropIn:
+      "\"Three vendor categories in non-human identity right now. Established IAM vendors expanding in — SailPoint, Microsoft Entra, Okta, Ping Identity, ForgeRock — adding NHI to existing identity governance platforms. Privileged-access vendors expanding out — CyberArk, BeyondTrust, Delinea — coming from secrets management and PAM into broader machine identity. Pure-play NHI startups — Astrix Security, Token Security, Aembit, Permiso, Britive — built for the NHI problem specifically, some focused on agent identity. The market is consolidating fast; expect established IAM vendors to acquire pure-plays over the next 18 months. The open frontier questions: MCP governance, agent-to-agent authentication, cross-organization agent identity, public-sector-specific patterns (FOIA, FedRAMP, audit, constitutional implications), and attribution-for-policy when citizens contest automated decisions.\"",
+    commonPhrasing: "NHI vendor landscape, agent identity market, IAM-meets-agents.",
+    notes:
+      "The vendor landscape changes fast (consolidation is active 2025-2026). The open frontier questions are the more durable content — they identify what's actually unsolved and where research, policy, and product still need to be built. Public-sector-specific patterns are particularly underweighted by the existing vendor landscape (enterprise-security-flavored, not civic-infrastructure-flavored), which is the Civil AI Safety gap worth flagging. Pair with Non-Human Identity: Why It Exploded and What It Means, The Three Hard Problems of Agent Identity, Model Context Protocol (MCP) as Identity Surface, and Civil AI Safety (Discipline and Positioning Move).",
+    source:
+      "Enterprise IAM market analysis 2024–2026; Cloud Security Alliance NHI working group publications; Internet Identity Workshop (IIW) twice-yearly sessions at the Computer History Museum; IDPro community publications on agent identity; Phil Windley's blog (long-time identity researcher).",
+    tags: ["security_infrastructure", "agent_identity", "vendor_landscape", "framework"],
+  },
 ];
