@@ -7470,4 +7470,72 @@ export const frameworks: Framework[] = [
       "Owner-coined positioning lane (2026). Adjacent established usage in 'civil defense for AI' (CARMA Public Security Policy), 'civic AI' (Code for America, Beeck Center), 'AI in public institutions' (Public Mechanics academic frame); not yet established as a named field but actively forming at the intersection of AI safety, civic technology, and urban / public-policy practice.",
     tags: ["ai_safety", "civil_ai_safety", "positioning", "owner_coined", "framework"],
   },
+
+  // —— Identity, Access, and Security Infrastructure ——————————————————————
+
+  {
+    name: "Director of Identity & Access Management (Enterprise / Higher Ed)",
+    category: "security_infrastructure",
+    oneLiner:
+      "The senior IT leadership archetype owning enterprise identity services as a 24x7 critical utility — single sign-on, multi-factor authentication, identity lifecycle (provisioning / deprovisioning), and the integration standards that let applications consume identity safely at scale. At higher-ed institutions, the IAM director's authoritative sources span HR, student systems, sponsored affiliates, and research collaborators, which makes the role architecturally more complex than at most enterprises.",
+    whenToUse:
+      "Director / Senior Director / Associate VP postings for IAM, identity services, or access management at large universities (R1 institutions, university systems), large enterprises (financial services, healthcare, federal), and platform companies. The 8+ years IAM experience floor is standard at this level.",
+    vocabulary: [
+      "Identity & Access Management (IAM)",
+      "single sign-on (SSO)",
+      "multi-factor authentication (MFA)",
+      "identity lifecycle (provisioning / deprovisioning)",
+      "authoritative source (HR, student systems, sponsored affiliates)",
+      "OIDC (OpenID Connect)",
+      "SAML",
+      "FIDO2 / passwordless",
+      "SailPoint / Microsoft Entra / Okta / Ping Identity",
+      "group / entitlement management",
+      "delegated administration",
+      "non-human identity",
+      "service accounts / workload identity",
+      "secrets management",
+      "24x7 utility model",
+    ],
+    howToDropIn:
+      "\"Director of IAM at a major university is a critical-utility leadership role. The system has to be 24x7 because the entire institution authenticates through it; downtime cascades to research compute, learning management, payroll, library access, and every consumer of campus identity. The architectural complexity comes from the authoritative-source landscape — HR is one source, student systems another, sponsored affiliates a third, plus visiting scholars, retirees, alumni — and the lifecycle integration has to work cleanly across all of them. The Director owns the strategy, the budget, the team, and the integration standards that let applications adopt identity consistently.\"",
+    commonPhrasing: "Director of IAM, IAM Director, Identity Services Director.",
+    notes:
+      "Distinct from Director of Information Security (IAM is a sub-discipline; security leads usually have IAM reporting in) and from Director of IT Operations (broader scope, less identity-specific). Higher ed IAM is architecturally interesting because the identity population includes faculty, staff, students, alumni, sponsored affiliates, visiting scholars, retirees, and research collaborators — more population types than most enterprises. The UMich JD specifically calls out non-human identity (service accounts, API / workload identities, secrets management) as part of the scope, which is the contemporary expansion of the discipline as AI agents proliferate. Pair with Non-Human Identity & Agent Access Governance.",
+    source:
+      "Validated against 2026 postings: University of Michigan ITS 'Director of Identity & Access Management' ($141k–$166k, Ann Arbor, hybrid, June 2026); analogous roles at other R1 universities, financial services IAM, healthcare IAM, federal IAM.",
+    tags: ["security_infrastructure", "IAM", "higher_ed", "role", "framework"],
+  },
+  {
+    name: "Non-Human Identity & Agent Access Governance (IAM Meets AI Agents)",
+    category: "security_infrastructure",
+    oneLiner:
+      "The expanding edge of IAM practice — managing identity for service accounts, workload identities, API consumers, and increasingly AI agents that authenticate and act on behalf of users. As agentic AI deployment scales, non-human identities are growing 10–20x faster than human identities at most enterprises, with security and governance implications IAM teams are scrambling to address.",
+    whenToUse:
+      "IAM modernization initiatives at enterprises and universities adopting AI agents at scale; AI safety discussions about how agents authenticate and what they're authorized to do; governance discussions about agent action attribution; the intersection of AI security and IAM. Increasingly common in IAM Director JDs (the UMich JD explicitly names it).",
+    vocabulary: [
+      "non-human identity (NHI)",
+      "service account governance",
+      "API identity",
+      "workload identity",
+      "agent identity (AI agents)",
+      "machine identity",
+      "secrets management",
+      "credential lifecycle",
+      "least privilege for agents",
+      "ephemeral credentials",
+      "OAuth / OIDC for machine-to-machine",
+      "agent action attribution",
+      "agentic governance",
+      "MCP server identity (Model Context Protocol)",
+    ],
+    howToDropIn:
+      "\"Non-human identity is the part of IAM growing fastest right now. Service accounts and API consumers were already expanding when AI agents started proliferating; agents add a new identity population that authenticates, acts on behalf of users, and needs governance for what it's authorized to do. The hard problems are attribution (when an agent acts, whose action is it for audit?), credential lifecycle (rotating secrets for thousands of ephemeral agents), and least privilege (giving agents only what they need without breaking their utility). IAM Directors at the frontier of this work are partnering with AI safety and security teams to define agent-identity governance.\"",
+    commonPhrasing: "Non-human identity, NHI, agent identity, service account governance.",
+    notes:
+      "The frontier of IAM-meets-AI-safety. Anthropic's MCP (Model Context Protocol) introduces a new identity layer for agent-tool connections that IAM teams are figuring out how to govern. Major IAM vendors (SailPoint, CyberArk, Microsoft Entra, Okta) are launching non-human identity products. The connection to Civil AI Safety is direct: as state and city governments deploy AI agents in service delivery, agent identity governance becomes part of the civic infrastructure that needs critical-defense thinking. Pair with Director of Identity & Access Management (Enterprise / Higher Ed), AI Auditing Access Tiers (Black-Box / Outside-the-Box / White-Box), Societal Defense Researcher / AI Civil Defense Policy, and Civil AI Safety (Discipline and Positioning Move).",
+    source:
+      "Enterprise IAM practice 2024–2026; non-human identity as a named product category at major IAM vendors (SailPoint, CyberArk, Microsoft Entra, Okta, Astrix Security, Token Security); Anthropic Model Context Protocol agent identity considerations; UMich IAM Director JD as a representative public mention of the scope expansion.",
+    tags: ["security_infrastructure", "IAM", "agentic_AI", "non_human_identity", "framework"],
+  },
 ];
