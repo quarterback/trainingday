@@ -8002,4 +8002,308 @@ export const frameworks: Framework[] = [
       "Attributed to Edward A. Murphy Jr. (USAF, 1949); popularized through the 1950s engineering community.",
     tags: ["named_laws", "engineering_safety", "framework"],
   },
+  {
+    name: "Amara's Law",
+    category: "named_laws",
+    oneLiner:
+      "We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run. Coined by Roy Amara (Institute for the Future).",
+    whenToUse:
+      "Technology forecasting, AI hype cycle discussions, calibrating short-vs-long-term claims about emerging tech, criticism of both AI-doomers and AI-skeptics whose timelines are off in opposite directions. One of the most-cited laws in AI policy discourse.",
+    howToDropIn:
+      "\"Amara's Law: overestimate the short run, underestimate the long run. AI in 2026 is doing less than the 2023 hype promised AND more than the 2023 skeptics dismissed — which is the Amara pattern exactly. The harder question is when the long run becomes the present.\"",
+    commonPhrasing: "Amara's Law.",
+    notes:
+      "Roy Amara was president of the Institute for the Future, the Palo Alto think tank he co-founded. The law is foundational in technology forecasting and especially well-cited in AI policy contexts where short-term vs. long-term framing matters. Pairs with the Lindy Effect (durability heuristic), Hofstadter's Law (everything takes longer), and the Hype Studies academic framing.",
+    source:
+      "Roy Amara, Institute for the Future (1960s–70s formulation; widely cited from the 1980s onward).",
+    tags: ["named_laws", "forecasting", "ai_policy", "framework"],
+  },
+  {
+    name: "Hyrum's Law",
+    category: "named_laws",
+    oneLiner:
+      "With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody. Coined by Hyrum Wright at Google.",
+    whenToUse:
+      "API design, deprecation discussions, software contract management, backward-compatibility arguments. Particularly relevant for any service with a large user base where bug-fix changes break dependent code. Increasingly relevant for LLM behavior contracts (users come to depend on observable quirks).",
+    howToDropIn:
+      "\"Hyrum's Law: with enough users, all observable behaviors become dependencies — including the bugs. Every breaking change to fix a bug breaks the people who built on top of the bug. Which is why mature APIs are conservative about behavioral change even when the contract didn't promise the behavior.\"",
+    commonPhrasing: "Hyrum's Law.",
+    notes:
+      "Hyrum Wright is a software engineer at Google known for the *Software Engineering at Google* book. The law's implication for LLM products is increasingly relevant — users come to depend on specific prompt-response patterns, and changing the model's behavior in subtle ways breaks user workflows that depended on the previous quirks. Pairs with Postel's Law and the AI-Augmented Service Design discussion of agent behavioral stability.",
+    source:
+      "Hyrum Wright, Google; canonical statement at hyrumslaw.com; widely cited in software engineering literature from the late 2010s.",
+    tags: ["named_laws", "api_design", "framework"],
+  },
+  {
+    name: "Amdahl's Law",
+    category: "named_laws",
+    oneLiner:
+      "The speedup of a task from parallelization is limited by the portion of the task that cannot be parallelized. Formulated by Gene Amdahl (1967) for parallel computing; widely generalized to any 'add more resources to go faster' situation.",
+    whenToUse:
+      "Parallel computing discussions, scaling arguments, calling out the limits of 'just add more X' approaches, team scaling decisions (the inverse: Brooks's Law). Foundational concept in performance engineering and a powerful metaphor for organizational scaling.",
+    howToDropIn:
+      "\"Amdahl's Law: if 20% of the task is serial, the maximum speedup is 5x no matter how many cores you throw at it. The serial portion is the bottleneck and it doesn't shrink with parallelism. The same logic applies to teams — the unparallelizable coordination work caps how fast adding people can make a project.\"",
+    commonPhrasing: "Amdahl's Law.",
+    notes:
+      "Gene Amdahl was an IBM computer architect who articulated the law in a 1967 paper as a counter to overly optimistic parallel-computing speedup claims. The mathematical statement: speedup = 1 / ((1 - p) + p/n) where p is the parallelizable fraction and n is the number of processors. The organizational analog connects to Brooks's Law (adding people doesn't scale linearly because coordination is serial).",
+    source:
+      "Gene Amdahl, 'Validity of the single processor approach to achieving large scale computing capabilities' (1967).",
+    tags: ["named_laws", "parallel_computing", "scaling", "framework"],
+  },
+  {
+    name: "Metcalfe's Law",
+    category: "named_laws",
+    oneLiner:
+      "The value of a network grows as the square of the number of users (n²). Formulated by Robert Metcalfe (Ethernet inventor, 3Com co-founder) for telecommunications and adopted as the canonical framing for network effects.",
+    whenToUse:
+      "Network effects discussions, platform economics, social network analysis, communications technology valuation. Useful for any conversation about why platforms benefit from scale disproportionately and why network-effect businesses tend toward winner-take-most outcomes.",
+    howToDropIn:
+      "\"Metcalfe's Law: network value scales as n². Doubling the user base quadruples the value, which is why network-effect businesses tend toward winner-take-most. The empirical revisions (Briscoe / Odlyzko 2006 argue n·log(n) fits real data better) don't change the basic asymmetry — networks scale superlinearly.\"",
+    commonPhrasing: "Metcalfe's Law.",
+    notes:
+      "Robert Metcalfe formulated the law for Ethernet networks; it generalized to telecommunications and platforms. The original n² has been contested empirically — Briscoe, Odlyzko, and Tilly (2006) proposed n·log(n) fits real-world data better — but the asymmetric-scaling intuition remains the load-bearing claim. Reed's Law (group-forming networks scale as 2^n) is the bigger-asymmetry extension.",
+    source:
+      "Robert Metcalfe, articulated in late-1970s presentations at 3Com; widely cited from the 1980s.",
+    tags: ["named_laws", "network_effects", "framework"],
+  },
+  {
+    name: "Reed's Law",
+    category: "named_laws",
+    oneLiner:
+      "The utility of large networks, particularly group-forming networks, scales exponentially as 2^n — substantially faster than Metcalfe's n². Formulated by David P. Reed to explain why social networks and platforms with group-forming capabilities are so valuable.",
+    whenToUse:
+      "Platform economics where group-forming is a feature (Slack, Discord, Facebook Groups, Reddit subreddits), social network valuation, arguments for why community platforms compound value faster than communication platforms.",
+    howToDropIn:
+      "\"Reed's Law: group-forming networks scale exponentially because the number of possible subgroups grows as 2^n. Which is why platforms that enable group formation (Slack workspaces, Discord servers, subreddits) compound value faster than platforms that just enable bilateral communication.\"",
+    commonPhrasing: "Reed's Law.",
+    notes:
+      "David P. Reed was an early TCP/IP architect at MIT. The law captures something Metcalfe's Law misses — that the value of a network depends not just on pairwise connections but on the groups users can form. Critics note that exponential growth assumes equal value across all possible groups, which is unrealistic. The directional insight (group-forming features compound value) is durable.",
+    source:
+      "David P. Reed, 'The Law of the Pack' (Harvard Business Review, February 2001).",
+    tags: ["named_laws", "network_effects", "framework"],
+  },
+  {
+    name: "Zawinski's Law",
+    category: "named_laws",
+    oneLiner:
+      "Every program attempts to expand until it can read mail. Those programs which cannot so expand are replaced by ones which can. Coined by Jamie Zawinski (Netscape, Mozilla); the canonical statement of software feature creep and platform-ification.",
+    whenToUse:
+      "Software bloat criticism, feature-creep discussions, calling out platform expansion ambitions, explaining why every successful tool eventually becomes a worse version of every other tool. Particularly relevant for AI agent platforms now (every agent wants to do email).",
+    howToDropIn:
+      "\"Zawinski's Law: every program expands until it can read mail. The phenomenon now: every AI agent expands until it can browse the web, run code, send emails, schedule meetings, and operate your computer. The pressure is structural — useful programs are pressured to evolve into platforms.\"",
+    commonPhrasing: "Zawinski's Law.",
+    notes:
+      "Jamie Zawinski (jwz) was a founding engineer at Netscape and a Mozilla project lead. The 'mail' part is the joke; the structural point is that successful programs are pressured to expand into platforms (and the expansion is often worse than the original focused tool). Increasingly relevant for AI agent / assistant products that keep adding capabilities. Pairs with Wirth's Law.",
+    source:
+      "Jamie Zawinski, articulated through Mozilla / Netscape era writings and his blog (jwz.org); widely cited from the 2000s onward.",
+    tags: ["named_laws", "software_design", "framework"],
+  },
+  {
+    name: "The Streisand Effect",
+    category: "named_laws",
+    oneLiner:
+      "An attempt to hide, remove, or censor a piece of information has the unintended consequence of publicizing the information more widely. Named after Barbra Streisand's 2003 lawsuit against a photographer for posting an aerial photo of her Malibu home, which dramatically increased views of the photo.",
+    whenToUse:
+      "Content moderation discussions, PR crisis response, legal strategy debates, criticism of takedown requests, AI safety discussions about whether to redact dangerous information. Foundational concept for thinking about information dynamics under suppression attempts.",
+    howToDropIn:
+      "\"By the Streisand Effect, the attempt to take this down will get it more attention than leaving it up ever would. Suppression draws scrutiny; quiet contextualization rarely backfires the same way.\"",
+    commonPhrasing: "Streisand Effect.",
+    notes:
+      "Coined by Mike Masnick on Techdirt in 2005. Streisand sued photographer Kenneth Adelman in 2003 for posting one of 12,000 aerial coastline photos; the lawsuit increased downloads of the photo from 6 to over 420,000 in a month. Useful for any conversation about information suppression backfiring — including AI safety conversations about whether to publish or redact dangerous capability research.",
+    source:
+      "Coined by Mike Masnick, Techdirt (2005), referencing Barbra Streisand v. Adelman (2003).",
+    tags: ["named_laws", "information_dynamics", "framework"],
+  },
+  {
+    name: "Lindy Effect",
+    category: "named_laws",
+    oneLiner:
+      "For non-perishable things — ideas, technologies, books, institutions — the expected future lifespan is proportional to the current age. The longer a thing has been around, the longer it can be expected to remain around. Popularized by Nassim Taleb.",
+    whenToUse:
+      "Technology adoption decisions, predicting durability of platforms / standards / ideas, criticism of novelty-chasing, arguments for sticking with proven tech. Useful for any 'should we use the new shiny or the boring old standard' debate.",
+    howToDropIn:
+      "\"By the Lindy Effect, Postgres will outlast whatever new database you're considering — it's been around 30 years, so it's likely to be around for 30 more. The new database, which is 3 years old, is likely to be around for 3 more. The Lindy heuristic isn't deterministic, but it's a good prior.\"",
+    commonPhrasing: "Lindy Effect.",
+    notes:
+      "Originally observed in the Lindy delicatessen in New York (a deli where comedians gathered and observed that the longer a comedian had been performing, the longer their career would continue). Formalized by Albert Goldman (1964) and popularized by Nassim Taleb in *Antifragile* (2012). The principle applies to non-perishable things (ideas, technologies, institutions) and breaks down for perishable things (humans, biological organisms — where the opposite is true).",
+    source:
+      "Albert Goldman, 'Lindy's Law' (New Republic, 1964); popularized by Nassim Nicholas Taleb, *Antifragile* (2012).",
+    tags: ["named_laws", "durability", "forecasting", "framework"],
+  },
+  {
+    name: "Gall's Law",
+    category: "named_laws",
+    oneLiner:
+      "A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system. From John Gall's *Systemantics* (1975).",
+    whenToUse:
+      "Greenfield project planning, criticism of big-bang launches, arguments for MVP / iterative delivery, post-mortems of failed mega-projects. Foundational concept in systems thinking and lean / agile delivery.",
+    howToDropIn:
+      "\"Gall's Law: complex working systems evolve from simple working systems; complex systems designed from scratch never work. Which is why MVP-then-iterate beats big-bang-design; why government modernization projects fail when they try to replace everything at once; and why even the most successful platforms started as small focused tools.\"",
+    commonPhrasing: "Gall's Law.",
+    notes:
+      "From John Gall's *Systemantics: How Systems Really Work and How They Fail* (1975, later editions retitled *The Systems Bible*). One of the foundational references for agile, lean, MVP, and incremental delivery thinking. Particularly relevant for government modernization where the 18F de-risking framework directly applies this principle (modular procurement over big-bang contracting).",
+    source:
+      "John Gall, *Systemantics: How Systems Really Work and How They Fail* (1975).",
+    tags: ["named_laws", "systems_thinking", "framework"],
+  },
+  {
+    name: "Eagleson's Law",
+    category: "named_laws",
+    oneLiner:
+      "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else. The canonical reason code documentation matters and why your own past code feels foreign.",
+    whenToUse:
+      "Code documentation arguments, code review culture discussions, calling out the assumption that 'I wrote it, I'll remember it,' onboarding / handoff conversations. A humbling principle every developer recognizes from experience.",
+    howToDropIn:
+      "\"Eagleson's Law: code you haven't touched in six months might as well be someone else's. Which is why documenting why you made a choice matters more than documenting what the code does — the what becomes legible enough; the why disappears unless you wrote it down.\"",
+    commonPhrasing: "Eagleson's Law.",
+    notes:
+      "Attribution is murky — variously credited to a Peter Eagleson or just folkloric. The principle is universally recognized in software practice. Useful for arguing against the false economy of skipping documentation; the future you who reads the code is effectively a stranger.",
+    source:
+      "Attributed to Peter Eagleson; widely cited as folkloric programming wisdom.",
+    tags: ["named_laws", "software_practice", "documentation", "framework"],
+  },
+  {
+    name: "Putt's Law",
+    category: "named_laws",
+    oneLiner:
+      "Technology is dominated by two types of people: those who understand what they do not manage and those who manage what they do not understand. From Archibald Putt's *Putt's Law and the Successful Technocrat* (1981).",
+    whenToUse:
+      "Tech leadership criticism, IC-vs-management ladder discussions, calling out the gap between technical expertise and managerial authority. Useful for any conversation about why technology orgs feel dysfunctional and why technical leadership is structurally hard.",
+    howToDropIn:
+      "\"Putt's Law: technology is dominated by those who understand what they don't manage and those who manage what they don't understand. The structural gap between technical depth and managerial authority is why technology organizations feel dysfunctional even when staffed with smart people — the people with context don't have authority and the people with authority don't have context.\"",
+    commonPhrasing: "Putt's Law.",
+    notes:
+      "From Archibald Putt's satirical 1981 book *Putt's Law and the Successful Technocrat* (republished by IEEE Press in 2006). The law itself is a sharp diagnosis of why tech organizations have a coherent structural failure mode; the rest of the book is satirical career advice for navigating it. Pairs with the Peter Principle (people promoted to incompetence) and the Pournelle Iron Law (organizations dominated by self-perpetuators).",
+    source:
+      "Archibald Putt (pseudonym), *Putt's Law and the Successful Technocrat: How to Win in the Information Age* (1981; IEEE Press 2006).",
+    tags: ["named_laws", "tech_leadership", "framework"],
+  },
+  {
+    name: "Pareto Principle (80/20 Rule)",
+    category: "named_laws",
+    oneLiner:
+      "Roughly 80% of effects come from 20% of causes. Named after Italian economist Vilfredo Pareto, who observed that 80% of Italian land was owned by 20% of the population, and generalized across many domains.",
+    whenToUse:
+      "Prioritization decisions, effort allocation, performance analysis, customer / revenue concentration discussions. Foundational concept in management, quality engineering, and personal productivity. Easily overcited; the 80/20 split is approximate and shouldn't be taken numerically.",
+    howToDropIn:
+      "\"Pareto Principle: 80% of the impact comes from 20% of the work. The specific numbers are approximate but the asymmetry is real — most of the value lives in a small subset of the effort, and finding that 20% is usually the actual leadership move.\"",
+    commonPhrasing: "Pareto Principle, 80/20 rule, the Pareto distribution.",
+    notes:
+      "The original observation was about land ownership (Italy, ~1896); Joseph M. Juran popularized the 'vital few and trivial many' management application in the 1940s. The principle generalizes across many distributions where the underlying data follows a power law — but the 80/20 specifically is a rough approximation, not a universal ratio. Useful for prioritization arguments but easily overcited.",
+    source:
+      "Vilfredo Pareto observations on Italian land ownership (~1896); generalized as a management principle by Joseph M. Juran (1940s).",
+    tags: ["named_laws", "prioritization", "framework"],
+  },
+  {
+    name: "Iron Law of Oligarchy",
+    category: "named_laws",
+    oneLiner:
+      "All complex organizations, regardless of how democratic they are when started, eventually develop into oligarchies. Formulated by Robert Michels in *Political Parties* (1911) studying European socialist parties; widely generalized across institutional theory.",
+    whenToUse:
+      "Institutional analysis, criticism of democratic-claiming organizations (cooperatives, professional associations, political parties, nonprofits) that have drifted to oligarchy, arguments about the structural pressures toward elite capture. Foundational concept in political sociology.",
+    howToDropIn:
+      "\"Iron Law of Oligarchy: every complex organization, however democratic its founding ideals, drifts toward oligarchy over time. The structural pressures — specialization of expertise, organizational continuity needs, leader vs. member time asymmetries — all push the same direction. It's an Iron Law because the gravity is consistent across regime types.\"",
+    commonPhrasing: "Iron Law of Oligarchy.",
+    notes:
+      "Robert Michels was a German-Italian sociologist who studied European socialist parties and concluded — to his disappointment, as he was himself a socialist — that even parties dedicated to democratic principles drifted to oligarchy. The mechanisms he identified (need for organization, division of labor, leader expertise, member apathy) are still the standard analysis. Pairs with the Shirky Principle, Pournelle's Iron Law of Bureaucracy, and the Peter Principle.",
+    source:
+      "Robert Michels, *Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy* (1911).",
+    tags: ["named_laws", "political_sociology", "framework"],
+  },
+  {
+    name: "Sayre's Law",
+    category: "named_laws",
+    oneLiner:
+      "In any dispute, the intensity of feeling is inversely proportional to the value of the issues at stake. The corollary: academic politics are so vicious precisely because the stakes are so low. Attributed to Wallace Sayre (Columbia political scientist).",
+    whenToUse:
+      "Conflict analysis, academic / committee / community-board dispute observations, calling out disproportionate intensity in low-stakes arguments. Useful as a tension-cutting observation in environments where micro-disputes are consuming disproportionate energy.",
+    howToDropIn:
+      "\"Sayre's Law: the intensity of dispute is inversely proportional to the stakes. Academic politics are vicious because the stakes are low; departmental committee meetings rival actual wars. The principle generalizes — internet flame wars, open-source license disputes, AIGA board votes — anywhere the issues are small enough that the only outlet for energy is the dispute itself.\"",
+    commonPhrasing: "Sayre's Law.",
+    notes:
+      "Wallace Stanley Sayre was a Columbia political scientist; the law is attested in various forms from the 1950s. Closely related to Parkinson's Law of Triviality (bikeshedding) — the principle that committees give disproportionate attention to small issues they understand rather than large ones they don't.",
+    source:
+      "Attributed to Wallace Stanley Sayre, Columbia University political scientist (1950s).",
+    tags: ["named_laws", "conflict", "framework"],
+  },
+  {
+    name: "Parkinson's Law of Triviality (Bikeshedding)",
+    category: "named_laws",
+    oneLiner:
+      "The amount of attention an organization gives to a topic is inversely proportional to its importance. Originally illustrated by Parkinson with a committee approving a nuclear reactor in minutes but spending hours debating the design of a bike shed. The colloquial name 'bikeshedding' comes from this example.",
+    whenToUse:
+      "Meeting design, agenda setting, calling out time wasted on low-stakes details while skipping high-stakes decisions, code review culture, design review culture. Foundational concept for understanding committee dysfunction.",
+    howToDropIn:
+      "\"Parkinson's Law of Triviality — bikeshedding — says the committee approved the reactor in three minutes and spent two hours on the bike shed. The substantive items are too complex for anyone to engage with; the trivial items are something everyone has opinions about. So the agenda gets dominated by the trivia.\"",
+    commonPhrasing: "Bikeshedding, Parkinson's Law of Triviality.",
+    notes:
+      "From C. Northcote Parkinson's *Parkinson's Law* (1957), distinct from his more famous 'work expands to fill time' law. The 'bike shed' framing is the popular shorthand; the principle generalizes to any committee or working group where trivial items get more attention than substantive ones. Pairs with Sayre's Law (low stakes, high intensity).",
+    source:
+      "C. Northcote Parkinson, *Parkinson's Law: The Pursuit of Progress* (1957).",
+    tags: ["named_laws", "committee_dysfunction", "framework"],
+  },
+  {
+    name: "Tesler's Law (Conservation of Complexity)",
+    category: "named_laws",
+    oneLiner:
+      "Every application has an inherent amount of complexity that cannot be removed or hidden — only relocated. The question is who pays for it: the developer building the system, or the user operating it. Coined by Larry Tesler (computer scientist, formerly of Xerox PARC and Apple).",
+    whenToUse:
+      "UX design decisions, product simplification debates, criticism of 'we just need to simplify it' product strategy, arguments for engineering investment in usability. Foundational concept in product design.",
+    howToDropIn:
+      "\"Tesler's Law: complexity is conserved. You can't eliminate it, only move it. Simpler interface means more sophisticated underlying system; simpler underlying system means more workload on the user. The product question is who pays for the complexity — and the answer should usually be the developer, not the user.\"",
+    commonPhrasing: "Tesler's Law, Conservation of Complexity.",
+    notes:
+      "Larry Tesler was a computer scientist at Xerox PARC, Apple, Amazon, and elsewhere — one of the inventors of cut/copy/paste and the modeless interface. The law captures the unavoidable trade-off in UX design: complexity can be relocated but not eliminated. Critical for resisting product-strategy demands to 'just make it simpler' without acknowledging where the complexity goes instead.",
+    source:
+      "Larry Tesler, articulated through his work at Xerox PARC and Apple in the 1980s; named the 'Law of Conservation of Complexity' in subsequent design literature.",
+    tags: ["named_laws", "ux_design", "framework"],
+  },
+  {
+    name: "Bus Factor (Truck Factor)",
+    category: "named_laws",
+    oneLiner:
+      "The minimum number of team members who would have to be incapacitated (hit by a bus) before the project would fail. A bus factor of 1 means a single departure ends the project; high bus factor means knowledge is distributed and the project is resilient.",
+    whenToUse:
+      "Team resilience analysis, knowledge management discussions, succession planning, code ownership reviews, open-source maintainer-burnout conversations. A foundational concept for thinking about institutional knowledge fragility.",
+    howToDropIn:
+      "\"What's the bus factor on this? If only one person knows how this works, the bus factor is 1 — and we shouldn't be that fragile. Bus factor isn't morbid, it's institutional risk management: how many people can leave or burn out before we can't operate.\"",
+    commonPhrasing: "Bus factor, truck factor, lottery factor.",
+    notes:
+      "Sometimes called 'truck factor' or 'lottery factor' to avoid the morbidity. Foundational concept in software engineering, open-source maintenance, and institutional knowledge management. The metric is a real audit item in mature engineering orgs. Pairs with Eagleson's Law (your own code becomes someone else's) and the Bus Factor analysis tools that some orgs run on their codebases.",
+    source:
+      "Folkloric in software engineering communities since at least the 1990s; widely cited in code-review and team-resilience literature.",
+    tags: ["named_laws", "team_resilience", "framework"],
+  },
+  {
+    name: "Knuth on Premature Optimization",
+    category: "named_laws",
+    oneLiner:
+      "Premature optimization is the root of all evil (or at least most of it) in programming. Donald Knuth, from 'Structured Programming with go to Statements' (1974) — usually quoted without the full context that the same paragraph argues for serious optimization in the critical 3% of code.",
+    whenToUse:
+      "Software engineering practice, performance optimization discussions, code review, justifying readable-first / fast-later approaches. Frequently mis-cited; the full Knuth quote is more nuanced than the standard shorthand.",
+    howToDropIn:
+      "\"Knuth's full quote — usually shortened to 'premature optimization is the root of all evil' — is actually: 'We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.' The shorthand drops half the message — which is that the critical 3% deserves serious optimization.\"",
+    commonPhrasing: "Premature optimization is the root of all evil; Knuth on optimization.",
+    notes:
+      "From Donald Knuth, 'Structured Programming with go to Statements' (Computing Surveys, December 1974). The full quote is more nuanced than the popular shorthand and worth knowing because the shorthand is often used to justify ignoring performance entirely. The 'critical 3%' framing is the part most-often dropped.",
+    source:
+      "Donald Knuth, 'Structured Programming with go to Statements,' Computing Surveys (December 1974).",
+    tags: ["named_laws", "software_practice", "performance", "framework"],
+  },
+  {
+    name: "Dunning-Kruger Effect",
+    category: "named_laws",
+    oneLiner:
+      "A cognitive bias in which people with low ability at a task overestimate their ability, while people with high ability sometimes underestimate theirs. Articulated by David Dunning and Justin Kruger (1999). Technically a cognitive bias rather than a 'law' but widely cited as one.",
+    whenToUse:
+      "Conversations about expertise and confidence, criticism of overconfident novices, calling out the inverse pattern in experts who underestimate themselves. Frequently mis-cited; the actual finding is narrower than the pop culture version.",
+    howToDropIn:
+      "\"By Dunning-Kruger, the loudest person in the room is often the least informed — but the original finding is narrower than the pop version. It's not that 'stupid people are confident'; it's that people at the low end of skill in a domain can't accurately assess their own skill, because the metacognitive judgment requires the same skills they lack.\"",
+    commonPhrasing: "Dunning-Kruger Effect, Dunning-Kruger.",
+    notes:
+      "From David Dunning and Justin Kruger, 'Unskilled and Unaware of It: How Difficulties in Recognizing One's Own Incompetence Lead to Inflated Self-Assessments' (Journal of Personality and Social Psychology, 1999). The pop version ('stupid people think they're smart') oversimplifies the actual finding. Recent statistical critiques (Numberphile, others) have challenged whether the famous 'Dunning-Kruger graph' shows what it's claimed to show. The directional insight (low-skill metacognition is itself limited) remains.",
+    source:
+      "David Dunning and Justin Kruger, 'Unskilled and Unaware of It' (Journal of Personality and Social Psychology, 1999).",
+    tags: ["named_laws", "cognitive_bias", "framework"],
+  },
 ];
