@@ -7647,4 +7647,359 @@ export const frameworks: Framework[] = [
       "Enterprise IAM market analysis 2024–2026; Cloud Security Alliance NHI working group publications; Internet Identity Workshop (IIW) twice-yearly sessions at the Computer History Museum; IDPro community publications on agent identity; Phil Windley's blog (long-time identity researcher).",
     tags: ["security_infrastructure", "agent_identity", "vendor_landscape", "framework"],
   },
+
+  // —— Named laws, principles, and aphorisms ——————————————————————————————
+
+  {
+    name: "Poe's Law",
+    category: "named_laws",
+    oneLiner:
+      "Without a clear indicator of the author's intent, any parody of extreme views can be mistaken by some readers for a sincere expression of those views — and vice versa. Coined by Nathan Poe in 2005 on a religion-discussion forum.",
+    whenToUse:
+      "Internet discourse analysis, online communication design, any conversation about parody, irony, or sincerity online; useful for naming why context-collapse makes humor risky on social platforms.",
+    howToDropIn:
+      "\"By Poe's Law, there's no way to write a parody of [extreme view] online that's distinguishable from someone earnestly holding that view — so the joke either falls flat or gets quoted earnestly by people who agree with the surface text.\"",
+    commonPhrasing: "Poe's Law.",
+    notes:
+      "Originally about creationism / fundamentalism parody on internet forums; now applied broadly to any online discourse where parody and sincere extremism are indistinguishable. The corollary (parody mistaken for sincerity AND sincerity mistaken for parody) is the more useful framing today.",
+    source:
+      "Nathan Poe, christianforums.com, August 11 2005, in a thread about creationism parody.",
+    tags: ["named_laws", "internet_discourse", "framework"],
+  },
+  {
+    name: "Betteridge's Law of Headlines",
+    category: "named_laws",
+    oneLiner:
+      "Any headline that ends in a question mark can be answered with the word 'no.' Coined by Ian Betteridge (technology journalist) in 2009.",
+    whenToUse:
+      "Media literacy, headline analysis, calling out clickbait, criticizing speculative journalism. Useful when discussing how interrogative headlines often signal the writer doesn't have evidence for an affirmative claim.",
+    howToDropIn:
+      "\"Per Betteridge's Law, the answer is no — if they had evidence the answer was yes, they'd have written 'X does Y' instead of 'Does X do Y?'\"",
+    commonPhrasing: "Betteridge's Law.",
+    notes:
+      "The principle predates Betteridge (Andrew Marr stated a version in 2004) but the name stuck after Betteridge's 2009 article. The underlying claim: journalists use interrogative headlines specifically when they lack the evidence to make an affirmative claim, because the question form is legally safer than asserting.",
+    source:
+      "Ian Betteridge, TechCrunch piece, 'TechCrunch: Irresponsible Journalism' (2009).",
+    tags: ["named_laws", "media_literacy", "framework"],
+  },
+  {
+    name: "Hanlon's Razor",
+    category: "named_laws",
+    oneLiner:
+      "Never attribute to malice that which is adequately explained by stupidity (or, more charitably, incompetence or constraint). A heuristic for assigning intent in ambiguous situations.",
+    whenToUse:
+      "Org politics, conspiracy-vs-cock-up analysis, generous reading of opposing actors, de-escalation of conflict where the assumption of malice is making things worse. Useful in any organizational autopsy.",
+    howToDropIn:
+      "\"Hanlon's Razor says don't attribute to malice what stupidity explains — and the same goes for incompetence, time pressure, or just everyone being too busy to notice. The conspiracy explanation requires more coordination than most institutions can manage.\"",
+    commonPhrasing: "Hanlon's Razor.",
+    notes:
+      "Often attributed to Robert Hanlon (1980), but versions appear earlier in Heinlein and Goethe. The 'incompetence' framing is the most common modern version; the 'constraint' framing (people did the best they could under the conditions they were operating in) is the most generous and often most accurate in institutional contexts. Pairs with Chesterton's Fence (don't tear down what you don't understand).",
+    source:
+      "Robert J. Hanlon, *Murphy's Law Book Two: More Reasons Why Things Go Wrong* (1980); precursors in Goethe, Heinlein.",
+    tags: ["named_laws", "organizational_analysis", "framework"],
+  },
+  {
+    name: "Brandolini's Law (Bullshit Asymmetry Principle)",
+    category: "named_laws",
+    oneLiner:
+      "The amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it. Coined by Alberto Brandolini (Italian programmer) in 2013.",
+    whenToUse:
+      "Discourse analysis, misinformation policy, communication strategy under bad-faith attack, calling out the asymmetric cost of replying to fabrication. Particularly relevant in AI safety policy where misleading claims travel faster than the corrections.",
+    howToDropIn:
+      "\"Brandolini's Law: the cost of producing bullshit is roughly an order of magnitude lower than the cost of refuting it. Which is why responding to every bad-faith claim in a public thread is a losing strategy — the asymmetry is structural, not a failure of effort.\"",
+    commonPhrasing: "Brandolini's Law, bullshit asymmetry, BS asymmetry principle.",
+    notes:
+      "A foundational concept for thinking about misinformation, disinformation, and bad-faith argument. The 'order of magnitude' is approximate; the structural point is the cost asymmetry is large enough that responding to each instance is unsustainable. Often invoked in AI safety policy contexts about safety-washing and hype refutation.",
+    source:
+      "Alberto Brandolini, XP2014 conference talk (2014); first stated on Twitter in 2013.",
+    tags: ["named_laws", "discourse", "misinformation", "framework"],
+  },
+  {
+    name: "Cunningham's Law",
+    category: "named_laws",
+    oneLiner:
+      "The best way to get the right answer on the internet is not to ask a question — it's to post the wrong answer. Named after Ward Cunningham (inventor of the wiki).",
+    whenToUse:
+      "Internet behavior analysis, community moderation design, asking questions in expert communities, understanding why corrections travel further than questions. Useful for thinking about engagement design and how online communities self-correct.",
+    howToDropIn:
+      "\"Cunningham's Law: post the wrong answer if you want the right one. People who'd ignore a question will spend hours correcting an error.\"",
+    commonPhrasing: "Cunningham's Law.",
+    notes:
+      "Named after Ward Cunningham (inventor of the wiki) by Steven McGeady, though Cunningham himself denied saying it. The principle holds whether or not Cunningham said it: the social dynamics of correction often produce higher-quality engagement than the social dynamics of question-asking. Some online communities (Stack Overflow, Reddit subforums) consciously design against this.",
+    source:
+      "Attributed to Ward Cunningham by Steven McGeady; popularized on the internet in the 2010s.",
+    tags: ["named_laws", "internet_discourse", "framework"],
+  },
+  {
+    name: "Sturgeon's Law (Sturgeon's Revelation)",
+    category: "named_laws",
+    oneLiner:
+      "Ninety percent of everything is crap. Coined by science fiction author Theodore Sturgeon in defense of the science fiction genre against literary critics: sure, 90% of science fiction is crap — but 90% of everything is crap.",
+    whenToUse:
+      "Defense of any creative or technical field against quality criticism, calibrating expectations about field output quality, calling out unfair comparisons that hold one field to a higher bar than others.",
+    howToDropIn:
+      "\"Sturgeon's Law applies here: yes, 90% of [AI safety research / civic tech / startup pitches] is bad — but 90% of academic philosophy is bad too, and 90% of finished novels are bad, and 90% of architecture is bad. The relevant question is what the top 10% looks like.\"",
+    commonPhrasing: "Sturgeon's Law, Sturgeon's Revelation.",
+    notes:
+      "Sturgeon called it his 'Revelation' rather than 'Law' but the name 'Sturgeon's Law' stuck. Useful for resisting fields-bashing that compares the median of a field to the best of another. The 90% figure is approximate; the structural claim about quality distributions is the durable point.",
+    source:
+      "Theodore Sturgeon, Venture Science Fiction (March 1958); restated multiple times across his career.",
+    tags: ["named_laws", "quality", "framework"],
+  },
+  {
+    name: "Goodhart's Law",
+    category: "named_laws",
+    oneLiner:
+      "When a measure becomes a target, it ceases to be a good measure. Originally formulated by British economist Charles Goodhart (1975) about monetary policy; now applied across economics, management, machine learning, and AI safety.",
+    whenToUse:
+      "Any context involving metrics, OKRs, performance management, reward models, or proxy measures that get optimized against. Foundational in AI safety (reward gaming, specification gaming, deceptive alignment). Stephen Casper extends it to institutions: 'Goodhart's Law applies to us too' — money for companies, votes for governments — and optimizing for those proxies isn't the same as optimizing for societal benefit.",
+    howToDropIn:
+      "\"Goodhart's Law: every proxy metric stops being a good measure once you optimize for it. The reward model gets gamed; the OKR gets satisfied without the underlying outcome being achieved; the test score goes up while learning goes down. The discipline is recognizing which measures are early in their Goodhart life cycle and which are already gamed.\"",
+    commonPhrasing: "Goodhart's Law, when a measure becomes a target.",
+    notes:
+      "Already referenced in the AI safety section (RLHF Open Problems and Fundamental Limitations card; Sociotechnical AI Safety as Bridge Field card). The Marilyn Strathern reformulation — 'when a measure becomes a target, it ceases to be a good measure' — is the most commonly cited version. Goodhart's original 1975 formulation was about monetary aggregates: 'any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.'",
+    source:
+      "Charles Goodhart, 'Problems of Monetary Management: The U.K. Experience' (1975); the popular reformulation is Marilyn Strathern (1997).",
+    tags: ["named_laws", "ai_safety", "metrics", "framework"],
+  },
+  {
+    name: "Conway's Law",
+    category: "named_laws",
+    oneLiner:
+      "Any organization that designs a system will produce a design whose structure is a copy of the organization's communication structure. Coined by Melvin Conway in 1967.",
+    whenToUse:
+      "Architecture discussions, org design, team topologies thinking, microservices vs. monolith debates, explaining why systems mirror the orgs that built them. A foundational concept in modern software org design.",
+    howToDropIn:
+      "\"Conway's Law: your system architecture will inevitably mirror your communication structure. If you want different architecture, change the org chart first. Microservices need autonomous teams; monoliths get built by tightly-coupled groups; the AI agent's tools and capabilities reflect whoever was in the room when it was scoped.\"",
+    commonPhrasing: "Conway's Law, the inverse Conway maneuver.",
+    notes:
+      "The 'inverse Conway maneuver' (deliberately changing the org structure to produce the architecture you want) is the modern application. Team Topologies (the framework) is built on Conway's Law. Pairs with the existing Team Topologies framework card if one exists in the repo.",
+    source:
+      "Melvin Conway, 'How Do Committees Invent?' Datamation (April 1968), based on a 1967 paper submission.",
+    tags: ["named_laws", "software_architecture", "org_design", "framework"],
+  },
+  {
+    name: "Chesterton's Fence",
+    category: "named_laws",
+    oneLiner:
+      "Do not remove a fence until you know why it was put there. G. K. Chesterton's principle of reform: the reformer who proposes tearing something down must first explain what it was for, or they're not reforming, they're vandalizing.",
+    whenToUse:
+      "Policy reform, institutional change, software refactoring, removing 'unused' code or unused processes, modernization projects in regulated industries. Foundational concept for anyone working on legacy systems or institutional reform.",
+    howToDropIn:
+      "\"Chesterton's Fence: before tearing it down, explain why it was put up. The 'pointless' regulation often encodes a hard-won lesson; the 'unused' code path is what catches the edge case; the 'obsolete' process is the only thing preventing a class of error nobody's seen recently because the process is working.\"",
+    commonPhrasing: "Chesterton's Fence.",
+    notes:
+      "From Chesterton's *The Thing* (1929), Chapter 4. Particularly important in regulatory contexts (FAR, FERPA, HIPAA, financial regulation) where seemingly absurd rules often encode forgotten institutional learning. Pairs with Hanlon's Razor (don't assume the fence was put up by idiots) and the existing Modernizing Established Organizations With Long-Tenure Workforces card.",
+    source:
+      "G. K. Chesterton, *The Thing* (1929), Chapter 4: 'The Drift from Domesticity.'",
+    tags: ["named_laws", "reform", "institutional_change", "framework"],
+  },
+  {
+    name: "Hofstadter's Law",
+    category: "named_laws",
+    oneLiner:
+      "It always takes longer than you expect, even when you take into account Hofstadter's Law. Coined by Douglas Hofstadter in *Gödel, Escher, Bach* (1979) about chess-playing computer programs; now applied to all project estimation.",
+    whenToUse:
+      "Project estimation, planning, schedule discussions, calling out optimism in timelines. Particularly useful for software projects, research programs, and any context where the cost of optimism is concrete.",
+    howToDropIn:
+      "\"Hofstadter's Law: it always takes longer than you expect, even accounting for Hofstadter's Law. The self-reference is the point — even after you build in buffer, you'll be late, because the buffer underestimates the same unknown unknowns the original estimate did.\"",
+    commonPhrasing: "Hofstadter's Law.",
+    notes:
+      "From *Gödel, Escher, Bach: an Eternal Golden Braid* (1979), in the context of how long it was taking computer programs to play chess at the grandmaster level. The recursion is the joke and the point: estimation suffers from a structural bias that buffer alone can't correct. Pairs with Brooks's Law (adding people to a late project makes it later) and Parkinson's Law (work expands to fill time).",
+    source:
+      "Douglas Hofstadter, *Gödel, Escher, Bach: an Eternal Golden Braid* (1979).",
+    tags: ["named_laws", "estimation", "planning", "framework"],
+  },
+  {
+    name: "Brooks's Law",
+    category: "named_laws",
+    oneLiner:
+      "Adding manpower to a late software project makes it later. Coined by Fred Brooks in *The Mythical Man-Month* (1975) based on his experience managing IBM OS/360.",
+    whenToUse:
+      "Software project management, staffing decisions on troubled projects, calling out the assumption that more people = faster delivery. Foundational concept in software engineering management.",
+    howToDropIn:
+      "\"Brooks's Law: adding people to a late project makes it later. New people consume the existing team's bandwidth to onboard, the coordination cost grows non-linearly, and the late project gets later. The exception — when the work is genuinely parallelizable and the new people don't need context — is rare in practice.\"",
+    commonPhrasing: "Brooks's Law, mythical man-month.",
+    notes:
+      "From *The Mythical Man-Month: Essays on Software Engineering* (1975). The book itself is one of the most-cited works in software engineering. Brooks later (1995) qualified that the law is 'an outrageous oversimplification' but defended its directional truth. The underlying claim — coordination cost grows faster than productive output as team size grows — is durable.",
+    source:
+      "Fred Brooks, *The Mythical Man-Month: Essays on Software Engineering* (1975, 20th anniversary edition 1995).",
+    tags: ["named_laws", "software_management", "framework"],
+  },
+  {
+    name: "Postel's Law (Robustness Principle)",
+    category: "named_laws",
+    oneLiner:
+      "Be conservative in what you send, liberal in what you accept. Originally formulated by Jon Postel for TCP / IP protocol design (RFC 760, 1980); broadly cited as a software engineering and communication principle.",
+    whenToUse:
+      "API design, protocol design, communication strategy, any context where strict vs. permissive parsing is in play. Increasingly contested in modern security contexts where 'liberal in what you accept' creates vulnerabilities.",
+    howToDropIn:
+      "\"Postel's Law: be conservative in what you send, liberal in what you accept. Send well-formed output; tolerate malformed input. The principle built the early internet — but the modern critique is that 'liberal in what you accept' creates attack surface, and security-first design needs strict input validation.\"",
+    commonPhrasing: "Postel's Law, Robustness Principle.",
+    notes:
+      "From RFC 760 (Jon Postel, 1980), restated in RFC 1122. Increasingly contested in modern security contexts (the IETF has published critique drafts about its security implications). The principle remains foundational for thinking about interoperability vs. strictness trade-offs.",
+    source:
+      "Jon Postel, RFC 760 (1980) and RFC 1122 (1989); IETF working drafts on its security implications (2010s–2020s).",
+    tags: ["named_laws", "protocol_design", "framework"],
+  },
+  {
+    name: "Wirth's Law",
+    category: "named_laws",
+    oneLiner:
+      "Software is getting slower more rapidly than hardware is getting faster. Coined by Niklaus Wirth (creator of Pascal) in 1995, articulating why hardware improvements don't translate to felt user experience.",
+    whenToUse:
+      "Software performance discussions, criticism of bloated applications, explaining why modern apps feel slower than 1990s apps despite massively faster hardware. Useful in conversations about modern web bloat, electron apps, modern OS UX.",
+    howToDropIn:
+      "\"Wirth's Law: software gets slower faster than hardware gets faster. Which is why my 2026 MacBook with M5 silicon feels slower opening Slack than my 1999 ThinkPad opening AOL Instant Messenger. The hardware gains get eaten by abstraction layers, frameworks, and feature bloat.\"",
+    commonPhrasing: "Wirth's Law.",
+    notes:
+      "From Niklaus Wirth, 'A Plea for Lean Software' (IEEE Computer, February 1995). Also attributed in various forms to Andy Grove and others. The structural claim — abstraction and feature bloat absorb hardware gains — is durable. Pairs with Brooks's Law (organizational drag) and Parkinson's Law (work fills time).",
+    source:
+      "Niklaus Wirth, 'A Plea for Lean Software' (IEEE Computer, February 1995).",
+    tags: ["named_laws", "software_performance", "framework"],
+  },
+  {
+    name: "Parkinson's Law",
+    category: "named_laws",
+    oneLiner:
+      "Work expands to fill the time available for its completion. Coined by C. Northcote Parkinson in *The Economist* (1955) based on observations of British civil service.",
+    whenToUse:
+      "Project planning, calling out scope creep, time-boxing decisions, criticism of bureaucratic expansion. Particularly useful for arguing in favor of tight deadlines and for understanding why organizations grow even when their workload doesn't.",
+    howToDropIn:
+      "\"Parkinson's Law: work expands to fill the time available. A two-week task given six weeks will take six weeks. The corollary — Parkinson's general principle that organizations grow regardless of work output — applies just as strongly. Tight deadlines aren't just stressful; they're what's keeping the work proportional to the actual problem.\"",
+    commonPhrasing: "Parkinson's Law.",
+    notes:
+      "From C. Northcote Parkinson, *The Economist* (November 1955), later expanded in *Parkinson's Law: The Pursuit of Progress* (1957). The book also articulates 'Parkinson's general law' that 'an enterprise tends to enlarge itself regardless of work to be done.' Pairs with Hofstadter's Law (time always exceeds estimate) and the Peter Principle (organizational growth dysfunction).",
+    source:
+      "C. Northcote Parkinson, 'Parkinson's Law,' *The Economist* (November 1955); expanded in *Parkinson's Law: The Pursuit of Progress* (1957).",
+    tags: ["named_laws", "planning", "bureaucracy", "framework"],
+  },
+  {
+    name: "Peter Principle",
+    category: "named_laws",
+    oneLiner:
+      "In a hierarchy, every employee tends to rise to their level of incompetence. Coined by Laurence Peter in *The Peter Principle* (1969); the structural claim is that promotion based on past performance produces a workforce where most people are bad at their current jobs.",
+    whenToUse:
+      "Org design, promotion-policy discussions, criticism of dual-ladder career frameworks, conversations about why senior leadership often feels less competent than middle management. Foundational concept in HR and organizational theory.",
+    howToDropIn:
+      "\"Peter Principle: people get promoted to their level of incompetence. The engineer who was great at coding becomes a mediocre manager; the great manager becomes a bad director; the bad director stops getting promoted and stays there. The systemic implication is that everyone you work with is doing a job they're not yet good at.\"",
+    commonPhrasing: "Peter Principle.",
+    notes:
+      "From Laurence J. Peter and Raymond Hull, *The Peter Principle: Why Things Always Go Wrong* (1969). The book was a satire that got taken seriously and has held up. The 'dual-ladder' career framework (IC track vs. management track) is the standard organizational mitigation — letting people stay at their level of competence. Pairs with Pournelle's Iron Law of Bureaucracy.",
+    source:
+      "Laurence J. Peter and Raymond Hull, *The Peter Principle: Why Things Always Go Wrong* (1969).",
+    tags: ["named_laws", "organizational_theory", "framework"],
+  },
+  {
+    name: "Dunbar's Number",
+    category: "named_laws",
+    oneLiner:
+      "A cognitive limit of approximately 150 stable social relationships any one human can maintain. Proposed by anthropologist Robin Dunbar (1992) based on correlations between primate brain size and group size.",
+    whenToUse:
+      "Org design (especially at the 150-person inflection point), team-size discussions, community-design conversations, social network analysis. Foundational concept in org design and community management.",
+    howToDropIn:
+      "\"Dunbar's Number is roughly 150 — the cognitive limit on stable social relationships. The implication for org design is that companies past 150 people start needing formal structure to replace the informal coordination that worked below that threshold. Most growth-stage companies hit this wall and have to rebuild operating norms.\"",
+    commonPhrasing: "Dunbar's Number, the 150 limit.",
+    notes:
+      "Robin Dunbar's original work proposed nested layers: ~5 close friends, ~15 good friends, ~50 friends, ~150 meaningful contacts, ~500 acquaintances, ~1500 recognized faces. The 150 figure is the most-cited. The empirical robustness has been debated, but the principle is widely invoked in org design (W. L. Gore famously caps facility sizes around 150).",
+    source:
+      "Robin Dunbar, 'Neocortex size as a constraint on group size in primates' (Journal of Human Evolution, 1992); popularized in *How Many Friends Does One Person Need?* (2010).",
+    tags: ["named_laws", "org_design", "framework"],
+  },
+  {
+    name: "Shirky Principle",
+    category: "named_laws",
+    oneLiner:
+      "Institutions will try to preserve the problem to which they are the solution. Coined by Clay Shirky (paraphrased by Kevin Kelly) in 2010: an organization defined by a problem develops an interest in the problem's continued existence.",
+    whenToUse:
+      "Institutional analysis, criticism of nonprofit or government agencies that should have phased out, organizational mission drift, AI safety org analysis. Particularly useful for analyzing why institutions resist solving their own problems.",
+    howToDropIn:
+      "\"Shirky Principle: institutions will try to preserve the problem to which they are the solution. If the problem goes away, the institution loses its reason to exist. Which is why agencies dedicated to solving X often find themselves expanding X's definition rather than diminishing X. The structural incentive is institutional self-preservation.\"",
+    commonPhrasing: "Shirky Principle.",
+    notes:
+      "Articulated by Clay Shirky in a 2010 interview, named by Kevin Kelly. Closely related to Pournelle's Iron Law of Bureaucracy (organizations eventually come to be dominated by those who work to perpetuate the organization itself, not those who work on its original mission). Useful for critical institutional analysis including of AI safety orgs themselves.",
+    source:
+      "Clay Shirky, 2010; named the 'Shirky Principle' by Kevin Kelly.",
+    tags: ["named_laws", "institutional_analysis", "framework"],
+  },
+  {
+    name: "Pournelle's Iron Law of Bureaucracy",
+    category: "named_laws",
+    oneLiner:
+      "In any bureaucratic organization there are two kinds of people: those devoted to the goals of the organization, and those devoted to the organization itself. The second group will always gain control and write the rules. Coined by Jerry Pournelle (science fiction author and journalist).",
+    whenToUse:
+      "Institutional analysis, critique of professional associations, government agencies, academic departments, large nonprofits, and any organization showing signs of self-perpetuation displacing mission. Pairs with the Shirky Principle.",
+    howToDropIn:
+      "\"Pournelle's Iron Law of Bureaucracy: every bureaucracy eventually comes to be dominated by those who work to perpetuate the bureaucracy itself, not those who work on its original mission. The mission people get out-organized, out-meetinged, and out-promoted by the bureaucracy people. It's an Iron Law because the structural incentive is stable.\"",
+    commonPhrasing: "Pournelle's Iron Law, Iron Law of Bureaucracy.",
+    notes:
+      "Jerry Pournelle articulated this across multiple essays. Closely related to the Shirky Principle (preserving the problem) and the Peter Principle (level of incompetence). All three together form a coherent critique of bureaucratic dysfunction. Particularly useful for analyzing AI safety institutions, civic tech orgs, design agencies, and any growing org showing self-perpetuation symptoms.",
+    source:
+      "Jerry Pournelle, various essays; widely cited from his blog and *Chaos Manor Reviews*.",
+    tags: ["named_laws", "institutional_analysis", "framework"],
+  },
+  {
+    name: "Linus's Law",
+    category: "named_laws",
+    oneLiner:
+      "Given enough eyeballs, all bugs are shallow. Coined by Eric S. Raymond in *The Cathedral and the Bazaar* (1997) in honor of Linus Torvalds; the principle that open source software benefits from many independent reviewers finding bugs.",
+    whenToUse:
+      "Open source advocacy, transparency arguments, code review practices, AI safety arguments for transparency in model evaluation. Useful for the case that visibility produces robustness.",
+    howToDropIn:
+      "\"Linus's Law: with enough eyeballs, all bugs are shallow. The proprietary-software argument that secrecy improves security gets it backwards — secrecy hides bugs from defenders too. The AI safety analog is the case for white-box audit access: the system gets safer when more independent reviewers can find its problems.\"",
+    commonPhrasing: "Linus's Law.",
+    notes:
+      "From Eric S. Raymond, *The Cathedral and the Bazaar* (1997). The principle has been challenged (Heartbleed and other open-source vulnerabilities suggest 'enough' eyeballs is more demanding than the law implies). But the directional truth — visibility helps debugging more than it helps attackers — remains widely accepted. Pairs with the AI Auditing Access Tiers card (the case for white-box access).",
+    source:
+      "Eric S. Raymond, *The Cathedral and the Bazaar* (1997, expanded 1999).",
+    tags: ["named_laws", "open_source", "transparency", "framework"],
+  },
+  {
+    name: "Godwin's Law",
+    category: "named_laws",
+    oneLiner:
+      "As an online discussion grows longer, the probability of a comparison involving Nazis or Hitler approaches 1. Coined by Mike Godwin (1990) as an observation about Usenet discourse degradation.",
+    whenToUse:
+      "Internet discourse analysis, online community moderation, calling out reductio ad Hitlerum arguments. Useful as a meta-comment when a discussion has degraded into hyperbolic comparison.",
+    howToDropIn:
+      "\"By Godwin's Law, this thread was always going to end up at Hitler comparisons; we just got there faster than usual.\"",
+    commonPhrasing: "Godwin's Law.",
+    notes:
+      "Mike Godwin originally proposed it as a Usenet thought experiment — coining the law itself was an act of meme engineering to make Hitler comparisons seem trite. The corollary (the first person to Hitler-compare 'loses' the argument) is contested; Godwin himself has clarified that some Nazi comparisons are warranted. Useful for any conversation about how online discourse degrades over time.",
+    source:
+      "Mike Godwin, 1990, originally on Usenet; popularized through *Wired* and other tech press in the 1990s.",
+    tags: ["named_laws", "internet_discourse", "framework"],
+  },
+  {
+    name: "Muphry's Law",
+    category: "named_laws",
+    oneLiner:
+      "Any criticism of someone else's writing or grammar will itself contain at least one error. The 'editorial corollary' of Murphy's Law; named by John Bangsund (1992).",
+    whenToUse:
+      "Writing about writing, online correction-policing, editorial humility. A self-deprecating principle worth invoking before correcting someone else's grammar.",
+    howToDropIn:
+      "\"Muphry's Law (yes, that's how it's spelled) says any criticism of someone's writing will itself contain an error. Which is why I'm hedging this whole sentence.\"",
+    commonPhrasing: "Muphry's Law.",
+    notes:
+      "Named by John Bangsund of the Society of Editors (Victoria, Australia) in 1992 as a deliberate misspelling of Murphy's Law. Useful for editorial humility and for naming the self-defeating nature of pedantic correction.",
+    source:
+      "John Bangsund, *Society of Editors Newsletter* (Victoria, Australia), 1992.",
+    tags: ["named_laws", "writing", "framework"],
+  },
+  {
+    name: "Murphy's Law",
+    category: "named_laws",
+    oneLiner:
+      "Anything that can go wrong, will. The canonical pessimist's principle, attributed (with some dispute) to engineer Edward A. Murphy Jr. in the late 1940s.",
+    whenToUse:
+      "Engineering safety design, risk planning, post-mortems, contingency planning. Useful as the foundational frame for any defense-in-depth or fail-safe argument.",
+    howToDropIn:
+      "\"Murphy's Law: anything that can go wrong, will. Which is why we design for failure not for success — the system that survives Murphy is more robust than the system that ignored him.\"",
+    commonPhrasing: "Murphy's Law.",
+    notes:
+      "The standard origin story attributes the law to Air Force engineer Edward A. Murphy Jr. in 1949, working on rocket-sled deceleration tests at Edwards AFB; the historical record is contested. Pairs naturally with the Swiss Cheese Model (system safety) and Defense in Depth. The structural point — that any path to failure will eventually be taken — is foundational to safety engineering.",
+    source:
+      "Attributed to Edward A. Murphy Jr. (USAF, 1949); popularized through the 1950s engineering community.",
+    tags: ["named_laws", "engineering_safety", "framework"],
+  },
 ];
