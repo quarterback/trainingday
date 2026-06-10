@@ -8306,4 +8306,71 @@ export const frameworks: Framework[] = [
       "David Dunning and Justin Kruger, 'Unskilled and Unaware of It' (Journal of Personality and Social Psychology, 1999).",
     tags: ["named_laws", "cognitive_bias", "framework"],
   },
+
+  // —— Marketplace product management (mobility / gig / two-sided platforms) —
+
+  {
+    name: "Senior PM, Marketplace Supply Incentives (Mobility / Gig / Two-Sided)",
+    category: "product_management",
+    oneLiner:
+      "The marketplace product-manager archetype owning the supply-side incentives program — driver / courier / host / freelancer engagement, retention, and growth — at two-sided platforms in mobility, food delivery, accommodation, and other gig-economy contexts. The seat sits at the intersection of product, data science, growth, and operations and is graded on company-level metrics (marketplace liquidity, supply reliability, unit economics).",
+    whenToUse:
+      "Senior PM / Staff PM postings at marketplace and gig-economy platforms — Bolt, Uber, Lyft, DoorDash, Instacart, Grubhub, Deliveroo, Wolf, Wolt, Just Eat Takeaway, Airbnb, Vrbo, Upwork, Fiverr, Toptal. The 5+ year PM floor is standard at senior level; 7+ years for staff.",
+    vocabulary: [
+      "supply-side incentives",
+      "driver / courier / host / freelancer engagement",
+      "marketplace liquidity",
+      "supply reliability",
+      "two-sided marketplace dynamics",
+      "incentive structures (acquisition, activity, retention bonuses)",
+      "P&L-level business impact",
+      "supply economics",
+      "marketplace health",
+      "driver lifetime value (DLV)",
+      "blended take rate",
+      "elasticity (price, incentive)",
+      "experiment-driven product development",
+    ],
+    howToDropIn:
+      "\"Senior PM on supply incentives at a two-sided marketplace owns the systems that shape supplier behaviour — drivers, couriers, hosts, freelancers — through economic incentives. The work is part product (the features that surface incentives), part economics (the incentive structures themselves), and part experimentation (testing what actually changes behaviour). It's graded on company-level metrics: marketplace liquidity, supply reliability, unit economics. The discipline is balancing supplier satisfaction against the economics — too generous and the unit economics break; too stingy and supply quality and reliability collapse.\"",
+    commonPhrasing: "Marketplace PM, supply PM, supply-side incentives, gig-economy product management.",
+    notes:
+      "Distinct from demand-side PM (rider, customer, eater, guest) and from generic consumer PM. Marketplace PMs at this level are increasingly expected to be fluent in SQL / Python because the work is experiment- and analysis-heavy and the data teams are partners, not service providers. The 'use AI daily as a baseline' framing in modern marketplace PM JDs (Bolt's JD explicitly names it) is a signal that the role expects AI-augmented PM workflows. Pair with Marketplace Supply Economics (Two-Sided Platform Dynamics), Discovery-Driven Product Strategy, and AI Spec-Driven Development.",
+    source:
+      "Validated against 2026 postings: Bolt 'Senior Product Manager, Supply Incentives' (Tallinn, Estonia); analogous roles at Uber, Lyft, DoorDash, Instacart, Airbnb, Upwork, and adjacent two-sided marketplaces.",
+    tags: ["product_management", "marketplace", "supply_side", "gig_economy", "role", "framework"],
+  },
+  {
+    name: "Marketplace Supply Economics (Two-Sided Platform Dynamics)",
+    category: "product_management",
+    oneLiner:
+      "The discipline of designing and operating two-sided marketplaces from the supply side — modelling driver / courier / host / freelancer economics, designing incentive structures that produce desired supply behaviour without breaking unit economics, and balancing supplier satisfaction against demand-side reliability and platform take.",
+    whenToUse:
+      "Marketplace PM, growth, ops, and analytics work at two-sided platforms; conversations about driver pay, host commission, freelancer rates, courier incentives; debates about marketplace health metrics; AI-deployment thinking in gig contexts (where AI agents may eventually act as suppliers).",
+    vocabulary: [
+      "two-sided marketplace",
+      "supply elasticity",
+      "incentive elasticity",
+      "supply liquidity / coverage / reliability",
+      "marketplace flywheel",
+      "take rate / blended take rate",
+      "driver lifetime value (DLV) / lifetime gross merchandise volume",
+      "supply acquisition cost",
+      "activity threshold",
+      "minimum guarantee",
+      "surge / dynamic pricing",
+      "boost / multiplier",
+      "quest / streak structures",
+      "supplier churn",
+      "marketplace health dashboard",
+    ],
+    howToDropIn:
+      "\"Marketplace supply economics is its own discipline. The supply side has its own elasticity curves — at any given incentive level, you get a different distribution of supplier hours, geographic coverage, and reliability. The product moves are the incentive structures (acquisition bonuses, activity thresholds, quests, surge multipliers, retention guarantees) and the question is which combination produces the supply behaviour the marketplace actually needs, at unit economics the business can sustain. The closest analog outside gig is sales-compensation design — you're paying for behaviour, not for output directly.\"",
+    commonPhrasing: "Marketplace supply economics, two-sided marketplace dynamics, supply incentives design.",
+    notes:
+      "The classic reference is the Andrew Chen / a16z marketplace canon (chicken-and-egg, cold start, marketplace flywheels). The supply-side specifically has been less written-about than the demand side until recently. Modern marketplaces are running supply experiments continuously; the PM job is partly designing those experiments and partly building the platform infrastructure to run them at scale. Note the increasingly relevant question of AI-agent suppliers — what happens when an AI agent picks up freelance work, drives an autonomous vehicle, or hosts a property — which is starting to surface in marketplace strategy conversations. Pair with Senior PM, Marketplace Supply Incentives, Discovery-Driven Product Strategy, and the existing AI Spec-Driven Development card.",
+    source:
+      "Marketplace product practice; Andrew Chen, *The Cold Start Problem* (2021); a16z marketplace canon; Bolt / Uber / DoorDash / Airbnb supply-side product writing 2020–2026.",
+    tags: ["product_management", "marketplace", "supply_economics", "framework"],
+  },
 ];
